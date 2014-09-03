@@ -101,8 +101,11 @@
     //        _detailView.view.backgroundColor = [UIColor yellowColor];
     //    }
     if (index == 9) {
-        [_splitVC addDetailController:_otisView animated:NO];
-        _uib_splitCtrl.selected = NO;
+//        [_splitVC addDetailController:_otisView animated:NO];
+//        _uib_splitCtrl.selected = YES;
+        [_splitVC addDetailController:_detailView animated:NO];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
         [self openAndCloseMaster];
     }
     else {
@@ -111,7 +114,7 @@
                                                              blue:((float)rand() / RAND_MAX)
                                                             alpha:1.0f];
         [_splitVC addDetailController:_detailView animated:NO];
-        _uib_splitCtrl.selected = NO;
+        _uib_splitCtrl.selected = YES;
         [self openAndCloseMaster];
     }
 }

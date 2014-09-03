@@ -49,33 +49,33 @@
         [_uiiv_bg removeFromSuperview];
         _uiiv_bg = nil;
     }
-    _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grfx_cityBgImg.jpg"]];
+    _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otis_building.jpg"]];
     _uiiv_bg.frame = self.view.bounds;
     [self.view addSubview: _uiiv_bg];
-    [self initBuildingBtn];
-//    [self initLogoBtn];
+//    [self initBuildingBtn];
+    [self initLogoBtn];
 //    [self performSelector:@selector(loadMovie) withObject:nil afterDelay:2];
 //    [self performSelector:@selector(updateBgImg) withObject:nil afterDelay:3];
 }
 
--(void)initBuildingBtn
-{
-    _uib_buildingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_buildingBtn.frame = CGRectMake(385.0, 257.0, 285, 193);
-    _uib_buildingBtn.backgroundColor = [UIColor clearColor];
-    [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
-    [self.view insertSubview:_uib_buildingBtn aboveSubview:_uiiv_bg];
-}
+//-(void)initBuildingBtn
+//{
+//    _uib_buildingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    _uib_buildingBtn.frame = CGRectMake(385.0, 257.0, 285, 193);
+//    _uib_buildingBtn.backgroundColor = [UIColor clearColor];
+//    [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view insertSubview:_uib_buildingBtn aboveSubview:_uiiv_bg];
+//}
 
--(void)loadBuilding
-{
-    [_uib_buildingBtn removeFromSuperview];
-    _uib_buildingBtn = nil;
-    
-    [_uiiv_bg setImage:[UIImage imageNamed:@"otis_building.jpg"]];
-    [self initLogoBtn];
-    [self createBackButton];
-}
+//-(void)loadBuilding
+//{
+//    [_uib_buildingBtn removeFromSuperview];
+//    _uib_buildingBtn = nil;
+//    
+//    [_uiiv_bg setImage:[UIImage imageNamed:@"otis_building.jpg"]];
+//    [self initLogoBtn];
+////    [self createBackButton];
+//}
 
 -(void)initLogoBtn
 {
@@ -88,7 +88,9 @@
 
 -(void)changeView
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
     _uib_logoBtn.hidden = YES;
+    [self createBackButton];
     [self loadMovie];
     [self updateBgImg];
 }
@@ -109,7 +111,7 @@
     }
 
     [self createBg];
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"goToCity" object:nil];
 }
 
 -(void)updateBgImg
@@ -201,7 +203,7 @@
 //    [self.view addSubview:uib_closeMovie];
 //    [uib_closeMovie addTarget:self action:@selector(closeMovie:) forControlEvents:UIControlEventTouchUpInside];
     
-    NSString *url = [[NSBundle mainBundle] pathForResource:@"UTC_SCHEMATIC_ANIMATION"
+    NSString *url = [[NSBundle mainBundle] pathForResource:@"20140903_UTC_SCHEMATIC_ANIMATION_REV"
                                                     ofType:@"m4v"];
     
     if (_avPlayer) {
@@ -217,10 +219,6 @@
     _avPlayerLayer.backgroundColor = [UIColor blackColor].CGColor;
 //    [self.view.layer insertSublayer:_avPlayerLayer below:uib_closeMovie.layer];
     [self.view.layer insertSublayer: _avPlayerLayer below:_uib_back.layer];
-    
-    if ([@"YES" isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:@"screenSaverMute"]]) {
-        _avPlayer.volume = 0.0;
-    }
     
     [_avPlayer play];
     
