@@ -20,6 +20,7 @@
 @property (nonatomic, strong) AVPlayerLayer         *avPlayerLayer;
 @property (nonatomic, strong) UIButton              *uib_logoBtn;
 @property (nonatomic, strong) UIButton              *uib_back;
+@property (nonatomic, strong) UIButton              *uib_buildingBtn;
 @end
 
 @implementation otisViewController
@@ -48,12 +49,32 @@
         [_uiiv_bg removeFromSuperview];
         _uiiv_bg = nil;
     }
-    _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otis_building.jpg"]];
+    _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grfx_cityBgImg.jpg"]];
     _uiiv_bg.frame = self.view.bounds;
     [self.view addSubview: _uiiv_bg];
-    [self initLogoBtn];
+    [self initBuildingBtn];
+//    [self initLogoBtn];
 //    [self performSelector:@selector(loadMovie) withObject:nil afterDelay:2];
 //    [self performSelector:@selector(updateBgImg) withObject:nil afterDelay:3];
+}
+
+-(void)initBuildingBtn
+{
+    _uib_buildingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_buildingBtn.frame = CGRectMake(385.0, 257.0, 285, 193);
+    _uib_buildingBtn.backgroundColor = [UIColor clearColor];
+    [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
+    [self.view insertSubview:_uib_buildingBtn aboveSubview:_uiiv_bg];
+}
+
+-(void)loadBuilding
+{
+    [_uib_buildingBtn removeFromSuperview];
+    _uib_buildingBtn = nil;
+    
+    [_uiiv_bg setImage:[UIImage imageNamed:@"otis_building.jpg"]];
+    [self initLogoBtn];
+    [self createBackButton];
 }
 
 -(void)initLogoBtn
@@ -68,7 +89,6 @@
 -(void)changeView
 {
     _uib_logoBtn.hidden = YES;
-    [self createBackButton];
     [self loadMovie];
     [self updateBgImg];
 }

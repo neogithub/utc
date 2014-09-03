@@ -9,7 +9,7 @@
 #import "detailViewController.h"
 
 @interface detailViewController ()
-
+@property (nonatomic, strong) UIImageView           *uiiv_bg;
 @end
 
 @implementation detailViewController
@@ -26,7 +26,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
     // Do any additional setup after loading the view.
+    [self createBG];
+}
+
+-(void)createBG
+{
+    if (_uiiv_bg) {
+        [_uiiv_bg removeFromSuperview];
+        _uiiv_bg = nil;
+    }
+    _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grfx_cityBgImg.jpg"]];
+    _uiiv_bg.frame = self.view.bounds;
+    [self.view addSubview: _uiiv_bg];
 }
 
 - (void)didReceiveMemoryWarning

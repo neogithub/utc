@@ -60,13 +60,14 @@
     _splitVC = [[xhSplitViewController alloc] initWithNibName:@"xhSplitViewController" bundle:nil];
     _splitVC.view.frame = self.view.bounds;
     [_splitVC addMasterController:_masterView animated:NO];
+    [_splitVC addDetailController:_detailView animated:NO];
     [self.view addSubview: _splitVC.view];
 }
 
 -(void)initSplitCtrl
 {
     _uib_splitCtrl = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_splitCtrl.frame = CGRectMake(180.0, 0.0, 36, 36);
+    _uib_splitCtrl.frame = CGRectMake(0.0, 0.0, 36, 36);
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"grfx_splitBtn.jpg"] forState:UIControlStateNormal];
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"grfx_splitBtn.jpg"] forState:UIControlStateSelected];
     [_uib_splitCtrl addTarget: self action:@selector(openAndCloseMaster) forControlEvents:UIControlEventTouchUpInside];
@@ -77,13 +78,13 @@
 {
     _uib_splitCtrl.selected = !_uib_splitCtrl.selected;
     if (_uib_splitCtrl.selected) {
-        [_splitVC hideMasterPanel];
+        [_splitVC showPanel];
         [UIView animateWithDuration:0.33 animations:^{
-            _uib_splitCtrl.transform = CGAffineTransformMakeTranslation(-180, 0.0);
+            _uib_splitCtrl.transform = CGAffineTransformMakeTranslation(180, 0.0);
         }];
     }
     else {
-        [_splitVC showPanel];
+        [_splitVC hideMasterPanel];
         [UIView animateWithDuration:0.33 animations:^{
             _uib_splitCtrl.transform = CGAffineTransformIdentity;
         }];

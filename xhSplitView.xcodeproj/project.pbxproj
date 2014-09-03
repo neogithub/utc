@@ -40,6 +40,8 @@
 		82A66AF919B79D6C00C8E12A /* otis_building@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AF719B79D6C00C8E12A /* otis_building@2x.jpg */; };
 		82A66AFE19B7AC2D00C8E12A /* grfx_backBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AFC19B7AC2D00C8E12A /* grfx_backBtn.png */; };
 		82A66AFF19B7AC2D00C8E12A /* grfx_backBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AFD19B7AC2D00C8E12A /* grfx_backBtn@2x.png */; };
+		82A66B0219B7B19B00C8E12A /* grfx_cityBgImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66B0019B7B19B00C8E12A /* grfx_cityBgImg.jpg */; };
+		82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66B0119B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		82A66AF719B79D6C00C8E12A /* otis_building@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "otis_building@2x.jpg"; sourceTree = "<group>"; };
 		82A66AFC19B7AC2D00C8E12A /* grfx_backBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grfx_backBtn.png; sourceTree = "<group>"; };
 		82A66AFD19B7AC2D00C8E12A /* grfx_backBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grfx_backBtn@2x.png"; sourceTree = "<group>"; };
+		82A66B0019B7B19B00C8E12A /* grfx_cityBgImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grfx_cityBgImg.jpg; sourceTree = "<group>"; };
+		82A66B0119B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "grfx_cityBgImg@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,8 @@
 			children = (
 				82A66AFC19B7AC2D00C8E12A /* grfx_backBtn.png */,
 				82A66AFD19B7AC2D00C8E12A /* grfx_backBtn@2x.png */,
+				82A66B0019B7B19B00C8E12A /* grfx_cityBgImg.jpg */,
+				82A66B0119B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg */,
 				82A66AE419B7942900C8E12A /* grfx_splitBtn.jpg */,
 				82A66AE519B7942900C8E12A /* grfx_splitBtn@2x.jpg */,
 				82A66AE619B7942900C8E12A /* Marker.png */,
@@ -329,8 +335,10 @@
 				82A66AA619B7926B00C8E12A /* InfoPlist.strings in Resources */,
 				82A66AF919B79D6C00C8E12A /* otis_building@2x.jpg in Resources */,
 				82A66AF119B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v in Resources */,
+				82A66B0219B7B19B00C8E12A /* grfx_cityBgImg.jpg in Resources */,
 				82A66AF819B79D6C00C8E12A /* otis_building.jpg in Resources */,
 				82A66AEE19B7942900C8E12A /* Marker@2x.png in Resources */,
+				82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */,
 				82A66AEB19B7942900C8E12A /* grfx_splitBtn.jpg in Resources */,
 				82A66AF019B7942900C8E12A /* otis_building_inside@2x.png in Resources */,
 				82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */,
