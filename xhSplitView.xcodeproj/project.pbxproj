@@ -31,11 +31,13 @@
 		82A66AEC19B7942900C8E12A /* grfx_splitBtn@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AE519B7942900C8E12A /* grfx_splitBtn@2x.jpg */; };
 		82A66AED19B7942900C8E12A /* Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AE619B7942900C8E12A /* Marker.png */; };
 		82A66AEE19B7942900C8E12A /* Marker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AE719B7942900C8E12A /* Marker@2x.png */; };
-		82A66AEF19B7942900C8E12A /* otis_building.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AE819B7942900C8E12A /* otis_building.png */; };
-		82A66AF019B7942900C8E12A /* otis_building@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AE919B7942900C8E12A /* otis_building@2x.png */; };
+		82A66AEF19B7942900C8E12A /* otis_building_inside.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AE819B7942900C8E12A /* otis_building_inside.png */; };
+		82A66AF019B7942900C8E12A /* otis_building_inside@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AE919B7942900C8E12A /* otis_building_inside@2x.png */; };
 		82A66AF119B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AEA19B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v */; };
 		82A66AF419B7950600C8E12A /* otis-hotpost-still.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AF219B7950600C8E12A /* otis-hotpost-still.png */; };
 		82A66AF519B7950600C8E12A /* otis-hotpost-still@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AF319B7950600C8E12A /* otis-hotpost-still@2x.png */; };
+		82A66AF819B79D6C00C8E12A /* otis_building.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AF619B79D6C00C8E12A /* otis_building.jpg */; };
+		82A66AF919B79D6C00C8E12A /* otis_building@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AF719B79D6C00C8E12A /* otis_building@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,11 +85,13 @@
 		82A66AE519B7942900C8E12A /* grfx_splitBtn@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "grfx_splitBtn@2x.jpg"; sourceTree = "<group>"; };
 		82A66AE619B7942900C8E12A /* Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marker.png; sourceTree = "<group>"; };
 		82A66AE719B7942900C8E12A /* Marker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker@2x.png"; sourceTree = "<group>"; };
-		82A66AE819B7942900C8E12A /* otis_building.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otis_building.png; sourceTree = "<group>"; };
-		82A66AE919B7942900C8E12A /* otis_building@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "otis_building@2x.png"; sourceTree = "<group>"; };
+		82A66AE819B7942900C8E12A /* otis_building_inside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otis_building_inside.png; sourceTree = "<group>"; };
+		82A66AE919B7942900C8E12A /* otis_building_inside@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "otis_building_inside@2x.png"; sourceTree = "<group>"; };
 		82A66AEA19B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = UTC_SCHEMATIC_ANIMATION.m4v; sourceTree = "<group>"; };
 		82A66AF219B7950600C8E12A /* otis-hotpost-still.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "otis-hotpost-still.png"; sourceTree = "<group>"; };
 		82A66AF319B7950600C8E12A /* otis-hotpost-still@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "otis-hotpost-still@2x.png"; sourceTree = "<group>"; };
+		82A66AF619B79D6C00C8E12A /* otis_building.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = otis_building.jpg; sourceTree = "<group>"; };
+		82A66AF719B79D6C00C8E12A /* otis_building@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "otis_building@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,8 +227,10 @@
 				82A66AE519B7942900C8E12A /* grfx_splitBtn@2x.jpg */,
 				82A66AE619B7942900C8E12A /* Marker.png */,
 				82A66AE719B7942900C8E12A /* Marker@2x.png */,
-				82A66AE819B7942900C8E12A /* otis_building.png */,
-				82A66AE919B7942900C8E12A /* otis_building@2x.png */,
+				82A66AE819B7942900C8E12A /* otis_building_inside.png */,
+				82A66AE919B7942900C8E12A /* otis_building_inside@2x.png */,
+				82A66AF619B79D6C00C8E12A /* otis_building.jpg */,
+				82A66AF719B79D6C00C8E12A /* otis_building@2x.jpg */,
 				82A66AF219B7950600C8E12A /* otis-hotpost-still.png */,
 				82A66AF319B7950600C8E12A /* otis-hotpost-still@2x.png */,
 			);
@@ -307,17 +313,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82A66AEF19B7942900C8E12A /* otis_building.png in Resources */,
+				82A66AEF19B7942900C8E12A /* otis_building_inside.png in Resources */,
 				82A66AB419B7926B00C8E12A /* Images.xcassets in Resources */,
 				82A66AF519B7950600C8E12A /* otis-hotpost-still@2x.png in Resources */,
 				82A66AED19B7942900C8E12A /* Marker.png in Resources */,
 				82A66AF419B7950600C8E12A /* otis-hotpost-still.png in Resources */,
 				82A66ADD19B792C700C8E12A /* xhSplitViewController.xib in Resources */,
 				82A66AA619B7926B00C8E12A /* InfoPlist.strings in Resources */,
+				82A66AF919B79D6C00C8E12A /* otis_building@2x.jpg in Resources */,
 				82A66AF119B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v in Resources */,
+				82A66AF819B79D6C00C8E12A /* otis_building.jpg in Resources */,
 				82A66AEE19B7942900C8E12A /* Marker@2x.png in Resources */,
 				82A66AEB19B7942900C8E12A /* grfx_splitBtn.jpg in Resources */,
-				82A66AF019B7942900C8E12A /* otis_building@2x.png in Resources */,
+				82A66AF019B7942900C8E12A /* otis_building_inside@2x.png in Resources */,
 				82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */,
 				82A66AEC19B7942900C8E12A /* grfx_splitBtn@2x.jpg in Resources */,
 			);
@@ -554,6 +562,7 @@
 				82A66ACC19B7926B00C8E12A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82A66ACD19B7926B00C8E12A /* Build configuration list for PBXNativeTarget "xhSplitViewTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +571,7 @@
 				82A66ACF19B7926B00C8E12A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -37,14 +37,23 @@
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
     // Do any additional setup after loading the view.
     [self createBg];
-    [self createHotspots];
+//    [self createHotspots];
 }
 
 -(void)createBg
 {
-    _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otis_building.png"]];
+    _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otis_building.jpg"]];
     _uiiv_bg.frame = self.view.bounds;
     [self.view addSubview: _uiiv_bg];
+    
+    [self performSelector:@selector(loadMovie) withObject:nil afterDelay:2];
+    [self performSelector:@selector(updateBgImg) withObject:nil afterDelay:3];
+}
+
+-(void)updateBgImg
+{
+    [_uiiv_bg setImage:[UIImage imageNamed:@"otis_building_inside.png"]];
+    [self createHotspots];
 }
 
 -(void)createHotspots
@@ -62,24 +71,24 @@
     [hotsoptLabel1 setTextAlignment:NSTextAlignmentCenter];
     [hotspot1 addSubview: hotsoptLabel1];
     [hotspot1 addSubview: hotspotMark1];
-    [self.view addSubview: hotspot1];
+    [self.view insertSubview:hotspot1 aboveSubview:_uiiv_bg];
     hotspot1.tag = 1;
     [_arr_hotspotsArray addObject: hotspot1];
     [self addGestureToHotspots:hotspot1];
     
-    UIView *hotspot2 = [[UIView alloc] initWithFrame:CGRectMake(560, 360, 131, 35)];
-    UIImageView *hotspotMark2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Marker.png"]];
-    hotspotMark2.frame = CGRectMake(90.0, 0.0, 41.0, 35.0);
-    UILabel *hotsoptLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 90.0, 35.0)];
-    [hotsoptLabel2 setText:@"Hotspot Label"];
-    [hotsoptLabel2 setFont:[UIFont systemFontOfSize:13]];
-    [hotsoptLabel2 setTextAlignment:NSTextAlignmentCenter];
-    [hotspot2 addSubview: hotsoptLabel2];
-    [hotspot2 addSubview: hotspotMark2];
-    [self.view addSubview: hotspot2];
-    hotspot2.tag = 2;
-    [_arr_hotspotsArray addObject: hotspot2];
-    [self addGestureToHotspots:hotspot2];
+//    UIView *hotspot2 = [[UIView alloc] initWithFrame:CGRectMake(560, 360, 131, 35)];
+//    UIImageView *hotspotMark2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Marker.png"]];
+//    hotspotMark2.frame = CGRectMake(90.0, 0.0, 41.0, 35.0);
+//    UILabel *hotsoptLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 90.0, 35.0)];
+//    [hotsoptLabel2 setText:@"Hotspot Label"];
+//    [hotsoptLabel2 setFont:[UIFont systemFontOfSize:13]];
+//    [hotsoptLabel2 setTextAlignment:NSTextAlignmentCenter];
+//    [hotspot2 addSubview: hotsoptLabel2];
+//    [hotspot2 addSubview: hotspotMark2];
+//    [self.view addSubview: hotspot2];
+//    hotspot2.tag = 2;
+//    [_arr_hotspotsArray addObject: hotspot2];
+//    [self addGestureToHotspots:hotspot2];
 }
 
 -(void)addGestureToHotspots:(UIView *)hotspot
@@ -122,13 +131,13 @@
 
 -(void)loadMovie
 {
-    UIButton *uib_closeMovie = [UIButton buttonWithType:UIButtonTypeCustom];
-    uib_closeMovie.frame = CGRectMake(1024-20-33, 20, 33, 33);
-    [uib_closeMovie setTitle:@"X" forState:UIControlStateNormal];
-    uib_closeMovie.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
-    [uib_closeMovie setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.view addSubview:uib_closeMovie];
-    [uib_closeMovie addTarget:self action:@selector(closeMovie:) forControlEvents:UIControlEventTouchUpInside];
+//    UIButton *uib_closeMovie = [UIButton buttonWithType:UIButtonTypeCustom];
+//    uib_closeMovie.frame = CGRectMake(1024-20-33, 20, 33, 33);
+//    [uib_closeMovie setTitle:@"X" forState:UIControlStateNormal];
+//    uib_closeMovie.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
+//    [uib_closeMovie setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [self.view addSubview:uib_closeMovie];
+//    [uib_closeMovie addTarget:self action:@selector(closeMovie:) forControlEvents:UIControlEventTouchUpInside];
     
     NSString *url = [[NSBundle mainBundle] pathForResource:@"UTC_SCHEMATIC_ANIMATION"
                                                     ofType:@"m4v"];
@@ -144,7 +153,8 @@
     
     _avPlayerLayer.frame = CGRectMake(0.0, 0.0, 1024, 768);
     _avPlayerLayer.backgroundColor = [UIColor blackColor].CGColor;
-    [self.view.layer insertSublayer:_avPlayerLayer below:uib_closeMovie.layer];
+//    [self.view.layer insertSublayer:_avPlayerLayer below:uib_closeMovie.layer];
+    [self.view.layer addSublayer: _avPlayerLayer];
     
     if ([@"YES" isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:@"screenSaverMute"]]) {
         _avPlayer.volume = 0.0;
@@ -160,18 +170,19 @@
 }
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
-    AVPlayerItem *p = [notification object];
-    [p seekToTime:kCMTimeZero];
+//    AVPlayerItem *p = [notification object];
+//    [p seekToTime:kCMTimeZero];
+    [self closeMovie];
 }
 
--(void)closeMovie:(id)sender
+-(void)closeMovie
 {
-    UIButton *tappedBtn = sender;
-    [tappedBtn removeFromSuperview];
-    tappedBtn = nil;
-    
+//    UIButton *tappedBtn = sender;
+//    [tappedBtn removeFromSuperview];
+//    tappedBtn = nil;
     [_avPlayerLayer removeFromSuperlayer];
     _avPlayerLayer = nil;
+    
 }
 
 - (void)didReceiveMemoryWarning
