@@ -18,6 +18,8 @@
 @property (nonatomic, strong) ebZoomingScrollView   *uis_zoomingImg;
 @property (nonatomic, strong) AVPlayer              *avPlayer;
 @property (nonatomic, strong) AVPlayerLayer         *avPlayerLayer;
+@property (nonatomic, strong) UIButton              *uib_logoBtn;
+@property (nonatomic, strong) UIButton              *uib_back;
 @end
 
 @implementation otisViewController
@@ -42,12 +44,52 @@
 
 -(void)createBg
 {
+    if (_uiiv_bg) {
+        [_uiiv_bg removeFromSuperview];
+        _uiiv_bg = nil;
+    }
     _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otis_building.jpg"]];
     _uiiv_bg.frame = self.view.bounds;
     [self.view addSubview: _uiiv_bg];
-    
-    [self performSelector:@selector(loadMovie) withObject:nil afterDelay:2];
-    [self performSelector:@selector(updateBgImg) withObject:nil afterDelay:3];
+    [self initLogoBtn];
+//    [self performSelector:@selector(loadMovie) withObject:nil afterDelay:2];
+//    [self performSelector:@selector(updateBgImg) withObject:nil afterDelay:3];
+}
+
+-(void)initLogoBtn
+{
+    _uib_logoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_logoBtn.frame = CGRectMake(500, 110, 100, 50);
+    _uib_logoBtn.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:_uib_logoBtn];
+    [_uib_logoBtn addTarget:self action:@selector(changeView) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)changeView
+{
+    _uib_logoBtn.hidden = YES;
+    [self createBackButton];
+    [self loadMovie];
+    [self updateBgImg];
+}
+
+-(void)createBackButton
+{
+    _uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_back.frame = CGRectMake(37, 0.0, 36, 36);
+    [_uib_back setImage:[UIImage imageNamed:@"grfx_backBtn.png"] forState:UIControlStateNormal];
+    [self.view insertSubview:_uib_back aboveSubview:_uiiv_bg];
+    [_uib_back addTarget:self action:@selector(restartView) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)restartView
+{
+    if (_avPlayerLayer) {
+        [self closeMovie];
+    }
+
+    [self createBg];
+
 }
 
 -(void)updateBgImg
@@ -154,7 +196,7 @@
     _avPlayerLayer.frame = CGRectMake(0.0, 0.0, 1024, 768);
     _avPlayerLayer.backgroundColor = [UIColor blackColor].CGColor;
 //    [self.view.layer insertSublayer:_avPlayerLayer below:uib_closeMovie.layer];
-    [self.view.layer addSublayer: _avPlayerLayer];
+    [self.view.layer insertSublayer: _avPlayerLayer below:_uib_back.layer];
     
     if ([@"YES" isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:@"screenSaverMute"]]) {
         _avPlayer.volume = 0.0;
