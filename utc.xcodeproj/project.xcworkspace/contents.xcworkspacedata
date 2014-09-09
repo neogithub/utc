@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:xhSplitView.xcodeproj">
+      location = "self:utc.xcodeproj">
    </FileRef>
 </Workspace>

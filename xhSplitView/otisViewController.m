@@ -11,7 +11,8 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
-@interface otisViewController ()<ebZoomingScrollViewDelegate>
+
+@interface otisViewController ()<ebZoomingScrollViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIImageView           *uiiv_bg;
 @property (nonatomic, strong) NSMutableArray        *arr_hotspotsArray;
@@ -40,7 +41,6 @@
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
     // Do any additional setup after loading the view.
     [self createBg];
-//    [self createHotspots];
 }
 
 -(void)createBg
@@ -52,30 +52,8 @@
     _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otis_building.jpg"]];
     _uiiv_bg.frame = self.view.bounds;
     [self.view addSubview: _uiiv_bg];
-//    [self initBuildingBtn];
     [self initLogoBtn];
-//    [self performSelector:@selector(loadMovie) withObject:nil afterDelay:2];
-//    [self performSelector:@selector(updateBgImg) withObject:nil afterDelay:3];
 }
-
-//-(void)initBuildingBtn
-//{
-//    _uib_buildingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    _uib_buildingBtn.frame = CGRectMake(385.0, 257.0, 285, 193);
-//    _uib_buildingBtn.backgroundColor = [UIColor clearColor];
-//    [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view insertSubview:_uib_buildingBtn aboveSubview:_uiiv_bg];
-//}
-
-//-(void)loadBuilding
-//{
-//    [_uib_buildingBtn removeFromSuperview];
-//    _uib_buildingBtn = nil;
-//    
-//    [_uiiv_bg setImage:[UIImage imageNamed:@"otis_building.jpg"]];
-//    [self initLogoBtn];
-////    [self createBackButton];
-//}
 
 -(void)initLogoBtn
 {
@@ -140,19 +118,19 @@
     [_arr_hotspotsArray addObject: hotspot1];
     [self addGestureToHotspots:hotspot1];
     
-//    UIView *hotspot2 = [[UIView alloc] initWithFrame:CGRectMake(560, 360, 131, 35)];
-//    UIImageView *hotspotMark2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Marker.png"]];
-//    hotspotMark2.frame = CGRectMake(90.0, 0.0, 41.0, 35.0);
-//    UILabel *hotsoptLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 90.0, 35.0)];
-//    [hotsoptLabel2 setText:@"Hotspot Label"];
-//    [hotsoptLabel2 setFont:[UIFont systemFontOfSize:13]];
-//    [hotsoptLabel2 setTextAlignment:NSTextAlignmentCenter];
-//    [hotspot2 addSubview: hotsoptLabel2];
-//    [hotspot2 addSubview: hotspotMark2];
-//    [self.view addSubview: hotspot2];
-//    hotspot2.tag = 2;
-//    [_arr_hotspotsArray addObject: hotspot2];
-//    [self addGestureToHotspots:hotspot2];
+    UIView *hotspot2 = [[UIView alloc] initWithFrame:CGRectMake(560, 460, 131, 35)];
+    UIImageView *hotspotMark2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Marker.png"]];
+    hotspotMark2.frame = CGRectMake(90.0, 0.0, 41.0, 35.0);
+    UILabel *hotsoptLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 90.0, 35.0)];
+    [hotsoptLabel2 setText:@"Hotspot Label"];
+    [hotsoptLabel2 setFont:[UIFont systemFontOfSize:13]];
+    [hotsoptLabel2 setTextAlignment:NSTextAlignmentCenter];
+    [hotspot2 addSubview: hotsoptLabel2];
+    [hotspot2 addSubview: hotspotMark2];
+    [self.view insertSubview:hotspot2 aboveSubview:_uiiv_bg];
+    hotspot2.tag = 2;
+    [_arr_hotspotsArray addObject: hotspot2];
+    [self addGestureToHotspots:hotspot2];
 }
 
 -(void)addGestureToHotspots:(UIView *)hotspot
@@ -193,16 +171,9 @@
     _uis_zoomingImg = nil;
 }
 
+#pragma mark - play movie
 -(void)loadMovie
 {
-//    UIButton *uib_closeMovie = [UIButton buttonWithType:UIButtonTypeCustom];
-//    uib_closeMovie.frame = CGRectMake(1024-20-33, 20, 33, 33);
-//    [uib_closeMovie setTitle:@"X" forState:UIControlStateNormal];
-//    uib_closeMovie.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
-//    [uib_closeMovie setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [self.view addSubview:uib_closeMovie];
-//    [uib_closeMovie addTarget:self action:@selector(closeMovie:) forControlEvents:UIControlEventTouchUpInside];
-    
     NSString *url = [[NSBundle mainBundle] pathForResource:@"20140903_UTC_SCHEMATIC_ANIMATION_REV"
                                                     ofType:@"m4v"];
     
@@ -214,10 +185,11 @@
     }
     _avPlayer = [AVPlayer playerWithURL:[NSURL fileURLWithPath:url]] ;
     _avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
-    
     _avPlayerLayer.frame = CGRectMake(0.0, 0.0, 1024, 768);
+	
+	[self addMovieGestures];
+	
     _avPlayerLayer.backgroundColor = [UIColor blackColor].CGColor;
-//    [self.view.layer insertSublayer:_avPlayerLayer below:uib_closeMovie.layer];
     [self.view.layer insertSublayer: _avPlayerLayer below:_uib_back.layer];
     
     [_avPlayer play];
@@ -229,37 +201,56 @@
                                                object:[_avPlayer currentItem]];
 }
 
+-(void)addMovieGestures
+{
+	UITapGestureRecognizer *tappedMovie = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedMovie:)];
+    [self.view addGestureRecognizer: tappedMovie];
+	
+	UISwipeGestureRecognizer *swipeUpRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeUpPlay:)];
+    [swipeUpRecognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
+    [swipeUpRecognizer setDelegate:self];
+    [self.view addGestureRecognizer:swipeUpRecognizer];
+    
+    UISwipeGestureRecognizer *swipeDownRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownPause:)];
+    [swipeDownRecognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+    [swipeDownRecognizer setDelegate:self];
+    [self.view addGestureRecognizer:swipeDownRecognizer];
+}
+
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
-//    AVPlayerItem *p = [notification object];
-//    [p seekToTime:kCMTimeZero];
     [self closeMovie];
+}
+
+#pragma mark - control(s) for movie
+-(void)tappedMovie:(UIGestureRecognizer*)gesture
+{
+	if ([_avPlayer rate] == 0.0) {
+		[_avPlayer play];
+	} else {
+		[_avPlayer pause];
+	}
+}
+
+-(void)swipeUpPlay:(id)sender {
+    [_avPlayer play];
+}
+
+-(void)swipeDownPause:(id)sender {
+    [_avPlayer pause];
 }
 
 -(void)closeMovie
 {
-//    UIButton *tappedBtn = sender;
-//    [tappedBtn removeFromSuperview];
-//    tappedBtn = nil;
     [_avPlayerLayer removeFromSuperlayer];
     _avPlayerLayer = nil;
-    
 }
+
+#pragma mark - boiler plate
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
