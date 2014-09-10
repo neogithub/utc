@@ -12,7 +12,7 @@
 
 @protocol ebZoomingScrollViewDelegate
 @optional
--(void)didRemove:(ebZoomingScrollView *)customClass;
+-(void)didRemove:(ebZoomingScrollView *)ebZoomingScrollView;
 @end
 
 @interface ebZoomingScrollView : UIView <UIScrollViewDelegate,UIGestureRecognizerDelegate>

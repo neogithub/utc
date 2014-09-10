@@ -1,0 +1,56 @@
+{
+        "buildings": [
+            {
+                "title": "Demo Building",
+				"categories": ["Elevators and Escalators","Fire and Security","Food Safety","Heating and Cooling","Building Automation"],
+                "companies": [
+                    {
+                        "floorname": "Ground FFloor",
+                        "floorplateImage": "resi_plate_1000_G.png"
+                    },
+                    {
+                        "floorname": "Terrace",
+						"floorplateImage": "resi_plate_1000_T.png"
+                    },
+                    {
+                        "floorname": "2nd Floor",
+						"floorplateImage": "resi_plate_1000_2.png"
+                    },
+                    {
+                        "floorname": "3rd Floor",
+						"floorplateImage": "resi_plate_1000_3.png"
+                    },
+                    {
+                        "floorname": "Penthouse",
+						"floorplateImage": "resi_plate_1000_P.png"
+                    }
+                ]
+            },
+            {
+                "title": "Test Building",
+				"categories": ["Elevators and Escalators","Fire and Security","Food Safety","Heating and Cooling","Building Automation"],
+                "floors": [
+					{
+					  "floorname": "Ground Floor",
+					  "floorplateImage": "resi_plate_2000_G.png"
+					},
+					{
+					  "floorname": "Terrace",
+					  "floorplateImage": "resi_plate_2000_T.png"
+					},
+					{
+					  "floorname": "2nd Floor",
+					  "floorplateImage": "resi_plate_2000_2.png"
+					},
+					{
+					  "floorname": "3rd Floor",
+					  "floorplateImage": "resi_plate_2000_3.png"
+					},
+					{
+					  "floorname": "Penthouse",
+					  "floorplateImage": "resi_plate_2000_P.png"
+					}
+				]
+            },
+		]
+}

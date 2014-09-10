@@ -8,6 +8,7 @@
 
 #import "detailViewController.h"
 #import "otisViewController.h"
+
 @interface detailViewController ()
 @property (nonatomic, strong) UIImageView           *uiiv_bg;
 @property (nonatomic, strong) UIButton              *uib_buildingBtn;
@@ -35,7 +36,7 @@
     [self initBuildingBtn];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackBtn) name:@"goIntoBuilding" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackBtn) name:@"goToCity" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuilding) name:@"loadOtis" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuilding:) name:@"loadOtis" object:nil];
 }
 
 -(void)hideBackBtn
@@ -64,14 +65,20 @@
     _uib_buildingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _uib_buildingBtn.frame = CGRectMake(385.0, 257.0, 285, 193);
     _uib_buildingBtn.backgroundColor = [UIColor clearColor];
-    [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_buildingBtn addTarget:self action:@selector(loadBuilding:) forControlEvents:UIControlEventTouchUpInside];
     [self.view insertSubview:_uib_buildingBtn aboveSubview:_uiiv_bg];
 }
 
--(void)loadBuilding
+-(void)loadBuilding:(id)sender
 {
-    _otisVC = [[otisViewController alloc] initWithNibName:nil bundle:nil];
-    [self.view addSubview: _otisVC.view];
+	[self loadBuildingVC:[sender tag]];
+}
+
+-(void)loadBuildingVC:(int)index
+{
+	_otisVC = [[otisViewController alloc] initWithNibName:nil bundle:nil];
+	_otisVC.transitionClipName = @"UTC_TRANSISTION_ANIMATION.mov";
+	[self.view addSubview: _otisVC.view];
     [self createBackButton];
 }
 
@@ -91,7 +98,6 @@
     [_otisVC.view removeFromSuperview];
     _otisVC = nil;
     _otisVC.view = nil;
-    
 }
 
 - (void)didReceiveMemoryWarning

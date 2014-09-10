@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface otisViewController : UIViewController
-
+@property (nonatomic,strong) NSString *transitionClipName;
 @end

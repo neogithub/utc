@@ -11,6 +11,7 @@
 #import "masterViewController.h"
 #import "detailViewController.h"
 #import "otisViewController.h"
+
 @interface ViewController ()
 @property (nonatomic, strong) UIButton                          *uib_splitCtrl;
 @property (nonatomic, strong) xhSplitViewController             *splitVC;

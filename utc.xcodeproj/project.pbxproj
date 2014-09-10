@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20D0B00419BF4C280096021D /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00319BF4C280096021D /* City.m */; };
+		20D0B00819BF4EAD0096021D /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00719BF4EAD0096021D /* Building.m */; };
+		20D0B00C19BF52100096021D /* buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B00A19BF52100096021D /* buildings.json */; };
+		20D0B00D19BF52100096021D /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B00B19BF52100096021D /* companies.json */; };
+		20D0B01019BF53C30096021D /* companies.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00F19BF53C30096021D /* companies.m */; };
+		20D0B01219BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B01119BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov */; };
+		20D0B01419BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B01319BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v */; };
+		20D0B05619BFDC650096021D /* UTC_SPIN_ANIMATION.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B05519BFDC650096021D /* UTC_SPIN_ANIMATION.mov */; };
 		82A66A9C19B7926A00C8E12A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9B19B7926A00C8E12A /* Foundation.framework */; };
 		82A66A9E19B7926B00C8E12A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */; };
 		82A66AA019B7926B00C8E12A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9F19B7926B00C8E12A /* UIKit.framework */; };
@@ -56,6 +64,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20D0B00219BF4C280096021D /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		20D0B00319BF4C280096021D /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		20D0B00619BF4EAD0096021D /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
+		20D0B00719BF4EAD0096021D /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
+		20D0B00A19BF52100096021D /* buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = buildings.json; path = DataStore/buildings.json; sourceTree = "<group>"; };
+		20D0B00B19BF52100096021D /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = DataStore/companies.json; sourceTree = "<group>"; };
+		20D0B00E19BF53C30096021D /* companies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companies.h; sourceTree = "<group>"; };
+		20D0B00F19BF53C30096021D /* companies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companies.m; sourceTree = "<group>"; };
+		20D0B01119BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = UTC_TRANSISTION_ANIMATION.mov; sourceTree = "<group>"; };
+		20D0B01319BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = UTC_SCHEMATIC_ANIMATION_CLIP.m4v; sourceTree = "<group>"; };
+		20D0B05519BFDC650096021D /* UTC_SPIN_ANIMATION.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = UTC_SPIN_ANIMATION.mov; sourceTree = "<group>"; };
 		82A66A9819B7926A00C8E12A /* utc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = utc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A66A9B19B7926A00C8E12A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +147,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20D0B00519BF4C300096021D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20D0B00219BF4C280096021D /* City.h */,
+				20D0B00319BF4C280096021D /* City.m */,
+				20D0B00619BF4EAD0096021D /* Building.h */,
+				20D0B00719BF4EAD0096021D /* Building.m */,
+				20D0B00E19BF53C30096021D /* companies.h */,
+				20D0B00F19BF53C30096021D /* companies.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		20D0B00919BF52030096021D /* Datastore */ = {
+			isa = PBXGroup;
+			children = (
+				20D0B00A19BF52100096021D /* buildings.json */,
+				20D0B00B19BF52100096021D /* companies.json */,
+			);
+			name = Datastore;
+			sourceTree = "<group>";
+		};
 		82A66A8F19B7926A00C8E12A = {
 			isa = PBXGroup;
 			children = (
@@ -161,15 +202,17 @@
 		82A66AA119B7926B00C8E12A /* xhSplitView */ = {
 			isa = PBXGroup;
 			children = (
+				20D0B00919BF52030096021D /* Datastore */,
 				82A66AAA19B7926B00C8E12A /* AppDelegate.h */,
 				82A66AAB19B7926B00C8E12A /* AppDelegate.m */,
+				20D0B00519BF4C300096021D /* Model */,
 				82A66AAD19B7926B00C8E12A /* Main.storyboard */,
 				82A66AB019B7926B00C8E12A /* ViewController.h */,
 				82A66AB119B7926B00C8E12A /* ViewController.m */,
-				82A66AD019B792BD00C8E12A /* detailViewController.h */,
-				82A66AD119B792BD00C8E12A /* detailViewController.m */,
 				82A66AD219B792BD00C8E12A /* masterViewController.h */,
 				82A66AD319B792BD00C8E12A /* masterViewController.m */,
+				82A66AD019B792BD00C8E12A /* detailViewController.h */,
+				82A66AD119B792BD00C8E12A /* detailViewController.m */,
 				82A66AD419B792BD00C8E12A /* otisViewController.h */,
 				82A66AD519B792BD00C8E12A /* otisViewController.m */,
 				82A66AD919B792C700C8E12A /* xhSplitViewController.h */,
@@ -226,7 +269,10 @@
 			children = (
 				82A66AE319B7942900C8E12A /* grfx */,
 				82A66AEA19B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v */,
+				20D0B01119BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov */,
+				20D0B01319BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v */,
 				82A66B0419B7BEF000C8E12A /* 20140903_UTC_SCHEMATIC_ANIMATION_REV.m4v */,
+				20D0B05519BFDC650096021D /* UTC_SPIN_ANIMATION.mov */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -330,11 +376,15 @@
 			files = (
 				82A66AEF19B7942900C8E12A /* otis_building_inside.png in Resources */,
 				82A66AB419B7926B00C8E12A /* Images.xcassets in Resources */,
+				20D0B01219BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov in Resources */,
 				82A66AFF19B7AC2D00C8E12A /* grfx_backBtn@2x.png in Resources */,
+				20D0B00D19BF52100096021D /* companies.json in Resources */,
 				82A66AF519B7950600C8E12A /* otis-hotpost-still@2x.png in Resources */,
+				20D0B01419BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v in Resources */,
 				82A66AED19B7942900C8E12A /* Marker.png in Resources */,
 				82A66AF419B7950600C8E12A /* otis-hotpost-still.png in Resources */,
 				82A66ADD19B792C700C8E12A /* xhSplitViewController.xib in Resources */,
+				20D0B00C19BF52100096021D /* buildings.json in Resources */,
 				82A66AA619B7926B00C8E12A /* InfoPlist.strings in Resources */,
 				82A66AF919B79D6C00C8E12A /* otis_building@2x.jpg in Resources */,
 				82A66AF119B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v in Resources */,
@@ -345,6 +395,7 @@
 				82A66B0519B7BF3E00C8E12A /* 20140903_UTC_SCHEMATIC_ANIMATION_REV.m4v in Resources */,
 				82A66AEB19B7942900C8E12A /* grfx_splitBtn.jpg in Resources */,
 				82A66AF019B7942900C8E12A /* otis_building_inside@2x.png in Resources */,
+				20D0B05619BFDC650096021D /* UTC_SPIN_ANIMATION.mov in Resources */,
 				82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */,
 				82A66AFE19B7AC2D00C8E12A /* grfx_backBtn.png in Resources */,
 				82A66AEC19B7942900C8E12A /* grfx_splitBtn@2x.jpg in Resources */,
@@ -366,10 +417,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D0B01019BF53C30096021D /* companies.m in Sources */,
 				82A66AB219B7926B00C8E12A /* ViewController.m in Sources */,
 				82A66AD819B792BD00C8E12A /* otisViewController.m in Sources */,
+				20D0B00419BF4C280096021D /* City.m in Sources */,
 				82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */,
 				82A66AAC19B7926B00C8E12A /* AppDelegate.m in Sources */,
+				20D0B00819BF4EAD0096021D /* Building.m in Sources */,
 				82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */,
 				82A66AA819B7926B00C8E12A /* main.m in Sources */,
 				82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */,
