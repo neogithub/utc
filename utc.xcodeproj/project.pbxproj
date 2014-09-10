@@ -20,6 +20,7 @@
 		20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */; };
 		20D0B06119C0C91C0096021D /* otis_building_hero.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B05F19C0C91C0096021D /* otis_building_hero.jpg */; };
 		20D0B06219C0C91C0096021D /* otis_building_hero@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B06019C0C91C0096021D /* otis_building_hero@2x.jpg */; };
+		20D0B06419C0D0F30096021D /* UTC_SPLIT_ANIMATION.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B06319C0D0F30096021D /* UTC_SPLIT_ANIMATION.mp4 */; };
 		82A66A9C19B7926A00C8E12A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9B19B7926A00C8E12A /* Foundation.framework */; };
 		82A66A9E19B7926B00C8E12A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */; };
 		82A66AA019B7926B00C8E12A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9F19B7926B00C8E12A /* UIKit.framework */; };
@@ -87,6 +88,7 @@
 		20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ZoomToPoint.m"; sourceTree = "<group>"; };
 		20D0B05F19C0C91C0096021D /* otis_building_hero.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = otis_building_hero.jpg; sourceTree = "<group>"; };
 		20D0B06019C0C91C0096021D /* otis_building_hero@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "otis_building_hero@2x.jpg"; sourceTree = "<group>"; };
+		20D0B06319C0D0F30096021D /* UTC_SPLIT_ANIMATION.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = UTC_SPLIT_ANIMATION.mp4; sourceTree = "<group>"; };
 		82A66A9819B7926A00C8E12A /* utc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = utc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A66A9B19B7926A00C8E12A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -289,6 +291,7 @@
 				20D0B05719C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov */,
 				20D0B01319BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v */,
 				82A66B0419B7BEF000C8E12A /* 20140903_UTC_SCHEMATIC_ANIMATION_REV.m4v */,
+				20D0B06319C0D0F30096021D /* UTC_SPLIT_ANIMATION.mp4 */,
 				20D0B05519BFDC650096021D /* UTC_SPIN_ANIMATION.mov */,
 			);
 			path = src;
@@ -410,6 +413,7 @@
 				82A66AF119B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v in Resources */,
 				20D0B05819C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov in Resources */,
 				82A66B0219B7B19B00C8E12A /* grfx_cityBgImg.jpg in Resources */,
+				20D0B06419C0D0F30096021D /* UTC_SPLIT_ANIMATION.mp4 in Resources */,
 				82A66AF819B79D6C00C8E12A /* otis_building.jpg in Resources */,
 				82A66AEE19B7942900C8E12A /* Marker@2x.png in Resources */,
 				82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */,
