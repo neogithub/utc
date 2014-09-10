@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-               BuildableName = "xhSplitView.app"
+               BuildableName = "utc.app"
                BlueprintName = "utc"
                ReferencedContainer = "container:utc.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "82A66AB819B7926B00C8E12A"
-               BuildableName = "xhSplitViewTests.xctest"
+               BuildableName = "utcTests.xctest"
                BlueprintName = "utcTests"
                ReferencedContainer = "container:utc.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "xhSplitView.app"
+            BuildableName = "utc.app"
             BlueprintName = "utc"
             ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "xhSplitView.app"
+            BuildableName = "utc.app"
             BlueprintName = "utc"
             ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "xhSplitView.app"
+            BuildableName = "utc.app"
             BlueprintName = "utc"
             ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
