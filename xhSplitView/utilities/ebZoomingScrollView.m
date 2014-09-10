@@ -209,37 +209,13 @@
 
 
 -(void)removeRenderScroll:(id)sender {
-	UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction  | UIViewAnimationOptionCurveEaseInOut;
-	
-	[UIView animateWithDuration:0.3 delay:0.0 options:options
-					 animations:^{
-						 _uiv_windowComparisonContainer.alpha=0.0;
-						 _uiv_windowComparisonContainer.transform = CGAffineTransformScale(_uiv_windowComparisonContainer.transform, 0.5, 0.5);
-					 }
-					 completion:^(BOOL  completed){
-						 [_uiv_windowComparisonContainer removeFromSuperview];
-						 _uiv_windowComparisonContainer = nil;
-						 [_scrollView removeFromSuperview];
-						 [self didRemove];
-					 }];
+	[self didRemove];
 }
-
-
 
 #pragma mark - Delegate methods 
 -(void)didRemove {
     // send message the message to the delegate!
     [delegate didRemove:self];
 }
-
-
-//- (void)forwardInvocation:(NSInvocation *)anInvocation
-//{
-//    if ([self.scrollView respondsToSelector:anInvocation.selector])
-//        [anInvocation invokeWithTarget:self.scrollView];
-//    else
-//        [super forwardInvocation:anInvocation];
-//}
-
 
 @end

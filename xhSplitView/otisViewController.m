@@ -30,6 +30,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 @property (nonatomic, strong) UIButton              *uib_back;
 @property (nonatomic, strong) UIButton              *uib_buildingBtn;
 @property (nonatomic, strong) UILabel				*uil_filmHint;
+@property (nonatomic, strong) UIButton				*uib_filmClose;
 
 @property (nonatomic, strong) neoHotspotsView *myHotspots;
 @property (nonatomic, strong) NSMutableArray *arr_hotspots;
@@ -45,7 +46,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	
 	// load animation that leads to the hero
 	// building tapped from previous screen
-	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO];
+	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO belowSubview:nil];
 	// add in the bg image beneath the film
 	[self createStillFrameUnderFilm];
 	
@@ -118,7 +119,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	//[[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
     //_uib_logoBtn.hidden = YES;
     [self createBackButton];
-    [self loadMovieNamed:@"UTC_SPLIT_ANIMATION.mp4" isTapToPauseEnabled:NO];
+    [self loadMovieNamed:@"UTC_SPLIT_ANIMATION.mp4" isTapToPauseEnabled:NO belowSubview:nil];
     [self updateStillFrameUnderFilm:@"otis_building.jpg"];
 	[_uib_SplitOpenBtn removeFromSuperview];
 	[self initLogoBtn];
@@ -128,7 +129,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 {
 	//[[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
 	 _uib_logoBtn.hidden = YES;
-    [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" isTapToPauseEnabled:NO];
+    [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" isTapToPauseEnabled:NO belowSubview:nil];
     [self updateStillFrameUnderFilm:@"otis_building_inside.png"];
 	[self createHotspots];
 }
@@ -205,47 +206,8 @@ enum { kEnableDoubleTapToKillMovie = YES };
         //Get the type of hotspot
         NSString *str_type = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"type"]];
         _myHotspots.str_typeOfHs = str_type;
-		//        NSLog(@"Hotspot No.%i's type is: %@ \n\n",i ,str_type);
         
-        //Animation time can be set
-        //_myHotspots.timeRotate = 5.0;
         _myHotspots.tagOfHs = i;
-		/*
-		 Chang the label's alignment according to the tag of hotspot
-		 
-		 if (_myHotspots.tagOfHs == 0)
-		 {
-		 _myHotspots.labelAlignment = CaptionAlignmentBottom;
-         }
-		 if (_myHotspots.tagOfHs == 1)
-		 {
-		 _myHotspots.labelAlignment = CaptionAlignmentBottomLeft;
-		 }
-		 if (_myHotspots.tagOfHs == 2)
-		 {
-		 _myHotspots.labelAlignment = CaptionAlignmentLeft;
-		 }
-		 if (_myHotspots.tagOfHs == 3)
-		 {
-		 _myHotspots.labelAlignment = CaptionAlignmentTopLeft;
-		 }
-		 if (_myHotspots.tagOfHs == 4)
-		 {
-		 _myHotspots.labelAlignment = CaptionAlignmentTop;
-		 }
-		 if (_myHotspots.tagOfHs == 5)
-		 {
-		 _myHotspots.labelAlignment = CaptionAlignmentTopRight;
-		 }
-		 if (_myHotspots.tagOfHs == 6)
-		 {
-		 _myHotspots.labelAlignment = CaptionAlignmentRight;
-		 }
-		 if (_myHotspots.tagOfHs == 7)
-		 {
-		 _myHotspots.labelAlignment = CaptionAlignmentBottomRight;
-		 }
-		 */
         [_uis_zoomingImg.blurView addSubview:_myHotspots];
     }
 }
@@ -256,17 +218,15 @@ enum { kEnableDoubleTapToKillMovie = YES };
 -(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
 	neoHotspotsView *tappedView = _arr_hotspotsArray[i];
-		
+	if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
+		[self loadMovieNamed:@"UTC_SPIN_ANIMATION.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+	} else {
+		[self popUpImage];
+	}
+	
 	[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
 	[UIView animateWithDuration:0.5 animations:^{
 		_uis_zoomingImg.alpha = 0.0;
-		
-		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
-			[self loadMovieNamed:@"UTC_SPIN_ANIMATION.mov" isTapToPauseEnabled:YES];
-		} else {
-			[self popUpImage];
-		}
-		
 	} completion:nil];
 }
 
@@ -280,17 +240,25 @@ enum { kEnableDoubleTapToKillMovie = YES };
     _uis_zoomingInfoImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis-hotpost-still.png"] shouldZoom:YES];
     [_uis_zoomingInfoImg setCloseBtn:YES];
     _uis_zoomingInfoImg.delegate = self;
-    [self.view addSubview:_uis_zoomingInfoImg];
+    [self.view insertSubview:_uis_zoomingInfoImg belowSubview:_uis_zoomingImg];
 }
 
 -(void)didRemove:(ebZoomingScrollView *)ebZoomingScrollView {
-    [_uis_zoomingInfoImg removeFromSuperview];
-    _uis_zoomingInfoImg = nil;
+
+	[_uis_zoomingInfoImg bringSubviewToFront:_uis_zoomingImg];
+	[_uis_zoomingImg.scrollView setZoomScale:1.0];
+
+	[UIView animateWithDuration:0.5 animations:^{
+		_uis_zoomingImg.alpha = 1.0;
+	} completion:^(BOOL completed) {
+		[_uis_zoomingInfoImg removeFromSuperview];
+		_uis_zoomingInfoImg = nil;
+	}];
 }
 
 #pragma mark - play movie
 #warning isTransitional below needs to be replaced
--(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled
+-(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled belowSubview:(UIView*)belowSubview
 {
 	NSString* fileName = [moviename stringByDeletingPathExtension];
 	NSString* extension = [moviename pathExtension];
@@ -309,7 +277,12 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
 	[_uiv_movieContainer setBackgroundColor:[UIColor redColor]];
-	[self.view addSubview:_uiv_movieContainer];
+	
+	if (belowSubview != nil) {
+		[self.view insertSubview:_uiv_movieContainer belowSubview:belowSubview];
+	} else {
+		[self.view addSubview:_uiv_movieContainer];
+	}
 	
     _avPlayer = [AVPlayer playerWithURL:[NSURL fileURLWithPath:url]] ;
     _avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
@@ -320,19 +293,28 @@ enum { kEnableDoubleTapToKillMovie = YES };
     
     [_avPlayer play];
     
-    _avPlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playerItemDidReachEnd:)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:[_avPlayer currentItem]];
+		[self updateStillFrameUnderFilm:@"otis_building_inside.png"];
 	
-	[self updateStillFrameUnderFilm:@"otis_building_inside.png"];
+	NSString *selectorAfterMovieFinished;
 	
 	if (tapToPauseEnabled == YES) {
 		[self addMovieGestures];
-		[self loadControlsLabel];
-		NSLog(@"loadControlsLabel");
+		[self loadControlsLabels];
+		selectorAfterMovieFinished = @"playerItemLoop:";
+		_uib_filmClose = [UIButton buttonWithType:UIButtonTypeSystem];
+		_uib_filmClose.frame = CGRectMake(800, 688, 200, 30);
+		_uib_filmClose.backgroundColor = [UIColor whiteColor];
+		[_uib_filmClose setTitle:@"Close" forState:UIControlStateNormal];
+		[_uib_filmClose addTarget:self action:@selector(closeMovie) forControlEvents:UIControlEventTouchUpInside];
+		[_uiv_movieContainer addSubview:_uib_filmClose];
+	} else {
+		selectorAfterMovieFinished = @"playerItemDidReachEnd:";
 	}
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:NSSelectorFromString(selectorAfterMovieFinished)
+												 name:AVPlayerItemDidPlayToEndTimeNotification
+												   object:[_avPlayer currentItem]];
 	
 	if (kEnableDoubleTapToKillMovie) {
 		UITapGestureRecognizer *doubleTapMovie = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeMovie)];
@@ -363,9 +345,16 @@ enum { kEnableDoubleTapToKillMovie = YES };
     [self closeMovie];
 }
 
+-(void)playerItemLoop:(NSNotification *)notification
+{
+	AVPlayerItem *p = [notification object];
+	[p seekToTime:kCMTimeZero];
+	[_avPlayer play];
+}
+
 #pragma mark - control(s) for movie
 
--(void)loadControlsLabel
+-(void)loadControlsLabels
 {
 	NSLog(@"load loadcontrollabel");
 	_uil_filmHint = [[UILabel alloc] init];
@@ -410,10 +399,23 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 -(void)closeMovie
 {
-	[_avPlayerLayer removeFromSuperlayer];
-    _avPlayerLayer = nil;
-	[_uiv_movieContainer removeFromSuperview];
-	_uiv_movieContainer=nil;
+		
+	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
+	[_uis_zoomingImg.scrollView setZoomScale:1.0];
+	
+	[UIView animateWithDuration:0.5 animations:^{
+		_uis_zoomingImg.alpha = 1.0;
+	} completion:^(BOOL completed) {
+		[_uis_zoomingInfoImg removeFromSuperview];
+		_uis_zoomingInfoImg = nil;
+		
+		[_avPlayerLayer removeFromSuperlayer];
+		_avPlayerLayer = nil;
+		[_uiv_movieContainer removeFromSuperview];
+		_uiv_movieContainer=nil;
+
+	}];
+
 }
 
 #pragma mark - boiler plate
