@@ -13,13 +13,15 @@
 #import <AVFoundation/AVFoundation.h>
 
 enum { kEnableSwiping = YES };
+enum { kEnableDoubleTapToKillMovie = YES };
 
-@interface otisViewController ()<ebZoomingScrollViewDelegate, UIGestureRecognizerDelegate>
+@interface otisViewController () <ebZoomingScrollViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIView				*uiv_movieContainer;
 @property (nonatomic, strong) UIImageView           *uiiv_bg;
 @property (nonatomic, strong) NSMutableArray        *arr_hotspotsArray;
 @property (nonatomic, strong) ebZoomingScrollView   *uis_zoomingImg;
+@property (nonatomic, strong) ebZoomingScrollView   *uis_zoomingInfoImg;
 @property (nonatomic, strong) AVPlayer              *avPlayer;
 @property (nonatomic, strong) AVPlayerLayer         *avPlayerLayer;
 @property (nonatomic, strong) UIButton              *uib_logoBtn;
@@ -45,7 +47,21 @@ enum { kEnableSwiping = YES };
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
 	
     // Do any additional setup after loading the view.
-	[self loadMovieNamed:_transitionClipName isTransitional:YES];
+	[self loadMovieNamed:_transitionClipName tapToPauseEnabled:NO];
+	[self createBg];
+	
+	if ((kEnableSwiping==YES) || (kEnableDoubleTapToKillMovie==YES)) {
+		UILabel *uil_Debug = [[UILabel alloc] init];
+		uil_Debug.textColor = [UIColor blackColor];
+		[uil_Debug setFrame:CGRectMake(820, 0, 200, 30)];
+		uil_Debug.backgroundColor=[UIColor redColor];
+		[uil_Debug setTextAlignment:NSTextAlignmentCenter];
+		uil_Debug.textColor=[UIColor whiteColor];
+		uil_Debug.userInteractionEnabled=NO;
+		[uil_Debug setAlpha:0.5];
+		uil_Debug.text= @"DEBUG MODE";
+		[self.view insertSubview:uil_Debug atIndex:1000];
+	}
 }
 
 -(void)createBg
@@ -58,9 +74,20 @@ enum { kEnableSwiping = YES };
 			[hotspot removeFromSuperview];
 		}
     }
-    _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otis_building.jpg"]];
-    _uiiv_bg.frame = self.view.bounds;
-    [self.view insertSubview: _uiiv_bg belowSubview:_uiv_movieContainer];
+	// _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otis_building.jpg"]];
+    //_uiiv_bg.frame = self.view.bounds;
+	
+	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis_building.jpg"] shouldZoom:YES];
+	// [_uis_zoomingImg setCloseBtn:NO];
+    _uis_zoomingImg.delegate = self;
+    //[self.view addSubview:_uis_zoomingImg];
+	
+	
+	if (_uiv_movieContainer) {
+		[self.view insertSubview: _uis_zoomingImg belowSubview:_uiv_movieContainer];
+	} else {
+		[self.view insertSubview: _uis_zoomingImg belowSubview:_uib_back];
+	}
     [self initLogoBtn];
 }
 
@@ -78,9 +105,8 @@ enum { kEnableSwiping = YES };
     [[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
     _uib_logoBtn.hidden = YES;
     [self createBackButton];
-    [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.m4v" isTransitional:NO];
-	[self loadControlsLabel];
-    [self updateBgImg];
+    [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" tapToPauseEnabled:NO];
+    [self updateBgImg:@"otis_building_inside.png"];
 	NSLog(@"changeView");
 }
 
@@ -99,13 +125,14 @@ enum { kEnableSwiping = YES };
         [self closeMovie];
     }
 
-    [self createBg];
+	[self createBg];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"goToCity" object:nil];
 }
 
--(void)updateBgImg
+-(void)updateBgImg:(NSString*)imgName
 {
-    [_uiiv_bg setImage:[UIImage imageNamed:@"otis_building_inside.png"]];
+	// [_uiiv_bg setImage:[UIImage imageNamed:imgName]];
+	[_uis_zoomingImg.blurView setImage:[UIImage imageNamed:imgName]];
     [self createHotspots];
 }
 
@@ -124,7 +151,7 @@ enum { kEnableSwiping = YES };
     [hotsoptLabel1 setTextAlignment:NSTextAlignmentCenter];
     [hotspot1 addSubview: hotsoptLabel1];
     [hotspot1 addSubview: hotspotMark1];
-    [self.view insertSubview:hotspot1 belowSubview:_uiv_movieContainer];
+    [_uis_zoomingImg.blurView addSubview:hotspot1];
     hotspot1.tag = 1;
     [_arr_hotspotsArray addObject: hotspot1];
     [self addGestureToHotspots:hotspot1];
@@ -138,7 +165,7 @@ enum { kEnableSwiping = YES };
     [hotsoptLabel2 setTextAlignment:NSTextAlignmentCenter];
     [hotspot2 addSubview: hotsoptLabel2];
     [hotspot2 addSubview: hotspotMark2];
-    [self.view insertSubview:hotspot2 belowSubview:_uiv_movieContainer];
+    [_uis_zoomingImg.blurView addSubview:hotspot2];
     hotspot2.tag = 2;
     [_arr_hotspotsArray addObject: hotspot2];
     [self addGestureToHotspots:hotspot2];
@@ -150,40 +177,48 @@ enum { kEnableSwiping = YES };
     tapOnHotspot.numberOfTapsRequired = 1;
     hotspot.userInteractionEnabled = YES;
     [hotspot addGestureRecognizer: tapOnHotspot];
-    
 }
 
 -(void)tapHotspot:(UIGestureRecognizer *)gesture
 {
     UIView *tappedView = gesture.view;
     NSLog(@"THe view is %i", (int)tappedView.tag);
-    if (tappedView.tag == 1) {
-        [self popUpImage];
-    }
-    if (tappedView.tag == 2) {
-        [self loadMovieNamed:@"UTC_SPIN_ANIMATION.mov" isTransitional:NO];
-    }
+	
+	[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
+	[UIView animateWithDuration:0.5 animations:^{
+		_uis_zoomingImg.alpha = 0.0;
+		
+#warning this needs to be fixed
+		if (tappedView.tag == 1) {
+			[self popUpImage];
+		}
+		if (tappedView.tag == 2) {
+			[self loadMovieNamed:@"UTC_SPIN_ANIMATION.mov" tapToPauseEnabled:YES];
+		}
+		
+	} completion:nil];
 }
 
 -(void)popUpImage
 {
-    if (_uis_zoomingImg) {
-        [_uis_zoomingImg removeFromSuperview];
-        _uis_zoomingImg = nil;
+    if (_uis_zoomingInfoImg) {
+        [_uis_zoomingInfoImg removeFromSuperview];
+        _uis_zoomingInfoImg = nil;
     }
-    _uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis-hotpost-still.png"] shouldZoom:YES];
-    [_uis_zoomingImg setCloseBtn:YES];
-    _uis_zoomingImg.delegate = self;
-    [self.view addSubview:_uis_zoomingImg];
+    _uis_zoomingInfoImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis-hotpost-still.png"] shouldZoom:YES];
+    [_uis_zoomingInfoImg setCloseBtn:YES];
+    _uis_zoomingInfoImg.delegate = self;
+    [self.view addSubview:_uis_zoomingInfoImg];
 }
 
 -(void)didRemove:(ebZoomingScrollView *)ebZoomingScrollView {
-    [_uis_zoomingImg removeFromSuperview];
-    _uis_zoomingImg = nil;
+    [_uis_zoomingInfoImg removeFromSuperview];
+    _uis_zoomingInfoImg = nil;
 }
 
 #pragma mark - play movie
--(void)loadMovieNamed:(NSString*)moviename isTransitional:(BOOL)isTransitional
+#warning isTransitional below needs to be replaced
+-(void)loadMovieNamed:(NSString*)moviename tapToPauseEnabled:(BOOL)tapToPauseEnabled
 {
 	NSString* fileName = [moviename stringByDeletingPathExtension];
 	NSString* extension = [moviename pathExtension];
@@ -208,7 +243,6 @@ enum { kEnableSwiping = YES };
     _avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
     _avPlayerLayer.frame = CGRectMake(0.0, 0.0, 1024, 768);
 	
-	[self addMovieGestures];
 	
     _avPlayerLayer.backgroundColor = [UIColor blackColor].CGColor;
     [_uiv_movieContainer.layer addSublayer: _avPlayerLayer];
@@ -221,8 +255,18 @@ enum { kEnableSwiping = YES };
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
                                                object:[_avPlayer currentItem]];
 	
-	if (isTransitional) {
-		[self createBg];
+	[self updateBgImg:@"otis_building_inside.png"];
+	
+	if (tapToPauseEnabled == YES) {
+		[self addMovieGestures];
+		[self loadControlsLabel];
+		NSLog(@"loadControlsLabel");
+	}
+	
+	if (kEnableDoubleTapToKillMovie) {
+		UITapGestureRecognizer *doubleTapMovie = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeMovie)];
+		doubleTapMovie.numberOfTapsRequired = 2;
+		[self.view addGestureRecognizer:doubleTapMovie];
 	}
 }
 
@@ -252,6 +296,7 @@ enum { kEnableSwiping = YES };
 
 -(void)loadControlsLabel
 {
+	NSLog(@"load loadcontrollabel");
 	_uil_filmHint = [[UILabel alloc] init];
     _uil_filmHint.textColor = [UIColor blackColor];
     [_uil_filmHint setFrame:CGRectMake(800, 718, 200, 30)];

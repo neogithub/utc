@@ -94,30 +94,11 @@
 
 -(void)updateDetailView:(NSNotification *)notification
 {
-    int index = [[[notification userInfo] valueForKey:@"index"] intValue];
-    //    if (index%2 == 0) {
-    //        _detailView.view.backgroundColor = [UIColor redColor];
-    //    }
-    //    else {
-    //        _detailView.view.backgroundColor = [UIColor yellowColor];
-    //    }
-    if (index == 9) {
-//        [_splitVC addDetailController:_otisView animated:NO];
-//        _uib_splitCtrl.selected = YES;
-        [_splitVC addDetailController:_detailView animated:NO];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
-//        [[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
-        [self openAndCloseMaster];
-    }
-    else {
-        _detailView.view.backgroundColor =  [UIColor colorWithRed:((float)rand() / RAND_MAX)
-                                                            green:((float)rand() / RAND_MAX)
-                                                             blue:((float)rand() / RAND_MAX)
-                                                            alpha:1.0f];
-        [_splitVC addDetailController:_detailView animated:NO];
-        _uib_splitCtrl.selected = YES;
-        [self openAndCloseMaster];
-    }
+    //TODO: pick building from data model
+	//int index = [[[notification userInfo] valueForKey:@"index"] intValue];
+	[_splitVC addDetailController:_detailView animated:NO];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
+	[self openAndCloseMaster];
 }
 
 

@@ -35,7 +35,7 @@
 			[_blurView setContentMode:UIViewContentModeScaleAspectFit];
 			_blurView.image = thisImage;
 			[self zoomableScrollview:self withImage:_blurView];
-			
+			[_blurView setUserInteractionEnabled:YES];
 			if (zoomable==1) {
 				[self unlockZoom];
 			} else {
@@ -44,6 +44,11 @@
 		}
 	}
 	return self;
+}
+
+-(void)zoomToPoint:(CGPoint)zoomPoint withScale: (CGFloat)scale animated: (BOOL)animated
+{
+	[_scrollView zoomToPoint:zoomPoint withScale:scale animated:animated];
 }
 
 -(void)lockZoom
@@ -61,6 +66,17 @@
     self.scrollView.maximumZoomScale = 4;
     self.scrollView.minimumZoomScale = 1;
 	
+}
+
+- (void)zoomToRect:(CGRect)rect animated:(BOOL)animated
+{
+    [UIView animateWithDuration:(animated?5.3f:0.0f)
+                          delay:0
+                        options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         [self.scrollView zoomToRect:rect animated:NO];
+                     }
+                     completion:nil];
 }
 
 -(void)setCloseBtn:(BOOL)closeBtn
@@ -121,10 +137,11 @@
 	
 	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height);
 	
-	_uiv_windowComparisonContainer.transform = CGAffineTransformMakeScale(1.5, 1.5);
-	_uiv_windowComparisonContainer.alpha=0.0;
+	//_uiv_windowComparisonContainer.transform = CGAffineTransformMakeScale(1.5, 1.5);
+	//_uiv_windowComparisonContainer.alpha=0.0;
 	[self addSubview:_uiv_windowComparisonContainer];
 	
+	/*
 	UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction  | UIViewAnimationOptionCurveEaseInOut;
 	
 	[UIView animateWithDuration:0.3 delay:0.0 options:options
@@ -134,6 +151,7 @@
 					 }
 					 completion:^(BOOL  completed){
 					 }];
+	 */
 	
 }
 
@@ -205,6 +223,8 @@
 						 [self didRemove];
 					 }];
 }
+
+
 
 #pragma mark - Delegate methods 
 -(void)didRemove {

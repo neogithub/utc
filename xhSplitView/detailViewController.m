@@ -36,7 +36,7 @@
     [self initBuildingBtn];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackBtn) name:@"goIntoBuilding" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackBtn) name:@"goToCity" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuilding:) name:@"loadOtis" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuilding) name:@"loadOtis" object:nil];
 }
 
 -(void)hideBackBtn
@@ -65,13 +65,13 @@
     _uib_buildingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _uib_buildingBtn.frame = CGRectMake(385.0, 257.0, 285, 193);
     _uib_buildingBtn.backgroundColor = [UIColor clearColor];
-    [_uib_buildingBtn addTarget:self action:@selector(loadBuilding:) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
     [self.view insertSubview:_uib_buildingBtn aboveSubview:_uiiv_bg];
 }
 
--(void)loadBuilding:(id)sender
+-(void)loadBuilding
 {
-	[self loadBuildingVC:[sender tag]];
+	[self loadBuildingVC:0];
 }
 
 -(void)loadBuildingVC:(int)index

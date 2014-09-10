@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIScrollView+ZoomToPoint.h"
 
 @class ebZoomingScrollView;
 
@@ -32,5 +33,5 @@
 
 // define public functions
 -(void)didRemove;
-
+-(void)zoomToPoint:(CGPoint)zoomPoint withScale: (CGFloat)scale animated: (BOOL)animated;
 @end

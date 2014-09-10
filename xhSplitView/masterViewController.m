@@ -9,7 +9,9 @@
 #import "masterViewController.h"
 
 @interface masterViewController ()
-
+{
+	int selectedRow;
+}
 
 @end
 
@@ -106,13 +108,20 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"The tapped cell is %i", (int)indexPath.row);
-    NSDictionary* dict = [NSDictionary dictionaryWithObject:
-                          [NSNumber numberWithInt:indexPath.row]
-                                                     forKey:@"index"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
-                                                        object:self
-                                                      userInfo:dict];
+	if (indexPath.row != 9) {
+		return;
+	} else if (indexPath.row != selectedRow) {
+		
+			NSLog(@"The tapped cell is %i", (int)indexPath.row);
+			NSDictionary* dict = [NSDictionary dictionaryWithObject:
+								  [NSNumber numberWithInt:indexPath.row]
+															 forKey:@"index"];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
+																object:self
+															  userInfo:dict];
+	}
+	
+	selectedRow = indexPath.row;
 }
 
 - (void)didReceiveMemoryWarning

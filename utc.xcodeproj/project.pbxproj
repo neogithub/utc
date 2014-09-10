@@ -15,6 +15,9 @@
 		20D0B01219BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B01119BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov */; };
 		20D0B01419BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B01319BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v */; };
 		20D0B05619BFDC650096021D /* UTC_SPIN_ANIMATION.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B05519BFDC650096021D /* UTC_SPIN_ANIMATION.mov */; };
+		20D0B05819C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B05719C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov */; };
+		20D0B05B19C0A15B0096021D /* UIScrollView+ZoomToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B05A19C0A15B0096021D /* UIScrollView+ZoomToPoint.m */; };
+		20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */; };
 		82A66A9C19B7926A00C8E12A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9B19B7926A00C8E12A /* Foundation.framework */; };
 		82A66A9E19B7926B00C8E12A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */; };
 		82A66AA019B7926B00C8E12A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9F19B7926B00C8E12A /* UIKit.framework */; };
@@ -75,6 +78,11 @@
 		20D0B01119BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = UTC_TRANSISTION_ANIMATION.mov; sourceTree = "<group>"; };
 		20D0B01319BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = UTC_SCHEMATIC_ANIMATION_CLIP.m4v; sourceTree = "<group>"; };
 		20D0B05519BFDC650096021D /* UTC_SPIN_ANIMATION.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = UTC_SPIN_ANIMATION.mov; sourceTree = "<group>"; };
+		20D0B05719C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = UTC_SCHEMATIC_ANIMATION_CLIP.mov; sourceTree = "<group>"; };
+		20D0B05919C0A15B0096021D /* UIScrollView+ZoomToPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+ZoomToPoint.h"; path = "utilities/UIScrollView+ZoomToPoint.h"; sourceTree = "<group>"; };
+		20D0B05A19C0A15B0096021D /* UIScrollView+ZoomToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+ZoomToPoint.m"; path = "utilities/UIScrollView+ZoomToPoint.m"; sourceTree = "<group>"; };
+		20D0B05C19C0A2DD0096021D /* UIScrollView+ZoomToPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ZoomToPoint.h"; sourceTree = "<group>"; };
+		20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ZoomToPoint.m"; sourceTree = "<group>"; };
 		82A66A9819B7926A00C8E12A /* utc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = utc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A66A9B19B7926A00C8E12A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -215,6 +223,8 @@
 				82A66AD119B792BD00C8E12A /* detailViewController.m */,
 				82A66AD419B792BD00C8E12A /* otisViewController.h */,
 				82A66AD519B792BD00C8E12A /* otisViewController.m */,
+				20D0B05919C0A15B0096021D /* UIScrollView+ZoomToPoint.h */,
+				20D0B05A19C0A15B0096021D /* UIScrollView+ZoomToPoint.m */,
 				82A66AD919B792C700C8E12A /* xhSplitViewController.h */,
 				82A66ADA19B792C700C8E12A /* xhSplitViewController.m */,
 				82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */,
@@ -258,6 +268,8 @@
 		82A66ADE19B793BD00C8E12A /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				20D0B05C19C0A2DD0096021D /* UIScrollView+ZoomToPoint.h */,
+				20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */,
 				82A66ADF19B793BD00C8E12A /* ebZoomingScrollView.h */,
 				82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */,
 			);
@@ -270,6 +282,7 @@
 				82A66AE319B7942900C8E12A /* grfx */,
 				82A66AEA19B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v */,
 				20D0B01119BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov */,
+				20D0B05719C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov */,
 				20D0B01319BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v */,
 				82A66B0419B7BEF000C8E12A /* 20140903_UTC_SCHEMATIC_ANIMATION_REV.m4v */,
 				20D0B05519BFDC650096021D /* UTC_SPIN_ANIMATION.mov */,
@@ -388,6 +401,7 @@
 				82A66AA619B7926B00C8E12A /* InfoPlist.strings in Resources */,
 				82A66AF919B79D6C00C8E12A /* otis_building@2x.jpg in Resources */,
 				82A66AF119B7942900C8E12A /* UTC_SCHEMATIC_ANIMATION.m4v in Resources */,
+				20D0B05819C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov in Resources */,
 				82A66B0219B7B19B00C8E12A /* grfx_cityBgImg.jpg in Resources */,
 				82A66AF819B79D6C00C8E12A /* otis_building.jpg in Resources */,
 				82A66AEE19B7942900C8E12A /* Marker@2x.png in Resources */,
@@ -423,10 +437,12 @@
 				20D0B00419BF4C280096021D /* City.m in Sources */,
 				82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */,
 				82A66AAC19B7926B00C8E12A /* AppDelegate.m in Sources */,
+				20D0B05B19C0A15B0096021D /* UIScrollView+ZoomToPoint.m in Sources */,
 				20D0B00819BF4EAD0096021D /* Building.m in Sources */,
 				82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */,
 				82A66AA819B7926B00C8E12A /* main.m in Sources */,
 				82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */,
+				20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */,
 				82A66ADC19B792C700C8E12A /* xhSplitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
