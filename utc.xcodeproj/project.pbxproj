@@ -18,6 +18,8 @@
 		20D0B05819C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B05719C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov */; };
 		20D0B05B19C0A15B0096021D /* UIScrollView+ZoomToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B05A19C0A15B0096021D /* UIScrollView+ZoomToPoint.m */; };
 		20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */; };
+		20D0B06119C0C91C0096021D /* otis_building_hero.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B05F19C0C91C0096021D /* otis_building_hero.jpg */; };
+		20D0B06219C0C91C0096021D /* otis_building_hero@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B06019C0C91C0096021D /* otis_building_hero@2x.jpg */; };
 		82A66A9C19B7926A00C8E12A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9B19B7926A00C8E12A /* Foundation.framework */; };
 		82A66A9E19B7926B00C8E12A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */; };
 		82A66AA019B7926B00C8E12A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9F19B7926B00C8E12A /* UIKit.framework */; };
@@ -83,6 +85,8 @@
 		20D0B05A19C0A15B0096021D /* UIScrollView+ZoomToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+ZoomToPoint.m"; path = "utilities/UIScrollView+ZoomToPoint.m"; sourceTree = "<group>"; };
 		20D0B05C19C0A2DD0096021D /* UIScrollView+ZoomToPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ZoomToPoint.h"; sourceTree = "<group>"; };
 		20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ZoomToPoint.m"; sourceTree = "<group>"; };
+		20D0B05F19C0C91C0096021D /* otis_building_hero.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = otis_building_hero.jpg; sourceTree = "<group>"; };
+		20D0B06019C0C91C0096021D /* otis_building_hero@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "otis_building_hero@2x.jpg"; sourceTree = "<group>"; };
 		82A66A9819B7926A00C8E12A /* utc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = utc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A66A9B19B7926A00C8E12A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -305,6 +309,8 @@
 				82A66AE919B7942900C8E12A /* otis_building_inside@2x.png */,
 				82A66AF619B79D6C00C8E12A /* otis_building.jpg */,
 				82A66AF719B79D6C00C8E12A /* otis_building@2x.jpg */,
+				20D0B05F19C0C91C0096021D /* otis_building_hero.jpg */,
+				20D0B06019C0C91C0096021D /* otis_building_hero@2x.jpg */,
 				82A66AF219B7950600C8E12A /* otis-hotpost-still.png */,
 				82A66AF319B7950600C8E12A /* otis-hotpost-still@2x.png */,
 			);
@@ -389,6 +395,7 @@
 			files = (
 				82A66AEF19B7942900C8E12A /* otis_building_inside.png in Resources */,
 				82A66AB419B7926B00C8E12A /* Images.xcassets in Resources */,
+				20D0B06119C0C91C0096021D /* otis_building_hero.jpg in Resources */,
 				20D0B01219BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov in Resources */,
 				82A66AFF19B7AC2D00C8E12A /* grfx_backBtn@2x.png in Resources */,
 				20D0B00D19BF52100096021D /* companies.json in Resources */,
@@ -409,6 +416,7 @@
 				82A66B0519B7BF3E00C8E12A /* 20140903_UTC_SCHEMATIC_ANIMATION_REV.m4v in Resources */,
 				82A66AEB19B7942900C8E12A /* grfx_splitBtn.jpg in Resources */,
 				82A66AF019B7942900C8E12A /* otis_building_inside@2x.png in Resources */,
+				20D0B06219C0C91C0096021D /* otis_building_hero@2x.jpg in Resources */,
 				20D0B05619BFDC650096021D /* UTC_SPIN_ANIMATION.mov in Resources */,
 				82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */,
 				82A66AFE19B7AC2D00C8E12A /* grfx_backBtn.png in Resources */,

@@ -25,6 +25,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 @property (nonatomic, strong) AVPlayer              *avPlayer;
 @property (nonatomic, strong) AVPlayerLayer         *avPlayerLayer;
 @property (nonatomic, strong) UIButton              *uib_logoBtn;
+@property (nonatomic, strong) UIButton              *uib_SplitOpenBtn;
 @property (nonatomic, strong) UIButton              *uib_back;
 @property (nonatomic, strong) UIButton              *uib_buildingBtn;
 @property (nonatomic, strong) UILabel				*uil_filmHint;
@@ -32,39 +33,33 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 @implementation otisViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
 	
-    // Do any additional setup after loading the view.
-	[self loadMovieNamed:_transitionClipName tapToPauseEnabled:NO];
-	[self createBg];
+	// load animation that leads to the hero
+	// building tapped from previous screen
+	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO];
+	// add in the bg image beneath the film
+	[self createStillFrameUnderFilm];
 	
+	// DEBUG
+#warning Debug for swiping or doubletapping
 	if ((kEnableSwiping==YES) || (kEnableDoubleTapToKillMovie==YES)) {
 		UILabel *uil_Debug = [[UILabel alloc] init];
-		uil_Debug.textColor = [UIColor blackColor];
-		[uil_Debug setFrame:CGRectMake(820, 0, 200, 30)];
+		[uil_Debug setFrame:CGRectMake(824, 0, 200, 30)];
 		uil_Debug.backgroundColor=[UIColor redColor];
 		[uil_Debug setTextAlignment:NSTextAlignmentCenter];
 		uil_Debug.textColor=[UIColor whiteColor];
-		uil_Debug.userInteractionEnabled=NO;
 		[uil_Debug setAlpha:0.5];
 		uil_Debug.text= @"DEBUG MODE";
 		[self.view insertSubview:uil_Debug atIndex:1000];
 	}
 }
 
--(void)createBg
+#pragma mark - stills under movie
+-(void)createStillFrameUnderFilm
 {
     if (_uiiv_bg) {
         [_uiiv_bg removeFromSuperview];
@@ -74,21 +69,34 @@ enum { kEnableDoubleTapToKillMovie = YES };
 			[hotspot removeFromSuperview];
 		}
     }
-	// _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otis_building.jpg"]];
-    //_uiiv_bg.frame = self.view.bounds;
 	
-	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis_building.jpg"] shouldZoom:YES];
-	// [_uis_zoomingImg setCloseBtn:NO];
+	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis_building_hero.jpg"] shouldZoom:YES];
     _uis_zoomingImg.delegate = self;
-    //[self.view addSubview:_uis_zoomingImg];
-	
 	
 	if (_uiv_movieContainer) {
 		[self.view insertSubview: _uis_zoomingImg belowSubview:_uiv_movieContainer];
 	} else {
 		[self.view insertSubview: _uis_zoomingImg belowSubview:_uib_back];
 	}
-    [self initLogoBtn];
+	[self initSplitOpenBtn];
+}
+
+-(void)updateStillFrameUnderFilm:(NSString*)imgName
+{
+	[_uis_zoomingImg.blurView setImage:[UIImage imageNamed:imgName]];
+    [self createHotspots];
+}
+
+#pragma mark - buttons for splitting view and otis logo
+-(void)initSplitOpenBtn
+{
+    _uib_SplitOpenBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    _uib_SplitOpenBtn.frame = CGRectMake(500, 610, 100, 50);
+	[_uib_SplitOpenBtn setTitle:@"Expand" forState:UIControlStateNormal];
+    _uib_SplitOpenBtn.backgroundColor = [UIColor redColor];
+    [self.view insertSubview:_uib_SplitOpenBtn belowSubview:_uiv_movieContainer];
+    //[_uib_SplitOpenBtn addTarget:self action:@selector(changeView) forControlEvents:UIControlEventTouchUpInside];
+	[_uib_SplitOpenBtn addTarget:self action:@selector(splitBuilding) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)initLogoBtn
@@ -100,16 +108,28 @@ enum { kEnableDoubleTapToKillMovie = YES };
     [_uib_logoBtn addTarget:self action:@selector(changeView) forControlEvents:UIControlEventTouchUpInside];
 }
 
--(void)changeView
+#pragma mark - Actions to play path to hero and split hero
+-(void)filmToSplitBuilding
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
-    _uib_logoBtn.hidden = YES;
+	//[[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
+    //_uib_logoBtn.hidden = YES;
+    //[self createBackButton];
+    [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" isTapToPauseEnabled:NO];
+    [self updateStillFrameUnderFilm:@"otis_building.jpg.png"];
+	[_uib_SplitOpenBtn removeFromSuperview];
+}
+
+-(void)filmTransitionToHero
+{
+	//[[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
+	 _uib_logoBtn.hidden = YES;
     [self createBackButton];
-    [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" tapToPauseEnabled:NO];
-    [self updateBgImg:@"otis_building_inside.png"];
+    [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" isTapToPauseEnabled:NO];
+    [self updateStillFrameUnderFilm:@"otis_building_inside.png"];
 	NSLog(@"changeView");
 }
 
+#pragma mark - menu buttons
 -(void)createBackButton
 {
     _uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -125,17 +145,11 @@ enum { kEnableDoubleTapToKillMovie = YES };
         [self closeMovie];
     }
 
-	[self createBg];
+	[self createStillFrameUnderFilm];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"goToCity" object:nil];
 }
 
--(void)updateBgImg:(NSString*)imgName
-{
-	// [_uiiv_bg setImage:[UIImage imageNamed:imgName]];
-	[_uis_zoomingImg.blurView setImage:[UIImage imageNamed:imgName]];
-    [self createHotspots];
-}
-
+#pragma mark - company hotspots
 -(void)createHotspots
 {
     [_arr_hotspotsArray removeAllObjects];
@@ -179,6 +193,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
     [hotspot addGestureRecognizer: tapOnHotspot];
 }
 
+#pragma mark hotspot tapped
 -(void)tapHotspot:(UIGestureRecognizer *)gesture
 {
     UIView *tappedView = gesture.view;
@@ -193,12 +208,13 @@ enum { kEnableDoubleTapToKillMovie = YES };
 			[self popUpImage];
 		}
 		if (tappedView.tag == 2) {
-			[self loadMovieNamed:@"UTC_SPIN_ANIMATION.mov" tapToPauseEnabled:YES];
+			[self loadMovieNamed:@"UTC_SPIN_ANIMATION.mov" isTapToPauseEnabled:YES];
 		}
 		
 	} completion:nil];
 }
 
+#pragma mark - hotspot actions
 -(void)popUpImage
 {
     if (_uis_zoomingInfoImg) {
@@ -218,7 +234,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 #pragma mark - play movie
 #warning isTransitional below needs to be replaced
--(void)loadMovieNamed:(NSString*)moviename tapToPauseEnabled:(BOOL)tapToPauseEnabled
+-(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled
 {
 	NSString* fileName = [moviename stringByDeletingPathExtension];
 	NSString* extension = [moviename pathExtension];
@@ -255,7 +271,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
                                                object:[_avPlayer currentItem]];
 	
-	[self updateBgImg:@"otis_building_inside.png"];
+	[self updateStillFrameUnderFilm:@"otis_building_inside.png"];
 	
 	if (tapToPauseEnabled == YES) {
 		[self addMovieGestures];
