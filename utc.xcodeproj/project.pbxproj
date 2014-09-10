@@ -16,11 +16,12 @@
 		20D0B01419BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B01319BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v */; };
 		20D0B05619BFDC650096021D /* UTC_SPIN_ANIMATION.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B05519BFDC650096021D /* UTC_SPIN_ANIMATION.mov */; };
 		20D0B05819C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B05719C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov */; };
-		20D0B05B19C0A15B0096021D /* UIScrollView+ZoomToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B05A19C0A15B0096021D /* UIScrollView+ZoomToPoint.m */; };
 		20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */; };
 		20D0B06119C0C91C0096021D /* otis_building_hero.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B05F19C0C91C0096021D /* otis_building_hero.jpg */; };
 		20D0B06219C0C91C0096021D /* otis_building_hero@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B06019C0C91C0096021D /* otis_building_hero@2x.jpg */; };
 		20D0B06419C0D0F30096021D /* UTC_SPLIT_ANIMATION.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B06319C0D0F30096021D /* UTC_SPLIT_ANIMATION.mp4 */; };
+		20D0B06719C0D7440096021D /* neoHotspotsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B06619C0D7440096021D /* neoHotspotsView.m */; };
+		20D0B06919C0D7510096021D /* hotspotsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B06819C0D7510096021D /* hotspotsData.plist */; };
 		82A66A9C19B7926A00C8E12A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9B19B7926A00C8E12A /* Foundation.framework */; };
 		82A66A9E19B7926B00C8E12A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */; };
 		82A66AA019B7926B00C8E12A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9F19B7926B00C8E12A /* UIKit.framework */; };
@@ -82,13 +83,14 @@
 		20D0B01319BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = UTC_SCHEMATIC_ANIMATION_CLIP.m4v; sourceTree = "<group>"; };
 		20D0B05519BFDC650096021D /* UTC_SPIN_ANIMATION.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = UTC_SPIN_ANIMATION.mov; sourceTree = "<group>"; };
 		20D0B05719C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = UTC_SCHEMATIC_ANIMATION_CLIP.mov; sourceTree = "<group>"; };
-		20D0B05919C0A15B0096021D /* UIScrollView+ZoomToPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+ZoomToPoint.h"; path = "utilities/UIScrollView+ZoomToPoint.h"; sourceTree = "<group>"; };
-		20D0B05A19C0A15B0096021D /* UIScrollView+ZoomToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+ZoomToPoint.m"; path = "utilities/UIScrollView+ZoomToPoint.m"; sourceTree = "<group>"; };
 		20D0B05C19C0A2DD0096021D /* UIScrollView+ZoomToPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ZoomToPoint.h"; sourceTree = "<group>"; };
 		20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ZoomToPoint.m"; sourceTree = "<group>"; };
 		20D0B05F19C0C91C0096021D /* otis_building_hero.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = otis_building_hero.jpg; sourceTree = "<group>"; };
 		20D0B06019C0C91C0096021D /* otis_building_hero@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "otis_building_hero@2x.jpg"; sourceTree = "<group>"; };
 		20D0B06319C0D0F30096021D /* UTC_SPLIT_ANIMATION.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = UTC_SPLIT_ANIMATION.mp4; sourceTree = "<group>"; };
+		20D0B06519C0D7440096021D /* neoHotspotsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neoHotspotsView.h; sourceTree = "<group>"; };
+		20D0B06619C0D7440096021D /* neoHotspotsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = neoHotspotsView.m; sourceTree = "<group>"; };
+		20D0B06819C0D7510096021D /* hotspotsData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hotspotsData.plist; path = DataStore/hotspotsData.plist; sourceTree = "<group>"; };
 		82A66A9819B7926A00C8E12A /* utc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = utc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A66A9B19B7926A00C8E12A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82A66A9D19B7926B00C8E12A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,6 +179,7 @@
 		20D0B00919BF52030096021D /* Datastore */ = {
 			isa = PBXGroup;
 			children = (
+				20D0B06819C0D7510096021D /* hotspotsData.plist */,
 				20D0B00A19BF52100096021D /* buildings.json */,
 				20D0B00B19BF52100096021D /* companies.json */,
 			);
@@ -229,8 +232,6 @@
 				82A66AD119B792BD00C8E12A /* detailViewController.m */,
 				82A66AD419B792BD00C8E12A /* otisViewController.h */,
 				82A66AD519B792BD00C8E12A /* otisViewController.m */,
-				20D0B05919C0A15B0096021D /* UIScrollView+ZoomToPoint.h */,
-				20D0B05A19C0A15B0096021D /* UIScrollView+ZoomToPoint.m */,
 				82A66AD919B792C700C8E12A /* xhSplitViewController.h */,
 				82A66ADA19B792C700C8E12A /* xhSplitViewController.m */,
 				82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */,
@@ -274,6 +275,8 @@
 		82A66ADE19B793BD00C8E12A /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				20D0B06519C0D7440096021D /* neoHotspotsView.h */,
+				20D0B06619C0D7440096021D /* neoHotspotsView.m */,
 				20D0B05C19C0A2DD0096021D /* UIScrollView+ZoomToPoint.h */,
 				20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */,
 				82A66ADF19B793BD00C8E12A /* ebZoomingScrollView.h */,
@@ -414,6 +417,7 @@
 				20D0B05819C095B70096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.mov in Resources */,
 				82A66B0219B7B19B00C8E12A /* grfx_cityBgImg.jpg in Resources */,
 				20D0B06419C0D0F30096021D /* UTC_SPLIT_ANIMATION.mp4 in Resources */,
+				20D0B06919C0D7510096021D /* hotspotsData.plist in Resources */,
 				82A66AF819B79D6C00C8E12A /* otis_building.jpg in Resources */,
 				82A66AEE19B7942900C8E12A /* Marker@2x.png in Resources */,
 				82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */,
@@ -449,13 +453,13 @@
 				20D0B00419BF4C280096021D /* City.m in Sources */,
 				82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */,
 				82A66AAC19B7926B00C8E12A /* AppDelegate.m in Sources */,
-				20D0B05B19C0A15B0096021D /* UIScrollView+ZoomToPoint.m in Sources */,
 				20D0B00819BF4EAD0096021D /* Building.m in Sources */,
 				82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */,
 				82A66AA819B7926B00C8E12A /* main.m in Sources */,
 				82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */,
 				20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */,
 				82A66ADC19B792C700C8E12A /* xhSplitViewController.m in Sources */,
+				20D0B06719C0D7440096021D /* neoHotspotsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

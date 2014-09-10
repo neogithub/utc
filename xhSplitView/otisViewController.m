@@ -11,11 +11,12 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
+#import "neoHotspotsView.h"
 
 enum { kEnableSwiping = YES };
 enum { kEnableDoubleTapToKillMovie = YES };
 
-@interface otisViewController () <ebZoomingScrollViewDelegate, UIGestureRecognizerDelegate>
+@interface otisViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIView				*uiv_movieContainer;
 @property (nonatomic, strong) UIImageView           *uiiv_bg;
@@ -29,6 +30,10 @@ enum { kEnableDoubleTapToKillMovie = YES };
 @property (nonatomic, strong) UIButton              *uib_back;
 @property (nonatomic, strong) UIButton              *uib_buildingBtn;
 @property (nonatomic, strong) UILabel				*uil_filmHint;
+
+@property (nonatomic, strong) neoHotspotsView *myHotspots;
+@property (nonatomic, strong) NSMutableArray *arr_hotspots;
+
 @end
 
 @implementation otisViewController
@@ -123,7 +128,6 @@ enum { kEnableDoubleTapToKillMovie = YES };
 {
 	//[[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
 	 _uib_logoBtn.hidden = YES;
-    [self createBackButton];
     [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" isTapToPauseEnabled:NO];
     [self updateStillFrameUnderFilm:@"otis_building_inside.png"];
 	[self createHotspots];
@@ -155,61 +159,113 @@ enum { kEnableDoubleTapToKillMovie = YES };
     [_arr_hotspotsArray removeAllObjects];
     _arr_hotspotsArray = nil;
     _arr_hotspotsArray = [[NSMutableArray alloc] init];
-    
-    UIView *hotspot1 = [[UIView alloc] initWithFrame:CGRectMake(560, 250, 131, 35)];
-    UIImageView *hotspotMark1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Marker.png"]];
-    hotspotMark1.frame = CGRectMake(90.0, 0.0, 41.0, 35.0);
-    UILabel *hotsoptLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 90.0, 35.0)];
-    [hotsoptLabel1 setText:@"Hotspot Label"];
-    [hotsoptLabel1 setFont:[UIFont systemFontOfSize:13]];
-    [hotsoptLabel1 setTextAlignment:NSTextAlignmentCenter];
-    [hotspot1 addSubview: hotsoptLabel1];
-    [hotspot1 addSubview: hotspotMark1];
-    [_uis_zoomingImg.blurView addSubview:hotspot1];
-    hotspot1.tag = 1;
-    [_arr_hotspotsArray addObject: hotspot1];
-    [self addGestureToHotspots:hotspot1];
-    
-    UIView *hotspot2 = [[UIView alloc] initWithFrame:CGRectMake(560, 460, 131, 35)];
-    UIImageView *hotspotMark2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Marker.png"]];
-    hotspotMark2.frame = CGRectMake(90.0, 0.0, 41.0, 35.0);
-    UILabel *hotsoptLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 90.0, 35.0)];
-    [hotsoptLabel2 setText:@"Hotspot Label"];
-    [hotsoptLabel2 setFont:[UIFont systemFontOfSize:13]];
-    [hotsoptLabel2 setTextAlignment:NSTextAlignmentCenter];
-    [hotspot2 addSubview: hotsoptLabel2];
-    [hotspot2 addSubview: hotspotMark2];
-    [_uis_zoomingImg.blurView addSubview:hotspot2];
-    hotspot2.tag = 2;
-    [_arr_hotspotsArray addObject: hotspot2];
-    [self addGestureToHotspots:hotspot2];
+	
+    [self getDataFromPlist];
 }
 
--(void)addGestureToHotspots:(UIView *)hotspot
+-(void)getDataFromPlist
 {
-    UITapGestureRecognizer *tapOnHotspot = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHotspot:)];
-    tapOnHotspot.numberOfTapsRequired = 1;
-    hotspot.userInteractionEnabled = YES;
-    [hotspot addGestureRecognizer: tapOnHotspot];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:
+					  @"hotspotsData" ofType:@"plist"];
+    NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
+    for (int i = 0; i < [totalDataArray count]; i++) {
+        NSDictionary *hotspotItem = totalDataArray [i];
+        
+        //Get the position of Hs
+        NSString *str_position = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"xy"]];
+        NSRange range = [str_position rangeOfString:@","];
+        NSString *str_x = [str_position substringWithRange:NSMakeRange(0, range.location)];
+        NSString *str_y = [str_position substringFromIndex:(range.location + 1)];
+        float hs_x = [str_x floatValue];
+        float hs_y = [str_y floatValue];
+        _myHotspots = [[neoHotspotsView alloc] initWithFrame:CGRectMake(hs_x, hs_y, 41, 35)];
+        _myHotspots.delegate=self;
+		[_arr_hotspotsArray addObject:_myHotspots];
+		
+        //Get the angle of arrow
+        NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
+        if ([str_angle isEqualToString:@""]) {
+        }
+        else
+        {
+            float hsAngle = [str_angle floatValue];
+            _myHotspots.arwAngle = hsAngle;
+        }
+        
+        //Get the name of BG img name
+        NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
+        _myHotspots.hotspotBgName = str_bgName;
+        
+        //Get the caption of hotspot
+        NSString *str_caption = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"caption"]];
+        _myHotspots.str_labelText = str_caption;
+        _myHotspots.labelAlignment = CaptionAlignmentBottom;
+        
+        //Get the type of hotspot
+        NSString *str_type = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"type"]];
+        _myHotspots.str_typeOfHs = str_type;
+		//        NSLog(@"Hotspot No.%i's type is: %@ \n\n",i ,str_type);
+        
+        //Animation time can be set
+        //_myHotspots.timeRotate = 5.0;
+        _myHotspots.tagOfHs = i;
+		/*
+		 Chang the label's alignment according to the tag of hotspot
+		 
+		 if (_myHotspots.tagOfHs == 0)
+		 {
+		 _myHotspots.labelAlignment = CaptionAlignmentBottom;
+         }
+		 if (_myHotspots.tagOfHs == 1)
+		 {
+		 _myHotspots.labelAlignment = CaptionAlignmentBottomLeft;
+		 }
+		 if (_myHotspots.tagOfHs == 2)
+		 {
+		 _myHotspots.labelAlignment = CaptionAlignmentLeft;
+		 }
+		 if (_myHotspots.tagOfHs == 3)
+		 {
+		 _myHotspots.labelAlignment = CaptionAlignmentTopLeft;
+		 }
+		 if (_myHotspots.tagOfHs == 4)
+		 {
+		 _myHotspots.labelAlignment = CaptionAlignmentTop;
+		 }
+		 if (_myHotspots.tagOfHs == 5)
+		 {
+		 _myHotspots.labelAlignment = CaptionAlignmentTopRight;
+		 }
+		 if (_myHotspots.tagOfHs == 6)
+		 {
+		 _myHotspots.labelAlignment = CaptionAlignmentRight;
+		 }
+		 if (_myHotspots.tagOfHs == 7)
+		 {
+		 _myHotspots.labelAlignment = CaptionAlignmentBottomRight;
+		 }
+		 */
+        [_uis_zoomingImg.blurView addSubview:_myHotspots];
+    }
 }
 
 #pragma mark hotspot tapped
--(void)tapHotspot:(UIGestureRecognizer *)gesture
+#pragma mark Delegate Method
+
+-(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
-    UIView *tappedView = gesture.view;
-    NSLog(@"THe view is %i", (int)tappedView.tag);
-	
+	neoHotspotsView *tappedView = _arr_hotspotsArray[i];
+		
 	[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
 	[UIView animateWithDuration:0.5 animations:^{
 		_uis_zoomingImg.alpha = 0.0;
 		
-//#warning this needs to be fixed
-//		if (tappedView.tag == 1) {
-//			[self popUpImage];
-//		}
-//		if (tappedView.tag == 2) {
-//			[self loadMovieNamed:@"UTC_SPIN_ANIMATION.mov" isTapToPauseEnabled:YES];
-//		}
+		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
+			[self loadMovieNamed:@"UTC_SPIN_ANIMATION.mov" isTapToPauseEnabled:YES];
+		} else {
+			[self popUpImage];
+		}
 		
 	} completion:nil];
 }
@@ -258,7 +314,6 @@ enum { kEnableDoubleTapToKillMovie = YES };
     _avPlayer = [AVPlayer playerWithURL:[NSURL fileURLWithPath:url]] ;
     _avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
     _avPlayerLayer.frame = CGRectMake(0.0, 0.0, 1024, 768);
-	
 	
     _avPlayerLayer.backgroundColor = [UIColor blackColor].CGColor;
     [_uiv_movieContainer.layer addSublayer: _avPlayerLayer];
