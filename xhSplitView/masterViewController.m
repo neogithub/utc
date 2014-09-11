@@ -46,7 +46,6 @@
     
     tableView1.delegate = self;
     tableView1.dataSource = self;
-    NSLog(@"The table view is %@", [self.view description]);
     return tableView1;
 }
 

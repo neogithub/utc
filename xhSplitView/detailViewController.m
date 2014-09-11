@@ -7,13 +7,18 @@
 //
 
 #import "detailViewController.h"
-#import "otisViewController.h"
+#import "buildingViewController.h"
+#import "ebZoomingScrollView.h"
+#import "UIPopUpHelp.h"
 
-@interface detailViewController ()
-@property (nonatomic, strong) UIImageView           *uiiv_bg;
-@property (nonatomic, strong) UIButton              *uib_buildingBtn;
-@property (nonatomic, strong) otisViewController    *otisVC;
-@property (nonatomic, strong) UIButton              *uib_back;
+@interface detailViewController () <ebZoomingScrollViewDelegate>
+
+@property (nonatomic, strong) ebZoomingScrollView		*uis_zoomingImg;
+@property (nonatomic, strong) UIImageView				*uiiv_bg;
+@property (nonatomic, strong) UIButton					*uib_buildingBtn;
+@property (nonatomic, strong) buildingViewController    *otisVC;
+@property (nonatomic, strong) UIPopUpHelp				*uip_popHelp;
+@property (nonatomic, strong) UIButton					*uib_back;
 @end
 
 @implementation detailViewController
@@ -51,13 +56,18 @@
 
 -(void)createBG
 {
-    if (_uiiv_bg) {
-        [_uiiv_bg removeFromSuperview];
-        _uiiv_bg = nil;
+    if (_uis_zoomingImg) {
+        [_uis_zoomingImg removeFromSuperview];
+        _uis_zoomingImg = nil;
     }
-    _uiiv_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grfx_cityBgImg.jpg"]];
-    _uiiv_bg.frame = self.view.bounds;
-    [self.view addSubview: _uiiv_bg];
+	
+	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"grfx_cityBgImg.jpg"] shouldZoom:YES];
+    _uis_zoomingImg.delegate = self;
+	[self.view addSubview:_uis_zoomingImg];
+	
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		_uip_popHelp = [[UIPopUpHelp alloc] initWithFrame:CGRectMake(930, 768, 70, 70) imgnamed:@"grfx_pinchHelp.png" toView:self.view];
+	});
 }
 
 -(void)initBuildingBtn
@@ -66,7 +76,7 @@
     _uib_buildingBtn.frame = CGRectMake(385.0, 257.0, 285, 193);
     _uib_buildingBtn.backgroundColor = [UIColor clearColor];
     [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
-    [self.view insertSubview:_uib_buildingBtn aboveSubview:_uiiv_bg];
+    [_uis_zoomingImg.blurView addSubview:_uib_buildingBtn];
 }
 
 -(void)loadBuilding
@@ -76,7 +86,7 @@
 
 -(void)loadBuildingVC:(int)index
 {
-	_otisVC = [[otisViewController alloc] initWithNibName:nil bundle:nil];
+	_otisVC = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
 	_otisVC.transitionClipName = @"UTC_TRANSISTION_ANIMATION.mov";
 	[self.view addSubview: _otisVC.view];
     [self createBackButton];

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20A39E7219C1367C00C71430 /* grfx_splitBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A39E7019C1367C00C71430 /* grfx_splitBtn.png */; };
+		20A39E7319C1367C00C71430 /* grfx_splitBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A39E7119C1367C00C71430 /* grfx_splitBtn@2x.png */; };
+		20A39E7619C1D9F600C71430 /* grfx_pinchHelp.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A39E7419C1D9F600C71430 /* grfx_pinchHelp.png */; };
+		20A39E7719C1D9F600C71430 /* grfx_pinchHelp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A39E7519C1D9F600C71430 /* grfx_pinchHelp@2x.png */; };
+		20A39E7A19C1EADA00C71430 /* UIPopUpHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A39E7919C1EADA00C71430 /* UIPopUpHelp.m */; };
 		20D0B00419BF4C280096021D /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00319BF4C280096021D /* City.m */; };
 		20D0B00819BF4EAD0096021D /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00719BF4EAD0096021D /* Building.m */; };
 		20D0B00C19BF52100096021D /* buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B00A19BF52100096021D /* buildings.json */; };
@@ -38,7 +43,7 @@
 		82A66AC719B7926B00C8E12A /* xhSplitViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AC619B7926B00C8E12A /* xhSplitViewTests.m */; };
 		82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AD119B792BD00C8E12A /* detailViewController.m */; };
 		82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AD319B792BD00C8E12A /* masterViewController.m */; };
-		82A66AD819B792BD00C8E12A /* otisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AD519B792BD00C8E12A /* otisViewController.m */; };
+		82A66AD819B792BD00C8E12A /* buildingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AD519B792BD00C8E12A /* buildingViewController.m */; };
 		82A66ADC19B792C700C8E12A /* xhSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66ADA19B792C700C8E12A /* xhSplitViewController.m */; };
 		82A66ADD19B792C700C8E12A /* xhSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */; };
 		82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */; };
@@ -71,6 +76,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20A39E7019C1367C00C71430 /* grfx_splitBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grfx_splitBtn.png; sourceTree = "<group>"; };
+		20A39E7119C1367C00C71430 /* grfx_splitBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grfx_splitBtn@2x.png"; sourceTree = "<group>"; };
+		20A39E7419C1D9F600C71430 /* grfx_pinchHelp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grfx_pinchHelp.png; sourceTree = "<group>"; };
+		20A39E7519C1D9F600C71430 /* grfx_pinchHelp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grfx_pinchHelp@2x.png"; sourceTree = "<group>"; };
+		20A39E7819C1EADA00C71430 /* UIPopUpHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPopUpHelp.h; sourceTree = "<group>"; };
+		20A39E7919C1EADA00C71430 /* UIPopUpHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopUpHelp.m; sourceTree = "<group>"; };
 		20D0B00219BF4C280096021D /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		20D0B00319BF4C280096021D /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		20D0B00619BF4EAD0096021D /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
@@ -114,8 +125,8 @@
 		82A66AD119B792BD00C8E12A /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		82A66AD219B792BD00C8E12A /* masterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = masterViewController.h; sourceTree = "<group>"; };
 		82A66AD319B792BD00C8E12A /* masterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = masterViewController.m; sourceTree = "<group>"; };
-		82A66AD419B792BD00C8E12A /* otisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = otisViewController.h; sourceTree = "<group>"; };
-		82A66AD519B792BD00C8E12A /* otisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = otisViewController.m; sourceTree = "<group>"; };
+		82A66AD419B792BD00C8E12A /* buildingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buildingViewController.h; sourceTree = "<group>"; };
+		82A66AD519B792BD00C8E12A /* buildingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buildingViewController.m; sourceTree = "<group>"; };
 		82A66AD919B792C700C8E12A /* xhSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xhSplitViewController.h; sourceTree = "<group>"; };
 		82A66ADA19B792C700C8E12A /* xhSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xhSplitViewController.m; sourceTree = "<group>"; };
 		82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = xhSplitViewController.xib; sourceTree = "<group>"; };
@@ -230,8 +241,8 @@
 				82A66AD319B792BD00C8E12A /* masterViewController.m */,
 				82A66AD019B792BD00C8E12A /* detailViewController.h */,
 				82A66AD119B792BD00C8E12A /* detailViewController.m */,
-				82A66AD419B792BD00C8E12A /* otisViewController.h */,
-				82A66AD519B792BD00C8E12A /* otisViewController.m */,
+				82A66AD419B792BD00C8E12A /* buildingViewController.h */,
+				82A66AD519B792BD00C8E12A /* buildingViewController.m */,
 				82A66AD919B792C700C8E12A /* xhSplitViewController.h */,
 				82A66ADA19B792C700C8E12A /* xhSplitViewController.m */,
 				82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */,
@@ -275,6 +286,8 @@
 		82A66ADE19B793BD00C8E12A /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				20A39E7819C1EADA00C71430 /* UIPopUpHelp.h */,
+				20A39E7919C1EADA00C71430 /* UIPopUpHelp.m */,
 				20D0B06519C0D7440096021D /* neoHotspotsView.h */,
 				20D0B06619C0D7440096021D /* neoHotspotsView.m */,
 				20D0B05C19C0A2DD0096021D /* UIScrollView+ZoomToPoint.h */,
@@ -303,12 +316,16 @@
 		82A66AE319B7942900C8E12A /* grfx */ = {
 			isa = PBXGroup;
 			children = (
+				20A39E7019C1367C00C71430 /* grfx_splitBtn.png */,
+				20A39E7119C1367C00C71430 /* grfx_splitBtn@2x.png */,
 				82A66AFC19B7AC2D00C8E12A /* grfx_backBtn.png */,
 				82A66AFD19B7AC2D00C8E12A /* grfx_backBtn@2x.png */,
 				82A66B0019B7B19B00C8E12A /* grfx_cityBgImg.jpg */,
 				82A66B0119B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg */,
 				82A66AE419B7942900C8E12A /* grfx_splitBtn.jpg */,
 				82A66AE519B7942900C8E12A /* grfx_splitBtn@2x.jpg */,
+				20A39E7419C1D9F600C71430 /* grfx_pinchHelp.png */,
+				20A39E7519C1D9F600C71430 /* grfx_pinchHelp@2x.png */,
 				82A66AE619B7942900C8E12A /* Marker.png */,
 				82A66AE719B7942900C8E12A /* Marker@2x.png */,
 				82A66AE819B7942900C8E12A /* otis_building_inside.png */,
@@ -409,10 +426,13 @@
 				82A66AFF19B7AC2D00C8E12A /* grfx_backBtn@2x.png in Resources */,
 				20D0B00D19BF52100096021D /* companies.json in Resources */,
 				82A66AF519B7950600C8E12A /* otis-hotpost-still@2x.png in Resources */,
+				20A39E7219C1367C00C71430 /* grfx_splitBtn.png in Resources */,
 				20D0B01419BFA80B0096021D /* UTC_SCHEMATIC_ANIMATION_CLIP.m4v in Resources */,
 				82A66AED19B7942900C8E12A /* Marker.png in Resources */,
+				20A39E7619C1D9F600C71430 /* grfx_pinchHelp.png in Resources */,
 				82A66AF419B7950600C8E12A /* otis-hotpost-still.png in Resources */,
 				82A66ADD19B792C700C8E12A /* xhSplitViewController.xib in Resources */,
+				20A39E7719C1D9F600C71430 /* grfx_pinchHelp@2x.png in Resources */,
 				20D0B00C19BF52100096021D /* buildings.json in Resources */,
 				82A66AA619B7926B00C8E12A /* InfoPlist.strings in Resources */,
 				82A66AF919B79D6C00C8E12A /* otis_building@2x.jpg in Resources */,
@@ -424,6 +444,7 @@
 				82A66AF819B79D6C00C8E12A /* otis_building.jpg in Resources */,
 				82A66AEE19B7942900C8E12A /* Marker@2x.png in Resources */,
 				82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */,
+				20A39E7319C1367C00C71430 /* grfx_splitBtn@2x.png in Resources */,
 				82A66B0519B7BF3E00C8E12A /* 20140903_UTC_SCHEMATIC_ANIMATION_REV.m4v in Resources */,
 				82A66AEB19B7942900C8E12A /* grfx_splitBtn.jpg in Resources */,
 				82A66AF019B7942900C8E12A /* otis_building_inside@2x.png in Resources */,
@@ -452,7 +473,7 @@
 			files = (
 				20D0B01019BF53C30096021D /* companies.m in Sources */,
 				82A66AB219B7926B00C8E12A /* ViewController.m in Sources */,
-				82A66AD819B792BD00C8E12A /* otisViewController.m in Sources */,
+				82A66AD819B792BD00C8E12A /* buildingViewController.m in Sources */,
 				20D0B00419BF4C280096021D /* City.m in Sources */,
 				82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */,
 				82A66AAC19B7926B00C8E12A /* AppDelegate.m in Sources */,
@@ -461,6 +482,7 @@
 				82A66AA819B7926B00C8E12A /* main.m in Sources */,
 				82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */,
 				20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */,
+				20A39E7A19C1EADA00C71430 /* UIPopUpHelp.m in Sources */,
 				82A66ADC19B792C700C8E12A /* xhSplitViewController.m in Sources */,
 				20D0B06719C0D7440096021D /* neoHotspotsView.m in Sources */,
 			);

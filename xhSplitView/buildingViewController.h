@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface otisViewController : UIViewController
+@interface buildingViewController : UIViewController
 @property (nonatomic,strong) NSString *transitionClipName;
 @end

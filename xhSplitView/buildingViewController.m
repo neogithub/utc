@@ -6,23 +6,26 @@
 //  Copyright (c) 2014 Neoscape. All rights reserved.
 //
 
-#import "otisViewController.h"
+#import "buildingViewController.h"
 #import "ebZoomingScrollView.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 #import "neoHotspotsView.h"
+#import "UIPopUpHelp.h"
 
 enum { kEnableSwiping = YES };
 enum { kEnableDoubleTapToKillMovie = YES };
 
-@interface otisViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, UIGestureRecognizerDelegate>
+@interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIView				*uiv_movieContainer;
 @property (nonatomic, strong) UIImageView           *uiiv_bg;
 @property (nonatomic, strong) NSMutableArray        *arr_hotspotsArray;
 @property (nonatomic, strong) ebZoomingScrollView   *uis_zoomingImg;
 @property (nonatomic, strong) ebZoomingScrollView   *uis_zoomingInfoImg;
+@property (nonatomic, strong) UIPopUpHelp			*uip_popHelp;
+
 @property (nonatomic, strong) AVPlayer              *avPlayer;
 @property (nonatomic, strong) AVPlayerLayer         *avPlayerLayer;
 @property (nonatomic, strong) UIButton              *uib_logoBtn;
@@ -37,7 +40,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 @end
 
-@implementation otisViewController
+@implementation buildingViewController
 
 - (void)viewDidLoad
 {
@@ -84,6 +87,9 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	} else {
 		[self.view insertSubview: _uis_zoomingImg belowSubview:_uib_back];
 	}
+	
+	[self showZoomHelper];
+
 	[self initSplitOpenBtn];
 }
 
@@ -95,22 +101,25 @@ enum { kEnableDoubleTapToKillMovie = YES };
 #pragma mark - buttons for splitting view and otis logo
 -(void)initSplitOpenBtn
 {
-    _uib_SplitOpenBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    _uib_SplitOpenBtn.frame = CGRectMake(500, 610, 100, 50);
-	[_uib_SplitOpenBtn setTitle:@"Expand" forState:UIControlStateNormal];
-    _uib_SplitOpenBtn.backgroundColor = [UIColor redColor];
+    _uib_SplitOpenBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_SplitOpenBtn.frame = CGRectMake(470, 710, 100, 30);
+	[_uib_SplitOpenBtn setImage:[UIImage imageNamed:@"grfx_splitBtn.png"] forState:UIControlStateNormal];
     [self.view insertSubview:_uib_SplitOpenBtn belowSubview:_uiv_movieContainer];
-    //[_uib_SplitOpenBtn addTarget:self action:@selector(changeView) forControlEvents:UIControlEventTouchUpInside];
 	[_uib_SplitOpenBtn addTarget:self action:@selector(filmToSplitBuilding) forControlEvents:UIControlEventTouchUpInside];
+	
+	[self pulse:_uib_SplitOpenBtn.layer];
 }
 
 -(void)initLogoBtn
 {
     _uib_logoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_logoBtn.frame = CGRectMake(500, 110, 100, 50);
-    _uib_logoBtn.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:_uib_logoBtn];
+    _uib_logoBtn.frame = CGRectMake(503, 109, 82, 44);
+    _uib_logoBtn.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    [_uis_zoomingImg.blurView addSubview:_uib_logoBtn];
     [_uib_logoBtn addTarget:self action:@selector(filmTransitionToHotspots) forControlEvents:UIControlEventTouchUpInside];
+	
+	[self pulse:_uib_logoBtn.layer];
+
 }
 
 #pragma mark - Actions to play path to hero and split hero
@@ -209,6 +218,9 @@ enum { kEnableDoubleTapToKillMovie = YES };
         
         _myHotspots.tagOfHs = i;
         [_uis_zoomingImg.blurView addSubview:_myHotspots];
+		
+		[self pulse:_myHotspots.layer];
+
     }
 }
 
@@ -240,9 +252,13 @@ enum { kEnableDoubleTapToKillMovie = YES };
     _uis_zoomingInfoImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis-hotpost-still.png"] shouldZoom:YES];
     [_uis_zoomingInfoImg setCloseBtn:YES];
     _uis_zoomingInfoImg.delegate = self;
+		
     [self.view insertSubview:_uis_zoomingInfoImg belowSubview:_uis_zoomingImg];
+	
+	[self showZoomHelper];
 }
 
+#pragma mark - ebzooming delegate
 -(void)didRemove:(ebZoomingScrollView *)ebZoomingScrollView {
 
 	[_uis_zoomingInfoImg bringSubviewToFront:_uis_zoomingImg];
@@ -254,6 +270,34 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		[_uis_zoomingInfoImg removeFromSuperview];
 		_uis_zoomingInfoImg = nil;
 	}];
+}
+#pragma mark - Utiltites
+#pragma mark PulseAnim
+-(void)pulse:(CALayer*)incomingLayer
+{
+	CABasicAnimation *theAnimation;
+	CALayer *pplayer = incomingLayer;
+	theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
+	theAnimation.duration=0.5;
+	theAnimation.repeatCount=HUGE_VAL;
+	theAnimation.autoreverses=YES;
+	theAnimation.fromValue=[NSNumber numberWithFloat:1.0];
+	theAnimation.toValue=[NSNumber numberWithFloat:0.5];
+	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
+}
+
+-(void)showZoomHelper
+{
+	NSLog(@"showZoomHelper");
+	
+	if (_uip_popHelp) {
+		[_uip_popHelp removeFromSuperview];
+		_uip_popHelp=nil;
+	}
+	
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		_uip_popHelp = [[UIPopUpHelp alloc] initWithFrame:CGRectMake(930, 768, 70, 70) imgnamed:@"grfx_pinchHelp.png" toView:self.view];
+	});
 }
 
 #pragma mark - play movie
@@ -415,6 +459,8 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		_uiv_movieContainer=nil;
 
 	}];
+	
+	[self showZoomHelper];
 
 }
 

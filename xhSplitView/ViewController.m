@@ -10,14 +10,14 @@
 #import "xhSplitViewController.h"
 #import "masterViewController.h"
 #import "detailViewController.h"
-#import "otisViewController.h"
+#import "buildingViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) UIButton                          *uib_splitCtrl;
 @property (nonatomic, strong) xhSplitViewController             *splitVC;
 @property (nonatomic, strong) masterViewController              *masterView;
 @property (nonatomic, strong) detailViewController              *detailView;
-@property (nonatomic, strong) otisViewController                *otisView;
+@property (nonatomic, strong) buildingViewController                *otisView;
 @end
 
 @implementation ViewController
@@ -53,7 +53,7 @@
 
 -(void)initOtisVC
 {
-    _otisView = [[otisViewController alloc] initWithNibName:nil bundle:nil];
+    _otisView = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
 }
 
 -(void)initSplitVC

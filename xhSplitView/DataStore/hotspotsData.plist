@@ -8,7 +8,7 @@
 		<key>background</key>
 		<string>Marker.png</string>
 		<key>xy</key>
-		<string>100,300</string>
+		<string>675,310</string>
 		<key>angle</key>
 		<string>180</string>
 		<key>caption</key>
@@ -24,7 +24,7 @@
 		<key>background</key>
 		<string>Marker.png</string>
 		<key>xy</key>
-		<string>300,300</string>
+		<string>744,308</string>
 		<key>angle</key>
 		<string>225</string>
 		<key>caption</key>
@@ -40,7 +40,7 @@
 		<key>background</key>
 		<string>Marker.png</string>
 		<key>xy</key>
-		<string>500,300</string>
+		<string>670,426</string>
 		<key>angle</key>
 		<string>270</string>
 		<key>caption</key>
@@ -56,7 +56,23 @@
 		<key>background</key>
 		<string>Marker.png</string>
 		<key>xy</key>
-		<string>700,300</string>
+		<string>700,490</string>
+		<key>angle</key>
+		<string>315</string>
+		<key>caption</key>
+		<string>Caption8</string>
+		<key>RGB</key>
+		<string></string>
+		<key>fileName</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>image</string>
+		<key>background</key>
+		<string>Marker.png</string>
+		<key>xy</key>
+		<string>728,482</string>
 		<key>angle</key>
 		<string>315</string>
 		<key>caption</key>
