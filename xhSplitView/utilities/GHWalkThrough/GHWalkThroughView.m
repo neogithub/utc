@@ -140,19 +140,20 @@
     
     self.skipButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    self.skipButton.frame = CGRectMake(self.frame.size.width - 80, self.pageControl.frame.origin.y - ((30 - self.pageControl.frame.size.height)/2), 80, 30);
+    self.skipButton.frame = CGRectMake(self.frame.size.width - 110, self.pageControl.frame.origin.y - ((30 - self.pageControl.frame.size.height)/2), 80, 30);
     
     self.skipButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-    [self.skipButton setTitle:@"Skip" forState:UIControlStateNormal];
+    [self.skipButton setTitle:@"Finished" forState:UIControlStateNormal];
     [self.skipButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.skipButton addTarget:self action:@selector(skipIntroduction) forControlEvents:UIControlEventTouchUpInside];
+	self.skipButton.hidden = YES;
     [self addSubview:self.skipButton];
     [self bringSubviewToFront:self.skipButton]; 
 }
 
 - (void) skipIntroduction
 {
-    [UIView animateWithDuration:0.3 animations:^{
+	[UIView animateWithDuration:0.3 animations:^{
         self.alpha = 0;
     } completion:^(BOOL finished){
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)0);
@@ -226,6 +227,10 @@
     
     int page = floor((contentOffset - pageMetric / 2) / pageMetric) + 1;
     self.pageControl.currentPage = page;
+	
+	if (self.pageControl.currentPage == [self.dataSource numberOfPages]-1) {
+		self.skipButton.hidden = NO;
+	}
 }
 
 - (void)crossDissolveForOffset:(float)offset {
