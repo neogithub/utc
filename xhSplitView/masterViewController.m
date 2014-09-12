@@ -113,14 +113,14 @@
 		
 			NSLog(@"The tapped cell is %i", (int)indexPath.row);
 			NSDictionary* dict = [NSDictionary dictionaryWithObject:
-								  [NSNumber numberWithInt:indexPath.row]
+								  [NSNumber numberWithInt:(int)indexPath.row]
 															 forKey:@"index"];
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
 																object:self
 															  userInfo:dict];
 	}
 	
-	selectedRow = indexPath.row;
+	selectedRow = (int)indexPath.row;
 }
 
 - (void)didReceiveMemoryWarning

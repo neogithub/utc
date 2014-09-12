@@ -12,27 +12,31 @@
 		<key>angle</key>
 		<string>180</string>
 		<key>caption</key>
-		<string>Caption5</string>
+		<string>Remote Diagnostics</string>
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>HOT_SPOT_COATED_STEEL_BELTS.m4v</string>
+		<key>alignment</key>
+		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>type</key>
 		<string>image</string>
 		<key>background</key>
-		<string>Marker.png</string>
+		<string>Marker_Right.png</string>
 		<key>xy</key>
 		<string>744,308</string>
 		<key>angle</key>
 		<string>225</string>
 		<key>caption</key>
-		<string>Caption6</string>
+		<string>Coated Steel Belts</string>
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
 		<string></string>
+		<key>alignment</key>
+		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>type</key>
@@ -44,11 +48,13 @@
 		<key>angle</key>
 		<string>270</string>
 		<key>caption</key>
-		<string>Caption7</string>
+		<string>Glide Door Operators</string>
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>UTC_SPIN_ANIMATION.mov</string>
+		<key>alignment</key>
+		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>type</key>
@@ -60,27 +66,31 @@
 		<key>angle</key>
 		<string>315</string>
 		<key>caption</key>
-		<string>Caption8</string>
+		<string>Compact Controller</string>
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
 		<string></string>
+		<key>alignment</key>
+		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>type</key>
 		<string>image</string>
 		<key>background</key>
-		<string>Marker.png</string>
+		<string>Marker_Right.png</string>
 		<key>xy</key>
 		<string>728,482</string>
 		<key>angle</key>
 		<string>315</string>
 		<key>caption</key>
-		<string>Caption8</string>
+		<string>ReGen System</string>
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
 		<string></string>
+		<key>alignment</key>
+		<integer>3</integer>
 	</dict>
 </array>
 </plist>

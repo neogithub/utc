@@ -12,7 +12,6 @@
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 #import "neoHotspotsView.h"
-#import "UIPopUpHelp.h"
 
 enum { kEnableSwiping = YES };
 enum { kEnableDoubleTapToKillMovie = YES };
@@ -22,21 +21,20 @@ enum { kEnableDoubleTapToKillMovie = YES };
 @property (nonatomic, strong) UIView				*uiv_movieContainer;
 @property (nonatomic, strong) UIImageView           *uiiv_bg;
 @property (nonatomic, strong) NSMutableArray        *arr_hotspotsArray;
+@property (nonatomic, strong) NSMutableArray		*arr_companyHotspotArray;
+
 @property (nonatomic, strong) ebZoomingScrollView   *uis_zoomingImg;
 @property (nonatomic, strong) ebZoomingScrollView   *uis_zoomingInfoImg;
-@property (nonatomic, strong) UIPopUpHelp			*uip_popHelp;
 
 @property (nonatomic, strong) AVPlayer              *avPlayer;
 @property (nonatomic, strong) AVPlayerLayer         *avPlayerLayer;
 @property (nonatomic, strong) UIButton              *uib_logoBtn;
 @property (nonatomic, strong) UIButton              *uib_SplitOpenBtn;
 @property (nonatomic, strong) UIButton              *uib_back;
-@property (nonatomic, strong) UIButton              *uib_buildingBtn;
 @property (nonatomic, strong) UILabel				*uil_filmHint;
-@property (nonatomic, strong) UIButton				*uib_filmClose;
 
-@property (nonatomic, strong) neoHotspotsView *myHotspots;
-@property (nonatomic, strong) NSMutableArray *arr_hotspots;
+@property (nonatomic, strong) neoHotspotsView		*myHotspots;
+@property (nonatomic, strong) NSMutableArray		*arr_hotspots;
 
 @end
 
@@ -46,7 +44,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
-	
+		
 	// load animation that leads to the hero
 	// building tapped from previous screen
 	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO belowSubview:nil];
@@ -65,6 +63,8 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		uil_Debug.text= @"DEBUG MODE";
 		[self.view insertSubview:uil_Debug atIndex:1000];
 	}
+	
+    _arr_hotspotsArray = [[NSMutableArray alloc] init];
 }
 
 #pragma mark - stills under movie
@@ -88,8 +88,6 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		[self.view insertSubview: _uis_zoomingImg belowSubview:_uib_back];
 	}
 	
-	[self showZoomHelper];
-
 	[self initSplitOpenBtn];
 }
 
@@ -112,14 +110,16 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 -(void)initLogoBtn
 {
-    _uib_logoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    /*_uib_logoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _uib_logoBtn.frame = CGRectMake(503, 109, 82, 44);
     _uib_logoBtn.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     [_uis_zoomingImg.blurView addSubview:_uib_logoBtn];
     [_uib_logoBtn addTarget:self action:@selector(filmTransitionToHotspots) forControlEvents:UIControlEventTouchUpInside];
 	
 	[self pulse:_uib_logoBtn.layer];
-
+	*/
+	
+	[self loadCompaniesHotspots];
 }
 
 #pragma mark - Actions to play path to hero and split hero
@@ -132,6 +132,8 @@ enum { kEnableDoubleTapToKillMovie = YES };
     [self updateStillFrameUnderFilm:@"otis_building.jpg"];
 	[_uib_SplitOpenBtn removeFromSuperview];
 	[self initLogoBtn];
+	[self loadCompaniesHotspots];
+
 }
 
 -(void)filmTransitionToHotspots
@@ -166,20 +168,26 @@ enum { kEnableDoubleTapToKillMovie = YES };
 #pragma mark - company hotspots
 -(void)createHotspots
 {
-    [_arr_hotspotsArray removeAllObjects];
+    for (UIView*hotspot in _arr_hotspotsArray) {
+		[hotspot removeFromSuperview];
+	}
+	
+	[_arr_hotspotsArray removeAllObjects];
     _arr_hotspotsArray = nil;
     _arr_hotspotsArray = [[NSMutableArray alloc] init];
 	
-    [self getDataFromPlist];
+	[self loadSingleCompanyHotspots];
 }
 
--(void)getDataFromPlist
+// load the hotpots of the company selected
+-(void)loadSingleCompanyHotspots
 {
     
     NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"hotspotsData" ofType:@"plist"];
     NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
-    for (int i = 0; i < [totalDataArray count]; i++) {
+    
+	for (int i = 0; i < [totalDataArray count]; i++) {
         NSDictionary *hotspotItem = totalDataArray [i];
         
         //Get the position of Hs
@@ -210,7 +218,62 @@ enum { kEnableDoubleTapToKillMovie = YES };
         //Get the caption of hotspot
         NSString *str_caption = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"caption"]];
         _myHotspots.str_labelText = str_caption;
-        _myHotspots.labelAlignment = CaptionAlignmentBottom;
+		
+		// get the alignment
+        int num_Alignment = [[hotspotItem objectForKey:@"alignment"] intValue];
+        _myHotspots.labelAlignment = num_Alignment;
+        
+        //Get the type of hotspot
+        NSString *str_type = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"type"]];
+        _myHotspots.str_typeOfHs = str_type;
+		
+        _myHotspots.tagOfHs = i;
+        [_uis_zoomingImg.blurView addSubview:_myHotspots];
+    }
+}
+
+// load all the companies onto the view
+-(void)loadCompaniesHotspots
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:
+					  @"companyHotspotsData" ofType:@"plist"];
+    NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
+    
+	for (int i = 0; i < [totalDataArray count]; i++) {
+        NSDictionary *hotspotItem = totalDataArray [i];
+        
+        //Get the position of Hs
+        NSString *str_position = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"xy"]];
+        NSRange range = [str_position rangeOfString:@","];
+        NSString *str_x = [str_position substringWithRange:NSMakeRange(0, range.location)];
+        NSString *str_y = [str_position substringFromIndex:(range.location + 1)];
+        float hs_x = [str_x floatValue];
+        float hs_y = [str_y floatValue];
+        _myHotspots = [[neoHotspotsView alloc] initWithFrame:CGRectMake(hs_x, hs_y, 95, 72)];
+        _myHotspots.delegate=self;
+		[_arr_hotspotsArray addObject:_myHotspots];
+		
+        //Get the angle of arrow
+        NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
+        if ([str_angle isEqualToString:@""]) {
+        }
+        else
+        {
+            float hsAngle = [str_angle floatValue];
+            _myHotspots.arwAngle = hsAngle;
+        }
+        
+        //Get the name of BG img name
+        NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
+        _myHotspots.hotspotBgName = str_bgName;
+        
+        //Get the caption of hotspot
+        NSString *str_caption = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"caption"]];
+        _myHotspots.str_labelText = str_caption;
+		
+		// get the alignment
+        int num_Alignment = [[hotspotItem objectForKey:@"alignment"] intValue];
+        _myHotspots.labelAlignment = num_Alignment;
         
         //Get the type of hotspot
         NSString *str_type = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"type"]];
@@ -218,9 +281,6 @@ enum { kEnableDoubleTapToKillMovie = YES };
         
         _myHotspots.tagOfHs = i;
         [_uis_zoomingImg.blurView addSubview:_myHotspots];
-		
-		[self pulse:_myHotspots.layer];
-
     }
 }
 
@@ -229,33 +289,42 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 -(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
-	neoHotspotsView *tappedView = _arr_hotspotsArray[i];
-	if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
-		[self loadMovieNamed:@"UTC_SPIN_ANIMATION.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
-	} else {
-		[self popUpImage];
-	}
+	neoHotspotsView *tappedView;
+	tappedView = _arr_hotspotsArray[i];
 	
-	[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
-	[UIView animateWithDuration:0.5 animations:^{
-		_uis_zoomingImg.alpha = 0.0;
-	} completion:nil];
+#warning more robust previously tapped method
+	tappedView.alpha = 0.75;
+	
+	if ([tappedView.str_typeOfHs isEqualToString:@"company"]) {
+		[self filmTransitionToHotspots];
+	} else {
+		NSLog(@"str_typeOfHs %@",tappedView.str_typeOfHs);
+		
+		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
+			[self loadMovieNamed:@"HOT_SPOT_COATED_STEEL_BELTS.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+		} else {
+			[self popUpImage];
+		}
+		
+		[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
+		[UIView animateWithDuration:0.5 animations:^{
+			_uis_zoomingImg.alpha = 0.0;
+		} completion:nil];
+	}
 }
 
 #pragma mark - hotspot actions
 -(void)popUpImage
 {
-    if (_uis_zoomingInfoImg) {
-        [_uis_zoomingInfoImg removeFromSuperview];
-        _uis_zoomingInfoImg = nil;
-    }
-    _uis_zoomingInfoImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis-hotpost-still.png"] shouldZoom:YES];
-    [_uis_zoomingInfoImg setCloseBtn:YES];
-    _uis_zoomingInfoImg.delegate = self;
+	if (_uis_zoomingInfoImg) {
+		[_uis_zoomingInfoImg removeFromSuperview];
+		_uis_zoomingInfoImg = nil;
+	}
+	_uis_zoomingInfoImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis-hotpost-still.png"] shouldZoom:YES];
+	[_uis_zoomingInfoImg setCloseBtn:YES];
+	_uis_zoomingInfoImg.delegate = self;
 		
-    [self.view insertSubview:_uis_zoomingInfoImg belowSubview:_uis_zoomingImg];
-	
-	[self showZoomHelper];
+	[self.view insertSubview:_uis_zoomingInfoImg belowSubview:_uis_zoomingImg];
 }
 
 #pragma mark - ebzooming delegate
@@ -286,22 +355,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
 }
 
--(void)showZoomHelper
-{
-	NSLog(@"showZoomHelper");
-	
-	if (_uip_popHelp) {
-		[_uip_popHelp removeFromSuperview];
-		_uip_popHelp=nil;
-	}
-	
-	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-		_uip_popHelp = [[UIPopUpHelp alloc] initWithFrame:CGRectMake(930, 768, 70, 70) imgnamed:@"grfx_pinchHelp.png" toView:self.view];
-	});
-}
-
 #pragma mark - play movie
-#warning isTransitional below needs to be replaced
 -(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled belowSubview:(UIView*)belowSubview
 {
 	NSString* fileName = [moviename stringByDeletingPathExtension];
@@ -345,12 +399,12 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		[self addMovieGestures];
 		[self loadControlsLabels];
 		selectorAfterMovieFinished = @"playerItemLoop:";
-		_uib_filmClose = [UIButton buttonWithType:UIButtonTypeSystem];
-		_uib_filmClose.frame = CGRectMake(800, 688, 200, 30);
-		_uib_filmClose.backgroundColor = [UIColor whiteColor];
-		[_uib_filmClose setTitle:@"Close" forState:UIControlStateNormal];
-		[_uib_filmClose addTarget:self action:@selector(closeMovie) forControlEvents:UIControlEventTouchUpInside];
-		[_uiv_movieContainer addSubview:_uib_filmClose];
+		UIButton *uib_filmClose = [UIButton buttonWithType:UIButtonTypeSystem];
+		uib_filmClose.frame = CGRectMake(800, 688, 200, 30);
+		uib_filmClose.backgroundColor = [UIColor whiteColor];
+		[uib_filmClose setTitle:@"Close" forState:UIControlStateNormal];
+		[uib_filmClose addTarget:self action:@selector(closeMovie) forControlEvents:UIControlEventTouchUpInside];
+		[_uiv_movieContainer addSubview:uib_filmClose];
 	} else {
 		selectorAfterMovieFinished = @"playerItemDidReachEnd:";
 	}
@@ -459,9 +513,6 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		_uiv_movieContainer=nil;
 
 	}];
-	
-	[self showZoomHelper];
-
 }
 
 #pragma mark - boiler plate

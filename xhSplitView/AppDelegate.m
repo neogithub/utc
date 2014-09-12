@@ -13,6 +13,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+	//[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"firstRun"];
+
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	if (![defaults objectForKey:@"firstRun"]) {
+		self.firstRun = YES;
+	}
+	
     return YES;
 }
 							

@@ -40,8 +40,8 @@ static int arwPic = 30;
     }
     else
     {
-    str_labelText = labelText;
-    [self initHotspotLabel];
+		str_labelText = labelText;
+		[self initHotspotLabel];
     }
 }
 //Get different mode of label's alignment
@@ -68,6 +68,7 @@ static int arwPic = 30;
         withArw = NO;
     }
 }
+
 // Get types of hotspots
 -(void)setStr_typeOfHs:(NSString *)str_type
 {
@@ -211,18 +212,22 @@ static int arwPic = 30;
 {
     [self updateIndicators];
     
-    float textFontSize = 10.0f;
-    [uil_caption setBackgroundColor:[UIColor clearColor]];
+    float textFontSize = 12.0f;
+	if ([str_labelText isEqualToString:@""]) {
+		[uil_caption setBackgroundColor:[UIColor clearColor]];
+	} else {
+		[uil_caption setBackgroundColor:[UIColor whiteColor]];
+	}
     [uil_caption setText:str_labelText];
     uil_caption.textColor = [UIColor blackColor];
     uil_caption.font=[uil_caption.font fontWithSize:textFontSize];
     [uil_caption setTextAlignment:NSTextAlignmentCenter];
     
-    [self insertSubview:uil_caption aboveSubview:uiiv_arwImgView];
+    [self insertSubview:uil_caption belowSubview:uiiv_hsImgView];
 }
 
 //According to different alignment mode change the location of label.
-//By default the with of label is 2* with of hotspot hand label's height is same as that of hotspot.
+//By default the width of label is 2* with of hotspot hand label's height is same as that of hotspot.
 - (void)updateIndicators
 {
     [uil_caption removeFromSuperview];
@@ -230,64 +235,64 @@ static int arwPic = 30;
     {
         float label_X = uiiv_hsImgView.frame.origin.x - uiiv_hsImgView.frame.size.height/2;
         float label_Y = uiiv_hsImgView.frame.origin.y - ((sqrt(2)+1)/2)* uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*2;
-        float label_H = uiiv_hsImgView.frame.size.height;
+        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentCenter];
     }
     if (labelAlignment == CaptionAlignmentTopRight) {
         float label_X = uiiv_hsImgView.frame.origin.x + uiiv_hsImgView.frame.size.width;
         float label_Y = uiiv_hsImgView.frame.origin.y - uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*2;
-        float label_H = uiiv_hsImgView.frame.size.height;
+        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentRight];
     }
     if (labelAlignment == CaptionAlignmentRight) {
-        float label_X = uiiv_hsImgView.frame.origin.x + ((sqrt(2)+1)/2)* uiiv_hsImgView.frame.size.width;
-        float label_Y = uiiv_hsImgView.frame.origin.y;
-        float label_W = uiiv_hsImgView.frame.size.width*2;
-        float label_H = uiiv_hsImgView.frame.size.height;
+        float label_X = uiiv_hsImgView.frame.origin.x + ((sqrt(2)+1)/2)* uiiv_hsImgView.frame.size.width-10;
+        float label_Y = uiiv_hsImgView.frame.origin.y+6;
+        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentRight];
     }
     if (labelAlignment == CaptionAlignmentBottomRight) {
         float label_X = uiiv_hsImgView.frame.origin.x + uiiv_hsImgView.frame.size.width;
         float label_Y = uiiv_hsImgView.frame.origin.y + uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*2;
-        float label_H = uiiv_hsImgView.frame.size.height;
+        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentRight];
     }
     if (labelAlignment == CaptionAlignmentBottom) {
         float label_X = uiiv_hsImgView.frame.origin.x - uiiv_hsImgView.frame.size.height/2;
         float label_Y = uiiv_hsImgView.frame.origin.y + ((sqrt(2)+1)/2)* uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*2;
-        float label_H = uiiv_hsImgView.frame.size.height;
+        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentCenter];
     }
     if (labelAlignment == CaptionAlignmentBottomLeft) {
         float label_X = uiiv_hsImgView.frame.origin.x - uiiv_hsImgView.frame.size.width*2;
         float label_Y = uiiv_hsImgView.frame.origin.y + uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*2;
-        float label_H = uiiv_hsImgView.frame.size.height;
+        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentLeft];
     }
     if (labelAlignment == CaptionAlignmentLeft) {
-        float label_X = uiiv_hsImgView.frame.origin.x - ((sqrt(2)-1)/2)* uiiv_hsImgView.frame.size.width - uiiv_hsImgView.frame.size.width*2;
-        float label_Y = uiiv_hsImgView.frame.origin.y;
-        float label_W = uiiv_hsImgView.frame.size.width*2;
-        float label_H = uiiv_hsImgView.frame.size.height;
+        float label_X = uiiv_hsImgView.frame.origin.x - ((sqrt(2)-1)/2)* uiiv_hsImgView.frame.size.width - uiiv_hsImgView.frame.size.width*2-30;
+        float label_Y = uiiv_hsImgView.frame.origin.y+6;
+        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentLeft];
     }
     if (labelAlignment == CaptionAlignmentTopLeft) {
         float label_X = uiiv_hsImgView.frame.origin.x - uiiv_hsImgView.frame.size.width*2;
         float label_Y = uiiv_hsImgView.frame.origin.y - uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*2;
-        float label_H = uiiv_hsImgView.frame.size.height;
+        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentLeft];
     }

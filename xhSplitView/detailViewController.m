@@ -9,7 +9,6 @@
 #import "detailViewController.h"
 #import "buildingViewController.h"
 #import "ebZoomingScrollView.h"
-#import "UIPopUpHelp.h"
 
 @interface detailViewController () <ebZoomingScrollViewDelegate>
 
@@ -17,7 +16,6 @@
 @property (nonatomic, strong) UIImageView				*uiiv_bg;
 @property (nonatomic, strong) UIButton					*uib_buildingBtn;
 @property (nonatomic, strong) buildingViewController    *otisVC;
-@property (nonatomic, strong) UIPopUpHelp				*uip_popHelp;
 @property (nonatomic, strong) UIButton					*uib_back;
 @end
 
@@ -64,10 +62,6 @@
 	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"grfx_cityBgImg.jpg"] shouldZoom:YES];
     _uis_zoomingImg.delegate = self;
 	[self.view addSubview:_uis_zoomingImg];
-	
-	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-		_uip_popHelp = [[UIPopUpHelp alloc] initWithFrame:CGRectMake(930, 768, 70, 70) imgnamed:@"grfx_pinchHelp.png" toView:self.view];
-	});
 }
 
 -(void)initBuildingBtn
