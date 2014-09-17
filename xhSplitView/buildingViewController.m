@@ -17,6 +17,10 @@ enum { kEnableSwiping = YES };
 enum { kEnableDoubleTapToKillMovie = YES };
 
 @interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, UIGestureRecognizerDelegate>
+{
+	CGFloat companyLabelWidth;
+	CGFloat hotspotLabelWidth;
+}
 
 @property (nonatomic, strong) UIView				*uiv_movieContainer;
 @property (nonatomic, strong) UIImageView           *uiiv_bg;
@@ -35,6 +39,11 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 @property (nonatomic, strong) neoHotspotsView		*myHotspots;
 @property (nonatomic, strong) NSMutableArray		*arr_hotspots;
+
+@property (nonatomic, strong) UIView                        *uiv_textBoxContainer;
+@property (nonatomic, strong) UILabel                       *uil_textYear;
+@property (nonatomic, strong) UILabel                       *uil_textInfo;
+@property (nonatomic, strong) UILabel                       *uil_textSection;
 
 @end
 
@@ -65,6 +74,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	}
 	
     _arr_hotspotsArray = [[NSMutableArray alloc] init];
+	
 }
 
 #pragma mark - stills under movie
@@ -143,6 +153,9 @@ enum { kEnableDoubleTapToKillMovie = YES };
     [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" isTapToPauseEnabled:NO belowSubview:nil];
     [self updateStillFrameUnderFilm:@"otis_building_inside.png"];
 	[self createHotspots];
+	
+	[self initTitleBox];
+
 }
 
 #pragma mark - menu buttons
@@ -163,6 +176,72 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 	[self createStillFrameUnderFilm];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"goToCity" object:nil];
+}
+
+#pragma mark - Info Labels
+#pragma mark - init top left text box
+-(void)initTitleBox
+{
+    _uiv_textBoxContainer = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.view insertSubview:_uiv_textBoxContainer aboveSubview:_uiv_movieContainer];
+    _uiv_textBoxContainer.layer.zPosition = MAXFLOAT;
+	[self setCompanyTitle:@"OTIS"];
+}
+
+-(void)setCompanyTitle:(NSString *)year
+{
+    if (_uil_textYear) {
+        [_uil_textYear removeFromSuperview];
+        _uil_textYear = nil;
+    }
+	
+	// get width of uilabel
+	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+	CGFloat str_width = [self getWidthFromStringLength:year andFont:font];
+	static CGFloat labelPad = 15;
+	companyLabelWidth = str_width + (labelPad*2);
+	
+    _uil_textYear = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, companyLabelWidth, 36)];
+    [_uil_textYear setText:year];
+    [_uil_textYear setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.8]];
+    [_uil_textYear setTextColor:[UIColor blackColor]];
+    [_uil_textYear setFont: font];
+    [_uil_textYear setTextAlignment:NSTextAlignmentCenter];
+	[_uil_textYear.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+	[_uil_textYear.layer setBorderWidth:1.0];
+	
+	[_uiv_textBoxContainer addSubview: _uil_textYear];
+	
+	// resize text container to fit
+	_uiv_textBoxContainer.frame = CGRectMake(75, 0, companyLabelWidth, 36);
+}
+
+-(void)setHotSpotTitle:(NSString *)string
+{
+    if (_uil_textInfo) {
+        [_uil_textInfo removeFromSuperview];
+        _uil_textInfo = nil;
+    }
+	
+	// get width of uilabel
+	UIFont *font = [UIFont fontWithName:@"Helvetica" size:15];
+	CGFloat str_width = [self getWidthFromStringLength:string andFont:font];
+	static CGFloat labelPad = 20;
+	hotspotLabelWidth = str_width + (labelPad);
+    
+    _uil_textInfo = [[UILabel alloc] initWithFrame:CGRectMake(companyLabelWidth, 0, hotspotLabelWidth, 36)];
+    [_uil_textInfo setText:string];
+	_uil_textInfo.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+    [_uil_textInfo setTextColor:[UIColor blackColor]];
+	[_uil_textInfo setTextAlignment:NSTextAlignmentCenter];
+    [_uil_textInfo setFont:font];
+    [_uil_textInfo.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+	[_uil_textInfo.layer setBorderWidth:1.0];
+	
+	[_uiv_textBoxContainer addSubview: _uil_textInfo];
+	
+	// resize text container to fit
+	_uiv_textBoxContainer.frame = CGRectMake(75, 0, hotspotLabelWidth+companyLabelWidth, 36);
 }
 
 #pragma mark - company hotspots
@@ -310,6 +389,8 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		[UIView animateWithDuration:0.5 animations:^{
 			_uis_zoomingImg.alpha = 0.0;
 		} completion:nil];
+		
+		[self setHotSpotTitle:tappedView.str_labelText];
 	}
 }
 
@@ -332,6 +413,12 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 	[_uis_zoomingInfoImg bringSubviewToFront:_uis_zoomingImg];
 	[_uis_zoomingImg.scrollView setZoomScale:1.0];
+	
+	// hotspot cleanup
+	if (_uil_textInfo) {
+        [_uil_textInfo removeFromSuperview];
+        _uil_textInfo = nil;
+    }
 
 	[UIView animateWithDuration:0.5 animations:^{
 		_uis_zoomingImg.alpha = 1.0;
@@ -353,6 +440,16 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	theAnimation.fromValue=[NSNumber numberWithFloat:1.0];
 	theAnimation.toValue=[NSNumber numberWithFloat:0.5];
 	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
+}
+
+#pragma mark get width of string text
+-(float)getWidthFromStringLength:(NSString*)string andFont:(UIFont*)stringfont
+{
+	UIFont *font = stringfont;
+    NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
+    CGFloat str_width = [[[NSAttributedString alloc] initWithString:string attributes:attributes1] size].width;
+    NSLog(@"The string width is %f", str_width);
+	return str_width;
 }
 
 #pragma mark - play movie
