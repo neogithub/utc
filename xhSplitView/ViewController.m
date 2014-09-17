@@ -58,7 +58,7 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
     [self initMasterVC];
     [self initDetailVC];
     [self initSplitVC];
-    [self initOtisVC];
+    [self initBuildingVC];
     [self initSplitCtrl];
 	[self initHelpButton];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDetailView:) name:@"masterEvent" object:nil];
@@ -122,6 +122,7 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 	}
 }
 
+#pragma mark - description Master Detail inits
 
 -(void)initMasterVC
 {
@@ -134,7 +135,7 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
     _detailView.view.backgroundColor = [UIColor whiteColor];
 }
 
--(void)initOtisVC
+-(void)initBuildingVC
 {
     _otisView = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
 }
