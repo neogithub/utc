@@ -31,7 +31,6 @@
 		20A39EAA19C32F8800C71430 /* bg_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A39E9B19C32F8800C71430 /* bg_05.jpg */; };
 		20A39EAB19C32F8800C71430 /* GHWalkThroughPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A39E9D19C32F8800C71430 /* GHWalkThroughPageCell.m */; };
 		20A39EAC19C32F8800C71430 /* GHWalkThroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A39E9F19C32F8800C71430 /* GHWalkThroughView.m */; };
-		20A39EAD19C32F8800C71430 /* static_bg_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A39EA019C32F8800C71430 /* static_bg_01.png */; };
 		20A39EAE19C32F8800C71430 /* title1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A39EA119C32F8800C71430 /* title1@2x.png */; };
 		20A39EAF19C32F8800C71430 /* title2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A39EA219C32F8800C71430 /* title2@2x.png */; };
 		20A39EB019C32F8800C71430 /* title3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A39EA319C32F8800C71430 /* title3@2x.png */; };
@@ -139,7 +138,6 @@
 		20A39E9D19C32F8800C71430 /* GHWalkThroughPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHWalkThroughPageCell.m; path = GHWalkThrough/GHWalkThroughPageCell.m; sourceTree = "<group>"; };
 		20A39E9E19C32F8800C71430 /* GHWalkThroughView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHWalkThroughView.h; path = GHWalkThrough/GHWalkThroughView.h; sourceTree = "<group>"; };
 		20A39E9F19C32F8800C71430 /* GHWalkThroughView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHWalkThroughView.m; path = GHWalkThrough/GHWalkThroughView.m; sourceTree = "<group>"; };
-		20A39EA019C32F8800C71430 /* static_bg_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = static_bg_01.png; path = GHWalkThrough/static_bg_01.png; sourceTree = "<group>"; };
 		20A39EA119C32F8800C71430 /* title1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "title1@2x.png"; path = "GHWalkThrough/title1@2x.png"; sourceTree = "<group>"; };
 		20A39EA219C32F8800C71430 /* title2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "title2@2x.png"; path = "GHWalkThrough/title2@2x.png"; sourceTree = "<group>"; };
 		20A39EA319C32F8800C71430 /* title3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "title3@2x.png"; path = "GHWalkThrough/title3@2x.png"; sourceTree = "<group>"; };
@@ -267,7 +265,6 @@
 				20A39E9D19C32F8800C71430 /* GHWalkThroughPageCell.m */,
 				20A39E9E19C32F8800C71430 /* GHWalkThroughView.h */,
 				20A39E9F19C32F8800C71430 /* GHWalkThroughView.m */,
-				20A39EA019C32F8800C71430 /* static_bg_01.png */,
 				20A39EA119C32F8800C71430 /* title1@2x.png */,
 				20A39EA219C32F8800C71430 /* title2@2x.png */,
 				20A39EA319C32F8800C71430 /* title3@2x.png */,
@@ -551,7 +548,6 @@
 				20A39EA619C32F8800C71430 /* bg_01.jpg in Resources */,
 				20A39E8519C2337D00C71430 /* 2014_09_11_PROGRESS_BLDG_VIEW.jpg in Resources */,
 				20A39EB119C32F8800C71430 /* title4@2x.png in Resources */,
-				20A39EAD19C32F8800C71430 /* static_bg_01.png in Resources */,
 				20A39E8719C2395900C71430 /* HOT_SPOT_COATED_STEEL_BELTS.m4v in Resources */,
 				82A66AFF19B7AC2D00C8E12A /* grfx_backBtn@2x.png in Resources */,
 				20D0B00D19BF52100096021D /* companies.json in Resources */,

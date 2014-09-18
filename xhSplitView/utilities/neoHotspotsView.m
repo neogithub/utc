@@ -231,11 +231,21 @@ static int arwPic = 30;
 - (void)updateIndicators
 {
     [uil_caption removeFromSuperview];
+	CGFloat LabelWidth = 0;
+	
+	UIFont *font = [UIFont fontWithName:@"Helvetica" size:12];
+	if (str_labelText != nil) {
+		CGFloat str_width = [self getWidthFromStringLength:str_labelText andFont:font];
+		static CGFloat labelPad = 0;
+		LabelWidth = str_width + (labelPad*2);
+	}
+
     if (labelAlignment == CaptionAlignmentTop)
     {
         float label_X = uiiv_hsImgView.frame.origin.x - uiiv_hsImgView.frame.size.height/2;
         float label_Y = uiiv_hsImgView.frame.origin.y - ((sqrt(2)+1)/2)* uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        //float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentCenter];
@@ -243,7 +253,8 @@ static int arwPic = 30;
     if (labelAlignment == CaptionAlignmentTopRight) {
         float label_X = uiiv_hsImgView.frame.origin.x + uiiv_hsImgView.frame.size.width;
         float label_Y = uiiv_hsImgView.frame.origin.y - uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        //float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentRight];
@@ -251,7 +262,8 @@ static int arwPic = 30;
     if (labelAlignment == CaptionAlignmentRight) {
         float label_X = uiiv_hsImgView.frame.origin.x + ((sqrt(2)+1)/2)* uiiv_hsImgView.frame.size.width-10;
         float label_Y = uiiv_hsImgView.frame.origin.y+6;
-        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        //float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentRight];
@@ -259,7 +271,8 @@ static int arwPic = 30;
     if (labelAlignment == CaptionAlignmentBottomRight) {
         float label_X = uiiv_hsImgView.frame.origin.x + uiiv_hsImgView.frame.size.width;
         float label_Y = uiiv_hsImgView.frame.origin.y + uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        //float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentRight];
@@ -267,7 +280,8 @@ static int arwPic = 30;
     if (labelAlignment == CaptionAlignmentBottom) {
         float label_X = uiiv_hsImgView.frame.origin.x - uiiv_hsImgView.frame.size.height/2;
         float label_Y = uiiv_hsImgView.frame.origin.y + ((sqrt(2)+1)/2)* uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		// float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentCenter];
@@ -275,7 +289,8 @@ static int arwPic = 30;
     if (labelAlignment == CaptionAlignmentBottomLeft) {
         float label_X = uiiv_hsImgView.frame.origin.x - uiiv_hsImgView.frame.size.width*2;
         float label_Y = uiiv_hsImgView.frame.origin.y + uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        //float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentLeft];
@@ -283,15 +298,17 @@ static int arwPic = 30;
     if (labelAlignment == CaptionAlignmentLeft) {
         float label_X = uiiv_hsImgView.frame.origin.x - ((sqrt(2)-1)/2)* uiiv_hsImgView.frame.size.width - uiiv_hsImgView.frame.size.width*2-30;
         float label_Y = uiiv_hsImgView.frame.origin.y+6;
-        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+        //float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
-        uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
+        uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X-LabelWidth+105 /*dirty hack*/, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentLeft];
     }
     if (labelAlignment == CaptionAlignmentTopLeft) {
         float label_X = uiiv_hsImgView.frame.origin.x - uiiv_hsImgView.frame.size.width*2;
         float label_Y = uiiv_hsImgView.frame.origin.y - uiiv_hsImgView.frame.size.height;
-        float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		// float label_W = uiiv_hsImgView.frame.size.width*3.25;
+		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
         uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentLeft];
@@ -350,6 +367,17 @@ static int arwPic = 30;
 - (void)hotspotWithTagTapped:(UIGestureRecognizer*)recognizer
 {
 	[self.delegate neoHotspotsView:self withTag:tagOfHs];
+}
+
+#pragma mark - Utilities
+#pragma mark get width of string text
+-(float)getWidthFromStringLength:(NSString*)string andFont:(UIFont*)stringfont
+{
+	UIFont *font = stringfont;
+    NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
+    CGFloat str_width = [[[NSAttributedString alloc] initWithString:string attributes:attributes1] size].width;
+    NSLog(@"The string width is %f", str_width);
+	return str_width;
 }
 
 #pragma -mark Delegate Method
