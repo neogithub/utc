@@ -40,7 +40,8 @@
 
     masterNavigationController.navigationBar.translucent = NO;
     masterNavigationController.navigationBar.opaque = YES;
-    masterNavigationController.navigationBar.tintColor = [UIColor blackColor];
+//    masterNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:13.0/255.0 green:29.0/255.0 blue:55.0/255.0 alpha:1.0];
+    [masterNavigationController setNavigationBarHidden:YES];
     
     masterNavigationController.view.frame = uiv_master.bounds;
     controller.view.frame = masterNavigationController.view.bounds;

@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "xhSplitView.app"
-            BlueprintName = "xhSplitView"
-            ReferencedContainer = "container:xhSplitView.xcodeproj">
+            BuildableName = "utc.app"
+            BlueprintName = "utc"
+            ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "xhSplitView.app"
-            BlueprintName = "xhSplitView"
-            ReferencedContainer = "container:xhSplitView.xcodeproj">
+            BuildableName = "utc.app"
+            BlueprintName = "utc"
+            ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

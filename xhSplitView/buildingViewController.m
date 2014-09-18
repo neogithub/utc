@@ -194,7 +194,6 @@ typedef NSInteger PlayerState;
 -(void)performSelectorFromArray
 {
 	NSValue *val = _arr_BreadCrumbOfImages[_uib_back.tag];
-	
 	SEL mySelector = [val pointerValue];
 	//	[self performSelector:mySelector];
 	IMP imp = [self methodForSelector:mySelector];

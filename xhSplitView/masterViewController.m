@@ -7,7 +7,8 @@
 //
 
 #import "masterViewController.h"
-
+#import "panelTableViewCell.h"
+#import "titleTableViewCell.h"
 @interface masterViewController ()
 {
 	int selectedRow;
@@ -28,13 +29,13 @@
 
 -(UITableView *)makeTableView
 {
-    CGFloat x = 0;
-    CGFloat y = 0;
+    CGFloat x = 0.5;
+    CGFloat y = 0.5;
     CGFloat width = self.view.frame.size.width;
     CGFloat height = self.view.frame.size.height;
     CGRect tableFrame = CGRectMake(x, y, width, height);
     
-    UITableView *tableView1 = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
+    UITableView *tableView1 = [[UITableView alloc]initWithFrame:tableFrame];
     
     tableView1.rowHeight = 45;
     tableView1.sectionFooterHeight = 22;
@@ -43,6 +44,13 @@
     tableView1.showsVerticalScrollIndicator = YES;
     tableView1.userInteractionEnabled = YES;
     tableView1.bounces = YES;
+    [tableView1 setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+    UIImage *tableBg = [[UIImage imageNamed:@"grfx_tableBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(28, 0, 28, 0)];
+    UIImageView *uiiv_tableBg = [[UIImageView alloc] initWithFrame:tableView1.bounds];
+    [uiiv_tableBg setImage:tableBg];
+    [uiiv_tableBg setContentMode:UIViewContentModeScaleToFill];
+    tableView1.backgroundView = uiiv_tableBg;
     
     tableView1.delegate = self;
     tableView1.dataSource = self;
@@ -54,7 +62,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.frame = CGRectMake(0.0, 0.0, 170, 768);
+    self.view.frame = CGRectMake(0.0, 0.0, 179, 768);
     tableView = [self makeTableView];
     [self initNavi];
 //    [self.view addSubview: tableView];
@@ -67,6 +75,7 @@
     [self.navigationController.view addSubview: tableView];
     [self.view addSubview: self.navigationController.view];
     [self.navigationController setTitle:@"HOME"];
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     [self addChildViewController: self.navigationController];
     [self.view addSubview: self.navigationController.view];
 }
@@ -84,33 +93,64 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 12;
+    return 13;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)ttableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    if (indexPath.row == 0) {
+        static NSString *CellIdentifier = @"Cell1";
+        titleTableViewCell *cell = (titleTableViewCell *)[ttableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"titleTableViewCell" owner:self options:nil];
+            for(id currentObject in topLevelObjects)
+            {
+                if([currentObject isKindOfClass:[titleTableViewCell class]])
+                {
+                    cell = (titleTableViewCell *)currentObject;
+                    break;
+                }
+            }
+        }
+        return cell;
+
     }
-    if (indexPath.row == 9) {
-        [cell.textLabel setText:[NSString stringWithFormat:@"Otis"]];
+    else {
+        static NSString *CellIdentifier = @"Cell2";
+        panelTableViewCell *cell = (panelTableViewCell *)[ttableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"panelTableViewCell" owner:self options:nil];
+            for(id currentObject in topLevelObjects)
+            {
+                if([currentObject isKindOfClass:[panelTableViewCell class]])
+                {
+                    cell = (panelTableViewCell *)currentObject;
+                    break;
+                }
+            }
+            
+        }
+        
+        if (indexPath.row == 10) {
+            [cell.uil_title setText:[NSString stringWithFormat:@"Otis"]];
+            return cell;
+        }
+        
+        [cell.uil_title setText:[NSString stringWithFormat:@"Company %i", (int)indexPath.row-1]];
         return cell;
     }
-    
-    [cell.textLabel setText:[NSString stringWithFormat:@"Company %i", (int)indexPath.row]];
-    
-    return cell;
+    return nil;
 }
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if (indexPath.row != 9) {
-		return;
-	} else if (indexPath.row != selectedRow) {
-		
+    if (indexPath.row == 0) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil];
+    }
+    else {
+        if (indexPath.row != 10) {
+            return;
+        } else if (indexPath.row != selectedRow) {
+            
 			NSLog(@"The tapped cell is %i", (int)indexPath.row);
 			NSDictionary* dict = [NSDictionary dictionaryWithObject:
 								  [NSNumber numberWithInt:(int)indexPath.row]
@@ -118,9 +158,10 @@
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
 																object:self
 															  userInfo:dict];
-	}
-	
-	selectedRow = (int)indexPath.row;
+        }
+        
+        selectedRow = (int)indexPath.row;
+    }
 }
 
 - (void)didReceiveMemoryWarning
