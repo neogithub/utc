@@ -22,23 +22,25 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	CGFloat hotspotLabelWidth;
 }
 
-@property (nonatomic, strong) UIView				*uiv_movieContainer;
-@property (nonatomic, strong) UIImageView           *uiiv_bg;
-@property (nonatomic, strong) NSMutableArray        *arr_hotspotsArray;
-@property (nonatomic, strong) NSMutableArray		*arr_companyHotspotArray;
+@property (nonatomic, strong) UIView						*uiv_movieContainer;
+@property (nonatomic, strong) UIImageView					*uiiv_bg;
+@property (nonatomic, strong) NSMutableArray				*arr_hotspotsArray;
+@property (nonatomic, strong) NSMutableArray				*arr_companyHotspotArray;
 
-@property (nonatomic, strong) ebZoomingScrollView   *uis_zoomingImg;
-@property (nonatomic, strong) ebZoomingScrollView   *uis_zoomingInfoImg;
+@property (nonatomic, strong) NSMutableArray				*arr_BreadCrumbOfImages;
 
-@property (nonatomic, strong) AVPlayer              *avPlayer;
-@property (nonatomic, strong) AVPlayerLayer         *avPlayerLayer;
-@property (nonatomic, strong) UIButton              *uib_logoBtn;
-@property (nonatomic, strong) UIButton              *uib_SplitOpenBtn;
-@property (nonatomic, strong) UIButton              *uib_back;
-@property (nonatomic, strong) UILabel				*uil_filmHint;
+@property (nonatomic, strong) ebZoomingScrollView			*uis_zoomingImg;
+@property (nonatomic, strong) ebZoomingScrollView			*uis_zoomingInfoImg;
 
-@property (nonatomic, strong) neoHotspotsView		*myHotspots;
-@property (nonatomic, strong) NSMutableArray		*arr_hotspots;
+@property (nonatomic, strong) AVPlayer						*avPlayer;
+@property (nonatomic, strong) AVPlayerLayer					*avPlayerLayer;
+@property (nonatomic, strong) UIButton						*uib_logoBtn;
+@property (nonatomic, strong) UIButton						*uib_SplitOpenBtn;
+@property (nonatomic, strong) UIButton						*uib_back;
+@property (nonatomic, strong) UILabel						*uil_filmHint;
+
+@property (nonatomic, strong) neoHotspotsView				*myHotspots;
+@property (nonatomic, strong) NSMutableArray				*arr_hotspots;
 
 @property (nonatomic, strong) UIView                        *uiv_textBoxContainer;
 @property (nonatomic, strong) UILabel                       *uil_textYear;
@@ -54,12 +56,15 @@ enum { kEnableDoubleTapToKillMovie = YES };
     [super viewDidLoad];
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
 		
+	_arr_hotspotsArray		= [[NSMutableArray alloc] init];
+	_arr_BreadCrumbOfImages = [[NSMutableArray alloc] init];
+	
 	// load animation that leads to the hero
 	// building tapped from previous screen
 	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO belowSubview:nil];
 	// add in the bg image beneath the film
 	[self createStillFrameUnderFilm];
-	
+		
 	// DEBUG
 #warning Debug for swiping or doubletapping
 	if ((kEnableSwiping==YES) || (kEnableDoubleTapToKillMovie==YES)) {
@@ -73,8 +78,13 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		[self.view insertSubview:uil_Debug atIndex:1000];
 	}
 	
-    _arr_hotspotsArray = [[NSMutableArray alloc] init];
+	[self createBackButton];
 	
+	NSValue* selCommandA = [NSValue valueWithPointer:@selector(reloadBuildingVC)];
+	NSValue* selCommandB = [NSValue valueWithPointer:@selector(reloadHero)];
+	NSValue* selCommandC = [NSValue valueWithPointer:@selector(loadSplitAssets)];
+	
+	_arr_BreadCrumbOfImages = [NSMutableArray arrayWithObjects:selCommandA, selCommandB, selCommandC, nil ];
 }
 
 #pragma mark - stills under movie
@@ -84,9 +94,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
         [_uiiv_bg removeFromSuperview];
         _uiiv_bg = nil;
 		
-		for (UIView*hotspot in _arr_hotspotsArray) {
-			[hotspot removeFromSuperview];
-		}
+		[self removeHotspots];
     }
 	
 	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis_building_hero.jpg"] shouldZoom:YES];
@@ -120,63 +128,92 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 -(void)initLogoBtn
 {
-    /*_uib_logoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_logoBtn.frame = CGRectMake(503, 109, 82, 44);
-    _uib_logoBtn.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
-    [_uis_zoomingImg.blurView addSubview:_uib_logoBtn];
-    [_uib_logoBtn addTarget:self action:@selector(filmTransitionToHotspots) forControlEvents:UIControlEventTouchUpInside];
-	
-	[self pulse:_uib_logoBtn.layer];
-	*/
-	
 	[self loadCompaniesHotspots];
 }
 
 #pragma mark - Actions to play path to hero and split hero
 -(void)filmToSplitBuilding
 {
-	//[[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
-    //_uib_logoBtn.hidden = YES;
-    [self createBackButton];
     [self loadMovieNamed:@"UTC_SPLIT_ANIMATION.mp4" isTapToPauseEnabled:NO belowSubview:nil];
-    [self updateStillFrameUnderFilm:@"otis_building.jpg"];
 	[_uib_SplitOpenBtn removeFromSuperview];
-	[self initLogoBtn];
-	[self loadCompaniesHotspots];
 
+	[self loadSplitAssets];
 }
 
 -(void)filmTransitionToHotspots
 {
-	//[[NSNotificationCenter defaultCenter] postNotificationName:@"goIntoBuilding" object:nil];
 	 _uib_logoBtn.hidden = YES;
     [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" isTapToPauseEnabled:NO belowSubview:nil];
-    [self updateStillFrameUnderFilm:@"otis_building_inside.png"];
+    [self updateStillFrameUnderFilm:@"otis_building_end.png"];
+	
 	[self createHotspots];
 	
 	[self initTitleBox];
+}
 
+-(void)loadSplitAssets
+{
+	[self updateStillFrameUnderFilm:@"otis_building_split.jpg"];
+
+	[self initLogoBtn];
+	[self loadCompaniesHotspots];
+	
+	[_uib_back setTag:1];
+	NSLog(@"_uib_back %i",_uib_back.tag);
 }
 
 #pragma mark - menu buttons
 -(void)createBackButton
 {
+	NSLog(@"createBackButton AGAIN");
+
     _uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
     _uib_back.frame = CGRectMake(37, 0.0, 36, 36);
     [_uib_back setImage:[UIImage imageNamed:@"grfx_backBtn.png"] forState:UIControlStateNormal];
-    [self.view insertSubview:_uib_back aboveSubview:_uiiv_bg];
-    [_uib_back addTarget:self action:@selector(restartView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_uib_back];
+    [_uib_back addTarget:self action:@selector(performSelectorFromArray) forControlEvents:UIControlEventTouchUpInside];
+    _uib_back.layer.zPosition = MAXFLOAT;
+	[_uib_back setTag:0];
+	NSLog(@"_uib_back %i",_uib_back.tag);
 }
 
--(void)restartView
+-(void)performSelectorFromArray
 {
-    if (_avPlayerLayer) {
+	NSValue *val = _arr_BreadCrumbOfImages[_uib_back.tag];
+	
+	SEL mySelector = [val pointerValue];
+	//	[self performSelector:mySelector];
+	IMP imp = [self methodForSelector:mySelector];
+	void (*func)(id, SEL) = (void *)imp;
+	func(self, mySelector);
+	
+	NSLog(@"_uib_back %i",_uib_back.tag);
+}
+
+-(void)reloadBuildingVC
+{
+	NSLog(@"should be tag 0");
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
+	[_uib_back setTag:0];
+	NSLog(@"_uib_back %i",_uib_back.tag);
+}
+
+
+-(void)reloadHero
+{
+	NSLog(@"should be tag 1");
+
+	[self removeHotspots];
+
+	if (_avPlayerLayer) {
         [self closeMovie];
     }
-
-	[self createStillFrameUnderFilm];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"goToCity" object:nil];
+	
+	[self updateStillFrameUnderFilm:@"otis_building_hero.jpg"];
+	[_uib_back setTag:0];
+	NSLog(@"_uib_back %i",_uib_back.tag);
 }
+
 
 #pragma mark - Info Labels
 #pragma mark - init top left text box
@@ -247,9 +284,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 #pragma mark - company hotspots
 -(void)createHotspots
 {
-    for (UIView*hotspot in _arr_hotspotsArray) {
-		[hotspot removeFromSuperview];
-	}
+	[self removeHotspots];
 	
 	[_arr_hotspotsArray removeAllObjects];
     _arr_hotspotsArray = nil;
@@ -261,7 +296,9 @@ enum { kEnableDoubleTapToKillMovie = YES };
 // load the hotpots of the company selected
 -(void)loadSingleCompanyHotspots
 {
-    
+	[_uib_back setTag:2];
+	NSLog(@"loadSingleCompanyHotspots _uib_back %i",_uib_back.tag);
+
     NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"hotspotsData" ofType:@"plist"];
     NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
@@ -371,7 +408,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	neoHotspotsView *tappedView;
 	tappedView = _arr_hotspotsArray[i];
 	
-#warning more robust previously tapped method
+#warning more robust previously tapped method needed
 	tappedView.alpha = 0.75;
 	
 	if ([tappedView.str_typeOfHs isEqualToString:@"company"]) {
@@ -428,6 +465,14 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	}];
 }
 #pragma mark - Utiltites
+#pragma mark Remove Hotspots
+-(void)removeHotspots
+{
+	for (UIView*hotspot in _arr_hotspotsArray) {
+		[hotspot removeFromSuperview];
+	}
+}
+
 #pragma mark PulseAnim
 -(void)pulse:(CALayer*)incomingLayer
 {

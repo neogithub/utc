@@ -37,9 +37,9 @@
     // Do any additional setup after loading the view.
     [self createBG];
     [self initBuildingBtn];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackBtn) name:@"goIntoBuilding" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackBtn) name:@"goToCity" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuilding) name:@"loadOtis" object:nil];
+	// [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackBtn) name:@"goIntoBuilding" object:nil];
+	// [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackBtn) name:@"goToCity" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(restartView) name:@"loadOtis" object:nil];
 }
 
 -(void)hideBackBtn
@@ -83,12 +83,13 @@
 	_otisVC = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
 	_otisVC.transitionClipName = @"UTC_TRANSISTION_ANIMATION.mov";
 	[self.view addSubview: _otisVC.view];
-    [self createBackButton];
+    //[self createBackButton];
 }
 
 -(void)createBackButton
 {
-    _uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
+    NSLog(@"createBackButton");
+	_uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
     _uib_back.frame = CGRectMake(37, 0.0, 36, 36);
     [_uib_back setImage:[UIImage imageNamed:@"grfx_backBtn.png"] forState:UIControlStateNormal];
     [self.view insertSubview:_uib_back aboveSubview:_otisVC.view];
@@ -97,6 +98,8 @@
 
 -(void)restartView
 {
+	NSLog(@"DETAIL - restartView");
+
     [_uib_back removeFromSuperview];
     _uib_back = nil;
     [_otisVC.view removeFromSuperview];
