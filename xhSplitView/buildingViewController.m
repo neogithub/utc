@@ -16,6 +16,13 @@
 enum { kEnableSwiping = YES };
 enum { kEnableDoubleTapToKillMovie = YES };
 
+enum {
+    LabelOnscreen,
+    LabelOffscreen,
+};
+typedef NSInteger PlayerState;
+
+
 @interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, UIGestureRecognizerDelegate>
 {
 	CGFloat companyLabelWidth;
@@ -43,9 +50,11 @@ enum { kEnableDoubleTapToKillMovie = YES };
 @property (nonatomic, strong) NSMutableArray				*arr_hotspots;
 
 @property (nonatomic, strong) UIView                        *uiv_textBoxContainer;
-@property (nonatomic, strong) UILabel                       *uil_textYear;
-@property (nonatomic, strong) UILabel                       *uil_textInfo;
+@property (nonatomic, strong) UILabel                       *uil_Company;
+@property (nonatomic, strong) UILabel                       *uil_HotspotTitle;
 @property (nonatomic, strong) UILabel                       *uil_textSection;
+
+@property (nonatomic) BOOL isPauseable;
 
 @end
 
@@ -68,14 +77,14 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	// DEBUG
 #warning Debug for swiping or doubletapping
 	if ((kEnableSwiping==YES) || (kEnableDoubleTapToKillMovie==YES)) {
-		UILabel *uil_Debug = [[UILabel alloc] init];
-		[uil_Debug setFrame:CGRectMake(824, 0, 200, 30)];
-		uil_Debug.backgroundColor=[UIColor redColor];
-		[uil_Debug setTextAlignment:NSTextAlignmentCenter];
-		uil_Debug.textColor=[UIColor whiteColor];
-		[uil_Debug setAlpha:0.5];
-		uil_Debug.text= @"DEBUG MODE";
-		[self.view insertSubview:uil_Debug atIndex:1000];
+//		UILabel *uil_Debug = [[UILabel alloc] init];
+//		[uil_Debug setFrame:CGRectMake(824, 0, 200, 30)];
+//		uil_Debug.backgroundColor=[UIColor redColor];
+//		[uil_Debug setTextAlignment:NSTextAlignmentCenter];
+//		uil_Debug.textColor=[UIColor whiteColor];
+//		[uil_Debug setAlpha:0.5];
+//		uil_Debug.text= @"DEBUG MODE";
+//		[self.view insertSubview:uil_Debug atIndex:1000];
 	}
 	
 	[self createBackButton];
@@ -153,10 +162,15 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 -(void)loadSplitAssets
 {
+	[self removeHotspotTitle];
+	[self removeCompanyTitle];
+	
 	[self updateStillFrameUnderFilm:@"otis_building_split.jpg"];
 
 	[self initLogoBtn];
-	[self loadCompaniesHotspots];
+	//[self loadCompaniesHotspots];
+	
+	[self performSelector:@selector(loadCompaniesHotspots) withObject:nil afterDelay:3.33];
 	
 	[_uib_back setTag:1];
 	NSLog(@"_uib_back %i",_uib_back.tag);
@@ -216,7 +230,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 
 #pragma mark - Info Labels
-#pragma mark - init top left text box
+#pragma mark init top left text box
 -(void)initTitleBox
 {
     _uiv_textBoxContainer = [[UIView alloc] initWithFrame:CGRectZero];
@@ -227,10 +241,7 @@ enum { kEnableDoubleTapToKillMovie = YES };
 
 -(void)setCompanyTitle:(NSString *)year
 {
-    if (_uil_textYear) {
-        [_uil_textYear removeFromSuperview];
-        _uil_textYear = nil;
-    }
+    [self removeCompanyTitle];
 	
 	// get width of uilabel
 	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
@@ -238,27 +249,31 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	static CGFloat labelPad = 15;
 	companyLabelWidth = str_width + (labelPad*2);
 	
-    _uil_textYear = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, companyLabelWidth, 36)];
-    [_uil_textYear setText:year];
-    [_uil_textYear setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.8]];
-    [_uil_textYear setTextColor:[UIColor blackColor]];
-    [_uil_textYear setFont: font];
-    [_uil_textYear setTextAlignment:NSTextAlignmentCenter];
-	[_uil_textYear.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-	[_uil_textYear.layer setBorderWidth:1.0];
+    _uil_Company = [[UILabel alloc] initWithFrame:CGRectMake(0.0, -36.0, companyLabelWidth, 36)];
+    [_uil_Company setText:year];
+    [_uil_Company setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.8]];
+    [_uil_Company setTextColor:[UIColor blackColor]];
+    [_uil_Company setFont: font];
+    [_uil_Company setTextAlignment:NSTextAlignmentCenter];
+	[_uil_Company.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+	[_uil_Company.layer setBorderWidth:1.0];
 	
-	[_uiv_textBoxContainer addSubview: _uil_textYear];
+	[_uiv_textBoxContainer addSubview: _uil_Company];
 	
 	// resize text container to fit
 	_uiv_textBoxContainer.frame = CGRectMake(75, 0, companyLabelWidth, 36);
+	
+	[self animate:_uil_Company direction:LabelOnscreen];
+}
+
+-(void)removeCompanyTitle
+{
+	[self animate:_uil_Company direction:LabelOffscreen];
 }
 
 -(void)setHotSpotTitle:(NSString *)string
 {
-    if (_uil_textInfo) {
-        [_uil_textInfo removeFromSuperview];
-        _uil_textInfo = nil;
-    }
+	[self removeHotspotTitle];
 	
 	// get width of uilabel
 	UIFont *font = [UIFont fontWithName:@"Helvetica" size:15];
@@ -266,19 +281,50 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	static CGFloat labelPad = 20;
 	hotspotLabelWidth = str_width + (labelPad);
     
-    _uil_textInfo = [[UILabel alloc] initWithFrame:CGRectMake(companyLabelWidth, 0, hotspotLabelWidth, 36)];
-    [_uil_textInfo setText:string];
-	_uil_textInfo.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
-    [_uil_textInfo setTextColor:[UIColor blackColor]];
-	[_uil_textInfo setTextAlignment:NSTextAlignmentCenter];
-    [_uil_textInfo setFont:font];
-    [_uil_textInfo.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-	[_uil_textInfo.layer setBorderWidth:1.0];
+    _uil_HotspotTitle = [[UILabel alloc] initWithFrame:CGRectMake(companyLabelWidth-74, -36, hotspotLabelWidth, 36)];
+    [_uil_HotspotTitle setText:string];
+	_uil_HotspotTitle.backgroundColor = [UIColor colorWithRed:0.0000 green:0.4667 blue:0.7686 alpha:0.8];
+    [_uil_HotspotTitle setTextColor:[UIColor whiteColor]];
+	[_uil_HotspotTitle setTextAlignment:NSTextAlignmentCenter];
+    [_uil_HotspotTitle setFont:font];
+    [_uil_HotspotTitle.layer setBorderColor:[UIColor colorWithRed:0.7922 green:1.0000 blue:1.0000 alpha:1.0].CGColor];
+	[_uil_HotspotTitle.layer setBorderWidth:1.0];
 	
-	[_uiv_textBoxContainer addSubview: _uil_textInfo];
+	[_uiv_textBoxContainer addSubview: _uil_HotspotTitle];
 	
 	// resize text container to fit
 	_uiv_textBoxContainer.frame = CGRectMake(75, 0, hotspotLabelWidth+companyLabelWidth, 36);
+	
+	[self animate:_uil_HotspotTitle direction:LabelOnscreen];
+}
+
+-(void)removeHotspotTitle
+{
+	[self animate:_uil_HotspotTitle direction:LabelOffscreen];
+	
+//	_uil_Company.frame = CGRectMake(_uil_Company.frame.origin.x+74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
+//	_uil_HotspotTitle.frame = CGRectMake(_uil_HotspotTitle.frame.origin.x+74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
+//	_uib_back.transform = CGAffineTransformMakeTranslation(-72, 0);
+//	[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
+}
+
+-(void)animate:(UIView*)viewmove direction:(NSInteger)d
+{
+	int f = 0;
+	if (d == LabelOffscreen) {
+		f = -36;
+	} else {
+		f = 36;
+	}
+	
+	[UIView animateWithDuration:0.3/1.5 animations:^{
+		//viewmove.transform = CGAffineTransformTranslate(viewmove.transform, 0, 1*f);
+		viewmove.frame = CGRectMake(viewmove.frame.origin.x, viewmove.frame.origin.y+f, viewmove.frame.size.width, viewmove.frame.size.height);
+	} completion:^(BOOL completed){
+		if (d == LabelOffscreen) {
+			[viewmove removeFromSuperview];
+		}
+	}];
 }
 
 #pragma mark - company hotspots
@@ -351,7 +397,8 @@ enum { kEnableDoubleTapToKillMovie = YES };
 // load all the companies onto the view
 -(void)loadCompaniesHotspots
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:
+    NSLog(@"loadCompaniesHotspots");
+	NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"companyHotspotsData" ofType:@"plist"];
     NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
     
@@ -394,10 +441,59 @@ enum { kEnableDoubleTapToKillMovie = YES };
         //Get the type of hotspot
         NSString *str_type = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"type"]];
         _myHotspots.str_typeOfHs = str_type;
-        
+        _myHotspots.alpha = 0.0;
         _myHotspots.tagOfHs = i;
         [_uis_zoomingImg.blurView addSubview:_myHotspots];
     }
+	
+	NSInteger ii = 0;
+	for(UIView *view in [_uis_zoomingImg.blurView subviews]) {
+		if([view isKindOfClass:[neoHotspotsView class]]) {
+			UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction;
+			[UIView animateWithDuration:.2 delay:((0.05 * ii) + 0.2) options:options
+							 animations:^{
+								 view.alpha = 1.0;
+							 }
+							 completion:^(BOOL finished){
+							 }];
+			
+			ii += 1;
+		}
+	}
+
+	CGFloat horizontalMinimum = -20.0f;
+	CGFloat horizontalMaximum = 20.0f;
+	
+	UIInterpolatingMotionEffect *horizontal = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+	horizontal.minimumRelativeValue = @(horizontalMinimum);
+	horizontal.maximumRelativeValue = @(horizontalMaximum);
+	
+	CGFloat verticalMinimum = -20.0f;
+	CGFloat verticalMaximum = 20.0f;
+	
+	UIInterpolatingMotionEffect *vertical = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+	vertical.minimumRelativeValue = @(verticalMinimum);
+	vertical.maximumRelativeValue = @(verticalMaximum);
+	
+	// this time we need to create a motion effects group and add both of our motion effects to it.
+	UIMotionEffectGroup *motionEffects = [[UIMotionEffectGroup alloc] init];
+	motionEffects.motionEffects = @[horizontal, vertical];
+	
+	// add the motion effects group to our view
+	
+	NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:_arr_hotspotsArray];
+	NSUInteger count = [mutableArray count];
+	// See http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
+	if (count > 1) {
+		for (NSUInteger i = count - 1; i > 0; --i) {
+			[mutableArray exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform((int32_t)(i + 1))];
+		}
+	}
+		
+	for (int i = 0; i < [_arr_hotspotsArray count]; i++) {
+		[_myHotspots addMotionEffect:motionEffects];
+	}
+
 }
 
 #pragma mark hotspot tapped
@@ -425,9 +521,21 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
 		[UIView animateWithDuration:0.5 animations:^{
 			_uis_zoomingImg.alpha = 0.0;
-		} completion:nil];
+			
+			//_uiv_textBoxContainer.transform = CGAffineTransformMakeTranslation(-200, 36);
+			
+			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
+			_uil_HotspotTitle.frame = CGRectMake(-74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
+			
+			_uib_back.transform = CGAffineTransformMakeTranslation(-72, 0);
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
+
+		} completion:^(BOOL completed)
+		 {
+			 [self setHotSpotTitle:tappedView.str_labelText];
+
+		 }];
 		
-		[self setHotSpotTitle:tappedView.str_labelText];
 	}
 }
 
@@ -452,10 +560,9 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	[_uis_zoomingImg.scrollView setZoomScale:1.0];
 	
 	// hotspot cleanup
-	if (_uil_textInfo) {
-        [_uil_textInfo removeFromSuperview];
-        _uil_textInfo = nil;
-    }
+	[self removeHotspotTitle];
+	
+	[self unhideChrome];
 
 	[UIView animateWithDuration:0.5 animations:^{
 		_uis_zoomingImg.alpha = 1.0;
@@ -464,6 +571,20 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		_uis_zoomingInfoImg = nil;
 	}];
 }
+
+#pragma mark - unhide Chrome
+-(void)unhideChrome
+{
+	[UIView animateWithDuration:0.5 animations:^{
+		_uil_Company.frame = CGRectMake(0, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
+		_uil_HotspotTitle.frame = CGRectMake(74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
+		_uib_back.transform = CGAffineTransformIdentity;
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
+	} completion:^(BOOL completed) {
+		
+	}];
+}
+
 #pragma mark - Utiltites
 #pragma mark Remove Hotspots
 -(void)removeHotspots
@@ -500,12 +621,26 @@ enum { kEnableDoubleTapToKillMovie = YES };
 #pragma mark - play movie
 -(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled belowSubview:(UIView*)belowSubview
 {
+	
+	
 	NSString* fileName = [moviename stringByDeletingPathExtension];
 	NSString* extension = [moviename pathExtension];
 	
 	NSString *url = [[NSBundle mainBundle] pathForResource:fileName
                                                     ofType:extension];
     
+	
+	if (tapToPauseEnabled == YES) {
+		NSLog(@"tapToPauseEnabled == YES");
+		_isPauseable = YES;
+		
+		[UIView animateWithDuration:0.5 animations:^{
+			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
+			_uil_HotspotTitle.frame = CGRectMake(-74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
+		} completion:nil];
+	}
+
+	
     if (_avPlayer) {
         [_avPlayerLayer removeFromSuperlayer];
         _avPlayerLayer = nil;
@@ -539,14 +674,20 @@ enum { kEnableDoubleTapToKillMovie = YES };
 	
 	if (tapToPauseEnabled == YES) {
 		[self addMovieGestures];
-		[self loadControlsLabels];
+		//[self loadControlsLabels];
 		selectorAfterMovieFinished = @"playerItemLoop:";
-		UIButton *uib_filmClose = [UIButton buttonWithType:UIButtonTypeSystem];
-		uib_filmClose.frame = CGRectMake(800, 688, 200, 30);
-		uib_filmClose.backgroundColor = [UIColor whiteColor];
-		[uib_filmClose setTitle:@"Close" forState:UIControlStateNormal];
-		[uib_filmClose addTarget:self action:@selector(closeMovie) forControlEvents:UIControlEventTouchUpInside];
-		[_uiv_movieContainer addSubview:uib_filmClose];
+		
+		UIButton *h = [UIButton buttonWithType:UIButtonTypeCustom];
+		h.frame = CGRectMake(1024-94, 0, 94, 36);
+		//[h setTitle:@"X" forState:UIControlStateNormal];
+		//h.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
+		[h setBackgroundImage:[UIImage imageNamed:@"grfx_closeBtn.png"] forState:UIControlStateNormal];
+		[h setBackgroundImage:[UIImage imageNamed:@"grfx_closeBtn.png"] forState:UIControlStateHighlighted];
+		[h setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		//set their selector using add selector
+		[h addTarget:self action:@selector(closeMovie) forControlEvents:UIControlEventTouchUpInside];
+		[_uiv_movieContainer addSubview:h];
+		
 	} else {
 		selectorAfterMovieFinished = @"playerItemDidReachEnd:";
 	}
@@ -642,9 +783,15 @@ enum { kEnableDoubleTapToKillMovie = YES };
 		
 	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
 	[_uis_zoomingImg.scrollView setZoomScale:1.0];
+	[self removeHotspotTitle];
 	
+	if (_isPauseable == YES) {
+		[self unhideChrome];
+	}
+
 	[UIView animateWithDuration:0.5 animations:^{
 		_uis_zoomingImg.alpha = 1.0;
+			
 	} completion:^(BOOL completed) {
 		[_uis_zoomingInfoImg removeFromSuperview];
 		_uis_zoomingInfoImg = nil;

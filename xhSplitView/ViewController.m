@@ -63,10 +63,23 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 	[self initHelpButton];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDetailView:) name:@"masterEvent" object:nil];
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moveSplitBtnLeft) name:@"moveSplitBtnLeft" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moveSplitBtnRight) name:@"moveSplitBtnRight" object:nil];
+
 	if (((AppDelegate*)[UIApplication sharedApplication].delegate).firstRun)
     {
         [self showHelp];
 	}
+}
+
+-(void)moveSplitBtnLeft
+{
+	_uib_splitCtrl.transform = CGAffineTransformMakeTranslation(-36, 0);
+}
+
+-(void)moveSplitBtnRight
+{
+	_uib_splitCtrl.transform = CGAffineTransformIdentity;
 }
 
 -(void)showHelp

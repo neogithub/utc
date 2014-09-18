@@ -83,11 +83,11 @@
 {
     if (closeBtn != NO) {
         UIButton *h = [UIButton buttonWithType:UIButtonTypeCustom];
-		h.frame = CGRectMake(1024-20-33, 20, 33, 33);
-		[h setTitle:@"X" forState:UIControlStateNormal];
-		h.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
-		[h setBackgroundImage:[UIImage imageNamed:@"ui_btn_mm_default.png"] forState:UIControlStateNormal];
-		[h setBackgroundImage:[UIImage imageNamed:@"ui_btn_mm_select.png"] forState:UIControlStateHighlighted];
+		h.frame = CGRectMake(1024-94, 0, 94, 36);
+		//[h setTitle:@"X" forState:UIControlStateNormal];
+		//h.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
+		[h setBackgroundImage:[UIImage imageNamed:@"grfx_closeBtn.png"] forState:UIControlStateNormal];
+		[h setBackgroundImage:[UIImage imageNamed:@"grfx_closeBtn.png"] forState:UIControlStateHighlighted];
 		[h setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		//set their selector using add selector
 		[h addTarget:self action:@selector(removeRenderScroll:) forControlEvents:UIControlEventTouchUpInside];
