@@ -145,9 +145,11 @@
 {
     if (indexPath.row == 0) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
     }
     else {
         if (indexPath.row != 10) {
+            selectedRow = (int)indexPath.row;
             return;
         } else if (indexPath.row != selectedRow) {
             
@@ -159,9 +161,8 @@
 																object:self
 															  userInfo:dict];
         }
-        
-        selectedRow = (int)indexPath.row;
     }
+    selectedRow = (int)indexPath.row;
 }
 
 - (void)didReceiveMemoryWarning
