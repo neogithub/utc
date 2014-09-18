@@ -67,8 +67,8 @@
 -(void)initBuildingBtn
 {
     _uib_buildingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_buildingBtn.frame = CGRectMake(385.0, 257.0, 285, 193);
-    _uib_buildingBtn.backgroundColor = [UIColor clearColor];
+    _uib_buildingBtn.frame = CGRectMake(450.0, 265.0, 285, 215);
+    //_uib_buildingBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
     [_uis_zoomingImg.blurView addSubview:_uib_buildingBtn];
 }

@@ -170,6 +170,9 @@ typedef NSInteger PlayerState;
 	[self initLogoBtn];
 	//[self loadCompaniesHotspots];
 	
+	[self removeHotspots];
+	[_arr_hotspotsArray removeAllObjects];
+	
 	[self performSelector:@selector(loadCompaniesHotspots) withObject:nil afterDelay:3.33];
 	
 	[_uib_back setTag:1];
@@ -341,6 +344,8 @@ typedef NSInteger PlayerState;
 // load the hotpots of the company selected
 -(void)loadSingleCompanyHotspots
 {
+	[self removeHotspots];
+
 	[_uib_back setTag:2];
 	NSLog(@"loadSingleCompanyHotspots _uib_back %i",_uib_back.tag);
 
@@ -396,7 +401,7 @@ typedef NSInteger PlayerState;
 // load all the companies onto the view
 -(void)loadCompaniesHotspots
 {
-    NSLog(@"loadCompaniesHotspots");
+	NSLog(@"loadCompaniesHotspots");
 	NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"companyHotspotsData" ofType:@"plist"];
     NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];

@@ -84,13 +84,31 @@
 		<key>angle</key>
 		<string>315</string>
 		<key>caption</key>
-		<string>ReGen System</string>
+		<string>ReGen Drive</string>
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
 		<string></string>
 		<key>alignment</key>
 		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>image</string>
+		<key>background</key>
+		<string>Marker.png</string>
+		<key>xy</key>
+		<string>670,526</string>
+		<key>angle</key>
+		<string>315</string>
+		<key>caption</key>
+		<string>Environmentally Responsible Technology</string>
+		<key>RGB</key>
+		<string></string>
+		<key>fileName</key>
+		<string></string>
+		<key>alignment</key>
+		<integer>2</integer>
 	</dict>
 </array>
 </plist>
