@@ -14,6 +14,8 @@
 	int selectedRow;
 }
 
+@property (nonatomic, strong) NSMutableArray *arr_companies;
+
 @end
 
 @implementation masterViewController
@@ -67,6 +69,21 @@
     [self initNavi];
 //    [self.view addSubview: tableView];
     self.view.backgroundColor = [UIColor blackColor];
+	
+	_arr_companies = [[NSMutableArray alloc] init];
+	
+	NSString *path = [[NSBundle mainBundle] pathForResource:
+					  @"companyHotspotsData" ofType:@"plist"];
+    NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
+	
+	for (int i = 0; i < [totalDataArray count]; i++) {
+        NSDictionary *hotspotItem = totalDataArray [i];
+		[_arr_companies addObject:[hotspotItem objectForKey:@"fileName"]];
+	}
+	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+
+	NSLog(@"%@",[_arr_companies description]);
+
 }
 
 -(void)initNavi
@@ -93,7 +110,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 13;
+    return 12;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)ttableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -131,12 +148,7 @@
             
         }
         
-        if (indexPath.row == 10) {
-            [cell.uil_title setText:[NSString stringWithFormat:@"Otis"]];
-            return cell;
-        }
-        
-        [cell.uil_title setText:[NSString stringWithFormat:@"Company %i", (int)indexPath.row-1]];
+        [cell.uil_title setText:_arr_companies[indexPath.row]];
         return cell;
     }
     return nil;

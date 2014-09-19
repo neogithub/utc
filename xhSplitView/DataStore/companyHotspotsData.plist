@@ -16,7 +16,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Otis</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -34,7 +34,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Carrier</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -52,7 +52,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Taylor</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -70,7 +70,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Noresco</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -88,7 +88,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Marioff</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -106,7 +106,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Lenel</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -124,7 +124,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>AvanTEC</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -142,7 +142,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>AutomatorLOCK</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -160,7 +160,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Improve</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -178,7 +178,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Onity</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -196,7 +196,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Edwards</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -214,7 +214,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string></string>
+		<string>Kidde</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>

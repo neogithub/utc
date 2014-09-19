@@ -213,14 +213,16 @@ static int arwPic = 30;
     [self updateIndicators];
     
     float textFontSize = 12.0f;
+	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+
 	if ([str_labelText isEqualToString:@""]) {
 		[uil_caption setBackgroundColor:[UIColor clearColor]];
 	} else {
-		[uil_caption setBackgroundColor:[UIColor whiteColor]];
+		[uil_caption setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
 	}
     [uil_caption setText:str_labelText];
     uil_caption.textColor = [UIColor blackColor];
-    uil_caption.font=[uil_caption.font fontWithSize:textFontSize];
+    uil_caption.font=font;
     [uil_caption setTextAlignment:NSTextAlignmentCenter];
     
     [self insertSubview:uil_caption belowSubview:uiiv_hsImgView];
@@ -233,7 +235,7 @@ static int arwPic = 30;
     [uil_caption removeFromSuperview];
 	CGFloat LabelWidth = 0;
 	
-	UIFont *font = [UIFont fontWithName:@"Helvetica" size:12];
+	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
 	if (str_labelText != nil) {
 		CGFloat str_width = [self getWidthFromStringLength:str_labelText andFont:font];
 		static CGFloat labelPad = 0;
@@ -301,7 +303,7 @@ static int arwPic = 30;
         //float label_W = uiiv_hsImgView.frame.size.width*3.25;
 		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
-        uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X-LabelWidth+105 /*dirty hack*/, label_Y, label_W, label_H)];
+        uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X-LabelWidth+125 /*dirty hack*/, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentLeft];
     }
     if (labelAlignment == CaptionAlignmentTopLeft) {

@@ -6,9 +6,9 @@
 		<key>type</key>
 		<string>movie</string>
 		<key>background</key>
-		<string>Marker.png</string>
+		<string>Marker_Right.png</string>
 		<key>xy</key>
-		<string>675,310</string>
+		<string>780,74</string>
 		<key>angle</key>
 		<string>180</string>
 		<key>caption</key>
@@ -18,15 +18,69 @@
 		<key>fileName</key>
 		<string>HOT_SPOT_COATED_STEEL_BELTS.m4v</string>
 		<key>alignment</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>movie</string>
+		<key>background</key>
+		<string>Marker.png</string>
+		<key>xy</key>
+		<string>580,120</string>
+		<key>angle</key>
+		<string>315</string>
+		<key>caption</key>
+		<string>ReGen Drive</string>
+		<key>RGB</key>
+		<string></string>
+		<key>fileName</key>
+		<string></string>
+		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>type</key>
-		<string>image</string>
+		<string>movie</string>
+		<key>background</key>
+		<string>Marker.png</string>
+		<key>xy</key>
+		<string>620,267</string>
+		<key>angle</key>
+		<string>270</string>
+		<key>caption</key>
+		<string>Glide Door Operators</string>
+		<key>RGB</key>
+		<string></string>
+		<key>fileName</key>
+		<string>UTC_SPIN_ANIMATION.mov</string>
+		<key>alignment</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>movie</string>
+		<key>background</key>
+		<string>Marker.png</string>
+		<key>xy</key>
+		<string>550,330</string>
+		<key>angle</key>
+		<string>315</string>
+		<key>caption</key>
+		<string>Environmentally Responsible Technology</string>
+		<key>RGB</key>
+		<string></string>
+		<key>fileName</key>
+		<string></string>
+		<key>alignment</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>movie</string>
 		<key>background</key>
 		<string>Marker_Right.png</string>
 		<key>xy</key>
-		<string>744,308</string>
+		<string>790,380</string>
 		<key>angle</key>
 		<string>225</string>
 		<key>caption</key>
@@ -44,65 +98,11 @@
 		<key>background</key>
 		<string>Marker.png</string>
 		<key>xy</key>
-		<string>670,426</string>
-		<key>angle</key>
-		<string>270</string>
-		<key>caption</key>
-		<string>Glide Door Operators</string>
-		<key>RGB</key>
-		<string></string>
-		<key>fileName</key>
-		<string>UTC_SPIN_ANIMATION.mov</string>
-		<key>alignment</key>
-		<integer>2</integer>
-	</dict>
-	<dict>
-		<key>type</key>
-		<string>image</string>
-		<key>background</key>
-		<string>Marker.png</string>
-		<key>xy</key>
-		<string>700,490</string>
+		<string>500,400</string>
 		<key>angle</key>
 		<string>315</string>
 		<key>caption</key>
 		<string>Compact Controller</string>
-		<key>RGB</key>
-		<string></string>
-		<key>fileName</key>
-		<string></string>
-		<key>alignment</key>
-		<integer>2</integer>
-	</dict>
-	<dict>
-		<key>type</key>
-		<string>image</string>
-		<key>background</key>
-		<string>Marker_Right.png</string>
-		<key>xy</key>
-		<string>728,482</string>
-		<key>angle</key>
-		<string>315</string>
-		<key>caption</key>
-		<string>ReGen Drive</string>
-		<key>RGB</key>
-		<string></string>
-		<key>fileName</key>
-		<string></string>
-		<key>alignment</key>
-		<integer>3</integer>
-	</dict>
-	<dict>
-		<key>type</key>
-		<string>image</string>
-		<key>background</key>
-		<string>Marker.png</string>
-		<key>xy</key>
-		<string>670,526</string>
-		<key>angle</key>
-		<string>315</string>
-		<key>caption</key>
-		<string>Environmentally Responsible Technology</string>
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>

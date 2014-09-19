@@ -44,8 +44,9 @@ typedef NSInteger PlayerState;
 @property (nonatomic, strong) UIButton						*uib_logoBtn;
 @property (nonatomic, strong) UIButton						*uib_SplitOpenBtn;
 @property (nonatomic, strong) UIButton						*uib_back;
+@property (nonatomic, strong) UIButton						*uib_CompanyBtn;
 @property (nonatomic, strong) UILabel						*uil_filmHint;
-
+@property (nonatomic, strong) UIImageView *hotspotImageView;
 @property (nonatomic, strong) neoHotspotsView				*myHotspots;
 @property (nonatomic, strong) NSMutableArray				*arr_hotspots;
 
@@ -127,9 +128,13 @@ typedef NSInteger PlayerState;
 -(void)initSplitOpenBtn
 {
     _uib_SplitOpenBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_SplitOpenBtn.frame = CGRectMake(470, 710, 100, 30);
-	[_uib_SplitOpenBtn setImage:[UIImage imageNamed:@"grfx_splitBtn.png"] forState:UIControlStateNormal];
-    [self.view insertSubview:_uib_SplitOpenBtn belowSubview:_uiv_movieContainer];
+    _uib_SplitOpenBtn.frame = CGRectMake(470, 670, 63, 63);
+	[_uib_SplitOpenBtn setImage:[UIImage imageNamed:@"swipe-to-reveal.png"] forState:UIControlStateNormal];
+	if (_uiv_movieContainer) {
+		[self.view insertSubview:_uib_SplitOpenBtn belowSubview:_uiv_movieContainer];
+	} else {
+		[self.view addSubview:_uib_SplitOpenBtn];
+	}
 	[_uib_SplitOpenBtn addTarget:self action:@selector(filmToSplitBuilding) forControlEvents:UIControlEventTouchUpInside];
 	
 	[self pulse:_uib_SplitOpenBtn.layer];
@@ -137,7 +142,20 @@ typedef NSInteger PlayerState;
 
 -(void)initLogoBtn
 {
-	[self loadCompaniesHotspots];
+	//[self loadCompaniesHotspots];
+	
+	_uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_CompanyBtn.frame = CGRectMake(469.0, 177.0, 82, 55);
+    _uib_CompanyBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
+    [_uib_CompanyBtn addTarget:self action:@selector(loadCompaniesHotspots) forControlEvents:UIControlEventTouchUpInside];
+    [_uis_zoomingImg.blurView addSubview:_uib_CompanyBtn];
+	[self pulse:_uib_CompanyBtn.layer];
+
+//	UIImage *bgImage = [UIImage imageNamed:@"03A Building Cut  hotspots.png"];
+//	_hotspotImageView = [[UIImageView alloc] initWithImage:bgImage];
+//	_hotspotImageView.frame = CGRectMake(0, 0, bgImage.size.width, bgImage.size.height);
+//	[self.view addSubview:_hotspotImageView];
+
 }
 
 #pragma mark - Actions to play path to hero and split hero
@@ -173,10 +191,10 @@ typedef NSInteger PlayerState;
 	[self removeHotspots];
 	[_arr_hotspotsArray removeAllObjects];
 	
-	[self performSelector:@selector(loadCompaniesHotspots) withObject:nil afterDelay:3.33];
+	//[self performSelector:@selector(loadCompaniesHotspots) withObject:nil afterDelay:3.33];
 	
 	[_uib_back setTag:1];
-	NSLog(@"_uib_back %i",_uib_back.tag);
+	NSLog(@"_uib_back %li",(long)_uib_back.tag);
 }
 
 #pragma mark - menu buttons
@@ -185,13 +203,13 @@ typedef NSInteger PlayerState;
 	NSLog(@"createBackButton AGAIN");
 
     _uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_back.frame = CGRectMake(37, 0.0, 36, 36);
-    [_uib_back setImage:[UIImage imageNamed:@"grfx_backBtn.png"] forState:UIControlStateNormal];
+    _uib_back.frame = CGRectMake(29, 0.0, 51, 43);
+    [_uib_back setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
     [self.view addSubview:_uib_back];
     [_uib_back addTarget:self action:@selector(performSelectorFromArray) forControlEvents:UIControlEventTouchUpInside];
     _uib_back.layer.zPosition = MAXFLOAT;
 	[_uib_back setTag:0];
-	NSLog(@"_uib_back %i",_uib_back.tag);
+	NSLog(@"_uib_back %li",(long)_uib_back.tag);
 }
 
 -(void)performSelectorFromArray
@@ -203,7 +221,7 @@ typedef NSInteger PlayerState;
 	void (*func)(id, SEL) = (void *)imp;
 	func(self, mySelector);
 	
-	NSLog(@"_uib_back %i",_uib_back.tag);
+	NSLog(@"_uib_back %li",(long)_uib_back.tag);
 }
 
 -(void)reloadBuildingVC
@@ -211,7 +229,7 @@ typedef NSInteger PlayerState;
 	NSLog(@"should be tag 0");
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
 	[_uib_back setTag:0];
-	NSLog(@"_uib_back %i",_uib_back.tag);
+	NSLog(@"_uib_back %li",(long)_uib_back.tag);
 }
 
 
@@ -225,9 +243,15 @@ typedef NSInteger PlayerState;
         [self closeMovie];
     }
 	
+	[_hotspotImageView removeFromSuperview];
+	[_uib_CompanyBtn removeFromSuperview];
+	
 	[self updateStillFrameUnderFilm:@"otis_building_hero.jpg"];
 	[_uib_back setTag:0];
-	NSLog(@"_uib_back %i",_uib_back.tag);
+	NSLog(@"_uib_back %li",(long)_uib_back.tag);
+	
+	[self initSplitOpenBtn];
+
 }
 
 
@@ -238,7 +262,7 @@ typedef NSInteger PlayerState;
     _uiv_textBoxContainer = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view insertSubview:_uiv_textBoxContainer aboveSubview:_uiv_movieContainer];
     _uiv_textBoxContainer.layer.zPosition = MAXFLOAT;
-	[self setCompanyTitle:@"OTIS"];
+	[self setCompanyTitle:@"Otis"];
 }
 
 -(void)setCompanyTitle:(NSString *)year
@@ -263,7 +287,7 @@ typedef NSInteger PlayerState;
 	[_uiv_textBoxContainer addSubview: _uil_Company];
 	
 	// resize text container to fit
-	_uiv_textBoxContainer.frame = CGRectMake(75, 0, companyLabelWidth, 36);
+	_uiv_textBoxContainer.frame = CGRectMake(73, 0, companyLabelWidth, 36);
 	
 	[self animate:_uil_Company direction:LabelOnscreen];
 }
@@ -295,7 +319,7 @@ typedef NSInteger PlayerState;
 	[_uiv_textBoxContainer addSubview: _uil_HotspotTitle];
 	
 	// resize text container to fit
-	_uiv_textBoxContainer.frame = CGRectMake(75, 0, hotspotLabelWidth+companyLabelWidth, 36);
+	_uiv_textBoxContainer.frame = CGRectMake(73, 0, hotspotLabelWidth+companyLabelWidth, 36);
 	
 	[self animate:_uil_HotspotTitle direction:LabelOnscreen];
 }
@@ -347,7 +371,6 @@ typedef NSInteger PlayerState;
 	[self removeHotspots];
 
 	[_uib_back setTag:2];
-	NSLog(@"loadSingleCompanyHotspots _uib_back %i",_uib_back.tag);
 
     NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"hotspotsData" ofType:@"plist"];
@@ -363,7 +386,7 @@ typedef NSInteger PlayerState;
         NSString *str_y = [str_position substringFromIndex:(range.location + 1)];
         float hs_x = [str_x floatValue];
         float hs_y = [str_y floatValue];
-        _myHotspots = [[neoHotspotsView alloc] initWithFrame:CGRectMake(hs_x, hs_y, 41, 35)];
+        _myHotspots = [[neoHotspotsView alloc] initWithFrame:CGRectMake(hs_x, hs_y, 49, 42)];
         _myHotspots.delegate=self;
 		[_arr_hotspotsArray addObject:_myHotspots];
 		
@@ -401,7 +424,11 @@ typedef NSInteger PlayerState;
 // load all the companies onto the view
 -(void)loadCompaniesHotspots
 {
-	NSLog(@"loadCompaniesHotspots");
+	[_hotspotImageView removeFromSuperview];
+	[_uib_CompanyBtn removeFromSuperview];
+	
+	[self filmTransitionToHotspots];
+	/*
 	NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"companyHotspotsData" ofType:@"plist"];
     NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
@@ -497,7 +524,7 @@ typedef NSInteger PlayerState;
 	for (int i = 0; i < [_arr_hotspotsArray count]; i++) {
 		[_myHotspots addMotionEffect:motionEffects];
 	}
-
+*/
 }
 
 #pragma mark hotspot tapped
@@ -517,7 +544,38 @@ typedef NSInteger PlayerState;
 		NSLog(@"str_typeOfHs %@",tappedView.str_typeOfHs);
 		
 		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
-			[self loadMovieNamed:@"HOT_SPOT_COATED_STEEL_BELTS.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+			
+			switch (i) {
+				case 0:
+					[self loadMovieNamed:@"05_HOTSPOT_F_REMOTE_DIAGNOSTICS.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					break;
+				case 1:
+					[self loadMovieNamed:@"05_HOTSPOT_C_REGEN_DRIVE.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					break;
+				case 2:
+					[self loadMovieNamed:@"05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					break;
+				case 3:
+					[self loadMovieNamed:@"05_HOTSPOT_D_ERT.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					break;
+				case 4:
+					[self loadMovieNamed:@"05_HOTSPOT_A_COATED_STEEL_BELTS.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					break;
+				case 5:
+					[self loadMovieNamed:@"05_HOTSPOT_B_COMPACT_CONTROLLER.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					break;
+					
+				default:
+					break;
+			}
+			/*
+			05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.m4v
+			05_HOTSPOT_B_COMPACT_CONTROLLER.m4v
+			05_HOTSPOT_C_REGEN_DRIVE.m4v
+			05_HOTSPOT_D_ERT.m4v
+			05_HOTSPOT_F_REMOTE_DIAGNOSTICS.m4v
+			05_HOTSPOT_A_COATED_STEEL_BELTS.m4v
+			*/
 		} else {
 			[self popUpImage];
 		}
@@ -685,8 +743,8 @@ typedef NSInteger PlayerState;
 		h.frame = CGRectMake(1024-94, 0, 94, 36);
 		//[h setTitle:@"X" forState:UIControlStateNormal];
 		//h.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
-		[h setBackgroundImage:[UIImage imageNamed:@"grfx_closeBtn.png"] forState:UIControlStateNormal];
-		[h setBackgroundImage:[UIImage imageNamed:@"grfx_closeBtn.png"] forState:UIControlStateHighlighted];
+		[h setBackgroundImage:[UIImage imageNamed:@"icon close.png"] forState:UIControlStateNormal];
+		[h setBackgroundImage:[UIImage imageNamed:@"icon close.png"] forState:UIControlStateHighlighted];
 		[h setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		//set their selector using add selector
 		[h addTarget:self action:@selector(closeMovie) forControlEvents:UIControlEventTouchUpInside];

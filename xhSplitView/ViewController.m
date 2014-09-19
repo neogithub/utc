@@ -60,7 +60,9 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
     [self initSplitVC];
     [self initBuildingVC];
     [self initSplitCtrl];
-	[self initHelpButton];
+	
+	//[self initHelpButton];
+	
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDetailView:) name:@"masterEvent" object:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moveSplitBtnLeft) name:@"moveSplitBtnLeft" object:nil];
@@ -165,9 +167,9 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 -(void)initSplitCtrl
 {
     _uib_splitCtrl = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_splitCtrl.frame = CGRectMake(0.0, 0.0, 36, 36);
-    [_uib_splitCtrl setImage: [UIImage imageNamed:@"grfx_splitBtn.jpg"] forState:UIControlStateNormal];
-    [_uib_splitCtrl setImage: [UIImage imageNamed:@"grfx_splitBtn.jpg"] forState:UIControlStateSelected];
+    _uib_splitCtrl.frame = CGRectMake(-4.0, 0.0, 51, 43);
+    [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateNormal];
+    [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateSelected];
     [_uib_splitCtrl addTarget: self action:@selector(openAndCloseMaster) forControlEvents:UIControlEventTouchUpInside];
     [self.view insertSubview: _uib_splitCtrl aboveSubview:_splitVC.view];
 }

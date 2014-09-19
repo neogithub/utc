@@ -90,8 +90,8 @@
 {
     NSLog(@"createBackButton");
 	_uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_back.frame = CGRectMake(37, 0.0, 36, 36);
-    [_uib_back setImage:[UIImage imageNamed:@"grfx_backBtn.png"] forState:UIControlStateNormal];
+    _uib_back.frame = CGRectMake(37, 0.0, 51, 43);
+    [_uib_back setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
     [self.view insertSubview:_uib_back aboveSubview:_otisVC.view];
     [_uib_back addTarget:self action:@selector(restartView) forControlEvents:UIControlEventTouchUpInside];
 }
