@@ -107,7 +107,7 @@ typedef NSInteger PlayerState;
 		[self removeHotspots];
     }
 	
-	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis_building_hero.jpg"] shouldZoom:YES];
+	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"02_HERO_BLDG.png"] shouldZoom:YES];
     _uis_zoomingImg.delegate = self;
 	
 	if (_uiv_movieContainer) {
@@ -161,7 +161,7 @@ typedef NSInteger PlayerState;
 #pragma mark - Actions to play path to hero and split hero
 -(void)filmToSplitBuilding
 {
-    [self loadMovieNamed:@"UTC_SPLIT_ANIMATION.mp4" isTapToPauseEnabled:NO belowSubview:nil];
+    [self loadMovieNamed:@"02_TRANS_BLDG_UNBUILD.m4v" isTapToPauseEnabled:NO belowSubview:nil];
 	[_uib_SplitOpenBtn removeFromSuperview];
 
 	[self loadSplitAssets];
@@ -170,8 +170,8 @@ typedef NSInteger PlayerState;
 -(void)filmTransitionToHotspots
 {
 	 _uib_logoBtn.hidden = YES;
-    [self loadMovieNamed:@"UTC_SCHEMATIC_ANIMATION_CLIP.mov" isTapToPauseEnabled:NO belowSubview:nil];
-    [self updateStillFrameUnderFilm:@"otis_building_end.png"];
+    [self loadMovieNamed:@"03_TRANS_ELEV.m4v" isTapToPauseEnabled:NO belowSubview:nil];
+    [self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
 	
 	[self createHotspots];
 	
@@ -246,7 +246,7 @@ typedef NSInteger PlayerState;
 	[_hotspotImageView removeFromSuperview];
 	[_uib_CompanyBtn removeFromSuperview];
 	
-	[self updateStillFrameUnderFilm:@"otis_building_hero.jpg"];
+	[self updateStillFrameUnderFilm:@"02_HERO_BLDG.png"];
 	[_uib_back setTag:0];
 	NSLog(@"_uib_back %li",(long)_uib_back.tag);
 	
@@ -730,7 +730,7 @@ typedef NSInteger PlayerState;
     
     [_avPlayer play];
     
-		[self updateStillFrameUnderFilm:@"otis_building_inside.png"];
+	[self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
 	
 	NSString *selectorAfterMovieFinished;
 	

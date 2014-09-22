@@ -110,7 +110,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 12;
+    return 13;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)ttableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -130,7 +130,6 @@
             }
         }
         return cell;
-
     }
     else {
         static NSString *CellIdentifier = @"Cell2";
@@ -160,7 +159,7 @@
 //        [[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
     }
     else {
-        if (indexPath.row != 10) {
+        if (indexPath.row != 11) {
             selectedRow = (int)indexPath.row;
             return;
         } else if (indexPath.row != selectedRow) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -13,16 +13,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="180" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grfx_cellBG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kSc-aW-Ndf">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_cellBG.jpg" id="kSc-aW-Ndf">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_homeIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="fUy-O9-o9h">
-                        <rect key="frame" x="20" y="13" width="17" height="17"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon home.png" id="fUy-O9-o9h">
+                        <rect key="frame" x="20" y="13" width="18" height="17"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W31-ZL-Ljy">
-                        <rect key="frame" x="44" y="0.0" width="91" height="43"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W31-ZL-Ljy">
+                        <rect key="frame" x="45" y="5" width="90" height="37"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -30,21 +30,11 @@
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.050980392156862744" green="0.11372549019607843" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
-                <constraints>
-                    <constraint firstAttribute="trailing" secondItem="fUy-O9-o9h" secondAttribute="trailing" constant="143" id="3Wu-mf-o0v"/>
-                    <constraint firstAttribute="trailing" secondItem="W31-ZL-Ljy" secondAttribute="trailing" constant="45" id="Bed-Gl-bY6"/>
-                    <constraint firstItem="W31-ZL-Ljy" firstAttribute="leading" secondItem="fUy-O9-o9h" secondAttribute="trailing" constant="7" id="Oh1-PR-OTP"/>
-                    <constraint firstItem="W31-ZL-Ljy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TeZ-I7-Re9"/>
-                    <constraint firstItem="fUy-O9-o9h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ZUm-Gq-eIo"/>
-                    <constraint firstAttribute="bottom" secondItem="W31-ZL-Ljy" secondAttribute="bottom" id="cLc-aZ-o6u"/>
-                    <constraint firstAttribute="bottom" secondItem="fUy-O9-o9h" secondAttribute="bottom" constant="13" id="eNq-96-Tbx"/>
-                    <constraint firstItem="fUy-O9-o9h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="teG-9o-gUb"/>
-                </constraints>
             </tableViewCellContentView>
         </tableViewCell>
     </objects>
     <resources>
         <image name="grfx_cellBG.jpg" width="170" height="36"/>
-        <image name="grfx_homeIcon.png" width="17" height="17"/>
+        <image name="icon home.png" width="18" height="17"/>
     </resources>
 </document>

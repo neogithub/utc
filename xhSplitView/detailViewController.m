@@ -59,7 +59,7 @@
         _uis_zoomingImg = nil;
     }
 	
-	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"grfx_cityBgImg.jpg"] shouldZoom:YES];
+	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"01_HERO_CITY.png"] shouldZoom:YES];
     _uis_zoomingImg.delegate = self;
 	[self.view addSubview:_uis_zoomingImg];
 }
@@ -67,7 +67,7 @@
 -(void)initBuildingBtn
 {
     _uib_buildingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_buildingBtn.frame = CGRectMake(450.0, 265.0, 285, 215);
+    _uib_buildingBtn.frame = CGRectMake(390.0, 245.0, 245, 215);
     //_uib_buildingBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
     [_uis_zoomingImg.blurView addSubview:_uib_buildingBtn];
@@ -81,7 +81,7 @@
 -(void)loadBuildingVC:(int)index
 {
 	_otisVC = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
-	_otisVC.transitionClipName = @"UTC_TRANSISTION_ANIMATION.mov";
+	_otisVC.transitionClipName = @"01_TRANS_CITY_TO_BLDG.m4v";
 	[self.view addSubview: _otisVC.view];
     //[self createBackButton];
 }
