@@ -63,7 +63,7 @@
 -(void)unlockZoom
 {
 	
-    self.scrollView.maximumZoomScale = 4;
+    self.scrollView.maximumZoomScale = 2;
     self.scrollView.minimumZoomScale = 1;
 	
 }
