@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	
-	self.preferredContentSize = CGSizeMake(320.0, 133.0); //used instead
+	self.preferredContentSize = CGSizeMake(180.0, 133.0); //used instead
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -60,17 +60,19 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+		[cell.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:12]];
     }
-	
+
 	NSArray *r = @[@"Elevators",@"Some Other Text",@"Additional Text"];
 	
 	if (indexPath.row == 0) {
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		//cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grfx_accessory.png"]];
+
 	}
     
     // Configure the cell...
     cell.textLabel.text=r[indexPath.row];
-    
     return cell;
 }
 
