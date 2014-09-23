@@ -81,7 +81,7 @@
 -(void)loadBuildingVC:(int)index
 {
 	_otisVC = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
-	_otisVC.transitionClipName = @"01_TRANS_CITY_TO_BLDG.m4v";
+	_otisVC.transitionClipName = @"01_TRANS_CITY_TO_BLDG_4.mov";
 	[self.view addSubview: _otisVC.view];
     //[self createBackButton];
 }
