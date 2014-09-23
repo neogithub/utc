@@ -76,6 +76,8 @@
 		20A95A7C19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */; };
 		20A95A7D19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */; };
 		20A95A7F19CC695800132F7E /* 02_TRANS_BLDG_UNBUILD.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7E19CC695800132F7E /* 02_TRANS_BLDG_UNBUILD.m4v */; };
+		20CEFE3719D1018700BEB200 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CEFE3519D1018700BEB200 /* PopoverViewController.m */; };
+		20CEFE3819D1018700BEB200 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CEFE3619D1018700BEB200 /* PopoverViewController.xib */; };
 		20D0B00419BF4C280096021D /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00319BF4C280096021D /* City.m */; };
 		20D0B00819BF4EAD0096021D /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00719BF4EAD0096021D /* Building.m */; };
 		20D0B00C19BF52100096021D /* buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B00A19BF52100096021D /* buildings.json */; };
@@ -224,6 +226,9 @@
 		20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 03_HERO_BLDG_SECTION.png; path = images/03_HERO_BLDG_SECTION.png; sourceTree = "<group>"; };
 		20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 04_HOTSPOT_CROSS_SECTION.png; path = images/04_HOTSPOT_CROSS_SECTION.png; sourceTree = "<group>"; };
 		20A95A7E19CC695800132F7E /* 02_TRANS_BLDG_UNBUILD.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02_TRANS_BLDG_UNBUILD.m4v; path = films/02_TRANS_BLDG_UNBUILD.m4v; sourceTree = "<group>"; };
+		20CEFE3419D1018700BEB200 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
+		20CEFE3519D1018700BEB200 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
+		20CEFE3619D1018700BEB200 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		20D0B00219BF4C280096021D /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		20D0B00319BF4C280096021D /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		20D0B00619BF4EAD0096021D /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
@@ -458,6 +463,9 @@
 				82A66AD919B792C700C8E12A /* xhSplitViewController.h */,
 				82A66ADA19B792C700C8E12A /* xhSplitViewController.m */,
 				82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */,
+				20CEFE3419D1018700BEB200 /* PopoverViewController.h */,
+				20CEFE3519D1018700BEB200 /* PopoverViewController.m */,
+				20CEFE3619D1018700BEB200 /* PopoverViewController.xib */,
 				82A66ADE19B793BD00C8E12A /* utilities */,
 				82A66AE219B7942900C8E12A /* src */,
 				82A66AB319B7926B00C8E12A /* Images.xcassets */,
@@ -693,6 +701,7 @@
 				20A95A7019CBDCB700132F7E /* 05_HOTSPOT_A_COATED_STEEL_BELTS.m4v in Resources */,
 				824F14F319CB5B6100628F01 /* grfx_homeIcon.png in Resources */,
 				20D0B06119C0C91C0096021D /* otis_building_hero.jpg in Resources */,
+				20CEFE3819D1018700BEB200 /* PopoverViewController.xib in Resources */,
 				20A95A5E19CBC1AA00132F7E /* icon marker left.png in Resources */,
 				20A39EBC19C3351C00C71430 /* bg_05@2x.jpg in Resources */,
 				20D0B01219BF56040096021D /* UTC_TRANSISTION_ANIMATION.mov in Resources */,
@@ -803,6 +812,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20CEFE3719D1018700BEB200 /* PopoverViewController.m in Sources */,
 				824F14EF19CB59CA00628F01 /* titleTableViewCell.m in Sources */,
 				20D0B01019BF53C30096021D /* companies.m in Sources */,
 				82A66AB219B7926B00C8E12A /* ViewController.m in Sources */,
@@ -870,48 +880,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		82A66AC819B7926B00C8E12A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Evan Buxton (5TJ6RXCUHG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Evan Buxton (5TJ6RXCUHG)";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "267bd00d-2a1b-4515-b1d3-030ff7a4da93";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Debug;
-		};
-		82A66AC919B7926B00C8E12A /* Release */ = {
+		20CEFE3119D0F53300BEB200 /* Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -939,6 +908,118 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "255cd951-1b3b-49b0-b0af-1a004dd8b95f";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Store;
+		};
+		20CEFE3219D0F53300BEB200 /* Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Inc. (9734648496)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Inc. (9734648496)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
+				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = utc;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "255cd951-1b3b-49b0-b0af-1a004dd8b95f";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Store;
+		};
+		20CEFE3319D0F53300BEB200 /* Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/xhSplitView.app/xhSplitView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xhSplitView/xhSplitView-Prefix.pch";
+				INFOPLIST_FILE = "xhSplitViewTests/utcTests-Info.plist";
+				PRODUCT_NAME = utcTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Store;
+		};
+		82A66AC819B7926B00C8E12A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Evan Buxton (QLL5LMG993)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Evan Buxton (QLL5LMG993)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "6EB702D2-6595-430E-93F7-E480A1F1412A";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		82A66AC919B7926B00C8E12A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PROVISIONING_PROFILE = "082219CC-735B-4265-98E3-548B883C283E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -951,14 +1032,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Evan Buxton (QLL5LMG993)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Evan Buxton (QLL5LMG993)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = utc;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6EB702D2-6595-430E-93F7-E480A1F1412A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -976,6 +1057,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1028,6 +1110,7 @@
 			buildConfigurations = (
 				82A66AC819B7926B00C8E12A /* Debug */,
 				82A66AC919B7926B00C8E12A /* Release */,
+				20CEFE3119D0F53300BEB200 /* Store */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1037,6 +1120,7 @@
 			buildConfigurations = (
 				82A66ACB19B7926B00C8E12A /* Debug */,
 				82A66ACC19B7926B00C8E12A /* Release */,
+				20CEFE3219D0F53300BEB200 /* Store */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1046,6 +1130,7 @@
 			buildConfigurations = (
 				82A66ACE19B7926B00C8E12A /* Debug */,
 				82A66ACF19B7926B00C8E12A /* Release */,
+				20CEFE3319D0F53300BEB200 /* Store */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

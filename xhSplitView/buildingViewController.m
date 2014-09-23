@@ -12,6 +12,7 @@
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 #import "neoHotspotsView.h"
+#import "PopoverViewController.h"
 
 enum { kEnableSwiping = YES };
 enum { kEnableDoubleTapToKillMovie = YES };
@@ -23,11 +24,15 @@ enum {
 typedef NSInteger PlayerState;
 
 
-@interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, UIGestureRecognizerDelegate>
+@interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, UIGestureRecognizerDelegate>
 {
 	CGFloat companyLabelWidth;
 	CGFloat hotspotLabelWidth;
 }
+
+@property (nonatomic,strong) UIPopoverController *popOver;
+
+- (IBAction)showPopover:(UIButton *)sender;
 
 @property (nonatomic, strong) UIView						*uiv_movieContainer;
 @property (nonatomic, strong) UIImageView					*uiiv_bg;
@@ -147,7 +152,7 @@ typedef NSInteger PlayerState;
 	_uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _uib_CompanyBtn.frame = CGRectMake(469.0, 177.0, 82, 55);
     _uib_CompanyBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
-    [_uib_CompanyBtn addTarget:self action:@selector(loadCompaniesHotspots) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_CompanyBtn addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchUpInside];
     [_uis_zoomingImg.blurView addSubview:_uib_CompanyBtn];
 	[self pulse:_uib_CompanyBtn.layer];
 
@@ -421,9 +426,28 @@ typedef NSInteger PlayerState;
     }
 }
 
+- (IBAction)showPopover:(UIButton *)sender {
+    PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
+    self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
+	PopoverView.delegate = self;
+    [self.popOver presentPopoverFromRect:sender.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+}
+
+#pragma mark - PopoverViewControllerDelegate method
+-(void)selectedRow:(NSInteger)row
+{
+	[self loadCompaniesHotspots];
+	//The color picker popover is showing. Hide it.
+	[self.popOver dismissPopoverAnimated:YES];
+	self.popOver = nil;
+}
+
+
 // load all the companies onto the view
 -(void)loadCompaniesHotspots
 {
+	NSLog(@"asd");
+	
 	[_hotspotImageView removeFromSuperview];
 	[_uib_CompanyBtn removeFromSuperview];
 	
