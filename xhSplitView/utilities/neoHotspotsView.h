@@ -68,5 +68,5 @@ typedef enum {
 @property (nonatomic, assign) HotspotCaptionAlignment labelAlignment;
 
 - (void)hotspotWithTagTapped:(UIGestureRecognizer*)recognizer;
-
+- (void)setLabelAlpha:(CGFloat)alpha;
 @end

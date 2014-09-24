@@ -26,6 +26,7 @@ static NSString * const sampleDesc5 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 
 static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi egestas eget";
 
+static CGFloat menuButtonHeights = 51;
 
 @interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate>
 
@@ -76,7 +77,7 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 
 -(void)moveSplitBtnLeft
 {
-	_uib_splitCtrl.transform = CGAffineTransformMakeTranslation(-36, 0);
+	_uib_splitCtrl.transform = CGAffineTransformMakeTranslation(-menuButtonHeights, 0);
 }
 
 -(void)moveSplitBtnRight
@@ -117,14 +118,14 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 
 - (void) configurePage:(GHWalkThroughPageCell *)cell atIndex:(NSInteger)index
 {
-    cell.title = [NSString stringWithFormat:@"This is page %ld", index+1];
+    cell.title = [NSString stringWithFormat:@"This is page %d", index+1];
 	// cell.titleImage = [UIImage imageNamed:[NSString stringWithFormat:@"title%ld", index+1]];
     cell.desc = [self.descStrings objectAtIndex:index];
 }
 
 - (UIImage*) bgImageforPage:(NSInteger)index
 {
-    NSString* imageName =[NSString stringWithFormat:@"bg_0%ld.jpg", index+1];
+    NSString* imageName =[NSString stringWithFormat:@"bg_0%d.jpg", index+1];
     UIImage* image = [UIImage imageNamed:imageName];
     return image;
 }
@@ -167,7 +168,7 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 -(void)initSplitCtrl
 {
     _uib_splitCtrl = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_splitCtrl.frame = CGRectMake(-4.0, 0.0, 51, 43);
+    _uib_splitCtrl.frame = CGRectMake(0.0, 0.0, menuButtonHeights, menuButtonHeights);
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateNormal];
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateSelected];
     [_uib_splitCtrl addTarget: self action:@selector(openAndCloseMaster) forControlEvents:UIControlEventTouchUpInside];

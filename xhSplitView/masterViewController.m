@@ -8,7 +8,7 @@
 
 #import "masterViewController.h"
 #import "panelTableViewCell.h"
-#import "titleTableViewCell.h"
+
 @interface masterViewController ()
 {
 	int selectedRow;
@@ -108,30 +108,36 @@
     return 1;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIImage *myImage = [UIImage imageNamed:@"menu header.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:myImage];
+	[imageView setUserInteractionEnabled:YES];
+    imageView.frame = CGRectMake(0,0,171,44);
+	
+	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleImageTap:)];
+	[imageView addGestureRecognizer:tap];
+	
+    return imageView;
+}
+
+-(void)handleImageTap:(UIGestureRecognizer*)gesture
+{
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 13;
+    return 12;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)ttableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        static NSString *CellIdentifier = @"Cell1";
-        titleTableViewCell *cell = (titleTableViewCell *)[ttableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"titleTableViewCell" owner:self options:nil];
-            for(id currentObject in topLevelObjects)
-            {
-                if([currentObject isKindOfClass:[titleTableViewCell class]])
-                {
-                    cell = (titleTableViewCell *)currentObject;
-                    break;
-                }
-            }
-        }
-        return cell;
-    }
-    else {
         static NSString *CellIdentifier = @"Cell2";
         panelTableViewCell *cell = (panelTableViewCell *)[ttableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
@@ -144,35 +150,27 @@
                     break;
                 }
             }
-            
-        }
-        
         [cell.uil_title setText:_arr_companies[indexPath.row]];
         return cell;
     }
     return nil;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil];
-//        [[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
-    }
-    else {
-        if (indexPath.row != 11) {
-            selectedRow = (int)indexPath.row;
-            return;
-        } else if (indexPath.row != selectedRow) {
-            
-			NSLog(@"The tapped cell is %i", (int)indexPath.row);
-			NSDictionary* dict = [NSDictionary dictionaryWithObject:
-								  [NSNumber numberWithInt:(int)indexPath.row]
-															 forKey:@"index"];
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
-																object:self
-															  userInfo:dict];
-        }
-    }
+	if (indexPath.row != 9) {
+		selectedRow = (int)indexPath.row;
+		return;
+	} else if (indexPath.row != selectedRow) {
+		
+		NSLog(@"The tapped cell is %i", (int)indexPath.row);
+		NSDictionary* dict = [NSDictionary dictionaryWithObject:
+							  [NSNumber numberWithInt:(int)indexPath.row]
+														 forKey:@"index"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
+															object:self
+														  userInfo:dict];
+	}
     selectedRow = (int)indexPath.row;
 }
 
@@ -181,16 +179,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

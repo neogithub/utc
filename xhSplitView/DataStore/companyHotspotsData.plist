@@ -124,7 +124,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string>AvanTEC</string>
+		<string>AdvanTEC</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -142,25 +142,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string>AutomatedLOGIC</string>
-		<key>alignment</key>
-		<integer>2</integer>
-	</dict>
-	<dict>
-		<key>type</key>
-		<string>company</string>
-		<key>background</key>
-		<string>company_blank_left.png</string>
-		<key>xy</key>
-		<string>775,510</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
-		<key>fileName</key>
-		<string>AutomatedLOGIC</string>
+		<string>AutomatedLogic</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -178,7 +160,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string>Improve</string>
+		<string>Sustainability</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>

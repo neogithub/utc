@@ -60,10 +60,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-		[cell.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:12]];
+		[cell.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
     }
 
-	NSArray *r = @[@"Elevators",@"Some Other Text",@"Additional Text"];
+	NSArray *r = @[@"Elevators",@"Escalators",@"Destination Dispatch"];
 	
 	if (indexPath.row == 0) {
 		//cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

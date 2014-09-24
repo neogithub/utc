@@ -208,17 +208,25 @@ static int arwPic = 30;
     //[self currentTag:uiiv_hsImgView.tag  andType:str_typeOfHs fromSender:self];
 }
 
+- (void)setLabelAlpha:(CGFloat)alpha
+{
+	uil_caption.alpha = alpha;
+}
+
+
 -(void)initHotspotLabel
 {
     [self updateIndicators];
     
     float textFontSize = 12.0f;
-	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:textFontSize];
 
 	if ([str_labelText isEqualToString:@""]) {
 		[uil_caption setBackgroundColor:[UIColor clearColor]];
 	} else {
-		[uil_caption setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
+		[uil_caption setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.8]];
+		[uil_caption.layer setBorderColor:[UIColor whiteColor].CGColor];
+		[uil_caption.layer setBorderWidth:1.0];
 	}
     [uil_caption setText:str_labelText];
     uil_caption.textColor = [UIColor blackColor];
@@ -238,7 +246,7 @@ static int arwPic = 30;
 	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
 	if (str_labelText != nil) {
 		CGFloat str_width = [self getWidthFromStringLength:str_labelText andFont:font];
-		static CGFloat labelPad = 0;
+		static CGFloat labelPad = 20;
 		LabelWidth = str_width + (labelPad*2);
 	}
 
@@ -262,7 +270,7 @@ static int arwPic = 30;
         [uil_caption setTextAlignment:NSTextAlignmentRight];
     }
     if (labelAlignment == CaptionAlignmentRight) {
-        float label_X = uiiv_hsImgView.frame.origin.x + ((sqrt(2)+1)/2)* uiiv_hsImgView.frame.size.width-10;
+        float label_X = uiiv_hsImgView.frame.origin.x + ((sqrt(2)+1)/2)* uiiv_hsImgView.frame.size.width-30;
         float label_Y = uiiv_hsImgView.frame.origin.y+6;
         //float label_W = uiiv_hsImgView.frame.size.width*3.25;
 		float label_W = LabelWidth+20;
@@ -303,7 +311,7 @@ static int arwPic = 30;
         //float label_W = uiiv_hsImgView.frame.size.width*3.25;
 		float label_W = LabelWidth+20;
         float label_H = uiiv_hsImgView.frame.size.height/1.5;
-        uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X-LabelWidth+125 /*dirty hack*/, label_Y, label_W, label_H)];
+        uil_caption = [[UILabel alloc] initWithFrame:CGRectMake(label_X-LabelWidth+135 /*dirty hack*/, label_Y, label_W, label_H)];
         [uil_caption setTextAlignment:NSTextAlignmentLeft];
     }
     if (labelAlignment == CaptionAlignmentTopLeft) {

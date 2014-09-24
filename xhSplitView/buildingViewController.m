@@ -23,6 +23,11 @@ enum {
 };
 typedef NSInteger PlayerState;
 
+static CGFloat backButtonHeight = 51;
+static CGFloat backButtonWidth	= 58;
+static CGFloat backButtonX		= 36;
+static CGFloat backButtonActualHeight = 44;
+
 
 @interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, UIGestureRecognizerDelegate>
 {
@@ -208,7 +213,7 @@ typedef NSInteger PlayerState;
 	NSLog(@"createBackButton AGAIN");
 
     _uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_back.frame = CGRectMake(29, 0.0, 51, 43);
+    _uib_back.frame = CGRectMake(backButtonX, 0.0, 58, backButtonHeight);
     [_uib_back setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
     [self.view addSubview:_uib_back];
     [_uib_back addTarget:self action:@selector(performSelectorFromArray) forControlEvents:UIControlEventTouchUpInside];
@@ -275,12 +280,12 @@ typedef NSInteger PlayerState;
     [self removeCompanyTitle];
 	
 	// get width of uilabel
-	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:19];
 	CGFloat str_width = [self getWidthFromStringLength:year andFont:font];
 	static CGFloat labelPad = 15;
 	companyLabelWidth = str_width + (labelPad*2);
 	
-    _uil_Company = [[UILabel alloc] initWithFrame:CGRectMake(0.0, -36.0, companyLabelWidth, 36)];
+    _uil_Company = [[UILabel alloc] initWithFrame:CGRectMake(0.0, -backButtonActualHeight, companyLabelWidth, backButtonActualHeight)];
     [_uil_Company setText:year];
     [_uil_Company setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.8]];
     [_uil_Company setTextColor:[UIColor blackColor]];
@@ -292,7 +297,7 @@ typedef NSInteger PlayerState;
 	[_uiv_textBoxContainer addSubview: _uil_Company];
 	
 	// resize text container to fit
-	_uiv_textBoxContainer.frame = CGRectMake(73, 0, companyLabelWidth, 36);
+	_uiv_textBoxContainer.frame = CGRectMake(backButtonX+backButtonWidth-7, 0, companyLabelWidth, backButtonHeight);
 	
 	[self animate:_uil_Company direction:LabelOnscreen];
 }
@@ -307,12 +312,12 @@ typedef NSInteger PlayerState;
 	[self removeHotspotTitle];
 	
 	// get width of uilabel
-	UIFont *font = [UIFont fontWithName:@"Helvetica" size:15];
+	UIFont *font = [UIFont fontWithName:@"Helvetica" size:19];
 	CGFloat str_width = [self getWidthFromStringLength:string andFont:font];
 	static CGFloat labelPad = 20;
 	hotspotLabelWidth = str_width + (labelPad);
     
-    _uil_HotspotTitle = [[UILabel alloc] initWithFrame:CGRectMake(companyLabelWidth-74, -36, hotspotLabelWidth, 36)];
+    _uil_HotspotTitle = [[UILabel alloc] initWithFrame:CGRectMake(companyLabelWidth-backButtonWidth-15, -backButtonActualHeight, hotspotLabelWidth, backButtonActualHeight)];
     [_uil_HotspotTitle setText:string];
 	_uil_HotspotTitle.backgroundColor = [UIColor colorWithRed:0.0000 green:0.4667 blue:0.7686 alpha:0.8];
     [_uil_HotspotTitle setTextColor:[UIColor whiteColor]];
@@ -324,7 +329,7 @@ typedef NSInteger PlayerState;
 	[_uiv_textBoxContainer addSubview: _uil_HotspotTitle];
 	
 	// resize text container to fit
-	_uiv_textBoxContainer.frame = CGRectMake(73, 0, hotspotLabelWidth+companyLabelWidth, 36);
+	_uiv_textBoxContainer.frame = CGRectMake(73, 0, hotspotLabelWidth+companyLabelWidth, backButtonHeight);
 	
 	[self animate:_uil_HotspotTitle direction:LabelOnscreen];
 }
@@ -343,9 +348,9 @@ typedef NSInteger PlayerState;
 {
 	int f = 0;
 	if (d == LabelOffscreen) {
-		f = -36;
+		f = -backButtonActualHeight;
 	} else {
-		f = 36;
+		f = backButtonActualHeight;
 	}
 	
 	[UIView animateWithDuration:0.3/1.5 animations:^{
@@ -561,6 +566,7 @@ typedef NSInteger PlayerState;
 	
 #warning more robust previously tapped method needed
 	tappedView.alpha = 0.75;
+	[tappedView setLabelAlpha:0.75];
 	
 	if ([tappedView.str_typeOfHs isEqualToString:@"company"]) {
 		[self filmTransitionToHotspots];
@@ -611,9 +617,9 @@ typedef NSInteger PlayerState;
 			//_uiv_textBoxContainer.transform = CGAffineTransformMakeTranslation(-200, 36);
 			
 			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
-			_uil_HotspotTitle.frame = CGRectMake(-74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
+			_uil_HotspotTitle.frame = CGRectMake(-40, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
 			
-			_uib_back.transform = CGAffineTransformMakeTranslation(-72, 0);
+			_uib_back.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
 
 		} completion:^(BOOL completed)
@@ -662,7 +668,7 @@ typedef NSInteger PlayerState;
 -(void)unhideChrome
 {
 	[UIView animateWithDuration:0.5 animations:^{
-		_uil_Company.frame = CGRectMake(0, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
+		_uil_Company.frame = CGRectMake(14, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
 		_uil_HotspotTitle.frame = CGRectMake(74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
 		_uib_back.transform = CGAffineTransformIdentity;
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
@@ -764,11 +770,10 @@ typedef NSInteger PlayerState;
 		selectorAfterMovieFinished = @"playerItemLoop:";
 		
 		UIButton *h = [UIButton buttonWithType:UIButtonTypeCustom];
-		h.frame = CGRectMake(1024-94, 0, 94, 36);
+		h.frame = CGRectMake(1024-36, 0, 36, 36);
 		//[h setTitle:@"X" forState:UIControlStateNormal];
 		//h.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
 		[h setBackgroundImage:[UIImage imageNamed:@"icon close.png"] forState:UIControlStateNormal];
-		[h setBackgroundImage:[UIImage imageNamed:@"icon close.png"] forState:UIControlStateHighlighted];
 		[h setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		//set their selector using add selector
 		[h addTarget:self action:@selector(closeMovie) forControlEvents:UIControlEventTouchUpInside];

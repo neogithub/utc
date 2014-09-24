@@ -81,16 +81,17 @@
 -(void)loadBuildingVC:(int)index
 {
 	_otisVC = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
-	_otisVC.transitionClipName = @"01_TRANS_CITY_TO_BLDG_4.mov";
+	_otisVC.transitionClipName = @"01_TRANS_CITY_TO_BLDG_4.m4v";
 	[self.view addSubview: _otisVC.view];
-    //[self createBackButton];
+	
+	[self.delegate rowSelected:self atIndex:0];
 }
 
 -(void)createBackButton
 {
     NSLog(@"createBackButton");
 	_uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_back.frame = CGRectMake(37, 0.0, 51, 43);
+    _uib_back.frame = CGRectMake(51, 0.0, 58, 51);
     [_uib_back setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
     [self.view insertSubview:_uib_back aboveSubview:_otisVC.view];
     [_uib_back addTarget:self action:@selector(restartView) forControlEvents:UIControlEventTouchUpInside];

@@ -6,7 +6,7 @@
 		<key>type</key>
 		<string>movie</string>
 		<key>background</key>
-		<string>Marker_Right.png</string>
+		<string>icon marker right.png</string>
 		<key>xy</key>
 		<string>780,74</string>
 		<key>angle</key>
@@ -24,7 +24,7 @@
 		<key>type</key>
 		<string>movie</string>
 		<key>background</key>
-		<string>Marker.png</string>
+		<string>icon marker left.png</string>
 		<key>xy</key>
 		<string>580,120</string>
 		<key>angle</key>
@@ -42,7 +42,7 @@
 		<key>type</key>
 		<string>movie</string>
 		<key>background</key>
-		<string>Marker.png</string>
+		<string>icon marker left.png</string>
 		<key>xy</key>
 		<string>620,267</string>
 		<key>angle</key>
@@ -60,7 +60,7 @@
 		<key>type</key>
 		<string>movie</string>
 		<key>background</key>
-		<string>Marker.png</string>
+		<string>icon marker left.png</string>
 		<key>xy</key>
 		<string>550,330</string>
 		<key>angle</key>
@@ -78,7 +78,7 @@
 		<key>type</key>
 		<string>movie</string>
 		<key>background</key>
-		<string>Marker_Right.png</string>
+		<string>icon marker right.png</string>
 		<key>xy</key>
 		<string>790,380</string>
 		<key>angle</key>
@@ -96,7 +96,7 @@
 		<key>type</key>
 		<string>movie</string>
 		<key>background</key>
-		<string>Marker.png</string>
+		<string>icon marker left.png</string>
 		<key>xy</key>
 		<string>500,400</string>
 		<key>angle</key>

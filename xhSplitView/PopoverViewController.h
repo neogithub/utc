@@ -15,5 +15,4 @@
 
 @interface PopoverViewController : UITableViewController
 @property (nonatomic, weak) id<PopoverViewControllerDelegate> delegate;
--(void)selectedRow:(NSInteger)index;
 @end
