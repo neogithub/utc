@@ -87,9 +87,9 @@ static CGFloat menuButtonHeights = 51;
     _uiiv_initImage.userInteractionEnabled = YES;
 	
 	_uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
-	_uiv_tapCircle.frame = CGRectMake(480, 670, 63, 63);
+	_uiv_tapCircle.frame = CGRectMake(490, 670, 43, 43);
 	_uiv_tapCircle.layer.cornerRadius = _uiv_tapCircle.frame.size.width/2;
-	[_uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
+	[_uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
 	[_uiv_tapCircle setUserInteractionEnabled:YES];
 	
 	[_uiiv_initImage addSubview:_uiv_tapCircle];
@@ -110,8 +110,8 @@ static CGFloat menuButtonHeights = 51;
 	theAnimation.duration=0.5;
 	theAnimation.repeatCount=HUGE_VAL;
 	theAnimation.autoreverses=YES;
-	theAnimation.fromValue=[NSNumber numberWithFloat:1.0];
-	theAnimation.toValue=[NSNumber numberWithFloat:0.5];
+	theAnimation.fromValue=[NSNumber numberWithFloat:0.5];
+	theAnimation.toValue=[NSNumber numberWithFloat:0.25];
 	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
 }
 
