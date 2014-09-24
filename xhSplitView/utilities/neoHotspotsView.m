@@ -218,7 +218,7 @@ static int arwPic = 30;
 {
     [self updateIndicators];
     
-    float textFontSize = 12.0f;
+    float textFontSize = 14.0f;
 	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:textFontSize];
 
 	if ([str_labelText isEqualToString:@""]) {
@@ -243,7 +243,7 @@ static int arwPic = 30;
     [uil_caption removeFromSuperview];
 	CGFloat LabelWidth = 0;
 	
-	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
 	if (str_labelText != nil) {
 		CGFloat str_width = [self getWidthFromStringLength:str_labelText andFont:font];
 		static CGFloat labelPad = 20;

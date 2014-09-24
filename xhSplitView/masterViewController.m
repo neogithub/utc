@@ -12,6 +12,7 @@
 @interface masterViewController ()
 {
 	int selectedRow;
+	UIButton * settButton;
 }
 
 @property (nonatomic, strong) NSMutableArray *arr_companies;
@@ -81,9 +82,6 @@
 		[_arr_companies addObject:[hotspotItem objectForKey:@"fileName"]];
 	}
 	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-
-	NSLog(@"%@",[_arr_companies description]);
-
 }
 
 -(void)initNavi
@@ -115,16 +113,31 @@
 	[imageView setUserInteractionEnabled:YES];
     imageView.frame = CGRectMake(0,0,171,44);
 	
-	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleImageTap:)];
-	[imageView addGestureRecognizer:tap];
+	// create buttons
+	CGFloat staticX         = 12;    // Static X for all buttons.
+	CGFloat staticWidth     = 42;   // Static Width for all Buttons.
+	CGFloat staticHeight    = 42;   // Static Height for all buttons.
+	CGFloat staticPadding   = 14;    // Padding to add between each button.
 	
+	for (int i = 0; i < 3; i++)
+	{
+		settButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		[settButton setTag:i];
+		[settButton setFrame:CGRectMake((staticX + (i * (staticHeight + staticPadding))),0,staticWidth,staticHeight)];
+		[settButton addTarget:self action:@selector(handleImageTap:) forControlEvents:UIControlEventTouchUpInside];
+		[imageView addSubview: settButton];
+	}
+
     return imageView;
 }
 
--(void)handleImageTap:(UIGestureRecognizer*)gesture
+-(void)handleImageTap:(id)sender
 {
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil];
+	//[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:[NSNumber numberWithInt:gesture.view.tag]];
+	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:[sender tag]] forKey:@"buttontag"];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil userInfo:userInfo];
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

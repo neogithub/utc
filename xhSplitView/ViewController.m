@@ -38,10 +38,13 @@ static CGFloat menuButtonHeights = 51;
 
 @property (nonatomic, strong) UIButton                          *uib_splitCtrl;
 @property (nonatomic, strong) UIButton                          *uib_help;
+@property (nonatomic, strong) UIView							*uiv_tapCircle;
+
 @property (nonatomic, strong) xhSplitViewController             *splitVC;
 @property (nonatomic, strong) masterViewController              *masterView;
 @property (nonatomic, strong) detailViewController              *detailView;
 @property (nonatomic, strong) buildingViewController            *otisView;
+@property (nonatomic, strong) UIImageView						*uiiv_initImage;
 @end
 
 @implementation ViewController
@@ -62,7 +65,7 @@ static CGFloat menuButtonHeights = 51;
     [self initBuildingVC];
     [self initSplitCtrl];
 	
-	//[self initHelpButton];
+	[self setInitialImage];
 	
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDetailView:) name:@"masterEvent" object:nil];
 	
@@ -73,6 +76,57 @@ static CGFloat menuButtonHeights = 51;
     {
         [self showHelp];
 	}
+}
+
+-(void)setInitialImage
+{
+    _uiiv_initImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash.png"]];
+    _uiiv_initImage.frame = CGRectMake(0.0, 0.0, 1024.0, 768.0);
+    [self.view addSubview: _uiiv_initImage];
+    
+    _uiiv_initImage.userInteractionEnabled = YES;
+	
+	_uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
+	_uiv_tapCircle.frame = CGRectMake(480, 670, 63, 63);
+	_uiv_tapCircle.layer.cornerRadius = _uiv_tapCircle.frame.size.width/2;
+	[_uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
+	[_uiv_tapCircle setUserInteractionEnabled:YES];
+	
+	[_uiiv_initImage addSubview:_uiv_tapCircle];
+	
+	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadMap:)];
+    [_uiv_tapCircle addGestureRecognizer: tapOnImg];
+	
+	[self pulse:_uiv_tapCircle.layer];
+
+}
+
+#pragma mark PulseAnim
+-(void)pulse:(CALayer*)incomingLayer
+{
+	CABasicAnimation *theAnimation;
+	CALayer *pplayer = incomingLayer;
+	theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
+	theAnimation.duration=0.5;
+	theAnimation.repeatCount=HUGE_VAL;
+	theAnimation.autoreverses=YES;
+	theAnimation.fromValue=[NSNumber numberWithFloat:1.0];
+	theAnimation.toValue=[NSNumber numberWithFloat:0.5];
+	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
+}
+
+
+-(void)loadMap:(UIGestureRecognizer *)gesture
+{
+    UIView *image = gesture.view;
+	
+	[UIView animateWithDuration:0.33 animations:^{
+        _uiiv_initImage.alpha = 0.0;
+		image.alpha = 0.0;
+    } completion:^(BOOL finished){
+        [_uiiv_initImage removeFromSuperview];
+		[image removeFromSuperview];
+    }];
 }
 
 -(void)moveSplitBtnLeft
@@ -192,13 +246,20 @@ static CGFloat menuButtonHeights = 51;
         [_splitVC showPanel];
         [UIView animateWithDuration:0.33 animations:^{
             _uib_splitCtrl.transform = CGAffineTransformMakeTranslation(180, 0.0);
+			_uib_splitCtrl.hidden = YES;
+			NSLog(@"hideDetailChrome");
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"hideDetailChrome" object:nil];
         }];
     }
     else {
         [_splitVC hideMasterPanel];
         [UIView animateWithDuration:0.33 animations:^{
             _uib_splitCtrl.transform = CGAffineTransformIdentity;
+			_uib_splitCtrl.hidden = NO;
         }];
+		NSLog(@"====unhideDetailChrome");
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"unhideDetailChrome" object:nil];
+
     }
 }
 
@@ -206,9 +267,33 @@ static CGFloat menuButtonHeights = 51;
 {
     //TODO: pick building from data model
 	//int index = [[[notification userInfo] valueForKey:@"index"] intValue];
-	[_splitVC addDetailController:_detailView animated:NO];
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
-	[self openAndCloseMaster];
+    int pass = [[[notification userInfo] valueForKey:@"buttontag"] intValue];
+	
+	switch (pass) {
+		case 0:
+			
+			[self setInitialImage];
+			[_splitVC addDetailController:_detailView animated:NO];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
+			[self openAndCloseMaster];
+
+			break;
+			
+		case 1:
+			[_splitVC addDetailController:_detailView animated:NO];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
+			[self openAndCloseMaster];
+			break;
+			
+		case 2:
+			
+			[self openAndCloseMaster];
+
+			break;
+			
+		default:
+			break;
+	}
 }
 
 

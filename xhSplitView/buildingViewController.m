@@ -52,8 +52,8 @@ static CGFloat backButtonActualHeight = 44;
 @property (nonatomic, strong) AVPlayer						*avPlayer;
 @property (nonatomic, strong) AVPlayerLayer					*avPlayerLayer;
 @property (nonatomic, strong) UIButton						*uib_logoBtn;
-@property (nonatomic, strong) UIButton						*uib_SplitOpenBtn;
-@property (nonatomic, strong) UIButton						*uib_back;
+@property (nonatomic, strong) UIButton						*uib_backBtn;
+@property (nonatomic, strong) UIView						*uiv_tapCircle;
 @property (nonatomic, strong) UIButton						*uib_CompanyBtn;
 @property (nonatomic, strong) UILabel						*uil_filmHint;
 @property (nonatomic, strong) UIImageView *hotspotImageView;
@@ -105,6 +105,10 @@ static CGFloat backButtonActualHeight = 44;
 	NSValue* selCommandC = [NSValue valueWithPointer:@selector(loadSplitAssets)];
 	
 	_arr_BreadCrumbOfImages = [NSMutableArray arrayWithObjects:selCommandA, selCommandB, selCommandC, nil ];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackButton) name:@"hideDetailChrome" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackButton) name:@"unhideDetailChrome" object:nil];
+
 }
 
 #pragma mark - stills under movie
@@ -123,7 +127,7 @@ static CGFloat backButtonActualHeight = 44;
 	if (_uiv_movieContainer) {
 		[self.view insertSubview: _uis_zoomingImg belowSubview:_uiv_movieContainer];
 	} else {
-		[self.view insertSubview: _uis_zoomingImg belowSubview:_uib_back];
+		[self.view insertSubview: _uis_zoomingImg belowSubview:_uib_backBtn];
 	}
 	
 	[self initSplitOpenBtn];
@@ -137,17 +141,22 @@ static CGFloat backButtonActualHeight = 44;
 #pragma mark - buttons for splitting view and otis logo
 -(void)initSplitOpenBtn
 {
-    _uib_SplitOpenBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_SplitOpenBtn.frame = CGRectMake(470, 670, 63, 63);
-	[_uib_SplitOpenBtn setImage:[UIImage imageNamed:@"swipe-to-reveal.png"] forState:UIControlStateNormal];
-	if (_uiv_movieContainer) {
-		[self.view insertSubview:_uib_SplitOpenBtn belowSubview:_uiv_movieContainer];
-	} else {
-		[self.view addSubview:_uib_SplitOpenBtn];
-	}
-	[_uib_SplitOpenBtn addTarget:self action:@selector(filmToSplitBuilding) forControlEvents:UIControlEventTouchUpInside];
+	_uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
+	_uiv_tapCircle.frame = CGRectMake(480, 670, 63, 63);
+	_uiv_tapCircle.layer.cornerRadius = _uiv_tapCircle.frame.size.width/2;
+	[_uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
+	[_uiv_tapCircle setUserInteractionEnabled:YES];
 	
-	[self pulse:_uib_SplitOpenBtn.layer];
+	if (_uiv_movieContainer) {
+		[self.view insertSubview:_uiv_tapCircle belowSubview:_uiv_movieContainer];
+	} else {
+		[self.view addSubview:_uiv_tapCircle];
+	}
+	
+	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(filmToSplitBuilding)];
+    [_uiv_tapCircle addGestureRecognizer: tapOnImg];
+
+	[self pulse:_uiv_tapCircle.layer];
 }
 
 -(void)initLogoBtn
@@ -172,7 +181,7 @@ static CGFloat backButtonActualHeight = 44;
 -(void)filmToSplitBuilding
 {
     [self loadMovieNamed:@"02_TRANS_BLDG_UNBUILD.m4v" isTapToPauseEnabled:NO belowSubview:nil];
-	[_uib_SplitOpenBtn removeFromSuperview];
+	[_uiv_tapCircle removeFromSuperview];
 
 	[self loadSplitAssets];
 }
@@ -203,43 +212,59 @@ static CGFloat backButtonActualHeight = 44;
 	
 	//[self performSelector:@selector(loadCompaniesHotspots) withObject:nil afterDelay:3.33];
 	
-	[_uib_back setTag:1];
-	NSLog(@"_uib_back %li",(long)_uib_back.tag);
+	[_uib_backBtn setTag:1];
+	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
 
 #pragma mark - menu buttons
 -(void)createBackButton
 {
 	NSLog(@"createBackButton AGAIN");
+		_uib_backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+		_uib_backBtn.frame = CGRectMake(backButtonX, 0.0, 58, backButtonHeight);
+		[_uib_backBtn setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
+		[self.view addSubview:_uib_backBtn];
+		[_uib_backBtn addTarget:self action:@selector(performSelectorFromArray) forControlEvents:UIControlEventTouchUpInside];
+		_uib_backBtn.layer.zPosition = MAXFLOAT;
+		[_uib_backBtn setTag:0];
+		NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
+	
+}
 
-    _uib_back = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_back.frame = CGRectMake(backButtonX, 0.0, 58, backButtonHeight);
-    [_uib_back setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
-    [self.view addSubview:_uib_back];
-    [_uib_back addTarget:self action:@selector(performSelectorFromArray) forControlEvents:UIControlEventTouchUpInside];
-    _uib_back.layer.zPosition = MAXFLOAT;
-	[_uib_back setTag:0];
-	NSLog(@"_uib_back %li",(long)_uib_back.tag);
+-(void)hideBackButton
+{
+	NSLog(@"hideBackButton");
+	self.uib_backBtn.hidden = YES;
+	self.uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
+	[_uil_Company setHidden:YES];
+}
+
+-(void)unhideBackButton
+{
+	NSLog(@"==unhideBackButton");
+	self.uib_backBtn.hidden = NO;
+	self.uib_backBtn.transform = CGAffineTransformIdentity;
+	[_uil_Company setHidden:NO];
 }
 
 -(void)performSelectorFromArray
 {
-	NSValue *val = _arr_BreadCrumbOfImages[_uib_back.tag];
+	NSValue *val = _arr_BreadCrumbOfImages[_uib_backBtn.tag];
 	SEL mySelector = [val pointerValue];
 	//	[self performSelector:mySelector];
 	IMP imp = [self methodForSelector:mySelector];
 	void (*func)(id, SEL) = (void *)imp;
 	func(self, mySelector);
 	
-	NSLog(@"_uib_back %li",(long)_uib_back.tag);
+	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
 
 -(void)reloadBuildingVC
 {
 	NSLog(@"should be tag 0");
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
-	[_uib_back setTag:0];
-	NSLog(@"_uib_back %li",(long)_uib_back.tag);
+	[_uib_backBtn setTag:0];
+	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
 
 
@@ -257,8 +282,8 @@ static CGFloat backButtonActualHeight = 44;
 	[_uib_CompanyBtn removeFromSuperview];
 	
 	[self updateStillFrameUnderFilm:@"02_HERO_BLDG.png"];
-	[_uib_back setTag:0];
-	NSLog(@"_uib_back %li",(long)_uib_back.tag);
+	[_uib_backBtn setTag:0];
+	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 	
 	[self initSplitOpenBtn];
 
@@ -380,7 +405,7 @@ static CGFloat backButtonActualHeight = 44;
 {
 	[self removeHotspots];
 
-	[_uib_back setTag:2];
+	[_uib_backBtn setTag:2];
 
     NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"hotspotsData" ofType:@"plist"];
@@ -619,7 +644,7 @@ static CGFloat backButtonActualHeight = 44;
 			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
 			_uil_HotspotTitle.frame = CGRectMake(-40, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
 			
-			_uib_back.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
+			_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
 
 		} completion:^(BOOL completed)
@@ -670,7 +695,7 @@ static CGFloat backButtonActualHeight = 44;
 	[UIView animateWithDuration:0.5 animations:^{
 		_uil_Company.frame = CGRectMake(14, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
 		_uil_HotspotTitle.frame = CGRectMake(74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
-		_uib_back.transform = CGAffineTransformIdentity;
+		_uib_backBtn.transform = CGAffineTransformIdentity;
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
 	} completion:^(BOOL completed) {
 		
@@ -739,7 +764,9 @@ static CGFloat backButtonActualHeight = 44;
         _avPlayer = nil;
 		[_uiv_movieContainer removeFromSuperview];
 		_uiv_movieContainer=nil;
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        //[[NSNotificationCenter defaultCenter] removeObserver:self];
+		[[NSNotificationCenter defaultCenter] removeObserver:self name:@"playerItemLoop:" object:nil];
+		[[NSNotificationCenter defaultCenter] removeObserver:self name:@"playerItemDidReachEnd:" object:nil];
     }
 	
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];

@@ -10,4 +10,5 @@
 
 @interface buildingViewController : UIViewController
 @property (nonatomic,strong) NSString *transitionClipName;
+-(void)hideBackButton;
 @end
