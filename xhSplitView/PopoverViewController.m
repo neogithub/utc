@@ -67,7 +67,7 @@
 	
 	if (indexPath.row == 0) {
 		//cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-		cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grfx_accessory.png"]];
+		cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-rt-arrow.png"]];
 
 	}
     

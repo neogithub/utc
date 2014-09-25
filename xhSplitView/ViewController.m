@@ -41,7 +41,7 @@ static CGFloat menuButtonHeights = 51;
 
 @property (nonatomic, strong) UIButton                          *uib_splitCtrl;
 @property (nonatomic, strong) UIButton                          *uib_help;
-@property (nonatomic, strong) UIView							*uiv_tapCircle;
+@property (nonatomic, strong) UIView							*uiv_tapSquare;
 
 @property (nonatomic, strong) xhSplitViewController             *splitVC;
 @property (nonatomic, strong) masterViewController              *masterView;
@@ -92,19 +92,24 @@ static CGFloat menuButtonHeights = 51;
     
     _uiiv_initImage.userInteractionEnabled = YES;
 	
-	_uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
-	_uiv_tapCircle.frame = CGRectMake(490, 670, 43, 43);
-	_uiv_tapCircle.layer.cornerRadius = _uiv_tapCircle.frame.size.width/2;
-	[_uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
-	[_uiv_tapCircle setUserInteractionEnabled:YES];
+	_uiv_tapSquare = [[UIView alloc] initWithFrame:CGRectZero];
+	_uiv_tapSquare.frame = CGRectMake(473, 670, 80, 80);
+	//_uiv_tapSquare.layer.cornerRadius = _uiv_tapSquare.frame.size.width/2;
+	[_uiv_tapSquare setBackgroundColor:[UIColor clearColor]];
+	[_uiv_tapSquare setUserInteractionEnabled:YES];
 	
-	[_uiiv_initImage addSubview:_uiv_tapCircle];
+	UIView *uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
+	uiv_tapCircle.frame = CGRectMake(20, 20, 40, 40);
+	uiv_tapCircle.layer.cornerRadius = uiv_tapCircle.frame.size.width/2;
+	[uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
+	[_uiv_tapSquare addSubview:uiv_tapCircle];
+	
+	[_uiiv_initImage addSubview:_uiv_tapSquare];
 	
 	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadMap:)];
-    [_uiv_tapCircle addGestureRecognizer: tapOnImg];
+    [_uiv_tapSquare addGestureRecognizer: tapOnImg];
 	
-	[self pulse:_uiv_tapCircle.layer];
-
+	[self pulse:_uiv_tapSquare.layer];
 }
 
 #pragma mark PulseAnim

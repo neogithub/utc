@@ -53,7 +53,7 @@ static CGFloat backButtonActualHeight = 44;
 @property (nonatomic, strong) AVPlayerLayer					*avPlayerLayer;
 @property (nonatomic, strong) UIButton						*uib_logoBtn;
 @property (nonatomic, strong) UIButton						*uib_backBtn;
-@property (nonatomic, strong) UIView						*uiv_tapCircle;
+@property (nonatomic, strong) UIView						*uiv_tapSquare;
 @property (nonatomic, strong) UIButton						*uib_CompanyBtn;
 @property (nonatomic, strong) UILabel						*uil_filmHint;
 @property (nonatomic, strong) UIImageView *hotspotImageView;
@@ -141,28 +141,36 @@ static CGFloat backButtonActualHeight = 44;
 #pragma mark - buttons for splitting view and otis logo
 -(void)initSplitOpenBtn
 {
-	_uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
-	_uiv_tapCircle.frame = CGRectMake(490, 670, 43, 43);
-	_uiv_tapCircle.layer.cornerRadius = _uiv_tapCircle.frame.size.width/2;
-	[_uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
-	[_uiv_tapCircle setUserInteractionEnabled:YES];
+	// add container
+	_uiv_tapSquare = [[UIView alloc] initWithFrame:CGRectZero];
+	_uiv_tapSquare.frame = CGRectMake(473, 670, 80, 80);
+	[_uiv_tapSquare setBackgroundColor:[UIColor clearColor]];
+	[_uiv_tapSquare setUserInteractionEnabled:YES];
+
+	UIView *uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
+	uiv_tapCircle.frame = CGRectMake(20, 20, 40, 40);
+	uiv_tapCircle.layer.cornerRadius = uiv_tapCircle.frame.size.width/2;
+	[uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
 	
 	if (_uiv_movieContainer) {
-		[self.view insertSubview:_uiv_tapCircle belowSubview:_uiv_movieContainer];
+		[self.view insertSubview:_uiv_tapSquare belowSubview:_uiv_movieContainer];
 	} else {
-		[self.view addSubview:_uiv_tapCircle];
+		[self.view addSubview:_uiv_tapSquare];
 	}
 	
+	//[self.view addSubview:uiv_circleContainer];
+	[_uiv_tapSquare addSubview:uiv_tapCircle];
+	
 	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(filmToSplitBuilding)];
-    [_uiv_tapCircle addGestureRecognizer: tapOnImg];
+    [_uiv_tapSquare addGestureRecognizer: tapOnImg];
 
-	[self pulse:_uiv_tapCircle.layer];
+	[self pulse:uiv_tapCircle.layer];
 }
 
 -(void)initLogoBtn
 {
 	_uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_CompanyBtn.frame = CGRectMake(469.0, 177.0, 82, 55);
+    _uib_CompanyBtn.frame = CGRectMake(469.0, 180.0, 87, 55);
     _uib_CompanyBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
     [_uib_CompanyBtn addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchUpInside];
     [_uis_zoomingImg.blurView addSubview:_uib_CompanyBtn];
@@ -173,7 +181,7 @@ static CGFloat backButtonActualHeight = 44;
 -(void)filmToSplitBuilding
 {
     [self loadMovieNamed:@"02_TRANS_BLDG_UNBUILD_5.m4v" isTapToPauseEnabled:NO belowSubview:nil];
-	[_uiv_tapCircle removeFromSuperview];
+	[_uiv_tapSquare removeFromSuperview];
 	[self loadSplitAssets];
 }
 
@@ -193,7 +201,7 @@ static CGFloat backButtonActualHeight = 44;
 	[self removeHotspotTitle];
 	[self removeCompanyTitle];
 	
-	[self updateStillFrameUnderFilm:@"otis_building_split.jpg"];
+	[self updateStillFrameUnderFilm:@"03A Building Cut.png"];
 
 	[self initLogoBtn];
 	
