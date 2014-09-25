@@ -366,6 +366,7 @@ static CGFloat menuButtonHeights = 51;
 			_uib_splitCtrl.hidden = YES;
 			NSLog(@"hideDetailChrome");
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"hideDetailChrome" object:nil];
+			[_detailView.view setUserInteractionEnabled:NO];
         }];
     }
     else {
@@ -376,6 +377,7 @@ static CGFloat menuButtonHeights = 51;
         }];
 		NSLog(@"====unhideDetailChrome");
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"unhideDetailChrome" object:nil];
+		[_detailView.view setUserInteractionEnabled:YES];
 
     }
 }
