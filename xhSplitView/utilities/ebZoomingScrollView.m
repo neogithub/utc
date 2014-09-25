@@ -86,7 +86,7 @@
 		h.frame = CGRectMake(1024-36, 0, 36, 36);
 		//[h setTitle:@"X" forState:UIControlStateNormal];
 		//h.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
-		[h setImage:[UIImage imageNamed:@"icon close.png"] forState:UIControlStateNormal];
+		[h setImage:[UIImage imageNamed:@"close bttn.png"] forState:UIControlStateNormal];
 		[h setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		//set their selector using add selector
 		[h addTarget:self action:@selector(removeRenderScroll:) forControlEvents:UIControlEventTouchUpInside];

@@ -13,6 +13,9 @@
 #import "buildingViewController.h"
 #import "AppDelegate.h"
 #import "GHWalkThroughView.h"
+@import MediaPlayer;
+#import <AVFoundation/AVPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 static NSString * const sampleDesc1 = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt laoreet diam, id suscipit ipsum sagittis a. ";
 
@@ -45,6 +48,9 @@ static CGFloat menuButtonHeights = 51;
 @property (nonatomic, strong) detailViewController              *detailView;
 @property (nonatomic, strong) buildingViewController            *otisView;
 @property (nonatomic, strong) UIImageView						*uiiv_initImage;
+@property (nonatomic, strong) AVPlayer*							avPlayer;
+@property (nonatomic, strong) AVPlayerLayer*					avPlayerLayer;
+@property (nonatomic, strong) UIView*							uiv_movieContainer;
 @end
 
 @implementation ViewController
@@ -80,7 +86,7 @@ static CGFloat menuButtonHeights = 51;
 
 -(void)setInitialImage
 {
-    _uiiv_initImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash.png"]];
+    _uiiv_initImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"00_LOGO_TRANS_HERO_CITY.png"]];
     _uiiv_initImage.frame = CGRectMake(0.0, 0.0, 1024.0, 768.0);
     [self.view addSubview: _uiiv_initImage];
     
@@ -118,7 +124,9 @@ static CGFloat menuButtonHeights = 51;
 
 -(void)loadMap:(UIGestureRecognizer *)gesture
 {
-    UIView *image = gesture.view;
+	[self loadMovieNamed:@"00_LOGO_TRANS_HERO_CITY.mov" isTapToPauseEnabled:NO];
+
+	UIView *image = gesture.view;
 	
 	[UIView animateWithDuration:0.33 animations:^{
         _uiiv_initImage.alpha = 0.0;
@@ -128,6 +136,110 @@ static CGFloat menuButtonHeights = 51;
 		[image removeFromSuperview];
     }];
 }
+
+#pragma mark - play movie
+-(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled
+{
+	
+	NSString* fileName = [moviename stringByDeletingPathExtension];
+	NSString* extension = [moviename pathExtension];
+	
+	NSString *url = [[NSBundle mainBundle] pathForResource:fileName
+                                                    ofType:extension];
+    
+	/*
+	if (tapToPauseEnabled == YES) {
+		NSLog(@"tapToPauseEnabled == YES");
+		_isPauseable = YES;
+		
+		[UIView animateWithDuration:0.5 animations:^{
+			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
+			_uil_HotspotTitle.frame = CGRectMake(-74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
+		} completion:nil];
+	}
+	
+	
+    if (_avPlayer) {
+        [_avPlayerLayer removeFromSuperlayer];
+        _avPlayerLayer = nil;
+        _avPlayer = nil;
+		[_uiv_movieContainer removeFromSuperview];
+		_uiv_movieContainer=nil;
+        //[[NSNotificationCenter defaultCenter] removeObserver:self];
+		[[NSNotificationCenter defaultCenter] removeObserver:self name:@"playerItemLoop:" object:nil];
+		[[NSNotificationCenter defaultCenter] removeObserver:self name:@"playerItemDidReachEnd:" object:nil];
+    }
+	 */
+	
+	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
+	[_uiv_movieContainer setBackgroundColor:[UIColor clearColor]];
+	
+	[self.view addSubview:_uiv_movieContainer];
+	
+	
+	_avPlayer = [AVPlayer playerWithURL:[NSURL fileURLWithPath:url]] ;
+    _avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
+    _avPlayerLayer.frame = CGRectMake(0.0, 0.0, 1024, 768);
+	
+	if (!tapToPauseEnabled) {
+		NSString *imageNameFromMovieName = [NSString stringWithFormat:@"%@.png",[fileName stringByDeletingPathExtension]];
+		UIImage *image = [self flipImage:[UIImage imageNamed:imageNameFromMovieName]];
+		
+		_avPlayerLayer.backgroundColor = [UIColor colorWithPatternImage:image].CGColor;
+	} else {
+		_avPlayerLayer.backgroundColor = [UIColor blackColor].CGColor;
+	}
+	
+    [_uiv_movieContainer.layer addSublayer: _avPlayerLayer];
+    
+    [_avPlayer play];
+    
+	//[self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
+	
+	NSString *selectorAfterMovieFinished;
+	
+	selectorAfterMovieFinished = @"playerItemDidReachEnd:";
+
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:NSSelectorFromString(selectorAfterMovieFinished)
+												 name:AVPlayerItemDidPlayToEndTimeNotification
+											   object:[_avPlayer currentItem]];
+	
+}
+
+- (UIImage *)flipImage:(UIImage *)image
+{
+    UIGraphicsBeginImageContext(image.size);
+    CGContextDrawImage(UIGraphicsGetCurrentContext(),CGRectMake(0.,0., image.size.width, image.size.height),image.CGImage);
+    UIImage *i = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return i;
+}
+
+
+
+- (void)playerItemDidReachEnd:(NSNotification *)notification {
+    [self closeMovie];
+}
+
+-(void)playerItemLoop:(NSNotification *)notification
+{
+	AVPlayerItem *p = [notification object];
+	[p seekToTime:kCMTimeZero];
+	[_avPlayer play];
+}
+
+-(void)closeMovie
+{
+	
+	[_avPlayerLayer removeFromSuperlayer];
+	_avPlayerLayer = nil;
+	[_uiv_movieContainer removeFromSuperview];
+	_uiv_movieContainer=nil;
+}
+
+
 
 -(void)moveSplitBtnLeft
 {
@@ -172,14 +284,14 @@ static CGFloat menuButtonHeights = 51;
 
 - (void) configurePage:(GHWalkThroughPageCell *)cell atIndex:(NSInteger)index
 {
-    cell.title = [NSString stringWithFormat:@"This is page %d", index+1];
+    cell.title = [NSString stringWithFormat:@"This is page %ld", index+1];
 	// cell.titleImage = [UIImage imageNamed:[NSString stringWithFormat:@"title%ld", index+1]];
     cell.desc = [self.descStrings objectAtIndex:index];
 }
 
 - (UIImage*) bgImageforPage:(NSInteger)index
 {
-    NSString* imageName =[NSString stringWithFormat:@"bg_0%d.jpg", index+1];
+    NSString* imageName =[NSString stringWithFormat:@"bg_0%ld.jpg", index+1];
     UIImage* image = [UIImage imageNamed:imageName];
     return image;
 }

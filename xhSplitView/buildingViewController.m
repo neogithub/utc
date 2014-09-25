@@ -718,10 +718,48 @@ static CGFloat backButtonActualHeight = 44;
 	return str_width;
 }
 
+- (void) handlePanGesture:(UIPanGestureRecognizer*)pan{
+	
+    CGPoint translate = [pan translationInView:self.view];
+    CGFloat xCoord = translate.x;
+    double diff = (xCoord);
+    //NSLog(@"%F",diff);
+	
+	CMTime duration = self.avPlayer.currentItem.asset.duration;
+	float seconds = CMTimeGetSeconds(duration);
+	NSLog(@"duration: %.2f", seconds);
+	
+	
+	CGFloat gh = 0;
+	//[_avPlayer seekToTime:CMTimeMakeWithSeconds(seconds*(Float64)diff , 1024) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+	
+    if (diff>=0) {
+        //If the difference is positive
+        //moviePlayer.currentPlaybackTime = [moviePlayer currentPlaybackTime] + (diff/10);
+		NSLog(@"%f",diff);
+		gh = diff;
+    } else {
+        //If the difference is negative
+        //moviePlayer.currentPlaybackTime = [moviePlayer currentPlaybackTime] - (diff/10);
+		NSLog(@"%f",diff*-1);
+		gh = diff*-1;
+    }
+	
+	float minValue = 0;
+	float maxValue = 1024;
+	float value = gh;
+	
+	double time = seconds * (value - minValue) / (maxValue - minValue);
+	NSLog(@"Seek Time in Seconds is : %f", time);
+	//NSEC_PER_SEC
+	//600
+	//10
+	[_avPlayer seekToTime:CMTimeMakeWithSeconds(time, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+}
+
 #pragma mark - play movie
 -(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled belowSubview:(UIView*)belowSubview
 {
-	
 	
 	NSString* fileName = [moviename stringByDeletingPathExtension];
 	NSString* extension = [moviename pathExtension];
@@ -754,6 +792,14 @@ static CGFloat backButtonActualHeight = 44;
 	
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
 	[_uiv_movieContainer setBackgroundColor:[UIColor clearColor]];
+	
+	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+	
+    [_uiv_movieContainer addGestureRecognizer:panGesture];
+	
+    [_uiv_movieContainer setUserInteractionEnabled:YES];
+    [_uiv_movieContainer addGestureRecognizer:panGesture];
+	
 	
 	if (belowSubview != nil) {
 		[self.view insertSubview:_uiv_movieContainer belowSubview:belowSubview];
@@ -791,7 +837,7 @@ static CGFloat backButtonActualHeight = 44;
 		h.frame = CGRectMake(1024-36, 0, 36, 36);
 		//[h setTitle:@"X" forState:UIControlStateNormal];
 		//h.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
-		[h setBackgroundImage:[UIImage imageNamed:@"icon close.png"] forState:UIControlStateNormal];
+		[h setBackgroundImage:[UIImage imageNamed:@"close bttn.png"] forState:UIControlStateNormal];
 		[h setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		//set their selector using add selector
 		[h addTarget:self action:@selector(closeMovie) forControlEvents:UIControlEventTouchUpInside];
