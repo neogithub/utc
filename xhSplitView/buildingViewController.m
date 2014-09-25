@@ -161,28 +161,19 @@ static CGFloat backButtonActualHeight = 44;
 
 -(void)initLogoBtn
 {
-	//[self loadCompaniesHotspots];
-	
 	_uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _uib_CompanyBtn.frame = CGRectMake(469.0, 177.0, 82, 55);
     _uib_CompanyBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
     [_uib_CompanyBtn addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchUpInside];
     [_uis_zoomingImg.blurView addSubview:_uib_CompanyBtn];
 	[self pulse:_uib_CompanyBtn.layer];
-
-//	UIImage *bgImage = [UIImage imageNamed:@"03A Building Cut  hotspots.png"];
-//	_hotspotImageView = [[UIImageView alloc] initWithImage:bgImage];
-//	_hotspotImageView.frame = CGRectMake(0, 0, bgImage.size.width, bgImage.size.height);
-//	[self.view addSubview:_hotspotImageView];
-
 }
 
 #pragma mark - Actions to play path to hero and split hero
 -(void)filmToSplitBuilding
 {
-    [self loadMovieNamed:@"02_TRANS_BLDG_UNBUILD.m4v" isTapToPauseEnabled:NO belowSubview:nil];
+    [self loadMovieNamed:@"02_TRANS_BLDG_UNBUILD_5.m4v" isTapToPauseEnabled:NO belowSubview:nil];
 	[_uiv_tapCircle removeFromSuperview];
-
 	[self loadSplitAssets];
 }
 
@@ -205,13 +196,10 @@ static CGFloat backButtonActualHeight = 44;
 	[self updateStillFrameUnderFilm:@"otis_building_split.jpg"];
 
 	[self initLogoBtn];
-	//[self loadCompaniesHotspots];
 	
 	[self removeHotspots];
 	[_arr_hotspotsArray removeAllObjects];
-	
-	//[self performSelector:@selector(loadCompaniesHotspots) withObject:nil afterDelay:3.33];
-	
+		
 	[_uib_backBtn setTag:1];
 	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
@@ -362,11 +350,6 @@ static CGFloat backButtonActualHeight = 44;
 -(void)removeHotspotTitle
 {
 	[self animate:_uil_HotspotTitle direction:LabelOffscreen];
-	
-//	_uil_Company.frame = CGRectMake(_uil_Company.frame.origin.x+74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
-//	_uil_HotspotTitle.frame = CGRectMake(_uil_HotspotTitle.frame.origin.x+74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
-//	_uib_back.transform = CGAffineTransformMakeTranslation(-72, 0);
-//	[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
 }
 
 -(void)animate:(UIView*)viewmove direction:(NSInteger)d
@@ -770,7 +753,7 @@ static CGFloat backButtonActualHeight = 44;
     }
 	
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
-	[_uiv_movieContainer setBackgroundColor:[UIColor redColor]];
+	[_uiv_movieContainer setBackgroundColor:[UIColor clearColor]];
 	
 	if (belowSubview != nil) {
 		[self.view insertSubview:_uiv_movieContainer belowSubview:belowSubview];
@@ -782,7 +765,15 @@ static CGFloat backButtonActualHeight = 44;
     _avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
     _avPlayerLayer.frame = CGRectMake(0.0, 0.0, 1024, 768);
 	
-    _avPlayerLayer.backgroundColor = [UIColor blackColor].CGColor;
+	if (!tapToPauseEnabled) {
+		NSString *imageNameFromMovieName = [NSString stringWithFormat:@"%@.png",[fileName stringByDeletingPathExtension]];
+		UIImage *image = [self flipImage:[UIImage imageNamed:imageNameFromMovieName]];
+		
+		_avPlayerLayer.backgroundColor = [UIColor colorWithPatternImage:image].CGColor;
+	} else {
+		_avPlayerLayer.backgroundColor = [UIColor blackColor].CGColor;
+	}
+	
     [_uiv_movieContainer.layer addSublayer: _avPlayerLayer];
     
     [_avPlayer play];
@@ -820,6 +811,15 @@ static CGFloat backButtonActualHeight = 44;
 		doubleTapMovie.numberOfTapsRequired = 2;
 		[self.view addGestureRecognizer:doubleTapMovie];
 	}
+}
+
+- (UIImage *)flipImage:(UIImage *)image
+{
+    UIGraphicsBeginImageContext(image.size);
+    CGContextDrawImage(UIGraphicsGetCurrentContext(),CGRectMake(0.,0., image.size.width, image.size.height),image.CGImage);
+    UIImage *i = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return i;
 }
 
 -(void)addMovieGestures

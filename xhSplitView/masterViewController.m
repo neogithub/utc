@@ -175,11 +175,11 @@
 		selectedRow = (int)indexPath.row;
 		return;
 	} else if (indexPath.row != selectedRow) {
-		
+		//TODO: connect to data instaed of passing hard number
 		NSLog(@"The tapped cell is %i", (int)indexPath.row);
 		NSDictionary* dict = [NSDictionary dictionaryWithObject:
-							  [NSNumber numberWithInt:(int)indexPath.row]
-														 forKey:@"index"];
+							  [NSNumber numberWithInt:1]
+														 forKey:@"buttontag"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
 															object:self
 														  userInfo:dict];

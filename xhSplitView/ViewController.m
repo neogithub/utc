@@ -266,8 +266,11 @@ static CGFloat menuButtonHeights = 51;
 -(void)updateDetailView:(NSNotification *)notification
 {
     //TODO: pick building from data model
+	//TODO: connect to data instaed of passing hard number
 	//int index = [[[notification userInfo] valueForKey:@"index"] intValue];
     int pass = [[[notification userInfo] valueForKey:@"buttontag"] intValue];
+	
+	NSLog(@"pass %i",pass);
 	
 	switch (pass) {
 		case 0:

@@ -16,6 +16,12 @@
 		2018676E19D2082600ADB82F /* Marker_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 2018676A19D2082600ADB82F /* Marker_Right.png */; };
 		2032387A19D3070600D5D75C /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2032387819D3070600D5D75C /* splash.png */; };
 		2032387B19D3070600D5D75C /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2032387919D3070600D5D75C /* splash@2x.png */; };
+		2032387F19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2032387C19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_4.m4v */; };
+		2032388019D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_5.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2032387D19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_5.m4v */; };
+		2032388119D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_6.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2032387E19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_6.m4v */; };
+		209AEFA319D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFA019D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG_4.png */; };
+		209AEFA419D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFA119D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD_5.png */; };
+		209AEFA519D44D5D0074A3EA /* 03_TRANS_ELEV.png in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFA219D44D5D0074A3EA /* 03_TRANS_ELEV.png */; };
 		20A39E8919C23D1F00C71430 /* companyHotspotsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20A39E8819C23D1F00C71430 /* companyHotspotsData.plist */; };
 		20A39EA619C32F8800C71430 /* bg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A39E9719C32F8800C71430 /* bg_01.jpg */; };
 		20A39EA719C32F8800C71430 /* bg_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A39E9819C32F8800C71430 /* bg_02.jpg */; };
@@ -135,6 +141,12 @@
 		2018676A19D2082600ADB82F /* Marker_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marker_Right.png; sourceTree = "<group>"; };
 		2032387819D3070600D5D75C /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		2032387919D3070600D5D75C /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
+		2032387C19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_4.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02_TRANS_BLDG_UNBUILD_4.m4v; path = films/02_TRANS_BLDG_UNBUILD_4.m4v; sourceTree = "<group>"; };
+		2032387D19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_5.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02_TRANS_BLDG_UNBUILD_5.m4v; path = films/02_TRANS_BLDG_UNBUILD_5.m4v; sourceTree = "<group>"; };
+		2032387E19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_6.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02_TRANS_BLDG_UNBUILD_6.m4v; path = films/02_TRANS_BLDG_UNBUILD_6.m4v; sourceTree = "<group>"; };
+		209AEFA019D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01_TRANS_CITY_TO_BLDG_4.png; sourceTree = "<group>"; };
+		209AEFA119D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02_TRANS_BLDG_UNBUILD_5.png; sourceTree = "<group>"; };
+		209AEFA219D44D5D0074A3EA /* 03_TRANS_ELEV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03_TRANS_ELEV.png; sourceTree = "<group>"; };
 		20A39E8819C23D1F00C71430 /* companyHotspotsData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = companyHotspotsData.plist; path = DataStore/companyHotspotsData.plist; sourceTree = "<group>"; };
 		20A39E9719C32F8800C71430 /* bg_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg_01.jpg; path = GHWalkThrough/bg_01.jpg; sourceTree = "<group>"; };
 		20A39E9819C32F8800C71430 /* bg_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg_02.jpg; path = GHWalkThrough/bg_02.jpg; sourceTree = "<group>"; };
@@ -309,6 +321,9 @@
 		20A95A6419CBDCA400132F7E /* films */ = {
 			isa = PBXGroup;
 			children = (
+				2032387C19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_4.m4v */,
+				2032387D19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_5.m4v */,
+				2032387E19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_6.m4v */,
 				2018676519D1F48A00ADB82F /* 01_TRANS_CITY_TO_BLDG_4.m4v */,
 				20A95A7E19CC695800132F7E /* 02_TRANS_BLDG_UNBUILD.m4v */,
 				20A95A7819CC32DC00132F7E /* 01_TRANS_CITY_TO_BLDG.m4v */,
@@ -480,6 +495,9 @@
 		82A66AE319B7942900C8E12A /* grfx */ = {
 			isa = PBXGroup;
 			children = (
+				209AEFA019D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG_4.png */,
+				209AEFA119D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD_5.png */,
+				209AEFA219D44D5D0074A3EA /* 03_TRANS_ELEV.png */,
 				2032387819D3070600D5D75C /* splash.png */,
 				2032387919D3070600D5D75C /* splash@2x.png */,
 				200B9D0B19D25E7B00C7E7AC /* menu header.png */,
@@ -622,17 +640,21 @@
 				20A39EB119C32F8800C71430 /* title4@2x.png in Resources */,
 				824F14E119CB390800628F01 /* grfx_cellArrow.png in Resources */,
 				20D0B00D19BF52100096021D /* companies.json in Resources */,
+				2032387F19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_4.m4v in Resources */,
 				824F14DE19CB360300628F01 /* grfx_cellBG@2x.jpg in Resources */,
 				82A66AF519B7950600C8E12A /* otis-hotpost-still@2x.png in Resources */,
 				20BB4D6419D1B64300108046 /* grfx_accessory@2x.png in Resources */,
 				20A95A5219CBB82800132F7E /* icon close.png in Resources */,
 				824F14DA19CB359900628F01 /* panelTableViewCell.xib in Resources */,
+				209AEFA419D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD_5.png in Resources */,
+				2032388019D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_5.m4v in Resources */,
 				20A95A7619CC313F00132F7E /* 01_HERO_CITY.png in Resources */,
 				2018676E19D2082600ADB82F /* Marker_Right.png in Resources */,
 				20A39EAF19C32F8800C71430 /* title2@2x.png in Resources */,
 				824F14F019CB59CA00628F01 /* titleTableViewCell.xib in Resources */,
 				82A66AF419B7950600C8E12A /* otis-hotpost-still.png in Resources */,
 				20A95A5A19CBB89E00132F7E /* swipe-to-reveal@2x.png in Resources */,
+				2032388119D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_6.m4v in Resources */,
 				2018676B19D2082600ADB82F /* Marker.png in Resources */,
 				82A66ADD19B792C700C8E12A /* xhSplitViewController.xib in Resources */,
 				20D0B00C19BF52100096021D /* buildings.json in Resources */,
@@ -672,7 +694,9 @@
 				20A39EC019C3351C00C71430 /* bg_01@2x.jpg in Resources */,
 				20A39EA819C32F8800C71430 /* bg_03.jpg in Resources */,
 				20A39E8919C23D1F00C71430 /* companyHotspotsData.plist in Resources */,
+				209AEFA519D44D5D0074A3EA /* 03_TRANS_ELEV.png in Resources */,
 				20A39EBD19C3351C00C71430 /* bg_04@2x.jpg in Resources */,
+				209AEFA319D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG_4.png in Resources */,
 				82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */,
 				20A95A7D19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				824F14DD19CB360300628F01 /* grfx_cellBG.jpg in Resources */,

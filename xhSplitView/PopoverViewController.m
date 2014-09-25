@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	
-	self.preferredContentSize = CGSizeMake(180.0, 133.0); //used instead
+	self.preferredContentSize = CGSizeMake(190.0, 133.0); //used instead
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
