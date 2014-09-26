@@ -378,7 +378,6 @@ static CGFloat menuButtonHeights = 51;
 		NSLog(@"====unhideDetailChrome");
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"unhideDetailChrome" object:nil];
 		[_detailView.view setUserInteractionEnabled:YES];
-
     }
 }
 

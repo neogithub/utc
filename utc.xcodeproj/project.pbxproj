@@ -19,6 +19,11 @@
 		2032387F19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2032387C19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_4.m4v */; };
 		2032388019D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_5.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2032387D19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_5.m4v */; };
 		2032388119D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_6.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2032387E19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_6.m4v */; };
+		206063D219D4F7500045163F /* 05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063D119D4F7500045163F /* 05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov */; };
+		206063D519D4FC9C0045163F /* 05_HOTSPOT_D_ERT.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063D319D4FC9C0045163F /* 05_HOTSPOT_D_ERT.mov */; };
+		206063D619D4FC9C0045163F /* 05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063D419D4FC9C0045163F /* 05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.mov */; };
+		206063D919D501E10045163F /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063D719D501E10045163F /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov */; };
+		206063DA19D501E10045163F /* 05_HOTSPOT_C_REGEN_DRIVE.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063D819D501E10045163F /* 05_HOTSPOT_C_REGEN_DRIVE.mov */; };
 		209AEFA319D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFA019D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG_4.png */; };
 		209AEFA419D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFA119D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD_5.png */; };
 		209AEFA519D44D5D0074A3EA /* 03_TRANS_ELEV.png in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFA219D44D5D0074A3EA /* 03_TRANS_ELEV.png */; };
@@ -152,6 +157,11 @@
 		2032387C19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_4.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02_TRANS_BLDG_UNBUILD_4.m4v; path = films/02_TRANS_BLDG_UNBUILD_4.m4v; sourceTree = "<group>"; };
 		2032387D19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_5.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02_TRANS_BLDG_UNBUILD_5.m4v; path = films/02_TRANS_BLDG_UNBUILD_5.m4v; sourceTree = "<group>"; };
 		2032387E19D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_6.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02_TRANS_BLDG_UNBUILD_6.m4v; path = films/02_TRANS_BLDG_UNBUILD_6.m4v; sourceTree = "<group>"; };
+		206063D119D4F7500045163F /* 05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov; path = films/05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov; sourceTree = "<group>"; };
+		206063D319D4FC9C0045163F /* 05_HOTSPOT_D_ERT.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 05_HOTSPOT_D_ERT.mov; path = films/05_HOTSPOT_D_ERT.mov; sourceTree = "<group>"; };
+		206063D419D4FC9C0045163F /* 05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.mov; path = films/05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.mov; sourceTree = "<group>"; };
+		206063D719D501E10045163F /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 05_HOTSPOT_A_COATED_STEEL_BELTS.mov; path = films/05_HOTSPOT_A_COATED_STEEL_BELTS.mov; sourceTree = "<group>"; };
+		206063D819D501E10045163F /* 05_HOTSPOT_C_REGEN_DRIVE.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 05_HOTSPOT_C_REGEN_DRIVE.mov; path = films/05_HOTSPOT_C_REGEN_DRIVE.mov; sourceTree = "<group>"; };
 		209AEFA019D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01_TRANS_CITY_TO_BLDG_4.png; sourceTree = "<group>"; };
 		209AEFA119D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02_TRANS_BLDG_UNBUILD_5.png; sourceTree = "<group>"; };
 		209AEFA219D44D5D0074A3EA /* 03_TRANS_ELEV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03_TRANS_ELEV.png; sourceTree = "<group>"; };
@@ -337,6 +347,11 @@
 		20A95A6419CBDCA400132F7E /* films */ = {
 			isa = PBXGroup;
 			children = (
+				206063D719D501E10045163F /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov */,
+				206063D819D501E10045163F /* 05_HOTSPOT_C_REGEN_DRIVE.mov */,
+				206063D319D4FC9C0045163F /* 05_HOTSPOT_D_ERT.mov */,
+				206063D419D4FC9C0045163F /* 05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.mov */,
+				206063D119D4F7500045163F /* 05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov */,
 				209AEFA619D47C410074A3EA /* 00_LOGO_TRANS_HERO_CITY.mov */,
 				20A95A7819CC32DC00132F7E /* 01_TRANS_CITY_TO_BLDG.m4v */,
 				2018676519D1F48A00ADB82F /* 01_TRANS_CITY_TO_BLDG_4.m4v */,
@@ -662,6 +677,7 @@
 				20A95A5E19CBC1AA00132F7E /* icon marker left.png in Resources */,
 				20A39EBC19C3351C00C71430 /* bg_05@2x.jpg in Resources */,
 				2018676D19D2082600ADB82F /* Marker_Right@2x.png in Resources */,
+				206063DA19D501E10045163F /* 05_HOTSPOT_C_REGEN_DRIVE.mov in Resources */,
 				209AEFB419D4947B0074A3EA /* 03A Building Cut.png in Resources */,
 				20A39EA619C32F8800C71430 /* bg_01.jpg in Resources */,
 				20A95A6B19CBDCB700132F7E /* 05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.m4v in Resources */,
@@ -682,6 +698,7 @@
 				20A39EAF19C32F8800C71430 /* title2@2x.png in Resources */,
 				824F14F019CB59CA00628F01 /* titleTableViewCell.xib in Resources */,
 				82A66AF419B7950600C8E12A /* otis-hotpost-still.png in Resources */,
+				206063D619D4FC9C0045163F /* 05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				209AEFA919D481180074A3EA /* 00_LOGO_TRANS_HERO_CITY.png in Resources */,
 				20A95A5A19CBB89E00132F7E /* swipe-to-reveal@2x.png in Resources */,
 				2032388119D344BF00D5D75C /* 02_TRANS_BLDG_UNBUILD_6.m4v in Resources */,
@@ -697,6 +714,7 @@
 				82A66AF919B79D6C00C8E12A /* otis_building_split@2x.jpg in Resources */,
 				209AEFAE19D48C650074A3EA /* close bttn.png in Resources */,
 				200B9D0E19D25E7B00C7E7AC /* menu header@2x.png in Resources */,
+				206063D519D4FC9C0045163F /* 05_HOTSPOT_D_ERT.mov in Resources */,
 				20A39EB019C32F8800C71430 /* title3@2x.png in Resources */,
 				824F14E519CB4C9200628F01 /* grfx_tableBg.png in Resources */,
 				20A95A7C19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png in Resources */,
@@ -708,6 +726,7 @@
 				20A95A7719CC313F00132F7E /* 02_HERO_BLDG.png in Resources */,
 				824F14E219CB390800628F01 /* grfx_cellArrow@2x.png in Resources */,
 				20A95A4F19CBB82800132F7E /* icon home@2x.png in Resources */,
+				206063D219D4F7500045163F /* 05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov in Resources */,
 				824F14E619CB4C9200628F01 /* grfx_tableBg@2x.png in Resources */,
 				82A66AF819B79D6C00C8E12A /* otis_building_split.jpg in Resources */,
 				20A95A7219CC2CE300132F7E /* 03_TRANS_ELEV.m4v in Resources */,
@@ -722,6 +741,7 @@
 				20A95A5B19CBB89E00132F7E /* swipe-to-reveal.png in Resources */,
 				20A95A5519CBB82800132F7E /* icon back@2x.png in Resources */,
 				82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */,
+				206063D919D501E10045163F /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov in Resources */,
 				20A39EC019C3351C00C71430 /* bg_01@2x.jpg in Resources */,
 				20A39EA819C32F8800C71430 /* bg_03.jpg in Resources */,
 				20A39E8919C23D1F00C71430 /* companyHotspotsData.plist in Resources */,

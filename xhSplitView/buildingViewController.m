@@ -448,10 +448,11 @@ static CGFloat backButtonActualHeight = 44;
 }
 
 - (IBAction)showPopover:(UIButton *)sender {
-    PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
-    self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
-	PopoverView.delegate = self;
-    [self.popOver presentPopoverFromRect:sender.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+	
+  PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
+  self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
+  PopoverView.delegate = self;
+  [self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
 #pragma mark - PopoverViewControllerDelegate method
@@ -593,19 +594,19 @@ static CGFloat backButtonActualHeight = 44;
 			
 			switch (i) {
 				case 0:
-					[self loadMovieNamed:@"05_HOTSPOT_F_REMOTE_DIAGNOSTICS.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 1:
-					[self loadMovieNamed:@"05_HOTSPOT_C_REGEN_DRIVE.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"05_HOTSPOT_C_REGEN_DRIVE.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 2:
-					[self loadMovieNamed:@"05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 3:
-					[self loadMovieNamed:@"05_HOTSPOT_D_ERT.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"05_HOTSPOT_D_ERT.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 4:
-					[self loadMovieNamed:@"05_HOTSPOT_A_COATED_STEEL_BELTS.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"05_HOTSPOT_A_COATED_STEEL_BELTS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 5:
 					[self loadMovieNamed:@"05_HOTSPOT_B_COMPACT_CONTROLLER.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
@@ -683,7 +684,7 @@ static CGFloat backButtonActualHeight = 44;
 #pragma mark - unhide Chrome
 -(void)unhideChrome
 {
-	[UIView animateWithDuration:0.5 animations:^{
+	[UIView animateWithDuration:0.33 animations:^{
 		_uil_Company.frame = CGRectMake(14, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
 		_uil_HotspotTitle.frame = CGRectMake(74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
 		_uib_backBtn.transform = CGAffineTransformIdentity;
@@ -780,7 +781,7 @@ static CGFloat backButtonActualHeight = 44;
 		NSLog(@"tapToPauseEnabled == YES");
 		_isPauseable = YES;
 		
-		[UIView animateWithDuration:0.5 animations:^{
+		[UIView animateWithDuration:0.3 animations:^{
 			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
 			_uil_HotspotTitle.frame = CGRectMake(-74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
 		} completion:nil];
@@ -961,7 +962,7 @@ static CGFloat backButtonActualHeight = 44;
 		[self unhideChrome];
 	}
 
-	[UIView animateWithDuration:0.5 animations:^{
+	[UIView animateWithDuration:0.3 animations:^{
 		_uis_zoomingImg.alpha = 1.0;
 			
 	} completion:^(BOOL completed) {
