@@ -180,7 +180,7 @@ static CGFloat backButtonActualHeight = 44;
 #pragma mark - Actions to play path to hero and split hero
 -(void)filmToSplitBuilding
 {
-    [self loadMovieNamed:@"02_TRANS_BLDG_UNBUILD_5.m4v" isTapToPauseEnabled:NO belowSubview:nil];
+    [self loadMovieNamed:@"02_TRANS_BLDG_UNBUILD.mov" isTapToPauseEnabled:NO belowSubview:nil];
 	[_uiv_tapSquare removeFromSuperview];
 	[self loadSplitAssets];
 }
@@ -188,7 +188,7 @@ static CGFloat backButtonActualHeight = 44;
 -(void)filmTransitionToHotspots
 {
 	 _uib_logoBtn.hidden = YES;
-    [self loadMovieNamed:@"03_TRANS_ELEV.m4v" isTapToPauseEnabled:NO belowSubview:nil];
+    [self loadMovieNamed:@"03_TRANS_ELEV.mov" isTapToPauseEnabled:NO belowSubview:nil];
     [self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
 	
 	[self createHotspots];
@@ -609,7 +609,7 @@ static CGFloat backButtonActualHeight = 44;
 					[self loadMovieNamed:@"05_HOTSPOT_A_COATED_STEEL_BELTS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 5:
-					[self loadMovieNamed:@"05_HOTSPOT_B_COMPACT_CONTROLLER.m4v" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"05_HOTSPOT_B_COMPACT_CONTROLLER.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 					
 				default:
@@ -802,12 +802,12 @@ static CGFloat backButtonActualHeight = 44;
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
 	[_uiv_movieContainer setBackgroundColor:[UIColor clearColor]];
 	
-	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+	//UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
 	
-    [_uiv_movieContainer addGestureRecognizer:panGesture];
+    //[_uiv_movieContainer addGestureRecognizer:panGesture];
 	
-    [_uiv_movieContainer setUserInteractionEnabled:YES];
-    [_uiv_movieContainer addGestureRecognizer:panGesture];
+    //[_uiv_movieContainer setUserInteractionEnabled:YES];
+    //[_uiv_movieContainer addGestureRecognizer:panGesture];
 	
 	
 	if (belowSubview != nil) {

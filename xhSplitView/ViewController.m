@@ -80,7 +80,7 @@ static CGFloat menuButtonHeights = 51;
 
 	if (((AppDelegate*)[UIApplication sharedApplication].delegate).firstRun)
     {
-        [self showHelp];
+        //[self showHelp];
 	}
 }
 
