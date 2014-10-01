@@ -163,7 +163,22 @@
                     break;
                 }
             }
-        [cell.uil_title setText:_arr_companies[indexPath.row]];
+			
+			//advante3c gets a superscript 3
+			if (indexPath.row == 0)
+			{
+				UIFont *boldFont = [UIFont boldSystemFontOfSize:17];
+				NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:_arr_companies[indexPath.row]
+																									 attributes:@{NSFontAttributeName:boldFont}];
+				[attributedString setAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:10]
+												  , NSBaselineOffsetAttributeName : @8} range:NSMakeRange(7, 1)];
+				
+				cell.uil_title.attributedText = attributedString;
+			} else {
+				[cell.uil_title setText:_arr_companies[indexPath.row]];
+			}
+			
+			
         return cell;
     }
     return nil;

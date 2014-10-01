@@ -33,6 +33,7 @@ static CGFloat backButtonActualHeight = 44;
 {
 	CGFloat companyLabelWidth;
 	CGFloat hotspotLabelWidth;
+	CGFloat time;
 }
 
 @property (nonatomic,strong) UIPopoverController *popOver;
@@ -84,6 +85,8 @@ static CGFloat backButtonActualHeight = 44;
 	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO belowSubview:nil];
 	// add in the bg image beneath the film
 	[self createStillFrameUnderFilm];
+	
+	time = 1;
 		
 	// DEBUG
 #warning Debug for swiping or doubletapping
@@ -729,7 +732,68 @@ static CGFloat backButtonActualHeight = 44;
 
 - (void) handlePanGesture:(UIPanGestureRecognizer*)pan{
 	
-    CGPoint translate = [pan translationInView:self.view];
+	/*
+	//CGFloat time = 1;
+	CGPoint vel = [pan velocityInView:self.view];
+	
+    if (vel.x > 0)
+    {
+        // user dragged towards the right
+		NSLog(@"+");
+		time ++;
+    }
+    else
+    {
+        // user dragged towards the left
+		NSLog(@"-");
+		time --;
+
+    }
+	NSLog(@"time %f", time);
+
+	[_avPlayer seekToTime:CMTimeMakeWithSeconds(time, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+	
+	if(pan.state == UIGestureRecognizerStateEnded){
+		time = 0;
+	}
+	*/
+	
+	
+//	CGPoint translate = [pan translationInView:self.view];
+//	CGFloat xCoord = translate.x;
+//    double diff = (xCoord);
+//    NSLog(@"%F",diff);
+	
+	//[_avPlayer seekToTime:CMTimeMakeWithSeconds(time, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+	
+	/*
+	CGPoint translation = [pan translationInView:self.view];
+	
+    // Figure out where the user is trying to drag the view.
+    CGPoint newCenter = CGPointMake(self.view.bounds.size.width / 2,
+									pan.view.center.y + translation.y);
+	
+    // See if the new position is in bounds.
+    if (newCenter.y >= 160 && newCenter.y <= 300) {
+        pan.view.center = newCenter;
+        [pan setTranslation:CGPointZero inView:self.view];
+    }
+	*/
+	
+	
+	if(pan.state == UIGestureRecognizerStateEnded){
+		[_avPlayer play];
+	} else {
+		CGPoint velocity = [pan translationInView:self.view];
+		CGFloat xVel = velocity.x;
+		int i = xVel*100;
+		CGFloat rate = i/10000;
+		[_avPlayer seekToTime:CMTimeMakeWithSeconds(rate, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+	}
+	
+	
+    /*
+	CGPoint translate = [pan translationInView:self.view];
     CGFloat xCoord = translate.x;
     double diff = (xCoord);
     //NSLog(@"%F",diff);
@@ -764,6 +828,7 @@ static CGFloat backButtonActualHeight = 44;
 	//600
 	//10
 	[_avPlayer seekToTime:CMTimeMakeWithSeconds(time, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+	 */
 }
 
 #pragma mark - play movie
@@ -802,9 +867,9 @@ static CGFloat backButtonActualHeight = 44;
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
 	[_uiv_movieContainer setBackgroundColor:[UIColor clearColor]];
 	
-	//UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
 	
-    //[_uiv_movieContainer addGestureRecognizer:panGesture];
+    [_uiv_movieContainer addGestureRecognizer:panGesture];
 	
     //[_uiv_movieContainer setUserInteractionEnabled:YES];
     //[_uiv_movieContainer addGestureRecognizer:panGesture];
