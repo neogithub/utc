@@ -79,7 +79,11 @@
 	
 	for (int i = 0; i < [totalDataArray count]; i++) {
         NSDictionary *hotspotItem = totalDataArray [i];
+#ifdef NEODEMO
+		[_arr_companies addObject:[hotspotItem objectForKey:@"demoName"]];
+#else
 		[_arr_companies addObject:[hotspotItem objectForKey:@"fileName"]];
+#endif
 	}
 	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
@@ -164,7 +168,9 @@
                 }
             }
 			
-			//advante3c gets a superscript 3
+#ifdef NEODEMO
+			[cell.uil_title setText:_arr_companies[indexPath.row]];
+#else
 			if (indexPath.row == 0)
 			{
 				UIFont *boldFont = [UIFont boldSystemFontOfSize:17];
@@ -177,6 +183,11 @@
 			} else {
 				[cell.uil_title setText:_arr_companies[indexPath.row]];
 			}
+#endif
+			
+			
+			//advante3c gets a superscript 3
+			
 			
 			
         return cell;

@@ -204,8 +204,12 @@ static CGFloat backButtonActualHeight = 44;
 	[self removeHotspotTitle];
 	[self removeCompanyTitle];
 	
+#ifdef NEODEMO
+	[self updateStillFrameUnderFilm:@"03A Building Cut DEMO.png"];
+#else
 	[self updateStillFrameUnderFilm:@"03A Building Cut.png"];
-
+#endif
+	
 	[self initLogoBtn];
 	
 	[self removeHotspots];
@@ -296,7 +300,13 @@ static CGFloat backButtonActualHeight = 44;
     _uiv_textBoxContainer = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view insertSubview:_uiv_textBoxContainer aboveSubview:_uiv_movieContainer];
     _uiv_textBoxContainer.layer.zPosition = MAXFLOAT;
+	
+#ifdef NEODEMO
+	[self setCompanyTitle:@"Elevator"];
+#else
 	[self setCompanyTitle:@"Otis"];
+#endif
+	
 }
 
 -(void)setCompanyTitle:(NSString *)year
