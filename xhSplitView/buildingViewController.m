@@ -173,10 +173,20 @@ static CGFloat backButtonActualHeight = 44;
 -(void)initLogoBtn
 {
 	_uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_CompanyBtn.frame = CGRectMake(469.0, 180.0, 87, 55);
+	
+#ifdef NEODEMO
+	_uib_CompanyBtn.frame = CGRectMake(565.0, 245.0, 40, 40);
+	_uib_CompanyBtn.layer.cornerRadius = _uib_CompanyBtn.frame.size.width/2;
+	
+#else
+	_uib_CompanyBtn.frame = CGRectMake(469.0, 180.0, 87, 55);
+	
+#endif
+	
     _uib_CompanyBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
     [_uib_CompanyBtn addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchUpInside];
     [_uis_zoomingImg.blurView addSubview:_uib_CompanyBtn];
+	
 	[self pulse:_uib_CompanyBtn.layer];
 }
 

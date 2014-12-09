@@ -171,6 +171,7 @@
 #ifdef NEODEMO
 			[cell.uil_title setText:_arr_companies[indexPath.row]];
 #else
+			//advante3c gets a superscript 3
 			if (indexPath.row == 0)
 			{
 				UIFont *boldFont = [UIFont boldSystemFontOfSize:17];
@@ -184,12 +185,7 @@
 				[cell.uil_title setText:_arr_companies[indexPath.row]];
 			}
 #endif
-			
-			
-			//advante3c gets a superscript 3
-			
-			
-			
+		
         return cell;
     }
     return nil;
@@ -204,7 +200,7 @@
 		//TODO: connect to data instaed of passing hard number
 		NSLog(@"The tapped cell is %i", (int)indexPath.row);
 		NSDictionary* dict = [NSDictionary dictionaryWithObject:
-							  [NSNumber numberWithInt:1]
+							  [NSNumber numberWithInt:3]
 														 forKey:@"buttontag"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
 															object:self
