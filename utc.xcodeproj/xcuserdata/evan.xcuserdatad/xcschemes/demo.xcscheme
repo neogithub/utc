@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-               BuildableName = "utc.app"
-               BlueprintName = "utc"
+               BlueprintIdentifier = "20E546C41A2DFEF40073B2CF"
+               BuildableName = "utc copy.app"
+               BlueprintName = "demo"
                ReferencedContainer = "container:utc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,33 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82A66AB819B7926B00C8E12A"
-               BuildableName = "utcTests.xctest"
-               BlueprintName = "utcTests"
-               ReferencedContainer = "container:utc.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "20E546AD1A2DFDCD0073B2CF"
-               BuildableName = "demoTests.xctest"
-               BlueprintName = "demoTests"
-               ReferencedContainer = "container:utc.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "utc.app"
-            BlueprintName = "utc"
+            BlueprintIdentifier = "20E546C41A2DFEF40073B2CF"
+            BuildableName = "utc copy.app"
+            BlueprintName = "demo"
             ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "utc.app"
-            BlueprintName = "utc"
+            BlueprintIdentifier = "20E546C41A2DFEF40073B2CF"
+            BuildableName = "utc copy.app"
+            BlueprintName = "demo"
             ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -89,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "utc.app"
-            BlueprintName = "utc"
+            BlueprintIdentifier = "20E546C41A2DFEF40073B2CF"
+            BuildableName = "utc copy.app"
+            BlueprintName = "demo"
             ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -100,7 +80,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Store"
+      buildConfiguration = "ReleaseLite"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
