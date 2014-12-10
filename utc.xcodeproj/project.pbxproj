@@ -73,6 +73,16 @@
 		20A95A7719CC313F00132F7E /* 02_HERO_BLDG.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7519CC313F00132F7E /* 02_HERO_BLDG.png */; };
 		20A95A7C19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */; };
 		20A95A7D19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */; };
+		20BA88BB1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */; };
+		20BA88BC1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */; };
+		20BA88BF1A378EEF00705945 /* embUiViewCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BE1A378EEF00705945 /* embUiViewCard.m */; };
+		20BA88C01A378EEF00705945 /* embUiViewCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BE1A378EEF00705945 /* embUiViewCard.m */; };
+		20BA88C41A37941900705945 /* text_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BA88C11A37941900705945 /* text_bg@2x.png */; };
+		20BA88C51A37941900705945 /* text_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BA88C11A37941900705945 /* text_bg@2x.png */; };
+		20BA88C61A37941900705945 /* text_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BA88C21A37941900705945 /* text_bg.png */; };
+		20BA88C71A37941900705945 /* text_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BA88C21A37941900705945 /* text_bg.png */; };
+		20BA88C81A37941900705945 /* card_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BA88C31A37941900705945 /* card_mask.png */; };
+		20BA88C91A37941900705945 /* card_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BA88C31A37941900705945 /* card_mask.png */; };
 		20BB4D6319D1B64300108046 /* grfx_accessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D6119D1B64300108046 /* grfx_accessory.png */; };
 		20BB4D6419D1B64300108046 /* grfx_accessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D6219D1B64300108046 /* grfx_accessory@2x.png */; };
 		20CEFE3719D1018700BEB200 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CEFE3519D1018700BEB200 /* PopoverViewController.m */; };
@@ -312,6 +322,13 @@
 		20A95A7519CC313F00132F7E /* 02_HERO_BLDG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 02_HERO_BLDG.png; path = images/02_HERO_BLDG.png; sourceTree = "<group>"; };
 		20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 03_HERO_BLDG_SECTION.png; path = images/03_HERO_BLDG_SECTION.png; sourceTree = "<group>"; };
 		20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 04_HOTSPOT_CROSS_SECTION.png; path = images/04_HOTSPOT_CROSS_SECTION.png; sourceTree = "<group>"; };
+		20BA88B91A378EDB00705945 /* NSTimer+CVPausable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+CVPausable.h"; sourceTree = "<group>"; };
+		20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+CVPausable.m"; sourceTree = "<group>"; };
+		20BA88BD1A378EEE00705945 /* embUiViewCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = embUiViewCard.h; sourceTree = "<group>"; };
+		20BA88BE1A378EEF00705945 /* embUiViewCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = embUiViewCard.m; sourceTree = "<group>"; };
+		20BA88C11A37941900705945 /* text_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text_bg@2x.png"; sourceTree = "<group>"; };
+		20BA88C21A37941900705945 /* text_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text_bg.png; sourceTree = "<group>"; };
+		20BA88C31A37941900705945 /* card_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_mask.png; sourceTree = "<group>"; };
 		20BB4D6119D1B64300108046 /* grfx_accessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grfx_accessory.png; sourceTree = "<group>"; };
 		20BB4D6219D1B64300108046 /* grfx_accessory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grfx_accessory@2x.png"; sourceTree = "<group>"; };
 		20CEFE3419D1018700BEB200 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
@@ -594,6 +611,10 @@
 		82A66ADE19B793BD00C8E12A /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				20BA88BD1A378EEE00705945 /* embUiViewCard.h */,
+				20BA88BE1A378EEF00705945 /* embUiViewCard.m */,
+				20BA88B91A378EDB00705945 /* NSTimer+CVPausable.h */,
+				20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */,
 				20A39E9619C32F7000C71430 /* GHWalkThrough */,
 				20D0B06519C0D7440096021D /* neoHotspotsView.h */,
 				20D0B06619C0D7440096021D /* neoHotspotsView.m */,
@@ -624,6 +645,9 @@
 		82A66AE319B7942900C8E12A /* grfx */ = {
 			isa = PBXGroup;
 			children = (
+				20BA88C11A37941900705945 /* text_bg@2x.png */,
+				20BA88C21A37941900705945 /* text_bg.png */,
+				20BA88C31A37941900705945 /* card_mask.png */,
 				209AEFAA19D48C650074A3EA /* close bttn.png */,
 				209AEFAB19D48C650074A3EA /* close bttn@2x.png */,
 				209AEFAC19D48C650074A3EA /* icon-rt-arrow.png */,
@@ -776,6 +800,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BA88C51A37941900705945 /* text_bg@2x.png in Resources */,
+				20BA88C71A37941900705945 /* text_bg.png in Resources */,
 				20E546DD1A2DFEF40073B2CF /* 02_TRANS_BLDG_UNBUILD.mov in Resources */,
 				20E546DE1A2DFEF40073B2CF /* icon main menu.png in Resources */,
 				20E546DF1A2DFEF40073B2CF /* icon-rt-arrow.png in Resources */,
@@ -837,6 +863,7 @@
 				20E547181A2DFEF40073B2CF /* grfx_cellArrow@2x.png in Resources */,
 				20E547191A2DFEF40073B2CF /* icon home@2x.png in Resources */,
 				20E5471A1A2DFEF40073B2CF /* 05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov in Resources */,
+				20BA88C91A37941900705945 /* card_mask.png in Resources */,
 				20E5471B1A2DFEF40073B2CF /* grfx_tableBg@2x.png in Resources */,
 				20E5471D1A2DFEF40073B2CF /* icon main menu@2x.png in Resources */,
 				20E5471E1A2DFEF40073B2CF /* bg_06.jpg in Resources */,
@@ -893,6 +920,7 @@
 				206063DA19D501E10045163F /* 05_HOTSPOT_C_REGEN_DRIVE.mov in Resources */,
 				209AEFB419D4947B0074A3EA /* 03A Building Cut.png in Resources */,
 				20A39EA619C32F8800C71430 /* bg_01.jpg in Resources */,
+				20BA88C61A37941900705945 /* text_bg.png in Resources */,
 				20A39EB119C32F8800C71430 /* title4@2x.png in Resources */,
 				824F14E119CB390800628F01 /* grfx_cellArrow.png in Resources */,
 				209AEFB519D4947B0074A3EA /* 03A Building Cut@2x.png in Resources */,
@@ -944,6 +972,7 @@
 				20A95A5519CBB82800132F7E /* icon back@2x.png in Resources */,
 				82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */,
 				206063D919D501E10045163F /* 05_HOTSPOT_A_COATED_STEEL_BELTS.mov in Resources */,
+				20BA88C41A37941900705945 /* text_bg@2x.png in Resources */,
 				20A39EC019C3351C00C71430 /* bg_01@2x.jpg in Resources */,
 				20A39EA819C32F8800C71430 /* bg_03.jpg in Resources */,
 				20A39E8919C23D1F00C71430 /* companyHotspotsData.plist in Resources */,
@@ -957,6 +986,7 @@
 				20A39EC419C33C9100C71430 /* grfx_helpBtn@2x.png in Resources */,
 				209AEFA719D47C410074A3EA /* 00_LOGO_TRANS_HERO_CITY.mov in Resources */,
 				2018676C19D2082600ADB82F /* Marker@2x.png in Resources */,
+				20BA88C81A37941900705945 /* card_mask.png in Resources */,
 				20A95A4E19CBB82800132F7E /* icon home.png in Resources */,
 				206063DE19D517130045163F /* 05_HOTSPOT_B_COMPACT_CONTROLLER.mov in Resources */,
 				20A39EB219C32F8800C71430 /* title5@2x.png in Resources */,
@@ -983,6 +1013,7 @@
 				20E546C81A2DFEF40073B2CF /* companies.m in Sources */,
 				20E546C91A2DFEF40073B2CF /* ViewController.m in Sources */,
 				20E546CA1A2DFEF40073B2CF /* buildingViewController.m in Sources */,
+				20BA88C01A378EEF00705945 /* embUiViewCard.m in Sources */,
 				20E546CB1A2DFEF40073B2CF /* GHWalkThroughPageCell.m in Sources */,
 				20E546CC1A2DFEF40073B2CF /* City.m in Sources */,
 				20E546CD1A2DFEF40073B2CF /* masterViewController.m in Sources */,
@@ -990,6 +1021,7 @@
 				20E546CF1A2DFEF40073B2CF /* Building.m in Sources */,
 				20E546D01A2DFEF40073B2CF /* panelTableViewCell.m in Sources */,
 				20E546D11A2DFEF40073B2CF /* GHWalkThroughView.m in Sources */,
+				20BA88BC1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */,
 				20E546D21A2DFEF40073B2CF /* ebZoomingScrollView.m in Sources */,
 				20E546D31A2DFEF40073B2CF /* main.m in Sources */,
 				20E546D41A2DFEF40073B2CF /* detailViewController.m in Sources */,
@@ -1008,6 +1040,7 @@
 				20D0B01019BF53C30096021D /* companies.m in Sources */,
 				82A66AB219B7926B00C8E12A /* ViewController.m in Sources */,
 				82A66AD819B792BD00C8E12A /* buildingViewController.m in Sources */,
+				20BA88BF1A378EEF00705945 /* embUiViewCard.m in Sources */,
 				20A39EAB19C32F8800C71430 /* GHWalkThroughPageCell.m in Sources */,
 				20D0B00419BF4C280096021D /* City.m in Sources */,
 				82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */,
@@ -1015,6 +1048,7 @@
 				20D0B00819BF4EAD0096021D /* Building.m in Sources */,
 				824F14D919CB359900628F01 /* panelTableViewCell.m in Sources */,
 				20A39EAC19C32F8800C71430 /* GHWalkThroughView.m in Sources */,
+				20BA88BB1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */,
 				82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */,
 				82A66AA819B7926B00C8E12A /* main.m in Sources */,
 				82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */,
