@@ -79,11 +79,7 @@
 	
 	for (int i = 0; i < [totalDataArray count]; i++) {
         NSDictionary *hotspotItem = totalDataArray [i];
-#ifdef NEODEMO
-		[_arr_companies addObject:[hotspotItem objectForKey:@"demoName"]];
-#else
 		[_arr_companies addObject:[hotspotItem objectForKey:@"fileName"]];
-#endif
 	}
 	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
@@ -168,9 +164,6 @@
                 }
             }
 			
-#ifdef NEODEMO
-			[cell.uil_title setText:_arr_companies[indexPath.row]];
-#else
 			//advante3c gets a superscript 3
 			if (indexPath.row == 0)
 			{
@@ -184,8 +177,8 @@
 			} else {
 				[cell.uil_title setText:_arr_companies[indexPath.row]];
 			}
-#endif
-		
+			
+			
         return cell;
     }
     return nil;
@@ -200,7 +193,7 @@
 		//TODO: connect to data instaed of passing hard number
 		NSLog(@"The tapped cell is %i", (int)indexPath.row);
 		NSDictionary* dict = [NSDictionary dictionaryWithObject:
-							  [NSNumber numberWithInt:3]
+							  [NSNumber numberWithInt:1]
 														 forKey:@"buttontag"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
 															object:self
