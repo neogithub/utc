@@ -62,8 +62,8 @@ static CGFloat menuButtonHeights = 51;
 {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
-	// Do any additional setup after loading the view, typically from a nib.
-    [self prefersStatusBarHidden];
+
+	[self prefersStatusBarHidden];
     
     [self initMasterVC];
     [self initDetailVC];
