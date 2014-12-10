@@ -817,15 +817,15 @@ static CGFloat backButtonActualHeight = 44;
 	*/
 	
 	
-	if(pan.state == UIGestureRecognizerStateEnded){
-		[_avPlayer play];
-	} else {
-		CGPoint velocity = [pan translationInView:self.view];
-		CGFloat xVel = velocity.x;
-		int i = xVel*100;
-		CGFloat rate = i/10000;
-		[_avPlayer seekToTime:CMTimeMakeWithSeconds(rate, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
-	}
+//	if(pan.state == UIGestureRecognizerStateEnded){
+//		[_avPlayer play];
+//	} else {
+//		CGPoint velocity = [pan translationInView:self.view];
+//		CGFloat xVel = velocity.x;
+//		int i = xVel*100;
+//		CGFloat rate = i/10000;
+//		[_avPlayer seekToTime:CMTimeMakeWithSeconds(rate, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+//	}
 	
 	
     /*
