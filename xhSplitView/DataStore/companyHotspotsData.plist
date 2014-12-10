@@ -17,8 +17,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>Otis</string>
-		<key>demoName</key>
-		<string>Elevator</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -37,8 +35,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>Carrier</string>
-		<key>demoName</key>
-		<string>HVAC</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -57,8 +53,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>Taylor</string>
-		<key>demoName</key>
-		<string>Refrigeration</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -77,8 +71,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>Noresco</string>
-		<key>demoName</key>
-		<string>Energy Efficiency</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -97,8 +89,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>Marioff</string>
-		<key>demoName</key>
-		<string>Fire Protection</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -117,8 +107,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>Lenel</string>
-		<key>demoName</key>
-		<string>Security</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -137,8 +125,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>AdvanTE3C</string>
-		<key>demoName</key>
-		<string>Digital Signage</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -157,8 +143,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>AutomatedLogic</string>
-		<key>demoName</key>
-		<string>Automation</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -176,8 +160,6 @@
 		<key>RGB</key>
 		<string></string>
 		<key>fileName</key>
-		<string>Sustainability</string>
-		<key>demoName</key>
 		<string>Sustainability</string>
 		<key>alignment</key>
 		<integer>2</integer>
@@ -197,8 +179,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>Onity</string>
-		<key>demoName</key>
-		<string>Door Security</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -217,8 +197,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>Edwards</string>
-		<key>demoName</key>
-		<string>Life Safety</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
@@ -237,8 +215,6 @@
 		<string></string>
 		<key>fileName</key>
 		<string>Kidde</string>
-		<key>demoName</key>
-		<string>Fire Suppresion</string>
 		<key>alignment</key>
 		<integer>2</integer>
 	</dict>
