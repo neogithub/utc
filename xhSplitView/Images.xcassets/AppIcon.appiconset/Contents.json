@@ -3,37 +3,37 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "UTC-29.png",
+      "filename" : "Icons_settings_icon.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "UTC-29@2x.png",
+      "filename" : "Icons_settings_icon@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "UTC-40.png",
+      "filename" : "Icons_spotlight_icon.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "UTC-40@2x.png",
+      "filename" : "Icons_spotlight_icon@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "UTC-76.png",
+      "filename" : "Icons_ipad.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "UTC-76@2x.png",
+      "filename" : "Icons_ipad@2x.png",
       "scale" : "2x"
     }
   ],
