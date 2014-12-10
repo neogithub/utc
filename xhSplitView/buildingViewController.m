@@ -13,6 +13,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "neoHotspotsView.h"
 #import "PopoverViewController.h"
+#import "embUiViewCard.h"
+#import "NSTimer+CVPausable.h"
 
 enum { kEnableSwiping = YES };
 enum { kEnableDoubleTapToKillMovie = YES };
@@ -34,7 +36,13 @@ static CGFloat backButtonActualHeight = 44;
 	CGFloat companyLabelWidth;
 	CGFloat hotspotLabelWidth;
 	CGFloat time;
+	CGFloat removeTextAfterThisManySeconds;
+
+	NSMutableArray *arr_HotspotInfoCards;
+	UIView *uiv_HotspotInfoCardContainer;
 }
+
+@property (nonatomic) NSTimer *myTimer;
 
 @property (nonatomic,strong) UIPopoverController *popOver;
 
@@ -76,7 +84,9 @@ static CGFloat backButtonActualHeight = 44;
 {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
-		
+	
+	// init arrays and create avplayer
+	arr_HotspotInfoCards = [[NSMutableArray alloc] init];
 	_arr_hotspotsArray		= [[NSMutableArray alloc] init];
 	_arr_BreadCrumbOfImages = [[NSMutableArray alloc] init];
 	
@@ -173,10 +183,20 @@ static CGFloat backButtonActualHeight = 44;
 -(void)initLogoBtn
 {
 	_uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_CompanyBtn.frame = CGRectMake(469.0, 180.0, 87, 55);
+	
+#ifdef NEODEMO
+	_uib_CompanyBtn.frame = CGRectMake(565.0, 245.0, 40, 40);
+	_uib_CompanyBtn.layer.cornerRadius = _uib_CompanyBtn.frame.size.width/2;
+	
+#else
+	_uib_CompanyBtn.frame = CGRectMake(469.0, 180.0, 87, 55);
+	
+#endif
+	
     _uib_CompanyBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
     [_uib_CompanyBtn addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchUpInside];
     [_uis_zoomingImg.blurView addSubview:_uib_CompanyBtn];
+	
 	[self pulse:_uib_CompanyBtn.layer];
 }
 
@@ -204,8 +224,12 @@ static CGFloat backButtonActualHeight = 44;
 	[self removeHotspotTitle];
 	[self removeCompanyTitle];
 	
+#ifdef NEODEMO
+	[self updateStillFrameUnderFilm:@"03A Building Cut DEMO.png"];
+#else
 	[self updateStillFrameUnderFilm:@"03A Building Cut.png"];
-
+#endif
+	
 	[self initLogoBtn];
 	
 	[self removeHotspots];
@@ -296,7 +320,13 @@ static CGFloat backButtonActualHeight = 44;
     _uiv_textBoxContainer = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view insertSubview:_uiv_textBoxContainer aboveSubview:_uiv_movieContainer];
     _uiv_textBoxContainer.layer.zPosition = MAXFLOAT;
+	
+#ifdef NEODEMO
+	[self setCompanyTitle:@"Elevator"];
+#else
 	[self setCompanyTitle:@"Otis"];
+#endif
+	
 }
 
 -(void)setCompanyTitle:(NSString *)year
@@ -403,8 +433,14 @@ static CGFloat backButtonActualHeight = 44;
 
     NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"hotspotsData" ofType:@"plist"];
-    NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
-    
+	NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
+	
+	//Get the exact second to remove the text boxes
+	removeTextAfterThisManySeconds = [[totalDataDict objectForKey:@"removeafterseconds"] intValue];
+	
+	// get array of all hotspots
+    NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
+	
 	for (int i = 0; i < [totalDataArray count]; i++) {
         NSDictionary *hotspotItem = totalDataArray [i];
         
@@ -444,7 +480,7 @@ static CGFloat backButtonActualHeight = 44;
         //Get the type of hotspot
         NSString *str_type = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"type"]];
         _myHotspots.str_typeOfHs = str_type;
-		
+
         _myHotspots.tagOfHs = i;
         [_uis_zoomingImg.blurView addSubview:_myHotspots];
     }
@@ -895,9 +931,10 @@ static CGFloat backButtonActualHeight = 44;
 	}
 	
     [_uiv_movieContainer.layer addSublayer: _avPlayerLayer];
-    
-    [_avPlayer play];
-    
+	
+	// starts the player as well
+	[self beginSequence];
+	
 	[self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
 	
 	NSString *selectorAfterMovieFinished;
@@ -969,6 +1006,9 @@ static CGFloat backButtonActualHeight = 44;
 	AVPlayerItem *p = [notification object];
 	[p seekToTime:kCMTimeZero];
 	[_avPlayer play];
+	
+	// starts the player as well
+	[self beginSequence];
 }
 
 #pragma mark - control(s) for movie
@@ -990,9 +1030,11 @@ static CGFloat backButtonActualHeight = 44;
 -(void)tappedMovie:(UIGestureRecognizer*)gesture
 {
 	if ([_avPlayer rate] == 0.0) {
-		[_avPlayer play];
+		//[_avPlayer play];
+		[self resumeAnimation];
 	} else {
-		[_avPlayer pause];
+		//[_avPlayer pause];
+		[self pauseAnimation];
 	}
 	[self updateFilmHint];
 }
@@ -1007,12 +1049,14 @@ static CGFloat backButtonActualHeight = 44;
 }
 
 -(void)swipeUpPlay:(id)sender {
-    [_avPlayer play];
+	//[_avPlayer play];
+	[self resumeAnimation];
 	[self updateFilmHint];
 }
 
 -(void)swipeDownPause:(id)sender {
-    [_avPlayer pause];
+	//[_avPlayer pause];
+	[self pauseAnimation];
 	[self updateFilmHint];
 }
 
@@ -1040,7 +1084,356 @@ static CGFloat backButtonActualHeight = 44;
 		_uiv_movieContainer=nil;
 
 	}];
+	
+	if (_myTimer) {
+		[self.myTimer invalidate];
+		self.myTimer = nil;
+	}
 }
+
+//----------------------------------------------------
+#pragma mark - start sequences
+//----------------------------------------------------
+/*
+ start all info cards and movie in motion
+ */
+-(void)beginSequence
+{
+	[_avPlayer play];
+	[self startMovieTimer];
+	[self createCards];
+}
+
+//----------------------------------------------------
+#pragma mark - info cards
+//----------------------------------------------------
+/*
+ create info cards from model
+ */
+-(void)createCards
+{
+	uiv_HotspotInfoCardContainer = [[UIView alloc] initWithFrame:CGRectZero];
+	uiv_HotspotInfoCardContainer.layer.backgroundColor = [UIColor clearColor].CGColor;
+	uiv_HotspotInfoCardContainer.clipsToBounds = YES;
+	
+	[_uiv_movieContainer addSubview:uiv_HotspotInfoCardContainer];
+	
+	CGFloat textViewHeight = 0;
+	
+	NSString *path = [[NSBundle mainBundle] pathForResource:
+					  @"hotspotsData" ofType:@"plist"];
+	NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
+	
+	NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
+
+	NSDictionary *hotspotItem = totalDataArray [0];
+	NSArray *hotspotText = [hotspotItem objectForKey:@"hotspottext"];
+	
+	for (int i = 0; i < [hotspotText count]; i++) {
+		NSDictionary *box = hotspotText[i];
+		
+		embUiViewCard *card = [[embUiViewCard alloc] init];
+		[card setBackgroundColor:[[UIColor clearColor] colorWithAlphaComponent:0.5]];
+		card.delay = (int)[[box objectForKey:@"appearanceDelay"] integerValue];
+		card.text = [box objectForKey:@"copy"];
+		NSLog(@"%@",card.text);
+		
+		[card setFrame:CGRectMake(0, textViewHeight, 360, [self measureHeightOfUITextView:card.textView])];
+		card.alpha = 0;
+		[arr_HotspotInfoCards addObject:card];
+		[uiv_HotspotInfoCardContainer addSubview:card];
+		textViewHeight += [self measureHeightOfUITextView:card.textView];
+	}
+	
+	// update container frame now that we know the heights
+	uiv_HotspotInfoCardContainer.frame = CGRectMake(120, 200, 360, textViewHeight);
+	
+}
+
+-(void)removeCards
+{
+	NSInteger i = 0;
+	
+	for (embUiViewCard *card in arr_HotspotInfoCards)
+	{
+		
+		UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction;
+		[UIView animateWithDuration:.2 delay:((0.05 * i) + 0.2) options:options
+						 animations:^{
+							 card.alpha = 0.0;
+						 }
+						 completion:^(BOOL finished){
+							 [arr_HotspotInfoCards removeObject:card];
+						 }];
+		i += 1;
+	}
+}
+
+//----------------------------------------------------
+#pragma mark find card that should appear
+//----------------------------------------------------
+
+// find card and remove
+-(void)indexOfCardToReveal:(int)index
+{
+	for (embUiViewCard *card in arr_HotspotInfoCards)
+	{
+		if (card.delay == index) {
+			embUiViewCard *ccard = arr_HotspotInfoCards[[arr_HotspotInfoCards indexOfObject:card]];
+			[self revealCard:ccard afterDelay:0];
+		}
+	}
+	
+}
+
+//----------------------------------------------------
+#pragma mark reveal card
+//----------------------------------------------------
+
+// reveal card
+-(void)revealCard:(embUiViewCard*)card afterDelay:(CGFloat)delay
+{
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		
+		card.alpha = 1.0;
+		CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+		
+		NSLog(@"%@",[card description]);
+		
+		
+		// get index of card to know whether
+		// to animate it bouncing/falling
+		
+		NSUInteger index = [arr_HotspotInfoCards indexOfObject:card];
+		
+		embUiViewCard *ccard;
+		ccard =  [arr_HotspotInfoCards objectAtIndex:index];
+		
+		CGFloat startPointX = card.center.x;
+		CGFloat startPointY = card.center.y;
+		
+		NSLog(@"rect1: %f", startPointY);
+		
+		
+		UIView *maskView = [[UIView alloc] initWithFrame:CGRectMake(card.frame.origin.x, card.frame.origin.y, 360, card.frame.size.height+20)];
+		maskView.layer.backgroundColor = [UIColor clearColor].CGColor;
+		maskView.clipsToBounds = YES;
+		[maskView addSubview:card];
+		[uiv_HotspotInfoCardContainer addSubview:maskView];
+		
+		NSArray *values;
+		
+		if (index == 0) { // no animation of falling/bouncing
+			values = [NSArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(startPointX, startPointY)],
+					  [NSValue valueWithCGPoint:CGPointMake(startPointX, startPointY)], nil];
+		} else {
+			values = [NSArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(startPointX, -card.frame.size.height/2)],
+					  [NSValue valueWithCGPoint:CGPointMake(startPointX, card.frame.size.height/1.9)],
+					  [NSValue valueWithCGPoint:CGPointMake(startPointX, card.frame.size.height/2.1)],
+					  [NSValue valueWithCGPoint:CGPointMake(startPointX, card.frame.size.height/1.95)],
+					  [NSValue valueWithCGPoint:CGPointMake(startPointX, card.frame.size.height/2)], nil];
+		}
+		
+		[anim setValues:values];
+		[anim setDuration:1.0]; //seconds
+		anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+		
+		[card.layer addAnimation:anim forKey:@"position"];
+		
+		[card setCenter:CGPointMake(startPointX, card.frame.size.height/2)];
+		
+		NSLog(@"rect1: %@", NSStringFromCGRect(card.frame));
+		
+		CALayer *mask = [CALayer layer];
+		mask.contents = (id)[[UIImage imageNamed:@"card_mask.png"] CGImage];
+		
+		if (index == 0) {
+			mask.frame = CGRectMake(0, 0, 0, 0);
+			mask.anchorPoint = CGPointMake(0, 0);
+			
+			card.layer.mask = mask;
+			
+			CGRect oldBounds = mask.bounds;
+			CGRect newBounds = card.bounds;
+			
+			CABasicAnimation* revealAnimation = [CABasicAnimation animationWithKeyPath:@"bounds"];
+			revealAnimation.fromValue = [NSValue valueWithCGRect:oldBounds];
+			revealAnimation.toValue = [NSValue valueWithCGRect:newBounds];
+			revealAnimation.duration = 0.33;
+			
+			// Update the bounds so the layer doesn't snap back when the animation completes.
+			mask.bounds = newBounds;
+			
+			[mask addAnimation:revealAnimation forKey:@"revealAnimation"];
+			
+		}
+		
+	});
+}
+
+//----------------------------------------------------
+#pragma mark pause card animations
+//----------------------------------------------------
+/*
+ actions for pausing and resuming animations
+ */
+
+
+
+- (IBAction)pauseAnimation
+{
+	[_myTimer pauseOrResume];
+	
+	[_avPlayer pause];
+	
+	for (embUiViewCard *card in arr_HotspotInfoCards)
+	{
+		[self pauseLayer:card.layer];
+	}
+}
+
+- (IBAction)resumeAnimation
+{
+	[_avPlayer play];
+	
+	if (_myTimer.isPaused) {
+		[_myTimer pauseOrResume];
+	}
+	
+	for (embUiViewCard *card in arr_HotspotInfoCards)
+	{
+		[self resumeLayer:card.layer];
+	}
+}
+
+-(void)pauseLayer:(CALayer*)layer
+{
+	CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
+	layer.speed = 0.0;
+	layer.timeOffset = pausedTime;
+}
+
+-(void)resumeLayer:(CALayer*)layer
+{
+	CFTimeInterval pausedTime = [layer timeOffset];
+	layer.speed = 1.0;
+	layer.timeOffset = 0.0;
+	layer.beginTime = 0.0;
+	CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+	layer.beginTime = timeSincePause;
+}
+
+//----------------------------------------------------
+#pragma mark - timer
+//----------------------------------------------------
+/*
+ keeps track of number seconds elapsed
+ to help sync which card to reveal next
+ */
+
+-(void)startMovieTimer
+{
+	if (_myTimer) {
+		[self.myTimer invalidate];
+		self.myTimer = nil;
+	}
+	
+	self.myTimer = [NSTimer scheduledTimerWithTimeInterval:1
+													target:self
+												  selector:@selector(displayMyCurrentTime:)
+												  userInfo:nil
+												   repeats:YES];
+	
+	NSLog(@"== /n/nstart timer");
+}
+
+
+//----------------------------------------------------
+#pragma mark - utilties
+//----------------------------------------------------
+/*
+ calculate height of
+ */
+- (CGFloat)measureHeightOfUITextView:(UITextView *)textView
+{
+	if ([textView respondsToSelector:@selector(snapshotViewAfterScreenUpdates:)])
+	{
+		// This is the code for iOS 7. contentSize no longer returns the correct value, so
+		// we have to calculate it.
+		//
+		// This is partly borrowed from HPGrowingTextView, but I've replaced the
+		// magic fudge factors with the calculated values (having worked out where
+		// they came from)
+		
+		CGRect frame = textView.bounds;
+		
+		// Take account of the padding added around the text.
+		
+		UIEdgeInsets textContainerInsets = textView.textContainerInset;
+		UIEdgeInsets contentInsets = textView.contentInset;
+		
+		CGFloat leftRightPadding = textContainerInsets.left + textContainerInsets.right + textView.textContainer.lineFragmentPadding * 2 + contentInsets.left + contentInsets.right;
+		CGFloat topBottomPadding = textContainerInsets.top + textContainerInsets.bottom + contentInsets.top + contentInsets.bottom;
+		
+		frame.size.width -= leftRightPadding;
+		frame.size.height -= topBottomPadding;
+		
+		NSString *textToMeasure = textView.text;
+		if ([textToMeasure hasSuffix:@"\n"])
+		{
+			textToMeasure = [NSString stringWithFormat:@"%@-", textView.text];
+		}
+		
+		// NSString class method: boundingRectWithSize:options:attributes:context is
+		// available only on ios7.0 sdk.
+		
+		NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+		[paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
+		
+		NSDictionary *attributes = @{ NSFontAttributeName: [UIFont systemFontOfSize:18.5], NSParagraphStyleAttributeName : paragraphStyle };
+		
+		CGRect size = [textToMeasure boundingRectWithSize:CGSizeMake(360, MAXFLOAT)
+												  options:NSStringDrawingUsesLineFragmentOrigin
+											   attributes:attributes
+												  context:nil];
+		
+		NSLog(@"fontSize = \tbounds = (%f x %f)",
+			  size.size.width,
+			  size.size.height);
+		
+		CGFloat measuredHeight = ceilf(CGRectGetHeight(size) + topBottomPadding);
+		
+		NSLog(@"measuredHeight %f)",
+			  measuredHeight);
+		
+		return measuredHeight;
+	}
+	else
+	{
+		return textView.contentSize.height;
+	}
+}
+
+/*
+ as each second passes check if the seconds
+ match the reveal delay
+ */
+- (void)displayMyCurrentTime:(NSTimer *)timer
+{
+	CGFloat movieLength = CMTimeGetSeconds([_avPlayer currentTime]);
+	
+	int y = movieLength;
+	NSLog(@"seconds %i",y);
+	
+	if (y == removeTextAfterThisManySeconds) {
+		[self removeCards];
+	}
+	
+	// check if the seconds match the reveal delay
+	[self indexOfCardToReveal:y];
+}
+
+
 
 #pragma mark - boiler plate
 

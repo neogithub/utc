@@ -62,9 +62,15 @@ static CGFloat menuButtonHeights = 51;
 {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
+	// Do any additional setup after loading the view, typically from a nib.
+    [self prefersStatusBarHidden];
+	
+#ifdef NEODEMO
+	NSLog(@"Welcome to DEMO");
+#else
+	NSLog(@"Welcome to UTC");
+#endif
 
-	[self prefersStatusBarHidden];
-    
     [self initMasterVC];
     [self initDetailVC];
     [self initSplitVC];
@@ -86,7 +92,12 @@ static CGFloat menuButtonHeights = 51;
 
 -(void)setInitialImage
 {
-    _uiiv_initImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"00_LOGO_TRANS_HERO_CITY.png"]];
+#ifdef NEODEMO
+	_uiiv_initImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"00_LOGO_TRANS_HERO_CITY DEMO.png"]];
+#else
+	_uiiv_initImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"00_LOGO_TRANS_HERO_CITY.png"]];
+#endif
+	
     _uiiv_initImage.frame = CGRectMake(0.0, 0.0, 1024.0, 768.0);
     [self.view addSubview: _uiiv_initImage];
     
@@ -129,7 +140,11 @@ static CGFloat menuButtonHeights = 51;
 
 -(void)loadMap:(UIGestureRecognizer *)gesture
 {
+#ifdef NEODEMO
+	[self loadMovieNamed:@"00_LOGO_TRANS_HERO_CITY DEMO.mov" isTapToPauseEnabled:NO];
+#else
 	[self loadMovieNamed:@"00_LOGO_TRANS_HERO_CITY.mov" isTapToPauseEnabled:NO];
+#endif
 
 	UIView *image = gesture.view;
 	
