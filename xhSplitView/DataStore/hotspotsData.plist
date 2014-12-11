@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>removeafterseconds</key>
-	<integer>23</integer>
 	<key>hotspots</key>
 	<array>
 		<dict>
@@ -13,6 +11,8 @@
 			<string>icon marker right.png</string>
 			<key>xy</key>
 			<string>780,74</string>
+			<key>width</key>
+			<string>360</string>
 			<key>angle</key>
 			<string>180</string>
 			<key>caption</key>
@@ -23,33 +23,42 @@
 			<string>HOT_SPOT_COATED_STEEL_BELTS.m4v</string>
 			<key>alignment</key>
 			<integer>3</integer>
-			<key>hotspottext</key>
-			<array>
-				<dict>
-					<key>copy</key>
-					<string>Industry-changing, patented technology</string>
-					<key>appearanceDelay</key>
-					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Coated steel belts create a remarkably smooth ride</string>
-					<key>appearanceDelay</key>
-					<integer>5</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>New machine is 70% smaller than conventional geared machines</string>
-					<key>appearanceDelay</key>
-					<integer>9</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Machine actually fits inside the hoistway, eliminating machine room</string>
-					<key>appearanceDelay</key>
-					<integer>17</integer>
-				</dict>
-			</array>
+			<key>removeafterseconds</key>
+			<integer>23</integer>
+			<key>facts</key>
+			<dict>
+				<key>factscopy</key>
+				<array>
+					<dict>
+						<key>copy</key>
+						<string>All critical elevator functions are monitored 24/7 by Otis</string>
+						<key>appearanceDelay</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>Data gathering allows for custom service visits</string>
+						<key>appearanceDelay</key>
+						<integer>5</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>Identify issues before they become problems</string>
+						<key>appearanceDelay</key>
+						<integer>14</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>Technicians are dispatched automatically for urgent issues</string>
+						<key>appearanceDelay</key>
+						<integer>18</integer>
+					</dict>
+				</array>
+				<key>factwidth</key>
+				<string>300</string>
+				<key>factxy</key>
+				<string>130,300</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -58,6 +67,8 @@
 			<string>icon marker left.png</string>
 			<key>xy</key>
 			<string>580,120</string>
+			<key>width</key>
+			<string>360</string>
 			<key>angle</key>
 			<string>315</string>
 			<key>caption</key>
@@ -68,33 +79,30 @@
 			<string></string>
 			<key>alignment</key>
 			<integer>2</integer>
-			<key>hotspottext</key>
-			<array>
-				<dict>
-					<key>copy</key>
-					<string>Fireworks Graphical Command Interface/Incident Management Platform</string>
-					<key>appearanceDelay</key>
-					<integer>1</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Monitor and control all necessary life safety network information through a graphic display of your facilities down to the detail of a single location</string>
-					<key>appearanceDelay</key>
-					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Communicates other emergency events — weather, shelter in place, chemical spill, etc. — in lieu of an unsupervised intercom system</string>
-					<key>appearanceDelay</key>
-					<integer>7</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Optimum Start assures comfortable settings at time of occupancy based on building conditions and system capacity. Demand Reduction reduces energy use on a short-term basis in response to utility pricing, billing criteria, regional consumption, etc.</string>
-					<key>appearanceDelay</key>
-					<integer>11</integer>
-				</dict>
-			</array>
+			<key>removeafterseconds</key>
+			<integer>23</integer>
+			<key>facts</key>
+			<dict>
+				<key>factscopy</key>
+				<array>
+					<dict>
+						<key>copy</key>
+						<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+						<key>appearanceDelay</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+						<key>appearanceDelay</key>
+						<integer>10</integer>
+					</dict>
+				</array>
+				<key>factwidth</key>
+				<string>360</string>
+				<key>factxy</key>
+				<string>20,210</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -103,6 +111,8 @@
 			<string>icon marker left.png</string>
 			<key>xy</key>
 			<string>620,267</string>
+			<key>width</key>
+			<string>360</string>
 			<key>angle</key>
 			<string>270</string>
 			<key>caption</key>
@@ -113,33 +123,36 @@
 			<string>UTC_SPIN_ANIMATION.mov</string>
 			<key>alignment</key>
 			<integer>2</integer>
-			<key>hotspottext</key>
-			<array>
-				<dict>
-					<key>copy</key>
-					<string>Fireworks Graphical Command Interface/Incident Management Platform</string>
-					<key>appearanceDelay</key>
-					<integer>1</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Monitor and control all necessary life safety network information through a graphic display of your facilities down to the detail of a single location</string>
-					<key>appearanceDelay</key>
-					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Communicates other emergency events — weather, shelter in place, chemical spill, etc. — in lieu of an unsupervised intercom system</string>
-					<key>appearanceDelay</key>
-					<integer>7</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Optimum Start assures comfortable settings at time of occupancy based on building conditions and system capacity. Demand Reduction reduces energy use on a short-term basis in response to utility pricing, billing criteria, regional consumption, etc.</string>
-					<key>appearanceDelay</key>
-					<integer>11</integer>
-				</dict>
-			</array>
+			<key>removeafterseconds</key>
+			<integer>17</integer>
+			<key>facts</key>
+			<dict>
+				<key>factscopy</key>
+				<array>
+					<dict>
+						<key>copy</key>
+						<string>Doors open quietly and quickly - as fast as 1.4 seconds</string>
+						<key>appearanceDelay</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>Greatly reduced floor-to-floor travel times equals less wait time</string>
+						<key>appearanceDelay</key>
+						<integer>4</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>Direct drive technology means fewer moving parts and less maintenance</string>
+						<key>appearanceDelay</key>
+						<integer>8</integer>
+					</dict>
+				</array>
+				<key>factwidth</key>
+				<string>333</string>
+				<key>factxy</key>
+				<string>20,80</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -148,6 +161,8 @@
 			<string>icon marker left.png</string>
 			<key>xy</key>
 			<string>550,330</string>
+			<key>width</key>
+			<string>360</string>
 			<key>angle</key>
 			<string>315</string>
 			<key>caption</key>
@@ -158,33 +173,30 @@
 			<string></string>
 			<key>alignment</key>
 			<integer>2</integer>
-			<key>hotspottext</key>
-			<array>
-				<dict>
-					<key>copy</key>
-					<string>Fireworks Graphical Command Interface/Incident Management Platform</string>
-					<key>appearanceDelay</key>
-					<integer>1</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Monitor and control all necessary life safety network information through a graphic display of your facilities down to the detail of a single location</string>
-					<key>appearanceDelay</key>
-					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Communicates other emergency events — weather, shelter in place, chemical spill, etc. — in lieu of an unsupervised intercom system</string>
-					<key>appearanceDelay</key>
-					<integer>7</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Optimum Start assures comfortable settings at time of occupancy based on building conditions and system capacity. Demand Reduction reduces energy use on a short-term basis in response to utility pricing, billing criteria, regional consumption, etc.</string>
-					<key>appearanceDelay</key>
-					<integer>11</integer>
-				</dict>
-			</array>
+			<key>removeafterseconds</key>
+			<integer>16</integer>
+			<key>facts</key>
+			<dict>
+				<key>factscopy</key>
+				<array>
+					<dict>
+						<key>copy</key>
+						<string>Sleep mode powers down lights and fans when idle</string>
+						<key>appearanceDelay</key>
+						<integer>3</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>LED lights save energy and last 10 times longer</string>
+						<key>appearanceDelay</key>
+						<integer>10</integer>
+					</dict>
+				</array>
+				<key>factwidth</key>
+				<string>330</string>
+				<key>factxy</key>
+				<string>20,180</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -193,6 +205,8 @@
 			<string>icon marker right.png</string>
 			<key>xy</key>
 			<string>790,380</string>
+			<key>width</key>
+			<string>360</string>
 			<key>angle</key>
 			<string>225</string>
 			<key>caption</key>
@@ -203,33 +217,42 @@
 			<string></string>
 			<key>alignment</key>
 			<integer>3</integer>
-			<key>hotspottext</key>
-			<array>
-				<dict>
-					<key>copy</key>
-					<string>Fireworks Graphical Command Interface/Incident Management Platform</string>
-					<key>appearanceDelay</key>
-					<integer>1</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Monitor and control all necessary life safety network information through a graphic display of your facilities down to the detail of a single location</string>
-					<key>appearanceDelay</key>
-					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Communicates other emergency events — weather, shelter in place, chemical spill, etc. — in lieu of an unsupervised intercom system</string>
-					<key>appearanceDelay</key>
-					<integer>7</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Optimum Start assures comfortable settings at time of occupancy based on building conditions and system capacity. Demand Reduction reduces energy use on a short-term basis in response to utility pricing, billing criteria, regional consumption, etc.</string>
-					<key>appearanceDelay</key>
-					<integer>11</integer>
-				</dict>
-			</array>
+			<key>removeafterseconds</key>
+			<integer>24</integer>
+			<key>facts</key>
+			<dict>
+				<key>factscopy</key>
+				<array>
+					<dict>
+						<key>copy</key>
+						<string>Industry-changing, patented technology</string>
+						<key>appearanceDelay</key>
+						<integer>4</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>Coated steel belts create a remarkably smooth ride</string>
+						<key>appearanceDelay</key>
+						<integer>6</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>New machine is 70% smaller than conventional geared machines</string>
+						<key>appearanceDelay</key>
+						<integer>10</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>Machine actually fits inside the hoistway, eliminating machine room</string>
+						<key>appearanceDelay</key>
+						<integer>17</integer>
+					</dict>
+				</array>
+				<key>factwidth</key>
+				<string>360</string>
+				<key>factxy</key>
+				<string>625,355</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -238,6 +261,8 @@
 			<string>icon marker left.png</string>
 			<key>xy</key>
 			<string>500,400</string>
+			<key>width</key>
+			<string>360</string>
 			<key>angle</key>
 			<string>315</string>
 			<key>caption</key>
@@ -248,33 +273,36 @@
 			<string></string>
 			<key>alignment</key>
 			<integer>2</integer>
-			<key>hotspottext</key>
-			<array>
-				<dict>
-					<key>copy</key>
-					<string>Fireworks Graphical Command Interface/Incident Management Platform</string>
-					<key>appearanceDelay</key>
-					<integer>1</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Monitor and control all necessary life safety network information through a graphic display of your facilities down to the detail of a single location</string>
-					<key>appearanceDelay</key>
-					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Communicates other emergency events — weather, shelter in place, chemical spill, etc. — in lieu of an unsupervised intercom system</string>
-					<key>appearanceDelay</key>
-					<integer>7</integer>
-				</dict>
-				<dict>
-					<key>copy</key>
-					<string>Optimum Start assures comfortable settings at time of occupancy based on building conditions and system capacity. Demand Reduction reduces energy use on a short-term basis in response to utility pricing, billing criteria, regional consumption, etc.</string>
-					<key>appearanceDelay</key>
-					<integer>11</integer>
-				</dict>
-			</array>
+			<key>removeafterseconds</key>
+			<integer>10</integer>
+			<key>facts</key>
+			<dict>
+				<key>factscopy</key>
+				<array>
+					<dict>
+						<key>copy</key>
+						<string>Small enough to fit inside the wall at top elevator landing</string>
+						<key>appearanceDelay</key>
+						<integer>3</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>No need to plan extra room at top of hoistway</string>
+						<key>appearanceDelay</key>
+						<integer>5</integer>
+					</dict>
+					<dict>
+						<key>copy</key>
+						<string>Much easier access for diagnostics and repair</string>
+						<key>appearanceDelay</key>
+						<integer>7</integer>
+					</dict>
+				</array>
+				<key>factwidth</key>
+				<string>360</string>
+				<key>factxy</key>
+				<string>20,203</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
