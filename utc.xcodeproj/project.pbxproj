@@ -85,19 +85,23 @@
 		20BA88C91A37941900705945 /* card_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BA88C31A37941900705945 /* card_mask.png */; };
 		20BB4D6319D1B64300108046 /* grfx_accessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D6119D1B64300108046 /* grfx_accessory.png */; };
 		20BB4D6419D1B64300108046 /* grfx_accessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D6219D1B64300108046 /* grfx_accessory@2x.png */; };
+		20BF48B21A3A05F1009645DC /* LibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BF48B11A3A05F1009645DC /* LibraryAPI.m */; };
+		20BF48B31A3A05F1009645DC /* LibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BF48B11A3A05F1009645DC /* LibraryAPI.m */; };
+		20BF48B61A3A0629009645DC /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BF48B51A3A0629009645DC /* PersistencyManager.m */; };
+		20BF48B71A3A0629009645DC /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BF48B51A3A0629009645DC /* PersistencyManager.m */; };
 		20CEFE3719D1018700BEB200 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CEFE3519D1018700BEB200 /* PopoverViewController.m */; };
 		20CEFE3819D1018700BEB200 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CEFE3619D1018700BEB200 /* PopoverViewController.xib */; };
 		20D0B00419BF4C280096021D /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00319BF4C280096021D /* City.m */; };
 		20D0B00819BF4EAD0096021D /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00719BF4EAD0096021D /* Building.m */; };
 		20D0B00C19BF52100096021D /* buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B00A19BF52100096021D /* buildings.json */; };
 		20D0B00D19BF52100096021D /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B00B19BF52100096021D /* companies.json */; };
-		20D0B01019BF53C30096021D /* companies.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00F19BF53C30096021D /* companies.m */; };
+		20D0B01019BF53C30096021D /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00F19BF53C30096021D /* Company.m */; };
 		20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */; };
 		20D0B06719C0D7440096021D /* neoHotspotsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B06619C0D7440096021D /* neoHotspotsView.m */; };
 		20D0B06919C0D7510096021D /* hotspotsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B06819C0D7510096021D /* hotspotsData.plist */; };
 		20E546C61A2DFEF40073B2CF /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CEFE3519D1018700BEB200 /* PopoverViewController.m */; };
 		20E546C71A2DFEF40073B2CF /* titleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 824F14ED19CB59CA00628F01 /* titleTableViewCell.m */; };
-		20E546C81A2DFEF40073B2CF /* companies.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00F19BF53C30096021D /* companies.m */; };
+		20E546C81A2DFEF40073B2CF /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00F19BF53C30096021D /* Company.m */; };
 		20E546C91A2DFEF40073B2CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AB119B7926B00C8E12A /* ViewController.m */; };
 		20E546CA1A2DFEF40073B2CF /* buildingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AD519B792BD00C8E12A /* buildingViewController.m */; };
 		20E546CB1A2DFEF40073B2CF /* GHWalkThroughPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A39E9D19C32F8800C71430 /* GHWalkThroughPageCell.m */; };
@@ -331,6 +335,10 @@
 		20BA88C31A37941900705945 /* card_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_mask.png; sourceTree = "<group>"; };
 		20BB4D6119D1B64300108046 /* grfx_accessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grfx_accessory.png; sourceTree = "<group>"; };
 		20BB4D6219D1B64300108046 /* grfx_accessory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grfx_accessory@2x.png"; sourceTree = "<group>"; };
+		20BF48B01A3A05F1009645DC /* LibraryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryAPI.h; sourceTree = "<group>"; };
+		20BF48B11A3A05F1009645DC /* LibraryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryAPI.m; sourceTree = "<group>"; };
+		20BF48B41A3A0629009645DC /* PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistencyManager.h; sourceTree = "<group>"; };
+		20BF48B51A3A0629009645DC /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
 		20CEFE3419D1018700BEB200 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
 		20CEFE3519D1018700BEB200 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
 		20CEFE3619D1018700BEB200 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
@@ -340,8 +348,8 @@
 		20D0B00719BF4EAD0096021D /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
 		20D0B00A19BF52100096021D /* buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = buildings.json; path = DataStore/buildings.json; sourceTree = "<group>"; };
 		20D0B00B19BF52100096021D /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = DataStore/companies.json; sourceTree = "<group>"; };
-		20D0B00E19BF53C30096021D /* companies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companies.h; sourceTree = "<group>"; };
-		20D0B00F19BF53C30096021D /* companies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companies.m; sourceTree = "<group>"; };
+		20D0B00E19BF53C30096021D /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		20D0B00F19BF53C30096021D /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		20D0B05C19C0A2DD0096021D /* UIScrollView+ZoomToPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ZoomToPoint.h"; sourceTree = "<group>"; };
 		20D0B05D19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ZoomToPoint.m"; sourceTree = "<group>"; };
 		20D0B06519C0D7440096021D /* neoHotspotsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neoHotspotsView.h; sourceTree = "<group>"; };
@@ -500,8 +508,12 @@
 				20D0B00319BF4C280096021D /* City.m */,
 				20D0B00619BF4EAD0096021D /* Building.h */,
 				20D0B00719BF4EAD0096021D /* Building.m */,
-				20D0B00E19BF53C30096021D /* companies.h */,
-				20D0B00F19BF53C30096021D /* companies.m */,
+				20D0B00E19BF53C30096021D /* Company.h */,
+				20D0B00F19BF53C30096021D /* Company.m */,
+				20BF48B01A3A05F1009645DC /* LibraryAPI.h */,
+				20BF48B11A3A05F1009645DC /* LibraryAPI.m */,
+				20BF48B41A3A0629009645DC /* PersistencyManager.h */,
+				20BF48B51A3A0629009645DC /* PersistencyManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1010,7 +1022,8 @@
 			files = (
 				20E546C61A2DFEF40073B2CF /* PopoverViewController.m in Sources */,
 				20E546C71A2DFEF40073B2CF /* titleTableViewCell.m in Sources */,
-				20E546C81A2DFEF40073B2CF /* companies.m in Sources */,
+				20E546C81A2DFEF40073B2CF /* Company.m in Sources */,
+				20BF48B31A3A05F1009645DC /* LibraryAPI.m in Sources */,
 				20E546C91A2DFEF40073B2CF /* ViewController.m in Sources */,
 				20E546CA1A2DFEF40073B2CF /* buildingViewController.m in Sources */,
 				20BA88C01A378EEF00705945 /* embUiViewCard.m in Sources */,
@@ -1018,6 +1031,7 @@
 				20E546CC1A2DFEF40073B2CF /* City.m in Sources */,
 				20E546CD1A2DFEF40073B2CF /* masterViewController.m in Sources */,
 				20E546CE1A2DFEF40073B2CF /* AppDelegate.m in Sources */,
+				20BF48B71A3A0629009645DC /* PersistencyManager.m in Sources */,
 				20E546CF1A2DFEF40073B2CF /* Building.m in Sources */,
 				20E546D01A2DFEF40073B2CF /* panelTableViewCell.m in Sources */,
 				20E546D11A2DFEF40073B2CF /* GHWalkThroughView.m in Sources */,
@@ -1037,7 +1051,8 @@
 			files = (
 				20CEFE3719D1018700BEB200 /* PopoverViewController.m in Sources */,
 				824F14EF19CB59CA00628F01 /* titleTableViewCell.m in Sources */,
-				20D0B01019BF53C30096021D /* companies.m in Sources */,
+				20D0B01019BF53C30096021D /* Company.m in Sources */,
+				20BF48B21A3A05F1009645DC /* LibraryAPI.m in Sources */,
 				82A66AB219B7926B00C8E12A /* ViewController.m in Sources */,
 				82A66AD819B792BD00C8E12A /* buildingViewController.m in Sources */,
 				20BA88BF1A378EEF00705945 /* embUiViewCard.m in Sources */,
@@ -1045,6 +1060,7 @@
 				20D0B00419BF4C280096021D /* City.m in Sources */,
 				82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */,
 				82A66AAC19B7926B00C8E12A /* AppDelegate.m in Sources */,
+				20BF48B61A3A0629009645DC /* PersistencyManager.m in Sources */,
 				20D0B00819BF4EAD0096021D /* Building.m in Sources */,
 				824F14D919CB359900628F01 /* panelTableViewCell.m in Sources */,
 				20A39EAC19C32F8800C71430 /* GHWalkThroughView.m in Sources */,

@@ -8,11 +8,17 @@
 
 #import "masterViewController.h"
 #import "panelTableViewCell.h"
+#import "LibraryAPI.h"
+#import "Company.h"
 
 @interface masterViewController ()
 {
 	int selectedRow;
 	UIButton * settButton;
+	
+	NSArray *allCompanies;
+	NSDictionary *currentCompanyData;
+	int currentCompanyIndex;
 }
 
 @property (nonatomic, strong) NSMutableArray *arr_companies;
@@ -71,20 +77,15 @@
 //    [self.view addSubview: tableView];
     self.view.backgroundColor = [UIColor blackColor];
 	
-	_arr_companies = [[NSMutableArray alloc] init];
+	currentCompanyIndex = 0;
+ 
+	//2 get all companies data
+	allCompanies = [[LibraryAPI sharedInstance] getCompanies];
 	
-	NSString *path = [[NSBundle mainBundle] pathForResource:
-					  @"companyHotspotsData" ofType:@"plist"];
-    NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
+	//3 get just the company names
+	_arr_companies = [[LibraryAPI sharedInstance] getCompanyNames];
 	
-	for (int i = 0; i < [totalDataArray count]; i++) {
-        NSDictionary *hotspotItem = totalDataArray [i];
-#ifdef NEODEMO
-		[_arr_companies addObject:[hotspotItem objectForKey:@"demoName"]];
-#else
-		[_arr_companies addObject:[hotspotItem objectForKey:@"fileName"]];
-#endif
-	}
+	// sort them alphabetically
 	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
@@ -193,10 +194,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if (indexPath.row != 9) {
-		selectedRow = (int)indexPath.row;
-		return;
-	} else if (indexPath.row != selectedRow) {
+	if ((indexPath.row != selectedRow) && (indexPath.row == 9)) {
 		//TODO: connect to data instaed of passing hard number
 		NSLog(@"The tapped cell is %i", (int)indexPath.row);
 		NSDictionary* dict = [NSDictionary dictionaryWithObject:
@@ -207,6 +205,11 @@
 														  userInfo:dict];
 	}
     selectedRow = (int)indexPath.row;
+	
+	Company *company = [[Company alloc] init];
+	company = _arr_companies[selectedRow];
+	
+	NSLog(@"company %@", [company description]);
 }
 
 - (void)didReceiveMemoryWarning

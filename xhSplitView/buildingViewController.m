@@ -486,16 +486,18 @@ static CGFloat backButtonActualHeight = 44;
 }
 
 - (IBAction)showPopover:(UIButton *)sender {
-	
-  PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
-  self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
-  PopoverView.delegate = self;
-  [self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+	PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
+	self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
+	PopoverView.delegate = self;
+	[self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
 #pragma mark - PopoverViewControllerDelegate method
 -(void)selectedRow:(NSInteger)row
 {
+	// get which company from data model
+	
+	
 	[self loadCompaniesHotspots];
 	//The color picker popover is showing. Hide it.
 	[self.popOver dismissPopoverAnimated:YES];
@@ -1040,17 +1042,6 @@ static CGFloat backButtonActualHeight = 44;
 					  @"hotspotsData" ofType:@"plist"];
 	NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
 	NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
-
-	/*
-	dict
-	
-	   array hotspots
-	     dict [i]
-	        dict facts
-	               factscopy
-	             factwidth
-	             factxy
-	 */
 
 	NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
 	NSLog(@"/ntapedtag %li",(long)tappedView.tag);
