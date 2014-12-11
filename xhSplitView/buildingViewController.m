@@ -40,6 +40,8 @@ static CGFloat backButtonActualHeight = 44;
 
 	NSMutableArray *arr_HotspotInfoCards;
 	UIView *uiv_HotspotInfoCardContainer;
+	neoHotspotsView *tappedView;
+	float factsCopy;
 }
 
 @property (nonatomic) NSTimer *myTimer;
@@ -434,10 +436,7 @@ static CGFloat backButtonActualHeight = 44;
     NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"hotspotsData" ofType:@"plist"];
 	NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
-	
-	//Get the exact second to remove the text boxes
-	removeTextAfterThisManySeconds = [[totalDataDict objectForKey:@"removeafterseconds"] intValue];
-	
+
 	// get array of all hotspots
     NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
 	
@@ -507,109 +506,12 @@ static CGFloat backButtonActualHeight = 44;
 // load all the companies onto the view
 -(void)loadCompaniesHotspots
 {
-	NSLog(@"asd");
+	NSLog(@"load Company");
 	
 	[_hotspotImageView removeFromSuperview];
 	[_uib_CompanyBtn removeFromSuperview];
 	
 	[self filmTransitionToHotspots];
-	/*
-	NSString *path = [[NSBundle mainBundle] pathForResource:
-					  @"companyHotspotsData" ofType:@"plist"];
-    NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
-    
-	for (int i = 0; i < [totalDataArray count]; i++) {
-        NSDictionary *hotspotItem = totalDataArray [i];
-        
-        //Get the position of Hs
-        NSString *str_position = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"xy"]];
-        NSRange range = [str_position rangeOfString:@","];
-        NSString *str_x = [str_position substringWithRange:NSMakeRange(0, range.location)];
-        NSString *str_y = [str_position substringFromIndex:(range.location + 1)];
-        float hs_x = [str_x floatValue];
-        float hs_y = [str_y floatValue];
-        _myHotspots = [[neoHotspotsView alloc] initWithFrame:CGRectMake(hs_x, hs_y, 95, 72)];
-        _myHotspots.delegate=self;
-		[_arr_hotspotsArray addObject:_myHotspots];
-		
-        //Get the angle of arrow
-        NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
-        if ([str_angle isEqualToString:@""]) {
-        }
-        else
-        {
-            float hsAngle = [str_angle floatValue];
-            _myHotspots.arwAngle = hsAngle;
-        }
-        
-        //Get the name of BG img name
-        NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
-        _myHotspots.hotspotBgName = str_bgName;
-        
-        //Get the caption of hotspot
-        NSString *str_caption = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"caption"]];
-        _myHotspots.str_labelText = str_caption;
-		
-		// get the alignment
-        int num_Alignment = [[hotspotItem objectForKey:@"alignment"] intValue];
-        _myHotspots.labelAlignment = num_Alignment;
-        
-        //Get the type of hotspot
-        NSString *str_type = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"type"]];
-        _myHotspots.str_typeOfHs = str_type;
-        _myHotspots.alpha = 0.0;
-        _myHotspots.tagOfHs = i;
-        [_uis_zoomingImg.blurView addSubview:_myHotspots];
-    }
-	
-	NSInteger ii = 0;
-	for(UIView *view in [_uis_zoomingImg.blurView subviews]) {
-		if([view isKindOfClass:[neoHotspotsView class]]) {
-			UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction;
-			[UIView animateWithDuration:.2 delay:((0.05 * ii) + 0.2) options:options
-							 animations:^{
-								 view.alpha = 1.0;
-							 }
-							 completion:^(BOOL finished){
-							 }];
-			
-			ii += 1;
-		}
-	}
-
-	CGFloat horizontalMinimum = -20.0f;
-	CGFloat horizontalMaximum = 20.0f;
-	
-	UIInterpolatingMotionEffect *horizontal = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
-	horizontal.minimumRelativeValue = @(horizontalMinimum);
-	horizontal.maximumRelativeValue = @(horizontalMaximum);
-	
-	CGFloat verticalMinimum = -20.0f;
-	CGFloat verticalMaximum = 20.0f;
-	
-	UIInterpolatingMotionEffect *vertical = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
-	vertical.minimumRelativeValue = @(verticalMinimum);
-	vertical.maximumRelativeValue = @(verticalMaximum);
-	
-	// this time we need to create a motion effects group and add both of our motion effects to it.
-	UIMotionEffectGroup *motionEffects = [[UIMotionEffectGroup alloc] init];
-	motionEffects.motionEffects = @[horizontal, vertical];
-	
-	// add the motion effects group to our view
-	
-	NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:_arr_hotspotsArray];
-	NSUInteger count = [mutableArray count];
-	// See http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
-	if (count > 1) {
-		for (NSUInteger i = count - 1; i > 0; --i) {
-			[mutableArray exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform((int32_t)(i + 1))];
-		}
-	}
-		
-	for (int i = 0; i < [_arr_hotspotsArray count]; i++) {
-		[_myHotspots addMotionEffect:motionEffects];
-	}
-*/
 }
 
 #pragma mark hotspot tapped
@@ -617,9 +519,8 @@ static CGFloat backButtonActualHeight = 44;
 
 -(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
-	neoHotspotsView *tappedView;
 	tappedView = _arr_hotspotsArray[i];
-	
+	tappedView.tag = i;
 #warning more robust previously tapped method needed
 	tappedView.alpha = 0.75;
 	[tappedView setLabelAlpha:0.75];
@@ -1089,7 +990,22 @@ static CGFloat backButtonActualHeight = 44;
 		[self.myTimer invalidate];
 		self.myTimer = nil;
 	}
+	
+	[self clearHotpsotData];
 }
+
+//----------------------------------------------------
+#pragma mark - HOTSPOT MODEL
+//----------------------------------------------------
+/*
+	All hotspots need to be cleared or the
+	animation will run all cards
+*/
+-(void)clearHotpsotData
+{
+	[arr_HotspotInfoCards removeAllObjects];
+}
+
 
 //----------------------------------------------------
 #pragma mark - start sequences
@@ -1123,11 +1039,41 @@ static CGFloat backButtonActualHeight = 44;
 	NSString *path = [[NSBundle mainBundle] pathForResource:
 					  @"hotspotsData" ofType:@"plist"];
 	NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
-	
 	NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
 
-	NSDictionary *hotspotItem = totalDataArray [0];
-	NSArray *hotspotText = [hotspotItem objectForKey:@"hotspottext"];
+	/*
+	dict
+	
+	   array hotspots
+	     dict [i]
+	        dict facts
+	               factscopy
+	             factwidth
+	             factxy
+	 */
+
+	NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
+	NSLog(@"/ntapedtag %li",(long)tappedView.tag);
+	
+	//Get the exact second to remove the text boxes
+	removeTextAfterThisManySeconds = [[hotspotItem objectForKey:@"removeafterseconds"] intValue];
+	
+	// grab facts dict
+	NSDictionary *facts = [hotspotItem objectForKey:@"facts"];
+	NSArray *hotspotText = [facts objectForKey:@"factscopy"];
+	
+	NSLog(@"%@",[hotspotText description]);
+
+	
+	//Get the position of Hs
+	NSString *str_position = [[NSString alloc] initWithString:[facts objectForKey:@"factxy"]];
+	NSRange range = [str_position rangeOfString:@","];
+	NSString *str_x = [str_position substringWithRange:NSMakeRange(0, range.location)];
+	NSString *str_y = [str_position substringFromIndex:(range.location + 1)];
+	float hs_x = [str_x floatValue];
+	float hs_y = [str_y floatValue];
+	
+	factsCopy = [[facts objectForKey:@"factwidth"] floatValue];
 	
 	for (int i = 0; i < [hotspotText count]; i++) {
 		NSDictionary *box = hotspotText[i];
@@ -1138,7 +1084,7 @@ static CGFloat backButtonActualHeight = 44;
 		card.text = [box objectForKey:@"copy"];
 		NSLog(@"%@",card.text);
 		
-		[card setFrame:CGRectMake(0, textViewHeight, 360, [self measureHeightOfUITextView:card.textView])];
+		[card setFrame:CGRectMake(0, textViewHeight, factsCopy, [self measureHeightOfUITextView:card.textView])];
 		card.alpha = 0;
 		[arr_HotspotInfoCards addObject:card];
 		[uiv_HotspotInfoCardContainer addSubview:card];
@@ -1146,7 +1092,7 @@ static CGFloat backButtonActualHeight = 44;
 	}
 	
 	// update container frame now that we know the heights
-	uiv_HotspotInfoCardContainer.frame = CGRectMake(120, 200, 360, textViewHeight);
+	uiv_HotspotInfoCardContainer.frame = CGRectMake(hs_x, hs_y, factsCopy, textViewHeight);
 	
 }
 
@@ -1226,7 +1172,7 @@ static CGFloat backButtonActualHeight = 44;
 		if (index == 0) { // no animation of falling/bouncing
 			values = [NSArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(startPointX, startPointY)],
 					  [NSValue valueWithCGPoint:CGPointMake(startPointX, startPointY)], nil];
-		} else {
+		} else { // animation of falling/bouncing
 			values = [NSArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(startPointX, -card.frame.size.height/2)],
 					  [NSValue valueWithCGPoint:CGPointMake(startPointX, card.frame.size.height/1.9)],
 					  [NSValue valueWithCGPoint:CGPointMake(startPointX, card.frame.size.height/2.1)],
