@@ -58,7 +58,7 @@
 							<key>copy</key>
 							<string>All critical elevator functions are monitored 24/7 by Otis</string>
 							<key>appearanceDelay</key>
-							<integer>0</integer>
+							<integer>1</integer>
 						</dict>
 						<dict>
 							<key>copy</key>
