@@ -619,22 +619,22 @@ static CGFloat backButtonActualHeight = 44;
 			
 			switch (i) {
 				case 0:
-					[self loadMovieNamed:@"05_HOTSPOT_F_REMOTE_DIAGNOSTICS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 1:
-					[self loadMovieNamed:@"05_HOTSPOT_C_REGEN_DRIVE.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"PH1_OTIS_03_ANIM_REGEN_DRIVE.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 2:
-					[self loadMovieNamed:@"05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 3:
-					[self loadMovieNamed:@"05_HOTSPOT_D_ERT.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"PH1_OTIS_04_ANIM_ERT.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 4:
-					[self loadMovieNamed:@"05_HOTSPOT_A_COATED_STEEL_BELTS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 				case 5:
-					[self loadMovieNamed:@"05_HOTSPOT_B_COMPACT_CONTROLLER.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+					[self loadMovieNamed:@"PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 					break;
 					
 				default:
