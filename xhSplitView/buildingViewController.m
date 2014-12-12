@@ -46,6 +46,9 @@ static CGFloat backButtonActualHeight = 44;
 	float factsCopy;
 	Company *selectedCo;
 	NSArray *allCompanies;
+	
+	NSMutableArray *arr_CompanyLogos;
+
 }
 
 @property (nonatomic) NSTimer *myTimer;
@@ -95,6 +98,7 @@ static CGFloat backButtonActualHeight = 44;
 	arr_HotspotInfoCards = [[NSMutableArray alloc] init];
 	_arr_hotspotsArray		= [[NSMutableArray alloc] init];
 	_arr_BreadCrumbOfImages = [[NSMutableArray alloc] init];
+	arr_CompanyLogos = [[NSMutableArray alloc] init];
 	
 	// load animation that leads to the hero
 	// building tapped from previous screen
@@ -224,6 +228,7 @@ static CGFloat backButtonActualHeight = 44;
 			[settButton setFrame:CGRectMake(hs_x, hs_y, staticWidth, staticHeight)];
 			[settButton setImage:[UIImage imageNamed:[hotspotItem objectForKey:@"background"]] forState:UIControlStateNormal];
 			[settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
+		[arr_CompanyLogos addObject:settButton];
 			[_uis_zoomingImg.blurView addSubview:settButton];
 		[self pulse:settButton.layer];
 			
@@ -368,7 +373,7 @@ static CGFloat backButtonActualHeight = 44;
     }
 	
 	[_hotspotImageView removeFromSuperview];
-	[_uib_CompanyBtn removeFromSuperview];
+	[self removeCompanyLogos];
 	
 	[self updateStillFrameUnderFilm:@"02_HERO_BLDG.png"];
 	[_uib_backBtn setTag:0];
@@ -584,7 +589,12 @@ static CGFloat backButtonActualHeight = 44;
 	//NSLog(@"load Company");
 	
 	[_hotspotImageView removeFromSuperview];
-	[_uib_CompanyBtn removeFromSuperview];
+	
+	for (UIButton *btn in arr_CompanyLogos) {
+		[btn removeFromSuperview];
+	}
+	
+	[self removeCompanyLogos];
 	
 	[self filmTransitionToHotspots];
 }
@@ -710,6 +720,14 @@ static CGFloat backButtonActualHeight = 44;
 }
 
 #pragma mark - Utiltites
+#pragma mark Remove Company Logos
+-(void)removeCompanyLogos
+{
+	for (UIButton *btn in arr_CompanyLogos) {
+		[btn removeFromSuperview];
+	}
+}
+
 #pragma mark Remove Hotspots
 -(void)removeHotspots
 {
@@ -804,7 +822,13 @@ static CGFloat backButtonActualHeight = 44;
     [_uiv_movieContainer.layer addSublayer: _avPlayerLayer];
 	
 	// starts the player as well
-	[self beginSequence];
+	
+	[_avPlayer play];
+
+	if (tapToPauseEnabled) {
+		[self beginSequence];
+	}
+	
 	
 	[self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
 	
@@ -986,7 +1010,7 @@ static CGFloat backButtonActualHeight = 44;
  */
 -(void)beginSequence
 {
-	[_avPlayer play];
+
 	[self startMovieTimer];
 	[self createCards];
 }
