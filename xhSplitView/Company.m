@@ -28,7 +28,7 @@
 		//NSLog(@"co  %@",_coname);
 		//NSLog(@"co  %@",_cologo);
 		//NSLog(@"co  %@",_cocategories);
-		//NSLog(@"co  %@",_cohotspots);
+		NSLog(@"co  %@",_cohotspots);
 		//NSLog(@"co  %@",_cofacts);
 		
 	}

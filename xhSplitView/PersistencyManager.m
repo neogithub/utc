@@ -21,7 +21,7 @@
 					 companies = [[NSMutableArray alloc] init];
 					 
 					 NSString *path = [[NSBundle mainBundle] pathForResource:
-									   @"companyHotspotsData" ofType:@"plist"];
+									   @"companyData" ofType:@"plist"];
 					 NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
 		
 		companies = totalDataArray;
@@ -60,7 +60,7 @@
 	_selectedCompany = [[Company alloc] initWithTitle:[data objectForKey:@"fileName"]
 												 logo:[data objectForKey:@"background"]
 										   categories:[data objectForKey:@"categories"]
-											 hotspots:[data objectForKey:@"demoName"]
+											 hotspots:[data objectForKey:@"hotspots"]
 												facts:[data objectForKey:@"type"]];
 	
 	return filtered;

@@ -20,7 +20,7 @@
 			<key>RGB</key>
 			<string></string>
 			<key>fileName</key>
-			<string>HOT_SPOT_COATED_STEEL_BELTS.m4v</string>
+			<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 			<key>alignment</key>
 			<integer>3</integer>
 			<key>removeafterseconds</key>
@@ -76,7 +76,7 @@
 			<key>RGB</key>
 			<string></string>
 			<key>fileName</key>
-			<string></string>
+			<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 			<key>alignment</key>
 			<integer>2</integer>
 			<key>removeafterseconds</key>
@@ -120,7 +120,7 @@
 			<key>RGB</key>
 			<string></string>
 			<key>fileName</key>
-			<string>UTC_SPIN_ANIMATION.mov</string>
+			<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 			<key>alignment</key>
 			<integer>2</integer>
 			<key>removeafterseconds</key>
@@ -170,7 +170,7 @@
 			<key>RGB</key>
 			<string></string>
 			<key>fileName</key>
-			<string></string>
+			<string>PH1_OTIS_04_ANIM_ERT.mov</string>
 			<key>alignment</key>
 			<integer>2</integer>
 			<key>removeafterseconds</key>
@@ -214,7 +214,7 @@
 			<key>RGB</key>
 			<string></string>
 			<key>fileName</key>
-			<string></string>
+			<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS</string>
 			<key>alignment</key>
 			<integer>3</integer>
 			<key>removeafterseconds</key>
@@ -270,7 +270,7 @@
 			<key>RGB</key>
 			<string></string>
 			<key>fileName</key>
-			<string></string>
+			<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 			<key>alignment</key>
 			<integer>2</integer>
 			<key>removeafterseconds</key>

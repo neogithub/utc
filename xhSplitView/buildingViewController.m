@@ -507,12 +507,15 @@ static CGFloat backButtonActualHeight = 44;
 
 	[_uib_backBtn setTag:2];
 
-    NSString *path = [[NSBundle mainBundle] pathForResource:
-					  @"hotspotsData" ofType:@"plist"];
-	NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
+	//NSString *path = [[NSBundle mainBundle] pathForResource:
+	//				  @"hotspotsData" ofType:@"plist"];
+	//NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
 
 	// get array of all hotspots
-    NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
+	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+    NSArray *totalDataArray = selectedCo.cohotspots;
+	NSLog(@"%@",selectedCo.cohotspots);
+
 	
 	for (int i = 0; i < [totalDataArray count]; i++) {
         NSDictionary *hotspotItem = totalDataArray [i];
@@ -641,12 +644,12 @@ static CGFloat backButtonActualHeight = 44;
 					break;
 			}
 			/*
-			05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.m4v
-			05_HOTSPOT_B_COMPACT_CONTROLLER.m4v
-			05_HOTSPOT_C_REGEN_DRIVE.m4v
-			05_HOTSPOT_D_ERT.m4v
-			05_HOTSPOT_F_REMOTE_DIAGNOSTICS.m4v
-			05_HOTSPOT_A_COATED_STEEL_BELTS.m4v
+			 05_HOTSPOT_F_REMOTE_DIAGNOSTICS.m4v
+			 05_HOTSPOT_C_REGEN_DRIVE.m4v
+			 05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.m4v
+			 05_HOTSPOT_D_ERT.m4v
+			 05_HOTSPOT_A_COATED_STEEL_BELTS.m4v
+			 05_HOTSPOT_B_COMPACT_CONTROLLER.m4v
 			*/
 		} else {
 			[self popUpImage];
@@ -1031,10 +1034,12 @@ static CGFloat backButtonActualHeight = 44;
 	
 	CGFloat textViewHeight = 0;
 	
-	NSString *path = [[NSBundle mainBundle] pathForResource:
-					  @"hotspotsData" ofType:@"plist"];
-	NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
-	NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
+//	NSString *path = [[NSBundle mainBundle] pathForResource:
+//					  @"hotspotsData" ofType:@"plist"];
+//	NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
+//	NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
+	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+	NSArray *totalDataArray = selectedCo.cohotspots;
 
 	NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
 	//NSLog(@"/ntapedtag %li",(long)tappedView.tag);
