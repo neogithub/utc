@@ -15,6 +15,8 @@
 #import "PopoverViewController.h"
 #import "embUiViewCard.h"
 #import "NSTimer+CVPausable.h"
+#import "Company.h"
+#import "LibraryAPI.h"
 
 enum { kEnableSwiping = YES };
 enum { kEnableDoubleTapToKillMovie = YES };
@@ -42,6 +44,8 @@ static CGFloat backButtonActualHeight = 44;
 	UIView *uiv_HotspotInfoCardContainer;
 	neoHotspotsView *tappedView;
 	float factsCopy;
+	Company *selectedCo;
+	NSArray *allCompanies;
 }
 
 @property (nonatomic) NSTimer *myTimer;
@@ -193,13 +197,74 @@ static CGFloat backButtonActualHeight = 44;
 #else
 	_uib_CompanyBtn.frame = CGRectMake(469.0, 180.0, 87, 55);
 	
+	//TODO: make all buttons from data
+	
+	allCompanies = [[LibraryAPI sharedInstance] getCompanies];
+
+	for (int i = 0; i < [allCompanies count]; i++) {
+		NSDictionary *hotspotItem = allCompanies[i];
+		
+		//Get the position of Hs
+		NSString *str_position = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"xy"]];
+		NSRange range = [str_position rangeOfString:@","];
+		NSString *str_x = [str_position substringWithRange:NSMakeRange(0, range.location)];
+		NSString *str_y = [str_position substringFromIndex:(range.location + 1)];
+		float hs_x = [str_x floatValue];
+		float hs_y = [str_y floatValue];
+		
+		CGFloat staticX         = 5;    // Static X for all buttons.
+		CGFloat staticWidth     = 89;   // Static Width for all Buttons.
+		CGFloat staticHeight    = 56;   // Static Height for all buttons.
+		CGFloat staticPadding   = 5;    // Padding to add between each button.
+		
+		//for (int i = 0; i < 5; i++)
+		//{
+			UIButton *settButton = [UIButton buttonWithType:UIButtonTypeCustom];
+			[settButton setTag:i];
+			[settButton setFrame:CGRectMake(hs_x, hs_y, staticWidth, staticHeight)];
+			[settButton setImage:[UIImage imageNamed:[hotspotItem objectForKey:@"background"]] forState:UIControlStateNormal];
+			[settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
+			[_uis_zoomingImg.blurView addSubview:settButton];
+		[self pulse:settButton.layer];
+			
+			// add drag listener
+			//[settButton addTarget:self action:@selector(wasDragged:withEvent:)
+			//forControlEvents:UIControlEventTouchDragInside];
+		//}
+
+		
+		//Get the name of BG img name
+		//NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
+		//_myHotspots.hotspotBgName = str_bgName;
+		
+	}
+
+	
 #endif
 	
-    _uib_CompanyBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
-    [_uib_CompanyBtn addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchUpInside];
-    [_uis_zoomingImg.blurView addSubview:_uib_CompanyBtn];
+	// _uib_CompanyBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
+	// [_uib_CompanyBtn addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchUpInside];
+	// [_uis_zoomingImg.blurView addSubview:_uib_CompanyBtn];
 	
-	[self pulse:_uib_CompanyBtn.layer];
+	
+}
+
+- (void)wasDragged:(UIButton *)button withEvent:(UIEvent *)event
+{
+	// get the touch
+	UITouch *touch = [[event touchesForView:button] anyObject];
+	
+	// get delta
+	CGPoint previousLocation = [touch previousLocationInView:button];
+	CGPoint location = [touch locationInView:button];
+	CGFloat delta_x = location.x - previousLocation.x;
+	CGFloat delta_y = location.y - previousLocation.y;
+	
+	// move button
+	button.center = CGPointMake(button.center.x + delta_x,
+        button.center.y + delta_y);
+	
+	//NSLog(@"%@",NSStringFromCGPoint(button.center));
 }
 
 #pragma mark - Actions to play path to hero and split hero
@@ -238,21 +303,20 @@ static CGFloat backButtonActualHeight = 44;
 	[_arr_hotspotsArray removeAllObjects];
 		
 	[_uib_backBtn setTag:1];
-	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
 
 #pragma mark - menu buttons
 -(void)createBackButton
 {
 	NSLog(@"createBackButton AGAIN");
-		_uib_backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-		_uib_backBtn.frame = CGRectMake(backButtonX, 0.0, 58, backButtonHeight);
-		[_uib_backBtn setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
-		[self.view addSubview:_uib_backBtn];
-		[_uib_backBtn addTarget:self action:@selector(performSelectorFromArray) forControlEvents:UIControlEventTouchUpInside];
-		_uib_backBtn.layer.zPosition = MAXFLOAT;
-		[_uib_backBtn setTag:0];
-		NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
+	_uib_backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+	_uib_backBtn.frame = CGRectMake(backButtonX, 0.0, 58, backButtonHeight);
+	[_uib_backBtn setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
+	[self.view addSubview:_uib_backBtn];
+	[_uib_backBtn addTarget:self action:@selector(performSelectorFromArray) forControlEvents:UIControlEventTouchUpInside];
+	_uib_backBtn.layer.zPosition = MAXFLOAT;
+	[_uib_backBtn setTag:0];
+	//NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 	
 }
 
@@ -281,12 +345,12 @@ static CGFloat backButtonActualHeight = 44;
 	void (*func)(id, SEL) = (void *)imp;
 	func(self, mySelector);
 	
-	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
+	//NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
 
 -(void)reloadBuildingVC
 {
-	NSLog(@"should be tag 0");
+	//NSLog(@"should be tag 0");
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
 	[_uib_backBtn setTag:0];
 	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
@@ -326,7 +390,12 @@ static CGFloat backButtonActualHeight = 44;
 #ifdef NEODEMO
 	[self setCompanyTitle:@"Elevator"];
 #else
-	[self setCompanyTitle:@"Otis"];
+	//[self setCompanyTitle:@"Otis"];
+	
+	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+	//NSLog(@"name: %@",selectedCo.coname);
+
+	[self setCompanyTitle:selectedCo.coname];
 #endif
 	
 }
@@ -488,15 +557,19 @@ static CGFloat backButtonActualHeight = 44;
 - (IBAction)showPopover:(UIButton *)sender {
 	PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
 	self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
+	
+	// get company tapped on from data model
+	NSDictionary *co = allCompanies[sender.tag];
+	[[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]];
+
 	PopoverView.delegate = self;
-	[self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+	[self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
 }
 
 #pragma mark - PopoverViewControllerDelegate method
 -(void)selectedRow:(NSInteger)row
 {
 	// get which company from data model
-	
 	
 	[self loadCompaniesHotspots];
 	//The color picker popover is showing. Hide it.
@@ -508,7 +581,7 @@ static CGFloat backButtonActualHeight = 44;
 // load all the companies onto the view
 -(void)loadCompaniesHotspots
 {
-	NSLog(@"load Company");
+	//NSLog(@"load Company");
 	
 	[_hotspotImageView removeFromSuperview];
 	[_uib_CompanyBtn removeFromSuperview];
@@ -530,7 +603,7 @@ static CGFloat backButtonActualHeight = 44;
 	if ([tappedView.str_typeOfHs isEqualToString:@"company"]) {
 		[self filmTransitionToHotspots];
 	} else {
-		NSLog(@"str_typeOfHs %@",tappedView.str_typeOfHs);
+		//NSLog(@"str_typeOfHs %@",tappedView.str_typeOfHs);
 		
 		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
 			
@@ -665,109 +738,8 @@ static CGFloat backButtonActualHeight = 44;
 	UIFont *font = stringfont;
     NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
     CGFloat str_width = [[[NSAttributedString alloc] initWithString:string attributes:attributes1] size].width;
-    NSLog(@"The string width is %f", str_width);
+	// NSLog(@"The string width is %f", str_width);
 	return str_width;
-}
-
-- (void) handlePanGesture:(UIPanGestureRecognizer*)pan{
-	
-	/*
-	//CGFloat time = 1;
-	CGPoint vel = [pan velocityInView:self.view];
-	
-    if (vel.x > 0)
-    {
-        // user dragged towards the right
-		NSLog(@"+");
-		time ++;
-    }
-    else
-    {
-        // user dragged towards the left
-		NSLog(@"-");
-		time --;
-
-    }
-	NSLog(@"time %f", time);
-
-	[_avPlayer seekToTime:CMTimeMakeWithSeconds(time, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
-	
-	if(pan.state == UIGestureRecognizerStateEnded){
-		time = 0;
-	}
-	*/
-	
-	
-//	CGPoint translate = [pan translationInView:self.view];
-//	CGFloat xCoord = translate.x;
-//    double diff = (xCoord);
-//    NSLog(@"%F",diff);
-	
-	//[_avPlayer seekToTime:CMTimeMakeWithSeconds(time, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
-	
-	/*
-	CGPoint translation = [pan translationInView:self.view];
-	
-    // Figure out where the user is trying to drag the view.
-    CGPoint newCenter = CGPointMake(self.view.bounds.size.width / 2,
-									pan.view.center.y + translation.y);
-	
-    // See if the new position is in bounds.
-    if (newCenter.y >= 160 && newCenter.y <= 300) {
-        pan.view.center = newCenter;
-        [pan setTranslation:CGPointZero inView:self.view];
-    }
-	*/
-	
-	
-//	if(pan.state == UIGestureRecognizerStateEnded){
-//		[_avPlayer play];
-//	} else {
-//		CGPoint velocity = [pan translationInView:self.view];
-//		CGFloat xVel = velocity.x;
-//		int i = xVel*100;
-//		CGFloat rate = i/10000;
-//		[_avPlayer seekToTime:CMTimeMakeWithSeconds(rate, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
-//	}
-	
-	
-    /*
-	CGPoint translate = [pan translationInView:self.view];
-    CGFloat xCoord = translate.x;
-    double diff = (xCoord);
-    //NSLog(@"%F",diff);
-	
-	CMTime duration = self.avPlayer.currentItem.asset.duration;
-	float seconds = CMTimeGetSeconds(duration);
-	NSLog(@"duration: %.2f", seconds);
-	
-	
-	CGFloat gh = 0;
-	//[_avPlayer seekToTime:CMTimeMakeWithSeconds(seconds*(Float64)diff , 1024) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
-	
-    if (diff>=0) {
-        //If the difference is positive
-        //moviePlayer.currentPlaybackTime = [moviePlayer currentPlaybackTime] + (diff/10);
-		NSLog(@"%f",diff);
-		gh = diff;
-    } else {
-        //If the difference is negative
-        //moviePlayer.currentPlaybackTime = [moviePlayer currentPlaybackTime] - (diff/10);
-		NSLog(@"%f",diff*-1);
-		gh = diff*-1;
-    }
-	
-	float minValue = 0;
-	float maxValue = 1024;
-	float value = gh;
-	
-	double time = seconds * (value - minValue) / (maxValue - minValue);
-	NSLog(@"Seek Time in Seconds is : %f", time);
-	//NSEC_PER_SEC
-	//600
-	//10
-	[_avPlayer seekToTime:CMTimeMakeWithSeconds(time, 10) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
-	 */
 }
 
 #pragma mark - play movie
@@ -805,10 +777,6 @@ static CGFloat backButtonActualHeight = 44;
 	
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
 	[_uiv_movieContainer setBackgroundColor:[UIColor clearColor]];
-	
-	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-	
-    [_uiv_movieContainer addGestureRecognizer:panGesture];
 	
     //[_uiv_movieContainer setUserInteractionEnabled:YES];
     //[_uiv_movieContainer addGestureRecognizer:panGesture];
@@ -965,7 +933,11 @@ static CGFloat backButtonActualHeight = 44;
 
 -(void)closeMovie
 {
-		
+	if (_myTimer) {
+		[self.myTimer invalidate];
+		self.myTimer = nil;
+	}
+	
 	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
 	[_uis_zoomingImg.scrollView setZoomScale:1.0];
 	[self removeHotspotTitle];
@@ -988,10 +960,7 @@ static CGFloat backButtonActualHeight = 44;
 
 	}];
 	
-	if (_myTimer) {
-		[self.myTimer invalidate];
-		self.myTimer = nil;
-	}
+
 	
 	[self clearHotpsotData];
 }
@@ -1044,7 +1013,7 @@ static CGFloat backButtonActualHeight = 44;
 	NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
 
 	NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
-	NSLog(@"/ntapedtag %li",(long)tappedView.tag);
+	//NSLog(@"/ntapedtag %li",(long)tappedView.tag);
 	
 	//Get the exact second to remove the text boxes
 	removeTextAfterThisManySeconds = [[hotspotItem objectForKey:@"removeafterseconds"] intValue];
@@ -1053,7 +1022,7 @@ static CGFloat backButtonActualHeight = 44;
 	NSDictionary *facts = [hotspotItem objectForKey:@"facts"];
 	NSArray *hotspotText = [facts objectForKey:@"factscopy"];
 	
-	NSLog(@"%@",[hotspotText description]);
+	//NSLog(@"%@",[hotspotText description]);
 
 	
 	//Get the position of Hs
@@ -1073,7 +1042,7 @@ static CGFloat backButtonActualHeight = 44;
 		[card setBackgroundColor:[[UIColor clearColor] colorWithAlphaComponent:0.5]];
 		card.delay = (int)[[box objectForKey:@"appearanceDelay"] integerValue];
 		card.text = [box objectForKey:@"copy"];
-		NSLog(@"%@",card.text);
+		//NSLog(@"%@",card.text);
 		
 		[card setFrame:CGRectMake(0, textViewHeight, factsCopy, [self measureHeightOfUITextView:card.textView])];
 		card.alpha = 0;
@@ -1135,7 +1104,7 @@ static CGFloat backButtonActualHeight = 44;
 		card.alpha = 1.0;
 		CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
 		
-		NSLog(@"%@",[card description]);
+		//NSLog(@"%@",[card description]);
 		
 		
 		// get index of card to know whether
@@ -1149,7 +1118,7 @@ static CGFloat backButtonActualHeight = 44;
 		CGFloat startPointX = card.center.x;
 		CGFloat startPointY = card.center.y;
 		
-		NSLog(@"rect1: %f", startPointY);
+		//NSLog(@"rect1: %f", startPointY);
 		
 		
 		UIView *maskView = [[UIView alloc] initWithFrame:CGRectMake(card.frame.origin.x, card.frame.origin.y, 360, card.frame.size.height+20)];
@@ -1179,7 +1148,7 @@ static CGFloat backButtonActualHeight = 44;
 		
 		[card setCenter:CGPointMake(startPointX, card.frame.size.height/2)];
 		
-		NSLog(@"rect1: %@", NSStringFromCGRect(card.frame));
+		//NSLog(@"rect1: %@", NSStringFromCGRect(card.frame));
 		
 		CALayer *mask = [CALayer layer];
 		mask.contents = (id)[[UIImage imageNamed:@"card_mask.png"] CGImage];
@@ -1281,7 +1250,7 @@ static CGFloat backButtonActualHeight = 44;
 												  userInfo:nil
 												   repeats:YES];
 	
-	NSLog(@"== /n/nstart timer");
+	//NSLog(@"== /n/nstart timer");
 }
 
 
@@ -1334,14 +1303,14 @@ static CGFloat backButtonActualHeight = 44;
 											   attributes:attributes
 												  context:nil];
 		
-		NSLog(@"fontSize = \tbounds = (%f x %f)",
-			  size.size.width,
-			  size.size.height);
+		//NSLog(@"fontSize = \tbounds = (%f x %f)",
+		//	  size.size.width,
+		//	  size.size.height);
 		
 		CGFloat measuredHeight = ceilf(CGRectGetHeight(size) + topBottomPadding);
 		
-		NSLog(@"measuredHeight %f)",
-			  measuredHeight);
+		//NSLog(@"measuredHeight %f)",
+		//	  measuredHeight);
 		
 		return measuredHeight;
 	}

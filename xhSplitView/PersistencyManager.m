@@ -7,7 +7,6 @@
 //
 
 #import "PersistencyManager.h"
-#import "Company.h"
 
 @implementation PersistencyManager
 {
@@ -48,8 +47,28 @@
 		[arr_names addObject:[hotspotItem objectForKey:@"fileName"]];
 #endif
 	}
+	
 	return arr_names;
 }
 
+- (NSArray*)getSelectedCompanyNamed:(NSString*)name
+{
+	NSArray *filtered = [companies filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(fileName == %@)", name]];
+	
+	NSDictionary *data = filtered[0];
+	
+	_selectedCompany = [[Company alloc] initWithTitle:[data objectForKey:@"fileName"]
+												 logo:[data objectForKey:@"background"]
+										   categories:[data objectForKey:@"categories"]
+											 hotspots:[data objectForKey:@"demoName"]
+												facts:[data objectForKey:@"type"]];
+	
+	return filtered;
+}
+
+-(Company*)getSelectedCompanyData
+{
+	return _selectedCompany;
+}
 
 @end

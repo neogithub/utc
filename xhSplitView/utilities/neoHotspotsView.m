@@ -386,7 +386,7 @@ static int arwPic = 30;
 	UIFont *font = stringfont;
     NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
     CGFloat str_width = [[[NSAttributedString alloc] initWithString:string attributes:attributes1] size].width;
-    NSLog(@"The string width is %f", str_width);
+	//NSLog(@"The string width is %f", str_width);
 	return str_width;
 }
 

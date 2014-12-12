@@ -15,11 +15,47 @@
 	self = [super init];
 	if (self)
 	{
-		_name = name;
-		_logo = logo;
-		_categories = categories;
-		_hotspots = hotspots;
-		_facts = facts;
+		_coname = name;
+		_cologo = logo;
+		
+		_cocategories = [[NSArray alloc] init];
+		_cocategories = categories;
+		_cohotspots = [[NSArray alloc] init];
+		_cohotspots = hotspots;
+		_cofacts = [[NSArray alloc] init];
+		_cofacts = facts;
+		
+		//NSLog(@"co  %@",_coname);
+		//NSLog(@"co  %@",_cologo);
+		//NSLog(@"co  %@",_cocategories);
+		//NSLog(@"co  %@",_cohotspots);
+		//NSLog(@"co  %@",_cofacts);
+		
+	}
+	return self;
+}
+
+-(id)init
+{
+	self = [super init];
+	if (self)
+	{
+//		_coname = name;
+//		_cologo = logo;
+//		
+//		_cocategories = [[NSArray alloc] init];
+//		_cocategories = categories;
+//		_cohotspots = [[NSArray alloc] init];
+//		_cohotspots = hotspots;
+//		_cofacts = [[NSArray alloc] init];
+//		_cofacts = facts;
+//		
+//		NSLog(@"co  %@",_coname);
+//		NSLog(@"co  %@",_cologo);
+//		NSLog(@"co  %@",_cocategories);
+//		NSLog(@"co  %@",_cohotspots);
+//		NSLog(@"co  %@",_cofacts);
+		
 	}
 	return self;
 }

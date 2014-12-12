@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Company.h"
 
 @interface PersistencyManager : NSObject
 
+@property (nonatomic, retain) Company *selectedCompany;
+
 - (NSArray*)getCompanies;
 - (NSMutableArray*)getCompanyNames;
+- (NSArray*)getSelectedCompanyNamed:(NSString*)name;
+- (Company*)getSelectedCompanyData;
 
 @end

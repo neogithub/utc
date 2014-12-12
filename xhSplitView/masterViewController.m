@@ -196,7 +196,7 @@
 {
 	if ((indexPath.row != selectedRow) && (indexPath.row == 9)) {
 		//TODO: connect to data instaed of passing hard number
-		NSLog(@"The tapped cell is %i", (int)indexPath.row);
+		//NSLog(@"The tapped cell is %i", (int)indexPath.row);
 		NSDictionary* dict = [NSDictionary dictionaryWithObject:
 							  [NSNumber numberWithInt:3]
 														 forKey:@"buttontag"];
@@ -206,10 +206,8 @@
 	}
     selectedRow = (int)indexPath.row;
 	
-	Company *company = [[Company alloc] init];
-	company = _arr_companies[selectedRow];
-	
-	NSLog(@"company %@", [company description]);
+	//2 get company selected
+	[[LibraryAPI sharedInstance] getSelectedCompanyNamed:_arr_companies[selectedRow]];
 }
 
 - (void)didReceiveMemoryWarning

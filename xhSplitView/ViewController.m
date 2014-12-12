@@ -403,7 +403,7 @@ static CGFloat menuButtonHeights = 51;
 	//int index = [[[notification userInfo] valueForKey:@"index"] intValue];
     int pass = [[[notification userInfo] valueForKey:@"buttontag"] intValue];
 	
-	NSLog(@"pass %i",pass);
+	//NSLog(@"pass %i",pass);
 	
 	switch (pass) {
 		case 0:

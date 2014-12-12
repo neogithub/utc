@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Company.h"
 
 @protocol PopoverViewControllerDelegate <NSObject>
 @required
@@ -15,4 +16,5 @@
 
 @interface PopoverViewController : UITableViewController
 @property (nonatomic, weak) id<PopoverViewControllerDelegate> delegate;
+@property (nonatomic, retain) Company *selectedCo;
 @end

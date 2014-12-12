@@ -9,6 +9,7 @@
 #import "detailViewController.h"
 #import "buildingViewController.h"
 #import "ebZoomingScrollView.h"
+#import "LibraryAPI.h"
 
 @interface detailViewController () <ebZoomingScrollViewDelegate>
 
@@ -74,6 +75,8 @@
 -(void)loadBuilding
 {
 	[self loadBuildingVC:0];
+	//2 get company selected
+	[[LibraryAPI sharedInstance] getCompanies];
 }
 
 -(void)loadBuildingVC:(int)index
@@ -82,6 +85,7 @@
 	_otisVC.transitionClipName = @"01_TRANS_CITY_TO_BLDG.mov";
 	[self.view addSubview: _otisVC.view];
 	
+	// update the company selected on the left side
 	[self.delegate rowSelected:self atIndex:0];
 }
 

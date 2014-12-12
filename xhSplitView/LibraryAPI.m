@@ -45,8 +45,22 @@
 - (NSMutableArray*)getCompanyNames
 {
 	return [persistencyManager getCompanyNames];
-
 }
 
+- (NSArray*)getSelectedCompanyNamed:(NSString*)name
+{
+	return [persistencyManager getSelectedCompanyNamed:name];
+}
+
+- (Company*)getSelectedCompanyData
+{
+	return [persistencyManager getSelectedCompanyData];
+}
+
+
+-(Company*)currentCompany
+{
+	return [persistencyManager selectedCompany];
+}
 
 @end

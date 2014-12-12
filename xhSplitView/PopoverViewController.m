@@ -7,6 +7,7 @@
 //
 
 #import "PopoverViewController.h"
+#import "LibraryAPI.h"
 
 @interface PopoverViewController ()
 
@@ -28,6 +29,8 @@
     [super viewDidLoad];
 	
 	self.preferredContentSize = CGSizeMake(190.0, 133.0); //used instead
+
+	_selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -62,8 +65,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 		[cell.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
     }
-
-	NSArray *r = @[@"Elevators",@"Escalators",@"Destination Dispatch"];
 	
 	if (indexPath.row == 0) {
 		//cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -72,7 +73,7 @@
 	}
     
     // Configure the cell...
-    cell.textLabel.text=r[indexPath.row];
+    cell.textLabel.text=_selectedCo.cocategories[indexPath.row];
     return cell;
 }
 
@@ -120,7 +121,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (indexPath.row == 0) {
-		NSLog(@"dasdasdasds");
+		//NSLog(@"dasdasdasds");
 		//Notify the delegate if it exists.
 		//if (_delegate != nil) {
 			[_delegate selectedRow:indexPath.row];
