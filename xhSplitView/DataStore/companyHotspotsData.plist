@@ -49,9 +49,9 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>Elevators</string>
-			<string>Escalators</string>
-			<string>Destination Dispatch</string>
+			<string>AquaEdge 23XRV</string>
+			<string>Aero 39M Air Handlers</string>
+			<string>AirStream Fan Coils</string>
 		</array>
 	</dict>
 	<dict>
@@ -75,9 +75,8 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>Elevators</string>
-			<string>Escalators</string>
-			<string>Destination Dispatch</string>
+			<string>Softer Serve Machine Model C723</string>
+			<string>Grill Model L812</string>
 		</array>
 	</dict>
 	<dict>
@@ -205,9 +204,8 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>Elevators</string>
-			<string>Escalators</string>
-			<string>Destination Dispatch</string>
+			<string>WebCTRL Web-based Building Automation</string>
+			<string>Eco Screen Sustainability Kiosk</string>
 		</array>
 	</dict>
 	<dict>
@@ -283,9 +281,9 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>Elevators</string>
-			<string>Escalators</string>
-			<string>Destination Dispatch</string>
+			<string>Life Safety System &amp; Incident Mgmt. System</string>
+			<string>Life Safety Control Panel</string>
+			<string>Signature Series Devices</string>
 		</array>
 	</dict>
 	<dict>
@@ -309,9 +307,10 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>Elevators</string>
-			<string>Escalators</string>
-			<string>Destination Dispatch</string>
+			<string>FM200</string>
+			<string>ADS Advanced Delivery System</string>
+			<string>WHDR Wet Chemical System</string>
+			<string>Badger Fire Extinquishers</string>
 		</array>
 	</dict>
 </array>
