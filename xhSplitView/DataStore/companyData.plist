@@ -15,6 +15,10 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
+		<key>transitionFilm</key>
+		<string>03_TRANS_ELEV.mov</string>
+		<key>transitionFilmImg</key>
+		<string>04_HOTSPOT_CROSS_SECTION.png</string>
 		<key>fileName</key>
 		<string>Otis</string>
 		<key>demoName</key>
@@ -2919,7 +2923,7 @@
 		<array>
 			<dict>
 				<key>type</key>
-				<string>movie</string>
+				<string>still</string>
 				<key>background</key>
 				<string>icon marker right.png</string>
 				<key>xy</key>
@@ -2975,7 +2979,7 @@
 			</dict>
 			<dict>
 				<key>type</key>
-				<string>movie</string>
+				<string>still</string>
 				<key>background</key>
 				<string>icon marker left.png</string>
 				<key>xy</key>
@@ -3019,7 +3023,7 @@
 			</dict>
 			<dict>
 				<key>type</key>
-				<string>movie</string>
+				<string>still</string>
 				<key>background</key>
 				<string>icon marker left.png</string>
 				<key>xy</key>
@@ -3065,156 +3069,6 @@
 					<string>333</string>
 					<key>factxy</key>
 					<string>20,80</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>movie</string>
-				<key>background</key>
-				<string>icon marker left.png</string>
-				<key>xy</key>
-				<string>550,330</string>
-				<key>width</key>
-				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
-				<key>caption</key>
-				<string>Environmentally Responsible Technology</string>
-				<key>RGB</key>
-				<string></string>
-				<key>fileName</key>
-				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
-				<key>alignment</key>
-				<integer>2</integer>
-				<key>removeafterseconds</key>
-				<integer>16</integer>
-				<key>facts</key>
-				<dict>
-					<key>factscopy</key>
-					<array>
-						<dict>
-							<key>copy</key>
-							<string>Sleep mode powers down lights and fans when idle</string>
-							<key>appearanceDelay</key>
-							<integer>3</integer>
-						</dict>
-						<dict>
-							<key>copy</key>
-							<string>LED lights save energy and last 10 times longer</string>
-							<key>appearanceDelay</key>
-							<integer>10</integer>
-						</dict>
-					</array>
-					<key>factwidth</key>
-					<string>330</string>
-					<key>factxy</key>
-					<string>20,180</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>movie</string>
-				<key>background</key>
-				<string>icon marker right.png</string>
-				<key>xy</key>
-				<string>790,380</string>
-				<key>width</key>
-				<string>360</string>
-				<key>angle</key>
-				<string>225</string>
-				<key>caption</key>
-				<string>Coated Steel Belts</string>
-				<key>RGB</key>
-				<string></string>
-				<key>fileName</key>
-				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
-				<key>alignment</key>
-				<integer>3</integer>
-				<key>removeafterseconds</key>
-				<integer>24</integer>
-				<key>facts</key>
-				<dict>
-					<key>factscopy</key>
-					<array>
-						<dict>
-							<key>copy</key>
-							<string>Industry-changing, patented technology</string>
-							<key>appearanceDelay</key>
-							<integer>4</integer>
-						</dict>
-						<dict>
-							<key>copy</key>
-							<string>Coated steel belts create a remarkably smooth ride</string>
-							<key>appearanceDelay</key>
-							<integer>6</integer>
-						</dict>
-						<dict>
-							<key>copy</key>
-							<string>New machine is 70% smaller than conventional geared machines</string>
-							<key>appearanceDelay</key>
-							<integer>10</integer>
-						</dict>
-						<dict>
-							<key>copy</key>
-							<string>Machine actually fits inside the hoistway, eliminating machine room</string>
-							<key>appearanceDelay</key>
-							<integer>17</integer>
-						</dict>
-					</array>
-					<key>factwidth</key>
-					<string>360</string>
-					<key>factxy</key>
-					<string>625,355</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>type</key>
-				<string>movie</string>
-				<key>background</key>
-				<string>icon marker left.png</string>
-				<key>xy</key>
-				<string>500,400</string>
-				<key>width</key>
-				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
-				<key>caption</key>
-				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
-				<key>fileName</key>
-				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
-				<key>alignment</key>
-				<integer>2</integer>
-				<key>removeafterseconds</key>
-				<integer>10</integer>
-				<key>facts</key>
-				<dict>
-					<key>factscopy</key>
-					<array>
-						<dict>
-							<key>copy</key>
-							<string>Small enough to fit inside the wall at top elevator landing</string>
-							<key>appearanceDelay</key>
-							<integer>3</integer>
-						</dict>
-						<dict>
-							<key>copy</key>
-							<string>No need to plan extra room at top of hoistway</string>
-							<key>appearanceDelay</key>
-							<integer>5</integer>
-						</dict>
-						<dict>
-							<key>copy</key>
-							<string>Much easier access for diagnostics and repair</string>
-							<key>appearanceDelay</key>
-							<integer>7</integer>
-						</dict>
-					</array>
-					<key>factwidth</key>
-					<string>360</string>
-					<key>factxy</key>
-					<string>20,203</string>
 				</dict>
 			</dict>
 		</array>

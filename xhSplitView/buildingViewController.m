@@ -45,6 +45,7 @@ static CGFloat backButtonActualHeight = 44;
 	neoHotspotsView *tappedView;
 	float factsCopy;
 	Company *selectedCo;
+	NSDictionary *selectedCoDict;
 	NSArray *allCompanies;
 	
 	NSMutableArray *arr_CompanyLogos;
@@ -201,8 +202,6 @@ static CGFloat backButtonActualHeight = 44;
 #else
 	_uib_CompanyBtn.frame = CGRectMake(469.0, 180.0, 87, 55);
 	
-	//TODO: make all buttons from data
-	
 	allCompanies = [[LibraryAPI sharedInstance] getCompanies];
 
 	for (int i = 0; i < [allCompanies count]; i++) {
@@ -282,11 +281,23 @@ static CGFloat backButtonActualHeight = 44;
 
 -(void)filmTransitionToHotspots
 {
+	//TODO: swap to datamdel
 	 _uib_logoBtn.hidden = YES;
-    [self loadMovieNamed:@"03_TRANS_ELEV.mov" isTapToPauseEnabled:NO belowSubview:nil];
-    [self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
 	
-	[self createHotspots];
+	NSString *movieNamed;
+	NSString *movieNamedImg;
+
+	if ([selectedCoDict objectForKey:@"transitionFilm"]) {
+		movieNamed =  [selectedCoDict objectForKey:@"transitionFilm"];
+		movieNamedImg = [selectedCoDict objectForKey:@"transitionFilmImg"];
+		[self loadMovieNamed:movieNamed isTapToPauseEnabled:NO belowSubview:nil];
+		[self updateStillFrameUnderFilm:movieNamedImg];
+		[self createHotspots];
+	} else {
+		NSLog(@"load popUpImage");
+		//TODO: FIX THIS METHOD AND OVERALL USE
+		//[self popUpImage];
+	}
 	
 	[self initTitleBox];
 }
@@ -568,8 +579,8 @@ static CGFloat backButtonActualHeight = 44;
 	
 	// get company tapped on from data model
 	NSDictionary *co = allCompanies[sender.tag];
-	[[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]];
-
+	//[[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]];
+	selectedCoDict = [[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]] [0];
 	PopoverView.delegate = self;
 	[self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
 }
@@ -577,8 +588,10 @@ static CGFloat backButtonActualHeight = 44;
 #pragma mark - PopoverViewControllerDelegate method
 -(void)selectedRow:(NSInteger)row
 {
-	// get which company from data model
+	//NSDictionary *coDict = [selectedCo.cohotspots objectAtIndex:?];
+	//NSString *movieNamed =  [coDict objectForKey:@"fileName"];
 	
+	// get which company from data model
 	[self loadCompaniesHotspots];
 	//The color picker popover is showing. Hide it.
 	[self.popOver dismissPopoverAnimated:YES];
