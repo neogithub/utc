@@ -620,46 +620,19 @@ static CGFloat backButtonActualHeight = 44;
 		
 		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
 			
-			switch (i) {
-				case 0:
-					[self loadMovieNamed:@"PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
-					break;
-				case 1:
-					[self loadMovieNamed:@"PH1_OTIS_03_ANIM_REGEN_DRIVE.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
-					break;
-				case 2:
-					[self loadMovieNamed:@"PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
-					break;
-				case 3:
-					[self loadMovieNamed:@"PH1_OTIS_04_ANIM_ERT.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
-					break;
-				case 4:
-					[self loadMovieNamed:@"PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
-					break;
-				case 5:
-					[self loadMovieNamed:@"PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov" isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
-					break;
-					
-				default:
-					break;
-			}
-			/*
-			 05_HOTSPOT_F_REMOTE_DIAGNOSTICS.m4v
-			 05_HOTSPOT_C_REGEN_DRIVE.m4v
-			 05_HOTSPOT_E_GLIDE_DOOR_OPERATORS.m4v
-			 05_HOTSPOT_D_ERT.m4v
-			 05_HOTSPOT_A_COATED_STEEL_BELTS.m4v
-			 05_HOTSPOT_B_COMPACT_CONTROLLER.m4v
-			*/
+			NSDictionary *coDict = [selectedCo.cohotspots objectAtIndex:i];
+			NSString *movieNamed =  [coDict objectForKey:@"fileName"];
+
+			[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+			
 		} else {
 			[self popUpImage];
 		}
 		
+		//zoom towards the point tapped
 		[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
 		[UIView animateWithDuration:0.5 animations:^{
 			_uis_zoomingImg.alpha = 0.0;
-			
-			//_uiv_textBoxContainer.transform = CGAffineTransformMakeTranslation(-200, 36);
 			
 			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
 			_uil_HotspotTitle.frame = CGRectMake(-40, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
