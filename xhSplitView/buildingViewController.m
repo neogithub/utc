@@ -19,20 +19,9 @@
 #import "LibraryAPI.h"
 #import "embTitle.h"
 
-enum { kEnableSwiping = YES };
-enum { kEnableDoubleTapToKillMovie = YES };
-
-enum {
-    LabelOnscreen,
-    LabelOffscreen,
-};
-typedef NSInteger PlayerState;
-
 static CGFloat backButtonHeight = 51;
 static CGFloat backButtonWidth	= 58;
 static CGFloat backButtonX		= 36;
-static CGFloat backButtonActualHeight = 44;
-
 
 @interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, UIGestureRecognizerDelegate>
 {
@@ -98,10 +87,10 @@ static CGFloat backButtonActualHeight = 44;
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
 	
 	// init arrays and create avplayer
-	arr_HotspotInfoCards = [[NSMutableArray alloc] init];
+	arr_HotspotInfoCards	= [[NSMutableArray alloc] init];
 	_arr_hotspotsArray		= [[NSMutableArray alloc] init];
 	_arr_BreadCrumbOfImages = [[NSMutableArray alloc] init];
-	arr_CompanyLogos = [[NSMutableArray alloc] init];
+	arr_CompanyLogos		= [[NSMutableArray alloc] init];
 	
 	// load animation that leads to the hero
 	// building tapped from previous screen
@@ -110,19 +99,6 @@ static CGFloat backButtonActualHeight = 44;
 	[self createStillFrameUnderFilm];
 	
 	time = 1;
-		
-	// DEBUG
-#warning Debug for swiping or doubletapping
-	if ((kEnableSwiping==YES) || (kEnableDoubleTapToKillMovie==YES)) {
-//		UILabel *uil_Debug = [[UILabel alloc] init];
-//		[uil_Debug setFrame:CGRectMake(824, 0, 200, 30)];
-//		uil_Debug.backgroundColor=[UIColor redColor];
-//		[uil_Debug setTextAlignment:NSTextAlignmentCenter];
-//		uil_Debug.textColor=[UIColor whiteColor];
-//		[uil_Debug setAlpha:0.5];
-//		uil_Debug.text= @"DEBUG MODE";
-//		[self.view insertSubview:uil_Debug atIndex:1000];
-	}
 	
 	[self createBackButton];
 	
@@ -217,42 +193,26 @@ static CGFloat backButtonActualHeight = 44;
 		float hs_x = [str_x floatValue];
 		float hs_y = [str_y floatValue];
 		
-		CGFloat staticX         = 5;    // Static X for all buttons.
 		CGFloat staticWidth     = 89;   // Static Width for all Buttons.
 		CGFloat staticHeight    = 56;   // Static Height for all buttons.
-		CGFloat staticPadding   = 5;    // Padding to add between each button.
 		
-		//for (int i = 0; i < 5; i++)
-		//{
-			UIButton *settButton = [UIButton buttonWithType:UIButtonTypeCustom];
-			[settButton setTag:i];
-			[settButton setFrame:CGRectMake(hs_x, hs_y, staticWidth, staticHeight)];
-			[settButton setImage:[UIImage imageNamed:[hotspotItem objectForKey:@"background"]] forState:UIControlStateNormal];
-			[settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
+
+		UIButton *settButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		[settButton setTag:i];
+		[settButton setFrame:CGRectMake(hs_x, hs_y, staticWidth, staticHeight)];
+		[settButton setImage:[UIImage imageNamed:[hotspotItem objectForKey:@"background"]] forState:UIControlStateNormal];
+		[settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
 		[arr_CompanyLogos addObject:settButton];
-			[_uis_zoomingImg.blurView addSubview:settButton];
+		[_uis_zoomingImg.blurView addSubview:settButton];
 		[self pulse:settButton.layer];
 			
 			// add drag listener
 			//[settButton addTarget:self action:@selector(wasDragged:withEvent:)
 			//forControlEvents:UIControlEventTouchDragInside];
 		//}
-
-		
-		//Get the name of BG img name
-		//NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
-		//_myHotspots.hotspotBgName = str_bgName;
 		
 	}
-
-	
 #endif
-	
-	// _uib_CompanyBtn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
-	// [_uib_CompanyBtn addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchUpInside];
-	// [_uis_zoomingImg.blurView addSubview:_uib_CompanyBtn];
-	
-	
 }
 
 - (void)wasDragged:(UIButton *)button withEvent:(UIEvent *)event
@@ -283,7 +243,7 @@ static CGFloat backButtonActualHeight = 44;
 
 -(void)filmTransitionToHotspots
 {
-	//TODO: swap to datamdel
+	//TODO: swap to datamodel
 	 _uib_logoBtn.hidden = YES;
 	
 	NSString *movieNamed;
@@ -411,108 +371,8 @@ static CGFloat backButtonActualHeight = 44;
 #endif
 	topTitle = [[embTitle alloc] initWithFrame:CGRectZero withText:topname];
 	[self.view addSubview:topTitle];
-	
-//	_uiv_textBoxContainer = [[UIView alloc] initWithFrame:CGRectZero];
-//    [self.view insertSubview:_uiv_textBoxContainer aboveSubview:_uiv_movieContainer];
-//    _uiv_textBoxContainer.layer.zPosition = MAXFLOAT;
-//	
-//#ifdef NEODEMO
-//	[self setCompanyTitle:@"Elevator"];
-//#else
-//	//[self setCompanyTitle:@"Otis"];
-//	
-//	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
-//	//NSLog(@"name: %@",selectedCo.coname);
-//
-//	[self setCompanyTitle:selectedCo.coname];
-//#endif
-	
 }
 
-/*
--(void)setCompanyTitle:(NSString *)year
-{
-    [topTitle removeCompanyTitle];
-	
-	// get width of uilabel
-	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:19];
-	CGFloat str_width = [self getWidthFromStringLength:year andFont:font];
-	static CGFloat labelPad = 15;
-	companyLabelWidth = str_width + (labelPad*2);
-	
-    _uil_Company = [[UILabel alloc] initWithFrame:CGRectMake(0.0, -backButtonActualHeight, companyLabelWidth, backButtonActualHeight)];
-    [_uil_Company setText:year];
-    [_uil_Company setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.8]];
-    [_uil_Company setTextColor:[UIColor blackColor]];
-    [_uil_Company setFont: font];
-    [_uil_Company setTextAlignment:NSTextAlignmentCenter];
-	[_uil_Company.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-	[_uil_Company.layer setBorderWidth:1.0];
-	
-	[_uiv_textBoxContainer addSubview: _uil_Company];
-	
-	// resize text container to fit
-	_uiv_textBoxContainer.frame = CGRectMake(backButtonX+backButtonWidth-7, 0, companyLabelWidth, backButtonHeight);
-	
-	[self animate:_uil_Company direction:LabelOnscreen];
-}
-
--(void)removeCompanyTitle
-{
-	[self animate:_uil_Company direction:LabelOffscreen];
-}
-
--(void)setHotSpotTitle:(NSString *)string
-{
-	[topTitle removeHotspotTitle];
-	
-	// get width of uilabel
-	UIFont *font = [UIFont fontWithName:@"Helvetica" size:19];
-	CGFloat str_width = [self getWidthFromStringLength:string andFont:font];
-	static CGFloat labelPad = 20;
-	hotspotLabelWidth = str_width + (labelPad);
-    
-    _uil_HotspotTitle = [[UILabel alloc] initWithFrame:CGRectMake(companyLabelWidth-backButtonWidth-15, -backButtonActualHeight, hotspotLabelWidth, backButtonActualHeight)];
-    [_uil_HotspotTitle setText:string];
-	_uil_HotspotTitle.backgroundColor = [UIColor colorWithRed:0.0000 green:0.4667 blue:0.7686 alpha:0.8];
-    [_uil_HotspotTitle setTextColor:[UIColor whiteColor]];
-	[_uil_HotspotTitle setTextAlignment:NSTextAlignmentCenter];
-    [_uil_HotspotTitle setFont:font];
-    [_uil_HotspotTitle.layer setBorderColor:[UIColor colorWithRed:0.7922 green:1.0000 blue:1.0000 alpha:1.0].CGColor];
-	[_uil_HotspotTitle.layer setBorderWidth:1.0];
-	
-	[_uiv_textBoxContainer addSubview: _uil_HotspotTitle];
-	
-	// resize text container to fit
-	_uiv_textBoxContainer.frame = CGRectMake(73, 0, hotspotLabelWidth+companyLabelWidth, backButtonHeight);
-	
-	[self animate:_uil_HotspotTitle direction:LabelOnscreen];
-}
-
--(void)removeHotspotTitle
-{
-	[self animate:_uil_HotspotTitle direction:LabelOffscreen];
-}
-
--(void)animate:(UIView*)viewmove direction:(NSInteger)d
-{
-	int f = 0;
-	if (d == LabelOffscreen) {
-		f = -backButtonActualHeight;
-	} else {
-		f = backButtonActualHeight;
-	}
-	
-	[UIView animateWithDuration:0.3/1.5 animations:^{
-		//viewmove.transform = CGAffineTransformTranslate(viewmove.transform, 0, 1*f);
-		viewmove.frame = CGRectMake(viewmove.frame.origin.x, viewmove.frame.origin.y+f, viewmove.frame.size.width, viewmove.frame.size.height);
-	} completion:^(BOOL completed){
-		if (d == LabelOffscreen) {
-			[viewmove removeFromSuperview];
-		}
-	}];
-}
-*/
 #pragma mark - company hotspots
 -(void)createHotspots
 {
@@ -531,10 +391,6 @@ static CGFloat backButtonActualHeight = 44;
 	[self removeHotspots];
 
 	[_uib_backBtn setTag:2];
-
-	//NSString *path = [[NSBundle mainBundle] pathForResource:
-	//				  @"hotspotsData" ofType:@"plist"];
-	//NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
 
 	// get array of all hotspots
 	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
@@ -593,7 +449,6 @@ static CGFloat backButtonActualHeight = 44;
 	
 	// get company tapped on from data model
 	NSDictionary *co = allCompanies[sender.tag];
-	//[[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]];
 	selectedCoDict = [[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]] [0];
 	PopoverView.delegate = self;
 	[self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
@@ -602,9 +457,6 @@ static CGFloat backButtonActualHeight = 44;
 #pragma mark - PopoverViewControllerDelegate method
 -(void)selectedRow:(NSInteger)row
 {
-	//NSDictionary *coDict = [selectedCo.cohotspots objectAtIndex:?];
-	//NSString *movieNamed =  [coDict objectForKey:@"fileName"];
-	
 	// get which company from data model
 	[self loadCompaniesHotspots];
 	//The color picker popover is showing. Hide it.
@@ -861,11 +713,10 @@ static CGFloat backButtonActualHeight = 44;
 												 name:AVPlayerItemDidPlayToEndTimeNotification
 												   object:[_avPlayer currentItem]];
 	
-	if (kEnableDoubleTapToKillMovie) {
-		UITapGestureRecognizer *doubleTapMovie = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeMovie)];
-		doubleTapMovie.numberOfTapsRequired = 2;
-		[self.view addGestureRecognizer:doubleTapMovie];
-	}
+	UITapGestureRecognizer *doubleTapMovie = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeMovie)];
+	doubleTapMovie.numberOfTapsRequired = 2;
+	[self.view addGestureRecognizer:doubleTapMovie];
+
 }
 
 - (UIImage *)flipImage:(UIImage *)image
@@ -882,17 +733,15 @@ static CGFloat backButtonActualHeight = 44;
 	UITapGestureRecognizer *tappedMovie = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedMovie:)];
     [self.view addGestureRecognizer: tappedMovie];
 	
-	if (kEnableSwiping==YES) {
-		UISwipeGestureRecognizer *swipeUpRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeUpPlay:)];
-		[swipeUpRecognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
-		[swipeUpRecognizer setDelegate:self];
-		[self.view addGestureRecognizer:swipeUpRecognizer];
-		
-		UISwipeGestureRecognizer *swipeDownRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownPause:)];
-		[swipeDownRecognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
-		[swipeDownRecognizer setDelegate:self];
-		[self.view addGestureRecognizer:swipeDownRecognizer];
-	}
+	UISwipeGestureRecognizer *swipeUpRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeUpPlay:)];
+	[swipeUpRecognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
+	[swipeUpRecognizer setDelegate:self];
+	[self.view addGestureRecognizer:swipeUpRecognizer];
+	
+	UISwipeGestureRecognizer *swipeDownRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownPause:)];
+	[swipeDownRecognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+	[swipeDownRecognizer setDelegate:self];
+	[self.view addGestureRecognizer:swipeDownRecognizer];
 }
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
@@ -1034,10 +883,6 @@ static CGFloat backButtonActualHeight = 44;
 	
 	CGFloat textViewHeight = 0;
 	
-//	NSString *path = [[NSBundle mainBundle] pathForResource:
-//					  @"hotspotsData" ofType:@"plist"];
-//	NSDictionary *totalDataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
-//	NSMutableArray *totalDataArray = [totalDataDict objectForKey:@"hotspots"];
 	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
 	NSArray *totalDataArray = selectedCo.cohotspots;
 
