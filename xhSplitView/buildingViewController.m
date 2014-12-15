@@ -17,6 +17,7 @@
 #import "NSTimer+CVPausable.h"
 #import "Company.h"
 #import "LibraryAPI.h"
+#import "embTitle.h"
 
 enum { kEnableSwiping = YES };
 enum { kEnableDoubleTapToKillMovie = YES };
@@ -49,7 +50,8 @@ static CGFloat backButtonActualHeight = 44;
 	NSArray *allCompanies;
 	
 	NSMutableArray *arr_CompanyLogos;
-
+	embTitle*topTitle;
+	NSString *topname;
 }
 
 @property (nonatomic) NSTimer *myTimer;
@@ -296,7 +298,7 @@ static CGFloat backButtonActualHeight = 44;
 	} else {
 		NSLog(@"load popUpImage");
 		//TODO: FIX THIS METHOD AND OVERALL USE
-		//[self popUpImage];
+		[self popUpImage];
 	}
 	
 	[self initTitleBox];
@@ -304,8 +306,8 @@ static CGFloat backButtonActualHeight = 44;
 
 -(void)loadSplitAssets
 {
-	[self removeHotspotTitle];
-	[self removeCompanyTitle];
+	[topTitle removeHotspotTitle];
+	[topTitle removeCompanyTitle];
 	
 #ifdef NEODEMO
 	[self updateStillFrameUnderFilm:@"03A Building Cut DEMO.png"];
@@ -400,26 +402,37 @@ static CGFloat backButtonActualHeight = 44;
 #pragma mark init top left text box
 -(void)initTitleBox
 {
-    _uiv_textBoxContainer = [[UIView alloc] initWithFrame:CGRectZero];
-    [self.view insertSubview:_uiv_textBoxContainer aboveSubview:_uiv_movieContainer];
-    _uiv_textBoxContainer.layer.zPosition = MAXFLOAT;
-	
-#ifdef NEODEMO
-	[self setCompanyTitle:@"Elevator"];
-#else
-	//[self setCompanyTitle:@"Otis"];
-	
-	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
-	//NSLog(@"name: %@",selectedCo.coname);
 
-	[self setCompanyTitle:selectedCo.coname];
+#ifdef NEODEMO
+	topname = @"Elevator";
+#else
+	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+	topname = selectedCo.coname;
 #endif
+	topTitle = [[embTitle alloc] initWithFrame:CGRectZero withText:topname];
+	[self.view addSubview:topTitle];
+	
+//	_uiv_textBoxContainer = [[UIView alloc] initWithFrame:CGRectZero];
+//    [self.view insertSubview:_uiv_textBoxContainer aboveSubview:_uiv_movieContainer];
+//    _uiv_textBoxContainer.layer.zPosition = MAXFLOAT;
+//	
+//#ifdef NEODEMO
+//	[self setCompanyTitle:@"Elevator"];
+//#else
+//	//[self setCompanyTitle:@"Otis"];
+//	
+//	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+//	//NSLog(@"name: %@",selectedCo.coname);
+//
+//	[self setCompanyTitle:selectedCo.coname];
+//#endif
 	
 }
 
+/*
 -(void)setCompanyTitle:(NSString *)year
 {
-    [self removeCompanyTitle];
+    [topTitle removeCompanyTitle];
 	
 	// get width of uilabel
 	UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:19];
@@ -451,7 +464,7 @@ static CGFloat backButtonActualHeight = 44;
 
 -(void)setHotSpotTitle:(NSString *)string
 {
-	[self removeHotspotTitle];
+	[topTitle removeHotspotTitle];
 	
 	// get width of uilabel
 	UIFont *font = [UIFont fontWithName:@"Helvetica" size:19];
@@ -499,7 +512,7 @@ static CGFloat backButtonActualHeight = 44;
 		}
 	}];
 }
-
+*/
 #pragma mark - company hotspots
 -(void)createHotspots
 {
@@ -648,15 +661,15 @@ static CGFloat backButtonActualHeight = 44;
 		[UIView animateWithDuration:0.5 animations:^{
 			_uis_zoomingImg.alpha = 0.0;
 			
-			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
-			_uil_HotspotTitle.frame = CGRectMake(-40, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
+			topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
+			topTitle.uil_HotspotTitle.frame = CGRectMake(-40, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
 			
 			_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
 
 		} completion:^(BOOL completed)
 		 {
-			 [self setHotSpotTitle:tappedView.str_labelText];
+			 [topTitle setHotSpotTitle:tappedView.str_labelText];
 
 		 }];
 		
@@ -684,7 +697,7 @@ static CGFloat backButtonActualHeight = 44;
 	[_uis_zoomingImg.scrollView setZoomScale:1.0];
 	
 	// hotspot cleanup
-	[self removeHotspotTitle];
+	[topTitle removeHotspotTitle];
 	
 	[self unhideChrome];
 
@@ -700,8 +713,8 @@ static CGFloat backButtonActualHeight = 44;
 -(void)unhideChrome
 {
 	[UIView animateWithDuration:0.33 animations:^{
-		_uil_Company.frame = CGRectMake(14, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
-		_uil_HotspotTitle.frame = CGRectMake(74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
+		topTitle.uil_Company.frame = CGRectMake(14, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
+		topTitle.uil_HotspotTitle.frame = CGRectMake(74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
 		_uib_backBtn.transform = CGAffineTransformIdentity;
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
 	} completion:^(BOOL completed) {
@@ -954,7 +967,7 @@ static CGFloat backButtonActualHeight = 44;
 	
 	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
 	[_uis_zoomingImg.scrollView setZoomScale:1.0];
-	[self removeHotspotTitle];
+	[topTitle removeHotspotTitle];
 	
 	if (_isPauseable == YES) {
 		[self unhideChrome];

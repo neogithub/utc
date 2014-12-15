@@ -147,6 +147,8 @@
 		20BF49151A3F1C82009645DC /* logo_interlogix.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49121A3F1C82009645DC /* logo_interlogix.png */; };
 		20BF49161A3F1C82009645DC /* logo_interlogix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49131A3F1C82009645DC /* logo_interlogix@2x.png */; };
 		20BF49171A3F1C82009645DC /* logo_interlogix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49131A3F1C82009645DC /* logo_interlogix@2x.png */; };
+		20BF491A1A3F23BE009645DC /* embTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BF49191A3F23BE009645DC /* embTitle.m */; };
+		20BF491B1A3F23BE009645DC /* embTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BF49191A3F23BE009645DC /* embTitle.m */; };
 		20CEFE3719D1018700BEB200 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CEFE3519D1018700BEB200 /* PopoverViewController.m */; };
 		20CEFE3819D1018700BEB200 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CEFE3619D1018700BEB200 /* PopoverViewController.xib */; };
 		20D0B00419BF4C280096021D /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00319BF4C280096021D /* City.m */; };
@@ -417,6 +419,8 @@
 		20BF49051A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov; path = films/PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov; sourceTree = "<group>"; };
 		20BF49121A3F1C82009645DC /* logo_interlogix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_interlogix.png; sourceTree = "<group>"; };
 		20BF49131A3F1C82009645DC /* logo_interlogix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_interlogix@2x.png"; sourceTree = "<group>"; };
+		20BF49181A3F23BE009645DC /* embTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = embTitle.h; sourceTree = "<group>"; };
+		20BF49191A3F23BE009645DC /* embTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = embTitle.m; sourceTree = "<group>"; };
 		20CEFE3419D1018700BEB200 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
 		20CEFE3519D1018700BEB200 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
 		20CEFE3619D1018700BEB200 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
@@ -655,6 +659,8 @@
 				82A66AD119B792BD00C8E12A /* detailViewController.m */,
 				82A66AD419B792BD00C8E12A /* buildingViewController.h */,
 				82A66AD519B792BD00C8E12A /* buildingViewController.m */,
+				20BF49181A3F23BE009645DC /* embTitle.h */,
+				20BF49191A3F23BE009645DC /* embTitle.m */,
 				82A66AD919B792C700C8E12A /* xhSplitViewController.h */,
 				82A66ADA19B792C700C8E12A /* xhSplitViewController.m */,
 				82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */,
@@ -1192,6 +1198,7 @@
 				20E546D01A2DFEF40073B2CF /* panelTableViewCell.m in Sources */,
 				20E546D11A2DFEF40073B2CF /* GHWalkThroughView.m in Sources */,
 				20BA88BC1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */,
+				20BF491B1A3F23BE009645DC /* embTitle.m in Sources */,
 				20E546D21A2DFEF40073B2CF /* ebZoomingScrollView.m in Sources */,
 				20E546D31A2DFEF40073B2CF /* main.m in Sources */,
 				20E546D41A2DFEF40073B2CF /* detailViewController.m in Sources */,
@@ -1221,6 +1228,7 @@
 				824F14D919CB359900628F01 /* panelTableViewCell.m in Sources */,
 				20A39EAC19C32F8800C71430 /* GHWalkThroughView.m in Sources */,
 				20BA88BB1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */,
+				20BF491A1A3F23BE009645DC /* embTitle.m in Sources */,
 				82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */,
 				82A66AA819B7926B00C8E12A /* main.m in Sources */,
 				82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */,
