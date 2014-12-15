@@ -143,6 +143,10 @@
 		20BF490F1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49041A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov */; };
 		20BF49101A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49051A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov */; };
 		20BF49111A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49051A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov */; };
+		20BF49141A3F1C82009645DC /* logo_interlogix.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49121A3F1C82009645DC /* logo_interlogix.png */; };
+		20BF49151A3F1C82009645DC /* logo_interlogix.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49121A3F1C82009645DC /* logo_interlogix.png */; };
+		20BF49161A3F1C82009645DC /* logo_interlogix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49131A3F1C82009645DC /* logo_interlogix@2x.png */; };
+		20BF49171A3F1C82009645DC /* logo_interlogix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49131A3F1C82009645DC /* logo_interlogix@2x.png */; };
 		20CEFE3719D1018700BEB200 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CEFE3519D1018700BEB200 /* PopoverViewController.m */; };
 		20CEFE3819D1018700BEB200 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CEFE3619D1018700BEB200 /* PopoverViewController.xib */; };
 		20D0B00419BF4C280096021D /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B00319BF4C280096021D /* City.m */; };
@@ -411,6 +415,8 @@
 		20BF49031A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_04_ANIM_ERT.mov; path = films/PH1_OTIS_04_ANIM_ERT.mov; sourceTree = "<group>"; };
 		20BF49041A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov; path = films/PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov; sourceTree = "<group>"; };
 		20BF49051A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov; path = films/PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov; sourceTree = "<group>"; };
+		20BF49121A3F1C82009645DC /* logo_interlogix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_interlogix.png; sourceTree = "<group>"; };
+		20BF49131A3F1C82009645DC /* logo_interlogix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_interlogix@2x.png"; sourceTree = "<group>"; };
 		20CEFE3419D1018700BEB200 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
 		20CEFE3519D1018700BEB200 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
 		20CEFE3619D1018700BEB200 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
@@ -737,6 +743,8 @@
 				20BF48BD1A3B501D009645DC /* logo_carrier@2x.png */,
 				20BF48BE1A3B501D009645DC /* logo_edwards.png */,
 				20BF48BF1A3B501D009645DC /* logo_edwards@2x.png */,
+				20BF49121A3F1C82009645DC /* logo_interlogix.png */,
+				20BF49131A3F1C82009645DC /* logo_interlogix@2x.png */,
 				20BF48C01A3B501D009645DC /* logo_kidde.png */,
 				20BF48C11A3B501D009645DC /* logo_kidde@2x.png */,
 				20BF48C21A3B501D009645DC /* logo_lenel.png */,
@@ -916,6 +924,7 @@
 				20BF48F91A3B501D009645DC /* logo_sustain.png in Resources */,
 				20E546E01A2DFEF40073B2CF /* bg_05.jpg in Resources */,
 				20E546E11A2DFEF40073B2CF /* icon marker right.png in Resources */,
+				20BF49171A3F1C82009645DC /* logo_interlogix@2x.png in Resources */,
 				20E546E21A2DFEF40073B2CF /* menu header.png in Resources */,
 				20E546E31A2DFEF40073B2CF /* icon back.png in Resources */,
 				20BF490F1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
@@ -1009,6 +1018,7 @@
 				20E547281A2DFEF40073B2CF /* bg_03.jpg in Resources */,
 				20E547291A2DFEF40073B2CF /* companyData.plist in Resources */,
 				20E5472A1A2DFEF40073B2CF /* 03_TRANS_ELEV.png in Resources */,
+				20BF49151A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				20E5472B1A2DFEF40073B2CF /* bg_04@2x.jpg in Resources */,
 				20E5472C1A2DFEF40073B2CF /* 01_TRANS_CITY_TO_BLDG.png in Resources */,
 				20BF48F31A3B501D009645DC /* logo_onity@2x.png in Resources */,
@@ -1036,6 +1046,7 @@
 				206063E019D521E50045163F /* 02_TRANS_BLDG_UNBUILD.mov in Resources */,
 				20BF48EE1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
 				20BF48D41A3B501D009645DC /* logo_automated.png in Resources */,
+				20BF49141A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				20A95A5619CBB82800132F7E /* icon main menu.png in Resources */,
 				209AEFB019D48C650074A3EA /* icon-rt-arrow.png in Resources */,
 				20A39EAA19C32F8800C71430 /* bg_05.jpg in Resources */,
@@ -1065,6 +1076,7 @@
 				20D0B00D19BF52100096021D /* companies.json in Resources */,
 				824F14DE19CB360300628F01 /* grfx_cellBG@2x.jpg in Resources */,
 				20BF48FE1A3B501D009645DC /* logo_taylor@2x.png in Resources */,
+				20BF49161A3F1C82009645DC /* logo_interlogix@2x.png in Resources */,
 				82A66AF519B7950600C8E12A /* otis-hotpost-still@2x.png in Resources */,
 				20BF49101A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
 				20BF48F61A3B501D009645DC /* logo_otis@2x.png in Resources */,

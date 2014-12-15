@@ -310,7 +310,8 @@ static CGFloat backButtonActualHeight = 44;
 #ifdef NEODEMO
 	[self updateStillFrameUnderFilm:@"03A Building Cut DEMO.png"];
 #else
-	[self updateStillFrameUnderFilm:@"03A Building Cut.png"];
+	//[self updateStillFrameUnderFilm:@"03A Building Cut.png"];
+	[self updateStillFrameUnderFilm:@"03_HERO_BLDG_SECTION.png"];
 #endif
 	
 	[self initLogoBtn];
