@@ -68,9 +68,15 @@
 {
 	// Get the text so we can measure it
 	
-	NSLog(@"count %lu",(unsigned long)[_selectedCo.cocategories count]);
+	//NSLog(@"count %lu",(unsigned long)[_selectedCo.cocategories count]);
 
-	NSString *text = [_selectedCo.cocategories objectAtIndex:[indexPath row]];
+	NSDictionary *catDict = [_selectedCo.cocategories objectAtIndex:[indexPath row]];
+	
+	NSLog(@"%@",[catDict description]);
+
+	
+	NSString *text = [catDict objectForKey:@"catName"];
+	
 	// Get a CGSize for the width and, effectively, unlimited height
 	CGSize constraint = CGSizeMake(tableView.frame.size.width - (5 * 2), 20000.0f);
 	// Get the size of the text given the CGSize we just made as a constraint
@@ -78,7 +84,7 @@
 	// Get the height of our measurement, with a minimum of 44 (standard cell size)
 	CGFloat height = MAX(size.height, 38.0f);
 	
-	NSLog(@"%f",height);
+	//NSLog(@"%f",height);
 
 	
 	// save height for use in resizing the popover
@@ -99,14 +105,15 @@
 		[cell.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
     }
 	
-	if (indexPath.row == 0) {
-		//cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-		cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-rt-arrow.png"]];
+	NSDictionary *catDict = [_selectedCo.cocategories objectAtIndex:[indexPath row]];
 
+	
+	if ([[catDict objectForKey:@"catType"] isEqualToString:@"film"]) {
+		cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-rt-arrow.png"]];
 	}
-    
+	
     // Configure the cell...
-    cell.textLabel.text=_selectedCo.cocategories[indexPath.row];
+    cell.textLabel.text=[catDict objectForKey:@"catName"];
     return cell;
 }
 

@@ -27,9 +27,24 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>Elevators</string>
-			<string>Escalators</string>
-			<string>Destination Dispatch</string>
+			<dict>
+				<key>catName</key>
+				<string>Elevators</string>
+				<key>catType</key>
+				<string>film</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Escalators</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Destination Dispatch</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
@@ -348,6 +363,10 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
+		<key>transitionFilm</key>
+		<string>03_TRANS_ELEV.mov</string>
+		<key>transitionFilmImg</key>
+		<string>04_HOTSPOT_CROSS_SECTION.png</string>
 		<key>fileName</key>
 		<string>Carrier</string>
 		<key>demoName</key>
@@ -356,9 +375,24 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>AquaEdge 23XRV</string>
-			<string>Aero 39M Air Handlers</string>
-			<string>AirStream Fan Coils</string>
+			<dict>
+				<key>catName</key>
+				<string>AquaEdge 23XRV</string>
+				<key>catType</key>
+				<string>film</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Aero 39M Air Handlers</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>AirStream Fan Coils</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
@@ -535,11 +569,71 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>Softer Serve Machine Model C723</string>
-			<string>Grill Model L812</string>
+			<dict>
+				<key>catName</key>
+				<string>Softer Serve Machine Model C723</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Grill Model L812</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
+			<dict>
+				<key>type</key>
+				<string>movie</string>
+				<key>background</key>
+				<string>icon marker left.png</string>
+				<key>xy</key>
+				<string>500,400</string>
+				<key>width</key>
+				<string>360</string>
+				<key>angle</key>
+				<string>315</string>
+				<key>caption</key>
+				<string>Compact Controller</string>
+				<key>RGB</key>
+				<string></string>
+				<key>fileName</key>
+				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+				<key>alignment</key>
+				<integer>2</integer>
+				<key>removeafterseconds</key>
+				<integer>10</integer>
+				<key>facts</key>
+				<dict>
+					<key>factscopy</key>
+					<array>
+						<dict>
+							<key>copy</key>
+							<string>Small enough to fit inside the wall at top elevator landing</string>
+							<key>appearanceDelay</key>
+							<integer>3</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>No need to plan extra room at top of hoistway</string>
+							<key>appearanceDelay</key>
+							<integer>5</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Much easier access for diagnostics and repair</string>
+							<key>appearanceDelay</key>
+							<integer>7</integer>
+						</dict>
+					</array>
+					<key>factwidth</key>
+					<string>360</string>
+					<key>factxy</key>
+					<string>20,203</string>
+				</dict>
+			</dict>
 			<dict>
 				<key>type</key>
 				<string>movie</string>
@@ -613,7 +707,12 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>OnGuard Building Access Control System</string>
+			<dict>
+				<key>catName</key>
+				<string>OnGuard Building Access Control System</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
@@ -940,7 +1039,12 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>TBD</string>
+			<dict>
+				<key>catName</key>
+				<string>TBD</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
@@ -1267,8 +1371,18 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>WebCTRL Web-based Building Automation</string>
-			<string>Eco Screen Sustainability Kiosk</string>
+			<dict>
+				<key>catName</key>
+				<string>WebCTRL Web-based Building Automation</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Eco Screen Sustainability Kiosk</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
@@ -1595,7 +1709,12 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>TBD</string>
+			<dict>
+				<key>catName</key>
+				<string>TBD</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
@@ -1866,7 +1985,12 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>Truvision Cameras</string>
+			<dict>
+				<key>catName</key>
+				<string>Truvision Cameras</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
@@ -2193,9 +2317,24 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>Life Safety System &amp; Incident Mgmt. System</string>
-			<string>Life Safety Control Panel</string>
-			<string>Signature Series Devices</string>
+			<dict>
+				<key>catName</key>
+				<string>Life Safety System &amp; Incident Mgmt. System</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Life Safety Control Panel</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Signature Series Devices</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
@@ -2372,10 +2511,30 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
-			<string>FM200</string>
-			<string>ADS Advanced Delivery System</string>
-			<string>WHDR Wet Chemical System</string>
-			<string>Badger Fire Extinguishers</string>
+			<dict>
+				<key>catName</key>
+				<string>FM200</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>ADS Advanced Delivery System</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>WHDR Wet Chemical System</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Badger Fire Extinguishers</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
