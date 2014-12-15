@@ -304,14 +304,14 @@ static CGFloat menuButtonHeights = 51;
 
 - (void) configurePage:(GHWalkThroughPageCell *)cell atIndex:(NSInteger)index
 {
-    cell.title = [NSString stringWithFormat:@"This is page %d", index+1];
+    cell.title = [NSString stringWithFormat:@"This is page %ld", index+1];
 	// cell.titleImage = [UIImage imageNamed:[NSString stringWithFormat:@"title%ld", index+1]];
     cell.desc = [self.descStrings objectAtIndex:index];
 }
 
 - (UIImage*) bgImageforPage:(NSInteger)index
 {
-    NSString* imageName =[NSString stringWithFormat:@"bg_0%d.jpg", index+1];
+    NSString* imageName =[NSString stringWithFormat:@"bg_0%ld.jpg", index+1];
     UIImage* image = [UIImage imageNamed:imageName];
     return image;
 }

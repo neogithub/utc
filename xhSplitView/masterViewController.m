@@ -139,7 +139,7 @@
 -(void)handleImageTap:(id)sender
 {
 	//[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:[NSNumber numberWithInt:gesture.view.tag]];
-	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:[sender tag]] forKey:@"buttontag"];
+	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:(int)[sender tag]] forKey:@"buttontag"];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil userInfo:userInfo];
 }
 

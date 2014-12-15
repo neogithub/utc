@@ -17,7 +17,6 @@ enum {
 	LabelOnscreen,
 	LabelOffscreen,
 };
-typedef NSInteger PlayerState;
 
 @implementation embTitle
 
