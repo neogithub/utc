@@ -72,7 +72,7 @@
 
 	NSDictionary *catDict = [_selectedCo.cocategories objectAtIndex:[indexPath row]];
 	
-	NSLog(@"%@",[catDict description]);
+	//NSLog(@"%@",[catDict description]);
 
 	
 	NSString *text = [catDict objectForKey:@"catName"];
@@ -121,13 +121,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if (indexPath.row == 0) {
-		//NSLog(@"dasdasdasds");
-		//Notify the delegate if it exists.
-		//if (_delegate != nil) {
-			[_delegate selectedRow:indexPath.row];
-		//}
-	}
+	[_delegate selectedRow:indexPath.row];
 }
 
 @end

@@ -8,15 +8,18 @@
 
 #import "buildingViewController.h"
 #import "ebZoomingScrollView.h"
-#import <MediaPlayer/MediaPlayer.h>
+
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
+
 #import "neoHotspotsView.h"
 #import "PopoverViewController.h"
+
 #import "embUiViewCard.h"
 #import "NSTimer+CVPausable.h"
-#import "Company.h"
+
 #import "LibraryAPI.h"
+#import "Company.h"
 #import "embTitle.h"
 
 static CGFloat backButtonHeight = 51;
@@ -70,10 +73,10 @@ static CGFloat backButtonX		= 36;
 @property (nonatomic, strong) neoHotspotsView				*myHotspots;
 @property (nonatomic, strong) NSMutableArray				*arr_hotspots;
 
-@property (nonatomic, strong) UIView                        *uiv_textBoxContainer;
+//@property (nonatomic, strong) UIView                        *uiv_textBoxContainer;
 @property (nonatomic, strong) UILabel                       *uil_Company;
 @property (nonatomic, strong) UILabel                       *uil_HotspotTitle;
-@property (nonatomic, strong) UILabel                       *uil_textSection;
+//@property (nonatomic, strong) UILabel                       *uil_textSection;
 
 @property (nonatomic) BOOL isPauseable;
 
@@ -105,8 +108,9 @@ static CGFloat backButtonX		= 36;
 	NSValue* selCommandA = [NSValue valueWithPointer:@selector(reloadBuildingVC)];
 	NSValue* selCommandB = [NSValue valueWithPointer:@selector(reloadHero)];
 	NSValue* selCommandC = [NSValue valueWithPointer:@selector(loadSplitAssets)];
-	
-	_arr_BreadCrumbOfImages = [NSMutableArray arrayWithObjects:selCommandA, selCommandB, selCommandC, nil ];
+	NSValue* selCommandD = [NSValue valueWithPointer:@selector(loadSplitAssets)];
+
+	_arr_BreadCrumbOfImages = [NSMutableArray arrayWithObjects:selCommandA, selCommandB, selCommandC, selCommandD, nil ];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackButton) name:@"hideDetailChrome" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackButton) name:@"unhideDetailChrome" object:nil];
@@ -125,7 +129,8 @@ static CGFloat backButtonX		= 36;
 	
 	_uis_zoomingImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"02_HERO_BLDG.png"] shouldZoom:YES];
     _uis_zoomingImg.delegate = self;
-	
+	_uis_zoomingImg.tag = 1100;
+
 	if (_uiv_movieContainer) {
 		[self.view insertSubview: _uis_zoomingImg belowSubview:_uiv_movieContainer];
 	} else {
@@ -201,6 +206,12 @@ static CGFloat backButtonX		= 36;
 		[settButton setTag:i];
 		[settButton setFrame:CGRectMake(hs_x, hs_y, staticWidth, staticHeight)];
 		[settButton setImage:[UIImage imageNamed:[hotspotItem objectForKey:@"background"]] forState:UIControlStateNormal];
+		
+		//TODO: check if company needs popover
+		//[self zoomTowardsPointFrom:sender];
+
+		
+		
 		[settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
 		[arr_CompanyLogos addObject:settButton];
 		[_uis_zoomingImg.blurView addSubview:settButton];
@@ -243,40 +254,45 @@ static CGFloat backButtonX		= 36;
 
 -(void)filmTransitionToHotspots
 {
-	//TODO: swap to datamodel
 	 _uib_logoBtn.hidden = YES;
 	
 	NSString *movieNamed;
 	NSString *movieNamedImg;
 
-	if ([selectedCoDict objectForKey:@"transitionFilm"]) {
-		movieNamed =  [selectedCoDict objectForKey:@"transitionFilm"];
-		movieNamedImg = [selectedCoDict objectForKey:@"transitionFilmImg"];
-		[self loadMovieNamed:movieNamed isTapToPauseEnabled:NO belowSubview:nil];
-		[self updateStillFrameUnderFilm:movieNamedImg];
-		[self createHotspots];
-	} else {
-		NSLog(@"load popUpImage");
-		//TODO: FIX THIS METHOD AND OVERALL USE
-		[self popUpImage];
-	}
+	movieNamed =  [selectedCoDict objectForKey:@"transitionFilm"];
+	movieNamedImg = [selectedCoDict objectForKey:@"transitionFilmImg"];
 	
+	[self loadMovieNamed:movieNamed isTapToPauseEnabled:NO belowSubview:nil];
+	[self updateStillFrameUnderFilm:movieNamedImg];
+	
+	[self createHotspots];
+	
+	[self initTitleBox];
+}
+
+-(void)loadHotspots
+{
+	_uib_logoBtn.hidden = YES;
+	[self createHotspots];
 	[self initTitleBox];
 }
 
 -(void)loadSplitAssets
 {
+	NSLog(@"loadSplitAssets");
+	
 	[topTitle removeHotspotTitle];
 	[topTitle removeCompanyTitle];
 	
 #ifdef NEODEMO
 	[self updateStillFrameUnderFilm:@"03A Building Cut DEMO.png"];
 #else
-	//[self updateStillFrameUnderFilm:@"03A Building Cut.png"];
-	[self updateStillFrameUnderFilm:@"03_HERO_BLDG_SECTION.png"];
+	[self updateStillFrameUnderFilm:@"03A Building Cut.png"];
 #endif
 	
 	[self initLogoBtn];
+	
+	[_uis_zoomingInfoImg removeFromSuperview];
 	
 	[self removeHotspots];
 	[_arr_hotspotsArray removeAllObjects];
@@ -317,6 +333,7 @@ static CGFloat backButtonX		= 36;
 
 -(void)performSelectorFromArray
 {
+	NSLog(@"performSelectorFromArray");
 	NSValue *val = _arr_BreadCrumbOfImages[_uib_backBtn.tag];
 	SEL mySelector = [val pointerValue];
 	//	[self performSelector:mySelector];
@@ -369,6 +386,13 @@ static CGFloat backButtonX		= 36;
 	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
 	topname = selectedCo.coname;
 #endif
+	
+	if (topTitle)
+	{
+		[topTitle removeFromSuperview];
+		topTitle=nil;
+	}
+	
 	topTitle = [[embTitle alloc] initWithFrame:CGRectZero withText:topname];
 	[self.view addSubview:topTitle];
 }
@@ -395,8 +419,7 @@ static CGFloat backButtonX		= 36;
 	// get array of all hotspots
 	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     NSArray *totalDataArray = selectedCo.cohotspots;
-	NSLog(@"%@",selectedCo.cohotspots);
-
+	//NSLog(@"%@",selectedCo.cohotspots);
 	
 	for (int i = 0; i < [totalDataArray count]; i++) {
         NSDictionary *hotspotItem = totalDataArray [i];
@@ -443,6 +466,70 @@ static CGFloat backButtonX		= 36;
     }
 }
 
+// load the hotpots of the company selected
+-(void)loadCompanySubHotspots:(NSArray*)arrayOfSubHotspots
+{
+	[self removeHotspots];
+	
+	[_uib_backBtn setTag:3];
+	
+	// get array of all hotspots
+	//selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+	NSArray *totalDataArray = arrayOfSubHotspots;
+	//NSLog(@"%@",selectedCo.cohotspots);
+	
+	for (int i = 0; i < [totalDataArray count]; i++) {
+		NSDictionary *hotspotItem = totalDataArray [i];
+		
+		//Get the position of Hs
+		NSString *str_position = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"xy"]];
+		NSRange range = [str_position rangeOfString:@","];
+		NSString *str_x = [str_position substringWithRange:NSMakeRange(0, range.location)];
+		NSString *str_y = [str_position substringFromIndex:(range.location + 1)];
+		float hs_x = [str_x floatValue];
+		float hs_y = [str_y floatValue];
+		_myHotspots = [[neoHotspotsView alloc] initWithFrame:CGRectMake(hs_x, hs_y, 49, 42)];
+		_myHotspots.delegate=self;
+		[_arr_hotspotsArray addObject:_myHotspots];
+		
+		//Get the angle of arrow
+		NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
+		if ([str_angle isEqualToString:@""]) {
+		}
+		else
+		{
+			float hsAngle = [str_angle floatValue];
+			_myHotspots.arwAngle = hsAngle;
+		}
+		
+		//Get the name of BG img name
+		NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
+		_myHotspots.hotspotBgName = str_bgName;
+		
+		//Get the caption of hotspot
+		NSString *str_caption = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"caption"]];
+		_myHotspots.str_labelText = str_caption;
+		
+		// get the alignment
+		int num_Alignment = [[hotspotItem objectForKey:@"alignment"] intValue];
+		_myHotspots.labelAlignment = num_Alignment;
+		
+		//Get the type of hotspot
+		NSString *str_type = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"type"]];
+		_myHotspots.str_typeOfHs = str_type;
+		
+		_myHotspots.tagOfHs = i + 100;
+		[_uis_zoomingInfoImg.blurView addSubview:_myHotspots];
+	}
+}
+
+
+//----------------------------------------------------
+#pragma mark - POPOVER
+//----------------------------------------------------
+/*
+ popover when needed from company logos
+ */
 - (IBAction)showPopover:(UIButton *)sender {
 	PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
 	self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
@@ -457,8 +544,56 @@ static CGFloat backButtonX		= 36;
 #pragma mark - PopoverViewControllerDelegate method
 -(void)selectedRow:(NSInteger)row
 {
-	// get which company from data model
-	[self loadCompaniesHotspots];
+	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+	NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:row];
+	NSString *categoryType = [catDict objectForKey:@"catType"];
+	NSString *categoryName = [catDict objectForKey:@"catName"];
+	NSString *subBG = [catDict objectForKey:@"subBG"];
+	NSArray *subhotspots = [catDict objectForKey:@"subhotspots"];
+	
+	NSLog(@"subhotspots %@",subhotspots);
+	
+	if ([categoryType isEqualToString:@"film"]) {
+		// get which company from data model
+		[self cleanupBeforeLoadingFlyin];
+	} else if ([categoryType isEqualToString:@"still"]) {
+		//TODO: connect to data
+		[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG"];
+
+		[self initTitleBox];
+		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+			[topTitle setHotSpotTitle:categoryName];
+		});
+		
+		[self animateTitleAndHotspot];
+				
+	} else if ([categoryType isEqualToString:@"stillWithMenu"]) {
+	
+		[self popUpImage:subBG];
+		
+		[self initTitleBox];
+		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+			[topTitle setHotSpotTitle:categoryName];
+		});
+		
+		//[self animateTitleAndHotspot];
+
+		[self loadCompanySubHotspots:subhotspots];
+		
+		/*
+		 
+		 1. √ get hotspots for subcategory
+		 2. load bg image to new alloc'd uiscrollview
+		 3. inside of that view have the hotspots load card arrays based on taps
+		 4. inside of that view append the hotspot title with the subcategory
+		 
+		 */
+	
+	}
+
+	
+
+	
 	//The color picker popover is showing. Hide it.
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
@@ -466,10 +601,8 @@ static CGFloat backButtonX		= 36;
 
 
 // load all the companies onto the view
--(void)loadCompaniesHotspots
+-(void)cleanupBeforeLoadingFlyin
 {
-	//NSLog(@"load Company");
-	
 	[_hotspotImageView removeFromSuperview];
 	
 	for (UIButton *btn in arr_CompanyLogos) {
@@ -478,7 +611,10 @@ static CGFloat backButtonX		= 36;
 	
 	[self removeCompanyLogos];
 	
-	[self filmTransitionToHotspots];
+	//SAFETY
+	if ([selectedCoDict objectForKey:@"transitionFilm"]) {
+		[self filmTransitionToHotspots];
+	}
 }
 
 #pragma mark hotspot tapped
@@ -486,79 +622,128 @@ static CGFloat backButtonX		= 36;
 
 -(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
-	tappedView = _arr_hotspotsArray[i];
-	tappedView.tag = i;
+
 #warning more robust previously tapped method needed
 	tappedView.alpha = 0.75;
 	[tappedView setLabelAlpha:0.75];
 	
-	if ([tappedView.str_typeOfHs isEqualToString:@"company"]) {
-		[self filmTransitionToHotspots];
+	int formattedTag = 0;
+	
+	if (i > 99) {
+		formattedTag = i - 100;
 	} else {
-		//NSLog(@"str_typeOfHs %@",tappedView.str_typeOfHs);
-		
+		formattedTag = i;
+	}
+	
+	UIView *t = [hotspot superview];
+	
+	tappedView = _arr_hotspotsArray[formattedTag];
+	tappedView.tag = formattedTag;
+	
 		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
 			
-			NSDictionary *coDict = [selectedCo.cohotspots objectAtIndex:i];
+			NSDictionary *coDict = [selectedCo.cohotspots objectAtIndex:formattedTag];
 			NSString *movieNamed =  [coDict objectForKey:@"fileName"];
 
-			[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+			if (i > 99) {
+				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:t];
+			} else {
+				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+			}
 			
 		} else {
-			[self popUpImage];
+			NSLog(@"=======/n/n/nn/\n\n\n\n neoHotspotsView no need ==========");
+			//TODO: attach to data if some subhotspots load different content
+			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG"];
 		}
 		
-		//zoom towards the point tapped
-		[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
-		[UIView animateWithDuration:0.5 animations:^{
-			_uis_zoomingImg.alpha = 0.0;
-			
-			topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
-			topTitle.uil_HotspotTitle.frame = CGRectMake(-40, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
-			
-			_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
-
-		} completion:^(BOOL completed)
-		 {
-			 [topTitle setHotSpotTitle:tappedView.str_labelText];
-
-		 }];
+		[self zoomTowardsPointFrom:tappedView];
 		
-	}
+		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+			[topTitle setHotSpotTitle:tappedView.str_labelText];
+		});
+}
+
+-(void)zoomTowardsPointFrom:(UIView*)view
+{
+	//zoom towards the point tapped
+	[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
+	[self animateTitleAndHotspot];
+}
+
+-(void)animateTitleAndHotspot
+{
+	[UIView animateWithDuration:0.5 animations:^{
+		_uis_zoomingImg.alpha = 0.0;
+		
+		topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
+		topTitle.uil_HotspotTitle.frame = CGRectMake(-40, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
+		
+		_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
+		
+	} completion:^(BOOL completed) {    } ];
 }
 
 #pragma mark - hotspot actions
--(void)popUpImage
+-(void)popUpImage:(NSString*)imageName
 {
 	if (_uis_zoomingInfoImg) {
 		[_uis_zoomingInfoImg removeFromSuperview];
 		_uis_zoomingInfoImg = nil;
 	}
-	_uis_zoomingInfoImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:@"otis-hotpost-still.png"] shouldZoom:YES];
-	[_uis_zoomingInfoImg setCloseBtn:YES];
+	_uis_zoomingInfoImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:imageName] shouldZoom:YES];
+	[_uis_zoomingInfoImg setCloseBtn:NO];
+	_uis_zoomingInfoImg.tag = 2100;
 	_uis_zoomingInfoImg.delegate = self;
 		
-	[self.view insertSubview:_uis_zoomingInfoImg belowSubview:_uis_zoomingImg];
+	[self.view insertSubview:_uis_zoomingInfoImg belowSubview:_uib_backBtn];
+}
+
+-(void)closeSubHotspots
+{
+	[_uib_backBtn setTag:1];
+	[_uis_zoomingInfoImg removeFromSuperview];
 }
 
 #pragma mark - ebzooming delegate
 -(void)didRemove:(ebZoomingScrollView *)ebZoomingScrollView {
 
-	[_uis_zoomingInfoImg bringSubviewToFront:_uis_zoomingImg];
-	[_uis_zoomingImg.scrollView setZoomScale:1.0];
-	
-	// hotspot cleanup
-	[topTitle removeHotspotTitle];
-	
-	[self unhideChrome];
+	// standard interface view
+	if (ebZoomingScrollView.tag == 1100) {
+		[_uis_zoomingInfoImg bringSubviewToFront:_uis_zoomingImg];
+		[_uis_zoomingImg.scrollView setZoomScale:1.0];
+		
+		// hotspot cleanup
+		[topTitle removeHotspotTitle];
+		[topTitle removeCompanyTitle];
+		
+		// clean up last tapped view
+		// we don;t need it anymore
+		tappedView=nil;
+		
+		[self unhideChrome];
+		
+		[UIView animateWithDuration:0.5 animations:^{
+			_uis_zoomingImg.alpha = 1.0;
+		} completion:^(BOOL completed) {
+			[_uis_zoomingInfoImg removeFromSuperview];
+			_uis_zoomingInfoImg = nil;
+		}];
 
-	[UIView animateWithDuration:0.5 animations:^{
-		_uis_zoomingImg.alpha = 1.0;
-	} completion:^(BOOL completed) {
-		[_uis_zoomingInfoImg removeFromSuperview];
-		_uis_zoomingInfoImg = nil;
-	}];
+	} else {
+		// subhotspot  view
+		NSLog(@"subhotspot");
+		[UIView animateWithDuration:0.5 animations:^{
+			_uis_zoomingInfoImg.alpha = 0.0;
+		} completion:^(BOOL completed) {
+			[_uis_zoomingInfoImg removeFromSuperview];
+			_uis_zoomingInfoImg = nil;
+		}];
+
+	}
+	
+	NSLog(@"didRemove");
 }
 
 #pragma mark - unhide Chrome
@@ -625,7 +810,6 @@ static CGFloat backButtonX		= 36;
 	NSString *url = [[NSBundle mainBundle] pathForResource:fileName
                                                     ofType:extension];
     
-	
 	if (tapToPauseEnabled == YES) {
 		NSLog(@"tapToPauseEnabled == YES");
 		_isPauseable = YES;
@@ -649,7 +833,7 @@ static CGFloat backButtonX		= 36;
     }
 	
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
-	[_uiv_movieContainer setBackgroundColor:[UIColor clearColor]];
+	[_uiv_movieContainer setBackgroundColor:[UIColor redColor]];
 	
     //[_uiv_movieContainer setUserInteractionEnabled:YES];
     //[_uiv_movieContainer addGestureRecognizer:panGesture];
@@ -681,6 +865,7 @@ static CGFloat backButtonX		= 36;
 	[_avPlayer play];
 
 	if (tapToPauseEnabled) {
+		NSLog(@"loadMovieNamed beginSequence");
 		[self beginSequence];
 	}
 	
@@ -696,8 +881,6 @@ static CGFloat backButtonX		= 36;
 		
 		UIButton *h = [UIButton buttonWithType:UIButtonTypeCustom];
 		h.frame = CGRectMake(1024-36, 0, 36, 36);
-		//[h setTitle:@"X" forState:UIControlStateNormal];
-		//h.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
 		[h setBackgroundImage:[UIImage imageNamed:@"close bttn.png"] forState:UIControlStateNormal];
 		[h setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		//set their selector using add selector
@@ -745,7 +928,8 @@ static CGFloat backButtonX		= 36;
 }
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
-    [self closeMovie];
+	NSLog(@"playerItemDidReachEnd");
+	[self closeMovie];
 }
 
 -(void)playerItemLoop:(NSNotification *)notification
@@ -755,6 +939,7 @@ static CGFloat backButtonX		= 36;
 	[_avPlayer play];
 	
 	// starts the player as well
+	NSLog(@"playerItemLoop beginSequence");
 	[self beginSequence];
 }
 
@@ -809,36 +994,57 @@ static CGFloat backButtonX		= 36;
 
 -(void)closeMovie
 {
+	NSLog(@"closeMovie");
+
 	if (_myTimer) {
 		[self.myTimer invalidate];
 		self.myTimer = nil;
 	}
 	
-	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
-	[_uis_zoomingImg.scrollView setZoomScale:1.0];
-	[topTitle removeHotspotTitle];
+	if (_uis_zoomingInfoImg !=nil) {
+		[self resetSubHotspot];
+	} else {
+		[self resetBaseInteractive];
+	}
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	
 	if (_isPauseable == YES) {
 		[self unhideChrome];
+		[topTitle removeHotspotTitle];
 	}
-
-	[UIView animateWithDuration:0.3 animations:^{
-		_uis_zoomingImg.alpha = 1.0;
-			
-	} completion:^(BOOL completed) {
-		[_uis_zoomingInfoImg removeFromSuperview];
-		_uis_zoomingInfoImg = nil;
-		
-		[_avPlayerLayer removeFromSuperlayer];
-		_avPlayerLayer = nil;
-		[_uiv_movieContainer removeFromSuperview];
-		_uiv_movieContainer=nil;
-
-	}];
-	
-
 	
 	[self clearHotpsotData];
+}
+
+-(void)resetBaseInteractive
+{
+	NSLog(@"resetBaseInteractive");
+	
+	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
+	[_uis_zoomingImg.scrollView setZoomScale:1.0];
+	
+	[UIView animateWithDuration:0.3 animations:^{
+		_uis_zoomingImg.alpha = 1.0;
+		
+	} completion:^(BOOL completed) {
+		[self removeMovieLayers];
+	}];
+}
+
+-(void)resetSubHotspot
+{
+	NSLog(@"resetSubHotspot");
+	
+	[self removeMovieLayers];
+}
+
+-(void)removeMovieLayers
+{
+	[_avPlayerLayer removeFromSuperlayer];
+	_avPlayerLayer = nil;
+	[_uiv_movieContainer removeFromSuperview];
+	_uiv_movieContainer=nil;
 }
 
 //----------------------------------------------------
@@ -886,6 +1092,7 @@ static CGFloat backButtonX		= 36;
 	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
 	NSArray *totalDataArray = selectedCo.cohotspots;
 
+	// causes crash sometimes
 	NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
 	//NSLog(@"/ntapedtag %li",(long)tappedView.tag);
 	
@@ -1124,7 +1331,7 @@ static CGFloat backButtonX		= 36;
 												  userInfo:nil
 												   repeats:YES];
 	
-	//NSLog(@"== /n/nstart timer");
+	NSLog(@"== /n/nstart timer");
 }
 
 

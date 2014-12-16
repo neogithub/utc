@@ -83,8 +83,9 @@
 {
 	_otisVC = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
 	_otisVC.transitionClipName = @"01_TRANS_CITY_TO_BLDG.mov";
+	[self addChildViewController:_otisVC];
 	[self.view addSubview: _otisVC.view];
-	
+	[_otisVC didMoveToParentViewController:self];
 	// update the company selected on the left side
 	[self.delegate rowSelected:self atIndex:0];
 }
