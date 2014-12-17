@@ -366,7 +366,7 @@
 		<key>transitionFilm</key>
 		<string>03_TRANS_ELEV.mov</string>
 		<key>transitionFilmImg</key>
-		<string>04_HOTSPOT_CROSS_SECTION.png</string>
+		<string>PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG</string>
 		<key>fileName</key>
 		<string>Carrier</string>
 		<key>demoName</key>
@@ -559,13 +559,13 @@
 				<key>background</key>
 				<string>icon marker right.png</string>
 				<key>xy</key>
-				<string>780,74</string>
+				<string>580,174</string>
 				<key>width</key>
 				<string>360</string>
 				<key>angle</key>
 				<string>180</string>
 				<key>caption</key>
-				<string>Remote Diagnostics</string>
+				<string>Taking Efficiency to New Levels</string>
 				<key>RGB</key>
 				<string></string>
 				<key>fileName</key>
@@ -621,7 +621,7 @@
 				<key>angle</key>
 				<string>315</string>
 				<key>caption</key>
-				<string>ReGen Drive</string>
+				<string>Most Robust Chiller Available: The 23XRV</string>
 				<key>RGB</key>
 				<string></string>
 				<key>fileName</key>
@@ -665,7 +665,7 @@
 				<key>angle</key>
 				<string>315</string>
 				<key>caption</key>
-				<string>Compact Controller</string>
+				<string>Carrier Reliability </string>
 				<key>RGB</key>
 				<string></string>
 				<key>fileName</key>

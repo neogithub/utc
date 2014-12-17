@@ -639,10 +639,10 @@ enum {
 
 -(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
+	
+	NSLog(@"neoHotspotsView");
 
-#warning more robust previously tapped method needed
-	tappedView.alpha = 0.75;
-	[tappedView setLabelAlpha:0.75];
+
 	
 	BOOL isSubHotspots;
 	
@@ -660,6 +660,9 @@ enum {
 	
 	tappedView = _arr_hotspotsArray[formattedTag];
 	tappedView.tag = formattedTag;
+#warning more robust previously tapped method needed
+	tappedView.alpha = 0.75;
+	[tappedView setLabelAlpha:0.75];
 	
 		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
 			
@@ -1087,7 +1090,17 @@ enum {
 {
 	NSLog(@"resetSubHotspot");
 	
-	[self removeMovieLayers];
+	//[self removeMovieLayers];
+	
+	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
+	[_uis_zoomingImg.scrollView setZoomScale:1.0];
+	
+	[UIView animateWithDuration:0.3 animations:^{
+		_uis_zoomingImg.alpha = 1.0;
+		
+	} completion:^(BOOL completed) {
+		[self removeMovieLayers];
+	}];
 }
 
 -(void)removeMovieLayers
