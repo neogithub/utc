@@ -1532,7 +1532,218 @@
 				<key>catName</key>
 				<string>WebCTRL Web-based Building Automation</string>
 				<key>catType</key>
-				<string>still</string>
+				<string>stillWithMenu</string>
+				<key>subBG</key>
+				<string>PH2_KIDDE_01_SMG_FM200.PNG</string>
+				<key>subhotspots</key>
+				<array>
+					<dict>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker right.png</string>
+						<key>xy</key>
+						<string>780,74</string>
+						<key>width</key>
+						<string>360</string>
+						<key>angle</key>
+						<string>180</string>
+						<key>caption</key>
+						<string>Web-Based System</string>
+						<key>RGB</key>
+						<string></string>
+						<key>fileName</key>
+						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<key>alignment</key>
+						<integer>3</integer>
+						<key>removeafterseconds</key>
+						<integer>23</integer>
+						<key>facts</key>
+						<dict>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<key>appearanceDelay</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Data gathering allows for custom service visits</string>
+									<key>appearanceDelay</key>
+									<integer>5</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Identify issues before they become problems</string>
+									<key>appearanceDelay</key>
+									<integer>14</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Technicians are dispatched automatically for urgent issues</string>
+									<key>appearanceDelay</key>
+									<integer>18</integer>
+								</dict>
+							</array>
+							<key>factwidth</key>
+							<string>300</string>
+							<key>factxy</key>
+							<string>130,300</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker right.png</string>
+						<key>xy</key>
+						<string>280,474</string>
+						<key>width</key>
+						<string>360</string>
+						<key>angle</key>
+						<string>180</string>
+						<key>caption</key>
+						<string>Saves Energy &amp; Expense</string>
+						<key>RGB</key>
+						<string></string>
+						<key>fileName</key>
+						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<key>alignment</key>
+						<integer>3</integer>
+						<key>removeafterseconds</key>
+						<integer>23</integer>
+						<key>facts</key>
+						<dict>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<key>appearanceDelay</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Data gathering allows for custom service visits</string>
+									<key>appearanceDelay</key>
+									<integer>5</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Identify issues before they become problems</string>
+									<key>appearanceDelay</key>
+									<integer>14</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Technicians are dispatched automatically for urgent issues</string>
+									<key>appearanceDelay</key>
+									<integer>18</integer>
+								</dict>
+							</array>
+							<key>factwidth</key>
+							<string>300</string>
+							<key>factxy</key>
+							<string>130,300</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker left.png</string>
+						<key>xy</key>
+						<string>580,120</string>
+						<key>width</key>
+						<string>360</string>
+						<key>angle</key>
+						<string>315</string>
+						<key>caption</key>
+						<string>Environmental Index</string>
+						<key>RGB</key>
+						<string></string>
+						<key>fileName</key>
+						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+						<key>alignment</key>
+						<integer>2</integer>
+						<key>removeafterseconds</key>
+						<integer>23</integer>
+						<key>facts</key>
+						<dict>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+									<key>appearanceDelay</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+									<key>appearanceDelay</key>
+									<integer>10</integer>
+								</dict>
+							</array>
+							<key>factwidth</key>
+							<string>360</string>
+							<key>factxy</key>
+							<string>20,210</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker left.png</string>
+						<key>xy</key>
+						<string>200,200</string>
+						<key>width</key>
+						<string>360</string>
+						<key>angle</key>
+						<string>315</string>
+						<key>caption</key>
+						<string>Time-Lapse Graphics </string>
+						<key>RGB</key>
+						<string></string>
+						<key>fileName</key>
+						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+						<key>alignment</key>
+						<integer>2</integer>
+						<key>removeafterseconds</key>
+						<integer>10</integer>
+						<key>facts</key>
+						<dict>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Small enough to fit inside the wall at top elevator landing</string>
+									<key>appearanceDelay</key>
+									<integer>3</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>No need to plan extra room at top of hoistway</string>
+									<key>appearanceDelay</key>
+									<integer>5</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Much easier access for diagnostics and repair</string>
+									<key>appearanceDelay</key>
+									<integer>7</integer>
+								</dict>
+							</array>
+							<key>factwidth</key>
+							<string>360</string>
+							<key>factxy</key>
+							<string>20,203</string>
+						</dict>
+					</dict>
+				</array>
 			</dict>
 			<dict>
 				<key>catName</key>
@@ -1868,7 +2079,19 @@
 		<array>
 			<dict>
 				<key>catName</key>
-				<string>TBD</string>
+				<string>Green Building Leadership</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Green Technology Leadership</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>This Green Building</string>
 				<key>catType</key>
 				<string>still</string>
 			</dict>
@@ -2142,6 +2365,12 @@
 		<integer>2</integer>
 		<key>categories</key>
 		<array>
+			<dict>
+				<key>catName</key>
+				<string>Security Management</string>
+				<key>catType</key>
+				<string>still</string>
+			</dict>
 			<dict>
 				<key>catName</key>
 				<string>Truvision Cameras</string>
