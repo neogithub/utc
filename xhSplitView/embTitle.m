@@ -80,7 +80,7 @@ enum {
 	static CGFloat labelPad = 20;
 	hotspotLabelWidth = str_width + (labelPad);
 	
-	_uil_HotspotTitle = [[UILabel alloc] initWithFrame:CGRectMake(companyLabelWidth-backButtonWidth-15, -backButtonActualHeight, hotspotLabelWidth, backButtonActualHeight)];
+	_uil_HotspotTitle = [[UILabel alloc] initWithFrame:CGRectMake(companyLabelWidth, -backButtonActualHeight, hotspotLabelWidth, backButtonActualHeight)];
 	[_uil_HotspotTitle setText:string];
 	_uil_HotspotTitle.backgroundColor = [UIColor colorWithRed:0.0000 green:0.4667 blue:0.7686 alpha:0.8];
 	[_uil_HotspotTitle setTextColor:[UIColor whiteColor]];
@@ -92,9 +92,29 @@ enum {
 	[_uiv_textBoxContainer addSubview: _uil_HotspotTitle];
 	
 	// resize text container to fit
-	_uiv_textBoxContainer.frame = CGRectMake(73, 0, hotspotLabelWidth+companyLabelWidth, backButtonHeight);
+	//_uiv_textBoxContainer.frame = CGRectMake(73, 0, hotspotLabelWidth+companyLabelWidth, backButtonHeight);
 	
 	[self animate:_uil_HotspotTitle direction:LabelOnscreen];
+}
+
+
+-(void)appendHotSpotTitle:(NSString *)string
+{
+	_appendString = _uil_HotspotTitle.text;
+	NSString *aappendString = [NSString stringWithFormat:@"   |   %@", string];
+	
+	NSString *newString = [_appendString stringByAppendingString:aappendString];
+	
+	UIFont *font = [UIFont fontWithName:@"Helvetica" size:17];
+	CGFloat str_width = [self getWidthFromStringLength:newString andFont:font];
+	//static CGFloat labelPad = 20;
+	hotspotLabelWidth = str_width;
+	
+	_uil_HotspotTitle.frame = CGRectMake(companyLabelWidth, 0, hotspotLabelWidth+companyLabelWidth, backButtonActualHeight);
+	
+	_uil_HotspotTitle.text = newString;
+	NSLog(@"%@",_uil_HotspotTitle.text);
+
 }
 
 -(void)removeHotspotTitle

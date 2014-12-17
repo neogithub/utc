@@ -26,6 +26,11 @@ static CGFloat backButtonHeight = 51;
 static CGFloat backButtonWidth	= 58;
 static CGFloat backButtonX		= 36;
 
+enum {
+	LabelOnscreen,
+	LabelOffscreen,
+};
+
 @interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, UIGestureRecognizerDelegate>
 {
 	CGFloat companyLabelWidth;
@@ -56,7 +61,7 @@ static CGFloat backButtonX		= 36;
 @property (nonatomic, strong) UIImageView					*uiiv_bg;
 @property (nonatomic, strong) NSMutableArray				*arr_hotspotsArray;
 @property (nonatomic, strong) NSMutableArray				*arr_companyHotspotArray;
-
+@property (nonatomic, strong) NSArray						*arr_subHotspots;
 @property (nonatomic, strong) NSMutableArray				*arr_BreadCrumbOfImages;
 
 @property (nonatomic, strong) ebZoomingScrollView			*uis_zoomingImg;
@@ -280,6 +285,12 @@ static CGFloat backButtonX		= 36;
 -(void)loadSplitAssets
 {
 	NSLog(@"loadSplitAssets");
+	
+#warning added to fix comingback from sub hotspots view
+	_uis_zoomingImg.alpha = 1.0;
+	[_uis_zoomingImg.scrollView setZoomScale:1.0];
+	[self removeMovieLayers];
+// end warning
 	
 	[topTitle removeHotspotTitle];
 	[topTitle removeCompanyTitle];
@@ -549,36 +560,39 @@ static CGFloat backButtonX		= 36;
 	NSString *categoryType = [catDict objectForKey:@"catType"];
 	NSString *categoryName = [catDict objectForKey:@"catName"];
 	NSString *subBG = [catDict objectForKey:@"subBG"];
-	NSArray *subhotspots = [catDict objectForKey:@"subhotspots"];
+	_arr_subHotspots = [catDict objectForKey:@"subhotspots"];
 	
-	NSLog(@"subhotspots %@",subhotspots);
+	//NSLog(@"subhotspots %@",_arr_subHotspots);
 	
 	if ([categoryType isEqualToString:@"film"]) {
 		// get which company from data model
 		[self cleanupBeforeLoadingFlyin];
 	} else if ([categoryType isEqualToString:@"still"]) {
 		//TODO: connect to data
-		[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG"];
+		[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG" withCloseButton:YES];
 
 		[self initTitleBox];
-		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		//dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 			[topTitle setHotSpotTitle:categoryName];
-		});
+		//});
 		
-		[self animateTitleAndHotspot];
+		//[self animateTitleAndHotspot:LabelOnscreen];
 				
 	} else if ([categoryType isEqualToString:@"stillWithMenu"]) {
 	
-		[self popUpImage:subBG];
-		
 		[self initTitleBox];
-		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.00 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 			[topTitle setHotSpotTitle:categoryName];
 		});
 		
-		//[self animateTitleAndHotspot];
+		[self popUpImage:subBG withCloseButton:NO];
+		
 
-		[self loadCompanySubHotspots:subhotspots];
+		
+		//[self animateTitleAndHotspot:LabelOffscreen];
+
+		[self loadCompanySubHotspots:_arr_subHotspots];
 		
 		/*
 		 
@@ -627,15 +641,19 @@ static CGFloat backButtonX		= 36;
 	tappedView.alpha = 0.75;
 	[tappedView setLabelAlpha:0.75];
 	
+	BOOL isSubHotspots;
+	
 	int formattedTag = 0;
 	
 	if (i > 99) {
 		formattedTag = i - 100;
+		isSubHotspots = YES;
 	} else {
 		formattedTag = i;
+		isSubHotspots = NO;
 	}
 	
-	UIView *t = [hotspot superview];
+	//UIView *t = [hotspot superview];
 	
 	tappedView = _arr_hotspotsArray[formattedTag];
 	tappedView.tag = formattedTag;
@@ -646,21 +664,30 @@ static CGFloat backButtonX		= 36;
 			NSString *movieNamed =  [coDict objectForKey:@"fileName"];
 
 			if (i > 99) {
-				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:t];
+				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uib_backBtn];
 			} else {
 				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
 			}
-			
-		} else {
+		}
+		else {
 			NSLog(@"=======/n/n/nn/\n\n\n\n neoHotspotsView no need ==========");
 			//TODO: attach to data if some subhotspots load different content
-			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG"];
+//			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG"];
 		}
 		
 		[self zoomTowardsPointFrom:tappedView];
 		
 		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-			[topTitle setHotSpotTitle:tappedView.str_labelText];
+			
+			if(isSubHotspots==YES)
+			{
+				[topTitle appendHotSpotTitle:tappedView.str_labelText];
+
+			} else {
+				
+				[topTitle setHotSpotTitle:tappedView.str_labelText];
+			}
+			
 		});
 }
 
@@ -668,32 +695,40 @@ static CGFloat backButtonX		= 36;
 {
 	//zoom towards the point tapped
 	[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
-	[self animateTitleAndHotspot];
+	[self animateTitleAndHotspot:LabelOffscreen];
 }
 
--(void)animateTitleAndHotspot
+-(void)animateTitleAndHotspot:(NSInteger)d
 {
 	[UIView animateWithDuration:0.5 animations:^{
 		_uis_zoomingImg.alpha = 0.0;
 		
-		topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
-		topTitle.uil_HotspotTitle.frame = CGRectMake(-40, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
+//		if (d == 0) {
+//			topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
+//			topTitle.uil_HotspotTitle.frame = CGRectMake(-40, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
+//			
+//			_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
+//			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
+//		} else if (d == 1){
+//			topTitle.uil_Company.frame = CGRectMake(74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
+//			topTitle.uil_HotspotTitle.frame = CGRectMake(74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
+//			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
+//		}
 		
-		_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
+		
 		
 	} completion:^(BOOL completed) {    } ];
 }
 
 #pragma mark - hotspot actions
--(void)popUpImage:(NSString*)imageName
+-(void)popUpImage:(NSString*)imageName withCloseButton:(BOOL)closeBtn
 {
 	if (_uis_zoomingInfoImg) {
 		[_uis_zoomingInfoImg removeFromSuperview];
 		_uis_zoomingInfoImg = nil;
 	}
 	_uis_zoomingInfoImg = [[ebZoomingScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 768) image:[UIImage imageNamed:imageName] shouldZoom:YES];
-	[_uis_zoomingInfoImg setCloseBtn:NO];
+	[_uis_zoomingInfoImg setCloseBtn:closeBtn];
 	_uis_zoomingInfoImg.tag = 2100;
 	_uis_zoomingInfoImg.delegate = self;
 		
@@ -736,11 +771,15 @@ static CGFloat backButtonX		= 36;
 		NSLog(@"subhotspot");
 		[UIView animateWithDuration:0.5 animations:^{
 			_uis_zoomingInfoImg.alpha = 0.0;
+			_uis_zoomingImg.alpha = 1.0;
 		} completion:^(BOOL completed) {
 			[_uis_zoomingInfoImg removeFromSuperview];
 			_uis_zoomingInfoImg = nil;
 		}];
-
+		[topTitle removeHotspotTitle];
+		[topTitle removeCompanyTitle];
+		//[self animateTitleAndHotspot:LabelOffscreen];
+		[self unhideChrome];
 	}
 	
 	NSLog(@"didRemove");
@@ -749,14 +788,14 @@ static CGFloat backButtonX		= 36;
 #pragma mark - unhide Chrome
 -(void)unhideChrome
 {
-	[UIView animateWithDuration:0.33 animations:^{
-		topTitle.uil_Company.frame = CGRectMake(14, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
-		topTitle.uil_HotspotTitle.frame = CGRectMake(74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
-		_uib_backBtn.transform = CGAffineTransformIdentity;
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
-	} completion:^(BOOL completed) {
-		
-	}];
+//	[UIView animateWithDuration:0.33 animations:^{
+//		topTitle.uil_Company.frame = CGRectMake(14, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
+//		topTitle.uil_HotspotTitle.frame = CGRectMake(74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
+//		_uib_backBtn.transform = CGAffineTransformIdentity;
+//		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
+//	} completion:^(BOOL completed) {
+//		
+//	}];
 }
 
 #pragma mark - Utiltites
@@ -814,10 +853,10 @@ static CGFloat backButtonX		= 36;
 		NSLog(@"tapToPauseEnabled == YES");
 		_isPauseable = YES;
 		
-		[UIView animateWithDuration:0.3 animations:^{
-			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
-			_uil_HotspotTitle.frame = CGRectMake(-74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
-		} completion:nil];
+//		[UIView animateWithDuration:0.3 animations:^{
+//			topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
+//			topTitle.uil_HotspotTitle.frame = CGRectMake(-74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
+//		} completion:nil];
 	}
 
 	
@@ -1009,9 +1048,18 @@ static CGFloat backButtonX		= 36;
 	
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	
+	NSLog(@"_arr_subHotspots %lu",(unsigned long)[_arr_subHotspots count]);
+
+	
 	if (_isPauseable == YES) {
-		[self unhideChrome];
-		[topTitle removeHotspotTitle];
+		//[self unhideChrome];
+#warning might be trouble once movies are added
+		if ([_arr_subHotspots count] == 0) {
+			[topTitle removeHotspotTitle];
+		} else {
+			//_arr_subHotspots=nil;
+			[topTitle setHotSpotTitle:topTitle.appendString];
+		}
 	}
 	
 	[self clearHotpsotData];
