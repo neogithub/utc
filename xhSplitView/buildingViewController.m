@@ -287,9 +287,12 @@ enum {
 	NSLog(@"loadSplitAssets");
 	
 #warning added to fix comingback from sub hotspots view
-	_uis_zoomingImg.alpha = 1.0;
-	[_uis_zoomingImg.scrollView setZoomScale:1.0];
-	[self removeMovieLayers];
+	if	( _uis_zoomingImg.alpha == 0.0 )
+	{
+		_uis_zoomingImg.alpha = 1.0;
+		[_uis_zoomingImg.scrollView setZoomScale:1.0];
+		[self removeMovieLayers];
+	}
 // end warning
 	
 	[topTitle removeHotspotTitle];
