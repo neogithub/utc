@@ -107,11 +107,6 @@
     }
 	
 	NSDictionary *catDict = [_selectedCo.cocategories objectAtIndex:[indexPath row]];
-
-	
-	if ([[catDict objectForKey:@"catType"] isEqualToString:@"film"]) {
-		cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-rt-arrow.png"]];
-	}
 	
 	NSString *newString = [catDict objectForKey:@"catName"];
 	
