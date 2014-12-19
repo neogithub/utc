@@ -33,22 +33,19 @@ enum {
 
 @interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, UIGestureRecognizerDelegate>
 {
-	CGFloat companyLabelWidth;
-	CGFloat hotspotLabelWidth;
-	CGFloat time;
 	CGFloat removeTextAfterThisManySeconds;
 
-	NSMutableArray *arr_HotspotInfoCards;
-	UIView *uiv_HotspotInfoCardContainer;
+	NSMutableArray	*arr_HotspotInfoCards;
+	UIView			*uiv_HotspotInfoCardContainer;
 	neoHotspotsView *tappedView;
-	float factsCopy;
-	Company *selectedCo;
-	NSDictionary *selectedCoDict;
-	NSArray *allCompanies;
+	float			factsCopy;
+	Company			*selectedCo;
+	NSDictionary	*selectedCoDict;
+	NSArray			*allCompanies;
 	
-	NSMutableArray *arr_CompanyLogos;
-	embTitle*topTitle;
-	NSString *topname;
+	NSMutableArray	*arr_CompanyLogos;
+	embTitle		*topTitle;
+	NSString		*topname;
 }
 
 @property (nonatomic) NSTimer *myTimer;
@@ -77,12 +74,6 @@ enum {
 @property (nonatomic, strong) UIImageView *hotspotImageView;
 @property (nonatomic, strong) neoHotspotsView				*myHotspots;
 @property (nonatomic, strong) NSMutableArray				*arr_hotspots;
-
-//@property (nonatomic, strong) UIView                        *uiv_textBoxContainer;
-@property (nonatomic, strong) UILabel                       *uil_Company;
-@property (nonatomic, strong) UILabel                       *uil_HotspotTitle;
-//@property (nonatomic, strong) UILabel                       *uil_textSection;
-
 @property (nonatomic) BOOL isPauseable;
 
 @end
@@ -105,8 +96,6 @@ enum {
 	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO belowSubview:nil];
 	// add in the bg image beneath the film
 	[self createStillFrameUnderFilm];
-	
-	time = 1;
 	
 	[self createBackButton];
 	
@@ -271,8 +260,9 @@ enum {
 	[self updateStillFrameUnderFilm:movieNamedImg];
 	
 	[self createHotspots];
-	
-	[self initTitleBox];
+#warning trying to get subcat into title for all films
+	//now set in selectrow
+	// [self initTitleBox];
 }
 
 -(void)loadHotspots
@@ -334,7 +324,7 @@ enum {
 	NSLog(@"hideBackButton");
 	self.uib_backBtn.hidden = YES;
 	self.uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
-	[_uil_Company setHidden:YES];
+	[topTitle.uil_Company setHidden:YES];
 }
 
 -(void)unhideBackButton
@@ -342,7 +332,7 @@ enum {
 	NSLog(@"==unhideBackButton");
 	self.uib_backBtn.hidden = NO;
 	self.uib_backBtn.transform = CGAffineTransformIdentity;
-	[_uil_Company setHidden:NO];
+	[topTitle.uil_Company setHidden:NO];
 }
 
 -(void)performSelectorFromArray
@@ -544,14 +534,16 @@ enum {
 /*
  popover when needed from company logos
  */
-- (IBAction)showPopover:(UIButton *)sender {
-	PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
-	self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
-	
+- (IBAction)showPopover:(UIButton *)sender
+{
 	// get company tapped on from data model
 	NSDictionary *co = allCompanies[sender.tag];
 	selectedCoDict = [[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]] [0];
+	
+	PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
+	self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
 	PopoverView.delegate = self;
+	
 	[self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
 }
 
@@ -570,29 +562,24 @@ enum {
 	if ([categoryType isEqualToString:@"film"]) {
 		// get which company from data model
 		[self cleanupBeforeLoadingFlyin];
+		[self initTitleBox];
+		[topTitle setHotSpotTitle:categoryName];
+
 	} else if ([categoryType isEqualToString:@"still"]) {
 		//TODO: connect to data
 		[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG" withCloseButton:YES];
-
 		[self initTitleBox];
-		//dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-			[topTitle setHotSpotTitle:categoryName];
-		//});
+		[topTitle setHotSpotTitle:categoryName];
 		
 		//[self animateTitleAndHotspot:LabelOnscreen];
 				
 	} else if ([categoryType isEqualToString:@"stillWithMenu"]) {
 	
 		[self initTitleBox];
-
-		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.00 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-			[topTitle setHotSpotTitle:categoryName];
-		});
+		[topTitle setHotSpotTitle:categoryName];
 		
 		[self popUpImage:subBG withCloseButton:NO];
-		
 
-		
 		//[self animateTitleAndHotspot:LabelOffscreen];
 
 		[self loadCompanySubHotspots:_arr_subHotspots];
@@ -608,9 +595,6 @@ enum {
 	
 	}
 
-	
-
-	
 	//The color picker popover is showing. Hide it.
 	[self.popOver dismissPopoverAnimated:YES];
 	self.popOver = nil;
@@ -641,8 +625,6 @@ enum {
 {
 	
 	NSLog(@"neoHotspotsView");
-
-
 	
 	BOOL isSubHotspots;
 	
@@ -656,11 +638,8 @@ enum {
 		isSubHotspots = NO;
 	}
 	
-	//UIView *t = [hotspot superview];
-	
 	tappedView = _arr_hotspotsArray[formattedTag];
 	tappedView.tag = formattedTag;
-#warning more robust previously tapped method needed
 	tappedView.alpha = 0.75;
 	[tappedView setLabelAlpha:0.75];
 	
@@ -690,8 +669,9 @@ enum {
 				[topTitle appendHotSpotTitle:tappedView.str_labelText];
 
 			} else {
-				
-				[topTitle setHotSpotTitle:tappedView.str_labelText];
+				[topTitle appendHotSpotTitle:tappedView.str_labelText];
+
+				//[topTitle setHotSpotTitle:tappedView.str_labelText];
 			}
 			
 		});
@@ -835,16 +815,6 @@ enum {
 	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
 }
 
-#pragma mark get width of string text
--(float)getWidthFromStringLength:(NSString*)string andFont:(UIFont*)stringfont
-{
-	UIFont *font = stringfont;
-    NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
-    CGFloat str_width = [[[NSAttributedString alloc] initWithString:string attributes:attributes1] size].width;
-	// NSLog(@"The string width is %f", str_width);
-	return str_width;
-}
-
 #pragma mark - play movie
 -(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled belowSubview:(UIView*)belowSubview
 {
@@ -905,8 +875,6 @@ enum {
 	
     [_uiv_movieContainer.layer addSublayer: _avPlayerLayer];
 	
-	// starts the player as well
-	
 	[_avPlayer play];
 
 	if (tapToPauseEnabled) {
@@ -914,8 +882,12 @@ enum {
 		[self beginSequence];
 	}
 	
+	NSString *movieNamed =  [selectedCoDict objectForKey:@"transitionFilm"];
+	NSString *movieNamedImg = [selectedCoDict objectForKey:@"transitionFilmImg"];
 	
-	[self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
+	[self updateStillFrameUnderFilm:movieNamedImg];
+
+	//[self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
 	
 	NSString *selectorAfterMovieFinished;
 	
@@ -1061,7 +1033,11 @@ enum {
 		//[self unhideChrome];
 #warning might be trouble once movies are added
 		if ([_arr_subHotspots count] == 0) {
-			[topTitle removeHotspotTitle];
+			//[topTitle removeHotspotTitle];
+			if (topTitle.appendString) {
+				NSLog(@"topTitle.appendString %@",topTitle.appendString);
+				[topTitle setHotSpotTitle:topTitle.appendString];
+			}
 		} else {
 			//_arr_subHotspots=nil;
 			[topTitle setHotSpotTitle:topTitle.appendString];

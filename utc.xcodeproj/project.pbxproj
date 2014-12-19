@@ -15,6 +15,10 @@
 		2018676E19D2082600ADB82F /* Marker_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 2018676A19D2082600ADB82F /* Marker_Right.png */; };
 		20192C751A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */; };
 		20192C761A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */; };
+		20192C781A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */; };
+		20192C791A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */; };
+		20192C7E1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */; };
+		20192C7F1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */; };
 		2050EAB51A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */; };
 		2050EAB61A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */; };
 		206063DC19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */; };
@@ -323,6 +327,8 @@
 		2018676919D2082600ADB82F /* Marker_Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marker_Right@2x.png"; sourceTree = "<group>"; };
 		2018676A19D2082600ADB82F /* Marker_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marker_Right.png; sourceTree = "<group>"; };
 		20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG; path = images/PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG; sourceTree = "<group>"; };
+		20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; path = images/PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; sourceTree = "<group>"; };
+		20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_KIDDE_00_STILL_HS.png; path = images/PH2_KIDDE_00_STILL_HS.png; sourceTree = "<group>"; };
 		2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_KIDDE_01_SMG_FM200.PNG; path = images/PH2_KIDDE_01_SMG_FM200.PNG; sourceTree = "<group>"; };
 		206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 01_TRANS_CITY_TO_BLDG.mov; path = films/01_TRANS_CITY_TO_BLDG.mov; sourceTree = "<group>"; };
 		206063DF19D521E50045163F /* 02_TRANS_BLDG_UNBUILD.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 02_TRANS_BLDG_UNBUILD.mov; path = films/02_TRANS_BLDG_UNBUILD.mov; sourceTree = "<group>"; };
@@ -587,6 +593,8 @@
 				20A95A7519CC313F00132F7E /* 02_HERO_BLDG.png */,
 				2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */,
 				20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */,
+				20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */,
+				20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -980,6 +988,7 @@
 				20E546FF1A2DFEF40073B2CF /* otis-hotpost-still.png in Resources */,
 				20BF48D31A3B501D009645DC /* logo_advantec@2x.png in Resources */,
 				20E547011A2DFEF40073B2CF /* 00_LOGO_TRANS_HERO_CITY.png in Resources */,
+				20192C7F1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */,
 				20E547021A2DFEF40073B2CF /* swipe-to-reveal@2x.png in Resources */,
 				20E547031A2DFEF40073B2CF /* Marker.png in Resources */,
 				20E547041A2DFEF40073B2CF /* xhSplitViewController.xib in Resources */,
@@ -995,6 +1004,7 @@
 				20E547091A2DFEF40073B2CF /* InfoPlist.strings in Resources */,
 				20BF48E71A3B501D009645DC /* logo_lenel@2x.png in Resources */,
 				20E5470B1A2DFEF40073B2CF /* close bttn.png in Resources */,
+				20192C791A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */,
 				20E5470C1A2DFEF40073B2CF /* menu header@2x.png in Resources */,
 				20E5470E1A2DFEF40073B2CF /* title3@2x.png in Resources */,
 				20E5470F1A2DFEF40073B2CF /* grfx_tableBg.png in Resources */,
@@ -1067,6 +1077,7 @@
 				209AEFB019D48C650074A3EA /* icon-rt-arrow.png in Resources */,
 				20A39EAA19C32F8800C71430 /* bg_05.jpg in Resources */,
 				20BF48DA1A3B501D009645DC /* logo_carrier@2x.png in Resources */,
+				20192C781A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */,
 				20A95A5019CBB82800132F7E /* icon marker right.png in Resources */,
 				200B9D0D19D25E7B00C7E7AC /* menu header.png in Resources */,
 				20A95A5419CBB82800132F7E /* icon back.png in Resources */,
@@ -1171,6 +1182,7 @@
 				20BA88C81A37941900705945 /* card_mask.png in Resources */,
 				20A95A4E19CBB82800132F7E /* icon home.png in Resources */,
 				20BF490C1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
+				20192C7E1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */,
 				20BF48EA1A3B501D009645DC /* logo_marioff@2x.png in Resources */,
 				20BF490E1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				20BF48DC1A3B501D009645DC /* logo_edwards.png in Resources */,

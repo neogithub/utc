@@ -20,6 +20,7 @@
 @property (nonatomic, strong) UILabel                       *uil_HotspotTitle;
 @property (nonatomic, strong) UILabel                       *uil_textSection;
 @property (nonatomic, strong) NSString						*appendString;
+
 -(id)initWithFrame:(CGRect)frame withText:(NSString*)text;
 -(void)setHotSpotTitle:(NSString *)string;
 -(void)appendHotSpotTitle:(NSString *)string;

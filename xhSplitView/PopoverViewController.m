@@ -73,9 +73,10 @@
 	NSDictionary *catDict = [_selectedCo.cocategories objectAtIndex:[indexPath row]];
 	
 	//NSLog(@"%@",[catDict description]);
-
 	
-	NSString *text = [catDict objectForKey:@"catName"];
+	NSString *newString = [catDict objectForKey:@"catName"];
+	
+	NSString *text = [newString stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
 	
 	// Get a CGSize for the width and, effectively, unlimited height
 	CGSize constraint = CGSizeMake(tableView.frame.size.width - (5 * 2), 20000.0f);
@@ -112,8 +113,12 @@
 		cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-rt-arrow.png"]];
 	}
 	
+	NSString *newString = [catDict objectForKey:@"catName"];
+	
+	NSString *text = [newString stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+	
     // Configure the cell...
-    cell.textLabel.text=[catDict objectForKey:@"catName"];
+    cell.textLabel.text=text;
     return cell;
 }
 

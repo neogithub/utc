@@ -40,6 +40,8 @@ enum {
 
 -(void)setCompanyTitle:(NSString *)year
 {
+	NSLog(@"setCompanyTitle");
+
 	[self removeCompanyTitle];
 	
 	// get width of uilabel
@@ -72,6 +74,8 @@ enum {
 
 -(void)setHotSpotTitle:(NSString *)string
 {
+	NSLog(@"setHotSpotTitle");
+
 	[self removeHotspotTitle];
 	
 	// get width of uilabel
@@ -100,6 +104,7 @@ enum {
 
 -(void)appendHotSpotTitle:(NSString *)string
 {
+	NSLog(@"appendHotSpotTitle");
 	_appendString = _uil_HotspotTitle.text;
 	NSString *aappendString = [NSString stringWithFormat:@"   |   %@", string];
 	
