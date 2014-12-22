@@ -553,6 +553,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20192C921A488B8400969C85 /* CONTENT */ = {
+			isa = PBXGroup;
+			children = (
+				20192C961A488BCF00969C85 /* A_INTERACTIVE_FRAMEWORK */,
+				20192C951A488BC400969C85 /* B_PHASE_01 */,
+				20192C941A488BB800969C85 /* C_PHASE_02 */,
+				20192C931A488BA700969C85 /* D_INTELLIGENT_BUILDING */,
+			);
+			name = CONTENT;
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		20192C931A488BA700969C85 /* D_INTELLIGENT_BUILDING */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = D_INTELLIGENT_BUILDING;
+			sourceTree = "<group>";
+		};
+		20192C941A488BB800969C85 /* C_PHASE_02 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = C_PHASE_02;
+			sourceTree = "<group>";
+		};
+		20192C951A488BC400969C85 /* B_PHASE_01 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = B_PHASE_01;
+			sourceTree = "<group>";
+		};
+		20192C961A488BCF00969C85 /* A_INTERACTIVE_FRAMEWORK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = A_INTERACTIVE_FRAMEWORK;
+			sourceTree = "<group>";
+		};
 		20A39E9619C32F7000C71430 /* GHWalkThrough */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,8 +739,9 @@
 				20CEFE3419D1018700BEB200 /* PopoverViewController.h */,
 				20CEFE3519D1018700BEB200 /* PopoverViewController.m */,
 				20CEFE3619D1018700BEB200 /* PopoverViewController.xib */,
+				20192C921A488B8400969C85 /* CONTENT */,
 				82A66ADE19B793BD00C8E12A /* utilities */,
-				82A66AE219B7942900C8E12A /* src */,
+				82A66AE219B7942900C8E12A /* UI */,
 				82A66AB319B7926B00C8E12A /* Images.xcassets */,
 				82A66AA219B7926B00C8E12A /* Supporting Files */,
 			);
@@ -760,14 +801,14 @@
 			path = utilities;
 			sourceTree = "<group>";
 		};
-		82A66AE219B7942900C8E12A /* src */ = {
+		82A66AE219B7942900C8E12A /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				20A95A7319CC313000132F7E /* images */,
 				20A95A6419CBDCA400132F7E /* films */,
 				82A66AE319B7942900C8E12A /* grfx */,
 			);
-			path = src;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		82A66AE319B7942900C8E12A /* grfx */ = {

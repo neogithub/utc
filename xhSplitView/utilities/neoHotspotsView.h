@@ -50,6 +50,7 @@ typedef enum {
     
     BOOL            timeIsSet;
     BOOL            withArw;
+	
 }
 @property (nonatomic, assign) id                delegate;
 
@@ -60,6 +61,7 @@ typedef enum {
 @property (nonatomic, strong) UILabel           *uil_caption;
 @property (nonatomic ,strong) NSString          *str_labelText;
 @property (nonatomic, strong) NSString          *str_typeOfHs;
+@property (nonatomic, strong) UIView			*uiv_container;
 
 @property (nonatomic, readwrite) float          arwAngle;
 @property (nonatomic, readwrite) float          timeRotate;
