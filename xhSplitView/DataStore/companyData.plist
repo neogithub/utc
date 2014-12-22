@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>fileName</key>
+		<string>Otis</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -19,8 +21,6 @@
 		<string>03_TRANS_ELEV.mov</string>
 		<key>transitionFilmImg</key>
 		<string>04_HOTSPOT_CROSS_SECTION.png</string>
-		<key>fileName</key>
-		<string>Otis</string>
 		<key>demoName</key>
 		<string>Elevator</string>
 		<key>alignment</key>
@@ -44,6 +44,12 @@
 				<string>NCE Green Escalators</string>
 				<key>catType</key>
 				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Integrated Building Technologies</string>
+				<key>catType</key>
+				<string>IBT</string>
 			</dict>
 		</array>
 		<key>hotspots</key>
@@ -351,6 +357,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>fileName</key>
+		<string>Carrier</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -367,8 +375,6 @@
 		<string>03_TRANS_ELEV.mov</string>
 		<key>transitionFilmImg</key>
 		<string>PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG</string>
-		<key>fileName</key>
-		<string>Carrier</string>
 		<key>demoName</key>
 		<string>HVAC</string>
 		<key>alignment</key>
@@ -550,6 +556,12 @@
 				<key>subBG</key>
 				<string>PH2_KIDDE_01_SMG_FM200.PNG</string>
 			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Integrated Building Technologies</string>
+				<key>catType</key>
+				<string>IBT</string>
+			</dict>
 		</array>
 		<key>hotspots</key>
 		<array>
@@ -706,6 +718,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>fileName</key>
+		<string>Taylor</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -718,8 +732,6 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
-		<key>fileName</key>
-		<string>Taylor</string>
 		<key>demoName</key>
 		<string>Refrigeration</string>
 		<key>alignment</key>
@@ -844,6 +856,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>fileName</key>
+		<string>Lenel</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -856,8 +870,6 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
-		<key>fileName</key>
-		<string>Lenel</string>
 		<key>demoName</key>
 		<string>Security</string>
 		<key>alignment</key>
@@ -869,6 +881,12 @@
 				<string>OnGuard Building Access Control System</string>
 				<key>catType</key>
 				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Integrated Building Technologies</string>
+				<key>catType</key>
+				<string>IBT</string>
 			</dict>
 		</array>
 		<key>hotspots</key>
@@ -1176,6 +1194,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>fileName</key>
+		<string>AdvanTE3C</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -1188,8 +1208,6 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
-		<key>fileName</key>
-		<string>AdvanTE3C</string>
 		<key>demoName</key>
 		<string>Digital Signage</string>
 		<key>alignment</key>
@@ -1508,6 +1526,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>fileName</key>
+		<string>AutomatedLogic</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -1520,8 +1540,6 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
-		<key>fileName</key>
-		<string>AutomatedLogic</string>
 		<key>demoName</key>
 		<string>Automation</string>
 		<key>alignment</key>
@@ -1750,6 +1768,12 @@
 				<string>Eco Screen Sustainability Kiosk</string>
 				<key>catType</key>
 				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Integrated Building Technologies</string>
+				<key>catType</key>
+				<string>IBT</string>
 			</dict>
 		</array>
 		<key>hotspots</key>
@@ -2057,6 +2081,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>fileName</key>
+		<string>Sustainability</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -2069,8 +2095,6 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
-		<key>fileName</key>
-		<string>Sustainability</string>
 		<key>demoName</key>
 		<string>Sustainability</string>
 		<key>alignment</key>
@@ -2345,6 +2369,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>fileName</key>
+		<string>Interlogix</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -2357,8 +2383,6 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
-		<key>fileName</key>
-		<string>Interlogix</string>
 		<key>demoName</key>
 		<string>Door Security</string>
 		<key>alignment</key>
@@ -2376,6 +2400,12 @@
 				<string>Truvision Cameras</string>
 				<key>catType</key>
 				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Integrated Building Technologies</string>
+				<key>catType</key>
+				<string>IBT</string>
 			</dict>
 		</array>
 		<key>hotspots</key>
@@ -2683,6 +2713,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>fileName</key>
+		<string>Edwards</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -2695,8 +2727,6 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
-		<key>fileName</key>
-		<string>Edwards</string>
 		<key>demoName</key>
 		<string>Life Safety</string>
 		<key>alignment</key>
@@ -2720,6 +2750,12 @@
 				<string>Signature Series Devices</string>
 				<key>catType</key>
 				<string>still</string>
+			</dict>
+			<dict>
+				<key>catName</key>
+				<string>Integrated Building Technologies</string>
+				<key>catType</key>
+				<string>IBT</string>
 			</dict>
 		</array>
 		<key>hotspots</key>
@@ -2877,6 +2913,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>fileName</key>
+		<string>Kidde</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -2889,8 +2927,6 @@
 		<string></string>
 		<key>RGB</key>
 		<string></string>
-		<key>fileName</key>
-		<string>Kidde</string>
 		<key>demoName</key>
 		<string>Fire Suppresion</string>
 		<key>alignment</key>
@@ -2899,7 +2935,7 @@
 		<array>
 			<dict>
 				<key>catName</key>
-				<string>FM200 Fire Suppression Systems\\n\\nADS Advanced Delivery System\\n\\nWHDR Wet Chemical System\\n\\nBadger Fire Extinguishers</string>
+				<string>FM200 Fire Suppression Systems\n\nADS Advanced Delivery System\n\nWHDR Wet Chemical System\n\nBadger Fire Extinguishers</string>
 				<key>catType</key>
 				<string>stillWithMenu</string>
 				<key>subBG</key>
@@ -2919,6 +2955,547 @@
 						<string>180</string>
 						<key>caption</key>
 						<string>FM200 Fire Suppression Systems</string>
+						<key>overlay</key>
+						<string>overlay.png</string>
+						<key>RGB</key>
+						<string></string>
+						<key>fileName</key>
+						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<key>alignment</key>
+						<integer>3</integer>
+						<key>removeafterseconds</key>
+						<integer>23</integer>
+						<key>facts</key>
+						<dict>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<key>appearanceDelay</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Data gathering allows for custom service visits</string>
+									<key>appearanceDelay</key>
+									<integer>5</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Identify issues before they become problems</string>
+									<key>appearanceDelay</key>
+									<integer>14</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Technicians are dispatched automatically for urgent issues</string>
+									<key>appearanceDelay</key>
+									<integer>18</integer>
+								</dict>
+							</array>
+							<key>factwidth</key>
+							<string>300</string>
+							<key>factxy</key>
+							<string>130,300</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker left.png</string>
+						<key>xy</key>
+						<string>580,120</string>
+						<key>width</key>
+						<string>360</string>
+						<key>angle</key>
+						<string>315</string>
+						<key>caption</key>
+						<string>ADS Advanced Delivery System</string>
+						<key>RGB</key>
+						<string></string>
+						<key>fileName</key>
+						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+						<key>alignment</key>
+						<integer>2</integer>
+						<key>removeafterseconds</key>
+						<integer>23</integer>
+						<key>facts</key>
+						<dict>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+									<key>appearanceDelay</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+									<key>appearanceDelay</key>
+									<integer>10</integer>
+								</dict>
+							</array>
+							<key>factwidth</key>
+							<string>360</string>
+							<key>factxy</key>
+							<string>20,210</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker left.png</string>
+						<key>xy</key>
+						<string>500,400</string>
+						<key>width</key>
+						<string>360</string>
+						<key>angle</key>
+						<string>315</string>
+						<key>caption</key>
+						<string>WHDR Wet Chemical System</string>
+						<key>RGB</key>
+						<string></string>
+						<key>fileName</key>
+						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+						<key>alignment</key>
+						<integer>2</integer>
+						<key>removeafterseconds</key>
+						<integer>10</integer>
+						<key>facts</key>
+						<dict>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Small enough to fit inside the wall at top elevator landing</string>
+									<key>appearanceDelay</key>
+									<integer>3</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>No need to plan extra room at top of hoistway</string>
+									<key>appearanceDelay</key>
+									<integer>5</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Much easier access for diagnostics and repair</string>
+									<key>appearanceDelay</key>
+									<integer>7</integer>
+								</dict>
+							</array>
+							<key>factwidth</key>
+							<string>360</string>
+							<key>factxy</key>
+							<string>20,203</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker left.png</string>
+						<key>xy</key>
+						<string>500,200</string>
+						<key>width</key>
+						<string>360</string>
+						<key>angle</key>
+						<string>315</string>
+						<key>caption</key>
+						<string>Badger Fire Extinguishers</string>
+						<key>RGB</key>
+						<string></string>
+						<key>fileName</key>
+						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+						<key>alignment</key>
+						<integer>2</integer>
+						<key>removeafterseconds</key>
+						<integer>10</integer>
+						<key>facts</key>
+						<dict>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Small enough to fit inside the wall at top elevator landing</string>
+									<key>appearanceDelay</key>
+									<integer>3</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>No need to plan extra room at top of hoistway</string>
+									<key>appearanceDelay</key>
+									<integer>5</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Much easier access for diagnostics and repair</string>
+									<key>appearanceDelay</key>
+									<integer>7</integer>
+								</dict>
+							</array>
+							<key>factwidth</key>
+							<string>360</string>
+							<key>factxy</key>
+							<string>20,203</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+		</array>
+		<key>hotspots</key>
+		<array>
+			<dict>
+				<key>type</key>
+				<string>movie</string>
+				<key>background</key>
+				<string>icon marker right.png</string>
+				<key>xy</key>
+				<string>780,74</string>
+				<key>width</key>
+				<string>360</string>
+				<key>angle</key>
+				<string>180</string>
+				<key>caption</key>
+				<string>Remote Diagnostics</string>
+				<key>RGB</key>
+				<string></string>
+				<key>fileName</key>
+				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+				<key>alignment</key>
+				<integer>3</integer>
+				<key>removeafterseconds</key>
+				<integer>23</integer>
+				<key>facts</key>
+				<dict>
+					<key>factscopy</key>
+					<array>
+						<dict>
+							<key>copy</key>
+							<string>All critical elevator functions are monitored 24/7 by Otis</string>
+							<key>appearanceDelay</key>
+							<integer>1</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Data gathering allows for custom service visits</string>
+							<key>appearanceDelay</key>
+							<integer>5</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Identify issues before they become problems</string>
+							<key>appearanceDelay</key>
+							<integer>14</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Technicians are dispatched automatically for urgent issues</string>
+							<key>appearanceDelay</key>
+							<integer>18</integer>
+						</dict>
+					</array>
+					<key>factwidth</key>
+					<string>300</string>
+					<key>factxy</key>
+					<string>130,300</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>type</key>
+				<string>movie</string>
+				<key>background</key>
+				<string>icon marker left.png</string>
+				<key>xy</key>
+				<string>580,120</string>
+				<key>width</key>
+				<string>360</string>
+				<key>angle</key>
+				<string>315</string>
+				<key>caption</key>
+				<string>ReGen Drive</string>
+				<key>RGB</key>
+				<string></string>
+				<key>fileName</key>
+				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+				<key>alignment</key>
+				<integer>2</integer>
+				<key>removeafterseconds</key>
+				<integer>23</integer>
+				<key>facts</key>
+				<dict>
+					<key>factscopy</key>
+					<array>
+						<dict>
+							<key>copy</key>
+							<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+							<key>appearanceDelay</key>
+							<integer>1</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+							<key>appearanceDelay</key>
+							<integer>10</integer>
+						</dict>
+					</array>
+					<key>factwidth</key>
+					<string>360</string>
+					<key>factxy</key>
+					<string>20,210</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>type</key>
+				<string>movie</string>
+				<key>background</key>
+				<string>icon marker left.png</string>
+				<key>xy</key>
+				<string>620,267</string>
+				<key>width</key>
+				<string>360</string>
+				<key>angle</key>
+				<string>270</string>
+				<key>caption</key>
+				<string>Glide Door Operators</string>
+				<key>RGB</key>
+				<string></string>
+				<key>fileName</key>
+				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
+				<key>alignment</key>
+				<integer>2</integer>
+				<key>removeafterseconds</key>
+				<integer>14</integer>
+				<key>facts</key>
+				<dict>
+					<key>factscopy</key>
+					<array>
+						<dict>
+							<key>copy</key>
+							<string>Doors open quietly and quickly - as fast as 1.4 seconds</string>
+							<key>appearanceDelay</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Greatly reduced floor-to-floor travel times equals less wait time</string>
+							<key>appearanceDelay</key>
+							<integer>4</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Direct drive technology means fewer moving parts and less maintenance</string>
+							<key>appearanceDelay</key>
+							<integer>8</integer>
+						</dict>
+					</array>
+					<key>factwidth</key>
+					<string>333</string>
+					<key>factxy</key>
+					<string>20,80</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>type</key>
+				<string>movie</string>
+				<key>background</key>
+				<string>icon marker left.png</string>
+				<key>xy</key>
+				<string>550,330</string>
+				<key>width</key>
+				<string>360</string>
+				<key>angle</key>
+				<string>315</string>
+				<key>caption</key>
+				<string>Environmentally Responsible Technology</string>
+				<key>RGB</key>
+				<string></string>
+				<key>fileName</key>
+				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
+				<key>alignment</key>
+				<integer>2</integer>
+				<key>removeafterseconds</key>
+				<integer>16</integer>
+				<key>facts</key>
+				<dict>
+					<key>factscopy</key>
+					<array>
+						<dict>
+							<key>copy</key>
+							<string>Sleep mode powers down lights and fans when idle</string>
+							<key>appearanceDelay</key>
+							<integer>3</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>LED lights save energy and last 10 times longer</string>
+							<key>appearanceDelay</key>
+							<integer>10</integer>
+						</dict>
+					</array>
+					<key>factwidth</key>
+					<string>330</string>
+					<key>factxy</key>
+					<string>20,180</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>type</key>
+				<string>movie</string>
+				<key>background</key>
+				<string>icon marker right.png</string>
+				<key>xy</key>
+				<string>790,380</string>
+				<key>width</key>
+				<string>360</string>
+				<key>angle</key>
+				<string>225</string>
+				<key>caption</key>
+				<string>Coated Steel Belts</string>
+				<key>RGB</key>
+				<string></string>
+				<key>fileName</key>
+				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
+				<key>alignment</key>
+				<integer>3</integer>
+				<key>removeafterseconds</key>
+				<integer>24</integer>
+				<key>facts</key>
+				<dict>
+					<key>factscopy</key>
+					<array>
+						<dict>
+							<key>copy</key>
+							<string>Industry-changing, patented technology</string>
+							<key>appearanceDelay</key>
+							<integer>4</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Coated steel belts create a remarkably smooth ride</string>
+							<key>appearanceDelay</key>
+							<integer>6</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>New machine is 70% smaller than conventional geared machines</string>
+							<key>appearanceDelay</key>
+							<integer>10</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Machine actually fits inside the hoistway, eliminating machine room</string>
+							<key>appearanceDelay</key>
+							<integer>17</integer>
+						</dict>
+					</array>
+					<key>factwidth</key>
+					<string>360</string>
+					<key>factxy</key>
+					<string>625,355</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>type</key>
+				<string>movie</string>
+				<key>background</key>
+				<string>icon marker left.png</string>
+				<key>xy</key>
+				<string>500,400</string>
+				<key>width</key>
+				<string>360</string>
+				<key>angle</key>
+				<string>315</string>
+				<key>caption</key>
+				<string>Compact Controller</string>
+				<key>RGB</key>
+				<string></string>
+				<key>fileName</key>
+				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+				<key>alignment</key>
+				<integer>2</integer>
+				<key>removeafterseconds</key>
+				<integer>10</integer>
+				<key>facts</key>
+				<dict>
+					<key>factscopy</key>
+					<array>
+						<dict>
+							<key>copy</key>
+							<string>Small enough to fit inside the wall at top elevator landing</string>
+							<key>appearanceDelay</key>
+							<integer>3</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>No need to plan extra room at top of hoistway</string>
+							<key>appearanceDelay</key>
+							<integer>5</integer>
+						</dict>
+						<dict>
+							<key>copy</key>
+							<string>Much easier access for diagnostics and repair</string>
+							<key>appearanceDelay</key>
+							<integer>7</integer>
+						</dict>
+					</array>
+					<key>factwidth</key>
+					<string>360</string>
+					<key>factxy</key>
+					<string>20,203</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>fileName</key>
+		<string>Onity</string>
+		<key>type</key>
+		<string>company</string>
+		<key>background</key>
+		<string>logo_onity.png</string>
+		<key>xy</key>
+		<string>371, 397</string>
+		<key>angle</key>
+		<string>180</string>
+		<key>caption</key>
+		<string></string>
+		<key>RGB</key>
+		<string></string>
+		<key>demoName</key>
+		<string>Fire Suppresion</string>
+		<key>alignment</key>
+		<integer>2</integer>
+		<key>categories</key>
+		<array>
+			<dict>
+				<key>catName</key>
+				<string>FM200 Fire Suppression Systems\n\nADS Advanced Delivery System\n\nWHDR Wet Chemical System\n\nBadger Fire Extinguishers</string>
+				<key>catType</key>
+				<string>stillWithMenu</string>
+				<key>subBG</key>
+				<string>PH2_KIDDE_00_STILL_HS.png</string>
+				<key>subhotspots</key>
+				<array>
+					<dict>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker right.png</string>
+						<key>xy</key>
+						<string>680,274</string>
+						<key>width</key>
+						<string>360</string>
+						<key>angle</key>
+						<string>180</string>
+						<key>caption</key>
+						<string>FM200 Fire Suppression Systems</string>
+						<key>overlay</key>
+						<string>overlay.png</string>
 						<key>RGB</key>
 						<string></string>
 						<key>fileName</key>

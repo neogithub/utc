@@ -74,6 +74,7 @@ enum {
 @property (nonatomic, strong) UIImageView *hotspotImageView;
 @property (nonatomic, strong) neoHotspotsView				*myHotspots;
 @property (nonatomic, strong) NSMutableArray				*arr_hotspots;
+@property (nonatomic, strong) NSDictionary                  *coDict;
 @property (nonatomic) BOOL isPauseable;
 
 @end
@@ -93,7 +94,7 @@ enum {
 	
 	// load animation that leads to the hero
 	// building tapped from previous screen
-	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO belowSubview:nil];
+	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO belowSubview:nil withOverlay:nil];
 	// add in the bg image beneath the film
 	[self createStillFrameUnderFilm];
 	
@@ -165,7 +166,7 @@ enum {
 	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(filmToSplitBuilding)];
     [_uiv_tapSquare addGestureRecognizer: tapOnImg];
 
-	[self pulse:uiv_tapCircle.layer];
+	//[self pulse:uiv_tapCircle.layer];
 }
 
 -(void)initLogoBtn
@@ -209,7 +210,7 @@ enum {
 		[settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
 		[arr_CompanyLogos addObject:settButton];
 		[_uis_zoomingImg.blurView addSubview:settButton];
-		[self pulse:settButton.layer];
+		//[self pulse:settButton.layer];
 			
 			// add drag listener
 			//[settButton addTarget:self action:@selector(wasDragged:withEvent:)
@@ -241,7 +242,7 @@ enum {
 #pragma mark - Actions to play path to hero and split hero
 -(void)filmToSplitBuilding
 {
-    [self loadMovieNamed:@"02_TRANS_BLDG_UNBUILD.mov" isTapToPauseEnabled:NO belowSubview:nil];
+    [self loadMovieNamed:@"02_TRANS_BLDG_UNBUILD.mov" isTapToPauseEnabled:NO belowSubview:nil withOverlay:nil];
 	[_uiv_tapSquare removeFromSuperview];
 	[self loadSplitAssets];
 }
@@ -256,7 +257,7 @@ enum {
 	movieNamed =  [selectedCoDict objectForKey:@"transitionFilm"];
 	movieNamedImg = [selectedCoDict objectForKey:@"transitionFilmImg"];
 	
-	[self loadMovieNamed:movieNamed isTapToPauseEnabled:NO belowSubview:nil];
+	[self loadMovieNamed:movieNamed isTapToPauseEnabled:NO belowSubview:nil withOverlay:nil];
 	[self updateStillFrameUnderFilm:movieNamedImg];
 	
 	[self createHotspots];
@@ -548,56 +549,72 @@ enum {
 }
 
 #pragma mark - PopoverViewControllerDelegate method
--(void)selectedRow:(NSInteger)row
+-(void)selectedRow:(NSInteger)row withText:(NSString*)text
 {
-	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
-	NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:row];
-	NSString *categoryType = [catDict objectForKey:@"catType"];
-	NSString *categoryName = [catDict objectForKey:@"catName"];
-	NSString *subBG = [catDict objectForKey:@"subBG"];
-	_arr_subHotspots = [catDict objectForKey:@"subhotspots"];
-	
-	//NSLog(@"subhotspots %@",_arr_subHotspots);
-	
-	if ([categoryType isEqualToString:@"film"]) {
-		// get which company from data model
-		[self cleanupBeforeLoadingFlyin];
-		[self initTitleBox];
-		[topTitle setHotSpotTitle:categoryName];
+	NSLog(@"text %@",text);
 
-	} else if ([categoryType isEqualToString:@"still"]) {
-		//TODO: connect to data
-		[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG" withCloseButton:YES];
-		[self initTitleBox];
-		[topTitle setHotSpotTitle:categoryName];
+	if ( [text isEqualToString:@"Integrated Building Technologies"] )
+	{
+		//TODO: Load IBT functionality
+		UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Integrated Building Technologies"
+														  message:@"IBS will display soon"
+														 delegate:nil
+												cancelButtonTitle:@"OK"
+												otherButtonTitles:nil];
+		[message show];
 		
-		//[self animateTitleAndHotspot:LabelOnscreen];
-				
-	} else if ([categoryType isEqualToString:@"stillWithMenu"]) {
-	
-		[self initTitleBox];
-		[topTitle setHotSpotTitle:categoryName];
+	} else {
 		
-		[self popUpImage:subBG withCloseButton:NO];
+		selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+		NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:row];
+		NSString *categoryType = [catDict objectForKey:@"catType"];
+		NSString *categoryName = [catDict objectForKey:@"catName"];
+		NSString *subBG = [catDict objectForKey:@"subBG"];
+		_arr_subHotspots = [catDict objectForKey:@"subhotspots"];
+		
+		//NSLog(@"subhotspots %@",_arr_subHotspots);
+		
+		if ([categoryType isEqualToString:@"film"]) {
+			// get which company from data model
+			[self cleanupBeforeLoadingFlyin];
+			[self initTitleBox];
+			[topTitle setHotSpotTitle:categoryName];
+			
+		} else if ([categoryType isEqualToString:@"still"]) {
+			//TODO: connect to data
+			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG" withCloseButton:YES];
+			[self initTitleBox];
+			[topTitle setHotSpotTitle:categoryName];
+			
+			//[self animateTitleAndHotspot:LabelOnscreen];
+			
+		} else if ([categoryType isEqualToString:@"stillWithMenu"]) {
+			
+			[self initTitleBox];
+			[topTitle setHotSpotTitle:categoryName];
+			
+			[self popUpImage:subBG withCloseButton:NO];
+			
+			//[self animateTitleAndHotspot:LabelOffscreen];
+			
+			[self loadCompanySubHotspots:_arr_subHotspots];
+			
+			/*
+			 
+			 1. √ get hotspots for subcategory
+			 2. load bg image to new alloc'd uiscrollview
+			 3. inside of that view have the hotspots load card arrays based on taps
+			 4. inside of that view append the hotspot title with the subcategory
+			 
+			 */
+			
+		}
+		
+		//The color picker popover is showing. Hide it.
+		[self.popOver dismissPopoverAnimated:YES];
+		self.popOver = nil;
 
-		//[self animateTitleAndHotspot:LabelOffscreen];
-
-		[self loadCompanySubHotspots:_arr_subHotspots];
-		
-		/*
-		 
-		 1. √ get hotspots for subcategory
-		 2. load bg image to new alloc'd uiscrollview
-		 3. inside of that view have the hotspots load card arrays based on taps
-		 4. inside of that view append the hotspot title with the subcategory
-		 
-		 */
-	
 	}
-
-	//The color picker popover is showing. Hide it.
-	[self.popOver dismissPopoverAnimated:YES];
-	self.popOver = nil;
 }
 
 
@@ -645,13 +662,20 @@ enum {
 	
 		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
 			
-			NSDictionary *coDict = [selectedCo.cohotspots objectAtIndex:formattedTag];
-			NSString *movieNamed =  [coDict objectForKey:@"fileName"];
+			_coDict = [selectedCo.cohotspots objectAtIndex:formattedTag];
+			NSString *movieNamed =  [_coDict objectForKey:@"fileName"];
+			
+			NSDictionary *cod = _arr_subHotspots[formattedTag];
+			NSString *imageNameName;
+			
+			if ([cod objectForKey:@"overlay"]) {
+				imageNameName = [NSString stringWithFormat:@"overlay.png"];
+			}
 
 			if (i > 99) {
-				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uib_backBtn];
+				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uib_backBtn withOverlay:imageNameName];
 			} else {
-				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg];
+				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg withOverlay:nil];
 			}
 		}
 		else {
@@ -801,22 +825,22 @@ enum {
 	}
 }
 
-#pragma mark PulseAnim
--(void)pulse:(CALayer*)incomingLayer
-{
-	CABasicAnimation *theAnimation;
-	CALayer *pplayer = incomingLayer;
-	theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
-	theAnimation.duration=0.5;
-	theAnimation.repeatCount=HUGE_VAL;
-	theAnimation.autoreverses=YES;
-	theAnimation.fromValue=[NSNumber numberWithFloat:0.70];
-	theAnimation.toValue=[NSNumber numberWithFloat:0.5];
-	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
-}
+//#pragma mark PulseAnim
+//-(void)pulse:(CALayer*)incomingLayer
+//{
+//	CABasicAnimation *theAnimation;
+//	CALayer *pplayer = incomingLayer;
+//	theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
+//	theAnimation.duration=0.5;
+//	theAnimation.repeatCount=HUGE_VAL;
+//	theAnimation.autoreverses=YES;
+//	theAnimation.fromValue=[NSNumber numberWithFloat:0.70];
+//	theAnimation.toValue=[NSNumber numberWithFloat:0.5];
+//	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
+//}
 
 #pragma mark - play movie
--(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled belowSubview:(UIView*)belowSubview
+-(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled belowSubview:(UIView*)belowSubview withOverlay:(NSString*)overlay
 {
 	
 	NSString* fileName = [moviename stringByDeletingPathExtension];
@@ -876,7 +900,17 @@ enum {
     [_uiv_movieContainer.layer addSublayer: _avPlayerLayer];
 	
 	[_avPlayer play];
-
+	
+	//NSDictionary *cod = _arr_subHotspots[tag]
+	
+		if (overlay) {
+			NSString *imageNameName = overlay;
+			UIImage *imagee = [self flipImage:[UIImage imageNamed:imageNameName]];
+			UIImageView *imgv = [[UIImageView alloc ] initWithImage:imagee];
+			imgv.frame = self.view.bounds;
+			[_uiv_movieContainer addSubview:imgv];
+		}
+	
 	if (tapToPauseEnabled) {
 		NSLog(@"loadMovieNamed beginSequence");
 		[self beginSequence];

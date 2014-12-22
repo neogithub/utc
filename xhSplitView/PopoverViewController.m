@@ -83,11 +83,19 @@
 	// Get the size of the text given the CGSize we just made as a constraint
 	CGSize size = [text sizeWithFont:[UIFont fontWithName:@"Helvetica-Bold" size:15] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
 	// Get the height of our measurement, with a minimum of 44 (standard cell size)
-	CGFloat height = MAX(size.height, 38.0f);
+	
+	CGFloat height = 0;
+	
+	if ([_selectedCo.coname isEqualToString:@"Kidde"]) {
+		self.preferredContentSize = CGSizeMake(220.0, 200); //used instead
+		height = 200;
+	} else {
+		height = MAX(size.height, 38.0f);
+	}
+	
 	
 	//NSLog(@"%f",height);
 
-	
 	// save height for use in resizing the popover
 	ebTableHeight += size.height;
 	
@@ -110,6 +118,10 @@
 	
 	NSString *newString = [catDict objectForKey:@"catName"];
 	
+	if ([newString isEqualToString:@"Integrated Building Technologies"]) {
+		cell.textLabel.textColor = [UIColor blueColor];
+	}
+	
 	NSString *text = [newString stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
 	
     // Configure the cell...
@@ -121,7 +133,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	[_delegate selectedRow:indexPath.row];
+	UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+	[_delegate selectedRow:indexPath.row withText:cell.textLabel.text];
 }
 
 @end

@@ -11,7 +11,7 @@
 
 @protocol PopoverViewControllerDelegate <NSObject>
 @required
--(void)selectedRow:(NSInteger)index;
+-(void)selectedRow:(NSInteger)index withText:(NSString*)text;
 @end
 
 @interface PopoverViewController : UITableViewController

@@ -19,6 +19,8 @@
 		20192C791A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */; };
 		20192C7E1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */; };
 		20192C7F1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */; };
+		20192C841A445CAF00969C85 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C831A445CAF00969C85 /* overlay.png */; };
+		20192C851A445CAF00969C85 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C831A445CAF00969C85 /* overlay.png */; };
 		2050EAB51A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */; };
 		2050EAB61A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */; };
 		206063DC19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */; };
@@ -329,6 +331,7 @@
 		20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG; path = images/PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG; sourceTree = "<group>"; };
 		20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; path = images/PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; sourceTree = "<group>"; };
 		20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_KIDDE_00_STILL_HS.png; path = images/PH2_KIDDE_00_STILL_HS.png; sourceTree = "<group>"; };
+		20192C831A445CAF00969C85 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
 		2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_KIDDE_01_SMG_FM200.PNG; path = images/PH2_KIDDE_01_SMG_FM200.PNG; sourceTree = "<group>"; };
 		206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 01_TRANS_CITY_TO_BLDG.mov; path = films/01_TRANS_CITY_TO_BLDG.mov; sourceTree = "<group>"; };
 		206063DF19D521E50045163F /* 02_TRANS_BLDG_UNBUILD.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 02_TRANS_BLDG_UNBUILD.mov; path = films/02_TRANS_BLDG_UNBUILD.mov; sourceTree = "<group>"; };
@@ -588,6 +591,7 @@
 			isa = PBXGroup;
 			children = (
 				20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */,
+				20192C831A445CAF00969C85 /* overlay.png */,
 				20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */,
 				20A95A7419CC313F00132F7E /* 01_HERO_CITY.png */,
 				20A95A7519CC313F00132F7E /* 02_HERO_BLDG.png */,
@@ -1034,6 +1038,7 @@
 				20E547241A2DFEF40073B2CF /* icon back@2x.png in Resources */,
 				20E547251A2DFEF40073B2CF /* grfx_cityBgImg@2x.jpg in Resources */,
 				20BF48DB1A3B501D009645DC /* logo_carrier@2x.png in Resources */,
+				20192C851A445CAF00969C85 /* overlay.png in Resources */,
 				20E547271A2DFEF40073B2CF /* bg_01@2x.jpg in Resources */,
 				20BF48E11A3B501D009645DC /* logo_kidde.png in Resources */,
 				20BF48FB1A3B501D009645DC /* logo_sustain@2x.png in Resources */,
@@ -1171,6 +1176,7 @@
 				82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */,
 				206063DC19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov in Resources */,
 				20A95A7D19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
+				20192C841A445CAF00969C85 /* overlay.png in Resources */,
 				20BF48D81A3B501D009645DC /* logo_carrier.png in Resources */,
 				824F14DD19CB360300628F01 /* grfx_cellBG.jpg in Resources */,
 				20A39EC419C33C9100C71430 /* grfx_helpBtn@2x.png in Resources */,
