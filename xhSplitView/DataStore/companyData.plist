@@ -29,7 +29,7 @@
 		<array>
 			<dict>
 				<key>catName</key>
-				<string>Elevators</string>
+				<string>Gen2 Elevators</string>
 				<key>catType</key>
 				<string>film</string>
 			</dict>
@@ -383,7 +383,7 @@
 		<array>
 			<dict>
 				<key>catName</key>
-				<string>AquaEdge 23XRV</string>
+				<string>AquaEdge 23XRV Chiller</string>
 				<key>catType</key>
 				<string>film</string>
 			</dict>
@@ -400,9 +400,9 @@
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker right.png</string>
+						<string>icon marker center.png</string>
 						<key>xy</key>
-						<string>780,74</string>
+						<string>20,75</string>
 						<key>width</key>
 						<string>360</string>
 						<key>angle</key>
@@ -456,9 +456,9 @@
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker left.png</string>
+						<string>icon marker center.png</string>
 						<key>xy</key>
-						<string>580,120</string>
+						<string>20,125</string>
 						<key>width</key>
 						<string>360</string>
 						<key>angle</key>
@@ -470,7 +470,7 @@
 						<key>fileName</key>
 						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 						<key>alignment</key>
-						<integer>2</integer>
+						<integer>3</integer>
 						<key>removeafterseconds</key>
 						<integer>23</integer>
 						<key>facts</key>
@@ -500,9 +500,9 @@
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker left.png</string>
+						<string>icon marker center.png</string>
 						<key>xy</key>
-						<string>500,400</string>
+						<string>20,175</string>
 						<key>width</key>
 						<string>360</string>
 						<key>angle</key>
@@ -514,7 +514,7 @@
 						<key>fileName</key>
 						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 						<key>alignment</key>
-						<integer>2</integer>
+						<integer>3</integer>
 						<key>removeafterseconds</key>
 						<integer>10</integer>
 						<key>facts</key>

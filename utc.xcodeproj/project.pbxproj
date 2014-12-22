@@ -21,6 +21,14 @@
 		20192C7F1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */; };
 		20192C841A445CAF00969C85 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C831A445CAF00969C85 /* overlay.png */; };
 		20192C851A445CAF00969C85 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C831A445CAF00969C85 /* overlay.png */; };
+		20192C8A1A48729000969C85 /* icon marker center.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C861A48729000969C85 /* icon marker center.png */; };
+		20192C8B1A48729000969C85 /* icon marker center.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C861A48729000969C85 /* icon marker center.png */; };
+		20192C8C1A48729000969C85 /* icon marker center right.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C871A48729000969C85 /* icon marker center right.png */; };
+		20192C8D1A48729000969C85 /* icon marker center right.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C871A48729000969C85 /* icon marker center right.png */; };
+		20192C8E1A48729000969C85 /* icon marker center right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C881A48729000969C85 /* icon marker center right@2x.png */; };
+		20192C8F1A48729000969C85 /* icon marker center right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C881A48729000969C85 /* icon marker center right@2x.png */; };
+		20192C901A48729000969C85 /* icon marker center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C891A48729000969C85 /* icon marker center@2x.png */; };
+		20192C911A48729000969C85 /* icon marker center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C891A48729000969C85 /* icon marker center@2x.png */; };
 		2050EAB51A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */; };
 		2050EAB61A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */; };
 		206063DC19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */; };
@@ -332,6 +340,10 @@
 		20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; path = images/PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; sourceTree = "<group>"; };
 		20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_KIDDE_00_STILL_HS.png; path = images/PH2_KIDDE_00_STILL_HS.png; sourceTree = "<group>"; };
 		20192C831A445CAF00969C85 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
+		20192C861A48729000969C85 /* icon marker center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center.png"; sourceTree = "<group>"; };
+		20192C871A48729000969C85 /* icon marker center right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center right.png"; sourceTree = "<group>"; };
+		20192C881A48729000969C85 /* icon marker center right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center right@2x.png"; sourceTree = "<group>"; };
+		20192C891A48729000969C85 /* icon marker center@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center@2x.png"; sourceTree = "<group>"; };
 		2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_KIDDE_01_SMG_FM200.PNG; path = images/PH2_KIDDE_01_SMG_FM200.PNG; sourceTree = "<group>"; };
 		206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 01_TRANS_CITY_TO_BLDG.mov; path = films/01_TRANS_CITY_TO_BLDG.mov; sourceTree = "<group>"; };
 		206063DF19D521E50045163F /* 02_TRANS_BLDG_UNBUILD.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 02_TRANS_BLDG_UNBUILD.mov; path = films/02_TRANS_BLDG_UNBUILD.mov; sourceTree = "<group>"; };
@@ -761,6 +773,10 @@
 		82A66AE319B7942900C8E12A /* grfx */ = {
 			isa = PBXGroup;
 			children = (
+				20192C861A48729000969C85 /* icon marker center.png */,
+				20192C871A48729000969C85 /* icon marker center right.png */,
+				20192C881A48729000969C85 /* icon marker center right@2x.png */,
+				20192C891A48729000969C85 /* icon marker center@2x.png */,
 				20BF48B81A3B501D009645DC /* logo_advantec.png */,
 				20BF48B91A3B501D009645DC /* logo_advantec@2x.png */,
 				20BF48BA1A3B501D009645DC /* logo_automated.png */,
@@ -961,7 +977,9 @@
 				20E546E81A2DFEF40073B2CF /* title1@2x.png in Resources */,
 				20192C761A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG in Resources */,
 				20E546E91A2DFEF40073B2CF /* Images.xcassets in Resources */,
+				20192C8B1A48729000969C85 /* icon marker center.png in Resources */,
 				20BF49111A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
+				20192C911A48729000969C85 /* icon marker center@2x.png in Resources */,
 				20E546EA1A2DFEF40073B2CF /* PopoverViewController.xib in Resources */,
 				20E546EB1A2DFEF40073B2CF /* icon marker left.png in Resources */,
 				20E546EC1A2DFEF40073B2CF /* bg_05@2x.jpg in Resources */,
@@ -979,6 +997,7 @@
 				20E546F61A2DFEF40073B2CF /* otis-hotpost-still@2x.png in Resources */,
 				20E547461A2E13830073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO.png in Resources */,
 				20BF48F11A3B501D009645DC /* logo_onity.png in Resources */,
+				20192C8F1A48729000969C85 /* icon marker center right@2x.png in Resources */,
 				20E546F71A2DFEF40073B2CF /* grfx_accessory@2x.png in Resources */,
 				20E546F81A2DFEF40073B2CF /* icon close.png in Resources */,
 				20BF48D51A3B501D009645DC /* logo_automated.png in Resources */,
@@ -1007,6 +1026,7 @@
 				20BF49071A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov in Resources */,
 				20E547091A2DFEF40073B2CF /* InfoPlist.strings in Resources */,
 				20BF48E71A3B501D009645DC /* logo_lenel@2x.png in Resources */,
+				20192C8D1A48729000969C85 /* icon marker center right.png in Resources */,
 				20E5470B1A2DFEF40073B2CF /* close bttn.png in Resources */,
 				20192C791A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */,
 				20E5470C1A2DFEF40073B2CF /* menu header@2x.png in Resources */,
@@ -1119,6 +1139,7 @@
 				20A95A5219CBB82800132F7E /* icon close.png in Resources */,
 				824F14DA19CB359900628F01 /* panelTableViewCell.xib in Resources */,
 				20BF48E61A3B501D009645DC /* logo_lenel@2x.png in Resources */,
+				20192C8C1A48729000969C85 /* icon marker center right.png in Resources */,
 				209AEFA419D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD.png in Resources */,
 				20A95A7619CC313F00132F7E /* 01_HERO_CITY.png in Resources */,
 				2018676E19D2082600ADB82F /* Marker_Right.png in Resources */,
@@ -1142,6 +1163,7 @@
 				20A95A7C19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png in Resources */,
 				206063E619D5D9F50045163F /* 03_TRANS_ELEV.mov in Resources */,
 				82A66B0219B7B19B00C8E12A /* grfx_cityBgImg.jpg in Resources */,
+				20192C8A1A48729000969C85 /* icon marker center.png in Resources */,
 				20A95A5F19CBC1AA00132F7E /* icon marker left@2x.png in Resources */,
 				20A39EC319C33C9100C71430 /* grfx_helpBtn.png in Resources */,
 				20D0B06919C0D7510096021D /* hotspotsData.plist in Resources */,
@@ -1158,6 +1180,7 @@
 				20A39EBE19C3351C00C71430 /* bg_03@2x.jpg in Resources */,
 				20A95A5119CBB82800132F7E /* icon marker right@2x.png in Resources */,
 				20A39EBF19C3351C00C71430 /* bg_02@2x.jpg in Resources */,
+				20192C901A48729000969C85 /* icon marker center@2x.png in Resources */,
 				20A95A5B19CBB89E00132F7E /* swipe-to-reveal.png in Resources */,
 				20A95A5519CBB82800132F7E /* icon back@2x.png in Resources */,
 				82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */,
@@ -1178,6 +1201,7 @@
 				20A95A7D19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				20192C841A445CAF00969C85 /* overlay.png in Resources */,
 				20BF48D81A3B501D009645DC /* logo_carrier.png in Resources */,
+				20192C8E1A48729000969C85 /* icon marker center right@2x.png in Resources */,
 				824F14DD19CB360300628F01 /* grfx_cellBG.jpg in Resources */,
 				20A39EC419C33C9100C71430 /* grfx_helpBtn@2x.png in Resources */,
 				20BF48FA1A3B501D009645DC /* logo_sustain@2x.png in Resources */,
