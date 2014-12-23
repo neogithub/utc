@@ -10,13 +10,13 @@
 
 @interface Company : NSObject
 
-@property (nonatomic, retain, readonly) NSString *coname, *cologo;
+@property (nonatomic, retain, readonly) NSString *coname, *cologo, *coinfoname;
 
 @property (nonatomic, retain, readonly) NSArray *cocategories, *cohotspots, *cofacts;
 
 @property (nonatomic, retain, readonly) NSDictionary *codata;
 
 
-- (id)initWithTitle:(NSString*)name logo:(NSString*)logo categories:(NSArray*)categories hotspots:(NSArray*)hotspots facts:(NSArray*)facts;
+- (id)initWithTitle:(NSString*)name logo:(NSString*)logo categories:(NSArray*)categories hotspots:(NSArray*)hotspots facts:(NSArray*)facts infoName:(NSString*)infoname;
 
 @end

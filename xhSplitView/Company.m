@@ -10,13 +10,15 @@
 
 @implementation Company
 
-- (id)initWithTitle:(NSString*)name logo:(NSString*)logo categories:(NSArray*)categories hotspots:(NSArray*)hotspots facts:(NSArray*)facts
+- (id)initWithTitle:(NSString*)name logo:(NSString*)logo categories:(NSArray*)categories hotspots:(NSArray*)hotspots facts:(NSArray*)facts infoName:(NSString*)infoname
 {
 	self = [super init];
 	if (self)
 	{
 		_coname = name;
 		_cologo = logo;
+		
+		_coinfoname = infoname;
 		
 		_cocategories = [[NSArray alloc] init];
 		_cocategories = categories;

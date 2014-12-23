@@ -61,7 +61,9 @@
 												 logo:[data objectForKey:@"background"]
 										   categories:[data objectForKey:@"categories"]
 											 hotspots:[data objectForKey:@"hotspots"]
-												facts:[data objectForKey:@"type"]];
+												facts:[data objectForKey:@"type"]
+											 infoName:[data objectForKey:@"infoName"]
+						];
 	
 	return filtered;
 }

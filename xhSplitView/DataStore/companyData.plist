@@ -5,6 +5,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>Otis</string>
+		<key>infoName</key>
+		<string>Elevators &amp; Escalators</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -359,6 +361,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>Carrier</string>
+		<key>infoName</key>
+		<string>Heating, Air-conditioning and Refrigeration </string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -720,6 +724,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>Taylor</string>
+		<key>infoName</key>
+		<string>Foodservice Equipment</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -858,6 +864,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>Lenel</string>
+		<key>infoName</key>
+		<string>Open Security Solutions</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -871,7 +879,7 @@
 		<key>RGB</key>
 		<string></string>
 		<key>demoName</key>
-		<string>Security</string>
+		<string>Security Open security solutions</string>
 		<key>alignment</key>
 		<integer>2</integer>
 		<key>categories</key>
@@ -1196,6 +1204,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>AdvanTE3C</string>
+		<key>infoName</key>
+		<string>Interactive Digital Signages</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -1528,6 +1538,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>AutomatedLogic</string>
+		<key>infoName</key>
+		<string>Building Automation Systems</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -2083,6 +2095,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>Sustainability</string>
+		<key>infoName</key>
+		<string>Sustainability</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -2371,6 +2385,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>Interlogix</string>
+		<key>infoName</key>
+		<string>Commercial Security Systems</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -2715,6 +2731,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>Edwards</string>
+		<key>infoName</key>
+		<string>Life Safety &amp; Emergency Communications</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -2915,6 +2933,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>Kidde</string>
+		<key>infoName</key>
+		<string>Fire Safety Products</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
@@ -2935,7 +2955,7 @@
 		<array>
 			<dict>
 				<key>catName</key>
-				<string>FM200 Fire Suppression Systems\n\nADS Advanced Delivery System\n\nWHDR Wet Chemical System\n\nBadger Fire Extinguishers</string>
+				<string>Learn More</string>
 				<key>catType</key>
 				<string>stillWithMenu</string>
 				<key>subBG</key>
@@ -3454,6 +3474,8 @@
 	<dict>
 		<key>fileName</key>
 		<string>Onity</string>
+		<key>infoName</key>
+		<string>Facility Management Solutions</string>
 		<key>type</key>
 		<string>company</string>
 		<key>background</key>
