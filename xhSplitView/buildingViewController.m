@@ -68,6 +68,7 @@ enum {
 @property (nonatomic, strong) AVPlayerLayer					*avPlayerLayer;
 @property (nonatomic, strong) UIButton						*uib_logoBtn;
 @property (nonatomic, strong) UIButton						*uib_backBtn;
+@property (nonatomic, strong) UIButton						*uib_ibtBtn;
 @property (nonatomic, strong) UIView						*uiv_tapSquare;
 @property (nonatomic, strong) UIButton						*uib_CompanyBtn;
 @property (nonatomic, strong) UILabel						*uil_filmHint;
@@ -110,6 +111,17 @@ enum {
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackButton) name:@"hideDetailChrome" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackButton) name:@"unhideDetailChrome" object:nil];
 
+	[self initIBTButton];
+}
+
+-(void)initIBTButton
+{
+	_uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+	_uib_ibtBtn.frame = CGRectMake(1024-89-16, 16, 89, 56);
+	[_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateNormal];
+	[_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateSelected];
+	//[_uib_ibtBtn addTarget: self action:@selector(showHelp) forControlEvents:UIControlEventTouchUpInside];
+	[self.view addSubview: _uib_ibtBtn];
 }
 
 #pragma mark - stills under movie
@@ -553,10 +565,10 @@ enum {
 {
 	NSLog(@"text %@",text);
 
-	if ( [text isEqualToString:@"Integrated Building Technologies"] )
+	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
 	{
 		//TODO: Load IBT functionality
-		UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Integrated Building Technologies"
+		UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Intelligent Building Technologies"
 														  message:@"IBS will display soon"
 														 delegate:nil
 												cancelButtonTitle:@"OK"

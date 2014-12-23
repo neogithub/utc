@@ -29,6 +29,10 @@
 		20192C8F1A48729000969C85 /* icon marker center right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C881A48729000969C85 /* icon marker center right@2x.png */; };
 		20192C901A48729000969C85 /* icon marker center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C891A48729000969C85 /* icon marker center@2x.png */; };
 		20192C911A48729000969C85 /* icon marker center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C891A48729000969C85 /* icon marker center@2x.png */; };
+		20192C991A49C97C00969C85 /* logo_utcibt.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C971A49C97C00969C85 /* logo_utcibt.png */; };
+		20192C9A1A49C97C00969C85 /* logo_utcibt.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C971A49C97C00969C85 /* logo_utcibt.png */; };
+		20192C9B1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C981A49C97C00969C85 /* logo_utcibt@2x.png */; };
+		20192C9C1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C981A49C97C00969C85 /* logo_utcibt@2x.png */; };
 		2050EAB51A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */; };
 		2050EAB61A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */; };
 		206063DC19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */; };
@@ -344,6 +348,8 @@
 		20192C871A48729000969C85 /* icon marker center right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center right.png"; sourceTree = "<group>"; };
 		20192C881A48729000969C85 /* icon marker center right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center right@2x.png"; sourceTree = "<group>"; };
 		20192C891A48729000969C85 /* icon marker center@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center@2x.png"; sourceTree = "<group>"; };
+		20192C971A49C97C00969C85 /* logo_utcibt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_utcibt.png; sourceTree = "<group>"; };
+		20192C981A49C97C00969C85 /* logo_utcibt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_utcibt@2x.png"; sourceTree = "<group>"; };
 		2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_KIDDE_01_SMG_FM200.PNG; path = images/PH2_KIDDE_01_SMG_FM200.PNG; sourceTree = "<group>"; };
 		206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 01_TRANS_CITY_TO_BLDG.mov; path = films/01_TRANS_CITY_TO_BLDG.mov; sourceTree = "<group>"; };
 		206063DF19D521E50045163F /* 02_TRANS_BLDG_UNBUILD.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 02_TRANS_BLDG_UNBUILD.mov; path = films/02_TRANS_BLDG_UNBUILD.mov; sourceTree = "<group>"; };
@@ -844,6 +850,8 @@
 				20BF48CD1A3B501D009645DC /* logo_sustain@2x.png */,
 				20BF48CE1A3B501D009645DC /* logo_taylor.png */,
 				20BF48CF1A3B501D009645DC /* logo_taylor@2x.png */,
+				20192C971A49C97C00969C85 /* logo_utcibt.png */,
+				20192C981A49C97C00969C85 /* logo_utcibt@2x.png */,
 				20BA88C11A37941900705945 /* text_bg@2x.png */,
 				20BA88C21A37941900705945 /* text_bg.png */,
 				20BA88C31A37941900705945 /* card_mask.png */,
@@ -1047,6 +1055,7 @@
 				20E546FB1A2DFEF40073B2CF /* 01_HERO_CITY.png in Resources */,
 				20E546FC1A2DFEF40073B2CF /* Marker_Right.png in Resources */,
 				20E546FD1A2DFEF40073B2CF /* title2@2x.png in Resources */,
+				20192C9C1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
 				20E546FE1A2DFEF40073B2CF /* titleTableViewCell.xib in Resources */,
 				20BF48D91A3B501D009645DC /* logo_carrier.png in Resources */,
 				20E546FF1A2DFEF40073B2CF /* otis-hotpost-still.png in Resources */,
@@ -1106,6 +1115,7 @@
 				20E547431A2E0E750073B2CF /* 03A Building Cut DEMO.png in Resources */,
 				20BF48ED1A3B501D009645DC /* logo_noresco.png in Resources */,
 				20BF48F71A3B501D009645DC /* logo_otis@2x.png in Resources */,
+				20192C9A1A49C97C00969C85 /* logo_utcibt.png in Resources */,
 				20E547281A2DFEF40073B2CF /* bg_03.jpg in Resources */,
 				20E547291A2DFEF40073B2CF /* companyData.plist in Resources */,
 				20E5472A1A2DFEF40073B2CF /* 03_TRANS_ELEV.png in Resources */,
@@ -1137,6 +1147,7 @@
 			files = (
 				206063E019D521E50045163F /* 02_TRANS_BLDG_UNBUILD.mov in Resources */,
 				20BF48EE1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
+				20192C991A49C97C00969C85 /* logo_utcibt.png in Resources */,
 				20BF48D41A3B501D009645DC /* logo_automated.png in Resources */,
 				20BF49141A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				20A95A5619CBB82800132F7E /* icon main menu.png in Resources */,
@@ -1214,6 +1225,7 @@
 				20A95A4F19CBB82800132F7E /* icon home@2x.png in Resources */,
 				20BF48DE1A3B501D009645DC /* logo_edwards@2x.png in Resources */,
 				824F14E619CB4C9200628F01 /* grfx_tableBg@2x.png in Resources */,
+				20192C9B1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
 				20BF48F41A3B501D009645DC /* logo_otis.png in Resources */,
 				20A95A5719CBB82800132F7E /* icon main menu@2x.png in Resources */,
 				20A39EBA19C3351C00C71430 /* bg_06.jpg in Resources */,
