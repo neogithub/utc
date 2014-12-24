@@ -306,11 +306,6 @@
 		82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AAD19B7926B00C8E12A /* Main.storyboard */; };
 		82A66AB219B7926B00C8E12A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AB119B7926B00C8E12A /* ViewController.m */; };
 		82A66AB419B7926B00C8E12A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AB319B7926B00C8E12A /* Images.xcassets */; };
-		82A66ABB19B7926B00C8E12A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66ABA19B7926B00C8E12A /* XCTest.framework */; };
-		82A66ABC19B7926B00C8E12A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9B19B7926A00C8E12A /* Foundation.framework */; };
-		82A66ABD19B7926B00C8E12A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A66A9F19B7926B00C8E12A /* UIKit.framework */; };
-		82A66AC519B7926B00C8E12A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AC319B7926B00C8E12A /* InfoPlist.strings */; };
-		82A66AC719B7926B00C8E12A /* xhSplitViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AC619B7926B00C8E12A /* xhSplitViewTests.m */; };
 		82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AD119B792BD00C8E12A /* detailViewController.m */; };
 		82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AD319B792BD00C8E12A /* masterViewController.m */; };
 		82A66AD819B792BD00C8E12A /* buildingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AD519B792BD00C8E12A /* buildingViewController.m */; };
@@ -322,16 +317,6 @@
 		82A66B0219B7B19B00C8E12A /* grfx_cityBgImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66B0019B7B19B00C8E12A /* grfx_cityBgImg.jpg */; };
 		82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66B0119B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		82A66ABE19B7926B00C8E12A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 82A66A9019B7926A00C8E12A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 82A66A9719B7926A00C8E12A;
-			remoteInfo = xhSplitView;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		200B9D0B19D25E7B00C7E7AC /* menu header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu header.png"; sourceTree = "<group>"; };
@@ -503,7 +488,6 @@
 		82A66AB019B7926B00C8E12A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		82A66AB119B7926B00C8E12A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82A66AB319B7926B00C8E12A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		82A66AB919B7926B00C8E12A /* utcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = utcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A66ABA19B7926B00C8E12A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		82A66AC219B7926B00C8E12A /* utcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "utcTests-Info.plist"; sourceTree = "<group>"; };
 		82A66AC419B7926B00C8E12A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -543,16 +527,6 @@
 				82A66A9E19B7926B00C8E12A /* CoreGraphics.framework in Frameworks */,
 				82A66AA019B7926B00C8E12A /* UIKit.framework in Frameworks */,
 				82A66A9C19B7926A00C8E12A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82A66AB619B7926B00C8E12A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82A66ABB19B7926B00C8E12A /* XCTest.framework in Frameworks */,
-				82A66ABD19B7926B00C8E12A /* UIKit.framework in Frameworks */,
-				82A66ABC19B7926B00C8E12A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,7 +678,6 @@
 			isa = PBXGroup;
 			children = (
 				82A66A9819B7926A00C8E12A /* utc.app */,
-				82A66AB919B7926B00C8E12A /* utcTests.xctest */,
 				20E5473B1A2DFEF40073B2CF /* utc copy.app */,
 			);
 			name = Products;
@@ -944,24 +917,6 @@
 			productReference = 82A66A9819B7926A00C8E12A /* utc.app */;
 			productType = "com.apple.product-type.application";
 		};
-		82A66AB819B7926B00C8E12A /* utcTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 82A66ACD19B7926B00C8E12A /* Build configuration list for PBXNativeTarget "utcTests" */;
-			buildPhases = (
-				82A66AB519B7926B00C8E12A /* Sources */,
-				82A66AB619B7926B00C8E12A /* Frameworks */,
-				82A66AB719B7926B00C8E12A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				82A66ABF19B7926B00C8E12A /* PBXTargetDependency */,
-			);
-			name = utcTests;
-			productName = xhSplitViewTests;
-			productReference = 82A66AB919B7926B00C8E12A /* utcTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -976,9 +931,6 @@
 					};
 					82A66A9719B7926A00C8E12A = {
 						DevelopmentTeam = 9734648496;
-					};
-					82A66AB819B7926B00C8E12A = {
-						TestTargetID = 82A66A9719B7926A00C8E12A;
 					};
 				};
 			};
@@ -996,7 +948,6 @@
 			projectRoot = "";
 			targets = (
 				82A66A9719B7926A00C8E12A /* utc */,
-				82A66AB819B7926B00C8E12A /* utcTests */,
 				20E546C41A2DFEF40073B2CF /* demo */,
 			);
 		};
@@ -1274,14 +1225,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82A66AB719B7926B00C8E12A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82A66AC519B7926B00C8E12A /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1345,23 +1288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82A66AB519B7926B00C8E12A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82A66AC719B7926B00C8E12A /* xhSplitViewTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		82A66ABF19B7926B00C8E12A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 82A66A9719B7926A00C8E12A /* utc */;
-			targetProxy = 82A66ABE19B7926B00C8E12A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		82A66AA419B7926B00C8E12A /* InfoPlist.strings */ = {
@@ -1441,24 +1368,6 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=*]" = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Store;
-		};
-		20CEFE3319D0F53300BEB200 /* Store */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/utc.app/utc";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xhSplitView/xhSplitView-Prefix.pch";
-				INFOPLIST_FILE = "xhSplitViewTests/utcTests-Info.plist";
-				PRODUCT_NAME = utcTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Store;
 		};
@@ -1574,24 +1483,6 @@
 				PROVISIONING_PROFILE = "5DA75D41-A3E9-4CA0-84FE-F76E92D6BFA0";
 				"PROVISIONING_PROFILE[sdk=*]" = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
 				WRAPPER_EXTENSION = app;
-			};
-			name = ReleaseLite;
-		};
-		20E5473F1A2E03970073B2CF /* ReleaseLite */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/utc.app/utc";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xhSplitView/xhSplitView-Prefix.pch";
-				INFOPLIST_FILE = "xhSplitViewTests/utcTests-Info.plist";
-				PRODUCT_NAME = utcTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = ReleaseLite;
 		};
@@ -1726,46 +1617,6 @@
 			};
 			name = Release;
 		};
-		82A66ACE19B7926B00C8E12A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/utc.app/utc";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xhSplitView/xhSplitView-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "xhSplitViewTests/utcTests-Info.plist";
-				PRODUCT_NAME = utcTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		82A66ACF19B7926B00C8E12A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/utc.app/utc";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xhSplitView/xhSplitView-Prefix.pch";
-				INFOPLIST_FILE = "xhSplitViewTests/utcTests-Info.plist";
-				PRODUCT_NAME = utcTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1798,17 +1649,6 @@
 				82A66ACC19B7926B00C8E12A /* Release */,
 				20CEFE3219D0F53300BEB200 /* Store */,
 				20E5473E1A2E03970073B2CF /* ReleaseLite */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		82A66ACD19B7926B00C8E12A /* Build configuration list for PBXNativeTarget "utcTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				82A66ACE19B7926B00C8E12A /* Debug */,
-				82A66ACF19B7926B00C8E12A /* Release */,
-				20CEFE3319D0F53300BEB200 /* Store */,
-				20E5473F1A2E03970073B2CF /* ReleaseLite */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
