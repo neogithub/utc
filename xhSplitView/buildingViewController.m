@@ -178,7 +178,7 @@ enum {
 	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(filmToSplitBuilding)];
     [_uiv_tapSquare addGestureRecognizer: tapOnImg];
 
-	//[self pulse:uiv_tapCircle.layer];
+	[self pulse:uiv_tapCircle.layer];
 }
 
 -(void)initLogoBtn
@@ -729,8 +729,8 @@ enum {
 //			topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
 //			topTitle.uil_HotspotTitle.frame = CGRectMake(-40, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
 //			
-//			_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
-//			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
+			_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
 //		} else if (d == 1){
 //			topTitle.uil_Company.frame = CGRectMake(74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
 //			topTitle.uil_HotspotTitle.frame = CGRectMake(74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
@@ -810,14 +810,14 @@ enum {
 #pragma mark - unhide Chrome
 -(void)unhideChrome
 {
-//	[UIView animateWithDuration:0.33 animations:^{
+	[UIView animateWithDuration:0.33 animations:^{
 //		topTitle.uil_Company.frame = CGRectMake(14, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
 //		topTitle.uil_HotspotTitle.frame = CGRectMake(74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
-//		_uib_backBtn.transform = CGAffineTransformIdentity;
-//		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
-//	} completion:^(BOOL completed) {
-//		
-//	}];
+		_uib_backBtn.transform = CGAffineTransformIdentity;
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
+	} completion:^(BOOL completed) {
+		
+	}];
 }
 
 #pragma mark - Utiltites
@@ -837,19 +837,19 @@ enum {
 	}
 }
 
-//#pragma mark PulseAnim
-//-(void)pulse:(CALayer*)incomingLayer
-//{
-//	CABasicAnimation *theAnimation;
-//	CALayer *pplayer = incomingLayer;
-//	theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
-//	theAnimation.duration=0.5;
-//	theAnimation.repeatCount=HUGE_VAL;
-//	theAnimation.autoreverses=YES;
-//	theAnimation.fromValue=[NSNumber numberWithFloat:0.70];
-//	theAnimation.toValue=[NSNumber numberWithFloat:0.5];
-//	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
-//}
+#pragma mark PulseAnim
+-(void)pulse:(CALayer*)incomingLayer
+{
+	CABasicAnimation *theAnimation;
+	CALayer *pplayer = incomingLayer;
+	theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
+	theAnimation.duration=0.5;
+	theAnimation.repeatCount=HUGE_VAL;
+	theAnimation.autoreverses=YES;
+	theAnimation.fromValue=[NSNumber numberWithFloat:0.70];
+	theAnimation.toValue=[NSNumber numberWithFloat:0.5];
+	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
+}
 
 #pragma mark - play movie
 -(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled belowSubview:(UIView*)belowSubview withOverlay:(NSString*)overlay
@@ -1076,7 +1076,7 @@ enum {
 
 	
 	if (_isPauseable == YES) {
-		//[self unhideChrome];
+		[self unhideChrome];
 #warning might be trouble once movies are added
 		if ([_arr_subHotspots count] == 0) {
 			//[topTitle removeHotspotTitle];
