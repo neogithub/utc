@@ -195,7 +195,6 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if ((indexPath.row != selectedRow) && (indexPath.row == 9)) {
-		//TODO: connect to data instaed of passing hard number
 		//NSLog(@"The tapped cell is %i", (int)indexPath.row);
 		NSDictionary* dict = [NSDictionary dictionaryWithObject:
 							  [NSNumber numberWithInt:3]
