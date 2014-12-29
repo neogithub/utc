@@ -437,7 +437,6 @@ enum {
     _arr_hotspotsArray = [[NSMutableArray alloc] init];
 	
 	[self loadSingleCompanyHotspots];
-    
 }
 
 // load the hotpots of the company selected
@@ -465,16 +464,6 @@ enum {
         _myHotspots = [[neoHotspotsView alloc] initWithFrame:CGRectMake(hs_x, hs_y, 49, 42)];
         _myHotspots.delegate=self;
 		[_arr_hotspotsArray addObject:_myHotspots];
-		
-        //Get the angle of arrow
-//        NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
-//        if ([str_angle isEqualToString:@""]) {
-//        }
-//        else
-//        {
-//            float hsAngle = [str_angle floatValue];
-//            _myHotspots.arwAngle = hsAngle;
-//        }
         
         //Get the name of BG img name
         NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
@@ -522,16 +511,6 @@ enum {
 		_myHotspots = [[neoHotspotsView alloc] initWithFrame:CGRectMake(hs_x, hs_y, 49, 42)];
 		_myHotspots.delegate=self;
 		[_arr_hotspotsArray addObject:_myHotspots];
-		
-		//Get the angle of arrow
-//		NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
-//		if ([str_angle isEqualToString:@""]) {
-//		}
-//		else
-//		{
-//			float hsAngle = [str_angle floatValue];
-//			_myHotspots.arwAngle = hsAngle;
-//		}
 		
 		//Get the name of BG img name
 		NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
