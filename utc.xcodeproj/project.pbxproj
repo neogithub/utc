@@ -316,6 +316,22 @@
 		82A66AF519B7950600C8E12A /* otis-hotpost-still@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AF319B7950600C8E12A /* otis-hotpost-still@2x.png */; };
 		82A66B0219B7B19B00C8E12A /* grfx_cityBgImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66B0019B7B19B00C8E12A /* grfx_cityBgImg.jpg */; };
 		82A66B0319B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82A66B0119B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg */; };
+		8834E2011A4F0FCE00204D81 /* IBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */; };
+		8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2001A4F0FCE00204D81 /* IBTViewController.xib */; };
+		8834E20A1A509C4500204D81 /* icon menu right.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2031A509C4500204D81 /* icon menu right.png */; };
+		8834E20B1A509C4500204D81 /* icon menu right.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2031A509C4500204D81 /* icon menu right.png */; };
+		8834E20C1A509C4500204D81 /* icon menu right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2041A509C4500204D81 /* icon menu right@2x.png */; };
+		8834E20D1A509C4500204D81 /* icon menu right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2041A509C4500204D81 /* icon menu right@2x.png */; };
+		8834E20E1A509C4500204D81 /* icon menu left.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2051A509C4500204D81 /* icon menu left.png */; };
+		8834E20F1A509C4500204D81 /* icon menu left.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2051A509C4500204D81 /* icon menu left.png */; };
+		8834E2101A509C4500204D81 /* icon menu left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2061A509C4500204D81 /* icon menu left@2x.png */; };
+		8834E2111A509C4500204D81 /* icon menu left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2061A509C4500204D81 /* icon menu left@2x.png */; };
+		8834E2121A509C4500204D81 /* icon menu center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2071A509C4500204D81 /* icon menu center@2x.png */; };
+		8834E2131A509C4500204D81 /* icon menu center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2071A509C4500204D81 /* icon menu center@2x.png */; };
+		8834E2141A509C4500204D81 /* icon menu center right.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2081A509C4500204D81 /* icon menu center right.png */; };
+		8834E2151A509C4500204D81 /* icon menu center right.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2081A509C4500204D81 /* icon menu center right.png */; };
+		8834E2161A509C4500204D81 /* icon menu center right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2091A509C4500204D81 /* icon menu center right@2x.png */; };
+		8834E2171A509C4500204D81 /* icon menu center right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2091A509C4500204D81 /* icon menu center right@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -507,6 +523,16 @@
 		82A66AF319B7950600C8E12A /* otis-hotpost-still@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "otis-hotpost-still@2x.png"; sourceTree = "<group>"; };
 		82A66B0019B7B19B00C8E12A /* grfx_cityBgImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grfx_cityBgImg.jpg; sourceTree = "<group>"; };
 		82A66B0119B7B19B00C8E12A /* grfx_cityBgImg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "grfx_cityBgImg@2x.jpg"; sourceTree = "<group>"; };
+		8834E1FE1A4F0FCE00204D81 /* IBTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTViewController.h; sourceTree = "<group>"; };
+		8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTViewController.m; sourceTree = "<group>"; };
+		8834E2001A4F0FCE00204D81 /* IBTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBTViewController.xib; sourceTree = "<group>"; };
+		8834E2031A509C4500204D81 /* icon menu right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon menu right.png"; sourceTree = "<group>"; };
+		8834E2041A509C4500204D81 /* icon menu right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon menu right@2x.png"; sourceTree = "<group>"; };
+		8834E2051A509C4500204D81 /* icon menu left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon menu left.png"; sourceTree = "<group>"; };
+		8834E2061A509C4500204D81 /* icon menu left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon menu left@2x.png"; sourceTree = "<group>"; };
+		8834E2071A509C4500204D81 /* icon menu center@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon menu center@2x.png"; sourceTree = "<group>"; };
+		8834E2081A509C4500204D81 /* icon menu center right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon menu center right.png"; sourceTree = "<group>"; };
+		8834E2091A509C4500204D81 /* icon menu center right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon menu center right@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -710,6 +736,9 @@
 				82A66AD119B792BD00C8E12A /* detailViewController.m */,
 				82A66AD419B792BD00C8E12A /* buildingViewController.h */,
 				82A66AD519B792BD00C8E12A /* buildingViewController.m */,
+				8834E1FE1A4F0FCE00204D81 /* IBTViewController.h */,
+				8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */,
+				8834E2001A4F0FCE00204D81 /* IBTViewController.xib */,
 				20BF49181A3F23BE009645DC /* embTitle.h */,
 				20BF49191A3F23BE009645DC /* embTitle.m */,
 				82A66AD919B792C700C8E12A /* xhSplitViewController.h */,
@@ -793,6 +822,13 @@
 		82A66AE319B7942900C8E12A /* grfx */ = {
 			isa = PBXGroup;
 			children = (
+				8834E2031A509C4500204D81 /* icon menu right.png */,
+				8834E2041A509C4500204D81 /* icon menu right@2x.png */,
+				8834E2051A509C4500204D81 /* icon menu left.png */,
+				8834E2061A509C4500204D81 /* icon menu left@2x.png */,
+				8834E2071A509C4500204D81 /* icon menu center@2x.png */,
+				8834E2081A509C4500204D81 /* icon menu center right.png */,
+				8834E2091A509C4500204D81 /* icon menu center right@2x.png */,
 				20192C861A48729000969C85 /* icon marker center.png */,
 				20192C871A48729000969C85 /* icon marker center right.png */,
 				20192C881A48729000969C85 /* icon marker center right@2x.png */,
@@ -976,6 +1012,7 @@
 				20E546E71A2DFEF40073B2CF /* close bttn@2x.png in Resources */,
 				20E546E81A2DFEF40073B2CF /* title1@2x.png in Resources */,
 				20192C761A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG in Resources */,
+				8834E20B1A509C4500204D81 /* icon menu right.png in Resources */,
 				20E546E91A2DFEF40073B2CF /* Images.xcassets in Resources */,
 				20192C8B1A48729000969C85 /* icon marker center.png in Resources */,
 				20BF49111A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
@@ -1022,15 +1059,18 @@
 				20E547061A2DFEF40073B2CF /* bg_02.jpg in Resources */,
 				20E547071A2DFEF40073B2CF /* bg_04.jpg in Resources */,
 				20BF490D1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
+				8834E20D1A509C4500204D81 /* icon menu right@2x.png in Resources */,
 				20E547081A2DFEF40073B2CF /* grfx_accessory.png in Resources */,
 				20BF48DF1A3B501D009645DC /* logo_edwards@2x.png in Resources */,
 				20BF49071A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov in Resources */,
 				20E547091A2DFEF40073B2CF /* InfoPlist.strings in Resources */,
 				20BF48E71A3B501D009645DC /* logo_lenel@2x.png in Resources */,
+				8834E2151A509C4500204D81 /* icon menu center right.png in Resources */,
 				20192C8D1A48729000969C85 /* icon marker center right.png in Resources */,
 				20E5470B1A2DFEF40073B2CF /* close bttn.png in Resources */,
 				20192C791A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */,
 				20E5470C1A2DFEF40073B2CF /* menu header@2x.png in Resources */,
+				8834E2111A509C4500204D81 /* icon menu left@2x.png in Resources */,
 				20E5470E1A2DFEF40073B2CF /* title3@2x.png in Resources */,
 				20E5470F1A2DFEF40073B2CF /* grfx_tableBg.png in Resources */,
 				20E547101A2DFEF40073B2CF /* 03_HERO_BLDG_SECTION.png in Resources */,
@@ -1085,9 +1125,12 @@
 				2050EAB61A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */,
 				20E547321A2DFEF40073B2CF /* 00_LOGO_TRANS_HERO_CITY.mov in Resources */,
 				20E547331A2DFEF40073B2CF /* Marker@2x.png in Resources */,
+				8834E2171A509C4500204D81 /* icon menu center right@2x.png in Resources */,
 				20BF48E91A3B501D009645DC /* logo_marioff.png in Resources */,
+				8834E2131A509C4500204D81 /* icon menu center@2x.png in Resources */,
 				20E547441A2E0E750073B2CF /* 03A Building Cut DEMO@2x.png in Resources */,
 				20E547341A2DFEF40073B2CF /* icon home.png in Resources */,
+				8834E20F1A509C4500204D81 /* icon menu left.png in Resources */,
 				20E547361A2DFEF40073B2CF /* title5@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1096,6 +1139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8834E20E1A509C4500204D81 /* icon menu left.png in Resources */,
 				206063E019D521E50045163F /* 02_TRANS_BLDG_UNBUILD.mov in Resources */,
 				20BF48EE1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
 				20192C991A49C97C00969C85 /* logo_utcibt.png in Resources */,
@@ -1117,6 +1161,7 @@
 				82A66AB419B7926B00C8E12A /* Images.xcassets in Resources */,
 				20CEFE3819D1018700BEB200 /* PopoverViewController.xib in Resources */,
 				20192C751A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG in Resources */,
+				8834E2101A509C4500204D81 /* icon menu left@2x.png in Resources */,
 				20A95A5E19CBC1AA00132F7E /* icon marker left.png in Resources */,
 				20A39EBC19C3351C00C71430 /* bg_05@2x.jpg in Resources */,
 				2018676D19D2082600ADB82F /* Marker_Right@2x.png in Resources */,
@@ -1149,6 +1194,7 @@
 				20A39EAF19C32F8800C71430 /* title2@2x.png in Resources */,
 				824F14F019CB59CA00628F01 /* titleTableViewCell.xib in Resources */,
 				82A66AF419B7950600C8E12A /* otis-hotpost-still.png in Resources */,
+				8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */,
 				209AEFA919D481180074A3EA /* 00_LOGO_TRANS_HERO_CITY.png in Resources */,
 				20BF48F01A3B501D009645DC /* logo_onity.png in Resources */,
 				20A95A5A19CBB89E00132F7E /* swipe-to-reveal@2x.png in Resources */,
@@ -1161,6 +1207,7 @@
 				82A66AA619B7926B00C8E12A /* InfoPlist.strings in Resources */,
 				209AEFAE19D48C650074A3EA /* close bttn.png in Resources */,
 				200B9D0E19D25E7B00C7E7AC /* menu header@2x.png in Resources */,
+				8834E20A1A509C4500204D81 /* icon menu right.png in Resources */,
 				20A39EB019C32F8800C71430 /* title3@2x.png in Resources */,
 				824F14E519CB4C9200628F01 /* grfx_tableBg.png in Resources */,
 				20A95A7C19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png in Resources */,
@@ -1174,8 +1221,10 @@
 				20BF48D61A3B501D009645DC /* logo_automated@2x.png in Resources */,
 				824F14E219CB390800628F01 /* grfx_cellArrow@2x.png in Resources */,
 				20A95A4F19CBB82800132F7E /* icon home@2x.png in Resources */,
+				8834E2141A509C4500204D81 /* icon menu center right.png in Resources */,
 				20BF48DE1A3B501D009645DC /* logo_edwards@2x.png in Resources */,
 				824F14E619CB4C9200628F01 /* grfx_tableBg@2x.png in Resources */,
+				8834E20C1A509C4500204D81 /* icon menu right@2x.png in Resources */,
 				20192C9B1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
 				20BF48F41A3B501D009645DC /* logo_otis.png in Resources */,
 				20A95A5719CBB82800132F7E /* icon main menu@2x.png in Resources */,
@@ -1202,6 +1251,7 @@
 				209AEFA319D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG.png in Resources */,
 				82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */,
 				206063DC19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov in Resources */,
+				8834E2121A509C4500204D81 /* icon menu center@2x.png in Resources */,
 				20A95A7D19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				20192C841A445CAF00969C85 /* overlay.png in Resources */,
 				20BF48D81A3B501D009645DC /* logo_carrier.png in Resources */,
@@ -1212,6 +1262,7 @@
 				20BF48F81A3B501D009645DC /* logo_sustain.png in Resources */,
 				209AEFA719D47C410074A3EA /* 00_LOGO_TRANS_HERO_CITY.mov in Resources */,
 				2018676C19D2082600ADB82F /* Marker@2x.png in Resources */,
+				8834E2161A509C4500204D81 /* icon menu center right@2x.png in Resources */,
 				20BF48F21A3B501D009645DC /* logo_onity@2x.png in Resources */,
 				20BA88C81A37941900705945 /* card_mask.png in Resources */,
 				20A95A4E19CBB82800132F7E /* icon home.png in Resources */,
@@ -1274,6 +1325,7 @@
 				82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */,
 				82A66AAC19B7926B00C8E12A /* AppDelegate.m in Sources */,
 				20BF48B61A3A0629009645DC /* PersistencyManager.m in Sources */,
+				8834E2011A4F0FCE00204D81 /* IBTViewController.m in Sources */,
 				20D0B00819BF4EAD0096021D /* Building.m in Sources */,
 				824F14D919CB359900628F01 /* panelTableViewCell.m in Sources */,
 				20A39EAC19C32F8800C71430 /* GHWalkThroughView.m in Sources */,

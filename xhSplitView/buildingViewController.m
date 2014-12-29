@@ -8,6 +8,7 @@
 
 #import "buildingViewController.h"
 #import "ebZoomingScrollView.h"
+#import "IBTViewController.h"
 
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
@@ -31,7 +32,7 @@ enum {
 	LabelOffscreen,
 };
 
-@interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, UIGestureRecognizerDelegate>
+@interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, IBTViewControllerDelegate, UIGestureRecognizerDelegate>
 {
 	CGFloat removeTextAfterThisManySeconds;
 
@@ -46,6 +47,7 @@ enum {
 	NSMutableArray	*arr_CompanyLogos;
 	embTitle		*topTitle;
 	NSString		*topname;
+    BOOL            titleOffScreen;
 }
 
 @property (nonatomic) NSTimer *myTimer;
@@ -111,7 +113,6 @@ enum {
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackButton) name:@"hideDetailChrome" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackButton) name:@"unhideDetailChrome" object:nil];
 
-	[self initIBTButton];
 }
 
 -(void)initIBTButton
@@ -120,8 +121,19 @@ enum {
 	_uib_ibtBtn.frame = CGRectMake(1024-89-16, 16, 89, 56);
 	[_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateNormal];
 	[_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateSelected];
-	//[_uib_ibtBtn addTarget: self action:@selector(showHelp) forControlEvents:UIControlEventTouchUpInside];
+	[_uib_ibtBtn addTarget: self action:@selector(loadIBT) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview: _uib_ibtBtn];
+}
+
+#pragma IBT
+
+#pragma mark search
+-(void)loadIBT
+{
+    NSLog(@"loadSearch");
+    IBTViewController* vc = [IBTViewController new];
+    //vc.delegate = self;
+    [self presentViewController:vc animated:YES completion:^{}];
 }
 
 #pragma mark - stills under movie
@@ -308,6 +320,7 @@ enum {
 #endif
 	
 	[self initLogoBtn];
+    [self initIBTButton];
 	
 	[_uis_zoomingInfoImg removeFromSuperview];
 	
@@ -598,7 +611,6 @@ enum {
 			[self initTitleBox];
 			[topTitle setHotSpotTitle:categoryName];
 			
-			//[self animateTitleAndHotspot:LabelOnscreen];
 			
 		} else if ([categoryType isEqualToString:@"stillWithMenu"]) {
 			
@@ -607,7 +619,6 @@ enum {
 			
 			[self popUpImage:subBG withCloseButton:NO];
 			
-			//[self animateTitleAndHotspot:LabelOffscreen];
 			
 			[self loadCompanySubHotspots:_arr_subHotspots];
 			
@@ -717,20 +728,49 @@ enum {
 {
 	//zoom towards the point tapped
 	[_uis_zoomingImg zoomToPoint:CGPointMake(tappedView.center.x, tappedView.center.y) withScale:1.5 animated:YES];
-	[self animateTitleAndHotspot:LabelOffscreen];
+    _uis_zoomingImg.alpha = 0.0;
+    
+    // needs a delay so it can be APPENDED before moving
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self animateTitleAndHotspot:LabelOffscreen];
+    });
 }
 
 -(void)animateTitleAndHotspot:(NSInteger)d
 {
 	[UIView animateWithDuration:0.5 animations:^{
-		_uis_zoomingImg.alpha = 0.0;
+//		_uis_zoomingImg.alpha = 0.0;
+        
+        if (d == LabelOffscreen) {
+            topTitle.uil_Company.frame = CGRectMake(-87, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
+            topTitle.uil_HotspotTitle.frame = CGRectMake(-20, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
+            _uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
+            
+            titleOffScreen = YES;
+            
+        } else if (d == LabelOnscreen) {
+            topTitle.uil_Company.frame = CGRectMake(0, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
+            _uib_backBtn.transform = CGAffineTransformIdentity;
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
+            
+            titleOffScreen = NO;
+
+        }
+        
+        
+        /*
+        _uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
+        */
+        
 		
 //		if (d == 0) {
 //			topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
 //			topTitle.uil_HotspotTitle.frame = CGRectMake(-40, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
 //			
-			_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
+//			_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
+//			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
 //		} else if (d == 1){
 //			topTitle.uil_Company.frame = CGRectMake(74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
 //			topTitle.uil_HotspotTitle.frame = CGRectMake(74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
@@ -766,7 +806,9 @@ enum {
 #pragma mark - ebzooming delegate
 -(void)didRemove:(ebZoomingScrollView *)ebZoomingScrollView {
 
-	// standard interface view
+    NSLog(@"zoomingScroll.tg = %li", (long)ebZoomingScrollView.tag);
+    
+    // standard interface view
 	if (ebZoomingScrollView.tag == 1100) {
 		[_uis_zoomingInfoImg bringSubviewToFront:_uis_zoomingImg];
 		[_uis_zoomingImg.scrollView setZoomScale:1.0];
@@ -800,7 +842,6 @@ enum {
 		}];
 		[topTitle removeHotspotTitle];
 		[topTitle removeCompanyTitle];
-		//[self animateTitleAndHotspot:LabelOffscreen];
 		[self unhideChrome];
 	}
 	
@@ -992,6 +1033,7 @@ enum {
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
 	NSLog(@"playerItemDidReachEnd");
+    
 	[self closeMovie];
 }
 
@@ -1059,6 +1101,14 @@ enum {
 {
 	NSLog(@"closeMovie");
 
+    CGAffineTransform t = _uib_backBtn.transform;
+    
+    NSLog(@"xscale %f",t.tx);
+    
+    if (t.tx < 0) {
+        [self animateTitleAndHotspot:LabelOnscreen];
+    }
+    
 	if (_myTimer) {
 		[self.myTimer invalidate];
 		self.myTimer = nil;
@@ -1073,7 +1123,6 @@ enum {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	
 	NSLog(@"_arr_subHotspots %lu",(unsigned long)[_arr_subHotspots count]);
-
 	
 	if (_isPauseable == YES) {
 		[self unhideChrome];
@@ -1091,6 +1140,7 @@ enum {
 	}
 	
 	[self clearHotpsotData];
+    
 }
 
 -(void)resetBaseInteractive
