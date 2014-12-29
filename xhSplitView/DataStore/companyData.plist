@@ -7,26 +7,16 @@
 		<string>Otis</string>
 		<key>infoName</key>
 		<string>Elevators &amp; Escalators</string>
-		<key>type</key>
-		<string>company</string>
+		<key>demoName</key>
+		<string>Elevator</string>
 		<key>background</key>
 		<string>logo_otis.png</string>
 		<key>xy</key>
 		<string>469, 181.5</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>transitionFilm</key>
 		<string>03_TRANS_ELEV.mov</string>
 		<key>transitionFilmImg</key>
 		<string>04_HOTSPOT_CROSS_SECTION.png</string>
-		<key>demoName</key>
-		<string>Elevator</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -53,12 +43,8 @@
 						<string>20,75</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Up to 50% Faster Movement Throughout</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -109,12 +95,8 @@
 						<string>20,125</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>Energy-Efficient</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 						<key>alignment</key>
@@ -164,12 +146,8 @@
 						<string>20,75</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Energy-Efficient</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -220,12 +198,8 @@
 						<string>20,125</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>Ease of Monitoring and Maintenance</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 						<key>alignment</key>
@@ -264,12 +238,8 @@
 						<string>20,175</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>New LED-Lighted Balustrades</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 						<key>alignment</key>
@@ -325,12 +295,8 @@
 				<string>780,74</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>180</string>
 				<key>caption</key>
 				<string>Remote Diagnostics</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 				<key>alignment</key>
@@ -381,12 +347,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>ReGen Drive</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -425,12 +387,8 @@
 				<string>620,267</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>270</string>
 				<key>caption</key>
 				<string>Glide Door Operators</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 				<key>alignment</key>
@@ -475,12 +433,8 @@
 				<string>550,330</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Environmentally Responsible Technology</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
 				<key>alignment</key>
@@ -519,12 +473,8 @@
 				<string>790,380</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>225</string>
 				<key>caption</key>
 				<string>Coated Steel Belts</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
 				<key>alignment</key>
@@ -575,12 +525,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -623,26 +569,16 @@
 		<string>Carrier</string>
 		<key>infoName</key>
 		<string>Heating, Air-conditioning and Refrigeration </string>
-		<key>type</key>
-		<string>company</string>
+		<key>demoName</key>
+		<string>HVAC</string>
 		<key>background</key>
 		<string>logo_carrier.png</string>
 		<key>xy</key>
 		<string>573.5, 665.5</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>transitionFilm</key>
 		<string>03_TRANS_ELEV.mov</string>
 		<key>transitionFilmImg</key>
 		<string>PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG</string>
-		<key>demoName</key>
-		<string>HVAC</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -669,12 +605,8 @@
 						<string>20,75</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Superior Air Quality</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -725,12 +657,8 @@
 						<string>20,125</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>Leak Tight Construction</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 						<key>alignment</key>
@@ -769,12 +697,8 @@
 						<string>20,175</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>Ease of Integration</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 						<key>alignment</key>
@@ -838,12 +762,8 @@
 				<string>580,174</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>180</string>
 				<key>caption</key>
 				<string>Taking Efficiency to New Levels</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 				<key>alignment</key>
@@ -894,12 +814,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Most Robust Chiller Available: The 23XRV</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -938,12 +854,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Carrier Reliability </string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -986,22 +898,12 @@
 		<string>Taylor</string>
 		<key>infoName</key>
 		<string>Foodservice Equipment</string>
-		<key>type</key>
-		<string>company</string>
+		<key>demoName</key>
+		<string>Refrigeration</string>
 		<key>background</key>
 		<string>logo_taylor.png</string>
 		<key>xy</key>
 		<string>196.5, 485</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
-		<key>demoName</key>
-		<string>Refrigeration</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -1022,14 +924,10 @@
 						<string>180,274</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Softer Serve Machine Model C723</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -1080,14 +978,10 @@
 						<string>580,474</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Grill Model L812</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -1143,12 +1037,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -1193,12 +1083,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -1241,22 +1127,12 @@
 		<string>Lenel</string>
 		<key>infoName</key>
 		<string>Open Security Solutions</string>
-		<key>type</key>
-		<string>company</string>
 		<key>background</key>
 		<string>logo_lenel.png</string>
 		<key>xy</key>
 		<string>142.5, 245</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>demoName</key>
 		<string>Security Open security solutions</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -1283,12 +1159,8 @@
 				<string>780,74</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>180</string>
 				<key>caption</key>
 				<string>Remote Diagnostics</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 				<key>alignment</key>
@@ -1339,12 +1211,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>ReGen Drive</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -1383,12 +1251,8 @@
 				<string>620,267</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>270</string>
 				<key>caption</key>
 				<string>Glide Door Operators</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 				<key>alignment</key>
@@ -1433,12 +1297,8 @@
 				<string>550,330</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Environmentally Responsible Technology</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
 				<key>alignment</key>
@@ -1477,12 +1337,8 @@
 				<string>790,380</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>225</string>
 				<key>caption</key>
 				<string>Coated Steel Belts</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
 				<key>alignment</key>
@@ -1533,12 +1389,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -1581,22 +1433,12 @@
 		<string>AdvanTE3C</string>
 		<key>infoName</key>
 		<string>Interactive Digital Signages</string>
-		<key>type</key>
-		<string>company</string>
 		<key>background</key>
 		<string>logo_advantec.png</string>
 		<key>xy</key>
 		<string>815,685</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>demoName</key>
 		<string>Digital Signage</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -1617,14 +1459,10 @@
 						<string>180,274</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Softer Serve Machine Model C723</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -1675,14 +1513,10 @@
 						<string>580,474</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Grill Model L812</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -1738,12 +1572,8 @@
 				<string>780,74</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>180</string>
 				<key>caption</key>
 				<string>Remote Diagnostics</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 				<key>alignment</key>
@@ -1794,12 +1624,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>ReGen Drive</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -1838,12 +1664,8 @@
 				<string>620,267</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>270</string>
 				<key>caption</key>
 				<string>Glide Door Operators</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 				<key>alignment</key>
@@ -1888,12 +1710,8 @@
 				<string>550,330</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Environmentally Responsible Technology</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
 				<key>alignment</key>
@@ -1932,12 +1750,8 @@
 				<string>790,380</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>225</string>
 				<key>caption</key>
 				<string>Coated Steel Belts</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
 				<key>alignment</key>
@@ -1988,12 +1802,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -2036,22 +1846,12 @@
 		<string>AutomatedLogic</string>
 		<key>infoName</key>
 		<string>Building Automation Systems</string>
-		<key>type</key>
-		<string>company</string>
 		<key>background</key>
 		<string>logo_automated.png</string>
 		<key>xy</key>
 		<string>291, 127</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>demoName</key>
 		<string>Automation</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -2072,12 +1872,8 @@
 						<string>780,74</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Web-Based System</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -2128,12 +1924,8 @@
 						<string>280,474</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Saves Energy &amp; Expense</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -2184,12 +1976,8 @@
 						<string>580,120</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>Environmental Index</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 						<key>alignment</key>
@@ -2228,12 +2016,8 @@
 						<string>200,200</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>Time-Lapse Graphics </string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 						<key>alignment</key>
@@ -2289,12 +2073,8 @@
 						<string>780,74</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>TBD</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -2356,12 +2136,8 @@
 				<string>780,74</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>180</string>
 				<key>caption</key>
 				<string>Remote Diagnostics</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 				<key>alignment</key>
@@ -2412,12 +2188,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>ReGen Drive</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -2456,12 +2228,8 @@
 				<string>620,267</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>270</string>
 				<key>caption</key>
 				<string>Glide Door Operators</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 				<key>alignment</key>
@@ -2506,12 +2274,8 @@
 				<string>550,330</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Environmentally Responsible Technology</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
 				<key>alignment</key>
@@ -2550,12 +2314,8 @@
 				<string>790,380</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>225</string>
 				<key>caption</key>
 				<string>Coated Steel Belts</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
 				<key>alignment</key>
@@ -2606,12 +2366,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -2654,22 +2410,12 @@
 		<string>Sustainability</string>
 		<key>infoName</key>
 		<string>Sustainability</string>
-		<key>type</key>
-		<string>company</string>
 		<key>background</key>
 		<string>logo_sustain.png</string>
 		<key>xy</key>
 		<string>915,685</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>demoName</key>
 		<string>Sustainability</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -2690,14 +2436,10 @@
 						<string>180,274</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Green Building Leadership</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -2748,14 +2490,10 @@
 						<string>580,474</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Green Technology Leadership</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -2806,14 +2544,10 @@
 						<string>300,120</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>This Green Building</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -2869,12 +2603,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>ReGen Drive</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -2913,12 +2643,8 @@
 				<string>620,267</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>270</string>
 				<key>caption</key>
 				<string>Glide Door Operators</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 				<key>alignment</key>
@@ -2963,12 +2689,8 @@
 				<string>550,330</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Environmentally Responsible Technology</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
 				<key>alignment</key>
@@ -3007,12 +2729,8 @@
 				<string>790,380</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>225</string>
 				<key>caption</key>
 				<string>Coated Steel Belts</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
 				<key>alignment</key>
@@ -3063,12 +2781,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -3111,22 +2825,12 @@
 		<string>Interlogix</string>
 		<key>infoName</key>
 		<string>Commercial Security Systems</string>
-		<key>type</key>
-		<string>company</string>
 		<key>background</key>
 		<string>logo_interlogix.png</string>
 		<key>xy</key>
 		<string>825, 242.5</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>demoName</key>
 		<string>Door Security</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -3147,14 +2851,10 @@
 						<string>580,474</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Security Management</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -3205,14 +2905,10 @@
 						<string>280,474</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Truvision Cameras</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -3274,12 +2970,8 @@
 				<string>780,74</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>180</string>
 				<key>caption</key>
 				<string>Remote Diagnostics</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 				<key>alignment</key>
@@ -3330,12 +3022,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>ReGen Drive</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -3374,12 +3062,8 @@
 				<string>620,267</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>270</string>
 				<key>caption</key>
 				<string>Glide Door Operators</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 				<key>alignment</key>
@@ -3424,12 +3108,8 @@
 				<string>550,330</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Environmentally Responsible Technology</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
 				<key>alignment</key>
@@ -3468,12 +3148,8 @@
 				<string>790,380</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>225</string>
 				<key>caption</key>
 				<string>Coated Steel Belts</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
 				<key>alignment</key>
@@ -3524,12 +3200,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -3572,22 +3244,12 @@
 		<string>Edwards</string>
 		<key>infoName</key>
 		<string>Life Safety &amp; Emergency Communications</string>
-		<key>type</key>
-		<string>company</string>
 		<key>background</key>
 		<string>logo_edwards.png</string>
 		<key>xy</key>
 		<string>803, 309.5</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>demoName</key>
 		<string>Life Safety</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -3608,14 +3270,10 @@
 						<string>180,274</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Life Safety System &amp; Incident Mgmt. System</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -3666,14 +3324,10 @@
 						<string>580,474</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Life Safety Control Panel</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -3724,14 +3378,10 @@
 						<string>300,120</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>Signature Series Devices</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -3793,12 +3443,8 @@
 				<string>780,74</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>180</string>
 				<key>caption</key>
 				<string>Remote Diagnostics</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 				<key>alignment</key>
@@ -3849,12 +3495,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>ReGen Drive</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -3893,12 +3535,8 @@
 				<string>620,267</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>270</string>
 				<key>caption</key>
 				<string>Glide Door Operators</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 				<key>alignment</key>
@@ -3941,22 +3579,12 @@
 		<string>Kidde</string>
 		<key>infoName</key>
 		<string>Fire Safety Products</string>
-		<key>type</key>
-		<string>company</string>
 		<key>background</key>
 		<string>logo_kidde.png</string>
 		<key>xy</key>
 		<string>771, 397</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>demoName</key>
 		<string>Fire Suppresion</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -3977,14 +3605,10 @@
 						<string>680,274</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>FM200 Fire Suppression Systems</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -4035,12 +3659,8 @@
 						<string>580,120</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>ADS Advanced Delivery System</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 						<key>alignment</key>
@@ -4079,12 +3699,8 @@
 						<string>500,400</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>WHDR Wet Chemical System</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 						<key>alignment</key>
@@ -4129,12 +3745,8 @@
 						<string>500,200</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>315</string>
 						<key>caption</key>
 						<string>Badger Fire Extinguishers</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 						<key>alignment</key>
@@ -4190,12 +3802,8 @@
 				<string>780,74</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>180</string>
 				<key>caption</key>
 				<string>Remote Diagnostics</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 				<key>alignment</key>
@@ -4246,12 +3854,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>ReGen Drive</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -4290,12 +3894,8 @@
 				<string>620,267</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>270</string>
 				<key>caption</key>
 				<string>Glide Door Operators</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 				<key>alignment</key>
@@ -4340,12 +3940,8 @@
 				<string>550,330</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Environmentally Responsible Technology</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
 				<key>alignment</key>
@@ -4384,12 +3980,8 @@
 				<string>790,380</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>225</string>
 				<key>caption</key>
 				<string>Coated Steel Belts</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
 				<key>alignment</key>
@@ -4440,12 +4032,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
@@ -4488,22 +4076,12 @@
 		<string>Onity</string>
 		<key>infoName</key>
 		<string>Facility Management Solutions</string>
-		<key>type</key>
-		<string>company</string>
 		<key>background</key>
 		<string>logo_onity.png</string>
 		<key>xy</key>
 		<string>371, 397</string>
-		<key>angle</key>
-		<string>180</string>
-		<key>caption</key>
-		<string></string>
-		<key>RGB</key>
-		<string></string>
 		<key>demoName</key>
 		<string>Fire Suppresion</string>
-		<key>alignment</key>
-		<integer>2</integer>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -4524,14 +4102,10 @@
 						<string>680,274</string>
 						<key>width</key>
 						<string>360</string>
-						<key>angle</key>
-						<string>180</string>
 						<key>caption</key>
 						<string>TBD</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
-						<key>RGB</key>
-						<string></string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>alignment</key>
@@ -4587,12 +4161,8 @@
 				<string>780,74</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>180</string>
 				<key>caption</key>
 				<string>Remote Diagnostics</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 				<key>alignment</key>
@@ -4643,12 +4213,8 @@
 				<string>580,120</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>ReGen Drive</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 				<key>alignment</key>
@@ -4687,12 +4253,8 @@
 				<string>620,267</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>270</string>
 				<key>caption</key>
 				<string>Glide Door Operators</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov</string>
 				<key>alignment</key>
@@ -4737,12 +4299,8 @@
 				<string>550,330</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Environmentally Responsible Technology</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_04_ANIM_ERT.mov</string>
 				<key>alignment</key>
@@ -4781,12 +4339,8 @@
 				<string>790,380</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>225</string>
 				<key>caption</key>
 				<string>Coated Steel Belts</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov</string>
 				<key>alignment</key>
@@ -4837,12 +4391,8 @@
 				<string>500,400</string>
 				<key>width</key>
 				<string>360</string>
-				<key>angle</key>
-				<string>315</string>
 				<key>caption</key>
 				<string>Compact Controller</string>
-				<key>RGB</key>
-				<string></string>
 				<key>fileName</key>
 				<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 				<key>alignment</key>
