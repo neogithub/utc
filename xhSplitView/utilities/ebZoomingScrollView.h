@@ -13,7 +13,7 @@
 
 @protocol ebZoomingScrollViewDelegate
 @optional
--(void)didRemove:(ebZoomingScrollView *)ebZoomingScrollView;
+-(void)scrollViewDidRemove:(ebZoomingScrollView *)ebZoomingScrollView;
 @end
 
 @interface ebZoomingScrollView : UIView <UIScrollViewDelegate,UIGestureRecognizerDelegate>
@@ -32,6 +32,6 @@
 @property (nonatomic, strong, readonly) UIScrollView *scrollView;
 
 // define public functions
--(void)didRemove;
+-(void)scrollViewDidRemove;
 -(void)zoomToPoint:(CGPoint)zoomPoint withScale: (CGFloat)scale animated: (BOOL)animated;
 @end

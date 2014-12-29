@@ -28,18 +28,18 @@ static CGFloat backButtonWidth	= 58;
 static CGFloat backButtonX		= 36;
 
 enum {
-	LabelOnscreen,
-	LabelOffscreen,
+	TitleLabelsOnscreen,
+	TitleLabelsOffscreen,
 };
 
 @interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, IBTViewControllerDelegate, UIGestureRecognizerDelegate>
 {
-	CGFloat removeTextAfterThisManySeconds;
-
+	// fact cards
+    CGFloat removeTextAfterThisManySeconds;
 	NSMutableArray	*arr_HotspotInfoCards;
 	UIView			*uiv_HotspotInfoCardContainer;
+
 	neoHotspotsView *tappedView;
-	float			factsCopy;
 	Company			*selectedCo;
 	NSDictionary	*selectedCoDict;
 	NSArray			*allCompanies;
@@ -49,12 +49,12 @@ enum {
 	NSString		*topname;
 }
 
-@property (nonatomic) NSTimer *myTimer;
-
-@property (nonatomic,strong) UIPopoverController *popOver;
-
 - (IBAction)showPopover:(UIButton *)sender;
 
+
+@property (nonatomic) NSTimer *myTimer;
+
+@property (nonatomic, strong) UIPopoverController *popOver;
 @property (nonatomic, strong) UIView						*uiv_movieContainer;
 @property (nonatomic, strong) UIImageView					*uiiv_bg;
 @property (nonatomic, strong) NSMutableArray				*arr_hotspotsArray;
@@ -73,16 +73,17 @@ enum {
 @property (nonatomic, strong) UIView						*uiv_tapSquare;
 @property (nonatomic, strong) UIButton						*uib_CompanyBtn;
 @property (nonatomic, strong) UILabel						*uil_filmHint;
-@property (nonatomic, strong) UIImageView *hotspotImageView;
+@property (nonatomic, strong) UIImageView                   *hotspotImageView;
 @property (nonatomic, strong) neoHotspotsView				*myHotspots;
 @property (nonatomic, strong) NSMutableArray				*arr_hotspots;
 @property (nonatomic, strong) NSDictionary                  *coDict;
-@property (nonatomic) BOOL isPauseable;
+@property (nonatomic) BOOL      isPauseable;
 
 @end
 
 @implementation buildingViewController
 
+#pragma mark - viewDidLoad
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -102,39 +103,16 @@ enum {
 	
 	[self createBackButton];
 	
+    // breadcrumb of selectors based on int set
 	NSValue* selCommandA = [NSValue valueWithPointer:@selector(reloadBuildingVC)];
 	NSValue* selCommandB = [NSValue valueWithPointer:@selector(reloadHero)];
 	NSValue* selCommandC = [NSValue valueWithPointer:@selector(loadSplitAssets)];
 	NSValue* selCommandD = [NSValue valueWithPointer:@selector(loadSplitAssets)];
-
 	_arr_BreadCrumbOfImages = [NSMutableArray arrayWithObjects:selCommandA, selCommandB, selCommandC, selCommandD, nil ];
 	
+    // when opening the splitview - hide unwanted chrome
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackButton) name:@"hideDetailChrome" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackButton) name:@"unhideDetailChrome" object:nil];
-
-}
-
--(void)initIBTButton
-{
-    if (_uib_ibtBtn) {
-        [_uib_ibtBtn removeFromSuperview];
-    }
-    _uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-	_uib_ibtBtn.frame = CGRectMake(1024-89-16, 16, 89, 56);
-	[_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateNormal];
-	[_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateSelected];
-	[_uib_ibtBtn addTarget: self action:@selector(loadIBT) forControlEvents:UIControlEventTouchUpInside];
-	[self.view addSubview: _uib_ibtBtn];
-}
-
-#pragma mark - IBT
-
-#pragma mark Open Modal
--(void)loadIBT
-{
-    IBTViewController* vc = [IBTViewController new];
-    vc.delegate = self;
-    [self presentViewController:vc animated:YES completion:^{}];
 }
 
 #pragma mark - stills under movie
@@ -262,6 +240,29 @@ enum {
 //    [message show];
 }
 
+#pragma mark - IBT Button
+-(void)initIBTButton
+{
+    if (_uib_ibtBtn) {
+        [_uib_ibtBtn removeFromSuperview];
+    }
+    _uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_ibtBtn.frame = CGRectMake(1024-89-16, 16, 89, 56);
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateNormal];
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateSelected];
+    [_uib_ibtBtn addTarget: self action:@selector(loadIBT) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: _uib_ibtBtn];
+}
+
+#pragma mark Open Modal
+-(void)loadIBT
+{
+    IBTViewController* vc = [IBTViewController new];
+    vc.delegate = self;
+    [self presentViewController:vc animated:YES completion:^{}];
+}
+
+
 #pragma mark - Actions to play path to hero and split hero
 -(void)filmToSplitBuilding
 {
@@ -284,9 +285,6 @@ enum {
 	[self updateStillFrameUnderFilm:movieNamedImg];
 	
 	[self createHotspots];
-#warning trying to get subcat into title for all films
-	//now set in selectrow
-	// [self initTitleBox];
 }
 
 -(void)loadHotspots
@@ -576,7 +574,7 @@ enum {
 	[self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
 }
 
-#pragma mark - PopoverViewControllerDelegate method
+#pragma mark Popover Delegate method
 -(void)selectedRow:(NSInteger)row withText:(NSString*)text
 {
 	NSLog(@"text %@",text);
@@ -663,8 +661,8 @@ enum {
 	}
 }
 
-#pragma mark hotspot tapped
-#pragma mark Delegate Method
+#pragma mark - HOTSPOTS
+#pragma mark hotspot tapped Delegate Method
 
 -(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
@@ -729,6 +727,7 @@ enum {
 		});
 }
 
+#pragma mark transition methods
 -(void)zoomTowardsPointFrom:(UIView*)view
 {
 	//zoom towards the point tapped
@@ -737,7 +736,7 @@ enum {
     
     // needs a delay so it can be APPENDED before moving
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self animateTitleAndHotspot:LabelOffscreen];
+            [self animateTitleAndHotspot:TitleLabelsOffscreen];
     });
 }
 
@@ -745,13 +744,13 @@ enum {
 {
 	[UIView animateWithDuration:0.5 animations:^{
         
-        if (d == LabelOffscreen) {
+        if (d == TitleLabelsOffscreen) {
             topTitle.uil_Company.frame = CGRectMake(-87, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
             topTitle.uil_HotspotTitle.frame = CGRectMake(topTitle.uil_Company.frame.size.width-87, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
             _uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
             [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
             
-        } else if (d == LabelOnscreen) {
+        } else if (d == TitleLabelsOnscreen) {
             topTitle.uil_Company.frame = CGRectMake(0, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
             _uib_backBtn.transform = CGAffineTransformIdentity;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
@@ -760,7 +759,7 @@ enum {
 	} completion:^(BOOL completed) {    } ];
 }
 
-#pragma mark - hotspot actions
+#pragma mark hotspot actions
 -(void)popUpImage:(NSString*)imageName withCloseButton:(BOOL)closeBtn
 {
 	if (_uis_zoomingInfoImg) {
@@ -781,8 +780,8 @@ enum {
 	[_uis_zoomingInfoImg removeFromSuperview];
 }
 
-#pragma mark - ebzooming delegate
--(void)didRemove:(ebZoomingScrollView *)ebZoomingScrollView {
+#pragma mark ebzooming delegate
+-(void)scrollViewDidRemove:(ebZoomingScrollView *)ebZoomingScrollView {
 
     NSLog(@"zoomingScroll.tg = %li", (long)ebZoomingScrollView.tag);
     
@@ -823,23 +822,23 @@ enum {
 		[self unhideChrome];
 	}
 	
-	NSLog(@"didRemove");
+	NSLog(@"scrollViewDidRemove");
 }
 
-#pragma mark - unhide Chrome
+#pragma mark - UTILITIES : General
+
+#pragma mark unhide Chrome
 -(void)unhideChrome
 {
-	[UIView animateWithDuration:0.33 animations:^{
-//		topTitle.uil_Company.frame = CGRectMake(14, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
-//		topTitle.uil_HotspotTitle.frame = CGRectMake(74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
-		_uib_backBtn.transform = CGAffineTransformIdentity;
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
-	} completion:^(BOOL completed) {
-		
-	}];
+    [UIView animateWithDuration:0.33 animations:^{
+        _uib_backBtn.transform = CGAffineTransformIdentity;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
+    } completion:^(BOOL completed) {
+        
+    }];
 }
 
-#pragma mark - Utiltites
+
 #pragma mark Remove Company Logos
 -(void)removeCompanyLogos
 {
@@ -870,7 +869,7 @@ enum {
 	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
 }
 
-#pragma mark - play movie
+#pragma mark - MOVIE
 -(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled belowSubview:(UIView*)belowSubview withOverlay:(NSString*)overlay
 {
 	
@@ -947,7 +946,7 @@ enum {
 		[self beginSequence];
 	}
 	
-	NSString *movieNamed =  [selectedCoDict objectForKey:@"transitionFilm"];
+	//NSString *movieNamed =  [selectedCoDict objectForKey:@"transitionFilm"];
 	NSString *movieNamedImg = [selectedCoDict objectForKey:@"transitionFilmImg"];
 	
 	[self updateStillFrameUnderFilm:movieNamedImg];
@@ -1026,7 +1025,7 @@ enum {
 	[self beginSequence];
 }
 
-#pragma mark - control(s) for movie
+#pragma mark control(s) for movie
 
 -(void)loadControlsLabels
 {
@@ -1084,7 +1083,7 @@ enum {
     NSLog(@"xscale %f",t.tx);
     
     if (t.tx < 0) {
-        [self animateTitleAndHotspot:LabelOnscreen];
+        [self animateTitleAndHotspot:TitleLabelsOnscreen];
     }
     
 	if (_myTimer) {
@@ -1162,20 +1161,7 @@ enum {
 }
 
 //----------------------------------------------------
-#pragma mark - HOTSPOT MODEL
-//----------------------------------------------------
-/*
-	All hotspots need to be cleared or the
-	animation will run all cards
-*/
--(void)clearHotpsotData
-{
-	[arr_HotspotInfoCards removeAllObjects];
-}
-
-
-//----------------------------------------------------
-#pragma mark - start sequences
+#pragma mark - FACT CARDS sequences
 //----------------------------------------------------
 /*
  start all info cards and movie in motion
@@ -1188,7 +1174,7 @@ enum {
 }
 
 //----------------------------------------------------
-#pragma mark - info cards
+#pragma mark info cards
 //----------------------------------------------------
 /*
  create info cards from model
@@ -1228,7 +1214,7 @@ enum {
 	float hs_x = [str_x floatValue];
 	float hs_y = [str_y floatValue];
 	
-	factsCopy = [[facts objectForKey:@"factwidth"] floatValue];
+	float factsCopy = [[facts objectForKey:@"factwidth"] floatValue];
 	
 	for (int i = 0; i < [hotspotText count]; i++) {
 		NSDictionary *box = hotspotText[i];
@@ -1425,7 +1411,7 @@ enum {
 }
 
 //----------------------------------------------------
-#pragma mark - timer
+#pragma mark timer used for card reveals
 //----------------------------------------------------
 /*
  keeps track of number seconds elapsed
@@ -1450,8 +1436,14 @@ enum {
 
 
 //----------------------------------------------------
-#pragma mark - utilties
+#pragma mark fact card utilities
 //----------------------------------------------------
+#pragma mark hotspots : Clear array
+-(void)clearHotpsotData
+{
+    [arr_HotspotInfoCards removeAllObjects];
+}
+
 /*
  calculate height of
  */

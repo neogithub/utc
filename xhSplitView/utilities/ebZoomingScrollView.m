@@ -208,13 +208,13 @@
 
 
 -(void)removeRenderScroll:(id)sender {
-	[self didRemove];
+	[self scrollViewDidRemove];
 }
 
 #pragma mark - Delegate methods 
--(void)didRemove {
+-(void)scrollViewDidRemove {
     // send message the message to the delegate!
-    [delegate didRemove:self];
+    [delegate scrollViewDidRemove:self];
 }
 
 @end
