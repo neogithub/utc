@@ -47,7 +47,6 @@ enum {
 	NSMutableArray	*arr_CompanyLogos;
 	embTitle		*topTitle;
 	NSString		*topname;
-    BOOL            titleOffScreen;
 }
 
 @property (nonatomic) NSTimer *myTimer;
@@ -377,7 +376,9 @@ enum {
 -(void)reloadBuildingVC
 {
 	//NSLog(@"should be tag 0");
+
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
+    [_uib_ibtBtn removeFromSuperview];
 	[_uib_backBtn setTag:0];
 	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
@@ -388,7 +389,8 @@ enum {
 	NSLog(@"should be tag 1");
 
 	[self removeHotspots];
-
+    [_uib_ibtBtn removeFromSuperview];
+    
 	if (_avPlayerLayer) {
         [self closeMovie];
     }
@@ -742,7 +744,6 @@ enum {
 -(void)animateTitleAndHotspot:(NSInteger)d
 {
 	[UIView animateWithDuration:0.5 animations:^{
-//		_uis_zoomingImg.alpha = 0.0;
         
         if (d == LabelOffscreen) {
             topTitle.uil_Company.frame = CGRectMake(-87, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
@@ -750,37 +751,11 @@ enum {
             _uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
             [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
             
-            titleOffScreen = YES;
-            
         } else if (d == LabelOnscreen) {
             topTitle.uil_Company.frame = CGRectMake(0, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
             _uib_backBtn.transform = CGAffineTransformIdentity;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
-            
-            titleOffScreen = NO;
-
         }
-        
-        
-        /*
-        _uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
-        */
-        
-		
-//		if (d == 0) {
-//			topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
-//			topTitle.uil_HotspotTitle.frame = CGRectMake(-40, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
-//			
-//			_uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
-//			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
-//		} else if (d == 1){
-//			topTitle.uil_Company.frame = CGRectMake(74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
-//			topTitle.uil_HotspotTitle.frame = CGRectMake(74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
-//			[[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnRight" object:nil];
-//		}
-		
-		
 		
 	} completion:^(BOOL completed) {    } ];
 }
