@@ -128,14 +128,13 @@ enum {
 	[self.view addSubview: _uib_ibtBtn];
 }
 
-#pragma IBT
+#pragma mark - IBT
 
-#pragma mark search
+#pragma mark Open Modal
 -(void)loadIBT
 {
-    NSLog(@"loadSearch");
     IBTViewController* vc = [IBTViewController new];
-    //vc.delegate = self;
+    vc.delegate = self;
     [self presentViewController:vc animated:YES completion:^{}];
 }
 
@@ -167,7 +166,7 @@ enum {
 	[_uis_zoomingImg.blurView setImage:[UIImage imageNamed:imgName]];
 }
 
-#pragma mark - buttons for splitting view and otis logo
+#pragma mark - buttons for splitting view
 -(void)initSplitOpenBtn
 {
 	// add container
@@ -187,7 +186,6 @@ enum {
 		[self.view addSubview:_uiv_tapSquare];
 	}
 	
-	//[self.view addSubview:uiv_circleContainer];
 	[_uiv_tapSquare addSubview:uiv_tapCircle];
 	
 	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(filmToSplitBuilding)];
@@ -196,6 +194,7 @@ enum {
 	[self pulse:uiv_tapCircle.layer];
 }
 
+#pragma mark - Company Logo Buttons
 -(void)initCompanyLogoBtns
 {
 	_uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -228,21 +227,12 @@ enum {
 		[settButton setTag:i];
 		[settButton setFrame:CGRectMake(hs_x, hs_y, staticWidth, staticHeight)];
 		[settButton setImage:[UIImage imageNamed:[hotspotItem objectForKey:@"background"]] forState:UIControlStateNormal];
-		
-		//TODO: check if company needs popover
-		//[self zoomTowardsPointFrom:sender];
-
-		
-		
 		[settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
 		[arr_CompanyLogos addObject:settButton];
 		[_uis_zoomingImg.blurView addSubview:settButton];
-		//[self pulse:settButton.layer];
 			
-			// add drag listener
-			//[settButton addTarget:self action:@selector(wasDragged:withEvent:)
-			//forControlEvents:UIControlEventTouchDragInside];
-		//}
+        // add drag listener
+        //[settButton addTarget:self action:@selector(wasDragged:withEvent:) forControlEvents:UIControlEventTouchDragInside];
 		
 	}
 #endif
@@ -264,6 +254,13 @@ enum {
         button.center.y + delta_y);
 	
 	//NSLog(@"%@",NSStringFromCGPoint(button.center));
+    
+//    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"New XY"
+//                                                      message:NSStringFromCGRect(button.frame)
+//                                                     delegate:nil
+//                                            cancelButtonTitle:@"OK"
+//                                            otherButtonTitles:nil];
+//    [message show];
 }
 
 #pragma mark - Actions to play path to hero and split hero
@@ -749,7 +746,7 @@ enum {
         
         if (d == LabelOffscreen) {
             topTitle.uil_Company.frame = CGRectMake(-87, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
-            topTitle.uil_HotspotTitle.frame = CGRectMake(-20, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
+            topTitle.uil_HotspotTitle.frame = CGRectMake(topTitle.uil_Company.frame.size.width-87, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
             _uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
             [[NSNotificationCenter defaultCenter] postNotificationName:@"moveSplitBtnLeft" object:nil];
             

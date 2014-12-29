@@ -95,9 +95,6 @@ enum {
 	
 	[_uiv_textBoxContainer addSubview: _uil_HotspotTitle];
 	
-	// resize text container to fit
-	//_uiv_textBoxContainer.frame = CGRectMake(73, 0, hotspotLabelWidth+companyLabelWidth, backButtonHeight);
-	
 	[self animate:_uil_HotspotTitle direction:LabelOnscreen];
 }
 
@@ -112,8 +109,8 @@ enum {
 	
 	UIFont *font = [UIFont fontWithName:@"Helvetica" size:17];
 	CGFloat str_width = [self getWidthFromStringLength:newString andFont:font];
-	//static CGFloat labelPad = 20;
-	hotspotLabelWidth = str_width;
+	static CGFloat labelPad = 20;
+	hotspotLabelWidth = str_width + (labelPad);
 	
 	_uil_HotspotTitle.frame = CGRectMake(companyLabelWidth, 0, hotspotLabelWidth+companyLabelWidth, backButtonActualHeight);
 	
@@ -137,7 +134,6 @@ enum {
 	}
 	
 	[UIView animateWithDuration:0.3/1.5 animations:^{
-		//viewmove.transform = CGAffineTransformTranslate(viewmove.transform, 0, 1*f);
 		viewmove.frame = CGRectMake(viewmove.frame.origin.x, viewmove.frame.origin.y+f, viewmove.frame.size.width, viewmove.frame.size.height);
 	} completion:^(BOOL completed){
 		if (d == LabelOffscreen) {
