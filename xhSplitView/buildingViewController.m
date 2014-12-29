@@ -117,7 +117,10 @@ enum {
 
 -(void)initIBTButton
 {
-	_uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    if (_uib_ibtBtn) {
+        [_uib_ibtBtn removeFromSuperview];
+    }
+    _uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 	_uib_ibtBtn.frame = CGRectMake(1024-89-16, 16, 89, 56);
 	[_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateNormal];
 	[_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateSelected];
@@ -193,7 +196,7 @@ enum {
 	[self pulse:uiv_tapCircle.layer];
 }
 
--(void)initLogoBtn
+-(void)initCompanyLogoBtns
 {
 	_uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 	
@@ -319,7 +322,7 @@ enum {
 	[self updateStillFrameUnderFilm:@"03A Building Cut.png"];
 #endif
 	
-	[self initLogoBtn];
+	[self initCompanyLogoBtns];
     [self initIBTButton];
 	
 	[_uis_zoomingInfoImg removeFromSuperview];
@@ -437,6 +440,7 @@ enum {
     _arr_hotspotsArray = [[NSMutableArray alloc] init];
 	
 	[self loadSingleCompanyHotspots];
+    
 }
 
 // load the hotpots of the company selected
@@ -636,6 +640,8 @@ enum {
 		//The color picker popover is showing. Hide it.
 		[self.popOver dismissPopoverAnimated:YES];
 		self.popOver = nil;
+        
+        [_uib_ibtBtn removeFromSuperview];
 
 	}
 }
