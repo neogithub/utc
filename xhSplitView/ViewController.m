@@ -401,9 +401,20 @@ static CGFloat menuButtonHeights = 51;
     //TODO: pick building from data model
 	//TODO: connect to data instaed of passing hard number
 	//int index = [[[notification userInfo] valueForKey:@"index"] intValue];
+    
+    int pass = [[[notification userInfo] valueForKey:@"buttontag"] intValue];
+    
+    NSLog(@"pass %i",pass);
+    
+    //[self setInitialImage];
+    //[_splitVC addDetailController:_detailView animated:NO];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"loadCompany" object:self];
+    [self openAndCloseMaster];
+    
+    /*
     int pass = [[[notification userInfo] valueForKey:@"buttontag"] intValue];
 	
-	//NSLog(@"pass %i",pass);
+	NSLog(@"pass %i",pass);
 	
 	switch (pass) {
 		case 0:
@@ -430,6 +441,7 @@ static CGFloat menuButtonHeights = 51;
 		default:
 			break;
 	}
+    */
 }
 
 

@@ -437,6 +437,7 @@ enum {
     _arr_hotspotsArray = [[NSMutableArray alloc] init];
 	
 	[self loadSingleCompanyHotspots];
+    
 }
 
 // load the hotpots of the company selected
