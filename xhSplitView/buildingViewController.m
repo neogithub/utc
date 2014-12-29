@@ -327,10 +327,10 @@ enum {
 	[_uib_backBtn setTag:1];
 }
 
-#pragma mark - menu buttons
+#pragma mark - menu button
 -(void)createBackButton
 {
-	NSLog(@"createBackButton AGAIN");
+	NSLog(@"createBackButton");
 	_uib_backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 	_uib_backBtn.frame = CGRectMake(backButtonX, 0.0, 58, backButtonHeight);
 	[_uib_backBtn setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
@@ -338,10 +338,9 @@ enum {
 	[_uib_backBtn addTarget:self action:@selector(performSelectorFromArray) forControlEvents:UIControlEventTouchUpInside];
 	_uib_backBtn.layer.zPosition = MAXFLOAT;
 	[_uib_backBtn setTag:0];
-	//NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
-	
 }
 
+#pragma mark notification methods
 -(void)hideBackButton
 {
 	NSLog(@"hideBackButton");
@@ -358,6 +357,7 @@ enum {
 	[topTitle.uil_Company setHidden:NO];
 }
 
+#pragma mark back button breadcrumb fuction
 -(void)performSelectorFromArray
 {
 	NSLog(@"performSelectorFromArray");
@@ -371,6 +371,7 @@ enum {
 	//NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
 
+#pragma mark handle backbutton being tapped as needed
 -(void)reloadBuildingVC
 {
 	//NSLog(@"should be tag 0");
@@ -380,7 +381,6 @@ enum {
 	[_uib_backBtn setTag:0];
 	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
-
 
 -(void)reloadHero
 {
@@ -467,14 +467,14 @@ enum {
 		[_arr_hotspotsArray addObject:_myHotspots];
 		
         //Get the angle of arrow
-        NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
-        if ([str_angle isEqualToString:@""]) {
-        }
-        else
-        {
-            float hsAngle = [str_angle floatValue];
-            _myHotspots.arwAngle = hsAngle;
-        }
+//        NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
+//        if ([str_angle isEqualToString:@""]) {
+//        }
+//        else
+//        {
+//            float hsAngle = [str_angle floatValue];
+//            _myHotspots.arwAngle = hsAngle;
+//        }
         
         //Get the name of BG img name
         NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
@@ -524,14 +524,14 @@ enum {
 		[_arr_hotspotsArray addObject:_myHotspots];
 		
 		//Get the angle of arrow
-		NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
-		if ([str_angle isEqualToString:@""]) {
-		}
-		else
-		{
-			float hsAngle = [str_angle floatValue];
-			_myHotspots.arwAngle = hsAngle;
-		}
+//		NSString *str_angle = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"angle"]];
+//		if ([str_angle isEqualToString:@""]) {
+//		}
+//		else
+//		{
+//			float hsAngle = [str_angle floatValue];
+//			_myHotspots.arwAngle = hsAngle;
+//		}
 		
 		//Get the name of BG img name
 		NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
@@ -1161,7 +1161,7 @@ enum {
 }
 
 //----------------------------------------------------
-#pragma mark - FACT CARDS sequences
+#pragma mark - FACT CARDS
 //----------------------------------------------------
 /*
  start all info cards and movie in motion
