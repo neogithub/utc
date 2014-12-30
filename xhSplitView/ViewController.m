@@ -16,6 +16,7 @@
 @import MediaPlayer;
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
+#import "UIImage+FlipImage.h"
 
 static NSString * const sampleDesc1 = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt laoreet diam, id suscipit ipsum sagittis a. ";
 
@@ -117,7 +118,7 @@ static CGFloat menuButtonHeights = 51;
 	
 	[_uiiv_initImage addSubview:_uiv_tapSquare];
 	
-	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadMap:)];
+	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadCity:)];
     [_uiv_tapSquare addGestureRecognizer: tapOnImg];
 	
 	[self pulse:_uiv_tapSquare.layer];
@@ -138,7 +139,7 @@ static CGFloat menuButtonHeights = 51;
 }
 
 
--(void)loadMap:(UIGestureRecognizer *)gesture
+-(void)loadCity:(UIGestureRecognizer *)gesture
 {
 #ifdef NEODEMO
 	[self loadMovieNamed:@"00_LOGO_TRANS_HERO_CITY DEMO.mov" isTapToPauseEnabled:NO];
@@ -203,7 +204,7 @@ static CGFloat menuButtonHeights = 51;
 	
 	if (!tapToPauseEnabled) {
 		NSString *imageNameFromMovieName = [NSString stringWithFormat:@"%@.png",[fileName stringByDeletingPathExtension]];
-		UIImage *image = [self flipImage:[UIImage imageNamed:imageNameFromMovieName]];
+		UIImage *image = [UIImage flipImage:[UIImage imageNamed:imageNameFromMovieName]];
 		
 		_avPlayerLayer.backgroundColor = [UIColor colorWithPatternImage:image].CGColor;
 	} else {
@@ -227,17 +228,6 @@ static CGFloat menuButtonHeights = 51;
 											   object:[_avPlayer currentItem]];
 	
 }
-
-- (UIImage *)flipImage:(UIImage *)image
-{
-    UIGraphicsBeginImageContext(image.size);
-    CGContextDrawImage(UIGraphicsGetCurrentContext(),CGRectMake(0.,0., image.size.width, image.size.height),image.CGImage);
-    UIImage *i = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return i;
-}
-
-
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
     [self closeMovie];

@@ -22,6 +22,7 @@
 #import "LibraryAPI.h"
 #import "Company.h"
 #import "embTitle.h"
+#import "UIImage+FlipImage.h"
 
 static CGFloat backButtonHeight = 51;
 static CGFloat backButtonWidth	= 58;
@@ -900,7 +901,7 @@ enum {
 	
 	if (!tapToPauseEnabled) {
 		NSString *imageNameFromMovieName = [NSString stringWithFormat:@"%@.png",[fileName stringByDeletingPathExtension]];
-		UIImage *image = [self flipImage:[UIImage imageNamed:imageNameFromMovieName]];
+		UIImage *image = [UIImage flipImage:[UIImage imageNamed:imageNameFromMovieName]];
 		
 		_avPlayerLayer.backgroundColor = [UIColor colorWithPatternImage:image].CGColor;
 	} else {
@@ -915,7 +916,7 @@ enum {
 	
 		if (overlay) {
 			NSString *imageNameName = overlay;
-			UIImage *imagee = [self flipImage:[UIImage imageNamed:imageNameName]];
+			UIImage *imagee = [UIImage flipImage:[UIImage imageNamed:imageNameName]];
 			UIImageView *imgv = [[UIImageView alloc ] initWithImage:imagee];
 			imgv.frame = self.view.bounds;
 			[_uiv_movieContainer addSubview:imgv];
@@ -961,15 +962,6 @@ enum {
 	doubleTapMovie.numberOfTapsRequired = 2;
 	[self.view addGestureRecognizer:doubleTapMovie];
 
-}
-
-- (UIImage *)flipImage:(UIImage *)image
-{
-    UIGraphicsBeginImageContext(image.size);
-    CGContextDrawImage(UIGraphicsGetCurrentContext(),CGRectMake(0.,0., image.size.width, image.size.height),image.CGImage);
-    UIImage *i = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return i;
 }
 
 -(void)addMovieGestures

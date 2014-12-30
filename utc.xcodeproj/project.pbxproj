@@ -284,6 +284,8 @@
 		82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */; };
 		8834E2011A4F0FCE00204D81 /* IBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */; };
 		8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2001A4F0FCE00204D81 /* IBTViewController.xib */; };
+		8834E21A1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */; };
+		8834E21B1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -461,6 +463,8 @@
 		8834E1FE1A4F0FCE00204D81 /* IBTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTViewController.h; sourceTree = "<group>"; };
 		8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTViewController.m; sourceTree = "<group>"; };
 		8834E2001A4F0FCE00204D81 /* IBTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBTViewController.xib; sourceTree = "<group>"; };
+		8834E2181A52E20E00204D81 /* UIImage+FlipImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FlipImage.h"; sourceTree = "<group>"; };
+		8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FlipImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -730,6 +734,8 @@
 				824F14EC19CB59CA00628F01 /* titleTableViewCell.h */,
 				824F14ED19CB59CA00628F01 /* titleTableViewCell.m */,
 				824F14EE19CB59CA00628F01 /* titleTableViewCell.xib */,
+				8834E2181A52E20E00204D81 /* UIImage+FlipImage.h */,
+				8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -1159,6 +1165,7 @@
 				20E546D21A2DFEF40073B2CF /* ebZoomingScrollView.m in Sources */,
 				20E546D31A2DFEF40073B2CF /* main.m in Sources */,
 				20E546D41A2DFEF40073B2CF /* detailViewController.m in Sources */,
+				8834E21B1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */,
 				20E546D51A2DFEF40073B2CF /* UIScrollView+ZoomToPoint.m in Sources */,
 				20E546D61A2DFEF40073B2CF /* xhSplitViewController.m in Sources */,
 				20E546D71A2DFEF40073B2CF /* neoHotspotsView.m in Sources */,
@@ -1177,6 +1184,7 @@
 				82A66AD819B792BD00C8E12A /* buildingViewController.m in Sources */,
 				20BA88BF1A378EEF00705945 /* embUiViewCard.m in Sources */,
 				20A39EAB19C32F8800C71430 /* GHWalkThroughPageCell.m in Sources */,
+				8834E21A1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */,
 				20D0B00419BF4C280096021D /* City.m in Sources */,
 				82A66AD719B792BD00C8E12A /* masterViewController.m in Sources */,
 				82A66AAC19B7926B00C8E12A /* AppDelegate.m in Sources */,
