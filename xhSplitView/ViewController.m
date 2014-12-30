@@ -118,7 +118,7 @@ static CGFloat menuButtonHeights = 51;
 	
 	[_uiiv_initImage addSubview:_uiv_tapSquare];
 	
-	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadCity:)];
+	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadLogoToCityTransition:)];
     [_uiv_tapSquare addGestureRecognizer: tapOnImg];
 	
 	[self pulse:_uiv_tapSquare.layer];
@@ -139,7 +139,7 @@ static CGFloat menuButtonHeights = 51;
 }
 
 
--(void)loadCity:(UIGestureRecognizer *)gesture
+-(void)loadLogoToCityTransition:(UIGestureRecognizer *)gesture
 {
 #ifdef NEODEMO
 	[self loadMovieNamed:@"00_LOGO_TRANS_HERO_CITY DEMO.mov" isTapToPauseEnabled:NO];
@@ -242,15 +242,13 @@ static CGFloat menuButtonHeights = 51;
 
 -(void)closeMovie
 {
-	
 	[_avPlayerLayer removeFromSuperlayer];
 	_avPlayerLayer = nil;
 	[_uiv_movieContainer removeFromSuperview];
 	_uiv_movieContainer=nil;
 }
 
-
-
+#pragma mark - menu button movement
 -(void)moveSplitBtnLeft
 {
 	_uib_splitCtrl.transform = CGAffineTransformMakeTranslation(-menuButtonHeights, 0);
@@ -261,6 +259,7 @@ static CGFloat menuButtonHeights = 51;
 	_uib_splitCtrl.transform = CGAffineTransformIdentity;
 }
 
+#pragma mark - Help
 -(void)showHelp
 {
 	_ghView = [[GHWalkThroughView alloc] initWithFrame:self.view.bounds];
@@ -285,7 +284,7 @@ static CGFloat menuButtonHeights = 51;
 
 }
 
-#pragma mark - GHDataSource
+#pragma mark GHDataSource
 
 -(NSInteger) numberOfPages
 {
