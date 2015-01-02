@@ -326,6 +326,28 @@
 		8834E25A1A56E32D00204D81 /* ibt_otis.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2431A56E32D00204D81 /* ibt_otis.png */; };
 		8834E25B1A56E32D00204D81 /* ibt_otis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2441A56E32D00204D81 /* ibt_otis@2x.png */; };
 		8834E25C1A56E32D00204D81 /* ibt_otis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2441A56E32D00204D81 /* ibt_otis@2x.png */; };
+		8834E25F1A56F0D800204D81 /* embHotSpotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E25E1A56F0D800204D81 /* embHotSpotViewController.m */; };
+		8834E2601A56F0D800204D81 /* embHotSpotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E25E1A56F0D800204D81 /* embHotSpotViewController.m */; };
+		8834E2651A57074200204D81 /* logo_advantecibt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2611A57074200204D81 /* logo_advantecibt.png */; };
+		8834E2661A57074200204D81 /* logo_advantecibt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2611A57074200204D81 /* logo_advantecibt.png */; };
+		8834E2671A57074200204D81 /* logo_advantecibt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2621A57074200204D81 /* logo_advantecibt@2x.png */; };
+		8834E2681A57074200204D81 /* logo_advantecibt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2621A57074200204D81 /* logo_advantecibt@2x.png */; };
+		8834E2691A57074200204D81 /* logo_sustainibt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2631A57074200204D81 /* logo_sustainibt.png */; };
+		8834E26A1A57074200204D81 /* logo_sustainibt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2631A57074200204D81 /* logo_sustainibt.png */; };
+		8834E26B1A57074200204D81 /* logo_sustainibt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2641A57074200204D81 /* logo_sustainibt@2x.png */; };
+		8834E26C1A57074200204D81 /* logo_sustainibt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2641A57074200204D81 /* logo_sustainibt@2x.png */; };
+		8834E2731A57221B00204D81 /* menu_advantec.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E26D1A57221B00204D81 /* menu_advantec.png */; };
+		8834E2741A57221B00204D81 /* menu_advantec.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E26D1A57221B00204D81 /* menu_advantec.png */; };
+		8834E2751A57221B00204D81 /* menu_sustainability.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E26E1A57221B00204D81 /* menu_sustainability.png */; };
+		8834E2761A57221B00204D81 /* menu_sustainability.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E26E1A57221B00204D81 /* menu_sustainability.png */; };
+		8834E2771A57221B00204D81 /* menu_utc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E26F1A57221B00204D81 /* menu_utc.png */; };
+		8834E2781A57221B00204D81 /* menu_utc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E26F1A57221B00204D81 /* menu_utc.png */; };
+		8834E2791A57221B00204D81 /* menu_advantec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2701A57221B00204D81 /* menu_advantec@2x.png */; };
+		8834E27A1A57221B00204D81 /* menu_advantec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2701A57221B00204D81 /* menu_advantec@2x.png */; };
+		8834E27B1A57221B00204D81 /* menu_sustainability@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2711A57221B00204D81 /* menu_sustainability@2x.png */; };
+		8834E27C1A57221B00204D81 /* menu_sustainability@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2711A57221B00204D81 /* menu_sustainability@2x.png */; };
+		8834E27D1A57221B00204D81 /* menu_utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2721A57221B00204D81 /* menu_utc@2x.png */; };
+		8834E27E1A57221B00204D81 /* menu_utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2721A57221B00204D81 /* menu_utc@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -526,6 +548,18 @@
 		8834E2421A56E32D00204D81 /* ibt_lenel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ibt_lenel@2x.png"; sourceTree = "<group>"; };
 		8834E2431A56E32D00204D81 /* ibt_otis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibt_otis.png; sourceTree = "<group>"; };
 		8834E2441A56E32D00204D81 /* ibt_otis@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ibt_otis@2x.png"; sourceTree = "<group>"; };
+		8834E25D1A56F0D800204D81 /* embHotSpotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = embHotSpotViewController.h; sourceTree = "<group>"; };
+		8834E25E1A56F0D800204D81 /* embHotSpotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = embHotSpotViewController.m; sourceTree = "<group>"; };
+		8834E2611A57074200204D81 /* logo_advantecibt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_advantecibt.png; sourceTree = "<group>"; };
+		8834E2621A57074200204D81 /* logo_advantecibt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_advantecibt@2x.png"; sourceTree = "<group>"; };
+		8834E2631A57074200204D81 /* logo_sustainibt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_sustainibt.png; sourceTree = "<group>"; };
+		8834E2641A57074200204D81 /* logo_sustainibt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_sustainibt@2x.png"; sourceTree = "<group>"; };
+		8834E26D1A57221B00204D81 /* menu_advantec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_advantec.png; sourceTree = "<group>"; };
+		8834E26E1A57221B00204D81 /* menu_sustainability.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_sustainability.png; sourceTree = "<group>"; };
+		8834E26F1A57221B00204D81 /* menu_utc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_utc.png; sourceTree = "<group>"; };
+		8834E2701A57221B00204D81 /* menu_advantec@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_advantec@2x.png"; sourceTree = "<group>"; };
+		8834E2711A57221B00204D81 /* menu_sustainability@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_sustainability@2x.png"; sourceTree = "<group>"; };
+		8834E2721A57221B00204D81 /* menu_utc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_utc@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -726,6 +760,8 @@
 				82A66AD119B792BD00C8E12A /* detailViewController.m */,
 				82A66AD419B792BD00C8E12A /* buildingViewController.h */,
 				82A66AD519B792BD00C8E12A /* buildingViewController.m */,
+				8834E25D1A56F0D800204D81 /* embHotSpotViewController.h */,
+				8834E25E1A56F0D800204D81 /* embHotSpotViewController.m */,
 				8834E1FE1A4F0FCE00204D81 /* IBTViewController.h */,
 				8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */,
 				8834E2001A4F0FCE00204D81 /* IBTViewController.xib */,
@@ -816,6 +852,12 @@
 		82A66AE319B7942900C8E12A /* grfx */ = {
 			isa = PBXGroup;
 			children = (
+				8834E26D1A57221B00204D81 /* menu_advantec.png */,
+				8834E26E1A57221B00204D81 /* menu_sustainability.png */,
+				8834E26F1A57221B00204D81 /* menu_utc.png */,
+				8834E2701A57221B00204D81 /* menu_advantec@2x.png */,
+				8834E2711A57221B00204D81 /* menu_sustainability@2x.png */,
+				8834E2721A57221B00204D81 /* menu_utc@2x.png */,
 				8834E2361A532D3F00204D81 /* grfx_ibt_arrow.jpg */,
 				8834E21C1A531E8300204D81 /* grfx_ibt_close.png */,
 				8834E21D1A531E8300204D81 /* grfx_ibt_header.png */,
@@ -867,6 +909,10 @@
 				20BF48CF1A3B501D009645DC /* logo_taylor@2x.png */,
 				20192C971A49C97C00969C85 /* logo_utcibt.png */,
 				20192C981A49C97C00969C85 /* logo_utcibt@2x.png */,
+				8834E2611A57074200204D81 /* logo_advantecibt.png */,
+				8834E2621A57074200204D81 /* logo_advantecibt@2x.png */,
+				8834E2631A57074200204D81 /* logo_sustainibt.png */,
+				8834E2641A57074200204D81 /* logo_sustainibt@2x.png */,
 				20BA88C11A37941900705945 /* text_bg@2x.png */,
 				20BA88C21A37941900705945 /* text_bg.png */,
 				20BA88C31A37941900705945 /* card_mask.png */,
@@ -998,6 +1044,7 @@
 				20BF49171A3F1C82009645DC /* logo_interlogix@2x.png in Resources */,
 				20E546E21A2DFEF40073B2CF /* menu header.png in Resources */,
 				20E546E31A2DFEF40073B2CF /* icon back.png in Resources */,
+				8834E2741A57221B00204D81 /* menu_advantec.png in Resources */,
 				20BF490F1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				20E546E51A2DFEF40073B2CF /* bg_06@2x.jpg in Resources */,
 				20BF48D11A3B501D009645DC /* logo_advantec.png in Resources */,
@@ -1009,6 +1056,7 @@
 				20BF49111A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
 				20192C911A48729000969C85 /* icon marker center@2x.png in Resources */,
 				20E546EA1A2DFEF40073B2CF /* PopoverViewController.xib in Resources */,
+				8834E27E1A57221B00204D81 /* menu_utc@2x.png in Resources */,
 				20E546EB1A2DFEF40073B2CF /* icon marker left.png in Resources */,
 				20E546EC1A2DFEF40073B2CF /* bg_05@2x.jpg in Resources */,
 				20BF48DD1A3B501D009645DC /* logo_edwards.png in Resources */,
@@ -1025,14 +1073,19 @@
 				20E547461A2E13830073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO.png in Resources */,
 				20BF48F11A3B501D009645DC /* logo_onity.png in Resources */,
 				8834E2461A56E32D00204D81 /* ibt_automatedlogic.png in Resources */,
+				8834E26C1A57074200204D81 /* logo_sustainibt@2x.png in Resources */,
+				8834E27A1A57221B00204D81 /* menu_advantec@2x.png in Resources */,
 				20192C8F1A48729000969C85 /* icon marker center right@2x.png in Resources */,
 				20BF48D51A3B501D009645DC /* logo_automated.png in Resources */,
 				20E546F91A2DFEF40073B2CF /* panelTableViewCell.xib in Resources */,
+				8834E2681A57074200204D81 /* logo_advantecibt@2x.png in Resources */,
 				20E546FA1A2DFEF40073B2CF /* 02_TRANS_BLDG_UNBUILD.png in Resources */,
+				8834E26A1A57074200204D81 /* logo_sustainibt.png in Resources */,
 				20E546FB1A2DFEF40073B2CF /* 01_HERO_CITY.png in Resources */,
 				20E546FD1A2DFEF40073B2CF /* title2@2x.png in Resources */,
 				20192C9C1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
 				20E546FE1A2DFEF40073B2CF /* titleTableViewCell.xib in Resources */,
+				8834E2781A57221B00204D81 /* menu_utc.png in Resources */,
 				20BF48D91A3B501D009645DC /* logo_carrier.png in Resources */,
 				20BF48D31A3B501D009645DC /* logo_advantec@2x.png in Resources */,
 				8834E2541A56E32D00204D81 /* ibt_interlogix@2x.png in Resources */,
@@ -1082,6 +1135,7 @@
 				20E547201A2DFEF40073B2CF /* bg_03@2x.jpg in Resources */,
 				20E547211A2DFEF40073B2CF /* icon marker right@2x.png in Resources */,
 				20E547221A2DFEF40073B2CF /* bg_02@2x.jpg in Resources */,
+				8834E27C1A57221B00204D81 /* menu_sustainability@2x.png in Resources */,
 				20E547231A2DFEF40073B2CF /* swipe-to-reveal.png in Resources */,
 				20E547241A2DFEF40073B2CF /* icon back@2x.png in Resources */,
 				20BF48DB1A3B501D009645DC /* logo_carrier@2x.png in Resources */,
@@ -1103,11 +1157,13 @@
 				20E5472C1A2DFEF40073B2CF /* 01_TRANS_CITY_TO_BLDG.png in Resources */,
 				8834E2291A531E8300204D81 /* grfx_ibt_close@2x.png in Resources */,
 				20BF48F31A3B501D009645DC /* logo_onity@2x.png in Resources */,
+				8834E2761A57221B00204D81 /* menu_sustainability.png in Resources */,
 				20E5474A1A2E14240073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO.mov in Resources */,
 				20E5472D1A2DFEF40073B2CF /* Main.storyboard in Resources */,
 				20E5472E1A2DFEF40073B2CF /* 01_TRANS_CITY_TO_BLDG.mov in Resources */,
 				8834E22B1A531E8300204D81 /* grfx_ibt_header@2x.png in Resources */,
 				20BF48F51A3B501D009645DC /* logo_otis.png in Resources */,
+				8834E2661A57074200204D81 /* logo_advantecibt.png in Resources */,
 				20E5472F1A2DFEF40073B2CF /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				20E547301A2DFEF40073B2CF /* grfx_cellBG.jpg in Resources */,
 				20BF48EF1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
@@ -1127,12 +1183,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				206063E019D521E50045163F /* 02_TRANS_BLDG_UNBUILD.mov in Resources */,
+				8834E2791A57221B00204D81 /* menu_advantec@2x.png in Resources */,
 				20BF48EE1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
 				20192C991A49C97C00969C85 /* logo_utcibt.png in Resources */,
 				20BF48D41A3B501D009645DC /* logo_automated.png in Resources */,
 				20BF49141A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				20A95A5619CBB82800132F7E /* icon main menu.png in Resources */,
+				8834E2651A57074200204D81 /* logo_advantecibt.png in Resources */,
 				20A39EAA19C32F8800C71430 /* bg_05.jpg in Resources */,
+				8834E2691A57074200204D81 /* logo_sustainibt.png in Resources */,
 				20BF48DA1A3B501D009645DC /* logo_carrier@2x.png in Resources */,
 				20192C781A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */,
 				20A95A5019CBB82800132F7E /* icon marker right.png in Resources */,
@@ -1151,11 +1210,13 @@
 				20192C751A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG in Resources */,
 				8834E2241A531E8300204D81 /* grfx_ibt_header.png in Resources */,
 				20A95A5E19CBC1AA00132F7E /* icon marker left.png in Resources */,
+				8834E27D1A57221B00204D81 /* menu_utc@2x.png in Resources */,
 				20A39EBC19C3351C00C71430 /* bg_05@2x.jpg in Resources */,
 				20BF48EC1A3B501D009645DC /* logo_noresco.png in Resources */,
 				209AEFB419D4947B0074A3EA /* 03A Building Cut.png in Resources */,
 				20BF48E41A3B501D009645DC /* logo_lenel.png in Resources */,
 				20A39EA619C32F8800C71430 /* bg_01.jpg in Resources */,
+				8834E2731A57221B00204D81 /* menu_advantec.png in Resources */,
 				8834E2511A56E32D00204D81 /* ibt_interlogix.png in Resources */,
 				2050EAB51A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG in Resources */,
 				20BA88C61A37941900705945 /* text_bg.png in Resources */,
@@ -1167,6 +1228,7 @@
 				824F14DE19CB360300628F01 /* grfx_cellBG@2x.jpg in Resources */,
 				20BF48FE1A3B501D009645DC /* logo_taylor@2x.png in Resources */,
 				20BF49161A3F1C82009645DC /* logo_interlogix@2x.png in Resources */,
+				8834E26B1A57074200204D81 /* logo_sustainibt@2x.png in Resources */,
 				20BF49101A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
 				20BF48F61A3B501D009645DC /* logo_otis@2x.png in Resources */,
 				20BF490A1A3B84ED009645DC /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov in Resources */,
@@ -1217,6 +1279,7 @@
 				20A39EBF19C3351C00C71430 /* bg_02@2x.jpg in Resources */,
 				20192C901A48729000969C85 /* icon marker center@2x.png in Resources */,
 				20A95A5B19CBB89E00132F7E /* swipe-to-reveal.png in Resources */,
+				8834E2751A57221B00204D81 /* menu_sustainability.png in Resources */,
 				20A95A5519CBB82800132F7E /* icon back@2x.png in Resources */,
 				20BF48E81A3B501D009645DC /* logo_marioff.png in Resources */,
 				8834E2591A56E32D00204D81 /* ibt_otis.png in Resources */,
@@ -1240,9 +1303,11 @@
 				20192C8E1A48729000969C85 /* icon marker center right@2x.png in Resources */,
 				824F14DD19CB360300628F01 /* grfx_cellBG.jpg in Resources */,
 				20A39EC419C33C9100C71430 /* grfx_helpBtn@2x.png in Resources */,
+				8834E27B1A57221B00204D81 /* menu_sustainability@2x.png in Resources */,
 				20BF48FA1A3B501D009645DC /* logo_sustain@2x.png in Resources */,
 				8834E24D1A56E32D00204D81 /* ibt_edwards.png in Resources */,
 				20BF48F81A3B501D009645DC /* logo_sustain.png in Resources */,
+				8834E2671A57074200204D81 /* logo_advantecibt@2x.png in Resources */,
 				209AEFA719D47C410074A3EA /* 00_LOGO_TRANS_HERO_CITY.mov in Resources */,
 				20BF48F21A3B501D009645DC /* logo_onity@2x.png in Resources */,
 				20BA88C81A37941900705945 /* card_mask.png in Resources */,
@@ -1255,6 +1320,7 @@
 				20BF48DC1A3B501D009645DC /* logo_edwards.png in Resources */,
 				20BF48FC1A3B501D009645DC /* logo_taylor.png in Resources */,
 				20A39EB219C32F8800C71430 /* title5@2x.png in Resources */,
+				8834E2771A57221B00204D81 /* menu_utc.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1284,6 +1350,7 @@
 				20BA88BC1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */,
 				20BF491B1A3F23BE009645DC /* embTitle.m in Sources */,
 				20E546D21A2DFEF40073B2CF /* ebZoomingScrollView.m in Sources */,
+				8834E2601A56F0D800204D81 /* embHotSpotViewController.m in Sources */,
 				20E546D31A2DFEF40073B2CF /* main.m in Sources */,
 				20E546D41A2DFEF40073B2CF /* detailViewController.m in Sources */,
 				8834E21B1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */,
@@ -1317,6 +1384,7 @@
 				20BA88BB1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */,
 				20BF491A1A3F23BE009645DC /* embTitle.m in Sources */,
 				82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */,
+				8834E25F1A56F0D800204D81 /* embHotSpotViewController.m in Sources */,
 				82A66AA819B7926B00C8E12A /* main.m in Sources */,
 				82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */,
 				20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */,

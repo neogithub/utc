@@ -57,7 +57,6 @@
 	return [persistencyManager getSelectedCompanyData];
 }
 
-
 -(Company*)currentCompany
 {
 	return [persistencyManager selectedCompany];

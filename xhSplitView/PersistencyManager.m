@@ -60,6 +60,7 @@
 	_selectedCompany = [[Company alloc] initWithTitle:[data objectForKey:@"fileName"]
 												 logo:[data objectForKey:@"background"]
 										   categories:[data objectForKey:@"categories"]
+                                                coibt:[data objectForKey:@"ibt"]
 											 hotspots:[data objectForKey:@"hotspots"]
 												facts:[data objectForKey:@"type"]
 											 infoName:[data objectForKey:@"infoName"]

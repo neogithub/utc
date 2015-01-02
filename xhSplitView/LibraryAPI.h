@@ -18,7 +18,6 @@
 - (NSMutableArray*)getCompanyNames;
 - (NSArray*)getSelectedCompanyNamed:(NSString*)name;
 - (Company*)getSelectedCompanyData;
-
 -(Company*)currentCompany;
 
 @end

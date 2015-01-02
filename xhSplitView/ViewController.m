@@ -55,6 +55,11 @@ static CGFloat menuButtonHeights = 51;
 @property (nonatomic, strong) UIView*							uiv_movieContainer;
 @end
 
+enum MenuVisibilityType : NSUInteger {
+    MenuVisibilityTypeOnscreen = 1,
+    MenuVisibilityTypeOffscreen = 2,
+};
+
 @implementation ViewController
 - (BOOL)prefersStatusBarHidden {
     return YES;
@@ -328,7 +333,7 @@ static CGFloat menuButtonHeights = 51;
     [self presentViewController:vc animated:YES completion:^{}];
     
     //TODO:fix open close side menu
-   // [self toggleMasterVisibility];
+    [self toggleMasterVisibility:MenuVisibilityTypeOffscreen];
 }
 
 -(void)initSplitVC
@@ -346,7 +351,7 @@ static CGFloat menuButtonHeights = 51;
     _uib_splitCtrl.frame = CGRectMake(0.0, 0.0, menuButtonHeights, menuButtonHeights);
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateNormal];
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateSelected];
-    [_uib_splitCtrl addTarget: self action:@selector(toggleMasterVisibility) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_splitCtrl addTarget: self action:@selector(toggleMasterVisibility:) forControlEvents:UIControlEventTouchUpInside];
     [self.view insertSubview: _uib_splitCtrl aboveSubview:_splitVC.view];
 }
 
@@ -362,11 +367,11 @@ static CGFloat menuButtonHeights = 51;
 
 
 
--(void)toggleMasterVisibility
+-(void)toggleMasterVisibility:(NSInteger)visibility
 {
-    _uib_splitCtrl.selected = !_uib_splitCtrl.selected;
+    NSLog(@"%ld",(long)visibility);
     
-    if (_uib_splitCtrl.selected) {
+    if ((visibility == MenuVisibilityTypeOnscreen) || (_uib_splitCtrl.selected == NO)) {
         [_splitVC showPanel];
         [UIView animateWithDuration:0.33 animations:^{
             _uib_splitCtrl.transform = CGAffineTransformMakeTranslation(180, 0.0);
@@ -379,6 +384,9 @@ static CGFloat menuButtonHeights = 51;
     else {
         [self closeMaster];
     }
+    
+    _uib_splitCtrl.selected = !_uib_splitCtrl.selected;
+
 }
 
 -(void)closeMaster
@@ -409,19 +417,19 @@ static CGFloat menuButtonHeights = 51;
 			[self setInitialImage];
 			[_splitVC addDetailController:_detailView animated:NO];
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadBuilding" object:nil];
-			[self toggleMasterVisibility];
+            [self toggleMasterVisibility:MenuVisibilityTypeOffscreen];
 
 			break;
 			
 		case 1:
 			[_splitVC addDetailController:_detailView animated:NO];
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadBuilding" object:nil];
-			[self toggleMasterVisibility];
+            [self toggleMasterVisibility:MenuVisibilityTypeOffscreen];
 			break;
 			
 		case 2:
 			
-			[self toggleMasterVisibility];
+            [self toggleMasterVisibility:MenuVisibilityTypeOffscreen];
 
 			break;
 			

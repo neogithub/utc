@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Neoscape. All rights reserved.
 //
 
+#define kshowNSLogBOOL NO
+
 #import "embTitle.h"
 
 static CGFloat backButtonHeight = 51;
-static CGFloat backButtonWidth	= 58;
-static CGFloat backButtonX		= 36;
 static CGFloat backButtonActualHeight = 44;
 
 enum {
@@ -20,27 +20,28 @@ enum {
 
 @implementation embTitle
 
-#pragma mark - Info Labels
-#pragma mark init top left text box
+#pragma mark - Init Company and Hotspot Labels
 
-
--(id)initWithFrame:(CGRect)frame withText:(NSString*)text
+-(id)initWithFrame:(CGRect)frame withText:(NSString*)text startX:(CGFloat)startx width:(CGFloat)widthx
 {
-
 	self = [super initWithFrame:frame];
 	if (self) {
 		_uiv_textBoxContainer = [[UIView alloc] initWithFrame:CGRectZero];
 		[self addSubview:_uiv_textBoxContainer];
 		_uiv_textBoxContainer.layer.zPosition = MAXFLOAT;
-		[self setCompanyTitle:text];
+        _backButtonX = startx;
+        _backButtonWidth = widthx;
+        [self setCompanyTitle:text];
+
 	}
 	return self;
-
 }
+
+#pragma mark - add titles
 
 -(void)setCompanyTitle:(NSString *)year
 {
-	NSLog(@"setCompanyTitle");
+	if (kshowNSLogBOOL) NSLog(@"setCompanyTitle");
 
 	[self removeCompanyTitle];
 	
@@ -60,21 +61,17 @@ enum {
 	[_uil_Company.layer setBorderWidth:1.0];
 	
 	[_uiv_textBoxContainer addSubview: _uil_Company];
-	
+
 	// resize text container to fit
-	_uiv_textBoxContainer.frame = CGRectMake(backButtonX+backButtonWidth-7, 0, companyLabelWidth, backButtonHeight);
+	_uiv_textBoxContainer.frame = CGRectMake(_backButtonX+_backButtonWidth-7, 0, companyLabelWidth, backButtonHeight);
 	
-	[self animate:_uil_Company direction:LabelOnscreen];
+	[self animateView:_uil_Company direction:LabelOnscreen];
 }
 
--(void)removeCompanyTitle
-{
-	[self animate:_uil_Company direction:LabelOffscreen];
-}
 
 -(void)setHotSpotTitle:(NSString *)string
 {
-	NSLog(@"setHotSpotTitle");
+	if (kshowNSLogBOOL) NSLog(@"setHotSpotTitle");
 
 	[self removeHotspotTitle];
 	
@@ -95,13 +92,14 @@ enum {
 	
 	[_uiv_textBoxContainer addSubview: _uil_HotspotTitle];
 	
-	[self animate:_uil_HotspotTitle direction:LabelOnscreen];
+	[self animateView:_uil_HotspotTitle direction:LabelOnscreen];
 }
 
+#pragma mark - append hotspot title
 
 -(void)appendHotSpotTitle:(NSString *)string
 {
-	NSLog(@"appendHotSpotTitle");
+	if (kshowNSLogBOOL) NSLog(@"appendHotSpotTitle");
 	_appendString = _uil_HotspotTitle.text;
 	NSString *aappendString = [NSString stringWithFormat:@"   |   %@", string];
 	
@@ -115,16 +113,24 @@ enum {
 	_uil_HotspotTitle.frame = CGRectMake(companyLabelWidth, 0, hotspotLabelWidth+companyLabelWidth, backButtonActualHeight);
 	
 	_uil_HotspotTitle.text = newString;
-	NSLog(@"%@",_uil_HotspotTitle.text);
+	if (kshowNSLogBOOL) NSLog(@"%@",_uil_HotspotTitle.text);
+}
 
+#pragma mark - remove titles
+
+-(void)removeCompanyTitle
+{
+    [self animateView:_uil_Company direction:LabelOffscreen];
 }
 
 -(void)removeHotspotTitle
 {
-	[self animate:_uil_HotspotTitle direction:LabelOffscreen];
+	[self animateView:_uil_HotspotTitle direction:LabelOffscreen];
 }
 
--(void)animate:(UIView*)viewmove direction:(NSInteger)d
+#pragma mark - animate titles
+
+-(void)animateView:(UIView*)viewmove direction:(NSInteger)d
 {
 	int f = 0;
 	if (d == LabelOffscreen) {
@@ -148,7 +154,7 @@ enum {
 	UIFont *font = stringfont;
 	NSDictionary *attributes1 = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
 	CGFloat str_width = [[[NSAttributedString alloc] initWithString:string attributes:attributes1] size].width;
-	// NSLog(@"The string width is %f", str_width);
+	if (kshowNSLogBOOL) NSLog(@"The string width is %f", str_width);
 	return str_width;
 }
 

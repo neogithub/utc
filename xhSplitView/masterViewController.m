@@ -12,21 +12,27 @@
 #import "Company.h"
 #import "IBTViewController.h"
 #import "buildingViewController.h"
+#import "embHotSpotViewController.h"
 
 @interface masterViewController () <IBTViewControllerDelegate>
 {
 	int selectedRow;
 	UIButton * settButton;
 	
-	NSArray *allCompanies;
+//	NSArray *allCompanies;
 	NSDictionary *currentCompanyData;
 	int currentCompanyIndex;
+    Company *selectedCo;
 }
 
 @property (nonatomic, strong) NSMutableArray                *arr_companies;
 @property (nonatomic, strong) UIButton						*uib_ibtBtn;
+@property (nonatomic, strong) UIButton						*uib_sustainBtn;
+@property (nonatomic, strong) UIButton						*uib_advante3cBtn;
 
 @end
+
+static CGFloat yHeight = 315;
 
 @implementation masterViewController
 @synthesize tableView;
@@ -81,12 +87,16 @@
     self.view.backgroundColor = [UIColor blackColor];
     
     [self initIBTButton];
-	
+    [self initSustainButton];
+    [self initAdvante3cButton];
+
 	currentCompanyIndex = 0;
     selectedRow = -1;
+    
+    [[LibraryAPI sharedInstance] getCompanies];
  
 //	//2 get all companies data
-	allCompanies = [[LibraryAPI sharedInstance] getCompanies];
+	//allCompanies = [[LibraryAPI sharedInstance] getCompanies];
 //	
 //	//3 get just the company names
 //	_arr_companies = [[LibraryAPI sharedInstance] getCompanyNames];
@@ -100,6 +110,58 @@
     [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
+#pragma mark - Sustain Button
+-(void)initAdvante3cButton
+{
+    if (_uib_advante3cBtn) {
+        [_uib_advante3cBtn removeFromSuperview];
+    }
+    _uib_advante3cBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_advante3cBtn.frame = CGRectMake(0, yHeight, 199, 44);
+    _uib_advante3cBtn.tag = 0;
+    [_uib_advante3cBtn setImage: [UIImage imageNamed:@"menu_advantec.png"] forState:UIControlStateNormal];
+    [_uib_advante3cBtn setImage: [UIImage imageNamed:@"menu_advantec.png"] forState:UIControlStateSelected];
+    [_uib_advante3cBtn addTarget: self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: _uib_advante3cBtn];
+}
+
+#pragma mark - Sustain Button
+-(void)initSustainButton
+{
+    if (_uib_sustainBtn) {
+        [_uib_sustainBtn removeFromSuperview];
+    }
+    _uib_sustainBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_sustainBtn.frame = CGRectMake(0, yHeight+44, 199, 44);
+    _uib_sustainBtn.tag = 0;
+    [_uib_sustainBtn setImage: [UIImage imageNamed:@"menu_sustainability.png"] forState:UIControlStateNormal];
+    [_uib_sustainBtn setImage: [UIImage imageNamed:@"menu_sustainability.png"] forState:UIControlStateSelected];
+    [_uib_sustainBtn addTarget: self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: _uib_sustainBtn];
+}
+
+-(IBAction)loadHotSpotView:(id)sender
+{
+    
+    if (sender == _uib_advante3cBtn) {
+        [[LibraryAPI sharedInstance] getSelectedCompanyNamed:@"AdvanTE3C"];
+    } else if (sender == _uib_sustainBtn) {
+        [[LibraryAPI sharedInstance] getSelectedCompanyNamed:@"Sustainability"];
+    }
+    
+    selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+    NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:[sender tag]];
+    
+    NSLog(@" cat dict %@",catDict);
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    embHotSpotViewController *vc = [sb instantiateViewControllerWithIdentifier:@"embHotSpotViewController"];
+    vc.dict_ibt = catDict;
+    vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:vc animated:YES completion:NULL];
+}
+
+
 #pragma mark - IBT Button
 -(void)initIBTButton
 {
@@ -107,9 +169,9 @@
         [_uib_ibtBtn removeFromSuperview];
     }
     _uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_ibtBtn.frame = CGRectMake(20, 325, 89, 56);
-    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateNormal];
-    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateSelected];
+    _uib_ibtBtn.frame = CGRectMake(0, yHeight+44+44, 199, 44);
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"menu_utc.png"] forState:UIControlStateNormal];
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"menu_utc.png"] forState:UIControlStateSelected];
     [_uib_ibtBtn addTarget: self action:@selector(notifyIBT) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_ibtBtn];
 }
@@ -120,6 +182,8 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showIBT" object:nil];
     NSLog(@"loadIBT");
 }
+
+
 
 #pragma mark - Init Navigation
 -(void)initNavi

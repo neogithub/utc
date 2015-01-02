@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-
 @interface embTitle : UIView {
 	CGFloat companyLabelWidth;
 	CGFloat hotspotLabelWidth;
@@ -20,8 +18,10 @@
 @property (nonatomic, strong) UILabel                       *uil_HotspotTitle;
 @property (nonatomic, strong) UILabel                       *uil_textSection;
 @property (nonatomic, strong) NSString						*appendString;
+@property CGFloat backButtonWidth;
+@property CGFloat backButtonX;
 
--(id)initWithFrame:(CGRect)frame withText:(NSString*)text;
+-(id)initWithFrame:(CGRect)frame withText:(NSString*)text startX:(CGFloat)startx width:(CGFloat)widthx;
 -(void)setHotSpotTitle:(NSString *)string;
 -(void)appendHotSpotTitle:(NSString *)string;
 -(void)removeHotspotTitle;

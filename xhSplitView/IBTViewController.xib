@@ -46,22 +46,34 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                     <rect key="frame" x="20" y="13" width="580" height="2"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_automated.png" id="EyU-Co-Gq0">
-                    <rect key="frame" x="277" y="41" width="124" height="88"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ibt_otis.png" id="oed-2m-w1g">
+                    <rect key="frame" x="77" y="41" width="124" height="88"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_arrow.jpg" id="lg7-qw-1ci">
                     <rect key="frame" x="217" y="59" width="52" height="52"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ibt_otis.png" id="oed-2m-w1g">
-                    <rect key="frame" x="77" y="41" width="124" height="88"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UGu-sE-w9h">
+                    <rect key="frame" x="277" y="41" width="124" height="79"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_edwards.png" id="CoW-Tb-jrN">
-                    <rect key="frame" x="419" y="41" width="124" height="88"/>
+                    <state key="normal" backgroundImage="logo_automated.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loadHotSpotView:" destination="-1" eventType="touchUpInside" id="dIH-sZ-TMh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H34-ax-FkK">
+                    <rect key="frame" x="419" y="41" width="125" height="79"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
+                    <state key="normal" backgroundImage="logo_edwards.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loadHotSpotView:" destination="-1" eventType="touchUpInside" id="MEP-Ic-BfB"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

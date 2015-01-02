@@ -7,8 +7,14 @@
 //
 
 #import "IBTViewController.h"
+#import "embHotSpotViewController.h"
+#import "Company.h"
+#import "LibraryAPI.h"
 
 @interface IBTViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
+{
+    Company			*selectedCo;
+}
 
 @end
 
@@ -176,7 +182,18 @@
     }
 }
 
+-(IBAction)loadHotSpotView:(id)sender
+{
+    selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+    NSDictionary *catDict = [selectedCo.coibt objectAtIndex:[sender tag]];
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    embHotSpotViewController *vc = [sb instantiateViewControllerWithIdentifier:@"embHotSpotViewController"];
+    vc.dict_ibt = catDict;
+    vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:vc animated:YES completion:NULL];
 
+}
 
 #pragma mark - dismiss vc
 // dismiss the modal view from bg tap

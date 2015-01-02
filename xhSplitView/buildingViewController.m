@@ -23,6 +23,8 @@
 #import "embTitle.h"
 #import "UIImage+FlipImage.h"
 
+#define kshowNSLogBOOL NO
+
 static CGFloat backButtonHeight = 51;
 static CGFloat backButtonWidth	= 58;
 static CGFloat backButtonX		= 36;
@@ -259,27 +261,27 @@ enum {
 #pragma mark Open Modal
 -(void)loadIBT:(id)sender
 {
-    NSLog(@"loadIBT function");
+    if (kshowNSLogBOOL) NSLog(@"loadIBT function");
     NSDictionary *userInfo;
         
     if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Otis"]) {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:5] forKey:@"buttontag"];
-        NSLog(@"Otis");
+        if (kshowNSLogBOOL) NSLog(@"Otis");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Lenel"]) {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:4] forKey:@"buttontag"];
-        NSLog(@"Lenel");
+        if (kshowNSLogBOOL) NSLog(@"Lenel");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Interlogix"]) {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:3] forKey:@"buttontag"];
-        NSLog(@"Interlogix");
+        if (kshowNSLogBOOL) NSLog(@"Interlogix");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Edwards"]) {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:2] forKey:@"buttontag"];
-        NSLog(@"Edwards");
+        if (kshowNSLogBOOL) NSLog(@"Edwards");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Carrier"]) {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:@"buttontag"];
-        NSLog(@"Carrier");
+        if (kshowNSLogBOOL) NSLog(@"Carrier");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"AutomatedLogic"]) {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:0] forKey:@"buttontag"];
-        NSLog(@"AutomatedLogic");
+        if (kshowNSLogBOOL) NSLog(@"AutomatedLogic");
     }
     
     // clear dict so ibt loads to the home creen
@@ -325,7 +327,7 @@ enum {
 
 -(void)loadSplitAssets
 {
-	NSLog(@"loadSplitAssets");
+	if (kshowNSLogBOOL) NSLog(@"loadSplitAssets");
 	
 #warning added to fix comingback from sub hotspots view
 	if	( _uis_zoomingImg.alpha == 0.0 )
@@ -359,7 +361,7 @@ enum {
 #pragma mark - menu button
 -(void)createBackButton
 {
-	NSLog(@"createBackButton");
+	if (kshowNSLogBOOL) NSLog(@"createBackButton");
 	_uib_backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 	_uib_backBtn.frame = CGRectMake(backButtonX, 0.0, 58, backButtonHeight);
 	[_uib_backBtn setImage:[UIImage imageNamed:@"icon back.png"] forState:UIControlStateNormal];
@@ -372,7 +374,7 @@ enum {
 #pragma mark notification methods
 -(void)hideBackButton
 {
-	NSLog(@"hideBackButton");
+	if (kshowNSLogBOOL) NSLog(@"hideBackButton");
 	self.uib_backBtn.hidden = YES;
 	self.uib_backBtn.transform = CGAffineTransformMakeTranslation(-backButtonWidth*2, 0);
 	[topTitle.uil_Company setHidden:YES];
@@ -380,7 +382,7 @@ enum {
 
 -(void)unhideBackButton
 {
-	NSLog(@"==unhideBackButton");
+	if (kshowNSLogBOOL) NSLog(@"==unhideBackButton");
 	self.uib_backBtn.hidden = NO;
 	self.uib_backBtn.transform = CGAffineTransformIdentity;
 	[topTitle.uil_Company setHidden:NO];
@@ -389,7 +391,7 @@ enum {
 #pragma mark back button breadcrumb fuction
 -(void)performSelectorFromArray
 {
-	NSLog(@"performSelectorFromArray");
+	if (kshowNSLogBOOL) NSLog(@"performSelectorFromArray");
 	NSValue *val = _arr_BreadCrumbOfImages[_uib_backBtn.tag];
 	SEL mySelector = [val pointerValue];
 	//	[self performSelector:mySelector];
@@ -408,12 +410,12 @@ enum {
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadBuilding" object:nil];
     [_uib_ibtBtn removeFromSuperview];
 	[_uib_backBtn setTag:0];
-	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
+	if (kshowNSLogBOOL) NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
 
 -(void)reloadHero
 {
-	NSLog(@"should be tag 1");
+	if (kshowNSLogBOOL) NSLog(@"should be tag 1");
 
 	[self removeHotspots];
     [_uib_ibtBtn removeFromSuperview];
@@ -427,7 +429,7 @@ enum {
 	
 	[self updateStillFrameUnderFilm:@"02_HERO_BLDG.png"];
 	[_uib_backBtn setTag:0];
-	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
+	if (kshowNSLogBOOL) NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 	
 	[self initSplitOpenBtn];
 
@@ -452,8 +454,11 @@ enum {
 		topTitle=nil;
 	}
 	
-	topTitle = [[embTitle alloc] initWithFrame:CGRectZero withText:topname];
+	topTitle = [[embTitle alloc] initWithFrame:CGRectZero withText:topname startX:36 width:58];
+   // [topTitle setBackButtonWidth:58];
+   // [topTitle setBackButtonX:36];
 	[self.view addSubview:topTitle];
+    [topTitle setHotSpotTitle:topname];
 }
 
 #pragma mark - company hotspots
@@ -586,7 +591,7 @@ enum {
 #pragma mark Popover Delegate method
 -(void)selectedRow:(NSInteger)row withText:(NSString*)text
 {
-	NSLog(@"text %@",text);
+	if (kshowNSLogBOOL) NSLog(@"text %@",text);
 
 	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
 	{
@@ -674,7 +679,7 @@ enum {
 -(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
 	
-	NSLog(@"neoHotspotsView");
+	if (kshowNSLogBOOL) NSLog(@"neoHotspotsView");
 	
 	BOOL isSubHotspots;
 	
@@ -712,7 +717,7 @@ enum {
 			}
 		}
 		else {
-			NSLog(@"=======/n/n/nn/\n\n\n\n neoHotspotsView no need ==========");
+			if (kshowNSLogBOOL) NSLog(@"=======/n/n/nn/\n\n\n\n neoHotspotsView no need ==========");
 			//TODO: attach to data if some subhotspots load different content
 //			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG"];
 		}
@@ -790,7 +795,7 @@ enum {
 #pragma mark ebzooming delegate
 -(void)scrollViewDidRemove:(ebZoomingScrollView *)ebZoomingScrollView {
 
-    NSLog(@"zoomingScroll.tg = %li", (long)ebZoomingScrollView.tag);
+    if (kshowNSLogBOOL) NSLog(@"zoomingScroll.tg = %li", (long)ebZoomingScrollView.tag);
     
     // standard interface view
 	if (ebZoomingScrollView.tag == 1100) {
@@ -815,7 +820,7 @@ enum {
 		}];
 
 	} else {
-		// subhotspot  view
+		if (kshowNSLogBOOL) // subhotspot  view
 		NSLog(@"subhotspot");
 		[UIView animateWithDuration:0.5 animations:^{
 			_uis_zoomingInfoImg.alpha = 0.0;
@@ -829,7 +834,7 @@ enum {
 		[self unhideChrome];
 	}
 	
-	NSLog(@"scrollViewDidRemove");
+	if (kshowNSLogBOOL) NSLog(@"scrollViewDidRemove");
 }
 
 #pragma mark - UTILITIES : General
@@ -887,7 +892,7 @@ enum {
                                                     ofType:extension];
     
 	if (tapToPauseEnabled == YES) {
-		NSLog(@"tapToPauseEnabled == YES");
+		if (kshowNSLogBOOL) NSLog(@"tapToPauseEnabled == YES");
 		_isPauseable = YES;
 		
 	}
@@ -942,7 +947,7 @@ enum {
 		}
 	
 	if (tapToPauseEnabled) {
-		NSLog(@"loadMovieNamed beginSequence");
+		if (kshowNSLogBOOL) NSLog(@"loadMovieNamed beginSequence");
 		[self beginSequence];
 	}
 	
@@ -1000,7 +1005,7 @@ enum {
 }
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
-	NSLog(@"playerItemDidReachEnd");
+	if (kshowNSLogBOOL) NSLog(@"playerItemDidReachEnd");
     
 	[self closeMovie];
 }
@@ -1012,7 +1017,7 @@ enum {
 	[_avPlayer play];
 	
 	// starts the player as well
-	NSLog(@"playerItemLoop beginSequence");
+	if (kshowNSLogBOOL) NSLog(@"playerItemLoop beginSequence");
 	[self beginSequence];
 }
 
@@ -1020,7 +1025,7 @@ enum {
 
 -(void)loadControlsLabels
 {
-	NSLog(@"load loadcontrollabel");
+	if (kshowNSLogBOOL) NSLog(@"load loadcontrollabel");
 	_uil_filmHint = [[UILabel alloc] init];
     _uil_filmHint.textColor = [UIColor blackColor];
     [_uil_filmHint setFrame:CGRectMake(800, 718, 200, 30)];
@@ -1067,11 +1072,11 @@ enum {
 
 -(void)closeMovie
 {
-	NSLog(@"closeMovie");
+	if (kshowNSLogBOOL) NSLog(@"closeMovie");
 
     CGAffineTransform t = _uib_backBtn.transform;
     
-    NSLog(@"xscale %f",t.tx);
+   if (kshowNSLogBOOL)  NSLog(@"xscale %f",t.tx);
     
     if (t.tx < 0) {
         [self animateTitleAndHotspot:TitleLabelsOnscreen];
@@ -1090,7 +1095,7 @@ enum {
 	
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	
-	NSLog(@"_arr_subHotspots %lu",(unsigned long)[_arr_subHotspots count]);
+	if (kshowNSLogBOOL) NSLog(@"_arr_subHotspots %lu",(unsigned long)[_arr_subHotspots count]);
 	
 	if (_isPauseable == YES) {
 		[self unhideChrome];
@@ -1098,7 +1103,7 @@ enum {
 		if ([_arr_subHotspots count] == 0) {
 			//[topTitle removeHotspotTitle];
 			if (topTitle.appendString) {
-				NSLog(@"topTitle.appendString %@",topTitle.appendString);
+				if (kshowNSLogBOOL) NSLog(@"topTitle.appendString %@",topTitle.appendString);
 				[topTitle setHotSpotTitle:topTitle.appendString];
 			}
 		} else {
@@ -1113,7 +1118,7 @@ enum {
 
 -(void)resetBaseInteractive
 {
-	NSLog(@"resetBaseInteractive");
+	if (kshowNSLogBOOL) NSLog(@"resetBaseInteractive");
 	
 	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
 	[_uis_zoomingImg.scrollView setZoomScale:1.0];
@@ -1128,7 +1133,7 @@ enum {
 
 -(void)resetSubHotspot
 {
-	NSLog(@"resetSubHotspot");
+	if (kshowNSLogBOOL) NSLog(@"resetSubHotspot");
 	
 	//[self removeMovieLayers];
 	
@@ -1422,7 +1427,7 @@ enum {
 												  userInfo:nil
 												   repeats:YES];
 	
-	NSLog(@"== /n/nstart timer");
+	if (kshowNSLogBOOL) NSLog(@"== /n/nstart timer");
 }
 
 
@@ -1507,7 +1512,7 @@ enum {
 	CGFloat movieLength = CMTimeGetSeconds([_avPlayer currentTime]);
 	
 	int y = movieLength;
-	NSLog(@"seconds %i",y);
+	if (kshowNSLogBOOL) NSLog(@"seconds %i",y);
 	
 	if (y == removeTextAfterThisManySeconds) {
 		[self removeCards];
