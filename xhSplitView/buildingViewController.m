@@ -8,7 +8,6 @@
 
 #import "buildingViewController.h"
 #import "ebZoomingScrollView.h"
-#import "IBTViewController.h"
 
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
@@ -33,7 +32,7 @@ enum {
 	TitleLabelsOffscreen,
 };
 
-@interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, IBTViewControllerDelegate, UIGestureRecognizerDelegate>
+@interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, UIGestureRecognizerDelegate>
 {
 	// fact cards
     CGFloat removeTextAfterThisManySeconds;
@@ -114,6 +113,8 @@ enum {
     // when opening the splitview - hide unwanted chrome
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackButton) name:@"hideDetailChrome" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackButton) name:@"unhideDetailChrome" object:nil];
+    
+
 }
 
 #pragma mark - stills under movie
@@ -251,16 +252,43 @@ enum {
     _uib_ibtBtn.frame = CGRectMake(1024-89-16, 16, 89, 56);
     [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateNormal];
     [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateSelected];
-    [_uib_ibtBtn addTarget: self action:@selector(loadIBT) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_ibtBtn addTarget: self action:@selector(loadIBT:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_ibtBtn];
 }
 
 #pragma mark Open Modal
--(void)loadIBT
+-(void)loadIBT:(id)sender
 {
-    IBTViewController* vc = [IBTViewController new];
-    vc.delegate = self;
-    [self presentViewController:vc animated:YES completion:^{}];
+    NSLog(@"loadIBT function");
+    NSDictionary *userInfo;
+        
+    if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Otis"]) {
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:5] forKey:@"buttontag"];
+        NSLog(@"Otis");
+    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Lenel"]) {
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:4] forKey:@"buttontag"];
+        NSLog(@"Lenel");
+    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Interlogix"]) {
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:3] forKey:@"buttontag"];
+        NSLog(@"Interlogix");
+    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Edwards"]) {
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:2] forKey:@"buttontag"];
+        NSLog(@"Edwards");
+    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Carrier"]) {
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:@"buttontag"];
+        NSLog(@"Carrier");
+    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"AutomatedLogic"]) {
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:0] forKey:@"buttontag"];
+        NSLog(@"AutomatedLogic");
+    }
+    
+    // clear dict so ibt loads to the home creen
+    if (sender == _uib_ibtBtn) {
+        userInfo = nil;
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showIBT" object:self userInfo:userInfo];
+
 }
 
 
@@ -377,7 +405,7 @@ enum {
 {
 	//NSLog(@"should be tag 0");
 
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"loadBuilding" object:nil];
     [_uib_ibtBtn removeFromSuperview];
 	[_uib_backBtn setTag:0];
 	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
@@ -547,7 +575,7 @@ enum {
 	// get company tapped on from data model
 	NSDictionary *co = allCompanies[sender.tag];
 	selectedCoDict = [[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]] [0];
-	
+	    
 	PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
 	self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
 	PopoverView.delegate = self;
@@ -562,13 +590,11 @@ enum {
 
 	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
 	{
-		//TODO: Load IBT functionality
-		UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Intelligent Building Technologies"
-														  message:@"IBS will display soon"
-														 delegate:nil
-												cancelButtonTitle:@"OK"
-												otherButtonTitles:nil];
-		[message show];
+        
+        [self.popOver dismissPopoverAnimated:YES];
+        self.popOver = nil;
+        
+        [self loadIBT:nil];
 		
 	} else {
 		
@@ -864,10 +890,6 @@ enum {
 		NSLog(@"tapToPauseEnabled == YES");
 		_isPauseable = YES;
 		
-//		[UIView animateWithDuration:0.3 animations:^{
-//			topTitle.uil_Company.frame = CGRectMake(-74, topTitle.uil_Company.frame.origin.y, topTitle.uil_Company.frame.size.width, topTitle.uil_Company.frame.size.height);
-//			topTitle.uil_HotspotTitle.frame = CGRectMake(-74, topTitle.uil_HotspotTitle.frame.origin.y, topTitle.uil_HotspotTitle.frame.size.width, topTitle.uil_HotspotTitle.frame.size.height);
-//		} completion:nil];
 	}
 
 	
@@ -885,10 +907,7 @@ enum {
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
 	[_uiv_movieContainer setBackgroundColor:[UIColor redColor]];
 	
-    //[_uiv_movieContainer setUserInteractionEnabled:YES];
-    //[_uiv_movieContainer addGestureRecognizer:panGesture];
-	
-	
+     
 	if (belowSubview != nil) {
 		[self.view insertSubview:_uiv_movieContainer belowSubview:belowSubview];
 	} else {

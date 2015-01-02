@@ -17,6 +17,7 @@
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 #import "UIImage+FlipImage.h"
+#import "IBTViewController.h"
 
 static NSString * const sampleDesc1 = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt laoreet diam, id suscipit ipsum sagittis a. ";
 
@@ -32,7 +33,7 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 
 static CGFloat menuButtonHeights = 51;
 
-@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate>
+@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate>
 
 @property (nonatomic, strong) GHWalkThroughView* ghView ;
 
@@ -47,7 +48,7 @@ static CGFloat menuButtonHeights = 51;
 @property (nonatomic, strong) xhSplitViewController             *splitVC;
 @property (nonatomic, strong) masterViewController              *masterView;
 @property (nonatomic, strong) detailViewController              *detailView;
-@property (nonatomic, strong) buildingViewController            *otisView;
+@property (nonatomic, strong) buildingViewController            *buildingView;
 @property (nonatomic, strong) UIImageView						*uiiv_initImage;
 @property (nonatomic, strong) AVPlayer*							avPlayer;
 @property (nonatomic, strong) AVPlayerLayer*					avPlayerLayer;
@@ -77,17 +78,21 @@ static CGFloat menuButtonHeights = 51;
     [self initSplitVC];
     [self initBuildingVC];
     [self initSplitCtrl];
-	
+    
 	[self setInitialImage];
 	
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDetailView:) name:@"masterEvent" object:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moveSplitBtnLeft) name:@"moveSplitBtnLeft" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moveSplitBtnRight) name:@"moveSplitBtnRight" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initIBT:) name:@"showIBT" object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeMaster) name:@"openCloseMaster" object:nil];
 
 	if (((AppDelegate*)[UIApplication sharedApplication].delegate).firstRun)
     {
-        //[self showHelp];
+        [self showHelp];
 	}
 }
 
@@ -167,36 +172,11 @@ static CGFloat menuButtonHeights = 51;
 	
 	NSString *url = [[NSBundle mainBundle] pathForResource:fileName
                                                     ofType:extension];
-    
-	/*
-	if (tapToPauseEnabled == YES) {
-		NSLog(@"tapToPauseEnabled == YES");
-		_isPauseable = YES;
-		
-		[UIView animateWithDuration:0.5 animations:^{
-			_uil_Company.frame = CGRectMake(-74, _uil_Company.frame.origin.y, _uil_Company.frame.size.width, _uil_Company.frame.size.height);
-			_uil_HotspotTitle.frame = CGRectMake(-74, _uil_HotspotTitle.frame.origin.y, _uil_HotspotTitle.frame.size.width, _uil_HotspotTitle.frame.size.height);
-		} completion:nil];
-	}
-	
-	
-    if (_avPlayer) {
-        [_avPlayerLayer removeFromSuperlayer];
-        _avPlayerLayer = nil;
-        _avPlayer = nil;
-		[_uiv_movieContainer removeFromSuperview];
-		_uiv_movieContainer=nil;
-        //[[NSNotificationCenter defaultCenter] removeObserver:self];
-		[[NSNotificationCenter defaultCenter] removeObserver:self name:@"playerItemLoop:" object:nil];
-		[[NSNotificationCenter defaultCenter] removeObserver:self name:@"playerItemDidReachEnd:" object:nil];
-    }
-	 */
 	
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
 	[_uiv_movieContainer setBackgroundColor:[UIColor clearColor]];
 	
 	[self.view addSubview:_uiv_movieContainer];
-	
 	
 	_avPlayer = [AVPlayer playerWithURL:[NSURL fileURLWithPath:url]] ;
     _avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
@@ -215,8 +195,6 @@ static CGFloat menuButtonHeights = 51;
     
     [_avPlayer play];
     
-	//[self updateStillFrameUnderFilm:@"04_HOTSPOT_CROSS_SECTION.png"];
-	
 	NSString *selectorAfterMovieFinished;
 	
 	selectorAfterMovieFinished = @"playerItemDidReachEnd:";
@@ -274,7 +252,7 @@ static CGFloat menuButtonHeights = 51;
 	self.welcomeLabel = welcomeLabel;
 	
 	self.descStrings = [NSArray arrayWithObjects:sampleDesc1,sampleDesc2, sampleDesc3, sampleDesc4, sampleDesc5, sampleDesc6, nil];
-	//self.ghView.bgImage = [UIImage imageNamed:@"bg_01.jpg"];
+	self.ghView.bgImage = [UIImage imageNamed:@"bg_01.jpg"];
 	
 	self.ghView.isfixedBackground = NO;
 	self.ghView.floatingHeaderView = nil;
@@ -328,7 +306,29 @@ static CGFloat menuButtonHeights = 51;
 
 -(void)initBuildingVC
 {
-    _otisView = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
+    _buildingView = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
+}
+
+#pragma mark Open Modal
+-(void)initIBT:(NSNotification *)notification
+{
+    
+    NSLog(@"%@",[[notification userInfo] valueForKey:@"buttontag"]);
+    NSLog(@"initIBT function");
+    
+    IBTViewController* vc = [IBTViewController new];
+    
+    if ([[notification userInfo] valueForKey:@"buttontag"] == nil) {
+        [vc loadIBT:nil];
+    } else {
+        [vc loadIBTAtDetail:[[notification userInfo] valueForKey:@"buttontag"]];
+    }
+    
+    vc.delegate = self;
+    [self presentViewController:vc animated:YES completion:^{}];
+    
+    //TODO:fix open close side menu
+   // [self toggleMasterVisibility];
 }
 
 -(void)initSplitVC
@@ -346,7 +346,7 @@ static CGFloat menuButtonHeights = 51;
     _uib_splitCtrl.frame = CGRectMake(0.0, 0.0, menuButtonHeights, menuButtonHeights);
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateNormal];
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateSelected];
-    [_uib_splitCtrl addTarget: self action:@selector(openAndCloseMaster) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_splitCtrl addTarget: self action:@selector(toggleMasterVisibility) forControlEvents:UIControlEventTouchUpInside];
     [self.view insertSubview: _uib_splitCtrl aboveSubview:_splitVC.view];
 }
 
@@ -360,9 +360,12 @@ static CGFloat menuButtonHeights = 51;
     [self.view insertSubview: _uib_help aboveSubview:_splitVC.view];
 }
 
--(void)openAndCloseMaster
+
+
+-(void)toggleMasterVisibility
 {
     _uib_splitCtrl.selected = !_uib_splitCtrl.selected;
+    
     if (_uib_splitCtrl.selected) {
         [_splitVC showPanel];
         [UIView animateWithDuration:0.33 animations:^{
@@ -374,33 +377,28 @@ static CGFloat menuButtonHeights = 51;
         }];
     }
     else {
-        [_splitVC hideMasterPanel];
-        [UIView animateWithDuration:0.33 animations:^{
-            _uib_splitCtrl.transform = CGAffineTransformIdentity;
-			_uib_splitCtrl.hidden = NO;
-        }];
-		NSLog(@"====unhideDetailChrome");
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"unhideDetailChrome" object:nil];
-		[_detailView.view setUserInteractionEnabled:YES];
+        [self closeMaster];
     }
+}
+
+-(void)closeMaster
+{
+    [_splitVC hideMasterPanel];
+    [UIView animateWithDuration:0.33 animations:^{
+        _uib_splitCtrl.transform = CGAffineTransformIdentity;
+        _uib_splitCtrl.hidden = NO;
+    }];
+    NSLog(@"====unhideDetailChrome");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"unhideDetailChrome" object:nil];
+    [_detailView.view setUserInteractionEnabled:YES];
+    
 }
 
 -(void)updateDetailView:(NSNotification *)notification
 {
     //TODO: pick building from data model
 	//TODO: connect to data instaed of passing hard number
-	//int index = [[[notification userInfo] valueForKey:@"index"] intValue];
     
-    int pass = [[[notification userInfo] valueForKey:@"buttontag"] intValue];
-    
-    NSLog(@"pass %i",pass);
-    
-    //[self setInitialImage];
-    //[_splitVC addDetailController:_detailView animated:NO];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"loadCompany" object:self];
-    [self openAndCloseMaster];
-    
-    /*
     int pass = [[[notification userInfo] valueForKey:@"buttontag"] intValue];
 	
 	NSLog(@"pass %i",pass);
@@ -410,27 +408,27 @@ static CGFloat menuButtonHeights = 51;
 			
 			[self setInitialImage];
 			[_splitVC addDetailController:_detailView animated:NO];
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
-			[self openAndCloseMaster];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadBuilding" object:nil];
+			[self toggleMasterVisibility];
 
 			break;
 			
 		case 1:
 			[_splitVC addDetailController:_detailView animated:NO];
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadOtis" object:nil];
-			[self openAndCloseMaster];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadBuilding" object:nil];
+			[self toggleMasterVisibility];
 			break;
 			
 		case 2:
 			
-			[self openAndCloseMaster];
+			[self toggleMasterVisibility];
 
 			break;
 			
 		default:
 			break;
 	}
-    */
+    
 }
 
 

@@ -16,7 +16,7 @@
 @property (nonatomic, strong) ebZoomingScrollView		*uis_zoomingImg;
 @property (nonatomic, strong) UIImageView				*uiiv_bg;
 @property (nonatomic, strong) UIButton					*uib_buildingBtn;
-@property (nonatomic, strong) buildingViewController    *otisVC;
+@property (nonatomic, strong) buildingViewController    *buildingVC;
 @property (nonatomic, strong) UIButton					*uib_back;
 @end
 
@@ -38,7 +38,9 @@
     // Do any additional setup after loading the view.
     [self createBG];
     [self initBuildingBtn];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(restartView) name:@"loadOtis" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(restartView) name:@"loadBuilding" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(animateTransition) name:@"animateTransition" object:nil];
+
 }
 
 -(void)hideBackBtn
@@ -74,17 +76,16 @@
 -(void)loadBuilding
 {
 	[self loadBuildingVC:0];
-	//2 get company selected
 	[[LibraryAPI sharedInstance] getCompanies];
 }
 
 -(void)loadBuildingVC:(int)index
 {
-	_otisVC = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
-	_otisVC.transitionClipName = @"01_TRANS_CITY_TO_BLDG.mov";
-	[self addChildViewController:_otisVC];
-	[self.view addSubview: _otisVC.view];
-	[_otisVC didMoveToParentViewController:self];
+	_buildingVC = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
+	_buildingVC.transitionClipName = @"01_TRANS_CITY_TO_BLDG.mov";
+	[self addChildViewController:_buildingVC];
+	[self.view addSubview: _buildingVC.view];
+	[_buildingVC didMoveToParentViewController:self];
 	// update the company selected on the left side
 	[self.delegate rowSelected:self atIndex:0];
 }
@@ -92,12 +93,17 @@
 -(void)restartView
 {
 	NSLog(@"DETAIL - restartView");
-
     [_uib_back removeFromSuperview];
     _uib_back = nil;
-    [_otisVC.view removeFromSuperview];
-    _otisVC = nil;
-    _otisVC.view = nil;
+    [_buildingVC.view removeFromSuperview];
+    _buildingVC = nil;
+    _buildingVC.view = nil;
+}
+
+-(void)animateTransition
+{
+    [self loadBuildingVC:0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"openCloseMaster" object:nil];
 }
 
 - (void)didReceiveMemoryWarning

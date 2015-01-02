@@ -10,8 +10,10 @@
 #import "panelTableViewCell.h"
 #import "LibraryAPI.h"
 #import "Company.h"
+#import "IBTViewController.h"
+#import "buildingViewController.h"
 
-@interface masterViewController ()
+@interface masterViewController () <IBTViewControllerDelegate>
 {
 	int selectedRow;
 	UIButton * settButton;
@@ -21,7 +23,8 @@
 	int currentCompanyIndex;
 }
 
-@property (nonatomic, strong) NSMutableArray *arr_companies;
+@property (nonatomic, strong) NSMutableArray                *arr_companies;
+@property (nonatomic, strong) UIButton						*uib_ibtBtn;
 
 @end
 
@@ -76,19 +79,49 @@
     [self initNavi];
 //    [self.view addSubview: tableView];
     self.view.backgroundColor = [UIColor blackColor];
+    
+    [self initIBTButton];
 	
 	currentCompanyIndex = 0;
+    selectedRow = -1;
  
-	//2 get all companies data
+//	//2 get all companies data
 	allCompanies = [[LibraryAPI sharedInstance] getCompanies];
-	
-	//3 get just the company names
-	_arr_companies = [[LibraryAPI sharedInstance] getCompanyNames];
-	
-	// sort them alphabetically
-	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+//	
+//	//3 get just the company names
+//	_arr_companies = [[LibraryAPI sharedInstance] getCompanyNames];
+//	
+//	// sort them alphabetically
+//	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    _arr_companies = [[NSMutableArray alloc] initWithObjects:@"Residential", @"Hospitality", @"Museum",@"Transportation Hub",@"Port",@"Commercial", nil];
+    
+    // sort them alphabetically
+    [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
+#pragma mark - IBT Button
+-(void)initIBTButton
+{
+    if (_uib_ibtBtn) {
+        [_uib_ibtBtn removeFromSuperview];
+    }
+    _uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_ibtBtn.frame = CGRectMake(20, 325, 89, 56);
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateNormal];
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateSelected];
+    [_uib_ibtBtn addTarget: self action:@selector(notifyIBT) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: _uib_ibtBtn];
+}
+
+#pragma mark Open Modal
+-(void)notifyIBT
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showIBT" object:nil];
+    NSLog(@"loadIBT");
+}
+
+#pragma mark - Init Navigation
 -(void)initNavi
 {
     self.navigationController = [[UINavigationController alloc] init];
@@ -138,7 +171,6 @@
 
 -(void)handleImageTap:(id)sender
 {
-	//[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:[NSNumber numberWithInt:gesture.view.tag]];
 	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:(int)[sender tag]] forKey:@"buttontag"];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil userInfo:userInfo];
 }
@@ -151,7 +183,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [allCompanies count];
+	return [_arr_companies count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)ttableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -173,18 +205,18 @@
 			[cell.uil_title setText:_arr_companies[indexPath.row]];
 #else
 			//advante3c gets a superscript 3
-			if (indexPath.row == 0)
-			{
-				UIFont *boldFont = [UIFont boldSystemFontOfSize:17];
-				NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:_arr_companies[indexPath.row]
-																									 attributes:@{NSFontAttributeName:boldFont}];
-				[attributedString setAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:10]
-												  , NSBaselineOffsetAttributeName : @8} range:NSMakeRange(7, 1)];
-				
-				cell.uil_title.attributedText = attributedString;
-			} else {
+//			if (indexPath.row == 0)
+//			{
+//				UIFont *boldFont = [UIFont boldSystemFontOfSize:17];
+//				NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:_arr_companies[indexPath.row]
+//																									 attributes:@{NSFontAttributeName:boldFont}];
+//				[attributedString setAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:10]
+//												  , NSBaselineOffsetAttributeName : @8} range:NSMakeRange(7, 1)];
+//				
+//				cell.uil_title.attributedText = attributedString;
+//			} else {
 				[cell.uil_title setText:_arr_companies[indexPath.row]];
-			}
+//			}
 #endif
 		
         return cell;
@@ -192,21 +224,31 @@
     return nil;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([indexPath row] != 0) //<-----ignores touches on first cell in the UITableView
+    {                        //simply change this around to suit your needs
+        cell.userInteractionEnabled = NO;
+        cell.textLabel.enabled = NO;
+        cell.detailTextLabel.enabled = NO;
+    }
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if ((indexPath.row != selectedRow) && (indexPath.row == 9)) {
-		//NSLog(@"The tapped cell is %i", (int)indexPath.row);
+	if ((indexPath.row != selectedRow) && (indexPath.row == 0)) { // commercial
+		NSLog(@"The tapped cell is %i", (int)indexPath.row);
 		NSDictionary* dict = [NSDictionary dictionaryWithObject:
 							  [NSNumber numberWithInt:3]
 														 forKey:@"buttontag"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent"
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"animateTransition"
 															object:self
 														  userInfo:dict];
 	}
     selectedRow = (int)indexPath.row;
 	
 	//2 get company selected
-	[[LibraryAPI sharedInstance] getSelectedCompanyNamed:_arr_companies[selectedRow]];
+	//[[LibraryAPI sharedInstance] getSelectedCompanyNamed:_arr_companies[selectedRow]];
 }
 
 - (void)didReceiveMemoryWarning
