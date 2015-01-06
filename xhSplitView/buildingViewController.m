@@ -624,13 +624,15 @@ enum {
 
 	} else {
 		
+      
+        
 		NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:row];
 		NSString *categoryType = [catDict objectForKey:@"catType"];
 		NSString *categoryName = [catDict objectForKey:@"catName"];
 		NSString *subBG = [catDict objectForKey:@"subBG"];
 		_arr_subHotspots = [catDict objectForKey:@"subhotspots"];
 		
-		//NSLog(@"subhotspots %@",_arr_subHotspots);
+		NSLog(@"subhotspots %@",_arr_subHotspots);
 		
 		if ([categoryType isEqualToString:@"film"]) {
 			// get which company from data model
@@ -1205,7 +1207,15 @@ enum {
 	CGFloat textViewHeight = 0;
 	
 	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
-	NSArray *totalDataArray = selectedCo.cohotspots;
+    
+  //TODO: check for key on hotspots
+    NSArray *totalDataArray;
+    
+    if (selectedCo.cohotspots.count != 0) {
+        totalDataArray = selectedCo.cohotspots;
+    } else {
+        totalDataArray = _arr_subHotspots;
+    }
 
 	// causes crash sometimes
 	NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
