@@ -208,13 +208,14 @@ enum {
 		[settButton setTag:i];
 		[settButton setFrame:CGRectMake(hs_x, hs_y, staticWidth, staticHeight)];
 		[settButton setImage:[UIImage imageNamed:[hotspotItem objectForKey:@"background"]] forState:UIControlStateNormal];
-		[settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
+        
+        [settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
+        
 		[arr_CompanyLogos addObject:settButton];
 		[_uis_zoomingImg.blurView addSubview:settButton];
 			
         // add drag listener
         //[settButton addTarget:self action:@selector(wasDragged:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-		
 	}
 #endif
 }
@@ -251,9 +252,9 @@ enum {
         [_uib_ibtBtn removeFromSuperview];
     }
     _uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_ibtBtn.frame = CGRectMake(1024-89-16, 16, 89, 56);
-    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateNormal];
-    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo_utcibt.png.png"] forState:UIControlStateSelected];
+    _uib_ibtBtn.frame = CGRectMake(1024-120-16, 16, 120, 57);
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo-united-technologies.png"] forState:UIControlStateNormal];
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo-united-technologies.png"] forState:UIControlStateSelected];
     [_uib_ibtBtn addTarget: self action:@selector(loadIBT:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_ibtBtn];
 }
@@ -289,8 +290,20 @@ enum {
         userInfo = nil;
     }
     
+    NSString *notificationName = @"applicationFullScreen";
+    NSString *key = @"fullScreen";
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObject:[NSNumber numberWithBool:0] forKey:key];
+    [dictionary setObject:[NSNumber numberWithInt:0] forKey:@"buttontag"];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil userInfo:dictionary];
+
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showIBT" object:self userInfo:userInfo];
 
+}
+
+-(void)loadSustainability
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showSustainability" object:self userInfo:nil];
 }
 
 
@@ -470,12 +483,12 @@ enum {
     _arr_hotspotsArray = nil;
     _arr_hotspotsArray = [[NSMutableArray alloc] init];
 	
-	[self loadSingleCompanyHotspots];
+	[self loadCompanyHotspots];
     
 }
 
 // load the hotpots of the company selected
--(void)loadSingleCompanyHotspots
+-(void)loadCompanyHotspots
 {
 	[self removeHotspots];
 
@@ -593,17 +606,24 @@ enum {
 {
 	if (kshowNSLogBOOL) NSLog(@"text %@",text);
 
+    selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+    
 	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
 	{
-        
         [self.popOver dismissPopoverAnimated:YES];
         self.popOver = nil;
         
         [self loadIBT:nil];
-		
+        
+    } else if ( [selectedCo.coname isEqualToString:@"Sustainability"] ) {
+        
+        [self.popOver dismissPopoverAnimated:YES];
+        self.popOver = nil;
+        
+        [self loadSustainability];
+
 	} else {
 		
-		selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
 		NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:row];
 		NSString *categoryType = [catDict objectForKey:@"catType"];
 		NSString *categoryName = [catDict objectForKey:@"catName"];
@@ -623,7 +643,6 @@ enum {
 			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG" withCloseButton:YES];
 			[self initTitleBox];
 			[topTitle setHotSpotTitle:categoryName];
-			
 			
 		} else if ([categoryType isEqualToString:@"stillWithMenu"]) {
 			

@@ -6,19 +6,35 @@
 //  Copyright (c) 2014 Neoscape. All rights reserved.
 //
 
-#import "IBTViewController.h"
+#import "SustainViewController.h"
 #import "embHotSpotViewController.h"
 #import "Company.h"
 #import "LibraryAPI.h"
 
-@interface IBTViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
+@interface SustainViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
     Company			*selectedCo;
+    
 }
+@property (nonatomic, strong) NSArray* descStrings;
+@property (nonatomic, strong) NSArray* descImgStrings;
 
 @end
 
-@implementation IBTViewController
+static NSString * const sustainDesc1 = @"Only company in the world to be a founding member of Green Building Councils on four continents\n\nCarrier was instrumental in launching the U.S. Green Building Council in 1993 and was the first company in the world to join the organization\n\nEngaged more than 60,000 building professionals around the world since 2010 in green building training and education\n\nFounding sponsor of the Center for Green Schools";
+
+static NSString * const sustainImg1 = @"Screenshot 2015-01-06 14.53.17.png";
+
+static NSString * const sustainDesc2 = @"Advanced research and technology development on energy efficiency, water reduction, ozone protection, natural refrigerants and material selection\n\nRigorous, formal review during product development process to minimize environmental footprint of products while maximizing environmental technologies\n\nFirst elevator manufacturer to certify its LEED® Gold factory, and first HVAC manufacturer to certify its LEED® Gold factory";
+
+static NSString * const sustainImg2 = @"Screenshot 2015-01-06 14.53.23.png";
+
+static NSString * const sustainDesc3 = @"Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED®) v4 rating system\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic intelligent controls optimize building performance";
+
+static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
+
+
+@implementation SustainViewController
 
 #pragma mark - custom modal presentation
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -39,28 +55,37 @@
     gestureRecognizer.delegate = self;
     [self.view addGestureRecognizer:gestureRecognizer];
     
+    _uiiv_BG.alpha = 0.0;
+    
     _uib_learn.hidden = YES;
     //[self blurbackground];
+    
+    [self performSelector:@selector(fadeUpBG) withObject:nil afterDelay:0.75];
+    
+    self.descStrings = [NSArray arrayWithObjects:sustainDesc1,sustainDesc2, sustainDesc3 , nil];
+    self.descImgStrings = [NSArray arrayWithObjects:sustainImg1,sustainImg2, sustainImg3 , nil];
+
+    [_uitv_text setFont:[UIFont fontWithName:@"Arial" size:17]];
+
 }
 
--(IBAction)loadIBT:(id)sender
+-(void)fadeUpBG
 {
-    NSLog(@"loadIBT");
-    NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
+    [UIView animateWithDuration:0.33 animations:^{
+        
+        _uiiv_BG.alpha = 1.0;
+        
+    } completion:^(BOOL completed) {    } ];
 
-    [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
-        obj.alpha = 1.0;
-    }];
-    _uib_learn.hidden = YES;
-    
-    [UIView animateWithDuration:0.33 delay:0
-         usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
-                        options:0 animations:^{
-                            _uiv_detail.frame = CGRectMake(0, 410, 620, 410);
-                            _uiv_ibtData.frame = CGRectMake(0, 30, 620, 410);
-                            _uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y+90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height-170);
-                            
-                        } completion:nil];
+}
+
+-(IBAction)loadText:(id)sender
+{
+    NSLog(@"loadText");
+    _uitv_text.text = self.descStrings[[sender tag]];
+    _uiiv_data.image = [UIImage imageNamed:self.descImgStrings[[sender tag]]];
+    [_uitv_text setFont:[UIFont fontWithName:@"Arial" size:17]];
+    [self dimButtonAtIndex:(int)[sender tag]];
 }
 
 

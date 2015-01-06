@@ -10,7 +10,7 @@
 		<key>demoName</key>
 		<string>Elevator</string>
 		<key>background</key>
-		<string>logo_otis.png</string>
+		<string>logo-otis.png</string>
 		<key>xy</key>
 		<string>469, 181.5</string>
 		<key>transitionFilm</key>
@@ -873,7 +873,7 @@
 		<key>demoName</key>
 		<string>HVAC</string>
 		<key>background</key>
-		<string>logo_carrier.png</string>
+		<string>logo-carrier.png</string>
 		<key>xy</key>
 		<string>573.5, 665.5</string>
 		<key>transitionFilm</key>
@@ -1354,7 +1354,7 @@
 		<key>demoName</key>
 		<string>Refrigeration</string>
 		<key>background</key>
-		<string>logo_taylor.png</string>
+		<string>logo-taylor.png</string>
 		<key>xy</key>
 		<string>196.5, 485</string>
 		<key>categories</key>
@@ -1581,7 +1581,7 @@
 		<key>infoName</key>
 		<string>Open Security Solutions</string>
 		<key>background</key>
-		<string>logo_lenel.png</string>
+		<string>logo-lenel.png</string>
 		<key>xy</key>
 		<string>142.5, 245</string>
 		<key>demoName</key>
@@ -2039,7 +2039,7 @@
 		<key>infoName</key>
 		<string>Interactive Digital Signages</string>
 		<key>background</key>
-		<string>logo_advantec.png</string>
+		<string>logo-avantec.png</string>
 		<key>xy</key>
 		<string>815,685</string>
 		<key>demoName</key>
@@ -2604,7 +2604,7 @@
 		<key>infoName</key>
 		<string>Building Automation Systems</string>
 		<key>background</key>
-		<string>logo_automated.png</string>
+		<string>logo-automatedLogic.png</string>
 		<key>xy</key>
 		<string>291, 127</string>
 		<key>demoName</key>
@@ -3168,7 +3168,7 @@
 		<key>infoName</key>
 		<string>Sustainability</string>
 		<key>background</key>
-		<string>logo_sustain.png</string>
+		<string>logo-Improve.png</string>
 		<key>xy</key>
 		<string>915,685</string>
 		<key>demoName</key>
@@ -3583,7 +3583,7 @@
 		<key>infoName</key>
 		<string>Commercial Security Systems</string>
 		<key>background</key>
-		<string>logo_interlogix.png</string>
+		<string>logo-interlogix.png</string>
 		<key>xy</key>
 		<string>825, 242.5</string>
 		<key>demoName</key>
@@ -4154,7 +4154,7 @@
 		<key>infoName</key>
 		<string>Life Safety &amp; Emergency Communications</string>
 		<key>background</key>
-		<string>logo_edwards.png</string>
+		<string>logo-edwards.png</string>
 		<key>xy</key>
 		<string>803, 309.5</string>
 		<key>demoName</key>
@@ -4641,7 +4641,7 @@
 		<key>infoName</key>
 		<string>Fire Safety Products</string>
 		<key>background</key>
-		<string>logo_kidde.png</string>
+		<string>logo-kidde.png</string>
 		<key>xy</key>
 		<string>771, 397</string>
 		<key>demoName</key>
@@ -4667,7 +4667,7 @@
 						<key>width</key>
 						<string>360</string>
 						<key>caption</key>
-						<string>FM200 Fire Suppression Systems</string>
+						<string>Waterless Fire Suppression Systems</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
 						<key>fileName</key>
@@ -4682,27 +4682,21 @@
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Protects data, telecommunications and other critical environments</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Discharges as a gas, reaching all areas while leaving no residue</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Identify issues before they become problems</string>
+									<string>Environmentally responsible solution</string>
 									<key>appearanceDelay</key>
 									<integer>14</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
-									<key>appearanceDelay</key>
-									<integer>18</integer>
 								</dict>
 							</array>
 							<key>factwidth</key>
@@ -4734,13 +4728,13 @@
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+									<string>Agent cylinders stored away from protected area, saving floor space</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+									<string>System performance enhances design flexibility in complex piping configurations</string>
 									<key>appearanceDelay</key>
 									<integer>10</integer>
 								</dict>
@@ -4774,21 +4768,9 @@
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Small enough to fit inside the wall at top elevator landing</string>
+									<string>Designed for commercial cooking areas; faster flame knockdown and fire suppression</string>
 									<key>appearanceDelay</key>
 									<integer>3</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>No need to plan extra room at top of hoistway</string>
-									<key>appearanceDelay</key>
-									<integer>5</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Much easier access for diagnostics and repair</string>
-									<key>appearanceDelay</key>
-									<integer>7</integer>
 								</dict>
 							</array>
 							<key>factwidth</key>
@@ -4820,19 +4802,19 @@
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Small enough to fit inside the wall at top elevator landing</string>
+									<string>Ergonomic aluminum handles with wide pull pin for ease of use</string>
 									<key>appearanceDelay</key>
 									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>No need to plan extra room at top of hoistway</string>
+									<string>Easy-to-read gauge</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Much easier access for diagnostics and repair</string>
+									<string>Easy-to-service, corrosion-resistant metal for long life</string>
 									<key>appearanceDelay</key>
 									<integer>7</integer>
 								</dict>
@@ -5132,7 +5114,7 @@
 		<key>infoName</key>
 		<string>Facility Management Solutions</string>
 		<key>background</key>
-		<string>logo_onity.png</string>
+		<string>logo-onity.png</string>
 		<key>xy</key>
 		<string>371, 397</string>
 		<key>demoName</key>

@@ -13,6 +13,7 @@
 #import "IBTViewController.h"
 #import "buildingViewController.h"
 #import "embHotSpotViewController.h"
+#import "UIApplication+AppVersion.h"
 
 @interface masterViewController () <IBTViewControllerDelegate>
 {
@@ -29,6 +30,7 @@
 @property (nonatomic, strong) UIButton						*uib_ibtBtn;
 @property (nonatomic, strong) UIButton						*uib_sustainBtn;
 @property (nonatomic, strong) UIButton						*uib_advante3cBtn;
+@property (nonatomic, strong) UIButton						*uib_helpBtn;
 
 @end
 
@@ -89,7 +91,9 @@ static CGFloat yHeight = 315;
     [self initIBTButton];
     [self initSustainButton];
     [self initAdvante3cButton];
-
+    [self initHelpButton];
+    [self initVersion];
+    
 	currentCompanyIndex = 0;
     selectedRow = -1;
     
@@ -110,6 +114,39 @@ static CGFloat yHeight = 315;
     [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
+-(void)initVersion
+{
+    UILabel *uil_Ver = [[UILabel alloc] initWithFrame:CGRectMake(40.0, 740, 100, 20)];
+    uil_Ver.text = [NSString stringWithFormat:@"v%@",[UIApplication appVersion]];
+    [uil_Ver setFont:[UIFont systemFontOfSize:8]];
+    [uil_Ver setTextColor:[UIColor whiteColor]];
+    [uil_Ver setTextAlignment:NSTextAlignmentCenter];
+    [self.view addSubview: uil_Ver];
+}
+
+#pragma mark - Sustain Button
+-(void)initHelpButton
+{
+    if (_uib_helpBtn) {
+        [_uib_helpBtn removeFromSuperview];
+    }
+    _uib_helpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_helpBtn.frame = CGRectMake(48, 715, 85, 24);
+    _uib_helpBtn.tag = 0;
+    [_uib_helpBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
+    [_uib_helpBtn setTitle:@"Help" forState:UIControlStateNormal];
+    [_uib_helpBtn addTarget: self action:@selector(loadHelpView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: _uib_helpBtn];
+    
+    [_uib_helpBtn.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [_uib_helpBtn.layer setBorderWidth:1.0];
+}
+
+-(void)loadHelpView
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showHelp" object:self];
+}
+
 #pragma mark - Sustain Button
 -(void)initAdvante3cButton
 {
@@ -117,7 +154,7 @@ static CGFloat yHeight = 315;
         [_uib_advante3cBtn removeFromSuperview];
     }
     _uib_advante3cBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_advante3cBtn.frame = CGRectMake(0, yHeight, 199, 44);
+    _uib_advante3cBtn.frame = CGRectMake(0, yHeight, 180, 44);
     _uib_advante3cBtn.tag = 0;
     [_uib_advante3cBtn setImage: [UIImage imageNamed:@"menu_advantec.png"] forState:UIControlStateNormal];
     [_uib_advante3cBtn setImage: [UIImage imageNamed:@"menu_advantec.png"] forState:UIControlStateSelected];
@@ -132,13 +169,19 @@ static CGFloat yHeight = 315;
         [_uib_sustainBtn removeFromSuperview];
     }
     _uib_sustainBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_sustainBtn.frame = CGRectMake(0, yHeight+44, 199, 44);
+    _uib_sustainBtn.frame = CGRectMake(0, yHeight+44, 180, 44);
     _uib_sustainBtn.tag = 0;
     [_uib_sustainBtn setImage: [UIImage imageNamed:@"menu_sustainability.png"] forState:UIControlStateNormal];
     [_uib_sustainBtn setImage: [UIImage imageNamed:@"menu_sustainability.png"] forState:UIControlStateSelected];
-    [_uib_sustainBtn addTarget: self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_sustainBtn addTarget: self action:@selector(loadSustainability) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_sustainBtn];
 }
+
+-(void)loadSustainability
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showSustainability" object:self userInfo:nil];
+}
+
 
 -(IBAction)loadHotSpotView:(id)sender
 {
@@ -169,7 +212,7 @@ static CGFloat yHeight = 315;
         [_uib_ibtBtn removeFromSuperview];
     }
     _uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_ibtBtn.frame = CGRectMake(0, yHeight+44+44, 199, 44);
+    _uib_ibtBtn.frame = CGRectMake(0, yHeight+44+44, 180, 44);
     [_uib_ibtBtn setImage: [UIImage imageNamed:@"menu_utc.png"] forState:UIControlStateNormal];
     [_uib_ibtBtn setImage: [UIImage imageNamed:@"menu_utc.png"] forState:UIControlStateSelected];
     [_uib_ibtBtn addTarget: self action:@selector(notifyIBT) forControlEvents:UIControlEventTouchUpInside];
@@ -181,6 +224,12 @@ static CGFloat yHeight = 315;
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showIBT" object:nil];
     NSLog(@"loadIBT");
+}
+
+-(void)notifySustainability
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showSustainability" object:nil];
+    NSLog(@"loadSustainability");
 }
 
 

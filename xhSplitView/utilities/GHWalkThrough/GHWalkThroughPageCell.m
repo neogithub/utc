@@ -61,7 +61,7 @@
     rect1.origin.x = (self.contentView.frame.size.width - rect1.size.width)/2;
     rect1.origin.y = self.frame.size.height - self.titlePositionY - self.imgPositionY - rect1.size.height;
     self.titleImageView.frame = rect1;
-
+    
     [self layoutTitleLabel];
     
     CGRect descLabelFrame = CGRectMake(20, self.frame.size.height - self.descPositionY, self.contentView.frame.size.width - 40, 500);

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SustainViewController">
+            <connections>
+                <outlet property="uiiv_BG" destination="1Dn-sV-4Ox" id="UTx-wT-kHW"/>
+                <outlet property="uiiv_data" destination="HEm-uP-YLX" id="pjk-8V-g8V"/>
+                <outlet property="uiiv_header" destination="Zi0-a5-uBn" id="D7R-KW-9IZ"/>
+                <outlet property="uitv_text" destination="SeY-UO-KQh" id="1rd-66-m1i"/>
+                <outlet property="uiv_header" destination="fss-Or-oF8" id="KDA-53-AKw"/>
+                <outlet property="uiv_ibt" destination="tNa-Ue-215" id="eVK-0h-uo8"/>
+                <outlet property="uiv_ibtData" destination="8DR-O2-vF9" id="5u1-XE-0Vg"/>
+                <outlet property="uiv_logoBns" destination="igY-n1-wCT" id="ChW-U4-bxM"/>
+                <outlet property="uiv_modalContainer" destination="i5M-Pr-FkT" id="epQ-kD-oFc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="uibCollection" destination="xt0-Q6-hwC" id="78F-6F-cle"/>
+                <outletCollection property="uibCollection" destination="K4S-AU-Pds" id="Qqy-HI-EPn"/>
+                <outletCollection property="uibCollection" destination="xr0-6M-2wR" id="7Mu-ue-LcO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PH2_BUILDING_WIREFRAME_00_UNBUILD.png" id="1Dn-sV-4Ox">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view clipsSubviews="YES" alpha="0.90000000000000024" contentMode="scaleToFill" id="tNa-Ue-215">
+                    <rect key="frame" x="202" y="168" width="620" height="432"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="fss-Or-oF8">
+                            <rect key="frame" x="0.0" y="0.0" width="620" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_header.png" id="Zi0-a5-uBn">
+                                    <rect key="frame" x="0.0" y="0.0" width="620" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_close.png" id="zEZ-wq-HgS">
+                                    <rect key="frame" x="589" y="14" width="15" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sustainability" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oZl-qR-1xP">
+                                    <rect key="frame" x="21" y="12" width="329" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LPx-h2-ezV">
+                                    <rect key="frame" x="559" y="0.0" width="61" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="doDismiss:" destination="-1" eventType="touchUpInside" id="YQh-Fr-Tu1"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" id="8DR-O2-vF9">
+                            <rect key="frame" x="0.0" y="47" width="620" height="385"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="SeY-UO-KQh">
+                                    <rect key="frame" x="16" y="9" width="596" height="248"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <mutableString key="text">As a responsible corporate citizen, we are com​mitted to minimizing any adverse environmental impact of our products, our operations and our supply chain. We provide a safe work environme​nt and support lifelong learning for all employees. We support charitable and social causes in the communities where we do business. 
+
+Everywhere we do business, we apply the highest standards of corporate responsibility and measure success with the same set of ethical, environmental and safety metrics.​</mutableString>
+                                    <fontDescription key="fontDescription" name="Times-Roman" family="Times" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_rule.png" id="rb3-Ug-Tv2">
+                                    <rect key="frame" x="24" y="279" width="580" height="2"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <view contentMode="scaleToFill" id="igY-n1-wCT">
+                                    <rect key="frame" x="14" y="307" width="585" height="58"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xt0-Q6-hwC">
+                                            <rect key="frame" x="4" y="2" width="157" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="0.61168791118421051" blue="0.37679893092105265" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <state key="normal" title="This Green Building">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="loadText:" destination="-1" eventType="touchUpInside" id="3Mo-dc-0La"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K4S-AU-Pds">
+                                            <rect key="frame" x="171" y="2" width="188" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="0.61168791119999999" blue="0.3767989309" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <state key="normal" title="Green Building Leadership">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="loadText:" destination="-1" eventType="touchUpInside" id="KJI-vb-QX0"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xr0-6M-2wR">
+                                            <rect key="frame" x="369" y="2" width="212" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="0.61168791119999999" blue="0.3767989309" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <state key="normal" title="Green Technology Leadership">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="loadText:" destination="-1" eventType="touchUpInside" id="ar8-Ne-upH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2015-01-06 14.58.01.png" id="HEm-uP-YLX">
+                                    <rect key="frame" x="498" y="190" width="114" height="67"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select to Learn More" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgr-6B-R0x">
+                                    <rect key="frame" x="24" y="284" width="401" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="305" y="300"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="PH2_BUILDING_WIREFRAME_00_UNBUILD.png" width="2048" height="1536"/>
+        <image name="Screenshot 2015-01-06 14.58.01.png" width="722" height="250"/>
+        <image name="grfx_ibt_close.png" width="15" height="16"/>
+        <image name="grfx_ibt_header.png" width="1" height="90"/>
+        <image name="grfx_ibt_rule.png" width="1" height="5"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

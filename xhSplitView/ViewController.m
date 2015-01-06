@@ -18,6 +18,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "UIImage+FlipImage.h"
 #import "IBTViewController.h"
+#import "SustainViewController.h"
 
 static NSString * const sampleDesc1 = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt laoreet diam, id suscipit ipsum sagittis a. ";
 
@@ -33,7 +34,7 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 
 static CGFloat menuButtonHeights = 51;
 
-@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate>
+@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate, SustainViewControllerDelegate>
 
 @property (nonatomic, strong) GHWalkThroughView* ghView ;
 
@@ -92,8 +93,13 @@ enum MenuVisibilityType : NSUInteger {
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moveSplitBtnRight) name:@"moveSplitBtnRight" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initIBT:) name:@"showIBT" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initSustainability:) name:@"showSustainability" object:nil];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeMaster) name:@"openCloseMaster" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeMaster) name:@"closeMaster" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openMaster) name:@"openMaster" object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHelp) name:@"showHelp" object:nil];
+
 
 	if (((AppDelegate*)[UIApplication sharedApplication].delegate).firstRun)
     {
@@ -332,8 +338,20 @@ enum MenuVisibilityType : NSUInteger {
     vc.delegate = self;
     [self presentViewController:vc animated:YES completion:^{}];
     
-    //TODO:fix open close side menu
-    [self toggleMasterVisibility:MenuVisibilityTypeOffscreen];
+    [self closeMaster];
+}
+
+#pragma mark Open Modal
+-(void)initSustainability:(NSNotification *)notification
+{
+    
+    NSLog(@"%@",[[notification userInfo] valueForKey:@"buttontag"]);
+    NSLog(@"initSustainability function");
+    SustainViewController* vc = [SustainViewController new];
+    vc.delegate = self;
+    [self presentViewController:vc animated:YES completion:^{}];
+   
+    [self closeMaster];
 }
 
 -(void)initSplitVC
@@ -351,7 +369,7 @@ enum MenuVisibilityType : NSUInteger {
     _uib_splitCtrl.frame = CGRectMake(0.0, 0.0, menuButtonHeights, menuButtonHeights);
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateNormal];
     [_uib_splitCtrl setImage: [UIImage imageNamed:@"icon main menu.png"] forState:UIControlStateSelected];
-    [_uib_splitCtrl addTarget: self action:@selector(toggleMasterVisibility:) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_splitCtrl addTarget: self action:@selector(openMaster) forControlEvents:UIControlEventTouchUpInside];
     [self.view insertSubview: _uib_splitCtrl aboveSubview:_splitVC.view];
 }
 
@@ -366,27 +384,18 @@ enum MenuVisibilityType : NSUInteger {
 }
 
 
-
--(void)toggleMasterVisibility:(NSInteger)visibility
+-(void)openMaster
 {
-    NSLog(@"%ld",(long)visibility);
-    
-    if ((visibility == MenuVisibilityTypeOnscreen) || (_uib_splitCtrl.selected == NO)) {
-        [_splitVC showPanel];
-        [UIView animateWithDuration:0.33 animations:^{
-            _uib_splitCtrl.transform = CGAffineTransformMakeTranslation(180, 0.0);
-			_uib_splitCtrl.hidden = YES;
-			NSLog(@"hideDetailChrome");
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"hideDetailChrome" object:nil];
-			[_detailView.view setUserInteractionEnabled:NO];
-        }];
-    }
-    else {
-        [self closeMaster];
-    }
+    [_splitVC showPanel];
+    [UIView animateWithDuration:0.33 animations:^{
+        _uib_splitCtrl.transform = CGAffineTransformMakeTranslation(180, 0.0);
+        _uib_splitCtrl.hidden = YES;
+        NSLog(@"hideDetailChrome");
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"hideDetailChrome" object:nil];
+        [_detailView.view setUserInteractionEnabled:NO];
+    }];
     
     _uib_splitCtrl.selected = !_uib_splitCtrl.selected;
-
 }
 
 -(void)closeMaster
@@ -417,19 +426,19 @@ enum MenuVisibilityType : NSUInteger {
 			[self setInitialImage];
 			[_splitVC addDetailController:_detailView animated:NO];
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadBuilding" object:nil];
-            [self toggleMasterVisibility:MenuVisibilityTypeOffscreen];
+            [self closeMaster];
 
 			break;
 			
 		case 1:
 			[_splitVC addDetailController:_detailView animated:NO];
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadBuilding" object:nil];
-            [self toggleMasterVisibility:MenuVisibilityTypeOffscreen];
+            [self closeMaster];
 			break;
 			
 		case 2:
 			
-            [self toggleMasterVisibility:MenuVisibilityTypeOffscreen];
+            [self closeMaster];
 
 			break;
 			

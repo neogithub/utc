@@ -8,16 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol IBTViewControllerDelegate <NSObject>;
+@protocol SustainViewControllerDelegate <NSObject>;
 @end
 
-@interface IBTViewController : UIViewController
-@property (nonatomic, weak) id<IBTViewControllerDelegate> delegate;
+@interface SustainViewController : UIViewController
+@property (nonatomic, weak) id<SustainViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIImageView *uiiv_BG;
 
-
-
--(IBAction)loadIBT:(id)sender;
--(IBAction)loadIBTAtDetail:(NSNumber*)i;
 
 @property (weak, nonatomic) IBOutlet UIView *uiv_modalContainer;
 - (IBAction)doDismiss: (id) sender;
@@ -29,4 +26,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *uib_learn;
 @property (weak, nonatomic) IBOutlet UIView *uiv_logoBns;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *uibCollection;
+@property (weak, nonatomic) IBOutlet UITextView *uitv_text;
+@property (weak, nonatomic) IBOutlet UIImageView *uiiv_data;
 @end

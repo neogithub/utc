@@ -11,5 +11,5 @@
 @interface embHotSpotViewController : UIViewController
 
 @property (strong, nonatomic) NSDictionary *dict_ibt;
-
+@property (assign)              BOOL isSustainability;
 @end

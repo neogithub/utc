@@ -8,6 +8,7 @@
 
 #import "embHotSpotViewController.h"
 #import "ebZoomingScrollView.h"
+#import "SustainViewController.h"
 
 #import <AVFoundation/AVPlayer.h>
 #import <AVFoundation/AVFoundation.h>
@@ -27,7 +28,7 @@ enum {
     TitleLabelsOffscreen,
 };
 
-@interface embHotSpotViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate>
+@interface embHotSpotViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, SustainViewControllerDelegate>
 {
     // fact cards
     CGFloat         removeTextAfterThisManySeconds;
@@ -307,6 +308,12 @@ enum {
 
 -(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
+    
+    
+    
+    if (_isSustainability) {
+ 
+    }
     
     NSLog(@"neoHotspotsView");
     
