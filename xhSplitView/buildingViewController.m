@@ -23,7 +23,7 @@
 #import "embTitle.h"
 #import "UIImage+FlipImage.h"
 
-#define kshowNSLogBOOL NO
+#define kshowNSLogBOOL YES
 
 static CGFloat backButtonHeight = 51;
 static CGFloat backButtonWidth	= 58;
@@ -366,7 +366,7 @@ enum {
 	[_uis_zoomingInfoImg removeFromSuperview];
 	
 	[self removeHotspots];
-	[_arr_hotspotsArray removeAllObjects];
+	//[_arr_hotspotsArray removeAllObjects];
 		
 	[_uib_backBtn setTag:1];
 }
@@ -496,7 +496,7 @@ enum {
 
 	// get array of all hotspots
 	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
-    NSArray *totalDataArray = selectedCo.cohotspots;
+    NSArray *totalDataArray = _arr_subHotspots;
 	//NSLog(@"%@",selectedCo.cohotspots);
 	
 	for (int i = 0; i < [totalDataArray count]; i++) {
@@ -721,7 +721,7 @@ enum {
 	
 		if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
 			
-			_coDict = [selectedCo.cohotspots objectAtIndex:formattedTag];
+			_coDict = [_arr_subHotspots objectAtIndex:formattedTag];
 			NSString *movieNamed =  [_coDict objectForKey:@"fileName"];
 			
 			NSDictionary *cod = _arr_subHotspots[formattedTag];
@@ -1120,17 +1120,24 @@ enum {
 	
 	if (_isPauseable == YES) {
 		[self unhideChrome];
-#warning might be trouble once movies are added
-		if ([_arr_subHotspots count] == 0) {
-			//[topTitle removeHotspotTitle];
-			if (topTitle.appendString) {
-				if (kshowNSLogBOOL) NSLog(@"topTitle.appendString %@",topTitle.appendString);
-				[topTitle setHotSpotTitle:topTitle.appendString];
-			}
-		} else {
+//#warning might be trouble once movies are added
+//		if ([_arr_subHotspots count] == 0) {
+//            
+//            NSLog(@"if ([_arr_subHotspots count] == 0) {");
+//            
+//			//[topTitle removeHotspotTitle];
+//			if (topTitle.appendString) {
+//				if (kshowNSLogBOOL) NSLog(@"topTitle.appendString %@",topTitle.appendString);
+//				[topTitle setHotSpotTitle:topTitle.appendString];
+//			}
+//		} else {
+            NSLog(@"\n\nelse");
+NSLog(@"\n\n%@",topTitle.appendString);
 			//_arr_subHotspots=nil;
+        if (topTitle.appendString) {
 			[topTitle setHotSpotTitle:topTitle.appendString];
-		}
+        }
+//		}
 	}
 	
 	[self clearHotpsotData];
@@ -1211,11 +1218,11 @@ enum {
   //TODO: check for key on hotspots
     NSArray *totalDataArray;
     
-    if (selectedCo.cohotspots.count != 0) {
-        totalDataArray = selectedCo.cohotspots;
-    } else {
+//    if (selectedCo.cohotspots.count != 0) {
         totalDataArray = _arr_subHotspots;
-    }
+//    } else {
+//        totalDataArray = _arr_subHotspots;
+//    }
 
 	// causes crash sometimes
 	NSDictionary *hotspotItem = totalDataArray [tappedView.tag];

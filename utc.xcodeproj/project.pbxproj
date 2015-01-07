@@ -414,8 +414,6 @@
 		8895FF3E1A5B44B50076A3EC /* SustainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FF3B1A5B44B50076A3EC /* SustainViewController.m */; };
 		8895FF3F1A5B44B50076A3EC /* SustainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895FF3C1A5B44B50076A3EC /* SustainViewController.xib */; };
 		8895FF401A5B44B50076A3EC /* SustainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895FF3C1A5B44B50076A3EC /* SustainViewController.xib */; };
-		88E8811B1A5C587A00DEECE0 /* PH2_BUILDING_WIREFRAME_00_UNBUILD.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E8811A1A5C587A00DEECE0 /* PH2_BUILDING_WIREFRAME_00_UNBUILD.png */; };
-		88E8811C1A5C587A00DEECE0 /* PH2_BUILDING_WIREFRAME_00_UNBUILD.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E8811A1A5C587A00DEECE0 /* PH2_BUILDING_WIREFRAME_00_UNBUILD.png */; };
 		88E8811E1A5C73DD00DEECE0 /* Screenshot 2015-01-06 14.48.22.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E8811D1A5C73DD00DEECE0 /* Screenshot 2015-01-06 14.48.22.png */; };
 		88E8811F1A5C73DD00DEECE0 /* Screenshot 2015-01-06 14.48.22.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E8811D1A5C73DD00DEECE0 /* Screenshot 2015-01-06 14.48.22.png */; };
 		88E881221A5C74BE00DEECE0 /* Screenshot 2015-01-06 14.53.17.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E881201A5C74BE00DEECE0 /* Screenshot 2015-01-06 14.53.17.png */; };
@@ -671,7 +669,6 @@
 		8895FF3A1A5B44B50076A3EC /* SustainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SustainViewController.h; sourceTree = "<group>"; };
 		8895FF3B1A5B44B50076A3EC /* SustainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SustainViewController.m; sourceTree = "<group>"; };
 		8895FF3C1A5B44B50076A3EC /* SustainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SustainViewController.xib; sourceTree = "<group>"; };
-		88E8811A1A5C587A00DEECE0 /* PH2_BUILDING_WIREFRAME_00_UNBUILD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_BUILDING_WIREFRAME_00_UNBUILD.png; path = "../../../../../../../Volumes/Projects/BouchezPage_UTCBisApp_Phase01_1400124/Interactive/_Assets_ Interactive/CONTENT/C_PHASE_02/_BUILDING_WIREFRAME/PH2_BUILDING_WIREFRAME_00_UNBUILD.png"; sourceTree = "<group>"; };
 		88E8811D1A5C73DD00DEECE0 /* Screenshot 2015-01-06 14.48.22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screenshot 2015-01-06 14.48.22.png"; path = "../../../../../Dropbox/Screenshots/Screenshot 2015-01-06 14.48.22.png"; sourceTree = "<group>"; };
 		88E881201A5C74BE00DEECE0 /* Screenshot 2015-01-06 14.53.17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screenshot 2015-01-06 14.53.17.png"; path = "../../../../../Dropbox/Screenshots/Screenshot 2015-01-06 14.53.17.png"; sourceTree = "<group>"; };
 		88E881211A5C74BE00DEECE0 /* Screenshot 2015-01-06 14.53.23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screenshot 2015-01-06 14.53.23.png"; path = "../../../../../Dropbox/Screenshots/Screenshot 2015-01-06 14.53.23.png"; sourceTree = "<group>"; };
@@ -709,7 +706,6 @@
 				88E881201A5C74BE00DEECE0 /* Screenshot 2015-01-06 14.53.17.png */,
 				88E881211A5C74BE00DEECE0 /* Screenshot 2015-01-06 14.53.23.png */,
 				88E8811D1A5C73DD00DEECE0 /* Screenshot 2015-01-06 14.48.22.png */,
-				88E8811A1A5C587A00DEECE0 /* PH2_BUILDING_WIREFRAME_00_UNBUILD.png */,
 				20192C961A488BCF00969C85 /* A_INTERACTIVE_FRAMEWORK */,
 				20192C951A488BC400969C85 /* B_PHASE_01 */,
 				20192C941A488BB800969C85 /* C_PHASE_02 */,
@@ -1250,7 +1246,6 @@
 				20E546F91A2DFEF40073B2CF /* panelTableViewCell.xib in Resources */,
 				8834E2681A57074200204D81 /* logo_advantecibt@2x.png in Resources */,
 				20E546FA1A2DFEF40073B2CF /* 02_TRANS_BLDG_UNBUILD.png in Resources */,
-				88E8811C1A5C587A00DEECE0 /* PH2_BUILDING_WIREFRAME_00_UNBUILD.png in Resources */,
 				8834E26A1A57074200204D81 /* logo_sustainibt.png in Resources */,
 				8895FEFF1A5B19F50076A3EC /* logo-automatedLogic@2x.png in Resources */,
 				8895FF1F1A5B19F50076A3EC /* logo-marioff@2x.png in Resources */,
@@ -1485,7 +1480,6 @@
 				824F14E219CB390800628F01 /* grfx_cellArrow@2x.png in Resources */,
 				20A95A4F19CBB82800132F7E /* icon home@2x.png in Resources */,
 				8895FF1E1A5B19F50076A3EC /* logo-marioff@2x.png in Resources */,
-				88E8811B1A5C587A00DEECE0 /* PH2_BUILDING_WIREFRAME_00_UNBUILD.png in Resources */,
 				20BF48DE1A3B501D009645DC /* logo_edwards@2x.png in Resources */,
 				824F14E619CB4C9200628F01 /* grfx_tableBg@2x.png in Resources */,
 				20192C9B1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
