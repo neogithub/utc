@@ -14,6 +14,9 @@
 @interface IBTViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
     Company			*selectedCo;
+    UIButton        *topBtn;
+    UIButton        *btmBtn;
+    NSArray         *companies;
 }
 
 @end
@@ -41,6 +44,24 @@
     
     _uib_learn.hidden = YES;
     //[self blurbackground];
+    
+        topBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        topBtn.frame = CGRectMake(381.0, 23.0, 124, 79);
+        topBtn.tag = 0;
+    
+        //[topBtn setImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
+        [topBtn addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+        [_uiv_detail addSubview:topBtn];
+        
+        btmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btmBtn.frame = CGRectMake(381.0, 110, 124, 79);
+    btmBtn.tag = 1;
+        //[btmBtn setImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
+    [btmBtn addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+        [_uiv_detail addSubview:btmBtn];
+    
+    [_uitv_connectText setFont:[UIFont fontWithName:@"Arial" size:17]];
+
 }
 
 -(IBAction)loadIBT:(id)sender
@@ -91,7 +112,48 @@
     NSLog(@"tag %li", (long)[sender tag]);
     
     [self dimButtonAtIndex:(int)[sender tag]];
+    
+    companies = @[@"AutomatedLogic",@"Carrier",@"Edwards",@"Interlogix",@"Lenel",@"Otis"];
+    
+    [[LibraryAPI sharedInstance] getSelectedCompanyNamed:companies[(int)[sender tag]]];
+    
+    selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+    NSDictionary *catDict = selectedCo.coibtpanel;
+    //NSLog(@"%@", catDict);
+    
+    _uiiv_logo.image = [UIImage imageNamed:catDict[@"selectedlogo"]];
+    _uiiv_arrow.image = [UIImage imageNamed:catDict[@"arrow"]];
 
+    _uitv_connectText.text = catDict[@"text"];
+    [_uitv_connectText setFont:[UIFont fontWithName:@"Arial" size:17]];
+
+    NSArray *connectedLogos = [catDict objectForKey:@"connections"];
+   
+    if (connectedLogos.count > 1) {
+       // UIButton *topBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        topBtn.frame = CGRectMake(361.0, 23.0, 124, 79);
+        [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
+        //[topBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
+        //[_uiv_detail addSubview:topBtn];
+        
+        //UIButton *btmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btmBtn.frame = CGRectMake(361.0, 110, 124, 79);
+        [btmBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
+        //[topBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
+        //[_uiv_detail addSubview:btmBtn];
+        
+        btmBtn.hidden = NO;
+        
+    } else {
+        
+        //UIButton *topBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        topBtn.frame = CGRectMake(361.0, 66.0, 124, 79);
+        [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
+        //[topBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
+        //[_uiv_detail addSubview:topBtn];
+        
+        btmBtn.hidden = YES;
+    }
 }
 
 
@@ -193,8 +255,10 @@
 -(IBAction)loadHotSpotView:(id)sender
 {
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+
     NSDictionary *catDict = [selectedCo.coibt objectAtIndex:[sender tag]];
-    
+    NSLog(@"%@", catDict);
+
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     embHotSpotViewController *vc = [sb instantiateViewControllerWithIdentifier:@"embHotSpotViewController"];
     vc.dict_ibt = catDict;

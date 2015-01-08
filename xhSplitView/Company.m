@@ -10,7 +10,7 @@
 
 @implementation Company
 
-- (id)initWithTitle:(NSString*)name logo:(NSString*)logo categories:(NSArray*)categories coibt:(NSArray*)coibt hotspots:(NSArray*)hotspots facts:(NSArray*)facts infoName:(NSString*)infoname
+- (id)initWithTitle:(NSString*)name logo:(NSString*)logo categories:(NSArray*)categories coibt:(NSArray*)coibt coibtpanel:(NSDictionary*)coibtpanel hotspots:(NSArray*)hotspots facts:(NSArray*)facts infoName:(NSString*)infoname
 {
 	self = [super init];
 	if (self)
@@ -27,6 +27,9 @@
 		_cofacts = facts;
         _coibt = [[NSArray alloc] init];
         _coibt = coibt;
+        
+        _coibtpanel = [[NSDictionary alloc] init];
+        _coibtpanel = coibtpanel;
 		
 		//NSLog(@"co  %@",_coname);
 		//NSLog(@"co  %@",_cologo);
@@ -34,7 +37,8 @@
 		//NSLog(@"co  %@",_cohotspots);
 		//NSLog(@"co  %@",_cofacts);
         //NSLog(@"co  %@",_coibt);
-
+        
+        //NSLog(@"co %@",_coibtpanel);
 		
 	}
 	return self;

@@ -286,6 +286,8 @@ static CGFloat yHeight = 315;
 {
 	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:(int)[sender tag]] forKey:@"buttontag"];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil userInfo:userInfo];
+    
+    
 }
 
 
@@ -349,7 +351,11 @@ static CGFloat yHeight = 315;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if ((indexPath.row != selectedRow) && (indexPath.row == 0)) { // commercial
+	//if ((indexPath.row != selectedRow) && (indexPath.row == 0)) { // commercial
+    if (indexPath.row == 0) { // commercial
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"closeMaster" object:nil];
+        
 		NSLog(@"The tapped cell is %i", (int)indexPath.row);
 		NSDictionary* dict = [NSDictionary dictionaryWithObject:
 							  [NSNumber numberWithInt:3]

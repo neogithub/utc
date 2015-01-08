@@ -14,9 +14,9 @@
 
 @property (nonatomic, retain, readonly) NSArray *cocategories, *cohotspots, *cofacts, *coibt;
 
-@property (nonatomic, retain, readonly) NSDictionary *codata;
+@property (nonatomic, retain, readonly) NSDictionary *codata, *coibtpanel;
 
 
-- (id)initWithTitle:(NSString*)name logo:(NSString*)logo categories:(NSArray*)categories coibt:(NSArray*)coibt hotspots:(NSArray*)hotspots facts:(NSArray*)facts infoName:(NSString*)infoname;
+- (id)initWithTitle:(NSString*)name logo:(NSString*)logo categories:(NSArray*)categories coibt:(NSArray*)coibt coibtpanel:(NSDictionary*)coibtpanel hotspots:(NSArray*)hotspots facts:(NSArray*)facts infoName:(NSString*)infoname;
 
 @end

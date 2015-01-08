@@ -61,6 +61,7 @@
 												 logo:[data objectForKey:@"background"]
 										   categories:[data objectForKey:@"categories"]
                                                 coibt:[data objectForKey:@"ibt"]
+                                           coibtpanel:[data objectForKey:@"ibtpanel"]
 											 hotspots:[data objectForKey:@"hotspots"]
 												facts:[data objectForKey:@"type"]
 											 infoName:[data objectForKey:@"infoName"]

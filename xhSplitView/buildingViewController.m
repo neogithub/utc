@@ -49,6 +49,8 @@ enum {
 	NSMutableArray	*arr_CompanyLogos;
 	embTitle		*topTitle;
 	NSString		*topname;
+    int             factWidth;
+    NSInteger       selctedRow;
 }
 
 - (IBAction)showPopover:(UIButton *)sender;
@@ -604,29 +606,27 @@ enum {
 #pragma mark Popover Delegate method
 -(void)selectedRow:(NSInteger)row withText:(NSString*)text
 {
-	if (kshowNSLogBOOL) NSLog(@"text %@",text);
+    selctedRow = row;
+    
+    if (kshowNSLogBOOL) NSLog(@"text %@",text);
+    
+    [self.popOver dismissPopoverAnimated:YES];
+    self.popOver = nil;
 
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     
 	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
 	{
-        [self.popOver dismissPopoverAnimated:YES];
-        self.popOver = nil;
         
         [self loadIBT:nil];
         
     } else if ( [selectedCo.coname isEqualToString:@"Sustainability"] ) {
         
-        [self.popOver dismissPopoverAnimated:YES];
-        self.popOver = nil;
-        
         [self loadSustainability];
 
 	} else {
-		
-      
         
-		NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:row];
+		NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:selctedRow];
 		NSString *categoryType = [catDict objectForKey:@"catType"];
 		NSString *categoryName = [catDict objectForKey:@"catName"];
 		NSString *subBG = [catDict objectForKey:@"subBG"];
@@ -640,13 +640,23 @@ enum {
 			[self initTitleBox];
 			[topTitle setHotSpotTitle:categoryName];
 			
-		} else if ([categoryType isEqualToString:@"still"]) {
+		} else if ([categoryType isEqualToString:@"filmWithCards"]) {
 			//TODO: connect to data
-			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG" withCloseButton:YES];
+            
+            NSDictionary *co_dict = _arr_subHotspots[0];
+            NSString *subBG = [co_dict objectForKey:@"background"];
+            NSLog(@"subBG = %@", subBG);
+            
+			//[self popUpImage:subBG withCloseButton:YES];
 			[self initTitleBox];
 			[topTitle setHotSpotTitle:categoryName];
-			
-		} else if ([categoryType isEqualToString:@"stillWithMenu"]) {
+        
+            [self animateTitleAndHotspot:TitleLabelsOffscreen];
+
+             NSString *mov = [co_dict objectForKey:@"fileName"];
+            [self loadMovieNamed:mov isTapToPauseEnabled:YES belowSubview:_uib_backBtn withOverlay:nil];
+            
+        } else if ([categoryType isEqualToString:@"stillWithMenu"]) {
 			
 			[self initTitleBox];
 			[topTitle setHotSpotTitle:categoryName];
@@ -666,10 +676,6 @@ enum {
 			 */
 			
 		}
-		
-		//The color picker popover is showing. Hide it.
-		[self.popOver dismissPopoverAnimated:YES];
-		self.popOver = nil;
         
         [_uib_ibtBtn removeFromSuperview];
 
@@ -728,7 +734,7 @@ enum {
 			NSString *imageNameName;
 			
 			if ([cod objectForKey:@"overlay"]) {
-				imageNameName = [NSString stringWithFormat:@"overlay.png"];
+				imageNameName = [cod objectForKey:@"overlay"];
 			}
 
 			if (i > 99) {
@@ -1091,57 +1097,89 @@ enum {
 	[self updateFilmHint];
 }
 
+#pragma mark close movie
+
 -(void)closeMovie
 {
-	if (kshowNSLogBOOL) NSLog(@"closeMovie");
-
+    if (kshowNSLogBOOL) NSLog(@"closeMovie");
     CGAffineTransform t = _uib_backBtn.transform;
     
-   if (kshowNSLogBOOL)  NSLog(@"xscale %f",t.tx);
-    
-    if (t.tx < 0) {
-        [self animateTitleAndHotspot:TitleLabelsOnscreen];
-    }
-    
-	if (_myTimer) {
-		[self.myTimer invalidate];
-		self.myTimer = nil;
-	}
-	
-	if (_uis_zoomingInfoImg !=nil) {
-		[self resetSubHotspot];
-	} else {
-		[self resetBaseInteractive];
-	}
-	
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	
-	if (kshowNSLogBOOL) NSLog(@"_arr_subHotspots %lu",(unsigned long)[_arr_subHotspots count]);
-	
-	if (_isPauseable == YES) {
-		[self unhideChrome];
-//#warning might be trouble once movies are added
-//		if ([_arr_subHotspots count] == 0) {
-//            
-//            NSLog(@"if ([_arr_subHotspots count] == 0) {");
-//            
-//			//[topTitle removeHotspotTitle];
-//			if (topTitle.appendString) {
-//				if (kshowNSLogBOOL) NSLog(@"topTitle.appendString %@",topTitle.appendString);
-//				[topTitle setHotSpotTitle:topTitle.appendString];
-//			}
-//		} else {
-            NSLog(@"\n\nelse");
-NSLog(@"\n\n%@",topTitle.appendString);
-			//_arr_subHotspots=nil;
-        if (topTitle.appendString) {
-			[topTitle setHotSpotTitle:topTitle.appendString];
+    NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:selctedRow];
+    NSString *categoryType = [catDict objectForKey:@"catType"];
+    if ([categoryType isEqualToString:@"filmWithCards"]) {
+         if (kshowNSLogBOOL) NSLog(@"closeMovie filmWithCards");
+        
+        [self updateStillFrameUnderFilm:@"03A Building Cut.png"];
+        
+        [topTitle removeFromSuperview];
+        
+        if (t.tx < 0) {
+            [self animateTitleAndHotspot:TitleLabelsOnscreen];
         }
-//		}
-	}
-	
-	[self clearHotpsotData];
-    
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+        if (_myTimer) {
+            [self.myTimer invalidate];
+            self.myTimer = nil;
+        }
+        
+        if (_uis_zoomingInfoImg !=nil) {
+            [self resetSubHotspot];
+        } else {
+            [self resetBaseInteractive];
+        }
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+        
+    } else {
+        
+        if (kshowNSLogBOOL)  NSLog(@"xscale %f",t.tx);
+        
+        if (t.tx < 0) {
+            [self animateTitleAndHotspot:TitleLabelsOnscreen];
+        }
+        
+        if (_myTimer) {
+            [self.myTimer invalidate];
+            self.myTimer = nil;
+        }
+        
+        if (_uis_zoomingInfoImg !=nil) {
+            [self resetSubHotspot];
+        } else {
+            [self resetBaseInteractive];
+        }
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
+        if (kshowNSLogBOOL) NSLog(@"_arr_subHotspots %lu",(unsigned long)[_arr_subHotspots count]);
+        
+        if (_isPauseable == YES) {
+            [self unhideChrome];
+            //#warning might be trouble once movies are added
+            //		if ([_arr_subHotspots count] == 0) {
+            //
+            //            NSLog(@"if ([_arr_subHotspots count] == 0) {");
+            //
+            //			//[topTitle removeHotspotTitle];
+            //			if (topTitle.appendString) {
+            //				if (kshowNSLogBOOL) NSLog(@"topTitle.appendString %@",topTitle.appendString);
+            //				[topTitle setHotSpotTitle:topTitle.appendString];
+            //			}
+            //		} else {
+            NSLog(@"\n\nelse");
+            NSLog(@"\n\n%@",topTitle.appendString);
+            //_arr_subHotspots=nil;
+            if (topTitle.appendString) {
+                [topTitle setHotSpotTitle:topTitle.appendString];
+            }
+            //		}
+        }
+        
+        [self clearHotpsotData];
+    }
 }
 
 -(void)resetBaseInteractive
@@ -1194,7 +1232,7 @@ NSLog(@"\n\n%@",topTitle.appendString);
 {
 
 	[self startMovieTimer];
-	[self createCards];
+    [self createCardsInView:_uiv_movieContainer];
 }
 
 //----------------------------------------------------
@@ -1203,13 +1241,15 @@ NSLog(@"\n\n%@",topTitle.appendString);
 /*
  create info cards from model
  */
--(void)createCards
+-(void)createCardsInView:(UIView*)view
 {
-	uiv_HotspotInfoCardContainer = [[UIView alloc] initWithFrame:CGRectZero];
+    if (kshowNSLogBOOL) NSLog(@"createCards");
+    
+        uiv_HotspotInfoCardContainer = [[UIView alloc] initWithFrame:CGRectZero];
 	uiv_HotspotInfoCardContainer.layer.backgroundColor = [UIColor clearColor].CGColor;
 	uiv_HotspotInfoCardContainer.clipsToBounds = YES;
 	
-	[_uiv_movieContainer addSubview:uiv_HotspotInfoCardContainer];
+	[view addSubview:uiv_HotspotInfoCardContainer];
 	
 	CGFloat textViewHeight = 0;
 	
@@ -1235,9 +1275,8 @@ NSLog(@"\n\n%@",topTitle.appendString);
 	NSDictionary *facts = [hotspotItem objectForKey:@"facts"];
 	NSArray *hotspotText = [facts objectForKey:@"factscopy"];
 	
-	//NSLog(@"%@",[hotspotText description]);
+	if (kshowNSLogBOOL) NSLog(@"%@",[hotspotText description]);
 
-	
 	//Get the position of Hs
 	NSString *str_position = [[NSString alloc] initWithString:[facts objectForKey:@"factxy"]];
 	NSRange range = [str_position rangeOfString:@","];
@@ -1247,7 +1286,8 @@ NSLog(@"\n\n%@",topTitle.appendString);
 	float hs_y = [str_y floatValue];
 	
 	float factsCopy = [[facts objectForKey:@"factwidth"] floatValue];
-	
+    factWidth = [[facts objectForKey:@"factwidth"] intValue];
+                 
 	for (int i = 0; i < [hotspotText count]; i++) {
 		NSDictionary *box = hotspotText[i];
 		
@@ -1255,7 +1295,7 @@ NSLog(@"\n\n%@",topTitle.appendString);
 		[card setBackgroundColor:[[UIColor clearColor] colorWithAlphaComponent:0.5]];
 		card.delay = (int)[[box objectForKey:@"appearanceDelay"] integerValue];
 		card.text = [box objectForKey:@"copy"];
-		//NSLog(@"%@",card.text);
+		NSLog(@"%@",card.text);
 		
 		[card setFrame:CGRectMake(0, textViewHeight, factsCopy, [self measureHeightOfUITextView:card.textView])];
 		card.alpha = 0;
@@ -1517,7 +1557,7 @@ NSLog(@"\n\n%@",topTitle.appendString);
 		
 		NSDictionary *attributes = @{ NSFontAttributeName: [UIFont systemFontOfSize:18.5], NSParagraphStyleAttributeName : paragraphStyle };
 		
-		CGRect size = [textToMeasure boundingRectWithSize:CGSizeMake(360, MAXFLOAT)
+		CGRect size = [textToMeasure boundingRectWithSize:CGSizeMake(factWidth, MAXFLOAT)
 												  options:NSStringDrawingUsesLineFragmentOrigin
 											   attributes:attributes
 												  context:nil];

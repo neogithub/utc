@@ -66,6 +66,10 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     self.descImgStrings = [NSArray arrayWithObjects:sustainImg1,sustainImg2, sustainImg3 , nil];
 
     [_uitv_text setFont:[UIFont fontWithName:@"Arial" size:17]];
+    
+    [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        obj.alpha = 1.0;
+    }];
 
 }
 
@@ -82,10 +86,40 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 -(IBAction)loadText:(id)sender
 {
     NSLog(@"loadText");
-    _uitv_text.text = self.descStrings[[sender tag]];
-    _uiiv_data.image = [UIImage imageNamed:self.descImgStrings[[sender tag]]];
-    [_uitv_text setFont:[UIFont fontWithName:@"Arial" size:17]];
+    _uitv_sustain.text = self.descStrings[[sender tag]];
+    //_uiiv_data.image = [UIImage imageNamed:self.descImgStrings[[sender tag]]];
+    [_uitv_sustain setFont:[UIFont fontWithName:@"Arial" size:17]];
     [self dimButtonAtIndex:(int)[sender tag]];
+}
+
+-(IBAction)loadIBT:(id)sender
+{
+    NSLog(@"loadIBT");
+    NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
+    
+    [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        obj.alpha = 1.0;
+    }];
+    _uib_learn.hidden = YES;
+    
+    [self dimButtonAtIndex:-1];
+
+    
+    [UIView animateWithDuration:0.33 delay:0
+         usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
+                        options:0 animations:^{
+                            
+                            _uiv_Text.frame = CGRectMake(0, -220, 620, 410);
+                            _uitv_text.frame = CGRectMake(16, 20, 587, 410);
+                            
+                           // _uiv_detail.frame = CGRectMake(0, 410, 620, 410);
+                           // _uiv_ibtData.frame = CGRectMake(0, 30, 620, 410);
+                            
+                            _uiv_logoBns.frame = CGRectMake(0, 285, 620, 100);
+
+                           // _uiv_buttons.frame = CGRectMake(_uiv_buttons.frame.origin.x, _uiv_buttons.frame.origin.y-15, _uiv_buttons.frame.size.width, _uiv_buttons.frame.size.height);
+                            
+                        } completion:nil];
 }
 
 
@@ -95,19 +129,32 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     
     NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
 
-    [_uiv_ibt insertSubview:_uiv_detail belowSubview:_uiv_header];
-    _uiv_detail.frame = CGRectMake(0, 410, 620, 410);
+    UIButton *btn = (UIButton*)sender;
+    
+    [_uiv_ibt insertSubview:_uiv_Text belowSubview:_uiv_header];
+    _uiv_Text.frame = CGRectMake(0, 415, 620, 410);
+    
+    _uil_header.text = btn.titleLabel.text;
+    
+    [self loadText: sender];
     
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                             
-                            _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
-                            _uiv_ibtData.frame = CGRectMake(0, -220, 620, 410);
+                            _uiv_Text.frame = CGRectMake(0, 120, 620, 410);
+                            _uitv_text.frame = CGRectMake(16, -250, 587, 410);
                             
-                            if (_uiv_ibt.frame.size.height == 410) {
-                                _uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y-90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height+170);
-                            }
+                           // _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
+                            _uiv_logoBns.frame = CGRectMake(0, -3, 620, 100);
+                            
+                            //if (_uiv_buttons.frame.origin.y == 35) {
+                           //     _uiv_buttons.frame = CGRectMake(_uiv_buttons.frame.origin.x, _uiv_buttons.frame.origin.y+15, _uiv_buttons.frame.size.width, _uiv_buttons.frame.size.height);
+                          //  }
+                            
+                            _uiiv_arrow.frame = CGRectMake(btn.center.x + 10 , 9, 21, 11);
+
+                           
                             
                         } completion:nil];
     
@@ -115,7 +162,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     
     NSLog(@"tag %li", (long)[sender tag]);
     
-    [self dimButtonAtIndex:(int)[sender tag]];
+  //  [self dimButtonAtIndex:(int)[sender tag]];
 
 }
 
@@ -133,6 +180,12 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 
 -(void)dimButtonAtIndex:(int)index
 {
+    for (UIButton *btn in _uibCollection) {
+        btn.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.5].CGColor;
+        btn.layer.borderWidth = 1.0;
+        [btn setBackgroundColor:[UIColor colorWithRed:118.0f/255.0f green:193.0f/255.0f blue:136.0f/255.0f alpha:1.0]];
+    }
+    
     NSLog(@"index %i",index);
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         NSLog(@"dimButtonAtIndex");
@@ -140,8 +193,12 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
         if (obj.tag == index) {
             NSLog(@"found!");
 
+                obj.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.0].CGColor;
+                obj.layer.borderWidth = 1.0;
+            [obj setBackgroundColor:[UIColor clearColor]];
+            
             //Assigning YES to the stop variable is the equivalent of calling "break" during fast enumeration
-            obj.alpha = 0.35;
+            //obj.alpha = 0.35;
             //*stop = YES;
             return ;
         } else {

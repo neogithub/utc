@@ -6,10 +6,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SustainViewController">
             <connections>
-                <outlet property="uiiv_BG" destination="1Dn-sV-4Ox" id="UTx-wT-kHW"/>
-                <outlet property="uiiv_data" destination="HEm-uP-YLX" id="pjk-8V-g8V"/>
+                <outlet property="uib_learn" destination="oRU-r7-DtU" id="nRn-iQ-cj7"/>
+                <outlet property="uiiv_BG" destination="arp-W9-2t0" id="y6g-15-Xlx"/>
+                <outlet property="uiiv_arrow" destination="vuP-oi-x1m" id="wEI-4S-w6r"/>
                 <outlet property="uiiv_header" destination="Zi0-a5-uBn" id="D7R-KW-9IZ"/>
+                <outlet property="uil_header" destination="i5Y-je-AiI" id="dXc-Gs-Jeq"/>
+                <outlet property="uitv_sustain" destination="H34-8N-O6L" id="Fqz-Wa-MNX"/>
                 <outlet property="uitv_text" destination="SeY-UO-KQh" id="1rd-66-m1i"/>
+                <outlet property="uiv_Text" destination="HXa-Fe-L0o" id="pcz-xs-b9d"/>
+                <outlet property="uiv_buttons" destination="As2-ed-IIC" id="h8P-3Z-o8R"/>
                 <outlet property="uiv_header" destination="fss-Or-oF8" id="KDA-53-AKw"/>
                 <outlet property="uiv_ibt" destination="tNa-Ue-215" id="eVK-0h-uo8"/>
                 <outlet property="uiv_ibtData" destination="8DR-O2-vF9" id="5u1-XE-0Vg"/>
@@ -26,7 +31,7 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PH2_BUILDING_WIREFRAME_00_UNBUILD.png" id="1Dn-sV-4Ox">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" id="arp-W9-2t0">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -34,6 +39,97 @@
                     <rect key="frame" x="202" y="168" width="620" height="432"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
+                        <view contentMode="scaleToFill" id="8DR-O2-vF9">
+                            <rect key="frame" x="0.0" y="47" width="620" height="385"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="SeY-UO-KQh">
+                                    <rect key="frame" x="16" y="19" width="587" height="238"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <string key="text">As a responsible corporate citizen, we are com​mitted to minimizing any adverse environmental impact of our products, our operations and our supply chain. We provide a safe work environme​nt and support lifelong learning for all employees. We support charitable and social causes in the communities where we do business. 
+
+Everywhere we do business, we apply the highest standards of corporate responsibility and measure success with the same set of ethical, environmental and safety metrics.​</string>
+                                    <fontDescription key="fontDescription" name="Times-Roman" family="Times" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Topic Below to Learn More" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgr-6B-R0x">
+                                    <rect key="frame" x="23" y="261" width="222" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" id="igY-n1-wCT">
+                                    <rect key="frame" x="0.0" y="285" width="620" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oRU-r7-DtU">
+                                            <rect key="frame" x="447" y="0.0" width="152" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                            <state key="normal" title="Learn About Sustainability">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="loadIBT:" destination="-1" eventType="touchUpInside" id="yG8-F4-Ibs"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" id="As2-ed-IIC">
+                                            <rect key="frame" x="22" y="35" width="577" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xt0-Q6-hwC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.46274509803921571" green="0.75686274509803919" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <state key="normal" title="This Green Building">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="loadIBTDetail:" destination="-1" eventType="touchUpInside" id="gt3-Gs-oJW"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K4S-AU-Pds">
+                                                    <rect key="frame" x="167" y="0.0" width="188" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.46274509800000002" green="0.75686274509999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <state key="normal" title="Green Building Leadership">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="loadIBTDetail:" destination="-1" eventType="touchUpInside" id="lMH-VF-UrZ"/>
+                                                        <action selector="loadText:" destination="-1" eventType="touchUpInside" id="KJI-vb-QX0"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xr0-6M-2wR">
+                                                    <rect key="frame" x="365" y="0.0" width="212" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.46274509800000002" green="0.75686274509999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <state key="normal" title="Green Technology Leadership">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="loadIBTDetail:" destination="-1" eventType="touchUpInside" id="FH8-2d-ptF"/>
+                                                        <action selector="loadText:" destination="-1" eventType="touchUpInside" id="ar8-Ne-upH"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.32156862745098036" green="0.69411764705882351" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                         <view contentMode="scaleToFill" id="fss-Or-oF8">
                             <rect key="frame" x="0.0" y="0.0" width="620" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,84 +162,6 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
-                        <view contentMode="scaleToFill" id="8DR-O2-vF9">
-                            <rect key="frame" x="0.0" y="47" width="620" height="385"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="SeY-UO-KQh">
-                                    <rect key="frame" x="16" y="9" width="596" height="248"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <mutableString key="text">As a responsible corporate citizen, we are com​mitted to minimizing any adverse environmental impact of our products, our operations and our supply chain. We provide a safe work environme​nt and support lifelong learning for all employees. We support charitable and social causes in the communities where we do business. 
-
-Everywhere we do business, we apply the highest standards of corporate responsibility and measure success with the same set of ethical, environmental and safety metrics.​</mutableString>
-                                    <fontDescription key="fontDescription" name="Times-Roman" family="Times" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_rule.png" id="rb3-Ug-Tv2">
-                                    <rect key="frame" x="24" y="279" width="580" height="2"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
-                                <view contentMode="scaleToFill" id="igY-n1-wCT">
-                                    <rect key="frame" x="14" y="307" width="585" height="58"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xt0-Q6-hwC">
-                                            <rect key="frame" x="4" y="2" width="157" height="56"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.0" green="0.61168791118421051" blue="0.37679893092105265" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="This Green Building">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="loadText:" destination="-1" eventType="touchUpInside" id="3Mo-dc-0La"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K4S-AU-Pds">
-                                            <rect key="frame" x="171" y="2" width="188" height="56"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.0" green="0.61168791119999999" blue="0.3767989309" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="Green Building Leadership">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="loadText:" destination="-1" eventType="touchUpInside" id="KJI-vb-QX0"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xr0-6M-2wR">
-                                            <rect key="frame" x="369" y="2" width="212" height="56"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.0" green="0.61168791119999999" blue="0.3767989309" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="Green Technology Leadership">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="loadText:" destination="-1" eventType="touchUpInside" id="ar8-Ne-upH"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2015-01-06 14.58.01.png" id="HEm-uP-YLX">
-                                    <rect key="frame" x="498" y="190" width="114" height="67"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select to Learn More" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgr-6B-R0x">
-                                    <rect key="frame" x="24" y="284" width="401" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
@@ -153,13 +171,50 @@ Everywhere we do business, we apply the highest standards of corporate responsib
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="305" y="300"/>
         </view>
+        <view contentMode="scaleToFill" id="HXa-Fe-L0o">
+            <rect key="frame" x="0.0" y="0.0" width="620" height="270"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.png" id="vuP-oi-x1m">
+                    <rect key="frame" x="482" y="9" width="21" height="11"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view alpha="0.89999999999999991" contentMode="scaleToFill" id="jXF-C5-Tsw">
+                    <rect key="frame" x="0.0" y="20" width="620" height="250"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="H34-8N-O6L">
+                            <rect key="frame" x="20" y="38" width="580" height="204"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <string key="text">Otis Compass destination management system works with Lenel’s OnGuard system to provide secure elevator bank access—facilitating orderly traffic flow, identifying cardholders requesting elevators and automatically defininf the floor or floors accessible to each person.
+
+Otis can utilize Interlogix security cameras for video crowd sensing in order to dispatch elevators for a large group of people
+</string>
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i5Y-je-AiI">
+                            <rect key="frame" x="25" y="19" width="401" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" red="0.32156862749999998" green="0.69411764710000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="305" y="670"/>
+        </view>
     </objects>
     <resources>
-        <image name="PH2_BUILDING_WIREFRAME_00_UNBUILD.png" width="2048" height="1536"/>
-        <image name="Screenshot 2015-01-06 14.58.01.png" width="722" height="250"/>
+        <image name="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" width="1920" height="1440"/>
+        <image name="arrow.png" width="21" height="11"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>
         <image name="grfx_ibt_header.png" width="1" height="90"/>
-        <image name="grfx_ibt_rule.png" width="1" height="5"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

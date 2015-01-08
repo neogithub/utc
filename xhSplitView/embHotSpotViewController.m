@@ -90,6 +90,8 @@ enum {
     // load data
    // selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     NSDictionary *catDict = _dict_ibt;
+    NSLog(@"%@", catDict);
+
     
     NSString *categoryType = [catDict objectForKey:@"catType"];
     NSString *categoryName = [catDict objectForKey:@"catName"];
@@ -309,12 +311,6 @@ enum {
 -(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
     
-    
-    
-    if (_isSustainability) {
- 
-    }
-    
     NSLog(@"neoHotspotsView");
     
     BOOL isSubHotspots;
@@ -336,8 +332,9 @@ enum {
     
     if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
         
-        _coDict = [selectedCo.cohotspots objectAtIndex:formattedTag];
+        _coDict = [_arr_subHotspots objectAtIndex:formattedTag];
         NSString *movieNamed =  [_coDict objectForKey:@"fileName"];
+        
         
         NSDictionary *cod = _arr_subHotspots[formattedTag];
         NSString *imageNameName;
@@ -825,8 +822,19 @@ enum {
     
     CGFloat textViewHeight = 0;
     
+//    selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+//    NSArray *totalDataArray = _arr_subHotspots;
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
-    NSArray *totalDataArray = selectedCo.cohotspots;
+    
+    //TODO: check for key on hotspots
+    NSArray *totalDataArray;
+    
+    //    if (selectedCo.cohotspots.count != 0) {
+    totalDataArray = _arr_subHotspots;
+    //    } else {
+    //        totalDataArray = _arr_subHotspots;
+    //    }
+
     
     // causes crash sometimes
     NSDictionary *hotspotItem = totalDataArray [tappedView.tag];

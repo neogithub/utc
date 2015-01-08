@@ -103,7 +103,7 @@
 -(void)animateTransition
 {
     [self loadBuildingVC:0];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"openCloseMaster" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"closeMaster" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
