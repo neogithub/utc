@@ -6,9 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBTViewController">
             <connections>
-                <outlet property="uib_btm" destination="H34-ax-FkK" id="1MC-ce-nwa"/>
-                <outlet property="uib_learn" destination="TA2-7a-grl" id="ua0-C7-AMZ"/>
-                <outlet property="uib_top" destination="UGu-sE-w9h" id="4SU-xD-UlS"/>
+                <outlet property="uib_learn" destination="ZSv-hz-gsb" id="EMS-jO-qcA"/>
+                <outlet property="uiiv_BG" destination="l4a-9u-IEX" id="jiJ-rg-5gr"/>
                 <outlet property="uiiv_arrow" destination="lg7-qw-1ci" id="nWe-Tj-oMp"/>
                 <outlet property="uiiv_header" destination="Zi0-a5-uBn" id="D7R-KW-9IZ"/>
                 <outlet property="uiiv_logo" destination="oed-2m-w1g" id="D4O-FT-s29"/>
@@ -40,50 +39,31 @@
 
 Otis can utilize Interlogix security cameras for video crowd sensing in order to dispatch elevators for a large group of people
 </string>
+                    <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_rule.png" id="Nsq-Zs-gXp">
-                    <rect key="frame" x="20" y="13" width="580" height="2"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_rule.png" id="Nsq-Zs-gXp">
+                    <rect key="frame" x="20" y="7" width="580" height="2"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_rule.png" id="8gV-gP-b22">
                     <rect key="frame" x="20" y="206" width="580" height="2"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ibt_otis.png" id="oed-2m-w1g">
-                    <rect key="frame" x="126" y="62" width="124" height="88"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-Transp-logo-otis.png" id="oed-2m-w1g">
+                    <rect key="frame" x="126" y="81" width="89" height="56"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UGu-sE-w9h">
-                    <rect key="frame" x="381" y="23" width="124" height="79"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="logo_automated.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="loadHotSpotView:" destination="-1" eventType="touchUpInside" id="dIH-sZ-TMh"/>
-                    </connections>
-                </button>
-                <button opaque="NO" alpha="0.0" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H34-ax-FkK">
-                    <rect key="frame" x="381" y="110" width="125" height="79"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="logo-interlogix.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="loadHotSpotView:" destination="-1" eventType="touchUpInside" id="MEP-Ic-BfB"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7gA-Vd-H2Y">
                     <rect key="frame" x="25" y="216" width="401" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
+                    <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="highlightedColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connection lines.png" id="lg7-qw-1ci">
-                    <rect key="frame" x="240" y="28" width="116" height="161"/>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-connection-line-double.png" id="lg7-qw-1ci">
+                    <rect key="frame" x="239" y="65" width="116" height="87"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -96,6 +76,10 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" id="l4a-9u-IEX">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <view clipsSubviews="YES" alpha="0.90000000000000024" contentMode="scaleToFill" id="tNa-Ue-215">
                     <rect key="frame" x="202" y="179" width="620" height="410"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,23 +88,6 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                             <rect key="frame" x="0.0" y="39" width="620" height="371"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="SeY-UO-KQh">
-                                    <rect key="frame" x="16" y="18" width="596" height="230"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
-
-Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
-                                            <attributes>
-                                                <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_rule.png" id="rb3-Ug-Tv2">
                                     <rect key="frame" x="24" y="256" width="580" height="2"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,31 +99,14 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn About IBT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TA2-7a-grl">
-                                    <rect key="frame" x="504" y="267" width="100" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZSv-hz-gsb">
-                                    <rect key="frame" x="495" y="263" width="117" height="28"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="loadIBT:" destination="-1" eventType="touchUpInside" id="daw-UV-lnP"/>
-                                    </connections>
-                                </button>
                                 <view contentMode="scaleToFill" id="igY-n1-wCT">
                                     <rect key="frame" x="14" y="291" width="585" height="58"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xt0-Q6-hwC">
-                                            <rect key="frame" x="-1" y="2" width="88" height="56"/>
+                                            <rect key="frame" x="0.0" y="2" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="logo-automatedLogic.png">
+                                            <state key="normal" backgroundImage="IBT-logo-automatedLogic.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -164,9 +114,9 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K4S-AU-Pds">
-                                            <rect key="frame" x="101" y="2" width="88" height="56"/>
+                                            <rect key="frame" x="99" y="2" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="logo-carrier.png">
+                                            <state key="normal" backgroundImage="IBT-logo-carrier.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -174,9 +124,9 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xr0-6M-2wR">
-                                            <rect key="frame" x="200" y="2" width="88" height="56"/>
+                                            <rect key="frame" x="198" y="2" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="logo-edwards.png">
+                                            <state key="normal" backgroundImage="IBT-logo-edwards.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -184,9 +134,9 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YsV-fN-wWF">
-                                            <rect key="frame" x="301" y="2" width="88" height="56"/>
+                                            <rect key="frame" x="297" y="2" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="logo-interlogix.png">
+                                            <state key="normal" backgroundImage="IBT-logo-interlogix.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -194,9 +144,9 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Ee-uU-FBH">
-                                            <rect key="frame" x="399" y="2" width="88" height="56"/>
+                                            <rect key="frame" x="396" y="2" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="logo-lenel.png">
+                                            <state key="normal" backgroundImage="IBT-logo-lenel.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -204,9 +154,9 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QfJ-tv-1uK">
-                                            <rect key="frame" x="497" y="2" width="88" height="56"/>
+                                            <rect key="frame" x="495" y="2" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="logo-otis.png">
+                                            <state key="normal" backgroundImage="IBT-logo-otis.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -216,6 +166,31 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="SeY-UO-KQh">
+                                    <rect key="frame" x="16" y="18" width="596" height="230"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <mutableString key="text">For decades upon decades, building systems have been viewed as separate and distinct units. HVAC, people moving, security, energy, all operating independently of each other and monitored separately.
+
+At United Technologies BIS, we believe in viewing building systems and the building itself as holistic, a living, thinking, actively managed entity. It’s that belief that is driving all divisions of our company to create connectivity and communication between every product and technology we offer, allowing those products to “talk” — to each other and to building management — with a united voice.
+
+We call this approach Intelligent Building Technologies. A better way of thinking that can literally bring buildings to life, making them smarter, safer and more efficient from top to bottom. And of course, a lot more enjoyable for the people who live and work in them.</mutableString>
+                                    <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZSv-hz-gsb">
+                                    <rect key="frame" x="482" y="263" width="117" height="28"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Learn About IBT">
+                                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="loadIBT:" destination="-1" eventType="touchUpInside" id="daw-UV-lnP"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
@@ -262,18 +237,18 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
         </view>
     </objects>
     <resources>
-        <image name="connection lines.png" width="116" height="78"/>
+        <image name="IBT-Transp-logo-otis.png" width="89" height="56"/>
+        <image name="IBT-connection-line-double.png" width="116" height="87"/>
+        <image name="IBT-logo-automatedLogic.png" width="89" height="56"/>
+        <image name="IBT-logo-carrier.png" width="89" height="56"/>
+        <image name="IBT-logo-edwards.png" width="89" height="56"/>
+        <image name="IBT-logo-interlogix.png" width="89" height="56"/>
+        <image name="IBT-logo-lenel.png" width="89" height="56"/>
+        <image name="IBT-logo-otis.png" width="89" height="56"/>
+        <image name="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" width="1920" height="1440"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>
-        <image name="grfx_ibt_header.png" width="1" height="90"/>
+        <image name="grfx_ibt_header.png" width="1" height="45"/>
         <image name="grfx_ibt_rule.png" width="1" height="5"/>
-        <image name="ibt_otis.png" width="88" height="56"/>
-        <image name="logo-automatedLogic.png" width="90" height="57"/>
-        <image name="logo-carrier.png" width="90" height="57"/>
-        <image name="logo-edwards.png" width="90" height="57"/>
-        <image name="logo-interlogix.png" width="90" height="57"/>
-        <image name="logo-lenel.png" width="90" height="57"/>
-        <image name="logo-otis.png" width="90" height="57"/>
-        <image name="logo_automated.png" width="88" height="56"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

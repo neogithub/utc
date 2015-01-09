@@ -19,6 +19,7 @@
 #import "UIImage+FlipImage.h"
 #import "IBTViewController.h"
 #import "SustainViewController.h"
+#import "ModalViewController.h"
 
 static NSString * const sampleDesc1 = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt laoreet diam, id suscipit ipsum sagittis a. ";
 
@@ -34,7 +35,7 @@ static NSString * const sampleDesc6 = @"Sed rhoncus arcu nisl, in ultrices mi eg
 
 static CGFloat menuButtonHeights = 51;
 
-@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate, SustainViewControllerDelegate>
+@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate, SustainViewControllerDelegate, ModalViewControllerDelegate>
 
 @property (nonatomic, strong) GHWalkThroughView* ghView ;
 
@@ -94,6 +95,7 @@ enum MenuVisibilityType : NSUInteger {
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initIBT:) name:@"showIBT" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initSustainability:) name:@"showSustainability" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initModalVC:) name:@"showModalVC" object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeMaster) name:@"closeMaster" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openMaster) name:@"openMaster" object:nil];
@@ -342,6 +344,19 @@ enum MenuVisibilityType : NSUInteger {
 }
 
 #pragma mark Open Modal
+#pragma mark Open Modal
+-(void)initModalVC:(NSNotification *)notification
+{
+    
+    NSLog(@"%@",[[notification userInfo] valueForKey:@"buttontag"]);
+    NSLog(@"initModal function");
+    ModalViewController* vc = [ModalViewController new];
+    vc.delegate = self;
+    [self presentViewController:vc animated:YES completion:^{}];
+    
+    [self closeMaster];
+}
+
 -(void)initSustainability:(NSNotification *)notification
 {
     

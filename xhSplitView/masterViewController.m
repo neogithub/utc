@@ -158,7 +158,7 @@ static CGFloat yHeight = 315;
     _uib_advante3cBtn.tag = 0;
     [_uib_advante3cBtn setImage: [UIImage imageNamed:@"menu_advantec.png"] forState:UIControlStateNormal];
     [_uib_advante3cBtn setImage: [UIImage imageNamed:@"menu_advantec.png"] forState:UIControlStateSelected];
-    [_uib_advante3cBtn addTarget: self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_advante3cBtn addTarget: self action:@selector(loadModalVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_advante3cBtn];
 }
 
@@ -175,6 +175,11 @@ static CGFloat yHeight = 315;
     [_uib_sustainBtn setImage: [UIImage imageNamed:@"menu_sustainability.png"] forState:UIControlStateSelected];
     [_uib_sustainBtn addTarget: self action:@selector(loadSustainability) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_sustainBtn];
+}
+
+-(void)loadModalVC
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showModalVC" object:self userInfo:nil];
 }
 
 -(void)loadSustainability

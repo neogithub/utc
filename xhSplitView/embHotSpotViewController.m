@@ -843,6 +843,8 @@ enum {
     //Get the exact second to remove the text boxes
     removeTextAfterThisManySeconds = [[hotspotItem objectForKey:@"removeafterseconds"] intValue];
     
+    NSLog(@"removeTextAfterThisManySeconds %f", removeTextAfterThisManySeconds);
+    
     // grab facts dict
     NSDictionary *facts = [hotspotItem objectForKey:@"facts"];
     NSArray *hotspotText = [facts objectForKey:@"factscopy"];

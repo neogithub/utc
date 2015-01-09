@@ -50,10 +50,11 @@
                                     <string key="text">As a responsible corporate citizen, we are com​mitted to minimizing any adverse environmental impact of our products, our operations and our supply chain. We provide a safe work environme​nt and support lifelong learning for all employees. We support charitable and social causes in the communities where we do business. 
 
 Everywhere we do business, we apply the highest standards of corporate responsibility and measure success with the same set of ethical, environmental and safety metrics.​</string>
+                                    <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" name="Times-Roman" family="Times" pointSize="17"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Topic Below to Learn More" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgr-6B-R0x">
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Topic Below to Learn More" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgr-6B-R0x">
                                     <rect key="frame" x="23" y="261" width="222" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -179,7 +180,7 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                     <rect key="frame" x="482" y="9" width="21" height="11"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <view alpha="0.89999999999999991" contentMode="scaleToFill" id="jXF-C5-Tsw">
+                <view contentMode="scaleToFill" id="jXF-C5-Tsw">
                     <rect key="frame" x="0.0" y="20" width="620" height="250"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -191,6 +192,7 @@ Everywhere we do business, we apply the highest standards of corporate responsib
 
 Otis can utilize Interlogix security cameras for video crowd sensing in order to dispatch elevators for a large group of people
 </string>
+                            <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
@@ -214,7 +216,7 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
         <image name="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" width="1920" height="1440"/>
         <image name="arrow.png" width="21" height="11"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>
-        <image name="grfx_ibt_header.png" width="1" height="90"/>
+        <image name="grfx_ibt_header.png" width="1" height="45"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

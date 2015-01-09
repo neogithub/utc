@@ -21,7 +21,7 @@
 
 @end
 
-static NSString * const sustainDesc1 = @"Only company in the world to be a founding member of Green Building Councils on four continents\n\nCarrier was instrumental in launching the U.S. Green Building Council in 1993 and was the first company in the world to join the organization\n\nEngaged more than 60,000 building professionals around the world since 2010 in green building training and education\n\nFounding sponsor of the Center for Green Schools";
+static NSString * const sustainDesc3 = @"Only company in the world to be a founding member of Green Building Councils on four continents\n\nCarrier was instrumental in launching the U.S. Green Building Council in 1993 and was the first company in the world to join the organization\n\nEngaged more than 60,000 building professionals around the world since 2010 in green building training and education\n\nFounding sponsor of the Center for Green Schools";
 
 static NSString * const sustainImg1 = @"Screenshot 2015-01-06 14.53.17.png";
 
@@ -29,7 +29,7 @@ static NSString * const sustainDesc2 = @"Advanced research and technology develo
 
 static NSString * const sustainImg2 = @"Screenshot 2015-01-06 14.53.23.png";
 
-static NSString * const sustainDesc3 = @"Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED®) v4 rating system\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic intelligent controls optimize building performance";
+static NSString * const sustainDesc1 = @"Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED®) v4 rating system\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic intelligent controls optimize building performance";
 
 static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 
@@ -69,6 +69,9 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 1.0;
+        obj.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.5].CGColor;
+        obj.layer.borderWidth = 1.0;
+        [obj setBackgroundColor:[UIColor colorWithRed:118.0f/255.0f green:193.0f/255.0f blue:136.0f/255.0f alpha:1.0]];
     }];
 
 }

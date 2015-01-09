@@ -15,6 +15,7 @@
 {
     Company			*selectedCo;
     UIButton        *topBtn;
+    UIButton        *midBtn;
     UIButton        *btmBtn;
     NSArray         *companies;
 }
@@ -45,23 +46,40 @@
     _uib_learn.hidden = YES;
     //[self blurbackground];
     
-        topBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        topBtn.frame = CGRectMake(381.0, 23.0, 124, 79);
-        topBtn.tag = 0;
+    _uiiv_BG.alpha = 0.0;
+
+    [self performSelector:@selector(fadeUpBG) withObject:nil afterDelay:0.75];
     
-        //[topBtn setImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
-        [topBtn addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
-        [_uiv_detail addSubview:topBtn];
-        
-        btmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btmBtn.frame = CGRectMake(381.0, 110, 124, 79);
-    btmBtn.tag = 1;
-        //[btmBtn setImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
+    topBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    topBtn.frame = CGRectMake(381.0, 23.0, 89, 56);
+    topBtn.tag = 0;
+    [topBtn addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [_uiv_detail addSubview:topBtn];
+    
+    midBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    midBtn.frame = CGRectMake(381.0, 110, 89, 56);
+    midBtn.tag = 1;
+    [midBtn addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [_uiv_detail addSubview:midBtn];
+    
+    btmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btmBtn.frame = CGRectMake(381.0, 190, 89, 56);
+    btmBtn.tag = 2;
     [btmBtn addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
-        [_uiv_detail addSubview:btmBtn];
+    [_uiv_detail addSubview:btmBtn];
     
     [_uitv_connectText setFont:[UIFont fontWithName:@"Arial" size:17]];
 
+}
+
+-(void)fadeUpBG
+{
+    [UIView animateWithDuration:0.33 animations:^{
+        
+        _uiiv_BG.alpha = 1.0;
+        
+    } completion:^(BOOL completed) {    } ];
+    
 }
 
 -(IBAction)loadIBT:(id)sender
@@ -101,6 +119,8 @@
                             _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
                             _uiv_ibtData.frame = CGRectMake(0, -220, 620, 410);
                             
+                           // _uib_learn.frame = CGRectMake(_uib_learn.frame.origin.x, 0, _uib_learn.frame.size.width, _uib_learn.frame.size.height);
+                            
                             if (_uiv_ibt.frame.size.height == 410) {
                                 _uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y-90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height+170);
                             }
@@ -128,30 +148,36 @@
     [_uitv_connectText setFont:[UIFont fontWithName:@"Arial" size:17]];
 
     NSArray *connectedLogos = [catDict objectForKey:@"connections"];
-   
-    if (connectedLogos.count > 1) {
-       // UIButton *topBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    NSLog(@"logos %lu", (unsigned long)[connectedLogos count]);
+    if (connectedLogos.count == 2) {
         topBtn.frame = CGRectMake(361.0, 23.0, 124, 79);
         [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
-        //[topBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
-        //[_uiv_detail addSubview:topBtn];
+
+        midBtn.frame = CGRectMake(361.0, 110, 124, 79);
+        [midBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
+     
+        midBtn.hidden = NO;
+        btmBtn.hidden = YES;
+
+    } else if (connectedLogos.count == 3) {
+        topBtn.frame = CGRectMake(361.0, 20.0, 89, 56);
+        [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
         
-        //UIButton *btmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btmBtn.frame = CGRectMake(361.0, 110, 124, 79);
-        [btmBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
-        //[topBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
-        //[_uiv_detail addSubview:btmBtn];
-        
+        midBtn.frame = CGRectMake(361.0, 80, 89, 56);
+        [midBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
+        midBtn.hidden = NO;
+
+        btmBtn.frame = CGRectMake(361.0, 140, 89, 56);
+        [btmBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[2]] forState:UIControlStateNormal];
         btmBtn.hidden = NO;
+
         
     } else {
         
-        //UIButton *topBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         topBtn.frame = CGRectMake(361.0, 66.0, 124, 79);
         [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
-        //[topBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
-        //[_uiv_detail addSubview:topBtn];
-        
+
+        midBtn.hidden = YES;
         btmBtn.hidden = YES;
     }
 }

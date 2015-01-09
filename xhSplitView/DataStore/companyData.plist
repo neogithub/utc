@@ -8,13 +8,13 @@
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>ibt_arrow_one.png</string>
+			<string>IBT-connection-line-double.png</string>
 			<key>selectedlogo</key>
-			<string>logo-otis.png</string>
+			<string>IBT-Transp-logo-otis.png</string>
 			<key>connections</key>
 			<array>
-				<string>logo-automatedLogic.png</string>
-				<string>logo-avantec.png</string>
+				<string>IBT-logo-lenel.png</string>
+				<string>IBT-logo-interlogix.png</string>
 			</array>
 			<key>text</key>
 			<string>Otis CompassPlus™ destination management system integrates with Lenel OnGuard® building access system to optimize traffic flow and floor access
@@ -622,44 +622,38 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 				<array>
 					<dict>
 						<key>xy</key>
-						<string>20,75</string>
+						<string>650,75</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<string>PH2_OTIS_01_LR_CDMS_FASTER_MOVEMENT.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>10</integer>
 						<key>width</key>
-						<string>360</string>
+						<string>300</string>
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>300</string>
+							<string>360</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>630,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Patented Otis SmartGrouping uniquely groups people and stops, significantly reducing waiting and travel times</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Integrates with Lenel OnGuard® building access system to optimize traffic flow and floor access</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Identify issues before they become problems</string>
+									<string>Integrates with Interlogix TruVision® security cameras to dispatch elevators based on crowd size</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
-									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -674,32 +668,38 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>20,125</string>
+						<string>650,125</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+						<string>PH2_OTIS_02_LR_CDMS_ENERGY_EFFICIENTCY.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>10</integer>
 						<key>width</key>
-						<string>360</string>
+						<string>340</string>
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>360</string>
+							<string>340</string>
 							<key>factxy</key>
-							<string>20,210</string>
+							<string>640,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+									<string>Places elevators in standby mode during light traffic, using 27% less energy than conventional destination dispatching</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+									<string>CompassPlus touch screens automatically go into sleep mode during low usage times</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>5</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>SmartGrouping greatly reduces start/stop peak energy draw</string>
+									<key>appearanceDelay</key>
+									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -714,9 +714,9 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Compass Destination Management System</string>
+				<string>CompassPlus™ Destination Management System</string>
 				<key>subBG</key>
-				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG</string>
+				<string>PH2_OTIS_00_STILL_CDMS_HS.png</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -727,42 +727,36 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>xy</key>
 						<string>20,75</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<string>PH2_OTIS_01_LR_NCE_GREEN_ESC.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>10</integer>
 						<key>width</key>
-						<string>360</string>
+						<string>330</string>
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>300</string>
+							<string>330</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>30,100</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Uses up to 60% less energy</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Sleep mode slows escalator speed when there are no passengers</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Identify issues before they become problems</string>
+									<string>ReGen VF drive captures created energy, directing it back into building grid</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
-									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>8</integer>
 								</dict>
 							</array>
 						</dict>
@@ -779,30 +773,36 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>xy</key>
 						<string>20,125</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+						<string>PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>13</integer>
 						<key>width</key>
-						<string>360</string>
+						<string>320</string>
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>360</string>
+							<string>340</string>
 							<key>factxy</key>
-							<string>20,210</string>
+							<string>30,100</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+									<string>Otis high-efficiency lubrication system uses up to 98% less oil</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+									<string>Otis EMS Panorama™ system constantly monitors, controls and gathers information, spotting potential issues</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>6</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Sleep mode significantly increases life of major mechanical components</string>
+									<key>appearanceDelay</key>
+									<integer>9</integer>
 								</dict>
 							</array>
 						</dict>
@@ -813,13 +813,13 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>background</key>
 						<string>icon marker center.png</string>
 						<key>caption</key>
-						<string>Ease of Monitoring and Maintenance</string>
+						<string>Ease of Monitoring &amp; Maintenance</string>
 					</dict>
 					<dict>
 						<key>xy</key>
 						<string>20,175</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+						<string>PH2_OTIS_03_LR_NCE_LED_LIGHT_BALUST.mov</string>
 						<key>removeafterseconds</key>
 						<integer>10</integer>
 						<key>width</key>
@@ -829,26 +829,14 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>20,203</string>
+							<string>30,100</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Small enough to fit inside the wall at top elevator landing</string>
+									<string>Customizable LED lighting allows for seamless integration into building design</string>
 									<key>appearanceDelay</key>
 									<integer>3</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>No need to plan extra room at top of hoistway</string>
-									<key>appearanceDelay</key>
-									<integer>5</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Much easier access for diagnostics and repair</string>
-									<key>appearanceDelay</key>
-									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -865,7 +853,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 				<key>catName</key>
 				<string>NCE Green Escalators</string>
 				<key>subBG</key>
-				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG</string>
+				<string>PH2_OTIS_00_STILL_NCE_HS.png</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -885,7 +873,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 		<key>xy</key>
 		<string>573.5, 665.5</string>
 		<key>transitionFilmImg</key>
-		<string>PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG</string>
+		<string>PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.PNG</string>
 		<key>infoName</key>
 		<string>Heating, Air-conditioning and Refrigeration </string>
 		<key>fileName</key>
@@ -899,44 +887,50 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 				<array>
 					<dict>
 						<key>xy</key>
-						<string>580,174</string>
+						<string>580,74</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<string>PH2_CARRIER_B_01A_ANIM_AQUAEDGE_23XRV.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>11</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>300</string>
+							<string>320</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>30,100</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Beats industry part load efficiency standards by up to 44%</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Tri-rotor design shortens rotor length and increases compression efficiency</string>
+									<key>appearanceDelay</key>
+									<integer>3</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>High-efficiency, chlorine-free solution</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Identify issues before they become problems</string>
+									<string>Integrates with Automated Logic plant system manager via WebCTRL® to optimize chiller plant systems and save energy</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>7</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
+									<string>Integrates with Automated Logic WebCTRL to assure comfortable temperature settings at time of occupancy based on building and weather conditions</string>
 									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>9</integer>
 								</dict>
 							</array>
 						</dict>
@@ -953,30 +947,37 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>xy</key>
 						<string>580,120</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+						<string>PH2_CARRIER_B_01B_ANIM_AQUAEDGE_23XRV.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>8</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>360</string>
+							<string>350</string>
 							<key>factxy</key>
-							<string>20,210</string>
+							<string>650,210</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+									<string>World’s first integrated, water-cooled, tri-rotor, variable-speed screw chiller</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>2</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+									<string>Wide operating envelope handles even the toughest load scenarios</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>4</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Capable of inverted starts
+</string>
+									<key>appearanceDelay</key>
+									<integer>6</integer>
 								</dict>
 							</array>
 						</dict>
@@ -987,15 +988,15 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>background</key>
 						<string>icon marker left.png</string>
 						<key>caption</key>
-						<string>Most Robust Chiller Available: The 23XRV</string>
+						<string>Most Robust Chiller Available</string>
 					</dict>
 					<dict>
 						<key>xy</key>
 						<string>500,400</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+						<string>PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov</string>
 						<key>removeafterseconds</key>
-						<integer>10</integer>
+						<integer>23</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -1008,21 +1009,21 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Small enough to fit inside the wall at top elevator landing</string>
+									<string>Greatly reduced number of moving parts</string>
 									<key>appearanceDelay</key>
 									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>No need to plan extra room at top of hoistway</string>
+									<string>Hermetic motor operates in refrigerated, clean environment</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>11</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Much easier access for diagnostics and repair</string>
+									<string>Unique tri-rotor compressor design eliminates slide valve and reduces bearing loads, resulting in longer operation</string>
 									<key>appearanceDelay</key>
-									<integer>7</integer>
+									<integer>18</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1048,7 +1049,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>xy</key>
 						<string>20,75</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<string>BG_H264_1440.mov</string>
 						<key>removeafterseconds</key>
 						<integer>23</integer>
 						<key>width</key>
@@ -1063,27 +1064,21 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Offers efficient filtration options including HEPA filters</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Features Agion® antimicrobial-coated steel for improved indoor air quality</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Identify issues before they become problems</string>
+									<string>Facilitates easy cleaning due to wash-down construction</string>
 									<key>appearanceDelay</key>
 									<integer>14</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
-									<key>appearanceDelay</key>
-									<integer>18</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1095,12 +1090,14 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Superior Air Quality</string>
+						<key>overlay</key>
+						<string>PH2_CARRIER_C_02A_SMB_AERO_39M_AIR_HANDLERS.png</string>
 					</dict>
 					<dict>
 						<key>xy</key>
 						<string>20,125</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+						<string>BG_H264_1440.mov</string>
 						<key>removeafterseconds</key>
 						<integer>23</integer>
 						<key>width</key>
@@ -1115,13 +1112,13 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+									<string>Has less than 1% leakage at 8 in.wg.</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+									<string>Features removable access panels</string>
 									<key>appearanceDelay</key>
 									<integer>10</integer>
 								</dict>
@@ -1134,13 +1131,15 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>background</key>
 						<string>icon marker center.png</string>
 						<key>caption</key>
-						<string>Leak Tight Construction</string>
+						<string>Leak-Tight Construction</string>
+						<key>overlay</key>
+						<string>PH2_CARRIER_C_02B_SMB_AERO_39M_AIR_HANDLERS.png</string>
 					</dict>
 					<dict>
 						<key>xy</key>
 						<string>20,175</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+						<string>BG_H264_1440.mov</string>
 						<key>removeafterseconds</key>
 						<integer>10</integer>
 						<key>width</key>
@@ -1155,21 +1154,15 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Small enough to fit inside the wall at top elevator landing</string>
+									<string>Digital controls installed at factory</string>
 									<key>appearanceDelay</key>
 									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>No need to plan extra room at top of hoistway</string>
+									<string>i-Vu Open Control System enables fully integrated native BACnet building automation system</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Much easier access for diagnostics and repair</string>
-									<key>appearanceDelay</key>
-									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1181,20 +1174,55 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Ease of Integration</string>
+						<key>overlay</key>
+						<string>PH2_CARRIER_C_02C_SMB_AERO_39M_AIR_HANDLERS.png</string>
 					</dict>
 				</array>
 				<key>catName</key>
 				<string>Aero 39M Air Handlers</string>
 				<key>subBG</key>
-				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG</string>
+				<string>PH2_CARRIER_C_02_SMB_AERO_39M_AIR_HANDLERS_HS.PNG</string>
 			</dict>
 			<dict>
 				<key>catType</key>
-				<string>still</string>
+				<string>filmWithCards</string>
+				<key>subhotspots</key>
+				<array>
+					<dict>
+						<key>fileName</key>
+						<string>PH2_CARRIER_D_03_ANIM_AIRSTREAM_FAN_COILS_42CE.mov</string>
+						<key>removeafterseconds</key>
+						<integer>5</integer>
+						<key>width</key>
+						<string>360</string>
+						<key>facts</key>
+						<dict>
+							<key>factwidth</key>
+							<string>360</string>
+							<key>factxy</key>
+							<string>30,100</string>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Choose from 27 varieties to fit any building configuration</string>
+									<key>appearanceDelay</key>
+									<integer>2</integer>
+								</dict>
+							</array>
+						</dict>
+						<key>type</key>
+						<string>movie</string>
+						<key>overlay</key>
+						<string>overlay.png</string>
+						<key>caption</key>
+						<string>Softer Serve Machine Model C723</string>
+						<key>background</key>
+						<string>PH2_LENEL_GENERAL.png</string>
+					</dict>
+				</array>
 				<key>catName</key>
 				<string>AirStream Fan Coils</string>
-				<key>subBG</key>
-				<string>PH2_KIDDE_01_SMG_FM200.PNG</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -1204,7 +1232,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 			</dict>
 		</array>
 		<key>transitionFilm</key>
-		<string>03_TRANS_ELEV.mov</string>
+		<string>PH2_CARRIER_A_00_ANIM_TRANS.mov</string>
 		<key>background</key>
 		<string>logo-carrier.png</string>
 		<key>demoName</key>
@@ -1212,12 +1240,12 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>ibt_arrow_two.png</string>
+			<string>IBT-connection-line-single.png</string>
 			<key>selectedlogo</key>
-			<string>logo-carrier.png</string>
+			<string>IBT-Transp-logo-carrier.png</string>
 			<key>connections</key>
 			<array>
-				<string>logo-avantec.png</string>
+				<string>IBT-logo-automatedLogic.png</string>
 			</array>
 			<key>text</key>
 			<string>Carrier systems integrate with Automated Logic plant system manager via WebCTRL® to optimize chiller plant systems and save energy
@@ -1235,7 +1263,7 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 						<key>xy</key>
 						<string>20,75</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<string>IBT_CARRIER_01_LR_CONN_AUTOLOG.mov</string>
 						<key>removeafterseconds</key>
 						<integer>23</integer>
 						<key>width</key>
@@ -1287,7 +1315,7 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 						<key>xy</key>
 						<string>20,125</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+						<string>PH2_CARRIER_01_SMG_CONN_AUTOLOG.png</string>
 						<key>removeafterseconds</key>
 						<integer>23</integer>
 						<key>width</key>
@@ -1393,11 +1421,11 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 				<array>
 					<dict>
 						<key>xy</key>
-						<string>180,274</string>
+						<string>740,340</string>
 						<key>fileName</key>
-						<string>BG_H264_1440.mov</string>
+						<string>PH2_TAYLOR_01_ANIM_C723_SOFT_SRV_MACH.mov</string>
 						<key>removeafterseconds</key>
-						<integer>9</integer>
+						<integer>7</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -1410,48 +1438,40 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Makes multiple slush products, smoothies, shakes, and cocktails</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>2</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Has capacity for two flavors in one machine</string>
 									<key>appearanceDelay</key>
-									<integer>3</integer>
+									<integer>6</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Identify issues before they become problems</string>
+									<string>Features easy-to-use touch-screen inputs</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
-									<key>appearanceDelay</key>
-									<integer>7</integer>
+									<integer>6</integer>
 								</dict>
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker right.png</string>
+						<string>icon marker left.png</string>
 						<key>caption</key>
-						<string>Softer Serve Machine Model C723</string>
-						<key>overlay</key>
-						<string>overlay.png</string>
+						<string>Soft-Serve Machine</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>580,474</string>
+						<string>520,500</string>
 						<key>fileName</key>
-						<string>BG_H264_1440.mov</string>
+						<string>PH2_TAYLOR_02_ANIM_L812_GRILL.mov</string>
 						<key>removeafterseconds</key>
-						<integer>6</integer>
+						<integer>5</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -1464,40 +1484,32 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Cooks up to 66% faster</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>2</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Enables programming of cook times for 72 menu items</string>
 									<key>appearanceDelay</key>
-									<integer>3</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Identify issues before they become problems</string>
-									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>4</integer>
 								</dict>
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker right.png</string>
+						<string>icon marker left.png</string>
 						<key>caption</key>
-						<string>Grill Model L812</string>
-						<key>overlay</key>
-						<string>overlay.png</string>
+						<string>Two-Sided Grill</string>
 					</dict>
 				</array>
 				<key>catName</key>
 				<string>Learn More</string>
 				<key>subBG</key>
-				<string>PH2_KIDDE_00_STILL_HS.png</string>
+				<string>PH2_TAYLOR_00_SMG_HS.PNG</string>
 			</dict>
 		</array>
 		<key>background</key>
@@ -1739,12 +1751,13 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>ibt_arrow_two.png</string>
+			<string>IBT-connection-line-double.png</string>
 			<key>selectedlogo</key>
-			<string>logo-lenel.png</string>
+			<string>IBT-Transp-logo-lenel.png</string>
 			<key>connections</key>
 			<array>
-				<string>logo-avantec.png</string>
+				<string>IBT-logo-otis.png</string>
+				<string>IBT-logo-edwards.png</string>
 			</array>
 			<key>text</key>
 			<string>Lenel OnGuard building access system integrates with Otis CompassPlus™ destination management system to optimize traffic flow and floor access
@@ -1878,7 +1891,7 @@ Lenel OnGuard building access system integrates with Edwards EST3 platform to ef
 				<key>catName</key>
 				<string>Learn More</string>
 				<key>subBG</key>
-				<string>PH2_KIDDE_00_STILL_HS.png</string>
+				<string>PH2_ADVANTE3C_01_SMG_GENERAL.png</string>
 			</dict>
 		</array>
 		<key>background</key>
@@ -2040,9 +2053,9 @@ Lenel OnGuard building access system integrates with Edwards EST3 platform to ef
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>ibt_arrow_two.png</string>
+			<string>IBT-connection-line-double.png</string>
 			<key>selectedlogo</key>
-			<string>logo-avantec.png</string>
+			<string>IBT-Transp-logo-avantec.png</string>
 			<key>connections</key>
 			<array>
 				<string>logo-avantec.png</string>
@@ -2069,9 +2082,9 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 				<array>
 					<dict>
 						<key>xy</key>
-						<string>780,74</string>
+						<string>20,75</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<string>PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov</string>
 						<key>removeafterseconds</key>
 						<integer>23</integer>
 						<key>width</key>
@@ -2086,27 +2099,21 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Offers powerful control features and supports major communications protocols</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Features intuitive user interface, which is consistent from building to building</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Identify issues before they become problems</string>
+									<string>Responds to and monitors Carrier HVAC, Otis elevators and escalators and Edwards fire and life safety systems</string>
 									<key>appearanceDelay</key>
 									<integer>14</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
-									<key>appearanceDelay</key>
-									<integer>18</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2115,13 +2122,13 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker right.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Web-Based System</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>280,474</string>
+						<string>20,125</string>
 						<key>fileName</key>
 						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
 						<key>removeafterseconds</key>
@@ -2138,25 +2145,31 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Calculates optimum set point values based on actual operating requirements</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Assures comfortable settings at time of occupancy based on building conditions, weather and system capacity</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Identify issues before they become problems</string>
+									<string>Reduces short-term energy use</string>
 									<key>appearanceDelay</key>
 									<integer>14</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
+									<string>Integrates with Carrier to optimize chiller plant system efficiency</string>
+									<key>appearanceDelay</key>
+									<integer>18</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Integrates with Edwards EST3 platform and Interlogix TruVision® cameras to see where fire is located</string>
 									<key>appearanceDelay</key>
 									<integer>18</integer>
 								</dict>
@@ -2167,13 +2180,13 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker right.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Saves Energy &amp; Expense</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>580,120</string>
+						<string>20,175</string>
 						<key>fileName</key>
 						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
 						<key>removeafterseconds</key>
@@ -2190,30 +2203,30 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+									<string>Calculates energy efficiency, consumption and occupant comfort; reports trends as easily understandable percentages</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
+									<string>Dynamically displays calculations per area, tenant and building</string>
 									<key>appearanceDelay</key>
 									<integer>10</integer>
 								</dict>
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>2</integer>
+						<integer>3</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker left.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Environmental Index</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>200,200</string>
+						<string>20,225</string>
 						<key>fileName</key>
 						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
 						<key>removeafterseconds</key>
@@ -2230,30 +2243,18 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Small enough to fit inside the wall at top elevator landing</string>
+									<string>Shows exact hour and minute in which problem occurred for more accurate diagnosis</string>
 									<key>appearanceDelay</key>
 									<integer>3</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>No need to plan extra room at top of hoistway</string>
-									<key>appearanceDelay</key>
-									<integer>5</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Much easier access for diagnostics and repair</string>
-									<key>appearanceDelay</key>
-									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>2</integer>
+						<integer>3</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker left.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Time-Lapse Graphics </string>
 					</dict>
@@ -2261,7 +2262,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 				<key>catName</key>
 				<string>WebCTRL Web-based Building Automation</string>
 				<key>subBG</key>
-				<string>PH2_KIDDE_01_SMG_FM200.PNG</string>
+				<string>PH2_AUTOLOG_00_STILL_WEB_BASE_HS.png</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -2276,13 +2277,13 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>removeafterseconds</key>
 						<integer>11</integer>
 						<key>width</key>
-						<string>360</string>
+						<string>300</string>
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>360</string>
+							<string>300</string>
 							<key>factxy</key>
-							<string>30,120</string>
+							<string>30,85</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -2318,7 +2319,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 				<key>catName</key>
 				<string>Eco Screen Sustainability Kiosk</string>
 				<key>subBG</key>
-				<string>PH2_KIDDE_01_SMG_FM200.PNG</string>
+				<string>PH2_AUTOLOG_B_00_STILL_ECOSCREEN_SUSTAIN_HS.png</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -2486,12 +2487,14 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>ibt_arrow_two.png</string>
+			<string>IBT-connection-line-interlogix.png</string>
 			<key>selectedlogo</key>
-			<string>logo-automatedLogic.png</string>
+			<string>IBT-Transp-logo-automatedLogic.png</string>
 			<key>connections</key>
 			<array>
-				<string>logo-avantec.png</string>
+				<string>IBT-logo-carrier.png</string>
+				<string>IBT-logo-edwards.png</string>
+				<string>IBT-logo-interlogix.png</string>
 			</array>
 			<key>text</key>
 			<string>Automated Logic WebCTRL integrates with Carrier systems to optimize chiller plant systems and save energy
@@ -2703,7 +2706,7 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 				<array>
 					<dict>
 						<key>xy</key>
-						<string>580,474</string>
+						<string>580,574</string>
 						<key>fileName</key>
 						<string>BG_H264_1440.mov</string>
 						<key>removeafterseconds</key>
@@ -2720,27 +2723,9 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Offers end-to-end security systems including video, intrusion, access and transmission</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
-									<key>appearanceDelay</key>
-									<integer>5</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Identify issues before they become problems</string>
-									<key>appearanceDelay</key>
-									<integer>14</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
-									<key>appearanceDelay</key>
-									<integer>18</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2753,15 +2738,15 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 						<key>caption</key>
 						<string>Security Management</string>
 						<key>overlay</key>
-						<string>overlay.png</string>
+						<string>PH2_INTERLOGIX_01_SMG_SECURITY_MANAGEMENT.png</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>280,474</string>
+						<string>280,174</string>
 						<key>fileName</key>
-						<string>BG_H264_1440.mov</string>
+						<string>PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>8</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -2774,27 +2759,21 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+									<string>Delivers exceptional image quality and captures critical details</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>2</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
+									<string>Integrates with Edwards EST3 platform and Automated Logic WebCTRL® to detect and see where a fire is located</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Identify issues before they become problems</string>
+									<string>Integrates with Otis CompassPlus™ destination management system to dispatch elevators based on crowd size</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
-									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>8</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2805,15 +2784,13 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 						<key>background</key>
 						<string>icon marker right.png</string>
 						<key>caption</key>
-						<string>Truvision Cameras</string>
-						<key>overlay</key>
-						<string>overlay.png</string>
+						<string>TruVision® Cameras</string>
 					</dict>
 				</array>
 				<key>catName</key>
 				<string>Learn More</string>
 				<key>subBG</key>
-				<string>PH2_KIDDE_00_STILL_HS.png</string>
+				<string>PH2_INTERLOGIX_00_STILL_HS.png</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -2981,12 +2958,14 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>ibt_arrow_two.png</string>
+			<string>IBT-connection-line-interlogix.png</string>
 			<key>selectedlogo</key>
-			<string>logo-interlogix.png</string>
+			<string>IBT-Transp-logo-interlogix.png</string>
 			<key>connections</key>
 			<array>
-				<string>logo-avantec.png</string>
+				<string>IBT-logo-automatedLogic.png</string>
+				<string>IBT-logo-edwards.png</string>
+				<string>IBT-logo-otis.png</string>
 			</array>
 			<key>text</key>
 			<string>Interlogix TruVision cameras integrate with Edwards EST3 platform and Automated Logic WebCTRL to detect and see where a fire is located
@@ -3060,15 +3039,15 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 						<key>caption</key>
 						<string>Life Safety System &amp; Incident Mgmt. System</string>
 						<key>overlay</key>
-						<string>overlay.png</string>
+						<string>PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.png</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>580,474</string>
+						<string>880,360</string>
 						<key>fileName</key>
-						<string>BG_H264_1440.mov</string>
+						<string>PH2_EDWARDS_02_SMG_LS_CONTROL_PANEL.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>10</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -3083,41 +3062,39 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 									<key>copy</key>
 									<string>Detects and communicates life safety events; tells first responders location of emergency events</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Communicates live or recorded messages for fire and mass notification events  
 </string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>6</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Can be remotely diagnosed prior to arriving on-site, better preparing service providers</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>9</integer>
 								</dict>
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker right.png</string>
+						<string>icon marker left.png</string>
 						<key>caption</key>
 						<string>Life Safety System Control Panel</string>
-						<key>overlay</key>
-						<string>overlay.png</string>
 					</dict>
 					<dict>
 						<key>xy</key>
 						<string>300,120</string>
 						<key>fileName</key>
-						<string>BG_H264_1440.mov</string>
+						<string>PH2_EDWARDS_03_SMS_SIGN_SERIES_DEVICES.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>11</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -3132,19 +3109,19 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 									<key>copy</key>
 									<string>Signature data loop connects pull stations and smoke, heat, and CO detectors to the system control panel</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Sensors provide diagnostics and reporting for planned and immediate service response needs</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>6</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Photoelectric smoke chambers and replaceable CO cartridges provide life cycle cost savings</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>9</integer>
 								</dict>
 							</array>
 						</dict>
@@ -3156,14 +3133,12 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 						<string>icon marker right.png</string>
 						<key>caption</key>
 						<string>Signature Series Devices</string>
-						<key>overlay</key>
-						<string>overlay.png</string>
 					</dict>
 				</array>
 				<key>catName</key>
 				<string>Learn More</string>
 				<key>subBG</key>
-				<string>PH2_KIDDE_00_STILL_HS.png</string>
+				<string>PH2_EDWARDS_00_STILL_HS.png</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -3331,12 +3306,14 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>ibt_arrow_two.png</string>
+			<string>IBT-connection-line-interlogix.png</string>
 			<key>selectedlogo</key>
-			<string>logo-edwards.png</string>
+			<string>IBT-Transp-logo-edwards.png</string>
 			<key>connections</key>
 			<array>
-				<string>logo-avantec.png</string>
+				<string>IBT-logo-lenel.png</string>
+				<string>IBT-logo-automatedLogic.png</string>
+				<string>IBT-logo-interlogix.png</string>
 			</array>
 			<key>text</key>
 			<string>Edwards EST3 platform integrates with Lenel OnGuard building access system to efficiently mass notify and evacuate a building
@@ -3577,7 +3554,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Provides facility management solutions such as electronic locks, in-room safes, and energy-management systems</string>
+									<string>Provides flexibility and economy with modular or wireless locks in standalone or integrated access systems</string>
 									<key>appearanceDelay</key>
 									<integer>3</integer>
 								</dict>

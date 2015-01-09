@@ -308,6 +308,11 @@ enum {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showSustainability" object:self userInfo:nil];
 }
 
+-(void)loadModalVC
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showModalVC" object:self userInfo:nil];
+}
+
 
 #pragma mark - Actions to play path to hero and split hero
 -(void)filmToSplitBuilding
@@ -623,6 +628,10 @@ enum {
     } else if ( [selectedCo.coname isEqualToString:@"Sustainability"] ) {
         
         [self loadSustainability];
+        
+    } else if ( [selectedCo.coname isEqualToString:@"AdvanTE3C"] ) {
+        
+        [self loadModalVC];
 
 	} else {
         
@@ -632,7 +641,7 @@ enum {
 		NSString *subBG = [catDict objectForKey:@"subBG"];
 		_arr_subHotspots = [catDict objectForKey:@"subhotspots"];
 		
-		NSLog(@"subhotspots %@",_arr_subHotspots);
+		NSLog(@"selectedRow subhotspots %@",_arr_subHotspots);
 		
 		if ([categoryType isEqualToString:@"film"]) {
 			// get which company from data model
@@ -1270,7 +1279,8 @@ enum {
 	
 	//Get the exact second to remove the text boxes
 	removeTextAfterThisManySeconds = [[hotspotItem objectForKey:@"removeafterseconds"] intValue];
-	
+    NSLog(@"building : createCardsInView : removeTextAfterThisManySeconds %f", removeTextAfterThisManySeconds);
+
 	// grab facts dict
 	NSDictionary *facts = [hotspotItem objectForKey:@"facts"];
 	NSArray *hotspotText = [facts objectForKey:@"factscopy"];
