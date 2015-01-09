@@ -116,7 +116,7 @@ static CGFloat yHeight = 315;
 
 -(void)initVersion
 {
-    UILabel *uil_Ver = [[UILabel alloc] initWithFrame:CGRectMake(40.0, 740, 100, 20)];
+    UILabel *uil_Ver = [[UILabel alloc] initWithFrame:CGRectMake(39.0, 740, 100, 20)];
     uil_Ver.text = [NSString stringWithFormat:@"v%@",[UIApplication appVersion]];
     [uil_Ver setFont:[UIFont systemFontOfSize:8]];
     [uil_Ver setTextColor:[UIColor whiteColor]];
@@ -338,6 +338,8 @@ static CGFloat yHeight = 315;
 				[cell.uil_title setText:_arr_companies[indexPath.row]];
 //			}
 #endif
+            
+            cell.textLabel.font = [cell.textLabel.font fontWithSize:8];
 		
         return cell;
     }

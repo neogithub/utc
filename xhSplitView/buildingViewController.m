@@ -254,9 +254,9 @@ enum {
         [_uib_ibtBtn removeFromSuperview];
     }
     _uib_ibtBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_ibtBtn.frame = CGRectMake(1024-120-16, 16, 120, 57);
-    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo-united-technologies.png"] forState:UIControlStateNormal];
-    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo-united-technologies.png"] forState:UIControlStateSelected];
+    _uib_ibtBtn.frame = CGRectMake(1024-120-16, 16, 119, 55);
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo-utc.png"] forState:UIControlStateNormal];
+    [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo-utc.png"] forState:UIControlStateSelected];
     [_uib_ibtBtn addTarget: self action:@selector(loadIBT:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_ibtBtn];
 }
@@ -600,12 +600,21 @@ enum {
 	// get company tapped on from data model
 	NSDictionary *co = allCompanies[sender.tag];
 	selectedCoDict = [[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]] [0];
-	    
+    
+    NSLog(@"%lu",[sender tag]);
+    
 	PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
 	self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
 	PopoverView.delegate = self;
 	
-	[self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
+    if (([sender tag] == 4) || ([sender tag] == 6)) {
+        [self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+
+    } else {
+        
+        [self.popOver presentPopoverFromRect:sender.frame inView:_uis_zoomingImg.blurView permittedArrowDirections:UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
+
+    }
 }
 
 #pragma mark Popover Delegate method

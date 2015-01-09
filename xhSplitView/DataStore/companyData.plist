@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>xy</key>
-		<string>469, 181.5</string>
+		<string>484.5,127.5</string>
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
@@ -871,7 +871,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>573.5, 665.5</string>
+		<string>627.5,177</string>
 		<key>transitionFilmImg</key>
 		<string>PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.PNG</string>
 		<key>infoName</key>
@@ -1407,7 +1407,7 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>196.5, 485</string>
+		<string>236, 377.5</string>
 		<key>infoName</key>
 		<string>Foodservice Equipment</string>
 		<key>fileName</key>
@@ -1519,7 +1519,7 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>142.5, 245</string>
+		<string>348,177</string>
 		<key>infoName</key>
 		<string>Open Security Solutions</string>
 		<key>fileName</key>
@@ -1767,7 +1767,7 @@ Lenel OnGuard building access system integrates with Edwards EST3 platform to ef
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>815,685</string>
+		<string>714,673.5</string>
 		<key>infoName</key>
 		<string>Interactive Digital Signages</string>
 		<key>fileName</key>
@@ -1895,7 +1895,7 @@ Lenel OnGuard building access system integrates with Edwards EST3 platform to ef
 			</dict>
 		</array>
 		<key>background</key>
-		<string>logo-avantec.png</string>
+		<string>logo-advante3c.png</string>
 		<key>demoName</key>
 		<string>Digital Signage</string>
 		<key>ibt</key>
@@ -2068,7 +2068,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>291, 127</string>
+		<string>705,486.5</string>
 		<key>infoName</key>
 		<string>Building Automation Systems</string>
 		<key>fileName</key>
@@ -2340,146 +2340,125 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 				<key>subhotspots</key>
 				<array>
 					<dict>
-						<key>xy</key>
-						<string>20,75</string>
-						<key>fileName</key>
-						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
-						<key>removeafterseconds</key>
-						<integer>23</integer>
-						<key>width</key>
-						<string>360</string>
-						<key>facts</key>
-						<dict>
-							<key>factwidth</key>
-							<string>300</string>
-							<key>factxy</key>
-							<string>130,300</string>
-							<key>factscopy</key>
-							<array>
+						<key>catType</key>
+						<string>filmWithCards</string>
+						<key>subhotspots</key>
+						<array>
+							<dict>
+								<key>xy</key>
+								<string>680,274</string>
+								<key>fileName</key>
+								<string>PH2_ONITY_01_SMG_GENERAL.mov</string>
+								<key>removeafterseconds</key>
+								<integer>5</integer>
+								<key>width</key>
+								<string>360</string>
+								<key>facts</key>
 								<dict>
-									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
-									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<key>factwidth</key>
+									<string>300</string>
+									<key>factxy</key>
+									<string>30,100</string>
+									<key>factscopy</key>
+									<array>
+										<dict>
+											<key>copy</key>
+											<string>Offers interior, electronic access control solutions</string>
+											<key>appearanceDelay</key>
+											<integer>1</integer>
+										</dict>
+										<dict>
+											<key>copy</key>
+											<string>Provides flexibility and economy with modular or wireless locks in standalone or integrated access systems</string>
+											<key>appearanceDelay</key>
+											<integer>3</integer>
+										</dict>
+									</array>
 								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Data gathering allows for custom service visits</string>
-									<key>appearanceDelay</key>
-									<integer>5</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Identify issues before they become problems</string>
-									<key>appearanceDelay</key>
-									<integer>14</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Technicians are dispatched automatically for urgent issues</string>
-									<key>appearanceDelay</key>
-									<integer>18</integer>
-								</dict>
-							</array>
-						</dict>
-						<key>alignment</key>
-						<integer>3</integer>
-						<key>type</key>
-						<string>movie</string>
-						<key>background</key>
-						<string>icon marker center.png</string>
-						<key>caption</key>
-						<string>Energy-Efficient</string>
-					</dict>
-					<dict>
-						<key>xy</key>
-						<string>20,125</string>
-						<key>fileName</key>
-						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
-						<key>removeafterseconds</key>
-						<integer>23</integer>
-						<key>width</key>
-						<string>360</string>
-						<key>facts</key>
-						<dict>
-							<key>factwidth</key>
-							<string>360</string>
-							<key>factxy</key>
-							<string>20,210</string>
-							<key>factscopy</key>
-							<array>
-								<dict>
-									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
-									<key>appearanceDelay</key>
-									<integer>1</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
-									<key>appearanceDelay</key>
-									<integer>10</integer>
-								</dict>
-							</array>
-						</dict>
-						<key>alignment</key>
-						<integer>3</integer>
-						<key>type</key>
-						<string>movie</string>
-						<key>background</key>
-						<string>icon marker center.png</string>
-						<key>caption</key>
-						<string>Ease of Monitoring and Maintenance</string>
-					</dict>
-					<dict>
-						<key>xy</key>
-						<string>20,175</string>
-						<key>fileName</key>
-						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
-						<key>removeafterseconds</key>
-						<integer>10</integer>
-						<key>width</key>
-						<string>360</string>
-						<key>facts</key>
-						<dict>
-							<key>factwidth</key>
-							<string>360</string>
-							<key>factxy</key>
-							<string>20,203</string>
-							<key>factscopy</key>
-							<array>
-								<dict>
-									<key>copy</key>
-									<string>Small enough to fit inside the wall at top elevator landing</string>
-									<key>appearanceDelay</key>
-									<integer>3</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>No need to plan extra room at top of hoistway</string>
-									<key>appearanceDelay</key>
-									<integer>5</integer>
-								</dict>
-								<dict>
-									<key>copy</key>
-									<string>Much easier access for diagnostics and repair</string>
-									<key>appearanceDelay</key>
-									<integer>7</integer>
-								</dict>
-							</array>
-						</dict>
-						<key>alignment</key>
-						<integer>3</integer>
-						<key>type</key>
-						<string>movie</string>
-						<key>background</key>
-						<string>icon marker center.png</string>
-						<key>caption</key>
-						<string>New LED-Lighted Balustrades</string>
+								<key>alignment</key>
+								<integer>3</integer>
+								<key>type</key>
+								<string>movie</string>
+								<key>background</key>
+								<string>icon marker right.png</string>
+								<key>caption</key>
+								<string>TBD</string>
+								<key>overlay</key>
+								<string>overlay.png</string>
+							</dict>
+						</array>
+						<key>catName</key>
+						<string>TBD</string>
+						<key>subBG</key>
+						<string>PH2_KIDDE_00_STILL_HS.png</string>
 					</dict>
 				</array>
 				<key>catName</key>
 				<string>NCE Green Escalators</string>
+				<key>subBG</key>
+				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG</string>
+			</dict>
+			<dict>
+				<key>catType</key>
+				<string>stillWithMenu</string>
+				<key>subhotspots</key>
+				<array>
+					<dict>
+						<key>catType</key>
+						<string>filmWithCards</string>
+						<key>subhotspots</key>
+						<array>
+							<dict>
+								<key>xy</key>
+								<string>680,274</string>
+								<key>fileName</key>
+								<string>PH2_ONITY_01_SMG_GENERAL.mov</string>
+								<key>removeafterseconds</key>
+								<integer>5</integer>
+								<key>width</key>
+								<string>360</string>
+								<key>facts</key>
+								<dict>
+									<key>factwidth</key>
+									<string>300</string>
+									<key>factxy</key>
+									<string>30,100</string>
+									<key>factscopy</key>
+									<array>
+										<dict>
+											<key>copy</key>
+											<string>Offers interior, electronic access control solutions</string>
+											<key>appearanceDelay</key>
+											<integer>1</integer>
+										</dict>
+										<dict>
+											<key>copy</key>
+											<string>Provides flexibility and economy with modular or wireless locks in standalone or integrated access systems</string>
+											<key>appearanceDelay</key>
+											<integer>3</integer>
+										</dict>
+									</array>
+								</dict>
+								<key>alignment</key>
+								<integer>3</integer>
+								<key>type</key>
+								<string>movie</string>
+								<key>background</key>
+								<string>icon marker right.png</string>
+								<key>caption</key>
+								<string>TBD</string>
+								<key>overlay</key>
+								<string>overlay.png</string>
+							</dict>
+						</array>
+						<key>catName</key>
+						<string>TBD</string>
+						<key>subBG</key>
+						<string>PH2_KIDDE_00_STILL_HS.png</string>
+					</dict>
+				</array>
+				<key>catName</key>
+				<string>NCE Grdeen Escalators</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG</string>
 			</dict>
@@ -2504,7 +2483,7 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>915,685</string>
+		<string>805,673.5</string>
 		<key>infoName</key>
 		<string>Sustainability</string>
 		<key>fileName</key>
@@ -2692,7 +2671,7 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>825, 242.5</string>
+		<string>708.5,269</string>
 		<key>infoName</key>
 		<string>Commercial Security Systems</string>
 		<key>fileName</key>
@@ -2975,7 +2954,7 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>803, 309.5</string>
+		<string>736.5,378</string>
 		<key>infoName</key>
 		<string>Life Safety &amp; Emergency Communications</string>
 		<key>fileName</key>
@@ -3323,7 +3302,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>771, 397</string>
+		<string>263,487.5</string>
 		<key>infoName</key>
 		<string>Fire Safety Products</string>
 		<key>fileName</key>
@@ -3339,9 +3318,9 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 						<key>xy</key>
 						<string>680,274</string>
 						<key>fileName</key>
-						<string>BG_H264_1440.mov</string>
+						<string>PH2_KIDDE_01_SMG_FM200.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>7</integer>
 						<key>width</key>
 						<string>600</string>
 						<key>facts</key>
@@ -3356,19 +3335,19 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 									<key>copy</key>
 									<string>Protects data, telecommunications and other critical environments</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>2</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Discharges as a gas, reaching all areas while leaving no residue</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>4</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Environmentally responsible solution</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>6</integer>
 								</dict>
 							</array>
 						</dict>
@@ -3380,16 +3359,14 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 						<string>icon marker right.png</string>
 						<key>caption</key>
 						<string>Waterless Fire Suppression Systems</string>
-						<key>overlay</key>
-						<string>overlay2.png</string>
 					</dict>
 					<dict>
 						<key>xy</key>
 						<string>580,100</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+						<string>PH2_KIDDE_02_SMG_ADS_ADV_DELI_SYS.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>6</integer>
 						<key>width</key>
 						<string>400</string>
 						<key>facts</key>
@@ -3404,13 +3381,13 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 									<key>copy</key>
 									<string>Agent cylinders stored away from protected area, saving floor space</string>
 									<key>appearanceDelay</key>
-									<integer>1</integer>
+									<integer>2</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>System performance enhances design flexibility in complex piping configurations</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>4</integer>
 								</dict>
 							</array>
 						</dict>
@@ -3427,9 +3404,9 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 						<key>xy</key>
 						<string>500,400</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+						<string>PH2_KIDDE_03_SMG_WHDR_WET_CHEMICAL_SYS.mov</string>
 						<key>removeafterseconds</key>
-						<integer>10</integer>
+						<integer>6</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -3461,9 +3438,9 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 						<key>xy</key>
 						<string>500,200</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+						<string>PH2_KIDDE_04_ANIM_BADGER_FIRE_EXTING.mov</string>
 						<key>removeafterseconds</key>
-						<integer>10</integer>
+						<integer>6</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -3478,19 +3455,19 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 									<key>copy</key>
 									<string>Ergonomic aluminum handles with wide pull pin for ease of use</string>
 									<key>appearanceDelay</key>
-									<integer>3</integer>
+									<integer>2</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Easy-to-read gauge</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Easy-to-service, corrosion-resistant metal for long life</string>
 									<key>appearanceDelay</key>
-									<integer>7</integer>
+									<integer>4</integer>
 								</dict>
 							</array>
 						</dict>
@@ -3517,7 +3494,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 	</dict>
 	<dict>
 		<key>xy</key>
-		<string>371, 397</string>
+		<string>258,268.5</string>
 		<key>infoName</key>
 		<string>Facility Management Solutions</string>
 		<key>fileName</key>

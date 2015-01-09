@@ -710,16 +710,24 @@
 		888BB9B71A5F8FA500157977 /* IBT-connection-line-interlogix.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9B41A5F8FA500157977 /* IBT-connection-line-interlogix.png */; };
 		888BB9B81A5F8FA500157977 /* IBT-connection-line-interlogix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9B51A5F8FA500157977 /* IBT-connection-line-interlogix@2x.png */; };
 		888BB9B91A5F8FA500157977 /* IBT-connection-line-interlogix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9B51A5F8FA500157977 /* IBT-connection-line-interlogix@2x.png */; };
+		888BB9BC1A5F993600157977 /* logo-advante3c.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9BA1A5F993600157977 /* logo-advante3c.png */; };
+		888BB9BD1A5F993600157977 /* logo-advante3c.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9BA1A5F993600157977 /* logo-advante3c.png */; };
+		888BB9BE1A5F993600157977 /* logo-advante3c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9BB1A5F993600157977 /* logo-advante3c@2x.png */; };
+		888BB9BF1A5F993600157977 /* logo-advante3c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9BB1A5F993600157977 /* logo-advante3c@2x.png */; };
+		888BB9C21A5F994400157977 /* logo-utc.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C01A5F994400157977 /* logo-utc.png */; };
+		888BB9C31A5F994400157977 /* logo-utc.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C01A5F994400157977 /* logo-utc.png */; };
+		888BB9C41A5F994400157977 /* logo-utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C11A5F994400157977 /* logo-utc@2x.png */; };
+		888BB9C51A5F994400157977 /* logo-utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C11A5F994400157977 /* logo-utc@2x.png */; };
+		888BB9C91A5F9E8D00157977 /* advantec.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C71A5F9E8D00157977 /* advantec.png */; };
+		888BB9CA1A5F9E8D00157977 /* advantec.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C71A5F9E8D00157977 /* advantec.png */; };
+		888BB9CB1A5F9E8D00157977 /* advantec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C81A5F9E8D00157977 /* advantec@2x.png */; };
+		888BB9CC1A5F9E8D00157977 /* advantec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C81A5F9E8D00157977 /* advantec@2x.png */; };
 		8895FEDD1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEDE1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEFC1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */; };
 		8895FEFD1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */; };
 		8895FEFE1A5B19F50076A3EC /* logo-automatedLogic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE11A5B19F50076A3EC /* logo-automatedLogic@2x.png */; };
 		8895FEFF1A5B19F50076A3EC /* logo-automatedLogic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE11A5B19F50076A3EC /* logo-automatedLogic@2x.png */; };
-		8895FF001A5B19F50076A3EC /* logo-avantec.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE21A5B19F50076A3EC /* logo-avantec.png */; };
-		8895FF011A5B19F50076A3EC /* logo-avantec.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE21A5B19F50076A3EC /* logo-avantec.png */; };
-		8895FF021A5B19F50076A3EC /* logo-avantec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE31A5B19F50076A3EC /* logo-avantec@2x.png */; };
-		8895FF031A5B19F50076A3EC /* logo-avantec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE31A5B19F50076A3EC /* logo-avantec@2x.png */; };
 		8895FF041A5B19F50076A3EC /* logo-carrier.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE41A5B19F50076A3EC /* logo-carrier.png */; };
 		8895FF051A5B19F50076A3EC /* logo-carrier.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE41A5B19F50076A3EC /* logo-carrier.png */; };
 		8895FF061A5B19F50076A3EC /* logo-carrier@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE51A5B19F50076A3EC /* logo-carrier@2x.png */; };
@@ -744,14 +752,6 @@
 		8895FF191A5B19F50076A3EC /* logo-lenel.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEEE1A5B19F50076A3EC /* logo-lenel.png */; };
 		8895FF1A1A5B19F50076A3EC /* logo-lenel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEEF1A5B19F50076A3EC /* logo-lenel@2x.png */; };
 		8895FF1B1A5B19F50076A3EC /* logo-lenel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEEF1A5B19F50076A3EC /* logo-lenel@2x.png */; };
-		8895FF1C1A5B19F50076A3EC /* logo-marioff.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF01A5B19F50076A3EC /* logo-marioff.png */; };
-		8895FF1D1A5B19F50076A3EC /* logo-marioff.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF01A5B19F50076A3EC /* logo-marioff.png */; };
-		8895FF1E1A5B19F50076A3EC /* logo-marioff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF11A5B19F50076A3EC /* logo-marioff@2x.png */; };
-		8895FF1F1A5B19F50076A3EC /* logo-marioff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF11A5B19F50076A3EC /* logo-marioff@2x.png */; };
-		8895FF201A5B19F50076A3EC /* logo-noresco.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF21A5B19F50076A3EC /* logo-noresco.png */; };
-		8895FF211A5B19F50076A3EC /* logo-noresco.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF21A5B19F50076A3EC /* logo-noresco.png */; };
-		8895FF221A5B19F50076A3EC /* logo-noresco@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF31A5B19F50076A3EC /* logo-noresco@2x.png */; };
-		8895FF231A5B19F50076A3EC /* logo-noresco@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF31A5B19F50076A3EC /* logo-noresco@2x.png */; };
 		8895FF241A5B19F50076A3EC /* logo-onity.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF41A5B19F50076A3EC /* logo-onity.png */; };
 		8895FF251A5B19F50076A3EC /* logo-onity.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF41A5B19F50076A3EC /* logo-onity.png */; };
 		8895FF261A5B19F50076A3EC /* logo-onity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF51A5B19F50076A3EC /* logo-onity@2x.png */; };
@@ -764,10 +764,6 @@
 		8895FF2D1A5B19F50076A3EC /* logo-taylor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF81A5B19F50076A3EC /* logo-taylor.png */; };
 		8895FF2E1A5B19F50076A3EC /* logo-taylor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF91A5B19F50076A3EC /* logo-taylor@2x.png */; };
 		8895FF2F1A5B19F50076A3EC /* logo-taylor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEF91A5B19F50076A3EC /* logo-taylor@2x.png */; };
-		8895FF301A5B19F50076A3EC /* logo-united-technologies.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEFA1A5B19F50076A3EC /* logo-united-technologies.png */; };
-		8895FF311A5B19F50076A3EC /* logo-united-technologies.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEFA1A5B19F50076A3EC /* logo-united-technologies.png */; };
-		8895FF321A5B19F50076A3EC /* logo-united-technologies@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEFB1A5B19F50076A3EC /* logo-united-technologies@2x.png */; };
-		8895FF331A5B19F50076A3EC /* logo-united-technologies@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEFB1A5B19F50076A3EC /* logo-united-technologies@2x.png */; };
 		8895FF361A5B233F0076A3EC /* connection lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FF341A5B233F0076A3EC /* connection lines.png */; };
 		8895FF371A5B233F0076A3EC /* connection lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FF341A5B233F0076A3EC /* connection lines.png */; };
 		8895FF381A5B233F0076A3EC /* connection lines@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FF351A5B233F0076A3EC /* connection lines@2x.png */; };
@@ -1170,12 +1166,16 @@
 		888BB9AF1A5F83BA00157977 /* IBT-connection-line-triple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IBT-connection-line-triple@2x.png"; path = "UI/grfx/ibt/IBT-connection-line-triple@2x.png"; sourceTree = "<group>"; };
 		888BB9B41A5F8FA500157977 /* IBT-connection-line-interlogix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IBT-connection-line-interlogix.png"; path = "UI/grfx/ibt/IBT-connection-line-interlogix.png"; sourceTree = "<group>"; };
 		888BB9B51A5F8FA500157977 /* IBT-connection-line-interlogix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IBT-connection-line-interlogix@2x.png"; path = "UI/grfx/ibt/IBT-connection-line-interlogix@2x.png"; sourceTree = "<group>"; };
+		888BB9BA1A5F993600157977 /* logo-advante3c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-advante3c.png"; path = "logos/logo-advante3c.png"; sourceTree = "<group>"; };
+		888BB9BB1A5F993600157977 /* logo-advante3c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-advante3c@2x.png"; path = "logos/logo-advante3c@2x.png"; sourceTree = "<group>"; };
+		888BB9C01A5F994400157977 /* logo-utc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-utc.png"; path = "logos/logo-utc.png"; sourceTree = "<group>"; };
+		888BB9C11A5F994400157977 /* logo-utc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-utc@2x.png"; path = "logos/logo-utc@2x.png"; sourceTree = "<group>"; };
+		888BB9C71A5F9E8D00157977 /* advantec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = advantec.png; path = grfx/advante3c/advantec.png; sourceTree = "<group>"; };
+		888BB9C81A5F9E8D00157977 /* advantec@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "advantec@2x.png"; path = "grfx/advante3c/advantec@2x.png"; sourceTree = "<group>"; };
 		8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppVersion.h"; sourceTree = "<group>"; };
 		8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppVersion.m"; sourceTree = "<group>"; };
 		8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-automatedLogic.png"; path = "logos/logo-automatedLogic.png"; sourceTree = "<group>"; };
 		8895FEE11A5B19F50076A3EC /* logo-automatedLogic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-automatedLogic@2x.png"; path = "logos/logo-automatedLogic@2x.png"; sourceTree = "<group>"; };
-		8895FEE21A5B19F50076A3EC /* logo-avantec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-avantec.png"; path = "logos/logo-avantec.png"; sourceTree = "<group>"; };
-		8895FEE31A5B19F50076A3EC /* logo-avantec@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-avantec@2x.png"; path = "logos/logo-avantec@2x.png"; sourceTree = "<group>"; };
 		8895FEE41A5B19F50076A3EC /* logo-carrier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-carrier.png"; path = "logos/logo-carrier.png"; sourceTree = "<group>"; };
 		8895FEE51A5B19F50076A3EC /* logo-carrier@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-carrier@2x.png"; path = "logos/logo-carrier@2x.png"; sourceTree = "<group>"; };
 		8895FEE61A5B19F50076A3EC /* logo-edwards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-edwards.png"; path = "logos/logo-edwards.png"; sourceTree = "<group>"; };
@@ -1188,18 +1188,12 @@
 		8895FEED1A5B19F50076A3EC /* logo-kidde@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-kidde@2x.png"; path = "logos/logo-kidde@2x.png"; sourceTree = "<group>"; };
 		8895FEEE1A5B19F50076A3EC /* logo-lenel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-lenel.png"; path = "logos/logo-lenel.png"; sourceTree = "<group>"; };
 		8895FEEF1A5B19F50076A3EC /* logo-lenel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-lenel@2x.png"; path = "logos/logo-lenel@2x.png"; sourceTree = "<group>"; };
-		8895FEF01A5B19F50076A3EC /* logo-marioff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-marioff.png"; path = "logos/logo-marioff.png"; sourceTree = "<group>"; };
-		8895FEF11A5B19F50076A3EC /* logo-marioff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-marioff@2x.png"; path = "logos/logo-marioff@2x.png"; sourceTree = "<group>"; };
-		8895FEF21A5B19F50076A3EC /* logo-noresco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-noresco.png"; path = "logos/logo-noresco.png"; sourceTree = "<group>"; };
-		8895FEF31A5B19F50076A3EC /* logo-noresco@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-noresco@2x.png"; path = "logos/logo-noresco@2x.png"; sourceTree = "<group>"; };
 		8895FEF41A5B19F50076A3EC /* logo-onity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-onity.png"; path = "logos/logo-onity.png"; sourceTree = "<group>"; };
 		8895FEF51A5B19F50076A3EC /* logo-onity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-onity@2x.png"; path = "logos/logo-onity@2x.png"; sourceTree = "<group>"; };
 		8895FEF61A5B19F50076A3EC /* logo-otis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-otis.png"; path = "logos/logo-otis.png"; sourceTree = "<group>"; };
 		8895FEF71A5B19F50076A3EC /* logo-otis@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-otis@2x.png"; path = "logos/logo-otis@2x.png"; sourceTree = "<group>"; };
 		8895FEF81A5B19F50076A3EC /* logo-taylor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-taylor.png"; path = "logos/logo-taylor.png"; sourceTree = "<group>"; };
 		8895FEF91A5B19F50076A3EC /* logo-taylor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-taylor@2x.png"; path = "logos/logo-taylor@2x.png"; sourceTree = "<group>"; };
-		8895FEFA1A5B19F50076A3EC /* logo-united-technologies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-united-technologies.png"; path = "logos/logo-united-technologies.png"; sourceTree = "<group>"; };
-		8895FEFB1A5B19F50076A3EC /* logo-united-technologies@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-united-technologies@2x.png"; path = "logos/logo-united-technologies@2x.png"; sourceTree = "<group>"; };
 		8895FF341A5B233F0076A3EC /* connection lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connection lines.png"; sourceTree = "<group>"; };
 		8895FF351A5B233F0076A3EC /* connection lines@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connection lines@2x.png"; sourceTree = "<group>"; };
 		8895FF3A1A5B44B50076A3EC /* SustainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SustainViewController.h; sourceTree = "<group>"; };
@@ -1534,6 +1528,7 @@
 		82A66AE219B7942900C8E12A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				888BB9C61A5F9DFE00157977 /* advante3c */,
 				8895FEDF1A5B19DF0076A3EC /* logos */,
 				20A95A7319CC313000132F7E /* images */,
 				20A95A6419CBDCA400132F7E /* films */,
@@ -1965,13 +1960,22 @@
 			name = UTC_SUSTAINABILITY;
 			sourceTree = "<group>";
 		};
+		888BB9C61A5F9DFE00157977 /* advante3c */ = {
+			isa = PBXGroup;
+			children = (
+				888BB9C71A5F9E8D00157977 /* advantec.png */,
+				888BB9C81A5F9E8D00157977 /* advantec@2x.png */,
+			);
+			name = advante3c;
+			sourceTree = "<group>";
+		};
 		8895FEDF1A5B19DF0076A3EC /* logos */ = {
 			isa = PBXGroup;
 			children = (
 				8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */,
 				8895FEE11A5B19F50076A3EC /* logo-automatedLogic@2x.png */,
-				8895FEE21A5B19F50076A3EC /* logo-avantec.png */,
-				8895FEE31A5B19F50076A3EC /* logo-avantec@2x.png */,
+				888BB9BA1A5F993600157977 /* logo-advante3c.png */,
+				888BB9BB1A5F993600157977 /* logo-advante3c@2x.png */,
 				8895FEE41A5B19F50076A3EC /* logo-carrier.png */,
 				8895FEE51A5B19F50076A3EC /* logo-carrier@2x.png */,
 				8895FEE61A5B19F50076A3EC /* logo-edwards.png */,
@@ -1984,18 +1988,14 @@
 				8895FEED1A5B19F50076A3EC /* logo-kidde@2x.png */,
 				8895FEEE1A5B19F50076A3EC /* logo-lenel.png */,
 				8895FEEF1A5B19F50076A3EC /* logo-lenel@2x.png */,
-				8895FEF01A5B19F50076A3EC /* logo-marioff.png */,
-				8895FEF11A5B19F50076A3EC /* logo-marioff@2x.png */,
-				8895FEF21A5B19F50076A3EC /* logo-noresco.png */,
-				8895FEF31A5B19F50076A3EC /* logo-noresco@2x.png */,
 				8895FEF41A5B19F50076A3EC /* logo-onity.png */,
 				8895FEF51A5B19F50076A3EC /* logo-onity@2x.png */,
 				8895FEF61A5B19F50076A3EC /* logo-otis.png */,
 				8895FEF71A5B19F50076A3EC /* logo-otis@2x.png */,
 				8895FEF81A5B19F50076A3EC /* logo-taylor.png */,
 				8895FEF91A5B19F50076A3EC /* logo-taylor@2x.png */,
-				8895FEFA1A5B19F50076A3EC /* logo-united-technologies.png */,
-				8895FEFB1A5B19F50076A3EC /* logo-united-technologies@2x.png */,
+				888BB9C01A5F994400157977 /* logo-utc.png */,
+				888BB9C11A5F994400157977 /* logo-utc@2x.png */,
 			);
 			name = logos;
 			sourceTree = "<group>";
@@ -2087,6 +2087,7 @@
 				20BA88C71A37941900705945 /* text_bg.png in Resources */,
 				888BB8E21A5EE89D00157977 /* PH2_INTERLOGIX_01_SMG_SECURITY_MANAGEMENT.png in Resources */,
 				20E546DD1A2DFEF40073B2CF /* 02_TRANS_BLDG_UNBUILD.mov in Resources */,
+				888BB9BD1A5F993600157977 /* logo-advante3c.png in Resources */,
 				8834E24C1A56E32D00204D81 /* ibt_carrier@2x.png in Resources */,
 				20E546DE1A2DFEF40073B2CF /* icon main menu.png in Resources */,
 				20BF48F91A3B501D009645DC /* logo_sustain.png in Resources */,
@@ -2095,9 +2096,9 @@
 				20E546E11A2DFEF40073B2CF /* icon marker right.png in Resources */,
 				20BF49171A3F1C82009645DC /* logo_interlogix@2x.png in Resources */,
 				20E546E21A2DFEF40073B2CF /* menu header.png in Resources */,
+				888BB9CC1A5F9E8D00157977 /* advantec@2x.png in Resources */,
 				888BB8AC1A5EE88500157977 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */,
 				20E546E31A2DFEF40073B2CF /* icon back.png in Resources */,
-				8895FF231A5B19F50076A3EC /* logo-noresco@2x.png in Resources */,
 				8834E2741A57221B00204D81 /* menu_advantec.png in Resources */,
 				8895FF111A5B19F50076A3EC /* logo-interlogix.png in Resources */,
 				888BB98D1A5F801A00157977 /* IBT-logo-interlogix@2x.png in Resources */,
@@ -2120,6 +2121,7 @@
 				888BB9301A5EE8D800157977 /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.png in Resources */,
 				8895FF0F1A5B19F50076A3EC /* logo-Improve@2x.png in Resources */,
 				888BB79B1A5E136C00157977 /* ibt_arrow_one@2x.png in Resources */,
+				888BB9CA1A5F9E8D00157977 /* advantec.png in Resources */,
 				888BB8041A5EE75700157977 /* IBT_AUTOLOG_01_LR_CONN_CARRIER.mov in Resources */,
 				20BF49111A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
 				888BB82C1A5EE78500157977 /* PH2_INTERLOGIX_01_SMG_CONN_OTIS_CDMS.png in Resources */,
@@ -2191,7 +2193,6 @@
 				20E546FA1A2DFEF40073B2CF /* 02_TRANS_BLDG_UNBUILD.png in Resources */,
 				8834E26A1A57074200204D81 /* logo_sustainibt.png in Resources */,
 				8895FEFF1A5B19F50076A3EC /* logo-automatedLogic@2x.png in Resources */,
-				8895FF1F1A5B19F50076A3EC /* logo-marioff@2x.png in Resources */,
 				20E546FB1A2DFEF40073B2CF /* 01_HERO_CITY.png in Resources */,
 				888BB8CD1A5EE89200157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.png in Resources */,
 				20E546FD1A2DFEF40073B2CF /* title2@2x.png in Resources */,
@@ -2204,7 +2205,6 @@
 				20BF48D91A3B501D009645DC /* logo_carrier.png in Resources */,
 				888BB9421A5EE8E200157977 /* PH2_TAYLOR_01_SMG_C723_SOFT_SRV_MACH.PNG in Resources */,
 				20BF48D31A3B501D009645DC /* logo_advantec@2x.png in Resources */,
-				8895FF331A5B19F50076A3EC /* logo-united-technologies@2x.png in Resources */,
 				8834E2541A56E32D00204D81 /* ibt_interlogix@2x.png in Resources */,
 				888BB9831A5F801A00157977 /* IBT-logo-carrier.png in Resources */,
 				20E547011A2DFEF40073B2CF /* 00_LOGO_TRANS_HERO_CITY.png in Resources */,
@@ -2227,7 +2227,6 @@
 				8895FF051A5B19F50076A3EC /* logo-carrier.png in Resources */,
 				8895FF371A5B233F0076A3EC /* connection lines.png in Resources */,
 				888BB7991A5E136C00157977 /* ibt_arrow_one.png in Resources */,
-				8895FF1D1A5B19F50076A3EC /* logo-marioff.png in Resources */,
 				888BB8301A5EE78500157977 /* PH2_INTERLOGIX_03_SMG_CONN_AUTOLOG_WEBCTRL_EDWARDS.PNG in Resources */,
 				8834E2481A56E32D00204D81 /* ibt_automatedlogic@2x.png in Resources */,
 				888BB79D1A5E136C00157977 /* ibt_arrow_two.png in Resources */,
@@ -2235,7 +2234,6 @@
 				888BB91C1A5EE8CE00157977 /* PH2_OTIS_02_LR_CDMS_FASTER_MOVEMENT.png in Resources */,
 				888BB9931A5F801A00157977 /* IBT-logo-otis.png in Resources */,
 				8895FF251A5B19F50076A3EC /* logo-onity.png in Resources */,
-				8895FF311A5B19F50076A3EC /* logo-united-technologies.png in Resources */,
 				20E547071A2DFEF40073B2CF /* bg_04.jpg in Resources */,
 				888BB8CF1A5EE89200157977 /* PH2_EDWARDS_02_SMG_LS_CONTROL_PANEL.mov in Resources */,
 				20BF490D1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
@@ -2289,7 +2287,6 @@
 				8834E2271A531E8300204D81 /* grfx_ibt_rule.png in Resources */,
 				888BB8B21A5EE88500157977 /* PH2_CARRIER_A_00_ANIM_TRANS.mov in Resources */,
 				20E547151A2DFEF40073B2CF /* grfx_helpBtn.png in Resources */,
-				8895FF031A5B19F50076A3EC /* logo-avantec@2x.png in Resources */,
 				888BB9B71A5F8FA500157977 /* IBT-connection-line-interlogix.png in Resources */,
 				888BB9A91A5F801A00157977 /* IBT-Transp-logo-lenel@2x.png in Resources */,
 				888BB7D11A5EE6D900157977 /* PH1_OTIS_00_ANIM_FLYIN_TRANS_UNBUILD_TO_ELEV_HOTSPOT.mov in Resources */,
@@ -2318,7 +2315,6 @@
 				20E5471B1A2DFEF40073B2CF /* grfx_tableBg@2x.png in Resources */,
 				888BB7A71A5E136C00157977 /* ibt_carrier_connections@2x.png in Resources */,
 				20E5471D1A2DFEF40073B2CF /* icon main menu@2x.png in Resources */,
-				8895FF011A5B19F50076A3EC /* logo-avantec.png in Resources */,
 				20E5471E1A2DFEF40073B2CF /* bg_06.jpg in Resources */,
 				888BB80A1A5EE77000157977 /* IBT_CARRIER_01_LR_CONN_AUTOLOG.mov in Resources */,
 				888BB8841A5EE87600157977 /* PH2_AUTOLOG_02_ANIM_ECOSCREEN_SUSTAIN_KIOSK_B.PNG in Resources */,
@@ -2395,9 +2391,10 @@
 				20E5472E1A2DFEF40073B2CF /* 01_TRANS_CITY_TO_BLDG.mov in Resources */,
 				888BB9141A5EE8CE00157977 /* PH2_OTIS_00_STILL_CDMS_HS.png in Resources */,
 				888BB81A1A5EE77B00157977 /* PH2_EDWARDS_01_SMG_CONN_LENEL_ONGUARD.png in Resources */,
+				888BB9C31A5F994400157977 /* logo-utc.png in Resources */,
 				8895FF2F1A5B19F50076A3EC /* logo-taylor@2x.png in Resources */,
 				8834E22B1A531E8300204D81 /* grfx_ibt_header@2x.png in Resources */,
-				8895FF211A5B19F50076A3EC /* logo-noresco.png in Resources */,
+				888BB9C51A5F994400157977 /* logo-utc@2x.png in Resources */,
 				20BF48F51A3B501D009645DC /* logo_otis.png in Resources */,
 				888BB9A71A5F801A00157977 /* IBT-Transp-logo-lenel.png in Resources */,
 				888BB81C1A5EE77B00157977 /* PH2_EDWARDS_02_SMG_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.PNG in Resources */,
@@ -2414,6 +2411,7 @@
 				888BB8021A5EE75700157977 /* IBS_AUTOLOG_03_SMG_CONN_ED_INTERLOGIX_ZOOM.png in Resources */,
 				20BF48EF1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
 				8895FF0B1A5B19F50076A3EC /* logo-edwards@2x.png in Resources */,
+				888BB9BF1A5F993600157977 /* logo-advante3c@2x.png in Resources */,
 				20E547311A2DFEF40073B2CF /* grfx_helpBtn@2x.png in Resources */,
 				888BB7D51A5EE6D900157977 /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov in Resources */,
 				888BB8681A5EE86000157977 /* HOTSPOT_CALLOUT_W_TEXT.png in Resources */,
@@ -2482,13 +2480,11 @@
 				888BB9781A5F801A00157977 /* IBT-connection-line-double@2x.png in Resources */,
 				888BB8B71A5EE88500157977 /* PH2_CARRIER_B_01B_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				888BB8171A5EE77B00157977 /* PH2_EDWARDS_01_SMG_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.PNG in Resources */,
-				8895FF321A5B19F50076A3EC /* logo-united-technologies@2x.png in Resources */,
-				8895FF301A5B19F50076A3EC /* logo-united-technologies.png in Resources */,
+				888BB9C41A5F994400157977 /* logo-utc@2x.png in Resources */,
 				888BB8D61A5EE89200157977 /* PH2_EDWARDS_03_SMS_SIGN_SERIES_DEVICES.mov in Resources */,
 				8834E2371A532D3F00204D81 /* grfx_ibt_arrow.jpg in Resources */,
 				209AEFAF19D48C650074A3EA /* close bttn@2x.png in Resources */,
 				888BB7A81A5E136C00157977 /* ibt_edwards_connections.png in Resources */,
-				8895FF201A5B19F50076A3EC /* logo-noresco.png in Resources */,
 				8834E25B1A56E32D00204D81 /* ibt_otis@2x.png in Resources */,
 				8895FF381A5B233F0076A3EC /* connection lines@2x.png in Resources */,
 				888BB7E91A5EE6E500157977 /* INT_01_ANIM_TRANS_CITY_TO_BLDG.mov in Resources */,
@@ -2512,13 +2508,13 @@
 				888BB7AE1A5E136C00157977 /* ibt_interlogix_connections@2x.png in Resources */,
 				888BB7FF1A5EE75700157977 /* IBS_AUTOLOG_02_SMG_CONN_ED_INTERLOGIX_BASE_HL.png in Resources */,
 				20A39EBC19C3351C00C71430 /* bg_05@2x.jpg in Resources */,
+				888BB9BE1A5F993600157977 /* logo-advante3c@2x.png in Resources */,
 				8895FF0E1A5B19F50076A3EC /* logo-Improve@2x.png in Resources */,
 				888BB93B1A5EE8E200157977 /* PH2_TAYLOR_00_SMG_HS.PNG in Resources */,
 				20BF48EC1A3B501D009645DC /* logo_noresco.png in Resources */,
 				888BB9A01A5F801A00157977 /* IBT-Transp-logo-edwards@2x.png in Resources */,
 				888BB8E11A5EE89D00157977 /* PH2_INTERLOGIX_01_SMG_SECURITY_MANAGEMENT.png in Resources */,
 				888BB94F1A5EE9EA00157977 /* ModalViewController.xib in Resources */,
-				8895FF021A5B19F50076A3EC /* logo-avantec@2x.png in Resources */,
 				888BB8701A5EE86A00157977 /* PH2_ADVANTE3C_01_SMG_GENERAL.png in Resources */,
 				888BB8431A5EE79900157977 /* IBT_OTIS_01_LR_CDMS_CONN_LENEL.mov in Resources */,
 				209AEFB419D4947B0074A3EA /* 03A Building Cut.png in Resources */,
@@ -2596,6 +2592,7 @@
 				20A39EAF19C32F8800C71430 /* title2@2x.png in Resources */,
 				824F14F019CB59CA00628F01 /* titleTableViewCell.xib in Resources */,
 				8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */,
+				888BB9BC1A5F993600157977 /* logo-advante3c.png in Resources */,
 				888BB86B1A5EE86000157977 /* HOTSPOT_INSIDE_UI.png in Resources */,
 				209AEFA919D481180074A3EA /* 00_LOGO_TRANS_HERO_CITY.png in Resources */,
 				888BB8831A5EE87600157977 /* PH2_AUTOLOG_02_ANIM_ECOSCREEN_SUSTAIN_KIOSK_B.PNG in Resources */,
@@ -2629,7 +2626,6 @@
 				888BB8BB1A5EE88500157977 /* PH2_CARRIER_C_02_SMB_AERO_39M_AIR_HANDLERS_HS.png in Resources */,
 				888BB8151A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_LENEL_ONGUARD.mov in Resources */,
 				888BB8131A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.mov in Resources */,
-				8895FF001A5B19F50076A3EC /* logo-avantec.png in Resources */,
 				8834E2221A531E8300204D81 /* grfx_ibt_close.png in Resources */,
 				206063E619D5D9F50045163F /* 03_TRANS_ELEV.mov in Resources */,
 				8895FF061A5B19F50076A3EC /* logo-carrier@2x.png in Resources */,
@@ -2657,7 +2653,6 @@
 				888BB88B1A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov in Resources */,
 				888BB8E31A5EE89D00157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.mov in Resources */,
 				888BB99A1A5F801A00157977 /* IBT-Transp-logo-carrier.png in Resources */,
-				8895FF1E1A5B19F50076A3EC /* logo-marioff@2x.png in Resources */,
 				20BF48DE1A3B501D009645DC /* logo_edwards@2x.png in Resources */,
 				888BB88D1A5EE87600157977 /* PH2_AUTOLOG_B_00_STILL_ECOSCREEN_SUSTAIN_HS.png in Resources */,
 				888BB99C1A5F801A00157977 /* IBT-Transp-logo-carrier@2x.png in Resources */,
@@ -2668,6 +2663,7 @@
 				20192C9B1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
 				20BF48F41A3B501D009645DC /* logo_otis.png in Resources */,
 				8895FF3F1A5B44B50076A3EC /* SustainViewController.xib in Resources */,
+				888BB9C21A5F994400157977 /* logo-utc.png in Resources */,
 				20A95A5719CBB82800132F7E /* icon main menu@2x.png in Resources */,
 				8834E22A1A531E8300204D81 /* grfx_ibt_header@2x.png in Resources */,
 				888BB82D1A5EE78500157977 /* PH2_INTERLOGIX_02_SMG_CONN_AUTOLOG_WEBCTRL_EDWARDS.PNG in Resources */,
@@ -2676,7 +2672,7 @@
 				20A39EBA19C3351C00C71430 /* bg_06.jpg in Resources */,
 				20A39EBE19C3351C00C71430 /* bg_03@2x.jpg in Resources */,
 				8834E22C1A531E8300204D81 /* grfx_ibt_rule@2x.png in Resources */,
-				8895FF1C1A5B19F50076A3EC /* logo-marioff.png in Resources */,
+				888BB9C91A5F9E8D00157977 /* advantec.png in Resources */,
 				8834E24B1A56E32D00204D81 /* ibt_carrier@2x.png in Resources */,
 				888BB7ED1A5EE6E500157977 /* INT_02_ANIM_TRANS_BLDG_UNBUILD.mov in Resources */,
 				8895FF1A1A5B19F50076A3EC /* logo-lenel@2x.png in Resources */,
@@ -2743,6 +2739,7 @@
 				888BB9311A5EE8D800157977 /* PH2_OTIS_03_LR_NCE_LED_LIGHT_BALUST.mov in Resources */,
 				8834E2451A56E32D00204D81 /* ibt_automatedlogic.png in Resources */,
 				888BB79C1A5E136C00157977 /* ibt_arrow_two.png in Resources */,
+				888BB9CB1A5F9E8D00157977 /* advantec@2x.png in Resources */,
 				888BB8391A5EE78F00157977 /* PH2_LENEL_01_SMG_CONN_EDWARDS_EST3.png in Resources */,
 				20192C8E1A48729000969C85 /* icon marker center right@2x.png in Resources */,
 				888BB8871A5EE87600157977 /* PH2_AUTOLOG_03_SMG_ENVIRONMENTAL_INDEX.png in Resources */,
@@ -2771,7 +2768,6 @@
 				888BB8F21A5EE8A900157977 /* PH2_KIDDE_01_SMG_FM200.mov in Resources */,
 				20A95A4E19CBB82800132F7E /* icon home.png in Resources */,
 				8834E2491A56E32D00204D81 /* ibt_carrier.png in Resources */,
-				8895FF221A5B19F50076A3EC /* logo-noresco@2x.png in Resources */,
 				888BB7CE1A5EE6D900157977 /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				888BB8291A5EE78500157977 /* PH2_INTERLOGIX_01_SMG_CONN_AUTOLOG_WEBCTRL_EDWARDS.png in Resources */,
 				20BF490C1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,

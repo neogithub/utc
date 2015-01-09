@@ -204,7 +204,7 @@
             NSLog(@"found!");
 
             //Assigning YES to the stop variable is the equivalent of calling "break" during fast enumeration
-            obj.alpha = 0.35;
+            obj.alpha = 0.13;
             //*stop = YES;
             return ;
         } else {
@@ -282,7 +282,15 @@
 {
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
 
-    NSDictionary *catDict = [selectedCo.coibt objectAtIndex:[sender tag]];
+    int myTag = -1;
+    
+    if ([sender tag] == 2) {
+        myTag = 1;
+    } else {
+        myTag = (int)[sender tag];
+    }
+    
+    NSDictionary *catDict = [selectedCo.coibt objectAtIndex:myTag];
     NSLog(@"%@", catDict);
 
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

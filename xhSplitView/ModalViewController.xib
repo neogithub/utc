@@ -29,8 +29,8 @@
                     <rect key="frame" x="202" y="168" width="620" height="432"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-avantec.png" id="MtC-1a-DOn">
-                            <rect key="frame" x="134" y="14" width="353" height="175"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advantec.png" id="MtC-1a-DOn">
+                            <rect key="frame" x="238" y="87" width="145" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_white.png" id="uCT-BO-4kY">
@@ -105,10 +105,10 @@ Intelligent building capabilities include:
     </objects>
     <resources>
         <image name="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" width="1920" height="1440"/>
+        <image name="advantec.png" width="145" height="46"/>
         <image name="arrow_white.png" width="21" height="11"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>
         <image name="grfx_ibt_header.png" width="1" height="45"/>
-        <image name="logo-avantec.png" width="90" height="57"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
