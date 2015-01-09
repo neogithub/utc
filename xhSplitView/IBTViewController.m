@@ -284,7 +284,7 @@
 
     int myTag = -1;
     
-    if ([sender tag] == 2) {
+    if ( ([sender tag] == 1) || ([sender tag] == 2) ){
         myTag = 1;
     } else {
         myTag = (int)[sender tag];

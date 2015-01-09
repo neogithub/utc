@@ -43,6 +43,9 @@ enum {
     NSMutableArray	*arr_CompanyLogos;
     embTitle		*topTitle;
     NSString		*topname;
+    
+    NSInteger       selctedRow;
+
 }
 
 @property (nonatomic) NSTimer *myTimer;
@@ -114,6 +117,22 @@ enum {
         [self initTitleBox];
         [topTitle setHotSpotTitle:categoryName];
         
+    } else if ([categoryType isEqualToString:@"filmWithCards"]) {
+        //TODO: connect to data
+        
+        NSDictionary *co_dict = _arr_subHotspots[0];
+        NSString *subBG = [co_dict objectForKey:@"background"];
+        NSLog(@"subBG = %@", subBG);
+        
+        //[self popUpImage:subBG withCloseButton:YES];
+        [self initTitleBox];
+        [topTitle setHotSpotTitle:categoryName];
+        
+        [self animateTitleAndHotspot:TitleLabelsOffscreen];
+        
+        NSString *mov = [co_dict objectForKey:@"fileName"];
+        [self loadMovieNamed:mov isTapToPauseEnabled:YES belowSubview:_uib_backBtn withOverlay:nil];
+
         
     } else if ([categoryType isEqualToString:@"stillWithMenu"]) {
         
@@ -710,6 +729,95 @@ enum {
 -(void)closeMovie
 {
     NSLog(@"closeMovie");
+    CGAffineTransform t = _uib_backBtn.transform;
+    
+    NSDictionary *filmDict = _dict_ibt;
+    NSString *catType = [filmDict objectForKey:@"catType"];
+
+
+    NSDictionary *catDict = [_arr_subHotspots objectAtIndex:selctedRow];
+    NSString *categoryType = [catDict objectForKey:@"catType"];
+    if ([catType isEqualToString:@"filmWithCards"]) {
+       // if (kshowNSLogBOOL)
+        NSLog(@"closeMovie filmWithCards");
+        
+        [self updateStillFrameUnderFilm:@"03A Building Cut.png"];
+        
+        [topTitle removeFromSuperview];
+        
+        if (t.tx < 0) {
+            [self animateTitleAndHotspot:TitleLabelsOnscreen];
+        }
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
+        if (_myTimer) {
+            [self.myTimer invalidate];
+            self.myTimer = nil;
+        }
+        
+        if (_uis_zoomingInfoImg !=nil) {
+            [self resetSubHotspot];
+        } else {
+            [self resetBaseInteractive];
+        }
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
+        
+    } else {
+        
+      //  if (kshowNSLogBOOL)  NSLog(@"xscale %f",t.tx);
+        
+        if (t.tx < 0) {
+            [self animateTitleAndHotspot:TitleLabelsOnscreen];
+        }
+        
+        if (_myTimer) {
+            [self.myTimer invalidate];
+            self.myTimer = nil;
+        }
+        
+        if (_uis_zoomingInfoImg !=nil) {
+            [self resetSubHotspot];
+        } else {
+            [self resetBaseInteractive];
+        }
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
+       // if (kshowNSLogBOOL) NSLog(@"_arr_subHotspots %lu",(unsigned long)[_arr_subHotspots count]);
+        
+        if (_isPauseable == YES) {
+            [self unhideChrome];
+            //#warning might be trouble once movies are added
+            //		if ([_arr_subHotspots count] == 0) {
+            //
+            //            NSLog(@"if ([_arr_subHotspots count] == 0) {");
+            //
+            //			//[topTitle removeHotspotTitle];
+            //			if (topTitle.appendString) {
+            //				if (kshowNSLogBOOL) NSLog(@"topTitle.appendString %@",topTitle.appendString);
+            //				[topTitle setHotSpotTitle:topTitle.appendString];
+            //			}
+            //		} else {
+            NSLog(@"\n\nelse");
+            NSLog(@"\n\n%@",topTitle.appendString);
+            //_arr_subHotspots=nil;
+            if (topTitle.appendString) {
+                [topTitle setHotSpotTitle:topTitle.appendString];
+            }
+            //		}
+        }
+        
+        [self clearHotpsotData];
+    }
+}
+
+/*
+-(void)closeMovie
+{
+    NSLog(@"closeMovie");
     
     CGAffineTransform t = _uib_backBtn.transform;
     
@@ -752,7 +860,7 @@ enum {
     [self clearHotpsotData];
     
 }
-
+*/
 -(void)resetBaseInteractive
 {
     NSLog(@"resetBaseInteractive");
@@ -787,6 +895,8 @@ enum {
 
 -(void)removeMovieLayers
 {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
     [_avPlayerLayer removeFromSuperlayer];
     _avPlayerLayer = nil;
     [_uiv_movieContainer removeFromSuperview];
