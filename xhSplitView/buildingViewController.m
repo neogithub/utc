@@ -211,7 +211,7 @@ enum {
 		[settButton setFrame:CGRectMake(hs_x, hs_y, staticWidth, staticHeight)];
 		[settButton setImage:[UIImage imageNamed:[hotspotItem objectForKey:@"background"]] forState:UIControlStateNormal];
         
-        [settButton addTarget:self action:@selector(showPopover:) forControlEvents:UIControlEventTouchDown];
+        [settButton addTarget:self action:@selector(logoButtonAction:) forControlEvents:UIControlEventTouchDown];
         
 		[arr_CompanyLogos addObject:settButton];
 		[_uis_zoomingImg.blurView addSubview:settButton];
@@ -588,6 +588,43 @@ enum {
 	}
 }
 
+-(void)logoButtonAction:(id)sender
+{
+    NSDictionary *co = allCompanies[[sender tag]];
+    selectedCoDict = [[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]] [0];
+    selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+    NSLog(@"logoButtonAction: %@",selectedCo.coname);
+    
+    if ( [selectedCo.coname isEqualToString:@"Intelligent Building Technologies"] )
+    {
+        [self loadIBT:nil];
+        
+    } else if ( [selectedCo.coname isEqualToString:@"Sustainability"] ) {
+        
+        [self loadSustainability];
+        
+    } else if ( [selectedCo.coname isEqualToString:@"AdvanTE3C"] ) {
+        
+        [self loadModalVC];
+   
+    } else if ( [selectedCo.coname isEqualToString:@"Kidde"] ) {
+        
+        [self selectedRow:0 withText:nil];
+        
+    } else if ( [selectedCo.coname isEqualToString:@"Taylor"] ) {
+        
+        [self selectedRow:0 withText:nil];
+        
+    } else if ( [selectedCo.coname isEqualToString:@"Onity"] ) {
+        
+        [self selectedRow:0 withText:nil];
+        
+    } else {
+        
+        [self showPopover:sender];
+        
+    }
+}
 
 //----------------------------------------------------
 #pragma mark - POPOVER
@@ -629,21 +666,21 @@ enum {
 
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     
-	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
-	{
-        
-        [self loadIBT:nil];
-        
-    } else if ( [selectedCo.coname isEqualToString:@"Sustainability"] ) {
-        
-        [self loadSustainability];
-        
-    } else if ( [selectedCo.coname isEqualToString:@"AdvanTE3C"] ) {
-        
-        [self loadModalVC];
-
-	} else {
-        
+//	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
+//	{
+//        
+//        [self loadIBT:nil];
+//        
+//    } else if ( [selectedCo.coname isEqualToString:@"Sustainability"] ) {
+//        
+//        [self loadSustainability];
+//        
+//    } else if ( [selectedCo.coname isEqualToString:@"AdvanTE3C"] ) {
+//        
+//        [self loadModalVC];
+//
+//	} else {
+    
 		NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:selctedRow];
 		NSString *categoryType = [catDict objectForKey:@"catType"];
 		NSString *categoryName = [catDict objectForKey:@"catName"];
@@ -697,7 +734,7 @@ enum {
         
         [_uib_ibtBtn removeFromSuperview];
 
-	}
+//	}
 }
 
 
