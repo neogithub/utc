@@ -10,14 +10,19 @@
 #import "buildingViewController.h"
 #import "ebZoomingScrollView.h"
 #import "LibraryAPI.h"
+#import "embDrawBezierPath.h"
+#import "embBldgTypePaths.h"
 
-@interface detailViewController () <ebZoomingScrollViewDelegate>
+@interface detailViewController () <ebZoomingScrollViewDelegate,embDrawBezierPathDelegate>
 
 @property (nonatomic, strong) ebZoomingScrollView		*uis_zoomingImg;
 @property (nonatomic, strong) UIImageView				*uiiv_bg;
 @property (nonatomic, strong) UIButton					*uib_buildingBtn;
 @property (nonatomic, strong) buildingViewController    *buildingVC;
 @property (nonatomic, strong) UIButton					*uib_back;
+@property (nonatomic, strong) embDrawBezierPath                 *blockPath;
+@property (nonatomic, strong) embBldgTypePaths                  *bldgTypePaths;
+@property (nonatomic, strong) NSMutableArray                    *pathsArray;
 @end
 
 @implementation detailViewController
@@ -37,7 +42,9 @@
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
     // Do any additional setup after loading the view.
     [self createBG];
-    [self initBuildingBtn];
+    
+    [self drawPaths];
+    
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(restartView) name:@"loadBuilding" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(animateTransition) name:@"animateTransition" object:nil];
 
@@ -65,17 +72,59 @@
 	[self.view addSubview:_uis_zoomingImg];
 }
 
--(void)initBuildingBtn
+
+
+#pragma mark - Darw Paths On Map
+-(void)drawPaths
 {
-    _uib_buildingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_buildingBtn.frame = CGRectMake(390.0, 245.0, 245, 245);
-    [_uib_buildingBtn addTarget:self action:@selector(loadBuilding) forControlEvents:UIControlEventTouchUpInside];
-    [_uis_zoomingImg.blurView addSubview:_uib_buildingBtn];
+    
+    _bldgTypePaths = [[embBldgTypePaths alloc] init];
+    _pathsArray = _bldgTypePaths.bezierPaths;
+    
+    // actual drawpath function
+    _blockPath = [[embDrawBezierPath alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)];
+    _blockPath.delegate=self;
+    _blockPath.allowsMultipleSelection=NO;
+    [self.view addSubview:_blockPath];
+    
+    for (int i=0; i<[_pathsArray count]; i++) {
+        
+        embBezierPathItem *p = _pathsArray[i];
+        NSLog(@"%@", [p description]);
+        
+        _blockPath.myPath = p.embPath;
+        _blockPath.animationSpeed = 0;
+        _blockPath.pathStrokeColor = [UIColor clearColor];
+        _blockPath.pathFillColor = [UIColor whiteColor];
+        _blockPath.pathLineWidth = 3.0;
+        _blockPath.animationSpeed = 1.5;
+        _blockPath.isTappable = YES;
+        _blockPath.animated = NO;
+        _blockPath.isStack = NO;
+        [_blockPath startAnimationFromIndex:i afterDelay:p.pathDelay];
+        
+        [_blockPath pulseFill];
+    }
 }
+
+-(void)embDrawBezierPath:(embDrawBezierPath *)path indexOfTapped:(int)i
+{
+    NSLog(@"tapped building");
+    
+    //NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObject:[NSNumber numberWithInt:i] forKey:@"buttontag"];
+    // [[NSNotificationCenter defaultCenter] postNotificationName:@"updateDetailView" object:self userInfo:dictionary];
+    
+    [self loadBuildingVC:0];
+    
+    //[_blockPath clearAllHilightedPart];
+}
+
+
 
 -(void)loadBuilding
 {
-	[self loadBuildingVC:0];
+// TODO: Lookup currently selected building (maybe?)
+    [self loadBuildingVC:0];
 	[[LibraryAPI sharedInstance] getCompanies];
 }
 

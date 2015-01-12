@@ -2768,7 +2768,7 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Learn More</string>
+				<string>Learn More - CHANGING</string>
 				<key>subBG</key>
 				<string>PH2_INTERLOGIX_00_STILL_HS.png</string>
 			</dict>
@@ -3157,7 +3157,7 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Learn More</string>
+				<string>Learn More - CHANGING</string>
 				<key>subBG</key>
 				<string>PH2_EDWARDS_00_STILL_HS.png</string>
 			</dict>

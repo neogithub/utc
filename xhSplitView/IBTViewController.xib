@@ -51,10 +51,6 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                     <rect key="frame" x="20" y="206" width="580" height="2"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-Transp-logo-otis.png" id="oed-2m-w1g">
-                    <rect key="frame" x="126" y="81" width="89" height="56"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7gA-Vd-H2Y">
                     <rect key="frame" x="25" y="216" width="401" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -64,6 +60,10 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-connection-line-double.png" id="lg7-qw-1ci">
                     <rect key="frame" x="239" y="65" width="116" height="87"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-Transp-logo-otis.png" id="oed-2m-w1g">
+                    <rect key="frame" x="25" y="24" width="268" height="169"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>

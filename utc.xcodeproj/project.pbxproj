@@ -722,6 +722,12 @@
 		888BB9CA1A5F9E8D00157977 /* advantec.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C71A5F9E8D00157977 /* advantec.png */; };
 		888BB9CB1A5F9E8D00157977 /* advantec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C81A5F9E8D00157977 /* advantec@2x.png */; };
 		888BB9CC1A5F9E8D00157977 /* advantec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9C81A5F9E8D00157977 /* advantec@2x.png */; };
+		888BB9D41A64336200157977 /* embBldgTypePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9D11A64336200157977 /* embBldgTypePaths.m */; };
+		888BB9D51A64336200157977 /* embBldgTypePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9D11A64336200157977 /* embBldgTypePaths.m */; };
+		888BB9D81A64352E00157977 /* embBezierPathItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9D71A64352E00157977 /* embBezierPathItem.m */; };
+		888BB9D91A64352E00157977 /* embBezierPathItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9D71A64352E00157977 /* embBezierPathItem.m */; };
+		888BB9DC1A6436F900157977 /* embDrawBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9DB1A6436F900157977 /* embDrawBezierPath.m */; };
+		888BB9DD1A6436F900157977 /* embDrawBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9DB1A6436F900157977 /* embDrawBezierPath.m */; };
 		8895FEDD1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEDE1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEFC1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */; };
@@ -1172,6 +1178,12 @@
 		888BB9C11A5F994400157977 /* logo-utc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-utc@2x.png"; path = "logos/logo-utc@2x.png"; sourceTree = "<group>"; };
 		888BB9C71A5F9E8D00157977 /* advantec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = advantec.png; path = grfx/advante3c/advantec.png; sourceTree = "<group>"; };
 		888BB9C81A5F9E8D00157977 /* advantec@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "advantec@2x.png"; path = "grfx/advante3c/advantec@2x.png"; sourceTree = "<group>"; };
+		888BB9D01A64336200157977 /* embBldgTypePaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = embBldgTypePaths.h; path = drawPathShape/embBldgTypePaths.h; sourceTree = "<group>"; };
+		888BB9D11A64336200157977 /* embBldgTypePaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = embBldgTypePaths.m; path = drawPathShape/embBldgTypePaths.m; sourceTree = "<group>"; };
+		888BB9D61A64352E00157977 /* embBezierPathItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = embBezierPathItem.h; path = drawPathShape/embBezierPathItem.h; sourceTree = "<group>"; };
+		888BB9D71A64352E00157977 /* embBezierPathItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = embBezierPathItem.m; path = drawPathShape/embBezierPathItem.m; sourceTree = "<group>"; };
+		888BB9DA1A6436F900157977 /* embDrawBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = embDrawBezierPath.h; path = drawPathShape/embDrawBezierPath.h; sourceTree = "<group>"; };
+		888BB9DB1A6436F900157977 /* embDrawBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = embDrawBezierPath.m; path = drawPathShape/embDrawBezierPath.m; sourceTree = "<group>"; };
 		8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppVersion.h"; sourceTree = "<group>"; };
 		8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppVersion.m"; sourceTree = "<group>"; };
 		8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-automatedLogic.png"; path = "logos/logo-automatedLogic.png"; sourceTree = "<group>"; };
@@ -1498,6 +1510,7 @@
 		82A66ADE19B793BD00C8E12A /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				888BB9CD1A64332D00157977 /* drawPathShape */,
 				8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */,
 				8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */,
 				82A66ADF19B793BD00C8E12A /* ebZoomingScrollView.h */,
@@ -1967,6 +1980,19 @@
 				888BB9C81A5F9E8D00157977 /* advantec@2x.png */,
 			);
 			name = advante3c;
+			sourceTree = "<group>";
+		};
+		888BB9CD1A64332D00157977 /* drawPathShape */ = {
+			isa = PBXGroup;
+			children = (
+				888BB9DA1A6436F900157977 /* embDrawBezierPath.h */,
+				888BB9DB1A6436F900157977 /* embDrawBezierPath.m */,
+				888BB9D01A64336200157977 /* embBldgTypePaths.h */,
+				888BB9D11A64336200157977 /* embBldgTypePaths.m */,
+				888BB9D61A64352E00157977 /* embBezierPathItem.h */,
+				888BB9D71A64352E00157977 /* embBezierPathItem.m */,
+			);
+			name = drawPathShape;
 			sourceTree = "<group>";
 		};
 		8895FEDF1A5B19DF0076A3EC /* logos */ = {
@@ -2807,6 +2833,7 @@
 				20E546CB1A2DFEF40073B2CF /* GHWalkThroughPageCell.m in Sources */,
 				20E546CC1A2DFEF40073B2CF /* City.m in Sources */,
 				20E546CD1A2DFEF40073B2CF /* masterViewController.m in Sources */,
+				888BB9D51A64336200157977 /* embBldgTypePaths.m in Sources */,
 				20E546CE1A2DFEF40073B2CF /* AppDelegate.m in Sources */,
 				20BF48B71A3A0629009645DC /* PersistencyManager.m in Sources */,
 				20E546CF1A2DFEF40073B2CF /* Building.m in Sources */,
@@ -2824,6 +2851,8 @@
 				8895FEDE1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */,
 				888BB94E1A5EE9EA00157977 /* ModalViewController.m in Sources */,
 				20E546D71A2DFEF40073B2CF /* neoHotspotsView.m in Sources */,
+				888BB9DD1A6436F900157977 /* embDrawBezierPath.m in Sources */,
+				888BB9D91A64352E00157977 /* embBezierPathItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2833,6 +2862,7 @@
 			files = (
 				20CEFE3719D1018700BEB200 /* PopoverViewController.m in Sources */,
 				824F14EF19CB59CA00628F01 /* titleTableViewCell.m in Sources */,
+				888BB9D81A64352E00157977 /* embBezierPathItem.m in Sources */,
 				888BB94D1A5EE9EA00157977 /* ModalViewController.m in Sources */,
 				20D0B01019BF53C30096021D /* Company.m in Sources */,
 				20BF48B21A3A05F1009645DC /* LibraryAPI.m in Sources */,
@@ -2858,6 +2888,8 @@
 				82A66AA819B7926B00C8E12A /* main.m in Sources */,
 				82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */,
 				20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */,
+				888BB9D41A64336200157977 /* embBldgTypePaths.m in Sources */,
+				888BB9DC1A6436F900157977 /* embDrawBezierPath.m in Sources */,
 				82A66ADC19B792C700C8E12A /* xhSplitViewController.m in Sources */,
 				20D0B06719C0D7440096021D /* neoHotspotsView.m in Sources */,
 				8834E2341A5327C200204D81 /* UIImage+UIImage_GaussianBlur.m in Sources */,
