@@ -833,7 +833,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 				<array>
 					<dict>
 						<key>xy</key>
-						<string>580,74</string>
+						<string>20,75</string>
 						<key>fileName</key>
 						<string>PH2_CARRIER_B_01A_ANIM_AQUAEDGE_23XRV.mov</string>
 						<key>removeafterseconds</key>
@@ -885,13 +885,13 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker right.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Taking Efficiency to New Levels</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>580,120</string>
+						<string>20,125</string>
 						<key>fileName</key>
 						<string>PH2_CARRIER_B_01B_ANIM_AQUAEDGE_23XRV.mov</string>
 						<key>removeafterseconds</key>
@@ -928,17 +928,17 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>2</integer>
+						<integer>3</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker left.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Most Robust Chiller Available</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>500,400</string>
+						<string>20,175</string>
 						<key>fileName</key>
 						<string>PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov</string>
 						<key>removeafterseconds</key>
@@ -974,7 +974,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>2</integer>
+						<integer>3</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
@@ -1005,7 +1005,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<key>factwidth</key>
 							<string>300</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -1045,7 +1045,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>fileName</key>
 						<string>BG_H264_1440.mov</string>
 						<key>removeafterseconds</key>
-						<integer>23</integer>
+						<integer>12</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -1053,7 +1053,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>20,210</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -1095,7 +1095,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>20,203</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -1138,7 +1138,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>fileName</key>
 						<string>PH2_CARRIER_D_03_ANIM_AIRSTREAM_FAN_COILS_42CE.mov</string>
 						<key>removeafterseconds</key>
-						<integer>5</integer>
+						<integer>10</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -1323,9 +1323,9 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>300</string>
+							<string>340</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -1338,7 +1338,7 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 									<key>copy</key>
 									<string>Has capacity for two flavors in one machine</string>
 									<key>appearanceDelay</key>
-									<integer>6</integer>
+									<integer>4</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
@@ -1371,7 +1371,7 @@ Carrier systems integrate with Automated Logic WebCTRL to assure comfortable tem
 							<key>factwidth</key>
 							<string>300</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -2063,7 +2063,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>xy</key>
 						<string>20,125</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov</string>
+						<string>PH2_AUTOLOG_02_SMG_SAVES_ENERGY_AND_EXPENSE.png</string>
 						<key>removeafterseconds</key>
 						<integer>23</integer>
 						<key>width</key>
@@ -2116,12 +2116,14 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Saves Energy &amp; Expense</string>
+						<key>overlay</key>
+						<string>PH2_AUTOLOG_02_SMG_SAVES_ENERGY_AND_EXPENSE.png</string>
 					</dict>
 					<dict>
 						<key>xy</key>
 						<string>20,175</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_03_ANIM_REGEN_DRIVE.mov</string>
+						<string>PH2_AUTOLOG_03_SMG_ENVIRONMENTAL_INDEX.png</string>
 						<key>removeafterseconds</key>
 						<integer>23</integer>
 						<key>width</key>
@@ -2156,12 +2158,14 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Environmental Index</string>
+						<key>overlay</key>
+						<string>PH2_AUTOLOG_03_SMG_ENVIRONMENTAL_INDEX.png</string>
 					</dict>
 					<dict>
 						<key>xy</key>
 						<string>20,225</string>
 						<key>fileName</key>
-						<string>PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov</string>
+						<string>PH2_AUTOLOG_04_SMG_TIMELAPSE_GRAPHICS.png</string>
 						<key>removeafterseconds</key>
 						<integer>10</integer>
 						<key>width</key>
@@ -2190,6 +2194,8 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Time-Lapse Graphics </string>
+						<key>overlay</key>
+						<string>PH2_AUTOLOG_04_SMG_TIMELAPSE_GRAPHICS.png</string>
 					</dict>
 				</array>
 				<key>catName</key>
@@ -2206,9 +2212,9 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 						<key>xy</key>
 						<string>780,74</string>
 						<key>fileName</key>
-						<string>PH2_AUTOLOG_B_01_ANIM_ECOSCREEN_SUSTAIN_KIOSK_h264_10Kbps_resize_1440x1080_24_KF_02.mov</string>
+						<string>PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov</string>
 						<key>removeafterseconds</key>
-						<integer>11</integer>
+						<integer>16</integer>
 						<key>width</key>
 						<string>300</string>
 						<key>facts</key>
@@ -2229,13 +2235,13 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 									<key>copy</key>
 									<string>Displays current energy and water usage, reductions in CO2 emissions, and outdoor air conditions</string>
 									<key>appearanceDelay</key>
-									<integer>4</integer>
+									<integer>6</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Provides building directions, room schedules, virtual tours, and amenities</string>
 									<key>appearanceDelay</key>
-									<integer>8</integer>
+									<integer>12</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2690,9 +2696,9 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>300</string>
+							<string>360</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -2726,9 +2732,9 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>300</string>
+							<string>360</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -3004,7 +3010,7 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 				<array>
 					<dict>
 						<key>xy</key>
-						<string>30,200</string>
+						<string>400,400</string>
 						<key>fileName</key>
 						<string>BG_H264_1440.mov</string>
 						<key>removeafterseconds</key>
@@ -3046,11 +3052,11 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker right.png</string>
+						<string>icon marker left.png</string>
 						<key>caption</key>
 						<string>Life Safety System &amp; Incident Mgmt. System</string>
 						<key>overlay</key>
@@ -3105,7 +3111,7 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>300,120</string>
+						<string>500,30</string>
 						<key>fileName</key>
 						<string>PH2_EDWARDS_03_SMS_SIGN_SERIES_DEVICES.mov</string>
 						<key>removeafterseconds</key>
@@ -3117,7 +3123,7 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -3393,7 +3399,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 				<array>
 					<dict>
 						<key>xy</key>
-						<string>680,274</string>
+						<string>25,75</string>
 						<key>fileName</key>
 						<string>PH2_KIDDE_01_SMG_FM200.mov</string>
 						<key>removeafterseconds</key>
@@ -3405,7 +3411,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>130,300</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -3433,13 +3439,13 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker right.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Waterless Fire Suppression Systems</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>580,100</string>
+						<string>25,125</string>
 						<key>fileName</key>
 						<string>PH2_KIDDE_02_SMG_ADS_ADV_DELI_SYS.mov</string>
 						<key>removeafterseconds</key>
@@ -3451,7 +3457,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 							<key>factwidth</key>
 							<string>320</string>
 							<key>factxy</key>
-							<string>20,210</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -3469,17 +3475,17 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>2</integer>
+						<integer>3</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker left.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>ADS Advanced Delivery System</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>500,400</string>
+						<string>25,175</string>
 						<key>fileName</key>
 						<string>PH2_KIDDE_03_SMG_WHDR_WET_CHEMICAL_SYS.mov</string>
 						<key>removeafterseconds</key>
@@ -3491,7 +3497,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>20,203</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -3503,17 +3509,17 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>2</integer>
+						<integer>3</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker left.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>WHDR Wet Chemical System</string>
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>500,200</string>
+						<string>25,225</string>
 						<key>fileName</key>
 						<string>PH2_KIDDE_04_ANIM_BADGER_FIRE_EXTING.mov</string>
 						<key>removeafterseconds</key>
@@ -3525,7 +3531,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>20,203</string>
+							<string>30,130</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -3549,11 +3555,11 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>2</integer>
+						<integer>3</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
-						<string>icon marker left.png</string>
+						<string>icon marker center.png</string>
 						<key>caption</key>
 						<string>Badger Fire Extinguishers</string>
 					</dict>

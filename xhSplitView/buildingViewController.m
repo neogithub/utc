@@ -373,7 +373,7 @@ enum {
 	[_uis_zoomingInfoImg removeFromSuperview];
 	
 	[self removeHotspots];
-	//[_arr_hotspotsArray removeAllObjects];
+	[_arr_hotspotsArray removeAllObjects];
 		
 	[_uib_backBtn setTag:1];
 }
@@ -833,7 +833,8 @@ enum {
 
 -(void)closeSubHotspots
 {
-	[_uib_backBtn setTag:1];
+    NSLog(@"close subhotspots");
+    [_uib_backBtn setTag:1];
 	[_uis_zoomingInfoImg removeFromSuperview];
 }
 
