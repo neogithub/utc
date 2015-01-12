@@ -1251,6 +1251,8 @@ enum {
 	} completion:^(BOOL completed) {
 		[self removeMovieLayers];
 	}];
+    
+    [self initIBTButton];
 }
 
 -(void)resetSubHotspot
