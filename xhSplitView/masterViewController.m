@@ -34,7 +34,7 @@
 
 @end
 
-static CGFloat yHeight = 315;
+static CGFloat yHeight = 90;
 
 @implementation masterViewController
 @synthesize tableView;
@@ -108,7 +108,7 @@ static CGFloat yHeight = 315;
 //	// sort them alphabetically
 //	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
-    _arr_companies = [[NSMutableArray alloc] initWithObjects:@"Residential", @"Hospitality", @"Museum",@"Transportation Hub",@"Port",@"Commercial", nil];
+    _arr_companies = [[NSMutableArray alloc] initWithObjects:@"Commercial", nil];
     
     // sort them alphabetically
     [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
