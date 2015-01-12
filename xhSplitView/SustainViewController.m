@@ -21,11 +21,11 @@
 
 @end
 
-static NSString * const sustainDesc3 = @"Only company in the world to be a founding member of Green Building Councils on four continents\n\nCarrier was instrumental in launching the U.S. Green Building Council in 1993 and was the first company in the world to join the organization\n\nEngaged more than 60,000 building professionals around the world since 2010 in green building training and education\n\nFounding sponsor of the Center for Green Schools";
+static NSString * const sustainDesc3 = @"Advanced research and technology development on energy efficiency, water reduction, ozone protection, natural refrigerants and material selection\n\nRigorous, formal review during product development process to minimize environmental footprint of products while maximizing environmental technologies\n\nFirst elevator manufacturer to certify its LEED® Gold factory, and first HVAC manufacturer to certify its LEED® Gold factory";
 
 static NSString * const sustainImg1 = @"Screenshot 2015-01-06 14.53.17.png";
 
-static NSString * const sustainDesc2 = @"Advanced research and technology development on energy efficiency, water reduction, ozone protection, natural refrigerants and material selection\n\nRigorous, formal review during product development process to minimize environmental footprint of products while maximizing environmental technologies\n\nFirst elevator manufacturer to certify its LEED® Gold factory, and first HVAC manufacturer to certify its LEED® Gold factory";
+static NSString * const sustainDesc2 = @"Only company in the world to be a founding member of Green Building Councils on four continents\n\nCarrier was instrumental in launching the U.S. Green Building Council in 1993 and was the first company in the world to join the organization\n\nEngaged more than 60,000 building professionals around the world since 2010 in green building training and education\n\nFounding sponsor of the Center for Green Schools";
 
 static NSString * const sustainImg2 = @"Screenshot 2015-01-06 14.53.23.png";
 

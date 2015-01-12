@@ -631,19 +631,19 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Places elevators in standby mode during light traffic, using 27% less energy than conventional destination dispatching</string>
+									<string>SmartGrouping greatly reduces start/stop peak energy draw</string>
 									<key>appearanceDelay</key>
 									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>CompassPlus touch screens automatically go into sleep mode during low usage times</string>
+									<string>Places elevators in standby mode during light traffic, using 27% less energy than conventional destination dispatching</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>SmartGrouping greatly reduces start/stop peak energy draw</string>
+									<string>CompassPlus touch screens automatically go into sleep mode during low usage times</string>
 									<key>appearanceDelay</key>
 									<integer>7</integer>
 								</dict>
@@ -700,7 +700,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>ReGen VF drive captures created energy, directing it back into building grid</string>
+									<string>ReGen drive captures created energy, directing it back into building grid</string>
 									<key>appearanceDelay</key>
 									<integer>8</integer>
 								</dict>
@@ -3481,7 +3481,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL and Interlogix Tru
 						<key>background</key>
 						<string>icon marker center.png</string>
 						<key>caption</key>
-						<string>ADS Advanced Delivery System</string>
+						<string>Advanced Delivery System</string>
 					</dict>
 					<dict>
 						<key>xy</key>
