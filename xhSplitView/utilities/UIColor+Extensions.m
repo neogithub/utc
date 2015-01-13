@@ -25,6 +25,18 @@
 	return [UIColor colorWithRed: 91.0f/255.0f green: 91.0f/255.0f blue: 91.0f/255.0f alpha: 1];
 }
 
++ (UIColor *)utcBlueA {
+    return [UIColor colorWithRed: 68.0f/255.0f green: 145.0f/255.0f blue: 201.0f/255.0f alpha: 1];
+}
+
++ (UIColor *)utcBlueAlight {
+    return [UIColor colorWithRed: 100.0f/255.0f green: 167.0f/255.0f blue: 212.0f/255.0f alpha: 1];
+}
+
++ (UIColor *)utcBlueDarkA {
+    return [UIColor colorWithRed: 0.0f/255.0f green: 53.0f/255.0f blue: 137.0f/255.0f alpha: 1];
+}
+
 + (UIColor *)vcLightBlueAlpha {
     return [UIColor colorWithRed: 0.0f/255.0f green: 98.0f/255.0f blue: 152.0f/255.0f alpha: 0.6];
 }

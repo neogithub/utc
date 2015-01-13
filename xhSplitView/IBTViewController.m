@@ -138,9 +138,9 @@
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
-                            _uiv_detail.frame = CGRectMake(0, 410, 620, 410);
-                            _uiv_ibtData.frame = CGRectMake(0, 30, 620, 410);
-                            _uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y+90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height-170);
+                            _uiv_detail.frame = CGRectMake(125, 575, 575, 575);
+                            _uitv_summaryText.frame = CGRectMake(137, 30, 471, 575);
+                            //_uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y+90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height-170);
                             
                         } completion:nil];
 }
@@ -155,7 +155,7 @@
     //UIButton *btn = (UIButton*)sender;
 
     [_uiv_ibt insertSubview:_uiv_detail belowSubview:_uiv_header];
-    _uiv_detail.frame = CGRectMake(0, 410, 620, 410);
+    _uiv_detail.frame = CGRectMake(125, 410, 496, 575);
     
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
@@ -163,14 +163,14 @@
                           
                             
                             
-                            _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
-                            _uiv_ibtData.frame = CGRectMake(0, -220, 620, 410);
+                            _uiv_detail.frame = CGRectMake(125, 100, 496, 575);
+                            _uitv_summaryText.frame = CGRectMake(137, -575, 471, 575);
                             
                            // _uib_learn.frame = CGRectMake(_uib_learn.frame.origin.x, 0, _uib_learn.frame.size.width, _uib_learn.frame.size.height);
                             
-                            if (_uiv_ibt.frame.size.height == 410) {
+                            /*if (_uiv_ibt.frame.size.height == 410) {
                                 _uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y-90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height+170);
-                            }
+                            }*/
                             
                         } completion:nil];
     
@@ -200,31 +200,31 @@
     NSArray *connectedLogos = [catDict objectForKey:@"connections"];
     NSLog(@"logos %lu", (unsigned long)[connectedLogos count]);
     if (connectedLogos.count == 2) {
-        topBtn.frame = CGRectMake(361.0, 23.0, 124, 79);
+        topBtn.frame = CGRectMake(300.0, 23.0, 124, 79);
         [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
 
-        midBtn.frame = CGRectMake(361.0, 110, 124, 79);
+        midBtn.frame = CGRectMake(300.0, 110, 124, 79);
         [midBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
      
         midBtn.hidden = NO;
         btmBtn.hidden = YES;
 
     } else if (connectedLogos.count == 3) {
-        topBtn.frame = CGRectMake(361.0, 20.0, 89, 56);
+        topBtn.frame = CGRectMake(300.0, 20.0, 89, 56);
         [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
         
-        midBtn.frame = CGRectMake(361.0, 80, 89, 56);
+        midBtn.frame = CGRectMake(300.0, 80, 89, 56);
         [midBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
         midBtn.hidden = NO;
 
-        btmBtn.frame = CGRectMake(361.0, 140, 89, 56);
+        btmBtn.frame = CGRectMake(300.0, 140, 89, 56);
         [btmBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[2]] forState:UIControlStateNormal];
         btmBtn.hidden = NO;
 
         
     } else {
         
-        topBtn.frame = CGRectMake(361.0, 66.0, 124, 79);
+        topBtn.frame = CGRectMake(300.0, 66.0, 124, 79);
         [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
 
         midBtn.hidden = YES;

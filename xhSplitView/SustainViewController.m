@@ -35,7 +35,6 @@ static NSString * const sustainDesc1 = @"Many of our products contribute toward 
 
 static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 
-
 @implementation SustainViewController
 
 #pragma mark - custom modal presentation
@@ -73,8 +72,15 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
         obj.alpha = 1.0;
         obj.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.5].CGColor;
         obj.layer.borderWidth = 1.0;
-        [obj setBackgroundColor:[UIColor colorWithRed:118.0f/255.0f green:193.0f/255.0f blue:136.0f/255.0f alpha:1.0]];
+        [obj setBackgroundColor:[UIColor utcBlueAlight]];
     }];
+    
+    [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        [obj.titleLabel setNumberOfLines:0];
+        [obj.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    }];
+    
+    _uiiv_arrow.alpha = 0.0;
 
 }
 
@@ -114,18 +120,19 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     
     [self dimButtonAtIndex:-1];
 
+    _uiiv_arrow.alpha = 0.0;
     
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                             
-                            _uiv_Text.frame = CGRectMake(0, -220, 620, 410);
-                            _uitv_text.frame = CGRectMake(16, 20, 587, 410);
+                            _uiv_Text.frame = CGRectMake(180, -220, 620, 435);
+                            _uitv_text.frame = CGRectMake(204, 20, 399, 238);
                             
                            // _uiv_detail.frame = CGRectMake(0, 410, 620, 410);
                            // _uiv_ibtData.frame = CGRectMake(0, 30, 620, 410);
                             
-                            _uiv_logoBns.frame = CGRectMake(0, 285, 620, 100);
+                           // _uiv_logoBns.frame = CGRectMake(0, 285, 620, 100);
 
                            // _uiv_buttons.frame = CGRectMake(_uiv_buttons.frame.origin.x, _uiv_buttons.frame.origin.y-15, _uiv_buttons.frame.size.width, _uiv_buttons.frame.size.height);
                             
@@ -142,7 +149,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     UIButton *btn = (UIButton*)sender;
     
     [_uiv_ibt insertSubview:_uiv_Text belowSubview:_uiv_header];
-    _uiv_Text.frame = CGRectMake(0, 415, 620, 410);
+    _uiv_Text.frame = CGRectMake(180, 415, 620, 435);
     
     _uil_header.text = btn.titleLabel.text;
     
@@ -152,19 +159,23 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                             
-                            _uiv_Text.frame = CGRectMake(0, 120, 620, 410);
-                            _uitv_text.frame = CGRectMake(16, -250, 587, 410);
+                            _uiv_Text.frame = CGRectMake(180, 65, 620, 435);
+                            _uitv_text.frame = CGRectMake(204, -250, 587, 410);
                             
                            // _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
-                            _uiv_logoBns.frame = CGRectMake(0, -3, 620, 100);
+                           // _uiv_logoBns.frame = CGRectMake(0, -3, 620, 100);
                             
                             //if (_uiv_buttons.frame.origin.y == 35) {
                            //     _uiv_buttons.frame = CGRectMake(_uiv_buttons.frame.origin.x, _uiv_buttons.frame.origin.y+15, _uiv_buttons.frame.size.width, _uiv_buttons.frame.size.height);
                           //  }
                             
-                            _uiiv_arrow.frame = CGRectMake(btn.center.x + 10 , 9, 21, 11);
+                            CGPoint originInWindowCoordinates = [_uiv_ibtData convertPoint:btn.bounds.origin fromView:btn];
 
-                           
+                            _uiiv_arrow.frame = CGRectMake(174 , originInWindowCoordinates.y+27, 11, 21);
+                            _uiiv_arrow.alpha = 1.0;
+
+                            
+                            
                             
                         } completion:nil];
     
@@ -193,7 +204,8 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     for (UIButton *btn in _uibCollection) {
         btn.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.5].CGColor;
         btn.layer.borderWidth = 1.0;
-        [btn setBackgroundColor:[UIColor colorWithRed:118.0f/255.0f green:193.0f/255.0f blue:136.0f/255.0f alpha:1.0]];
+        [btn setBackgroundColor:[UIColor utcBlueAlight]];
+        [btn.titleLabel setTextColor:[UIColor whiteColor]];
     }
     
     NSLog(@"index %i",index);
@@ -203,10 +215,11 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
         if (obj.tag == index) {
             NSLog(@"found!");
 
-                obj.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.0].CGColor;
-                obj.layer.borderWidth = 1.0;
-            [obj setBackgroundColor:[UIColor clearColor]];
-            
+                obj.layer.borderColor = [UIColor utcBlueAlight].CGColor;
+                obj.layer.borderWidth = 3.0;
+            [obj setBackgroundColor:[UIColor whiteColor]];
+            [obj setTitleColor:[UIColor utcBlueDarkA] forState:UIControlStateNormal];
+
             //Assigning YES to the stop variable is the equivalent of calling "break" during fast enumeration
             //obj.alpha = 0.35;
             //*stop = YES;

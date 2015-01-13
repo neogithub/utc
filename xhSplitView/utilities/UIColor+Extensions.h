@@ -13,8 +13,10 @@
 + (UIColor *)colorWithHueDegrees:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness;
 + (UIColor *)colorWithR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue A:(CGFloat)alpha;
 + (UIColor *)utcSmokeGray;
-/*+ (UIColor *)vcDarkBlue;
-+ (UIColor *)vclightbluemenu;
++ (UIColor *)utcBlueA;
++ (UIColor *)utcBlueAlight;
++ (UIColor *)utcBlueDarkA;
+/*+ (UIColor *)vclightbluemenu;
 + (UIColor *)vcdarkmenu;
 + (UIColor *)vccyanmenu;
 + (UIColor *)vcmediummenu;

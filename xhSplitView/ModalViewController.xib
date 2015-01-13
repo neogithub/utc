@@ -30,24 +30,26 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="5tI-qf-uWA">
-                            <rect key="frame" x="0.0" y="46" width="620" height="113"/>
+                            <rect key="frame" x="0.0" y="46" width="185" height="386"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advantec.png" id="MtC-1a-DOn">
+                                    <rect key="frame" x="25" y="161" width="135" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" red="0.32156862749999998" green="0.69411764710000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advantec.png" id="MtC-1a-DOn">
-                            <rect key="frame" x="238" y="87" width="145" height="46"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_white.png" id="uCT-BO-4kY">
-                            <rect key="frame" x="300" y="148" width="21" height="11"/>
+                            <rect key="frame" x="174" y="219" width="11" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <view contentMode="scaleToFill" id="8DR-O2-vF9" userLabel="View - Summary">
-                            <rect key="frame" x="0.0" y="159" width="620" height="273"/>
+                            <rect key="frame" x="193" y="52" width="419" height="372"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="SeY-UO-KQh">
-                                    <rect key="frame" x="17" y="10" width="586" height="250"/>
+                                    <rect key="frame" x="8" y="0.0" width="403" height="372"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <string key="text">Global team of Experts in Efficiency and Environment focused on creating strategic and sustainable building solutions
@@ -111,7 +113,7 @@ Intelligent building capabilities include:
     <resources>
         <image name="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" width="1920" height="1440"/>
         <image name="advantec.png" width="145" height="46"/>
-        <image name="arrow_white.png" width="21" height="11"/>
+        <image name="arrow_white.png" width="11" height="21"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>
         <image name="grfx_ibt_header.png" width="1" height="45"/>
     </resources>

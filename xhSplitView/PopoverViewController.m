@@ -37,7 +37,7 @@
 
 	_selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
 
-	self.preferredContentSize = CGSizeMake(270.0, 45*[_selectedCo.cocategories count]+ ebTableSectionHeight); //used instead
+	self.preferredContentSize = CGSizeMake(270.0, 47*[_selectedCo.cocategories count]); //used instead
 
 	self.tableView.tableHeaderView = [self headerView];
 	
@@ -137,9 +137,9 @@
 	titleLabel.frame = newFrame;
 	
 	// Create header view and add label as a subview
-	UIView *vview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 34)];
+	UIView *vview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 14)];
 	vview.backgroundColor=[UIColor colorWithRed:0.0000 green:0.4667 blue:0.7686 alpha:0.8];
-	[vview addSubview:titleLabel];
+	//[vview addSubview:titleLabel];
 	
 	return vview;
 }
