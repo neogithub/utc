@@ -9,6 +9,7 @@
 #define kshowNSLogBOOL NO
 
 #import "embTitle.h"
+#import "NSAttributedString+RegisteredTrademark.h"
 
 static CGFloat backButtonHeight = 51;
 static CGFloat backButtonActualHeight = 44;
@@ -52,10 +53,15 @@ enum {
 	companyLabelWidth = str_width + (labelPad*2);
 	
 	_uil_Company = [[UILabel alloc] initWithFrame:CGRectMake(0.0, -backButtonActualHeight, companyLabelWidth, backButtonActualHeight)];
-	[_uil_Company setText:year];
+	//[_uil_Company setText:year];
+    
+    NSAttributedString *t = [[NSAttributedString alloc] initWithString: year ];
+    NSAttributedString *g = [t addRegisteredTrademarkTo:year withColor:[UIColor blackColor] fnt:[UIFont fontWithName:@"Helvetica-Bold" size:19]];
+    _uil_Company.attributedText = g;
+    
 	[_uil_Company setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.8]];
 	[_uil_Company setTextColor:[UIColor blackColor]];
-	[_uil_Company setFont: font];
+	//[_uil_Company setFont: font];
 	[_uil_Company setTextAlignment:NSTextAlignmentCenter];
 	[_uil_Company.layer setBorderColor:[UIColor lightGrayColor].CGColor];
 	[_uil_Company.layer setBorderWidth:1.0];
@@ -83,10 +89,15 @@ enum {
 	
 	_uil_HotspotTitle = [[UILabel alloc] initWithFrame:CGRectMake(companyLabelWidth, -backButtonActualHeight, hotspotLabelWidth, backButtonActualHeight)];
 	[_uil_HotspotTitle setText:string];
+    
+    NSAttributedString *t = [[NSAttributedString alloc] initWithString: string ];
+    NSAttributedString *g = [t addRegisteredTrademarkTo: string withColor:[UIColor whiteColor] fnt:[UIFont fontWithName:@"Helvetica" size:19]];
+    _uil_HotspotTitle.attributedText = g;
+    
 	_uil_HotspotTitle.backgroundColor = [UIColor colorWithRed:0.0000 green:0.4667 blue:0.7686 alpha:0.8];
 	[_uil_HotspotTitle setTextColor:[UIColor whiteColor]];
 	[_uil_HotspotTitle setTextAlignment:NSTextAlignmentCenter];
-	[_uil_HotspotTitle setFont:font];
+	//[_uil_HotspotTitle setFont:font];
 	[_uil_HotspotTitle.layer setBorderColor:[UIColor colorWithRed:0.7922 green:1.0000 blue:1.0000 alpha:1.0].CGColor];
 	[_uil_HotspotTitle.layer setBorderWidth:1.0];
 	
@@ -105,7 +116,7 @@ enum {
 	
 	NSString *newString = [_appendString stringByAppendingString:aappendString];
 	
-	UIFont *font = [UIFont fontWithName:@"Helvetica" size:17];
+	UIFont *font = [UIFont fontWithName:@"Helvetica" size:19];
 	CGFloat str_width = [self getWidthFromStringLength:newString andFont:font];
 	static CGFloat labelPad = 20;
 	hotspotLabelWidth = str_width + (labelPad);
@@ -113,6 +124,11 @@ enum {
 	_uil_HotspotTitle.frame = CGRectMake(companyLabelWidth, 0, hotspotLabelWidth+companyLabelWidth, backButtonActualHeight);
 	
 	_uil_HotspotTitle.text = newString;
+    
+    NSAttributedString *t = [[NSAttributedString alloc] initWithString: newString ];
+    NSAttributedString *g = [t addRegisteredTrademarkTo: newString withColor:[UIColor whiteColor] fnt:[UIFont fontWithName:@"Helvetica" size:19]];
+    _uil_HotspotTitle.attributedText = g;
+    
 	if (kshowNSLogBOOL) NSLog(@"%@",_uil_HotspotTitle.text);
 }
 

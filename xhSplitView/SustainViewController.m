@@ -10,6 +10,8 @@
 #import "embHotSpotViewController.h"
 #import "Company.h"
 #import "LibraryAPI.h"
+#import "NSAttributedString+RegisteredTrademark.h"
+#import "UIColor+Extensions.h"
 
 @interface SustainViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
@@ -21,7 +23,7 @@
 
 @end
 
-static NSString * const sustainDesc3 = @"Advanced research and technology development on energy efficiency, water reduction, ozone protection, natural refrigerants and material selection\n\nRigorous, formal review during product development process to minimize environmental footprint of products while maximizing environmental technologies\n\nFirst elevator manufacturer to certify its LEED® Gold factory, and first HVAC manufacturer to certify its LEED® Gold factory";
+static NSString * const sustainDesc3 = @"Advanced research and technology development on energy efficiency, water reduction, ozone protection, natural refrigerants and material selection\n\nRigorous, formal review during product development process to minimize environmental footprint of products while maximizing environmental technologies\n\nFirst elevator manufacturer to certify its LEED: Gold factory, and first HVAC manufacturer to certify its LEED: Gold factory";
 
 static NSString * const sustainImg1 = @"Screenshot 2015-01-06 14.53.17.png";
 
@@ -29,7 +31,7 @@ static NSString * const sustainDesc2 = @"Only company in the world to be a found
 
 static NSString * const sustainImg2 = @"Screenshot 2015-01-06 14.53.23.png";
 
-static NSString * const sustainDesc1 = @"Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED®) v4 rating system\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic intelligent controls optimize building performance";
+static NSString * const sustainDesc1 = @"Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED:) v4 rating system\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic intelligent controls optimize building performance";
 
 static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 
@@ -90,8 +92,13 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 {
     NSLog(@"loadText");
     _uitv_sustain.text = self.descStrings[[sender tag]];
+    
+    NSAttributedString *t = [[NSAttributedString alloc] initWithString: _uitv_sustain.text ];
+    NSAttributedString *g = [t addRegisteredTrademarkTo: _uitv_sustain.text withColor:[UIColor utcSmokeGray] fnt:[UIFont fontWithName:@"Helvetica" size:17]];
+    _uitv_sustain.attributedText = g;
+    
     //_uiiv_data.image = [UIImage imageNamed:self.descImgStrings[[sender tag]]];
-    [_uitv_sustain setFont:[UIFont fontWithName:@"Arial" size:17]];
+   // [_uitv_sustain setFont:[UIFont fontWithName:@"Arial" size:17]];
     [self dimButtonAtIndex:(int)[sender tag]];
 }
 

@@ -10,6 +10,8 @@
 #import "embHotSpotViewController.h"
 #import "Company.h"
 #import "LibraryAPI.h"
+#import "NSAttributedString+RegisteredTrademark.h"
+#import "UIColor+Extensions.h"
 
 @interface IBTViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
@@ -69,7 +71,48 @@
     [_uiv_detail addSubview:btmBtn];
     
     [_uitv_connectText setFont:[UIFont fontWithName:@"Arial" size:17]];
+    
+    [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        [obj addTarget:self action:@selector(bouncyButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
+        [obj addTarget:self action:@selector(bouncyButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+        [obj addTarget:self action:@selector(bouncyButtonTouchUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
+    }];
+}
 
+- (void)bouncyButtonTouchDown:(id)sender
+{
+    UIButton *btn = (UIButton*)sender;
+    [UIView animateWithDuration:0.1 animations:^{
+        btn.layer.transform = CATransform3DMakeScale(0.8, 0.8, 1.0);
+    }];
+}
+
+- (void)bouncyButtonTouchUpInside:(id)sender
+{
+    UIButton *btn = (UIButton*)sender;
+    [self restoreTransformWithBounceForView:btn];
+    // Perform button actions
+}
+
+- (void)bouncyButtonTouchUpOutside:(id)sender
+{
+    UIButton *btn = (UIButton*)sender;
+
+    [self restoreTransformWithBounceForView:btn];
+}
+
+- (void)restoreTransformWithBounceForView:(UIView*)view
+{
+    [UIView animateWithDuration:0.3
+                          delay:0.0
+         usingSpringWithDamping:0.3
+          initialSpringVelocity:1.0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^
+     {
+         view.layer.transform = CATransform3DIdentity;
+     }
+                     completion:nil];
 }
 
 -(void)fadeUpBG
@@ -108,6 +151,8 @@
     NSLog(@"loadIBTDetail");
     
     NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
+    
+    //UIButton *btn = (UIButton*)sender;
 
     [_uiv_ibt insertSubview:_uiv_detail belowSubview:_uiv_header];
     _uiv_detail.frame = CGRectMake(0, 410, 620, 410);
@@ -115,6 +160,8 @@
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
+                          
+                            
                             
                             _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
                             _uiv_ibtData.frame = CGRectMake(0, -220, 620, 410);
@@ -144,8 +191,11 @@
     _uiiv_logo.image = [UIImage imageNamed:catDict[@"selectedlogo"]];
     _uiiv_arrow.image = [UIImage imageNamed:catDict[@"arrow"]];
 
-    _uitv_connectText.text = catDict[@"text"];
-    [_uitv_connectText setFont:[UIFont fontWithName:@"Arial" size:17]];
+    //_uitv_connectText.text = catDict[@"text"];
+
+    NSAttributedString *t = [[NSAttributedString alloc] initWithString:catDict[@"text"]];
+    NSAttributedString *g = [t addRegisteredTrademarkTo:catDict[@"text"] withColor:[UIColor utcSmokeGray] fnt:[UIFont fontWithName:@"Helvetica" size:17]];
+    _uitv_connectText.attributedText = g;
 
     NSArray *connectedLogos = [catDict objectForKey:@"connections"];
     NSLog(@"logos %lu", (unsigned long)[connectedLogos count]);
@@ -202,13 +252,17 @@
        // btn.alpha = 1.0;
         if (obj.tag == index) {
             NSLog(@"found!");
-
+            [obj.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+            [obj.layer setBorderWidth:2.0];
+            
             //Assigning YES to the stop variable is the equivalent of calling "break" during fast enumeration
-            obj.alpha = 0.13;
+            //obj.alpha = 0.13;
             //*stop = YES;
             return ;
         } else {
             obj.alpha = 1.0;
+            [obj.layer setBorderColor:[UIColor clearColor].CGColor];
+            [obj.layer setBorderWidth:0.0];
         }
     }];
 }

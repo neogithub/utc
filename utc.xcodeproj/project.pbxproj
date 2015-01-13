@@ -728,6 +728,10 @@
 		888BB9D91A64352E00157977 /* embBezierPathItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9D71A64352E00157977 /* embBezierPathItem.m */; };
 		888BB9DC1A6436F900157977 /* embDrawBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9DB1A6436F900157977 /* embDrawBezierPath.m */; };
 		888BB9DD1A6436F900157977 /* embDrawBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9DB1A6436F900157977 /* embDrawBezierPath.m */; };
+		888BB9E01A64583700157977 /* NSAttributedString+RegisteredTrademark.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9DF1A64583700157977 /* NSAttributedString+RegisteredTrademark.m */; };
+		888BB9E11A64583700157977 /* NSAttributedString+RegisteredTrademark.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9DF1A64583700157977 /* NSAttributedString+RegisteredTrademark.m */; };
+		888BB9E41A65A0E800157977 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9E31A65A0E800157977 /* UIColor+Extensions.m */; };
+		888BB9E51A65A0E800157977 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 888BB9E31A65A0E800157977 /* UIColor+Extensions.m */; };
 		8895FEDD1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEDE1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEFC1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */; };
@@ -1184,6 +1188,10 @@
 		888BB9D71A64352E00157977 /* embBezierPathItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = embBezierPathItem.m; path = drawPathShape/embBezierPathItem.m; sourceTree = "<group>"; };
 		888BB9DA1A6436F900157977 /* embDrawBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = embDrawBezierPath.h; path = drawPathShape/embDrawBezierPath.h; sourceTree = "<group>"; };
 		888BB9DB1A6436F900157977 /* embDrawBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = embDrawBezierPath.m; path = drawPathShape/embDrawBezierPath.m; sourceTree = "<group>"; };
+		888BB9DE1A64583700157977 /* NSAttributedString+RegisteredTrademark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+RegisteredTrademark.h"; sourceTree = "<group>"; };
+		888BB9DF1A64583700157977 /* NSAttributedString+RegisteredTrademark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+RegisteredTrademark.m"; sourceTree = "<group>"; };
+		888BB9E21A65A0E800157977 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
+		888BB9E31A65A0E800157977 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
 		8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppVersion.h"; sourceTree = "<group>"; };
 		8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppVersion.m"; sourceTree = "<group>"; };
 		8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-automatedLogic.png"; path = "logos/logo-automatedLogic.png"; sourceTree = "<group>"; };
@@ -1513,6 +1521,8 @@
 				888BB9CD1A64332D00157977 /* drawPathShape */,
 				8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */,
 				8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */,
+				888BB9DE1A64583700157977 /* NSAttributedString+RegisteredTrademark.h */,
+				888BB9DF1A64583700157977 /* NSAttributedString+RegisteredTrademark.m */,
 				82A66ADF19B793BD00C8E12A /* ebZoomingScrollView.h */,
 				82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */,
 				20BA88BD1A378EEE00705945 /* embUiViewCard.h */,
@@ -1528,6 +1538,8 @@
 				824F14EC19CB59CA00628F01 /* titleTableViewCell.h */,
 				824F14ED19CB59CA00628F01 /* titleTableViewCell.m */,
 				824F14EE19CB59CA00628F01 /* titleTableViewCell.xib */,
+				888BB9E21A65A0E800157977 /* UIColor+Extensions.h */,
+				888BB9E31A65A0E800157977 /* UIColor+Extensions.m */,
 				8834E2181A52E20E00204D81 /* UIImage+FlipImage.h */,
 				8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */,
 				8834E2321A5327C200204D81 /* UIImage+UIImage_GaussianBlur.h */,
@@ -2834,6 +2846,7 @@
 				20E546CC1A2DFEF40073B2CF /* City.m in Sources */,
 				20E546CD1A2DFEF40073B2CF /* masterViewController.m in Sources */,
 				888BB9D51A64336200157977 /* embBldgTypePaths.m in Sources */,
+				888BB9E51A65A0E800157977 /* UIColor+Extensions.m in Sources */,
 				20E546CE1A2DFEF40073B2CF /* AppDelegate.m in Sources */,
 				20BF48B71A3A0629009645DC /* PersistencyManager.m in Sources */,
 				20E546CF1A2DFEF40073B2CF /* Building.m in Sources */,
@@ -2853,6 +2866,7 @@
 				20E546D71A2DFEF40073B2CF /* neoHotspotsView.m in Sources */,
 				888BB9DD1A6436F900157977 /* embDrawBezierPath.m in Sources */,
 				888BB9D91A64352E00157977 /* embBezierPathItem.m in Sources */,
+				888BB9E11A64583700157977 /* NSAttributedString+RegisteredTrademark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2869,6 +2883,7 @@
 				82A66AB219B7926B00C8E12A /* ViewController.m in Sources */,
 				82A66AD819B792BD00C8E12A /* buildingViewController.m in Sources */,
 				20BA88BF1A378EEF00705945 /* embUiViewCard.m in Sources */,
+				888BB9E41A65A0E800157977 /* UIColor+Extensions.m in Sources */,
 				20A39EAB19C32F8800C71430 /* GHWalkThroughPageCell.m in Sources */,
 				8834E21A1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */,
 				20D0B00419BF4C280096021D /* City.m in Sources */,
@@ -2887,6 +2902,7 @@
 				8834E25F1A56F0D800204D81 /* embHotSpotViewController.m in Sources */,
 				82A66AA819B7926B00C8E12A /* main.m in Sources */,
 				82A66AD619B792BD00C8E12A /* detailViewController.m in Sources */,
+				888BB9E01A64583700157977 /* NSAttributedString+RegisteredTrademark.m in Sources */,
 				20D0B05E19C0A2DD0096021D /* UIScrollView+ZoomToPoint.m in Sources */,
 				888BB9D41A64336200157977 /* embBldgTypePaths.m in Sources */,
 				888BB9DC1A6436F900157977 /* embDrawBezierPath.m in Sources */,

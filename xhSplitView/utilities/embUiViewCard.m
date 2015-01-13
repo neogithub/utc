@@ -7,6 +7,7 @@
 //
 
 #import "embUiViewCard.h"
+#import "NSAttributedString+RegisteredTrademark.h"
 
 @interface embUiViewCard () <UITextViewDelegate>
 
@@ -84,7 +85,7 @@
         _textView = [[UITextView alloc] initWithFrame:CGRectZero];
         _textView.delegate = self;
         _textView.font = [self.class defaultFont];
-		_textView.textColor = [UIColor whiteColor];
+		//_textView.textColor = [UIColor whiteColor];
         _textView.backgroundColor = [UIColor clearColor];
 		_textView.contentSize = self.frame.size;
 		_textView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
@@ -146,7 +147,10 @@
 
 - (void)setText:(NSString *)text
 {
-    [self.textView setText:text];
+   // [self.textView setText:text];
+    NSAttributedString *t = [[NSAttributedString alloc] initWithString:text];
+    NSAttributedString *g = [t addRegisteredTrademarkTo:text withColor:[UIColor whiteColor] fnt:[UIFont fontWithName:@"Helvetica" size:17]];
+    self.textView.attributedText = g;
 }
 
 - (int )delay

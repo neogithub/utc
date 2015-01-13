@@ -29,6 +29,11 @@
                     <rect key="frame" x="202" y="168" width="620" height="432"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
+                        <view contentMode="scaleToFill" id="5tI-qf-uWA">
+                            <rect key="frame" x="0.0" y="46" width="620" height="113"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.32156862749999998" green="0.69411764710000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advantec.png" id="MtC-1a-DOn">
                             <rect key="frame" x="238" y="87" width="145" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,7 +42,7 @@
                             <rect key="frame" x="300" y="148" width="21" height="11"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <view contentMode="scaleToFill" id="8DR-O2-vF9">
+                        <view contentMode="scaleToFill" id="8DR-O2-vF9" userLabel="View - Summary">
                             <rect key="frame" x="0.0" y="159" width="620" height="273"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -61,7 +66,7 @@ Intelligent building capabilities include:
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
-                        <view contentMode="scaleToFill" id="fss-Or-oF8">
+                        <view contentMode="scaleToFill" id="fss-Or-oF8" userLabel="View - header">
                             <rect key="frame" x="0.0" y="0.0" width="620" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>

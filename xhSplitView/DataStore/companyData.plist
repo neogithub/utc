@@ -17,9 +17,9 @@
 				<string>IBT-logo-interlogix.png</string>
 			</array>
 			<key>text</key>
-			<string>Otis CompassPlus™ destination management system integrates with Lenel OnGuard® building access system to optimize traffic flow and floor access
+            <string>Otis CompassPlus™ destination management system integrates with Lenel OnGuard: building access system to optimize traffic flow and floor access
  
-Otis integrates with Interlogix TruVision® cameras to dispatch elevators based on crowd size</string>
+Otis integrates with Interlogix TruVision: cameras to dispatch elevators based on crowd size</string>
 		</dict>
 		<key>ibt</key>
 		<array>
@@ -142,7 +142,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>All critical elevator functions are monitored 24/7 by Otis</string>
+                                    <string>All critical elevator functions are monitored 24/7 by Otis:</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -194,7 +194,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+                                    <string>Gen2 elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -273,7 +273,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 		<key>infoName</key>
 		<string>Elevators &amp; Escalators</string>
 		<key>fileName</key>
-		<string>Otis</string>
+        <string>Otis</string>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -352,7 +352,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+                                    <string>Gen2: elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -591,13 +591,13 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Lenel OnGuard® building access system to optimize traffic flow and floor access</string>
+                                    <string>Integrates with Lenel OnGuard: building access system to optimize traffic flow and floor access</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Interlogix TruVision® security cameras to dispatch elevators based on crowd size</string>
+                                    <string>Integrates with Interlogix TruVision: security cameras to dispatch elevators based on crowd size</string>
 									<key>appearanceDelay</key>
 									<integer>7</integer>
 								</dict>
@@ -868,7 +868,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Automated Logic plant system manager via WebCTRL® to optimize chiller plant systems and save energy</string>
+                                    <string>Integrates with Automated Logic plant system manager via WebCTRL: to optimize chiller plant systems and save energy</string>
 									<key>appearanceDelay</key>
 									<integer>7</integer>
 								</dict>
@@ -1016,7 +1016,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Features Agion® antimicrobial-coated steel for improved indoor air quality</string>
+                                    <string>Features Agion: antimicrobial-coated steel for improved indoor air quality</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
@@ -1194,7 +1194,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 				<string>IBT-logo-automatedLogic.png</string>
 			</array>
 			<key>text</key>
-			<string>Carrier systems integrate with Automated Logic plant system manager via WebCTRL® to optimize chiller plant systems and save energy
+            <string>Carrier systems integrate with Automated Logic plant system manager via WebCTRL: to optimize chiller plant systems and save energy
  
 Carrier systems integrate with Automated Logic WebCTRL to assure comfortable temperature settings at time of occupancy based on building and weather conditions</string>
 		</dict>
@@ -1909,7 +1909,7 @@ Lenel OnGuard building access system integrates with Edwards EST3 platform to ef
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Gen2® elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
+                                    <string>Gen2: elevators with ReGen™ drives use up to 75% less energy than conventional elevators</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -1994,9 +1994,9 @@ Lenel OnGuard building access system integrates with Edwards EST3 platform to ef
 				<string>logo-avantec.png</string>
 			</array>
 			<key>text</key>
-			<string>Otis CompassPlus™ destination management system integrates with Lenel OnGuard® building access system to optimize traffic flow and floor access
+            <string>Otis CompassPlus™ destination management system integrates with Lenel OnGuard: building access system to optimize traffic flow and floor access
  
-Otis integrates with Interlogix TruVision® cameras to dispatch elevators based on crowd size</string>
+Otis integrates with Interlogix TruVision: cameras to dispatch elevators based on crowd size</string>
 		</dict>
 	</dict>
 	<dict>
@@ -2102,7 +2102,7 @@ Otis integrates with Interlogix TruVision® cameras to dispatch elevators based 
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Edwards EST3 platform and Interlogix TruVision® cameras to see where fire is located</string>
+                                    <string>Integrates with Edwards EST3 platform and Interlogix TruVision: cameras to see where fire is located</string>
 									<key>appearanceDelay</key>
 									<integer>18</integer>
 								</dict>
@@ -2745,7 +2745,7 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Edwards EST3 platform and Automated Logic WebCTRL® to detect and see where a fire is located</string>
+                                    <string>Integrates with Edwards EST3 platform and Automated Logic WebCTRL: to detect and see where a fire is located</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
@@ -2764,7 +2764,7 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 						<key>background</key>
 						<string>icon marker right.png</string>
 						<key>caption</key>
-						<string>TruVision® Cameras</string>
+                        <string>TruVision: Cameras</string>
 					</dict>
 				</array>
 				<key>catName</key>
@@ -3039,13 +3039,13 @@ Interlogix TruVision cameras integrate with Otis to dispatch elevators based on 
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Lenel OnGuard® building access system to efficiently mass notify and evacuate a building</string>
+                                    <string>Integrates with Lenel OnGuard: building access system to efficiently mass notify and evacuate a building</string>
 									<key>appearanceDelay</key>
 									<integer>14</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Automated Logic WebCTRL® and Interlogix TruVision® cameras to detect and see where a fire is located</string>
+                                    <string>Integrates with Automated Logic WebCTRL: and Interlogix TruVision: cameras to detect and see where a fire is located</string>
 									<key>appearanceDelay</key>
 									<integer>18</integer>
 								</dict>
