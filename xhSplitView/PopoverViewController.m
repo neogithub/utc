@@ -37,7 +37,7 @@
 
 	_selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
 
-	self.preferredContentSize = CGSizeMake(270.0, 47*[_selectedCo.cocategories count]); //used instead
+	self.preferredContentSize = CGSizeMake(240.0, 47*[_selectedCo.cocategories count]); //used instead
 
 	self.tableView.tableHeaderView = [self headerView];
 	

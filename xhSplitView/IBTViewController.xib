@@ -7,6 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBTViewController">
             <connections>
                 <outlet property="uib_learn" destination="ZSv-hz-gsb" id="EMS-jO-qcA"/>
+                <outlet property="uib_learnBtm" destination="l0G-WW-SAq" id="OGR-p8-iy6"/>
+                <outlet property="uib_learnMid" destination="s1h-wg-vsG" id="r8j-xu-w2x"/>
+                <outlet property="uib_learnTop" destination="4nJ-rT-Oxp" id="5QJ-ac-cMU"/>
                 <outlet property="uiiv_BG" destination="l4a-9u-IEX" id="jiJ-rg-5gr"/>
                 <outlet property="uiiv_arrow" destination="lg7-qw-1ci" id="nWe-Tj-oMp"/>
                 <outlet property="uiiv_header" destination="Zi0-a5-uBn" id="D7R-KW-9IZ"/>
@@ -29,23 +32,23 @@
             </connections>
         </placeholder>
         <view contentMode="scaleToFill" id="ZvW-0W-FHs">
-            <rect key="frame" x="0.0" y="0.0" width="496" height="575"/>
+            <rect key="frame" x="0.0" y="-1" width="560" height="530"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-connection-line-double.png" id="lg7-qw-1ci">
-                    <rect key="frame" x="245" y="65" width="116" height="87"/>
+                    <rect key="frame" x="368" y="95" width="116" height="87"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-Transp-logo-otis.png" id="oed-2m-w1g">
-                    <rect key="frame" x="31" y="24" width="268" height="169"/>
+                    <rect key="frame" x="154" y="54" width="268" height="169"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" id="dty-fI-wvm">
-                    <rect key="frame" x="0.0" y="196" width="496" height="379"/>
+                    <rect key="frame" x="0.0" y="210" width="560" height="272"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="ZW9-pw-XKg">
-                            <rect key="frame" x="20" y="39" width="456" height="250"/>
+                            <rect key="frame" x="19" y="43" width="533" height="250"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <string key="text">Otis Compass destination management system works with Lenel’s OnGuard system to provide secure elevator bank access—facilitating orderly traffic flow, identifying cardholders requesting elevators and automatically defininf the floor or floors accessible to each person.
@@ -57,33 +60,42 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7gA-Vd-H2Y">
-                            <rect key="frame" x="26" y="20" width="282" height="21"/>
+                            <rect key="frame" x="26" y="24" width="282" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="highlightedColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4nJ-rT-Oxp">
-                            <rect key="frame" x="26" y="134" width="118" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4nJ-rT-Oxp">
+                            <rect key="frame" x="26" y="87" width="103" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Learn More">
+                            <state key="normal" backgroundImage="ibt-learnMore.png">
+                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l0G-WW-SAq">
-                            <rect key="frame" x="26" y="214" width="118" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="s1h-wg-vsG">
+                            <rect key="frame" x="26" y="157" width="103" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Learn More">
+                            <state key="normal" backgroundImage="ibt-learnMore.png">
+                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="l0G-WW-SAq">
+                            <rect key="frame" x="26" y="231" width="103" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="ibt-learnMore.png">
+                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="0.25" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="367" y="747.5"/>
+            <point key="canvasLocation" x="941" y="321"/>
         </view>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
@@ -95,11 +107,11 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view clipsSubviews="YES" alpha="0.90000000000000024" contentMode="scaleToFill" id="tNa-Ue-215">
-                    <rect key="frame" x="202" y="96" width="620" height="575"/>
+                    <rect key="frame" x="170" y="96" width="685" height="575"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="8DR-O2-vF9">
-                            <rect key="frame" x="0.0" y="37" width="620" height="543"/>
+                            <rect key="frame" x="0.0" y="37" width="685" height="543"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" id="igY-n1-wCT">
@@ -167,65 +179,79 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.0" green="0.58552631578947367" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a company" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgr-6B-R0x">
-                                    <rect key="frame" x="0.0" y="8" width="123" height="43"/>
+                                    <rect key="frame" x="117" y="8" width="123" height="43"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="SeY-UO-KQh">
+                                    <rect key="frame" x="144" y="38" width="524" height="450"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">Through innovation and integration, we bring together intelligent building technologies from across our industry-leading brands to improve building efficiency, operating cost and occupant experience. 
+
+These technologies bring buildings to life, making them smarter, safer and more sustainable while improving productivity. By working together more intelligently, we’re building possible.
+
+</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Select a Company Logo to Learn More">
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeue-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZSv-hz-gsb">
-                                    <rect key="frame" x="303" y="18" width="300" height="28"/>
+                                    <rect key="frame" x="373" y="502" width="295" height="28"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                     <state key="normal" title="Learn About Intelligent Building Technologies">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
                                         <action selector="loadIBT:" destination="-1" eventType="touchUpInside" id="daw-UV-lnP"/>
                                     </connections>
                                 </button>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="SeY-UO-KQh">
-                                    <rect key="frame" x="137" y="54" width="466" height="471"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <mutableString key="text">For decades upon decades, building systems have been viewed as separate and distinct units. HVAC, people moving, security, energy, all operating independently of each other and monitored separately.
-
-At United Technologies BIS, we believe in viewing building systems and the building itself as holistic, a living, thinking, actively managed entity. It’s that belief that is driving all divisions of our company to create connectivity and communication between every product and technology we offer, allowing those products to “talk” — to each other and to building management — with a united voice.
-
-We call this approach Intelligent Building Technologies. A better way of thinking that can literally bring buildings to life, making them smarter, safer and more efficient from top to bottom. And of course, a lot more enjoyable for the people who live and work in them.</mutableString>
-                                    <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" id="fss-Or-oF8">
-                            <rect key="frame" x="0.0" y="0.0" width="620" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="685" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_header.png" id="Zi0-a5-uBn">
-                                    <rect key="frame" x="0.0" y="0.0" width="620" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="685" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grfx_ibt_close.png" id="zEZ-wq-HgS">
-                                    <rect key="frame" x="589" y="14" width="15" height="16"/>
+                                    <rect key="frame" x="654" y="14" width="15" height="16"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intelligent Building Technologies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oZl-qR-1xP">
-                                    <rect key="frame" x="21" y="12" width="329" height="21"/>
+                                    <rect key="frame" x="16" y="12" width="329" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LPx-h2-ezV">
-                                    <rect key="frame" x="559" y="0.0" width="61" height="41"/>
+                                    <rect key="frame" x="624" y="2" width="61" height="41"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -259,6 +285,7 @@ We call this approach Intelligent Building Technologies. A better way of thinkin
         <image name="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" width="1920" height="1440"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>
         <image name="grfx_ibt_header.png" width="1" height="45"/>
+        <image name="ibt-learnMore.png" width="103" height="29"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

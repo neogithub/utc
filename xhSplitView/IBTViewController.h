@@ -36,4 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *uiiv_logo;
 @property (weak, nonatomic) IBOutlet UITextView *uitv_connectText;
 @property (weak, nonatomic) IBOutlet UITextView *uitv_summaryText;
+@property (weak, nonatomic) IBOutlet UIButton *uib_learnTop;
+@property (weak, nonatomic) IBOutlet UIButton *uib_learnBtm;
+@property (weak, nonatomic) IBOutlet UIButton *uib_learnMid;
 @end

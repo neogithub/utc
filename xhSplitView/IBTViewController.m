@@ -139,7 +139,7 @@
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                             _uiv_detail.frame = CGRectMake(125, 575, 575, 575);
-                            _uitv_summaryText.frame = CGRectMake(137, 30, 471, 575);
+                            _uitv_summaryText.frame = CGRectMake(137, 30, 524, 575);
                             //_uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y+90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height-170);
                             
                         } completion:nil];
@@ -153,18 +153,64 @@
     NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
     
     //UIButton *btn = (UIButton*)sender;
+    
+    int sendertag = (int)[sender tag];
+    
+    _uib_learnMid.hidden = YES;
+
+    switch (sendertag) {
+        case 0:
+            _uib_learnTop.frame = CGRectMake(18, 82, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.frame = CGRectMake(18, 144, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            break;
+            
+        case 1:
+            _uib_learnTop.frame = CGRectMake(18, 101, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.frame = CGRectMake(18, 182, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            break;
+            
+        case 2:
+            _uib_learnTop.frame = CGRectMake(18, 82, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.frame = CGRectMake(18, 149, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            break;
+            
+        case 3:
+            _uib_learnTop.frame = CGRectMake(18, 82, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.frame = CGRectMake(18, 169, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            break;
+            
+        case 4:
+            _uib_learnTop.frame = CGRectMake(18, 84, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnMid.frame = CGRectMake(18, 149, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.frame = CGRectMake(18, 219, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnMid.hidden = NO;
+            break;
+            
+        case 5:
+            _uib_learnTop.frame = CGRectMake(18, 84, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnMid.frame = CGRectMake(18, 149, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.frame = CGRectMake(18, 219, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnMid.hidden = NO;
+            break;
+            
+        default:
+            break;
+    }
 
     [_uiv_ibt insertSubview:_uiv_detail belowSubview:_uiv_header];
-    _uiv_detail.frame = CGRectMake(125, 410, 496, 575);
+    _uiv_detail.frame = CGRectMake(125, 410, 560, 575);
     
+    [_uiv_ibt insertSubview:_uib_learn aboveSubview:_uiv_detail];
+    _uib_learn.frame = CGRectMake(373, 540, _uib_learn.frame.size.width, _uib_learn.frame.size.height);
+
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                           
                             
                             
-                            _uiv_detail.frame = CGRectMake(125, 100, 496, 575);
-                            _uitv_summaryText.frame = CGRectMake(137, -575, 471, 575);
+                            _uiv_detail.frame = CGRectMake(125, 50, 560, 575);
+                            _uitv_summaryText.frame = CGRectMake(137, -575, 524, 575);
                             
                            // _uib_learn.frame = CGRectMake(_uib_learn.frame.origin.x, 0, _uib_learn.frame.size.width, _uib_learn.frame.size.height);
                             
@@ -194,7 +240,7 @@
     //_uitv_connectText.text = catDict[@"text"];
 
     NSAttributedString *t = [[NSAttributedString alloc] initWithString:catDict[@"text"]];
-    NSAttributedString *g = [t addRegisteredTrademarkTo:catDict[@"text"] withColor:[UIColor utcSmokeGray] fnt:[UIFont fontWithName:@"Helvetica" size:17]];
+    NSAttributedString *g = [t addRegisteredTrademarkTo:catDict[@"text"] withColor:[UIColor utcSmokeGray] fnt:[UIFont fontWithName:@"Helvetica" size:14]];
     _uitv_connectText.attributedText = g;
 
     NSArray *connectedLogos = [catDict objectForKey:@"connections"];
@@ -252,8 +298,8 @@
        // btn.alpha = 1.0;
         if (obj.tag == index) {
             NSLog(@"found!");
-            [obj.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-            [obj.layer setBorderWidth:2.0];
+            [obj.layer setBorderColor:[UIColor utcBlueAlight].CGColor];
+            [obj.layer setBorderWidth:5.0];
             
             //Assigning YES to the stop variable is the equivalent of calling "break" during fast enumeration
             //obj.alpha = 0.13;

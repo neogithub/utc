@@ -889,9 +889,10 @@ enum {
 		[topTitle removeHotspotTitle];
 		[topTitle removeCompanyTitle];
 		
-		// clean up last tapped view
-		// we don;t need it anymore
-		tappedView=nil;
+		//TODO : Confirm if this fixes my bug
+        // clean up last tapped view
+		// we don't need it anymore
+        //tappedView=nil;
 		
 		[self unhideChrome];
 		
@@ -1322,6 +1323,7 @@ enum {
 //        totalDataArray = _arr_subHotspots;
 //    }
 
+    //TODO: CRASH
 	// causes crash sometimes
 	NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
 	//NSLog(@"/ntapedtag %li",(long)tappedView.tag);

@@ -116,7 +116,7 @@ enum {
 	
 	NSString *newString = [_appendString stringByAppendingString:aappendString];
 	
-	UIFont *font = [UIFont fontWithName:@"Helvetica" size:19];
+	UIFont *font = [UIFont fontWithName:@"Helvetica" size:17];
 	CGFloat str_width = [self getWidthFromStringLength:newString andFont:font];
 	static CGFloat labelPad = 20;
 	hotspotLabelWidth = str_width + (labelPad);

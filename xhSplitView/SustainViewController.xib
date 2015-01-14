@@ -40,26 +40,60 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="8DR-O2-vF9">
-                            <rect key="frame" x="0.0" y="45" width="620" height="385"/>
+                            <rect key="frame" x="0.0" y="45" width="620" height="387"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="SeY-UO-KQh">
-                                    <rect key="frame" x="204" y="19" width="399" height="238"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="SeY-UO-KQh">
+                                    <rect key="frame" x="204" y="19" width="399" height="328"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">As a responsible corporate citizen, we are com​mitted to minimizing any adverse environmental impact of our products, our operations and our supply chain. We provide a safe work environme​nt and support lifelong learning for all employees. We support charitable and social causes in the communities where we do business. 
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">As a responsible corporate citizen, we are com​mitted to minimizing any adverse environmental impact of our products, our operations and our supply chain. We provide a safe work environme​nt and support lifelong learning for all employees. We support charitable and social causes in the communities where we do business. 
 
 Everywhere we do business, we apply the highest standards of corporate responsibility and measure success with the same set of ethical, environmental and safety metrics.​</string>
-                                    <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="Times-Roman" family="Times" pointSize="17"/>
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="Times-Roman"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Select a Topic to Learn More">
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeue-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <view contentMode="scaleToFill" id="igY-n1-wCT">
-                                    <rect key="frame" x="0.0" y="0.0" width="185" height="385"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="185" height="387"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" id="As2-ed-IIC">
-                                            <rect key="frame" x="22" y="60" width="140" height="305"/>
+                                            <rect key="frame" x="22" y="29" width="140" height="305"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xt0-Q6-hwC">
@@ -106,15 +140,8 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Topic to Learn More" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgr-6B-R0x">
-                                            <rect key="frame" x="22" y="34" width="140" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.24705882352941178" green="0.56862745098039214" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_white.png" id="vuP-oi-x1m">
                                     <rect key="frame" x="174" y="187" width="11" height="21"/>
@@ -156,12 +183,11 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oRU-r7-DtU">
-                            <rect key="frame" x="426" y="65" width="177" height="30"/>
+                            <rect key="frame" x="431" y="394" width="172" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                             <state key="normal" title="Learn About Sustainability">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -178,15 +204,15 @@ Everywhere we do business, we apply the highest standards of corporate responsib
             <point key="canvasLocation" x="305" y="300"/>
         </view>
         <view contentMode="scaleToFill" id="HXa-Fe-L0o">
-            <rect key="frame" x="0.0" y="0.0" width="435" height="270"/>
+            <rect key="frame" x="0.0" y="0.0" width="435" height="352"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="jXF-C5-Tsw">
-                    <rect key="frame" x="19" y="0.0" width="416" height="270"/>
+                    <rect key="frame" x="19" y="0.0" width="416" height="344"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="H34-8N-O6L">
-                            <rect key="frame" x="0.0" y="58" width="399" height="204"/>
+                            <rect key="frame" x="0.0" y="58" width="399" height="286"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <string key="text">Otis Compass destination management system works with Lenel’s OnGuard system to provide secure elevator bank access—facilitating orderly traffic flow, identifying cardholders requesting elevators and automatically defininf the floor or floors accessible to each person.
@@ -210,7 +236,7 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="397.5" y="652"/>
+            <point key="canvasLocation" x="397.5" y="693"/>
         </view>
     </objects>
     <resources>
