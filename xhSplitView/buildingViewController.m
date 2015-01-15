@@ -1050,7 +1050,7 @@ enum {
 		selectorAfterMovieFinished = @"playerItemLoop:";
 		
 		UIButton *h = [UIButton buttonWithType:UIButtonTypeCustom];
-		h.frame = CGRectMake(1024-36, 0, 36, 36);
+		h.frame = CGRectMake(1024-44, 0, 44, 43);
 		[h setBackgroundImage:[UIImage imageNamed:@"close bttn.png"] forState:UIControlStateNormal];
 		[h setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		//set their selector using add selector

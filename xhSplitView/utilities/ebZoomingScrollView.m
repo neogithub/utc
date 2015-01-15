@@ -83,7 +83,7 @@
 {
     if (closeBtn != NO) {
         UIButton *h = [UIButton buttonWithType:UIButtonTypeCustom];
-		h.frame = CGRectMake(1024-36, 0, 36, 36);
+		h.frame = CGRectMake(1024-44, 0, 44, 43);
 		//[h setTitle:@"X" forState:UIControlStateNormal];
 		//h.titleLabel.font = [UIFont fontWithName:@"ArialMT" size:14];
 		[h setImage:[UIImage imageNamed:@"close bttn.png"] forState:UIControlStateNormal];
