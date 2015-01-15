@@ -634,7 +634,8 @@ enum {
  */
 - (IBAction)showPopover:(UIButton *)sender
 {
-	// get company tapped on from data model
+    
+    // get company tapped on from data model
 	NSDictionary *co = allCompanies[sender.tag];
 	selectedCoDict = [[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]] [0];
     
@@ -1237,6 +1238,9 @@ enum {
         
         [self clearHotpsotData];
     }
+    
+#warning I think this solved the crashing bug. It resets the tappedview tag used for -(void)createCardsInView. Needs to be 0 to reset
+    tappedView.tag = 0;
 }
 
 -(void)resetBaseInteractive
@@ -1323,12 +1327,6 @@ enum {
     
   //TODO: check for key on hotspots
     NSArray *totalDataArray;
-    
-//    if (selectedCo.cohotspots.count != 0) {
-        totalDataArray = _arr_subHotspots;
-//    } else {
-//        totalDataArray = _arr_subHotspots;
-//    }
 
     //TODO: CRASH
 	// causes crash sometimes
@@ -1337,10 +1335,10 @@ enum {
 
     
 	NSLog(@"/ntapedtag %li",(long)tappedView.tag);
-    NSLog(@"/ntotalDataArray %@",[totalDataArray description]);
+   // NSLog(@"/ntotalDataArray %@",[totalDataArray description]);
     NSLog(@"/selectedCo.cohotspots.count %li",selectedCo.cohotspots.count);
     
-    NSDictionary *hotspotItem = totalDataArray [0];
+    NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
 
     
 	//Get the exact second to remove the text boxes
@@ -1631,7 +1629,7 @@ enum {
 		NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
 		[paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
 		
-		NSDictionary *attributes = @{ NSFontAttributeName: [UIFont systemFontOfSize:18.5], NSParagraphStyleAttributeName : paragraphStyle };
+		NSDictionary *attributes = @{ NSFontAttributeName: [UIFont systemFontOfSize:19], NSParagraphStyleAttributeName : paragraphStyle };
 		
 		CGRect size = [textToMeasure boundingRectWithSize:CGSizeMake(factWidth, MAXFLOAT)
 												  options:NSStringDrawingUsesLineFragmentOrigin
