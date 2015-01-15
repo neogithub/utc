@@ -18,11 +18,11 @@
 			</array>
 			<key>text</key>
 			<string>Otis CompassPlus™ destination management system integrates with Lenel OnGuard: building access system to optimize traffic flow and floor access
-                
- 
+
+
 Building tenants use ID badges for secure access and elevator car assignment to authorized floors
 
- 
+
 Otis integrates with Lenel OnGuard: building access system and Interlogix TruVision: cameras to dispatch elevators based on crowd size</string>
 		</dict>
 		<key>ibt</key>
@@ -601,7 +601,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Interlogix TruVision: security cameras to dispatch elevators based on crowd size</string>
+									<string>Integrates with Lenel OnGuard building access system and Interlogix TruVision: security cameras to dispatch elevators based on crowd size</string>
 									<key>appearanceDelay</key>
 									<integer>7</integer>
 								</dict>
@@ -614,7 +614,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 						<key>background</key>
 						<string>icon marker center.png</string>
 						<key>caption</key>
-						<string>Up to 50% Faster Movement Throughout</string>
+						<string>Up to 50% Faster Movement Throughout Building</string>
 					</dict>
 					<dict>
 						<key>xy</key>
@@ -647,7 +647,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>CompassPlus touch screens automatically go into sleep mode during low usage times</string>
+									<string>CompassPlus™  touch screens automatically go into sleep mode during low usage times</string>
 									<key>appearanceDelay</key>
 									<integer>7</integer>
 								</dict>
@@ -704,7 +704,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>ReGen drive captures created energy, directing it back into building grid</string>
+									<string>ReGen: drive captures created energy, directing it back into building grid</string>
 									<key>appearanceDelay</key>
 									<integer>10</integer>
 								</dict>
@@ -744,13 +744,13 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Otis EMS Panorama™ system constantly monitors, controls and gathers information, spotting potential issues</string>
+									<string>Otis EMS Panorama: system constantly monitors, controls and gathers information, spotting potential issues</string>
 									<key>appearanceDelay</key>
 									<integer>6</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Sleep mode significantly increases life of major mechanical components</string>
+									<string>Sleep mode increases life of major mechanical components</string>
 									<key>appearanceDelay</key>
 									<integer>10</integer>
 								</dict>
@@ -872,13 +872,13 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Automated Logic plant system manager via WebCTRL: to optimize chiller plant systems and save energy</string>
+									<string>Integrates with Automated Logic: plant system manager via WebCTRL: building automation system to optimize chiller plant systems and save energy</string>
 									<key>appearanceDelay</key>
 									<integer>9</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Automated Logic WebCTRL to assure comfortable temperature settings at time of occupancy based on building and weather conditions</string>
+									<string>Integrates with Automated Logic WebCTRL building automation system to assure comfortable temperature settings at time of occupancy based on building and weather conditions</string>
 									<key>appearanceDelay</key>
 									<integer>13</integer>
 								</dict>
@@ -924,8 +924,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Capable of inverted starts
-</string>
+									<string>Robust design provides reliable operation under wide range of conditions</string>
 									<key>appearanceDelay</key>
 									<integer>7</integer>
 								</dict>
@@ -988,7 +987,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>AquaEdge 23XRV Chiller</string>
+				<string>AquaEdge: 23XRV Chiller</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -1062,7 +1061,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Has less than 1% leakage at 8 in.wg.</string>
+									<string>Has less than 1% leakage at 8 inches of water gauge</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -1110,7 +1109,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>i-Vu Open Control System enables fully integrated native BACnet building automation system</string>
+									<string>i-Vu: Open Control System enables fully integrated native BACnet: building automation system </string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
@@ -1129,7 +1128,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Aero 39M Air Handlers</string>
+				<string>Aero: 39M Air Handlers</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_C_02_SMB_AERO_39M_AIR_HANDLERS_HS.PNG</string>
 			</dict>
@@ -1155,7 +1154,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Choose from 27 varieties to fit any building configuration</string>
+									<string>Choose from 27 varieties to fit most building configurations</string>
 									<key>appearanceDelay</key>
 									<integer>2</integer>
 								</dict>
@@ -1199,8 +1198,8 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 			</array>
 			<key>text</key>
 			<string>Carrier systems integrate with Automated Logic: plant system manager via WebCTRL: building automation system to optimize chiller plant systems and save energy
-                
-                
+
+
 Carrier systems integrate with Automated Logic WebCTRL building automation system to assure comfortable temperature settings at time of occupancy based on building and weather conditions</string>
 		</dict>
 		<key>ibt</key>
@@ -1463,7 +1462,13 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Edwards EST3 platform to efficiently mass-notify and evacuate a building</string>
+									<string>Integrates with Edwards EST: 3 platform to efficiently mass-notify and evacuate a building</string>
+									<key>appearanceDelay</key>
+									<integer>4</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators</string>
 									<key>appearanceDelay</key>
 									<integer>4</integer>
 								</dict>
@@ -1480,7 +1485,7 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>OnGuard Building Access Control System</string>
+				<string>OnGuard: Building Access Control System</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -1699,12 +1704,12 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 			</array>
 			<key>text</key>
 			<string>Lenel OnGuard: building access system integrates with Otis CompassPlus™ destination management system to optimize traffic flow and floor access
-                
-                
+
+
 Lenel OnGuard building access system integrates with Edwards EST: 3 platform to efficiently mass-notify and evacuate a building
-                
-                
-Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators</string>
+
+
+Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators </string>
 		</dict>
 	</dict>
 	<dict>
@@ -2042,7 +2047,7 @@ Otis integrates with Interlogix TruVision: cameras to dispatch elevators based o
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Offers powerful control features and supports major communications protocols</string>
+									<string>Offers powerful control features and supports major communications protocols </string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -2054,7 +2059,7 @@ Otis integrates with Interlogix TruVision: cameras to dispatch elevators based o
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Responds to and monitors Carrier HVAC, Otis elevators and escalators and Edwards fire and life safety systems</string>
+									<string>Responds to and monitors Carrier HVAC, Otis elevators and escalators and Edwards fire and life safety systems </string>
 									<key>appearanceDelay</key>
 									<integer>14</integer>
 								</dict>
@@ -2112,7 +2117,7 @@ Otis integrates with Interlogix TruVision: cameras to dispatch elevators based o
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Edwards EST3 platform and Interlogix TruVision: cameras to see where fire is located</string>
+									<string>Integrates with Edwards EST: 3 platform and security cameras to see where fire is located </string>
 									<key>appearanceDelay</key>
 									<integer>18</integer>
 								</dict>
@@ -2209,7 +2214,7 @@ Otis integrates with Interlogix TruVision: cameras to dispatch elevators based o
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>WebCTRL Web-based Building Automation</string>
+				<string>WebCTRL: Web-Based Building Automation System</string>
 				<key>subBG</key>
 				<string>PH2_AUTOLOG_00_STILL_WEB_BASE_HS.png</string>
 			</dict>
@@ -2266,7 +2271,7 @@ Otis integrates with Interlogix TruVision: cameras to dispatch elevators based o
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Eco Screen Sustainability Kiosk</string>
+				<string>Eco-Screen: Sustainability Kiosk</string>
 				<key>subBG</key>
 				<string>PH2_AUTOLOG_B_00_STILL_ECOSCREEN_SUSTAIN_HS.png</string>
 			</dict>
@@ -2487,10 +2492,10 @@ Otis integrates with Interlogix TruVision: cameras to dispatch elevators based o
 				<string>IBT-logo-interlogix.png</string>
 			</array>
 			<key>text</key>
-			<string>Automated Logic WebCTRL integrates with Carrier systems to optimize chiller plant systems and save energy
+			<string>Automated Logic WebCTRL: building automation system integrates with Carrier systems to optimize chiller plant systems and save energy 
 
- 
-Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix TruVision cameras to see where fire is located</string>
+
+Automated Logic WebCTRL building automation system integrates with Edwards EST: 3 platform and security cameras to see where fire is located </string>
 		</dict>
 	</dict>
 	<dict>
@@ -2750,19 +2755,19 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Delivers exceptional image quality and captures critical details</string>
+									<string>Delivers exceptional image quality and capture critical details</string>
 									<key>appearanceDelay</key>
 									<integer>2</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Edwards EST3 platform and Automated Logic WebCTRL: to detect and see where a fire is located</string>
+									<string>Integrates with Lenel OnGuard: building access system to protect people, property and assets</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Otis CompassPlus™ destination management system to dispatch elevators based on crowd size</string>
+									<string>Integrates with Lenel OnGuard: building access system and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators </string>
 									<key>appearanceDelay</key>
 									<integer>8</integer>
 								</dict>
@@ -3002,9 +3007,9 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 				<string>IBT-logo-otis.png</string>
 			</array>
 			<key>text</key>
-			<string>Interlogix TruVision: cameras integrate with Lenel OnGuard: building access system to protect people, property and assets
-                
-                
+			<string>Interlogix TruVision: cameras integrate with Lenel OnGuard: building access system to protect people, property and assets 
+
+
 Interlogix TruVision cameras integrate with Lenel OnGuard: building access system and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators</string>
 		</dict>
 	</dict>
@@ -3059,7 +3064,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Automated Logic WebCTRL: and Interlogix TruVision: cameras to detect and see where a fire is located</string>
+									<string>Integrates with Automated Logic WebCTRL: building automation system and security cameras to detect and see where a fire is located</string>
 									<key>appearanceDelay</key>
 									<integer>13</integer>
 								</dict>
@@ -3072,7 +3077,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 						<key>background</key>
 						<string>icon marker left.png</string>
 						<key>caption</key>
-						<string>Life Safety System &amp; Incident Mgmt. System</string>
+						<string>Life Safety &amp; Incident Management System</string>
 						<key>overlay</key>
 						<string>PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.png</string>
 					</dict>
@@ -3101,8 +3106,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Communicates live or recorded messages for fire and mass notification events  
-</string>
+									<string>Communicates live or recorded messages for fire and mass notification events</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
@@ -3142,19 +3146,19 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Signature data loop connects pull stations and smoke, heat, and CO detectors to the system control panel</string>
+									<string>Detectors and modules provide intelligent monitoring and control to protect buildings and occupants</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Sensors provide diagnostics and reporting for planned and immediate service response needs</string>
+									<string>Provide immediate notification of critical conditions and service diagnostics</string>
 									<key>appearanceDelay</key>
 									<integer>4</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Photoelectric smoke chambers and replaceable CO cartridges provide life cycle cost savings</string>
+									<string>Innovative design features and service tools provide life cycle cost savings</string>
 									<key>appearanceDelay</key>
 									<integer>8</integer>
 								</dict>
@@ -3392,9 +3396,9 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 				<string>IBT-logo-interlogix.png</string>
 			</array>
 			<key>text</key>
-			<string>Edwards EST: 3 platform integrates with Lenel OnGuard: building access system to efficiently mass notify and evacuate a building
-                
-                
+			<string>Edwards EST: 3 platform integrates with Lenel OnGuard:  building access system to efficiently mass notify and evacuate a building
+
+
 Edwards EST3 platform integrates with Automated Logic WebCTRL: building automation system and security cameras to detect and see where a fire is located</string>
 		</dict>
 	</dict>
@@ -3576,7 +3580,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL: building automati
 						<key>background</key>
 						<string>icon marker center.png</string>
 						<key>caption</key>
-						<string>Badger Fire Extinguishers</string>
+						<string>Badger: Fire Extinguishers</string>
 					</dict>
 				</array>
 				<key>catName</key>
@@ -3629,7 +3633,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL: building automati
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Provides flexibility and economy with modular or wireless locks in standalone or integrated access systems</string>
+									<string>Provides flexibility and economy in standalone or integrated access systems</string>
 									<key>appearanceDelay</key>
 									<integer>3</integer>
 								</dict>
@@ -3642,7 +3646,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL: building automati
 						<key>background</key>
 						<string>icon marker right.png</string>
 						<key>caption</key>
-						<string>TBD</string>
+						<string>Commercial Lock</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
 					</dict>

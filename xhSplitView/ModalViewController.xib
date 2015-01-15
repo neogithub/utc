@@ -54,16 +54,16 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <string key="text">Global team of Experts in Efficiency and Environment focused on creating strategic and sustainable building solutions
- 
+
 High-performing, intelligent building solutions that reduce life cycle operating costs, deliver an improved user experience, and protect people and property
- 
-Intelligent building capabilities include:
-     • design and certification
-     • audit and diagnostics
-     • energy analysis and tools
-     • innovative products for green buildings</string>
+
+Intelligent building capabilities include: 
+	• design and certification
+	• audit and diagnostics
+	• energy analysis and tools
+	• innovative products for green buildings</string>
                                     <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="Times-Roman" family="Times" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                             </subviews>

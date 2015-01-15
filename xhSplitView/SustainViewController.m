@@ -32,7 +32,7 @@ static NSString * const sustainDesc2 = @"Only company in the world to be a found
 
 static NSString * const sustainImg2 = @"Screenshot 2015-01-06 14.53.23.png";
 
-static NSString * const sustainDesc1 = @"Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED:) v4 rating system\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic intelligent controls optimize building performance";
+static NSString * const sustainDesc1 = @"Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED:) v4 rating system.\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic: intelligent controls optimize building performance";
 
 static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 

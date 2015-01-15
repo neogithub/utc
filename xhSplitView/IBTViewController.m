@@ -219,7 +219,7 @@
     switch (sendertag) {
         case 0:
             _uib_learnTop.frame = CGRectMake(18, 82, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
-            _uib_learnBtm.frame = CGRectMake(18, 144, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.frame = CGRectMake(18, 148, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             break;
             
         case 1:
