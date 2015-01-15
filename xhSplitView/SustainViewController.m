@@ -93,8 +93,6 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
         obj.alpha = 0.0;
         
     }];
-
-    [self performSelector:@selector(loadLogos) withObject:nil afterDelay:0.5];
     
     [_uibCollection enumerateObjectsUsingBlock:^(UILabel *obj, NSUInteger idx, BOOL *stop) {
         [self pulse:obj.layer];
@@ -207,20 +205,21 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                             
-                            _uiv_Text.frame = CGRectMake(185, -320, 620, 352);
+                            _uiv_Text.frame = CGRectMake(185, 700, 620, 352);
                             _uitv_text.frame = CGRectMake(204, 20, 465, 352);
+
                             
-                            _uiv_logos.frame = CGRectMake(190, 280, 500, 248);
-                        
+                            // _uiv_logos.frame = CGRectMake(190, 280, 500, 248);
+                           // _uiv_logos.frame = CGRectMake(185, 650, 500, 248);
+                            
                         } completion:nil];
-    
-    [self performSelector:@selector(loadLogos) withObject:nil afterDelay:0.5];
-    
 }
 
 
 -(IBAction)loadIBTDetail:(id)sender
 {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    
     NSLog(@"loadIBTDetail");
     
     NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
@@ -234,6 +233,10 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     
     [self loadText: sender];
     
+    if ([sender tag] == 2) {
+        [self performSelector:@selector(loadLogos) withObject:nil afterDelay:0.2];
+    }
+    
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
@@ -241,7 +244,9 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
                             _uiv_Text.frame = CGRectMake(185, 65, 620, 435);
                             _uitv_text.frame = CGRectMake(204, -275, 465, 410);
                             
-                            _uiv_logos.frame = CGRectMake(185, 650, 500, 248);
+                           // _uiv_logos.frame = CGRectMake(185, 650, 500, 248);
+                            
+                            _uiv_logos.frame = CGRectMake(0, 227, 500, 248);
                             
                            // _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
                            // _uiv_logoBns.frame = CGRectMake(0, -3, 620, 100);
