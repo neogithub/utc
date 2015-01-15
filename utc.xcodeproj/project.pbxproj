@@ -626,6 +626,36 @@
 		888BB9EB1A66B71900157977 /* ibt-learnMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9E71A66B71900157977 /* ibt-learnMore@2x.png */; };
 		888BB9ED1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9EC1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png */; };
 		888BB9EE1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9EC1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png */; };
+		888BB9FD1A67042A00157977 /* green-logo-argentina.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9EF1A67042A00157977 /* green-logo-argentina.png */; };
+		888BB9FE1A67042B00157977 /* green-logo-argentina.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9EF1A67042A00157977 /* green-logo-argentina.png */; };
+		888BB9FF1A67042B00157977 /* green-logo-argentina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F01A67042A00157977 /* green-logo-argentina@2x.png */; };
+		888BBA001A67042B00157977 /* green-logo-argentina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F01A67042A00157977 /* green-logo-argentina@2x.png */; };
+		888BBA011A67042B00157977 /* green-logo-china.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F11A67042A00157977 /* green-logo-china.png */; };
+		888BBA021A67042B00157977 /* green-logo-china.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F11A67042A00157977 /* green-logo-china.png */; };
+		888BBA031A67042B00157977 /* green-logo-china@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F21A67042A00157977 /* green-logo-china@2x.png */; };
+		888BBA041A67042B00157977 /* green-logo-china@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F21A67042A00157977 /* green-logo-china@2x.png */; };
+		888BBA051A67042B00157977 /* green-logo-france.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F31A67042A00157977 /* green-logo-france.png */; };
+		888BBA061A67042B00157977 /* green-logo-france.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F31A67042A00157977 /* green-logo-france.png */; };
+		888BBA071A67042B00157977 /* green-logo-france@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F41A67042A00157977 /* green-logo-france@2x.png */; };
+		888BBA081A67042B00157977 /* green-logo-france@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F41A67042A00157977 /* green-logo-france@2x.png */; };
+		888BBA091A67042B00157977 /* green-logo-india.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F51A67042A00157977 /* green-logo-india.png */; };
+		888BBA0A1A67042B00157977 /* green-logo-india.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F51A67042A00157977 /* green-logo-india.png */; };
+		888BBA0B1A67042B00157977 /* green-logo-india@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F61A67042A00157977 /* green-logo-india@2x.png */; };
+		888BBA0C1A67042B00157977 /* green-logo-india@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F61A67042A00157977 /* green-logo-india@2x.png */; };
+		888BBA0D1A67042B00157977 /* green-logo-kuwait.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F71A67042A00157977 /* green-logo-kuwait.png */; };
+		888BBA0E1A67042B00157977 /* green-logo-kuwait.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F71A67042A00157977 /* green-logo-kuwait.png */; };
+		888BBA0F1A67042B00157977 /* green-logo-kuwait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F81A67042A00157977 /* green-logo-kuwait@2x.png */; };
+		888BBA101A67042B00157977 /* green-logo-kuwait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F81A67042A00157977 /* green-logo-kuwait@2x.png */; };
+		888BBA111A67042B00157977 /* green-logo-singapore.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F91A67042A00157977 /* green-logo-singapore.png */; };
+		888BBA121A67042B00157977 /* green-logo-singapore.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F91A67042A00157977 /* green-logo-singapore.png */; };
+		888BBA131A67042B00157977 /* green-logo-singapore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9FA1A67042A00157977 /* green-logo-singapore@2x.png */; };
+		888BBA141A67042B00157977 /* green-logo-singapore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9FA1A67042A00157977 /* green-logo-singapore@2x.png */; };
+		888BBA151A67042B00157977 /* green-logo-usa.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9FB1A67042A00157977 /* green-logo-usa.png */; };
+		888BBA161A67042B00157977 /* green-logo-usa.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9FB1A67042A00157977 /* green-logo-usa.png */; };
+		888BBA171A67042B00157977 /* green-logo-usa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9FC1A67042A00157977 /* green-logo-usa@2x.png */; };
+		888BBA181A67042B00157977 /* green-logo-usa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9FC1A67042A00157977 /* green-logo-usa@2x.png */; };
+		888BBA1A1A671A1A00157977 /* sustainability-logos-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA191A671A1A00157977 /* sustainability-logos-bg.jpg */; };
+		888BBA1B1A671A1A00157977 /* sustainability-logos-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA191A671A1A00157977 /* sustainability-logos-bg.jpg */; };
 		8895FEDD1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEDE1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEFC1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */; };
@@ -1033,6 +1063,21 @@
 		888BB9E61A66B71900157977 /* ibt-learnMore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ibt-learnMore.png"; path = "UI/grfx/ibt-learnMore.png"; sourceTree = "<group>"; };
 		888BB9E71A66B71900157977 /* ibt-learnMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ibt-learnMore@2x.png"; path = "UI/grfx/ibt-learnMore@2x.png"; sourceTree = "<group>"; };
 		888BB9EC1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png; path = xhSplitView/CONTENT/C_PHASE_02/INTERLOGIX/PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png; sourceTree = SOURCE_ROOT; };
+		888BB9EF1A67042A00157977 /* green-logo-argentina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-argentina.png"; path = "UI/grfx/sustainability/green-logo-argentina.png"; sourceTree = "<group>"; };
+		888BB9F01A67042A00157977 /* green-logo-argentina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-argentina@2x.png"; path = "UI/grfx/sustainability/green-logo-argentina@2x.png"; sourceTree = "<group>"; };
+		888BB9F11A67042A00157977 /* green-logo-china.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-china.png"; path = "UI/grfx/sustainability/green-logo-china.png"; sourceTree = "<group>"; };
+		888BB9F21A67042A00157977 /* green-logo-china@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-china@2x.png"; path = "UI/grfx/sustainability/green-logo-china@2x.png"; sourceTree = "<group>"; };
+		888BB9F31A67042A00157977 /* green-logo-france.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-france.png"; path = "UI/grfx/sustainability/green-logo-france.png"; sourceTree = "<group>"; };
+		888BB9F41A67042A00157977 /* green-logo-france@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-france@2x.png"; path = "UI/grfx/sustainability/green-logo-france@2x.png"; sourceTree = "<group>"; };
+		888BB9F51A67042A00157977 /* green-logo-india.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-india.png"; path = "UI/grfx/sustainability/green-logo-india.png"; sourceTree = "<group>"; };
+		888BB9F61A67042A00157977 /* green-logo-india@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-india@2x.png"; path = "UI/grfx/sustainability/green-logo-india@2x.png"; sourceTree = "<group>"; };
+		888BB9F71A67042A00157977 /* green-logo-kuwait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-kuwait.png"; path = "UI/grfx/sustainability/green-logo-kuwait.png"; sourceTree = "<group>"; };
+		888BB9F81A67042A00157977 /* green-logo-kuwait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-kuwait@2x.png"; path = "UI/grfx/sustainability/green-logo-kuwait@2x.png"; sourceTree = "<group>"; };
+		888BB9F91A67042A00157977 /* green-logo-singapore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-singapore.png"; path = "UI/grfx/sustainability/green-logo-singapore.png"; sourceTree = "<group>"; };
+		888BB9FA1A67042A00157977 /* green-logo-singapore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-singapore@2x.png"; path = "UI/grfx/sustainability/green-logo-singapore@2x.png"; sourceTree = "<group>"; };
+		888BB9FB1A67042A00157977 /* green-logo-usa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-usa.png"; path = "UI/grfx/sustainability/green-logo-usa.png"; sourceTree = "<group>"; };
+		888BB9FC1A67042A00157977 /* green-logo-usa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-usa@2x.png"; path = "UI/grfx/sustainability/green-logo-usa@2x.png"; sourceTree = "<group>"; };
+		888BBA191A671A1A00157977 /* sustainability-logos-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "sustainability-logos-bg.jpg"; path = "UI/grfx/sustainability/sustainability-logos-bg.jpg"; sourceTree = "<group>"; };
 		8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppVersion.h"; sourceTree = "<group>"; };
 		8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppVersion.m"; sourceTree = "<group>"; };
 		8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-automatedLogic.png"; path = "logos/logo-automatedLogic.png"; sourceTree = "<group>"; };
@@ -1569,6 +1614,21 @@
 		888BB7B81A5E356600157977 /* sustainability */ = {
 			isa = PBXGroup;
 			children = (
+				888BBA191A671A1A00157977 /* sustainability-logos-bg.jpg */,
+				888BB9EF1A67042A00157977 /* green-logo-argentina.png */,
+				888BB9F01A67042A00157977 /* green-logo-argentina@2x.png */,
+				888BB9F11A67042A00157977 /* green-logo-china.png */,
+				888BB9F21A67042A00157977 /* green-logo-china@2x.png */,
+				888BB9F31A67042A00157977 /* green-logo-france.png */,
+				888BB9F41A67042A00157977 /* green-logo-france@2x.png */,
+				888BB9F51A67042A00157977 /* green-logo-india.png */,
+				888BB9F61A67042A00157977 /* green-logo-india@2x.png */,
+				888BB9F71A67042A00157977 /* green-logo-kuwait.png */,
+				888BB9F81A67042A00157977 /* green-logo-kuwait@2x.png */,
+				888BB9F91A67042A00157977 /* green-logo-singapore.png */,
+				888BB9FA1A67042A00157977 /* green-logo-singapore@2x.png */,
+				888BB9FB1A67042A00157977 /* green-logo-usa.png */,
+				888BB9FC1A67042A00157977 /* green-logo-usa@2x.png */,
 				888BB9511A5F171000157977 /* arrow_white.png */,
 				888BB9521A5F171000157977 /* arrow_white@2x.png */,
 				888BB7B91A5E359800157977 /* arrow.png */,
@@ -1960,11 +2020,13 @@
 				888BB8B41A5EE88500157977 /* PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.png in Resources */,
 				20E546F11A2DFEF40073B2CF /* title4@2x.png in Resources */,
 				888BB99F1A5F801A00157977 /* IBT-Transp-logo-edwards.png in Resources */,
+				888BBA1B1A671A1A00157977 /* sustainability-logos-bg.jpg in Resources */,
 				888BB7A31A5E136C00157977 /* ibt_automated_connections@2x.png in Resources */,
 				8834E2381A532D3F00204D81 /* grfx_ibt_arrow.jpg in Resources */,
 				20E546F21A2DFEF40073B2CF /* grfx_cellArrow.png in Resources */,
 				20E546F31A2DFEF40073B2CF /* 03A Building Cut@2x.png in Resources */,
 				888BB92A1A5EE8D800157977 /* PH2_OTIS_01_LR_NCE_GREEN_ESC.mov in Resources */,
+				888BBA001A67042B00157977 /* green-logo-argentina@2x.png in Resources */,
 				888BB8B61A5EE88500157977 /* PH2_CARRIER_B_01A_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				8895FF401A5B44B50076A3EC /* SustainViewController.xib in Resources */,
 				888BB7D91A5EE6D900157977 /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov in Resources */,
@@ -1973,13 +2035,16 @@
 				888BB98F1A5F801A00157977 /* IBT-logo-lenel.png in Resources */,
 				20E547461A2E13830073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO.png in Resources */,
 				20BF48F11A3B501D009645DC /* logo_onity.png in Resources */,
+				888BBA041A67042B00157977 /* green-logo-china@2x.png in Resources */,
 				888BB9A11A5F801A00157977 /* IBT-Transp-logo-edwards@2x.png in Resources */,
+				888BBA081A67042B00157977 /* green-logo-france@2x.png in Resources */,
 				8834E2461A56E32D00204D81 /* ibt_automatedlogic.png in Resources */,
 				888BB8E01A5EE89D00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.png in Resources */,
 				888BB9B91A5F8FA500157977 /* IBT-connection-line-interlogix@2x.png in Resources */,
 				8834E26C1A57074200204D81 /* logo_sustainibt@2x.png in Resources */,
 				8834E27A1A57221B00204D81 /* menu_advantec@2x.png in Resources */,
 				20192C8F1A48729000969C85 /* icon marker center right@2x.png in Resources */,
+				888BBA101A67042B00157977 /* green-logo-kuwait@2x.png in Resources */,
 				888BB97D1A5F801A00157977 /* IBT-connection-line-single@2x.png in Resources */,
 				20BF48D51A3B501D009645DC /* logo_automated.png in Resources */,
 				888BB8FF1A5EE8A900157977 /* PH2_KIDDE_04_ANIM_BADGER_FIRE_EXTING.mov in Resources */,
@@ -2006,9 +2071,11 @@
 				20E547011A2DFEF40073B2CF /* 00_LOGO_TRANS_HERO_CITY.png in Resources */,
 				888BB9791A5F801A00157977 /* IBT-connection-line-double@2x.png in Resources */,
 				8895FF1B1A5B19F50076A3EC /* logo-lenel@2x.png in Resources */,
+				888BBA161A67042B00157977 /* green-logo-usa.png in Resources */,
 				20192C7F1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */,
 				888BB9971A5F801A00157977 /* IBT-Transp-logo-automatedLogic.png in Resources */,
 				888BB8381A5EE78F00157977 /* IBT_LENEL_01_LR_CONN_OTIS_CDMS.mov in Resources */,
+				888BBA061A67042B00157977 /* green-logo-france.png in Resources */,
 				20E547021A2DFEF40073B2CF /* swipe-to-reveal@2x.png in Resources */,
 				888BB7EE1A5EE6E500157977 /* INT_02_ANIM_TRANS_BLDG_UNBUILD.mov in Resources */,
 				8895FF271A5B19F50076A3EC /* logo-onity@2x.png in Resources */,
@@ -2028,8 +2095,10 @@
 				888BB9931A5F801A00157977 /* IBT-logo-otis.png in Resources */,
 				8895FF251A5B19F50076A3EC /* logo-onity.png in Resources */,
 				20E547071A2DFEF40073B2CF /* bg_04.jpg in Resources */,
+				888BBA121A67042B00157977 /* green-logo-singapore.png in Resources */,
 				888BB8CF1A5EE89200157977 /* PH2_EDWARDS_02_SMG_LS_CONTROL_PANEL.mov in Resources */,
 				20BF490D1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
+				888BBA0A1A67042B00157977 /* green-logo-india.png in Resources */,
 				888BB9AD1A5F801A00157977 /* IBT-Transp-logo-otis@2x.png in Resources */,
 				20BF48DF1A3B501D009645DC /* logo_edwards@2x.png in Resources */,
 				888BB79F1A5E136C00157977 /* ibt_arrow_two@2x.png in Resources */,
@@ -2068,6 +2137,7 @@
 				888BB92E1A5EE8D800157977 /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov in Resources */,
 				20E547141A2DFEF40073B2CF /* icon marker left@2x.png in Resources */,
 				20BF48E31A3B501D009645DC /* logo_kidde@2x.png in Resources */,
+				888BBA0E1A67042B00157977 /* green-logo-kuwait.png in Resources */,
 				888BB97B1A5F801A00157977 /* IBT-connection-line-single.png in Resources */,
 				888BB8421A5EE79900157977 /* IBT_OTIS_01_LR_CDMS_CONN_INTERLOGIX.mov in Resources */,
 				888BB9501A5EE9EA00157977 /* ModalViewController.xib in Resources */,
@@ -2085,6 +2155,7 @@
 				8895FEFD1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */,
 				20E547181A2DFEF40073B2CF /* grfx_cellArrow@2x.png in Resources */,
 				20BF48D71A3B501D009645DC /* logo_automated@2x.png in Resources */,
+				888BBA0C1A67042B00157977 /* green-logo-india@2x.png in Resources */,
 				20E547191A2DFEF40073B2CF /* icon home@2x.png in Resources */,
 				888BB8CB1A5EE89200157977 /* PH2_EDWARDS_00_STILL_HS.png in Resources */,
 				888BB7E81A5EE6E500157977 /* INT_00A_STILL_LOGO_TRANS_HERO_CITY.png in Resources */,
@@ -2121,6 +2192,7 @@
 				20E547271A2DFEF40073B2CF /* bg_01@2x.jpg in Resources */,
 				888BB8441A5EE79900157977 /* IBT_OTIS_01_LR_CDMS_CONN_LENEL.mov in Resources */,
 				20BF48E11A3B501D009645DC /* logo_kidde.png in Resources */,
+				888BBA021A67042B00157977 /* green-logo-china.png in Resources */,
 				8895FF071A5B19F50076A3EC /* logo-carrier@2x.png in Resources */,
 				20BF48FB1A3B501D009645DC /* logo_sustain@2x.png in Resources */,
 				888BB8F71A5EE8A900157977 /* PH2_KIDDE_02_SMG_ADS_ADV_DELI_SYS.mov in Resources */,
@@ -2141,6 +2213,7 @@
 				20BF49151A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				888BB8BA1A5EE88500157977 /* PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				888BB7A91A5E136C00157977 /* ibt_edwards_connections.png in Resources */,
+				888BBA181A67042B00157977 /* green-logo-usa@2x.png in Resources */,
 				888BB9071A5EE8B800157977 /* PH2_LENEL_01_LR_ONGUARD_BLDG_ACC_CONT_SYS.mov in Resources */,
 				20E5472B1A2DFEF40073B2CF /* bg_04@2x.jpg in Resources */,
 				8834E22D1A531E8300204D81 /* grfx_ibt_rule@2x.png in Resources */,
@@ -2172,8 +2245,10 @@
 				888BB9B31A5F83BA00157977 /* IBT-connection-line-triple@2x.png in Resources */,
 				888BB7DB1A5EE6D900157977 /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
 				8834E2661A57074200204D81 /* logo_advantecibt.png in Resources */,
+				888BB9FE1A67042B00157977 /* green-logo-argentina.png in Resources */,
 				888BB7D31A5EE6D900157977 /* PH1_OTIS_00A_STILL_ELEV_HOTSPOT.png in Resources */,
 				20E5472F1A2DFEF40073B2CF /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
+				888BBA141A67042B00157977 /* green-logo-singapore@2x.png in Resources */,
 				20E547301A2DFEF40073B2CF /* grfx_cellBG.jpg in Resources */,
 				20BF48EF1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
 				8895FF0B1A5B19F50076A3EC /* logo-edwards@2x.png in Resources */,
@@ -2232,6 +2307,7 @@
 				888BB90A1A5EE8C300157977 /* PH2_ONITY_01_SMG_GENERAL.mov in Resources */,
 				20A95A5419CBB82800132F7E /* icon back.png in Resources */,
 				8895FF241A5B19F50076A3EC /* logo-onity.png in Resources */,
+				888BBA031A67042B00157977 /* green-logo-china@2x.png in Resources */,
 				20A39EBB19C3351C00C71430 /* bg_06@2x.jpg in Resources */,
 				8834E2571A56E32D00204D81 /* ibt_lenel@2x.png in Resources */,
 				888BB9781A5F801A00157977 /* IBT-connection-line-double@2x.png in Resources */,
@@ -2241,6 +2317,7 @@
 				8834E2371A532D3F00204D81 /* grfx_ibt_arrow.jpg in Resources */,
 				209AEFAF19D48C650074A3EA /* close bttn@2x.png in Resources */,
 				888BB7A81A5E136C00157977 /* ibt_edwards_connections.png in Resources */,
+				888BBA131A67042B00157977 /* green-logo-singapore@2x.png in Resources */,
 				8834E25B1A56E32D00204D81 /* ibt_otis@2x.png in Resources */,
 				8895FF381A5B233F0076A3EC /* connection lines@2x.png in Resources */,
 				888BB7E91A5EE6E500157977 /* INT_01_ANIM_TRANS_CITY_TO_BLDG.mov in Resources */,
@@ -2261,6 +2338,7 @@
 				888BB8C11A5EE88500157977 /* PH2_CARRIER_C_02C_SMB_AERO_39M_AIR_HANDLERS.png in Resources */,
 				8834E27D1A57221B00204D81 /* menu_utc@2x.png in Resources */,
 				888BB7AE1A5E136C00157977 /* ibt_interlogix_connections@2x.png in Resources */,
+				888BBA171A67042B00157977 /* green-logo-usa@2x.png in Resources */,
 				20A39EBC19C3351C00C71430 /* bg_05@2x.jpg in Resources */,
 				888BB9BE1A5F993600157977 /* logo-advante3c@2x.png in Resources */,
 				8895FF0E1A5B19F50076A3EC /* logo-Improve@2x.png in Resources */,
@@ -2283,12 +2361,14 @@
 				888BB8371A5EE78F00157977 /* IBT_LENEL_01_LR_CONN_OTIS_CDMS.mov in Resources */,
 				20BF49061A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov in Resources */,
 				20A39EB119C32F8800C71430 /* title4@2x.png in Resources */,
+				888BBA091A67042B00157977 /* green-logo-india.png in Resources */,
 				888BB92D1A5EE8D800157977 /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov in Resources */,
 				888BB7741A5DA25F00157977 /* overlay2.png in Resources */,
 				888BB9B01A5F83BA00157977 /* IBT-connection-line-triple.png in Resources */,
 				824F14E119CB390800628F01 /* grfx_cellArrow.png in Resources */,
 				888BB9E81A66B71900157977 /* ibt-learnMore.png in Resources */,
 				8834E2261A531E8300204D81 /* grfx_ibt_rule.png in Resources */,
+				888BBA0D1A67042B00157977 /* green-logo-kuwait.png in Resources */,
 				888BB9961A5F801A00157977 /* IBT-Transp-logo-automatedLogic.png in Resources */,
 				888BB9921A5F801A00157977 /* IBT-logo-otis.png in Resources */,
 				888BB9431A5EE8E200157977 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov in Resources */,
@@ -2334,10 +2414,12 @@
 				888BB9BC1A5F993600157977 /* logo-advante3c.png in Resources */,
 				888BB86B1A5EE86000157977 /* HOTSPOT_INSIDE_UI.png in Resources */,
 				209AEFA919D481180074A3EA /* 00_LOGO_TRANS_HERO_CITY.png in Resources */,
+				888BBA071A67042B00157977 /* green-logo-france@2x.png in Resources */,
 				20BF48F01A3B501D009645DC /* logo_onity.png in Resources */,
 				20A95A5A19CBB89E00132F7E /* swipe-to-reveal@2x.png in Resources */,
 				82A66ADD19B792C700C8E12A /* xhSplitViewController.xib in Resources */,
 				20A39EA719C32F8800C71430 /* bg_02.jpg in Resources */,
+				888BBA1A1A671A1A00157977 /* sustainability-logos-bg.jpg in Resources */,
 				888BB9131A5EE8CE00157977 /* PH2_OTIS_00_STILL_CDMS_HS.png in Resources */,
 				20A39EA919C32F8800C71430 /* bg_04.jpg in Resources */,
 				888BB7981A5E136C00157977 /* ibt_arrow_one.png in Resources */,
@@ -2352,6 +2434,7 @@
 				8834E2531A56E32D00204D81 /* ibt_interlogix@2x.png in Resources */,
 				200B9D0E19D25E7B00C7E7AC /* menu header@2x.png in Resources */,
 				888BB7B41A5E136C00157977 /* ibt_otis_connections.png in Resources */,
+				888BBA011A67042B00157977 /* green-logo-china.png in Resources */,
 				20A39EB019C32F8800C71430 /* title3@2x.png in Resources */,
 				824F14E519CB4C9200628F01 /* grfx_tableBg.png in Resources */,
 				20A95A7C19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png in Resources */,
@@ -2362,6 +2445,7 @@
 				888BB8151A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_LENEL_ONGUARD.mov in Resources */,
 				888BB8131A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.mov in Resources */,
 				8834E2221A531E8300204D81 /* grfx_ibt_close.png in Resources */,
+				888BB9FD1A67042A00157977 /* green-logo-argentina.png in Resources */,
 				206063E619D5D9F50045163F /* 03_TRANS_ELEV.mov in Resources */,
 				8895FF061A5B19F50076A3EC /* logo-carrier@2x.png in Resources */,
 				888BB7E51A5EE6E500157977 /* INT_00_ANIM_LOGO_TRANS_HERO_CITY.mov in Resources */,
@@ -2406,6 +2490,7 @@
 				888BB9C91A5F9E8D00157977 /* advantec.png in Resources */,
 				8834E24B1A56E32D00204D81 /* ibt_carrier@2x.png in Resources */,
 				888BB7ED1A5EE6E500157977 /* INT_02_ANIM_TRANS_BLDG_UNBUILD.mov in Resources */,
+				888BBA051A67042B00157977 /* green-logo-france.png in Resources */,
 				8895FF1A1A5B19F50076A3EC /* logo-lenel@2x.png in Resources */,
 				888BB9EA1A66B71900157977 /* ibt-learnMore@2x.png in Resources */,
 				20A95A5119CBB82800132F7E /* icon marker right@2x.png in Resources */,
@@ -2444,6 +2529,7 @@
 				8895FF141A5B19F50076A3EC /* logo-kidde.png in Resources */,
 				209AEFA319D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG.png in Resources */,
 				888BB8BD1A5EE88500157977 /* PH2_CARRIER_C_02A_SMB_AERO_39M_AIR_HANDLERS.png in Resources */,
+				888BBA0F1A67042B00157977 /* green-logo-kuwait@2x.png in Resources */,
 				82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */,
 				888BB7D01A5EE6D900157977 /* PH1_OTIS_00_ANIM_FLYIN_TRANS_UNBUILD_TO_ELEV_HOTSPOT.mov in Resources */,
 				888BB93D1A5EE8E200157977 /* PH2_TAYLOR_00_STILL_HS.png in Resources */,
@@ -2460,6 +2546,7 @@
 				888BB9311A5EE8D800157977 /* PH2_OTIS_03_LR_NCE_LED_LIGHT_BALUST.mov in Resources */,
 				8834E2451A56E32D00204D81 /* ibt_automatedlogic.png in Resources */,
 				888BB79C1A5E136C00157977 /* ibt_arrow_two.png in Resources */,
+				888BBA0B1A67042B00157977 /* green-logo-india@2x.png in Resources */,
 				888BB9CB1A5F9E8D00157977 /* advantec@2x.png in Resources */,
 				20192C8E1A48729000969C85 /* icon marker center right@2x.png in Resources */,
 				824F14DD19CB360300628F01 /* grfx_cellBG.jpg in Resources */,
@@ -2470,6 +2557,7 @@
 				888BB7AA1A5E136C00157977 /* ibt_edwards_connections@2x.png in Resources */,
 				20BF48FA1A3B501D009645DC /* logo_sustain@2x.png in Resources */,
 				8834E24D1A56E32D00204D81 /* ibt_edwards.png in Resources */,
+				888BBA151A67042B00157977 /* green-logo-usa.png in Resources */,
 				888BB9251A5EE8D800157977 /* PH2_OTIS_00_STILL_NCE_HS.png in Resources */,
 				888BB8CA1A5EE89200157977 /* PH2_EDWARDS_00_STILL_HS.png in Resources */,
 				20BF48F81A3B501D009645DC /* logo_sustain.png in Resources */,
@@ -2487,12 +2575,14 @@
 				888BB7CE1A5EE6D900157977 /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				20BF490C1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
 				20192C7E1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */,
+				888BB9FF1A67042B00157977 /* green-logo-argentina@2x.png in Resources */,
 				20BF48EA1A3B501D009645DC /* logo_marioff@2x.png in Resources */,
 				888BB9861A5F801A00157977 /* IBT-logo-edwards.png in Resources */,
 				888BB8911A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov in Resources */,
 				20BF490E1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				8895FF121A5B19F50076A3EC /* logo-interlogix@2x.png in Resources */,
 				20BF48DC1A3B501D009645DC /* logo_edwards.png in Resources */,
+				888BBA111A67042B00157977 /* green-logo-singapore.png in Resources */,
 				20BF48FC1A3B501D009645DC /* logo_taylor.png in Resources */,
 				20A39EB219C32F8800C71430 /* title5@2x.png in Resources */,
 				8834E2771A57221B00204D81 /* menu_utc.png in Resources */,

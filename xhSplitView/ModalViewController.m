@@ -50,6 +50,15 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIFont *boldFont = [UIFont boldSystemFontOfSize:17];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:_uil_headerText.text
+                                                                                         attributes:@{NSFontAttributeName:boldFont}];
+    
+    [attributedString setAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:10],
+                                      NSBaselineOffsetAttributeName : @8} range:NSMakeRange(7, 1)];
+    
+    _uil_headerText.attributedText = attributedString;
 
     // gesture which dismisses if bg touched
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissView:)];

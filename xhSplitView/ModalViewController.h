@@ -35,4 +35,5 @@
 @property (weak, nonatomic) IBOutlet UITextView *uitv_sustain;
 @property (weak, nonatomic) IBOutlet UIImageView *uiiv_arrow;
 @property (weak, nonatomic) IBOutlet UILabel *uil_header;
+@property (weak, nonatomic) IBOutlet UILabel *uil_headerText;
 @end

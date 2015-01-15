@@ -20,6 +20,7 @@
     UIButton        *midBtn;
     UIButton        *btmBtn;
     NSArray         *companies;
+    NSMutableArray  *ibtCompanies;
 }
 
 @end
@@ -45,6 +46,9 @@
     gestureRecognizer.delegate = self;
     [self.view addGestureRecognizer:gestureRecognizer];
     
+    _uil_UIcue.transform = CGAffineTransformMakeTranslation(100, 0);
+    _uil_UIcue.alpha = 0.0;
+
     _uib_learn.hidden = YES;
     //[self blurbackground];
     
@@ -77,6 +81,18 @@
         [obj addTarget:self action:@selector(bouncyButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
         [obj addTarget:self action:@selector(bouncyButtonTouchUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
     }];
+    
+    [_uib_learnTop addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_learnMid addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [_uib_learnBtm addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+
+    ibtCompanies = [[NSMutableArray alloc] initWithObjects:topBtn,midBtn,btmBtn, nil];
+    [ibtCompanies enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        [obj setAlpha:0.0];
+    }];
+    
+    _uiiv_arrow.alpha = 0.0;
+
 }
 
 - (void)bouncyButtonTouchDown:(id)sender
@@ -130,10 +146,19 @@
     NSLog(@"loadIBT");
     NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
 
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 1.0;
     }];
     _uib_learn.hidden = YES;
+    
+    [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+            obj.alpha = 1.0;
+            [obj.layer setBorderColor:[UIColor clearColor].CGColor];
+            [obj.layer setBorderWidth:0.0];
+    }];
+
     
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
@@ -148,6 +173,39 @@
 
 -(IBAction)loadIBTDetail:(id)sender
 {
+   // [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(popMainLogo) object:nil];
+   // [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(popLogos) object:nil];
+   // [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(scaleConnectors) object:nil];
+    
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+        
+        BOOL runOnce;
+        
+        if(runOnce == NO)
+        {
+            [UIView animateWithDuration:0.33 delay:1.33 options:0
+                             animations:^{
+                                 
+                                 _uil_UIcue.transform = CGAffineTransformMakeTranslation(0, 0);
+                                 _uil_UIcue.alpha = 1.0;
+                                 
+                             } completion:^(BOOL finished){
+                                 
+                                 [UIView animateWithDuration:0.33 delay:1.33 options:0
+                                                  animations:^{
+                                                      
+                                                      _uil_UIcue.alpha = 0.5;
+                                                      
+                                                      
+                                                  } completion:^(BOOL finished){
+                                                      
+                                                  }];
+                                 
+                                 
+                             }];
+            runOnce = true;
+        }
+    
     NSLog(@"loadIBTDetail");
     
     NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
@@ -234,6 +292,10 @@
     NSDictionary *catDict = selectedCo.coibtpanel;
     //NSLog(@"%@", catDict);
     
+    UIImage *img = [UIImage imageNamed:catDict[@"selectedlogo"]];
+    _uiiv_logo.frame = CGRectMake(_uiiv_logo.frame.origin.x, _uiiv_logo.frame.origin.y, img.size.width , img.size.height);
+    self.uiiv_logo.center = CGPointMake(CGRectGetMidX(_uiv_detail.bounds), 40);
+
     _uiiv_logo.image = [UIImage imageNamed:catDict[@"selectedlogo"]];
     _uiiv_arrow.image = [UIImage imageNamed:catDict[@"arrow"]];
 
@@ -246,38 +308,103 @@
     NSArray *connectedLogos = [catDict objectForKey:@"connections"];
     NSLog(@"logos %lu", (unsigned long)[connectedLogos count]);
     if (connectedLogos.count == 2) {
-        topBtn.frame = CGRectMake(300.0, 23.0, 124, 79);
+        topBtn.frame = CGRectMake(174.0, 127.0, 99, 62);
         [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
 
-        midBtn.frame = CGRectMake(300.0, 110, 124, 79);
+        midBtn.frame = CGRectMake(289.0, 127.0, 99, 62);
         [midBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
      
         midBtn.hidden = NO;
         btmBtn.hidden = YES;
 
     } else if (connectedLogos.count == 3) {
-        topBtn.frame = CGRectMake(300.0, 20.0, 89, 56);
+        topBtn.frame = CGRectMake(115.0, 127.0, 99, 62);
         [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
         
-        midBtn.frame = CGRectMake(300.0, 80, 89, 56);
+        midBtn.frame = CGRectMake(226.0, 127.0, 99, 62);
         [midBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[1]] forState:UIControlStateNormal];
         midBtn.hidden = NO;
 
-        btmBtn.frame = CGRectMake(300.0, 140, 89, 56);
+        btmBtn.frame = CGRectMake(338.0, 127.0, 99, 62);
         [btmBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[2]] forState:UIControlStateNormal];
         btmBtn.hidden = NO;
 
         
     } else {
         
-        topBtn.frame = CGRectMake(300.0, 66.0, 124, 79);
+        topBtn.frame = CGRectMake(226.0, 128.0, 99, 62);
         [topBtn setBackgroundImage:[UIImage imageNamed:connectedLogos[0]] forState:UIControlStateNormal];
 
         midBtn.hidden = YES;
         btmBtn.hidden = YES;
     }
+    
+    [self ibtReset];
 }
 
+-(void)scaleConnectors {
+    
+    _uiiv_arrow.layer.anchorPoint = CGPointMake(0.5, 0);
+    _uiiv_arrow.transform = CGAffineTransformMakeScale(0.01, 0.01);
+    
+    [UIView animateWithDuration:1.00 delay:0
+         usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
+                        options:0 animations:^{
+                            
+                            _uiiv_arrow.transform = CGAffineTransformIdentity;
+                            _uiiv_arrow.alpha = 1.0;
+                            
+                        } completion:nil];
+}
+
+-(void)ibtReset
+{
+    _uiiv_arrow.alpha = 0.0;
+    [ibtCompanies enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        obj.alpha = 0.0;
+    }];
+    _uiiv_logo.alpha = 0.0;
+    
+    [self performSelector:@selector(popMainLogo) withObject:nil afterDelay:0.33];
+
+    [self performSelector:@selector(scaleConnectors) withObject:nil afterDelay:0.66];
+    
+    [self performSelector:@selector(popLogos) withObject:nil afterDelay:1.00];
+}
+
+-(void)popMainLogo
+{
+    [UIView animateWithDuration:0.33 delay:0
+         usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
+                        options:0 animations:^{
+                            
+                            _uiiv_logo.alpha = 1.0;
+
+                        } completion:nil];
+}
+
+-(void)popLogos
+{
+    float timeDelay = 0.1;
+    float duration = 0.5;
+    for (int i = 0; i<(int)ibtCompanies.count; i++) {
+        UIImageView *view = [ibtCompanies objectAtIndex:i];
+        
+        //animate the layer
+        [UIView animateWithDuration:duration delay:(i+1)*timeDelay
+                            options: 0
+                         animations:^{
+                             
+                             view.alpha = 1.0;
+                         } completion:^(BOOL finished){
+                             
+                             
+                         }];
+    }
+    
+    [self performSelector:@selector(ibtReset) withObject:nil afterDelay:5.0];
+
+}
 
 -(IBAction)loadIBTAtDetail:(NSNumber*)i
 {

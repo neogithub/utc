@@ -1291,6 +1291,12 @@ enum {
 {
 
 	[self startMovieTimer];
+    
+    NSDictionary *co_dict = _arr_subHotspots[0];
+    
+//    if (co_dict objectForKey:@"sub") {
+//        <#statements#>
+//    }
     [self createCardsInView:_uiv_movieContainer];
 }
 
@@ -1325,9 +1331,17 @@ enum {
 
     //TODO: CRASH
 	// causes crash sometimes
-	NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
-	//NSLog(@"/ntapedtag %li",(long)tappedView.tag);
-	
+    
+    totalDataArray = _arr_subHotspots;
+
+    
+	NSLog(@"/ntapedtag %li",(long)tappedView.tag);
+    NSLog(@"/ntotalDataArray %@",[totalDataArray description]);
+    NSLog(@"/selectedCo.cohotspots.count %li",selectedCo.cohotspots.count);
+    
+    NSDictionary *hotspotItem = totalDataArray [0];
+
+    
 	//Get the exact second to remove the text boxes
 	removeTextAfterThisManySeconds = [[hotspotItem objectForKey:@"removeafterseconds"] intValue];
     NSLog(@"building : createCardsInView : removeTextAfterThisManySeconds %f", removeTextAfterThisManySeconds);

@@ -2477,7 +2477,7 @@ Otis integrates with Interlogix TruVision: cameras to dispatch elevators based o
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>IBT-connection-line-interlogix.png</string>
+			<string>IBT-connection-line-triple.png</string>
 			<key>selectedlogo</key>
 			<string>IBT-Transp-logo-automatedLogic.png</string>
 			<key>connections</key>
@@ -2992,7 +2992,7 @@ Automated Logic WebCTRL integrates with Edwards EST3 platform and Interlogix Tru
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>IBT-connection-line-interlogix.png</string>
+			<string>IBT-connection-line-triple.png</string>
 			<key>selectedlogo</key>
 			<string>IBT-Transp-logo-interlogix.png</string>
 			<key>connections</key>
@@ -3382,7 +3382,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>IBT-connection-line-interlogix.png</string>
+			<string>IBT-connection-line-triple.png</string>
 			<key>selectedlogo</key>
 			<string>IBT-Transp-logo-edwards.png</string>
 			<key>connections</key>

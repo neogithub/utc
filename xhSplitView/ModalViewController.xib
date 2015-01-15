@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="uiiv_BG" destination="arp-W9-2t0" id="y6g-15-Xlx"/>
                 <outlet property="uiiv_header" destination="Zi0-a5-uBn" id="D7R-KW-9IZ"/>
+                <outlet property="uil_headerText" destination="oZl-qR-1xP" id="Tgd-XH-I2e"/>
                 <outlet property="uitv_text" destination="SeY-UO-KQh" id="1rd-66-m1i"/>
                 <outlet property="uiv_header" destination="fss-Or-oF8" id="KDA-53-AKw"/>
                 <outlet property="uiv_ibt" destination="tNa-Ue-215" id="eVK-0h-uo8"/>
@@ -80,10 +81,10 @@ Intelligent building capabilities include:
                                     <rect key="frame" x="589" y="14" width="15" height="16"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdvanTe3c" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oZl-qR-1xP">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdvanTE3C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oZl-qR-1xP">
                                     <rect key="frame" x="21" y="12" width="329" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -111,7 +112,7 @@ Intelligent building capabilities include:
         </view>
     </objects>
     <resources>
-        <image name="PH2_ADVANTE3C_01_SMG_GENERAL.png" width="2048" height="1536"/>
+        <image name="PH2_ADVANTE3C_01_SMG_GENERAL.png" width="1024" height="768"/>
         <image name="advantec.png" width="146" height="63"/>
         <image name="arrow_white.png" width="11" height="21"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>

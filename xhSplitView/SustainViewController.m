@@ -16,6 +16,7 @@
 @interface SustainViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
     Company			*selectedCo;
+    NSMutableArray *addLogos;
     
 }
 @property (nonatomic, strong) NSArray* descStrings;
@@ -81,8 +82,63 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     }];
     
     _uiiv_arrow.alpha = 0.0;
+    
+    
+    
+    addLogos = [[NSMutableArray alloc] init];
+    
+    [_uiivCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        
+        [addLogos addObject:obj];
+        obj.alpha = 0.0;
+        
+    }];
 
+    [self performSelector:@selector(loadLogos) withObject:nil afterDelay:0.5];
+    
+    [_uibCollection enumerateObjectsUsingBlock:^(UILabel *obj, NSUInteger idx, BOOL *stop) {
+        [self pulse:obj.layer];
+    }];
 }
+
+#pragma mark PulseAnim
+-(void)pulse:(CALayer*)incomingLayer
+{
+    NSLog(@"pulse");
+
+    CABasicAnimation *theAnimation;
+    CALayer *pplayer = incomingLayer;
+    theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
+    theAnimation.duration=0.5;
+    theAnimation.repeatCount=HUGE_VAL;
+    theAnimation.autoreverses=YES;
+    theAnimation.fromValue=[NSNumber numberWithFloat:0.70];
+    theAnimation.toValue=[NSNumber numberWithFloat:0.2];
+    [pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
+}
+
+
+//-(void)flashBtns
+//{
+//    
+//   
+//    
+//    float timeDelay = 0.3;
+//    float duration = 0.5;
+//    for (int i = 0; i<(int)mtArr.count; i++) {
+//        UIImageView *view = [mtArr objectAtIndex:i];
+//        
+//        //animate the layer
+//        [UIView animateWithDuration:duration delay:(i+1)*timeDelay
+//                            options: 0
+//                         animations:^{
+//                             view.alpha = 1.0;
+//                         } completion:^(BOOL finished){
+//                             
+//                         }];
+//        
+//    }
+//}
 
 -(void)fadeUpBG
 {
@@ -108,6 +164,31 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     [self dimButtonAtIndex:(int)[sender tag]];
 }
 
+-(void)loadLogos
+{
+   
+    [_uiivCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        obj.alpha = 0.0;
+    }];
+    
+    float timeDelay = 0.1;
+    float duration = 0.5;
+    for (int i = 0; i<(int)addLogos.count; i++) {
+        UIImageView *view = [addLogos objectAtIndex:i];
+        
+        //animate the layer
+        [UIView animateWithDuration:duration delay:(i+1)*timeDelay
+                            options: 0
+                         animations:^{
+                             view.alpha = 1.0;
+                         } completion:^(BOOL finished){
+                             
+                         }];
+        
+    }
+
+}
+
 -(IBAction)loadIBT:(id)sender
 {
     NSLog(@"loadIBT");
@@ -126,17 +207,15 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                             
-                            _uiv_Text.frame = CGRectMake(180, -220, 620, 435);
-                            _uitv_text.frame = CGRectMake(204, 20, 399, 238);
+                            _uiv_Text.frame = CGRectMake(185, -320, 620, 352);
+                            _uitv_text.frame = CGRectMake(204, 20, 465, 352);
                             
-                           // _uiv_detail.frame = CGRectMake(0, 410, 620, 410);
-                           // _uiv_ibtData.frame = CGRectMake(0, 30, 620, 410);
-                            
-                           // _uiv_logoBns.frame = CGRectMake(0, 285, 620, 100);
-
-                           // _uiv_buttons.frame = CGRectMake(_uiv_buttons.frame.origin.x, _uiv_buttons.frame.origin.y-15, _uiv_buttons.frame.size.width, _uiv_buttons.frame.size.height);
-                            
+                            _uiv_logos.frame = CGRectMake(190, 280, 500, 248);
+                        
                         } completion:nil];
+    
+    [self performSelector:@selector(loadLogos) withObject:nil afterDelay:0.5];
+    
 }
 
 
@@ -149,7 +228,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     UIButton *btn = (UIButton*)sender;
     
     [_uiv_ibt insertSubview:_uiv_Text belowSubview:_uiv_header];
-    _uiv_Text.frame = CGRectMake(180, 415, 620, 435);
+    _uiv_Text.frame = CGRectMake(185, 415, 620, 352);
     
     _uil_header.text = btn.titleLabel.text;
     
@@ -159,8 +238,10 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                             
-                            _uiv_Text.frame = CGRectMake(180, 65, 620, 435);
-                            _uitv_text.frame = CGRectMake(204, -250, 587, 410);
+                            _uiv_Text.frame = CGRectMake(185, 65, 620, 435);
+                            _uitv_text.frame = CGRectMake(204, -275, 465, 410);
+                            
+                            _uiv_logos.frame = CGRectMake(185, 650, 500, 248);
                             
                            // _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
                            // _uiv_logoBns.frame = CGRectMake(0, -3, 620, 100);
@@ -171,7 +252,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
                             
                             CGPoint originInWindowCoordinates = [_uiv_ibtData convertPoint:btn.bounds.origin fromView:btn];
 
-                            _uiiv_arrow.frame = CGRectMake(174 , originInWindowCoordinates.y+27, 11, 21);
+                            _uiiv_arrow.frame = CGRectMake(174 , originInWindowCoordinates.y+23, 11, 21);
                             _uiiv_arrow.alpha = 1.0;
 
                             
@@ -184,6 +265,10 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     NSLog(@"tag %li", (long)[sender tag]);
     
   //  [self dimButtonAtIndex:(int)[sender tag]];
+    
+    [_uiivCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        obj.alpha = 0.0;
+    }];
 
 }
 

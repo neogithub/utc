@@ -35,4 +35,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *uitv_sustain;
 @property (weak, nonatomic) IBOutlet UIImageView *uiiv_arrow;
 @property (weak, nonatomic) IBOutlet UILabel *uil_header;
+@property (weak, nonatomic) IBOutlet UIView *uiv_logos;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *uiivCollection;
+@property (weak, nonatomic) IBOutlet UILabel *uil_headerText;
+
 @end
