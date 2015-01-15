@@ -113,7 +113,7 @@ enum {
         
     } else if ([categoryType isEqualToString:@"still"]) {
         //TODO: connect to data
-        [self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG" withCloseButton:YES];
+        [self popUpImage:@"PH2_KIDDE_01_SMG_FM200.png" withCloseButton:YES];
         [self initTitleBox];
         [topTitle setHotSpotTitle:categoryName];
         
@@ -201,8 +201,9 @@ enum {
 {
     
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
-    topname = selectedCo.coname;
+    //topname = selectedCo.coname;
 
+    topname = @"Intelligent Building Technology";
     
     if (topTitle)
     {
@@ -371,7 +372,7 @@ enum {
     else {
         NSLog(@"=======/n/n/nn/\n\n\n\n neoHotspotsView no need ==========");
         //TODO: attach to data if some subhotspots load different content
-        //			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG"];
+        //			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.png"];
     }
     
     [self zoomTowardsPointFrom:tappedView];

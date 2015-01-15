@@ -239,16 +239,14 @@
             
         case 4:
             _uib_learnTop.frame = CGRectMake(18, 84, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
-            _uib_learnMid.frame = CGRectMake(18, 149, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
-            _uib_learnBtm.frame = CGRectMake(18, 219, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.frame = CGRectMake(18, 149, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnMid.frame = CGRectMake(18, 219, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             _uib_learnMid.hidden = NO;
             break;
             
         case 5:
-            _uib_learnTop.frame = CGRectMake(18, 84, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
-            _uib_learnMid.frame = CGRectMake(18, 149, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
-            _uib_learnBtm.frame = CGRectMake(18, 219, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
-            _uib_learnMid.hidden = NO;
+            _uib_learnTop.frame = CGRectMake(18, 132, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.frame = CGRectMake(18, 200, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             break;
             
         default:
@@ -508,14 +506,19 @@
 -(IBAction)loadHotSpotView:(id)sender
 {
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
+    NSLog(@"coname%@", selectedCo.coname);
 
     int myTag = -1;
     
-    if ( ([sender tag] == 1) || ([sender tag] == 2) ){
+    if ([selectedCo.coname isEqualToString:@"Lenel"]) {
+        myTag = (int)[sender tag];
+    } else if ( ([sender tag] == 1) || ([sender tag] == 2) ){
         myTag = 1;
     } else {
         myTag = (int)[sender tag];
     }
+    NSLog(@"coname tag%i", (int)[sender tag] );
+
     
     NSDictionary *catDict = [selectedCo.coibt objectAtIndex:myTag];
     NSLog(@"%@", catDict);
