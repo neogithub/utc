@@ -215,6 +215,7 @@
     int sendertag = (int)[sender tag];
     
     _uib_learnMid.hidden = YES;
+    _uib_learnBtm.hidden = NO;
 
     switch (sendertag) {
         case 0:
@@ -223,8 +224,9 @@
             break;
             
         case 1:
-            _uib_learnTop.frame = CGRectMake(18, 101, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
-            _uib_learnBtm.frame = CGRectMake(18, 182, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnTop.frame = CGRectMake(18, 165, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            //_uib_learnBtm.frame = CGRectMake(18, 182, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnBtm.hidden = YES;
             break;
             
         case 2:

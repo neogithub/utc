@@ -58,7 +58,7 @@
 
 + (UIEdgeInsets)textInsets
 {
-    UIEdgeInsets ret = {.left = 21, .right = 15, .top = 23, .bottom = 20};
+    UIEdgeInsets ret = {.left = 21, .right = 15, .top = 13, .bottom = 10};
 
     return ret;
 }

@@ -463,7 +463,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 						<key>background</key>
 						<string>icon marker center.png</string>
 						<key>caption</key>
-						<string>Up to 50% Faster Movement Throughout Building</string>
+						<string>Up to 50% Faster Movement Through Building</string>
 					</dict>
 					<dict>
 						<key>xy</key>
@@ -1048,7 +1048,6 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 			<key>text</key>
 			<string>Carrier systems integrate with Automated Logic: plant system manager via WebCTRL: building automation system to optimize chiller plant systems and save energy
 
-
 Carrier systems integrate with Automated Logic WebCTRL building automation system to assure comfortable temperature settings at time of occupancy based on building and weather conditions</string>
 		</dict>
 		<key>ibt</key>
@@ -1213,7 +1212,7 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 						<key>xy</key>
 						<string>520,500</string>
 						<key>fileName</key>
-						<string>PH2_TAYLOR_02_ANIM_L812_GRILL.mov</string>
+						<string>BG_H264_1440_6.mov</string>
 						<key>removeafterseconds</key>
 						<integer>5</integer>
 						<key>width</key>
@@ -1248,6 +1247,8 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 						<string>icon marker left.png</string>
 						<key>caption</key>
 						<string>Two-Sided Grill</string>
+						<key>overlay</key>
+						<string>PH2_TAYLOR_02_SMB_L812_GRILL.png</string>
 					</dict>
 				</array>
 				<key>catName</key>
@@ -1451,7 +1452,7 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 						<key>xy</key>
 						<string>680,274</string>
 						<key>fileName</key>
-						<string>IBT_LENEL_01_LR_CONN_EDWARDS_EST3.mov</string>
+						<string>IBT_OTIS_01_LR_CDMS_CONN_INTERLOGIX.mov</string>
 						<key>removeafterseconds</key>
 						<integer>10</integer>
 						<key>width</key>
@@ -1978,7 +1979,7 @@ Otis integrates with Interlogix TruVision: cameras to dispatch elevators based o
 						<key>xy</key>
 						<string>680,274</string>
 						<key>fileName</key>
-						<string>IBT_AUTOLOG_01_LR_CONN_CARRIER.mov</string>
+						<string>IBT_AUTOLOG_01_LR_CONN_ED_INTERLOGIX_BASE.mov</string>
 						<key>removeafterseconds</key>
 						<integer>10</integer>
 						<key>width</key>
@@ -2575,7 +2576,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 						<key>fileName</key>
 						<string>PH2_EDWARDS_03_SMS_SIGN_SERIES_DEVICES.mov</string>
 						<key>removeafterseconds</key>
-						<integer>12</integer>
+						<integer>11</integer>
 						<key>width</key>
 						<string>360</string>
 						<key>facts</key>
@@ -2602,7 +2603,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 									<key>copy</key>
 									<string>Innovative design features and service tools provide life cycle cost savings</string>
 									<key>appearanceDelay</key>
-									<integer>8</integer>
+									<integer>6</integer>
 								</dict>
 							</array>
 						</dict>

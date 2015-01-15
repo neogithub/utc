@@ -667,11 +667,11 @@ enum {
 
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     
-//	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
-//	{
-//        
-//        [self loadIBT:nil];
-//        
+	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
+	{
+        
+        [self loadIBT:nil];
+        
 //    } else if ( [selectedCo.coname isEqualToString:@"Sustainability"] ) {
 //        
 //        [self loadSustainability];
@@ -679,8 +679,8 @@ enum {
 //    } else if ( [selectedCo.coname isEqualToString:@"AdvanTE3C"] ) {
 //        
 //        [self loadModalVC];
-//
-//	} else {
+
+	} else {
     
 		NSDictionary *catDict = [selectedCo.cocategories objectAtIndex:selctedRow];
 		NSString *categoryType = [catDict objectForKey:@"catType"];
@@ -735,7 +735,7 @@ enum {
         
         [_uib_ibtBtn removeFromSuperview];
 
-//	}
+	}
 }
 
 

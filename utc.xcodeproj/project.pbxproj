@@ -656,6 +656,14 @@
 		888BBA181A67042B00157977 /* green-logo-usa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9FC1A67042A00157977 /* green-logo-usa@2x.png */; };
 		888BBA1A1A671A1A00157977 /* sustainability-logos-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA191A671A1A00157977 /* sustainability-logos-bg.jpg */; };
 		888BBA1B1A671A1A00157977 /* sustainability-logos-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA191A671A1A00157977 /* sustainability-logos-bg.jpg */; };
+		888BBA1F1A68540100157977 /* BG_H264_1440_6.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA1C1A68540100157977 /* BG_H264_1440_6.mov */; };
+		888BBA201A68540100157977 /* BG_H264_1440_6.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA1C1A68540100157977 /* BG_H264_1440_6.mov */; };
+		888BBA211A68540100157977 /* BG_H264_1440_10.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA1D1A68540100157977 /* BG_H264_1440_10.mov */; };
+		888BBA221A68540100157977 /* BG_H264_1440_10.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA1D1A68540100157977 /* BG_H264_1440_10.mov */; };
+		888BBA231A68540100157977 /* BG_H264_1440_12.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA1E1A68540100157977 /* BG_H264_1440_12.mov */; };
+		888BBA241A68540100157977 /* BG_H264_1440_12.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA1E1A68540100157977 /* BG_H264_1440_12.mov */; };
+		888BBA261A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA251A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png */; };
+		888BBA271A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA251A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png */; };
 		8895FEDD1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEDE1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEFC1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */; };
@@ -1078,6 +1086,10 @@
 		888BB9FB1A67042A00157977 /* green-logo-usa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-usa.png"; path = "UI/grfx/sustainability/green-logo-usa.png"; sourceTree = "<group>"; };
 		888BB9FC1A67042A00157977 /* green-logo-usa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-logo-usa@2x.png"; path = "UI/grfx/sustainability/green-logo-usa@2x.png"; sourceTree = "<group>"; };
 		888BBA191A671A1A00157977 /* sustainability-logos-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "sustainability-logos-bg.jpg"; path = "UI/grfx/sustainability/sustainability-logos-bg.jpg"; sourceTree = "<group>"; };
+		888BBA1C1A68540100157977 /* BG_H264_1440_6.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = BG_H264_1440_6.mov; path = xhSplitView/CONTENT/C_PHASE_02/_INTERFACE/BG_H264_1440_6.mov; sourceTree = SOURCE_ROOT; };
+		888BBA1D1A68540100157977 /* BG_H264_1440_10.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = BG_H264_1440_10.mov; path = xhSplitView/CONTENT/C_PHASE_02/_INTERFACE/BG_H264_1440_10.mov; sourceTree = SOURCE_ROOT; };
+		888BBA1E1A68540100157977 /* BG_H264_1440_12.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = BG_H264_1440_12.mov; path = xhSplitView/CONTENT/C_PHASE_02/_INTERFACE/BG_H264_1440_12.mov; sourceTree = SOURCE_ROOT; };
+		888BBA251A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_TAYLOR_02_SMB_L812_GRILL.png; path = xhSplitView/CONTENT/C_PHASE_02/TAYLOR/PH2_TAYLOR_02_SMB_L812_GRILL.png; sourceTree = SOURCE_ROOT; };
 		8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppVersion.h"; sourceTree = "<group>"; };
 		8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppVersion.m"; sourceTree = "<group>"; };
 		8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-automatedLogic.png"; path = "logos/logo-automatedLogic.png"; sourceTree = "<group>"; };
@@ -1693,6 +1705,9 @@
 		888BB84A1A5EE7B300157977 /* _INTERFACE */ = {
 			isa = PBXGroup;
 			children = (
+				888BBA1C1A68540100157977 /* BG_H264_1440_6.mov */,
+				888BBA1D1A68540100157977 /* BG_H264_1440_10.mov */,
+				888BBA1E1A68540100157977 /* BG_H264_1440_12.mov */,
 				888BB85D1A5EE86000157977 /* BG_H264_1440.mov */,
 				888BB85E1A5EE86000157977 /* HOTSPOT_BUTTON_.png */,
 				888BB85F1A5EE86000157977 /* HOTSPOT_CALLOUT_W_TEXT.png */,
@@ -1810,6 +1825,7 @@
 		888BB8551A5EE82C00157977 /* TAYLOR */ = {
 			isa = PBXGroup;
 			children = (
+				888BBA251A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png */,
 				888BB9361A5EE8E200157977 /* PH2_TAYLOR_00_STILL_HS.png */,
 				888BB9371A5EE8E200157977 /* PH2_TAYLOR_01_ANIM_C723_SOFT_SRV_MACH.mov */,
 				888BB9391A5EE8E200157977 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov */,
@@ -2034,6 +2050,7 @@
 				888BB8661A5EE86000157977 /* HOTSPOT_BUTTON_.png in Resources */,
 				888BB98F1A5F801A00157977 /* IBT-logo-lenel.png in Resources */,
 				20E547461A2E13830073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO.png in Resources */,
+				888BBA271A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png in Resources */,
 				20BF48F11A3B501D009645DC /* logo_onity.png in Resources */,
 				888BBA041A67042B00157977 /* green-logo-china@2x.png in Resources */,
 				888BB9A11A5F801A00157977 /* IBT-Transp-logo-edwards@2x.png in Resources */,
@@ -2062,6 +2079,7 @@
 				20192C9C1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
 				20E546FE1A2DFEF40073B2CF /* titleTableViewCell.xib in Resources */,
 				888BB9541A5F171000157977 /* arrow_white.png in Resources */,
+				888BBA201A68540100157977 /* BG_H264_1440_6.mov in Resources */,
 				8834E2781A57221B00204D81 /* menu_utc.png in Resources */,
 				8895FF291A5B19F50076A3EC /* logo-otis.png in Resources */,
 				20BF48D91A3B501D009645DC /* logo_carrier.png in Resources */,
@@ -2232,6 +2250,7 @@
 				20E5474A1A2E14240073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO.mov in Resources */,
 				20E5472D1A2DFEF40073B2CF /* Main.storyboard in Resources */,
 				20E5472E1A2DFEF40073B2CF /* 01_TRANS_CITY_TO_BLDG.mov in Resources */,
+				888BBA241A68540100157977 /* BG_H264_1440_12.mov in Resources */,
 				888BB9141A5EE8CE00157977 /* PH2_OTIS_00_STILL_CDMS_HS.png in Resources */,
 				888BB9C31A5F994400157977 /* logo-utc.png in Resources */,
 				8895FF2F1A5B19F50076A3EC /* logo-taylor@2x.png in Resources */,
@@ -2270,6 +2289,7 @@
 				888BB8261A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov in Resources */,
 				20E547361A2DFEF40073B2CF /* title5@2x.png in Resources */,
 				888BB9811A5F801A00157977 /* IBT-logo-automatedLogic@2x.png in Resources */,
+				888BBA221A68540100157977 /* BG_H264_1440_10.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2284,6 +2304,7 @@
 				20BF48EE1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
 				888BB9821A5F801A00157977 /* IBT-logo-carrier.png in Resources */,
 				20192C991A49C97C00969C85 /* logo_utcibt.png in Resources */,
+				888BBA211A68540100157977 /* BG_H264_1440_10.mov in Resources */,
 				888BB7BB1A5E359800157977 /* arrow.png in Resources */,
 				20BF48D41A3B501D009645DC /* logo_automated.png in Resources */,
 				20BF49141A3F1C82009645DC /* logo_interlogix.png in Resources */,
@@ -2519,6 +2540,7 @@
 				888BB9ED1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png in Resources */,
 				20BF48D01A3B501D009645DC /* logo_advantec.png in Resources */,
 				888BB8FA1A5EE8A900157977 /* PH2_KIDDE_03_SMG_WHDR_WET_CHEMICAL_SYS.mov in Resources */,
+				888BBA231A68540100157977 /* BG_H264_1440_12.mov in Resources */,
 				888BB8B31A5EE88500157977 /* PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.png in Resources */,
 				20BF49081A3B84ED009645DC /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov in Resources */,
 				888BB7DE1A5EE6D900157977 /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
@@ -2575,6 +2597,7 @@
 				888BB7CE1A5EE6D900157977 /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				20BF490C1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
 				20192C7E1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */,
+				888BBA1F1A68540100157977 /* BG_H264_1440_6.mov in Resources */,
 				888BB9FF1A67042B00157977 /* green-logo-argentina@2x.png in Resources */,
 				20BF48EA1A3B501D009645DC /* logo_marioff@2x.png in Resources */,
 				888BB9861A5F801A00157977 /* IBT-logo-edwards.png in Resources */,
@@ -2582,6 +2605,7 @@
 				20BF490E1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				8895FF121A5B19F50076A3EC /* logo-interlogix@2x.png in Resources */,
 				20BF48DC1A3B501D009645DC /* logo_edwards.png in Resources */,
+				888BBA261A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png in Resources */,
 				888BBA111A67042B00157977 /* green-logo-singapore.png in Resources */,
 				20BF48FC1A3B501D009645DC /* logo_taylor.png in Resources */,
 				20A39EB219C32F8800C71430 /* title5@2x.png in Resources */,
