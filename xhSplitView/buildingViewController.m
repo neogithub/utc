@@ -1292,12 +1292,13 @@ enum {
 
 	[self startMovieTimer];
     
-    NSDictionary *co_dict = _arr_subHotspots[0];
+    // ONLY PLAY CARDS IF DICT EXISTS FOR CARDS
+    NSDictionary *hotspotItem = _arr_subHotspots [0];
+    if ([hotspotItem objectForKey:@"facts"]) {
+        NSLog(@"NO subhotspots - SO DON'T PLAY FILM");
+        [self createCardsInView:_uiv_movieContainer];
+    }
     
-//    if (co_dict objectForKey:@"sub") {
-//        <#statements#>
-//    }
-    [self createCardsInView:_uiv_movieContainer];
 }
 
 //----------------------------------------------------
