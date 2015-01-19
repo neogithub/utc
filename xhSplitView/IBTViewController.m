@@ -284,7 +284,7 @@
     
     [self dimButtonAtIndex:(int)[sender tag]];
     
-    companies = @[@"AutomatedLogic",@"Carrier",@"Edwards",@"Interlogix",@"Lenel",@"Otis"];
+    companies = @[@"Automated Logic",@"Carrier",@"Edwards",@"Interlogix",@"Lenel",@"Otis"];
     
     [[LibraryAPI sharedInstance] getSelectedCompanyNamed:companies[(int)[sender tag]]];
     
@@ -363,7 +363,7 @@
     [ibtCompanies enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 0.0;
     }];
-    _uiiv_logo.alpha = 0.0;
+   // _uiiv_logo.alpha = 0.0;
     
     [self performSelector:@selector(popMainLogo) withObject:nil afterDelay:0.33];
 
@@ -378,7 +378,7 @@
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                             
-                            _uiiv_logo.alpha = 1.0;
+                            //_uiiv_logo.alpha = 1.0;
 
                         } completion:nil];
 }
@@ -402,7 +402,7 @@
                          }];
     }
     
-    [self performSelector:@selector(ibtReset) withObject:nil afterDelay:5.0];
+    [self performSelector:@selector(ibtReset) withObject:nil afterDelay:10.0];
 
 }
 

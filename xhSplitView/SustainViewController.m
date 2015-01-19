@@ -206,7 +206,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
                         options:0 animations:^{
                             
                             _uiv_Text.frame = CGRectMake(185, 700, 620, 352);
-                            _uitv_text.frame = CGRectMake(204, 20, 465, 352);
+                            _uitv_text.frame = CGRectMake(204, 20, 465, 400);
 
                             
                             // _uiv_logos.frame = CGRectMake(190, 280, 500, 248);
@@ -227,7 +227,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     UIButton *btn = (UIButton*)sender;
     
     [_uiv_ibt insertSubview:_uiv_Text belowSubview:_uiv_header];
-    _uiv_Text.frame = CGRectMake(185, 415, 620, 352);
+    _uiv_Text.frame = CGRectMake(185, 415, 620, 400);
     
     _uil_header.text = btn.titleLabel.text;
     

@@ -64,8 +64,11 @@
     
     [self layoutTitleLabel];
     
-    CGRect descLabelFrame = CGRectMake(20, self.frame.size.height - self.descPositionY, self.contentView.frame.size.width - 40, 500);
+    CGRect descLabelFrame = CGRectMake(120, self.frame.size.height - self.descPositionY, self.contentView.frame.size.width - 240, 80);
     self.descLabel.frame = descLabelFrame;
+    
+    UIImageView *textBG = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"help-text-bg.png"]];
+    [self.descLabel setBackgroundColor:[UIColor colorWithPatternImage:textBG.image]];
     
 }
 
@@ -99,7 +102,7 @@
     self.descPositionY   = 160.0f;
     self.titleFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16.0];
     self.titleColor = [UIColor whiteColor];
-    self.descFont = [UIFont fontWithName:@"HelveticaNeue" size:13.0];
+    self.descFont = [UIFont fontWithName:@"HelveticaNeue" size:15.0];
     self.descColor = [UIColor whiteColor];
 }
 

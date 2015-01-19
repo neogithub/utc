@@ -551,9 +551,7 @@ enum {
     if (tapToPauseEnabled == YES) {
         NSLog(@"tapToPauseEnabled == YES");
         _isPauseable = YES;
-        
     }
-    
     
     if (_avPlayer) {
         [_avPlayerLayer removeFromSuperlayer];
@@ -567,8 +565,7 @@ enum {
     }
     
     _uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
-    [_uiv_movieContainer setBackgroundColor:[UIColor redColor]];
-    
+    [_uiv_movieContainer setBackgroundColor:[UIColor blackColor]];
     
     if (belowSubview != nil) {
         [self.view insertSubview:_uiv_movieContainer belowSubview:belowSubview];

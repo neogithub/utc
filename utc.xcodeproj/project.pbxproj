@@ -13,8 +13,6 @@
 		20192C761A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */; };
 		20192C781A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */; };
 		20192C791A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */; };
-		20192C7E1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */; };
-		20192C7F1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */; };
 		20192C841A445CAF00969C85 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C831A445CAF00969C85 /* overlay.png */; };
 		20192C851A445CAF00969C85 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C831A445CAF00969C85 /* overlay.png */; };
 		20192C8A1A48729000969C85 /* icon marker center.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C861A48729000969C85 /* icon marker center.png */; };
@@ -664,6 +662,22 @@
 		888BBA241A68540100157977 /* BG_H264_1440_12.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA1E1A68540100157977 /* BG_H264_1440_12.mov */; };
 		888BBA261A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA251A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png */; };
 		888BBA271A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA251A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png */; };
+		888BBA291A6890E600157977 /* PH2_CARRIER_A_00_ANIM_TRANS.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA281A6890E600157977 /* PH2_CARRIER_A_00_ANIM_TRANS.png */; };
+		888BBA2A1A6890E600157977 /* PH2_CARRIER_A_00_ANIM_TRANS.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA281A6890E600157977 /* PH2_CARRIER_A_00_ANIM_TRANS.png */; };
+		888BBA2C1A6892A500157977 /* PH2_ONITY_01_SMG_GENERAL.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA2B1A6892A500157977 /* PH2_ONITY_01_SMG_GENERAL.png */; };
+		888BBA2D1A6892A500157977 /* PH2_ONITY_01_SMG_GENERAL.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA2B1A6892A500157977 /* PH2_ONITY_01_SMG_GENERAL.png */; };
+		888BBA2F1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA2E1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov */; };
+		888BBA301A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA2E1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov */; };
+		888BBA321A68E20100157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA311A68E20100157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov */; };
+		888BBA331A68E20100157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA311A68E20100157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov */; };
+		888BBA361A69309600157977 /* help-text-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA341A69309600157977 /* help-text-bg.png */; };
+		888BBA371A69309600157977 /* help-text-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA341A69309600157977 /* help-text-bg.png */; };
+		888BBA381A69309600157977 /* help-text-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA351A69309600157977 /* help-text-bg@2x.png */; };
+		888BBA391A69309600157977 /* help-text-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA351A69309600157977 /* help-text-bg@2x.png */; };
+		888BBA3C1A69331F00157977 /* help-close-bttn.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA3A1A69331F00157977 /* help-close-bttn.png */; };
+		888BBA3D1A69331F00157977 /* help-close-bttn.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA3A1A69331F00157977 /* help-close-bttn.png */; };
+		888BBA3E1A69331F00157977 /* help-close-bttn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA3B1A69331F00157977 /* help-close-bttn@2x.png */; };
+		888BBA3F1A69331F00157977 /* help-close-bttn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA3B1A69331F00157977 /* help-close-bttn@2x.png */; };
 		8895FEDD1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEDE1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */; };
 		8895FEFC1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */; };
@@ -721,7 +735,6 @@
 		200B9D0C19D25E7B00C7E7AC /* menu header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu header@2x.png"; sourceTree = "<group>"; };
 		20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG; path = images/PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG; sourceTree = "<group>"; };
 		20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; path = images/PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; sourceTree = "<group>"; };
-		20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_KIDDE_00_STILL_HS.png; path = images/PH2_KIDDE_00_STILL_HS.png; sourceTree = "<group>"; };
 		20192C831A445CAF00969C85 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
 		20192C861A48729000969C85 /* icon marker center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center.png"; sourceTree = "<group>"; };
 		20192C871A48729000969C85 /* icon marker center right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center right.png"; sourceTree = "<group>"; };
@@ -1090,6 +1103,14 @@
 		888BBA1D1A68540100157977 /* BG_H264_1440_10.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = BG_H264_1440_10.mov; path = xhSplitView/CONTENT/C_PHASE_02/_INTERFACE/BG_H264_1440_10.mov; sourceTree = SOURCE_ROOT; };
 		888BBA1E1A68540100157977 /* BG_H264_1440_12.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = BG_H264_1440_12.mov; path = xhSplitView/CONTENT/C_PHASE_02/_INTERFACE/BG_H264_1440_12.mov; sourceTree = SOURCE_ROOT; };
 		888BBA251A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_TAYLOR_02_SMB_L812_GRILL.png; path = xhSplitView/CONTENT/C_PHASE_02/TAYLOR/PH2_TAYLOR_02_SMB_L812_GRILL.png; sourceTree = SOURCE_ROOT; };
+		888BBA281A6890E600157977 /* PH2_CARRIER_A_00_ANIM_TRANS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PH2_CARRIER_A_00_ANIM_TRANS.png; sourceTree = "<group>"; };
+		888BBA2B1A6892A500157977 /* PH2_ONITY_01_SMG_GENERAL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PH2_ONITY_01_SMG_GENERAL.png; sourceTree = "<group>"; };
+		888BBA2E1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov; path = xhSplitView/CONTENT/C_PHASE_02/INTERLOGIX/PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov; sourceTree = SOURCE_ROOT; };
+		888BBA311A68E20100157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov; path = xhSplitView/CONTENT/C_PHASE_02/EDWARDS/PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov; sourceTree = SOURCE_ROOT; };
+		888BBA341A69309600157977 /* help-text-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-text-bg.png"; sourceTree = "<group>"; };
+		888BBA351A69309600157977 /* help-text-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-text-bg@2x.png"; sourceTree = "<group>"; };
+		888BBA3A1A69331F00157977 /* help-close-bttn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-close-bttn.png"; sourceTree = "<group>"; };
+		888BBA3B1A69331F00157977 /* help-close-bttn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-close-bttn@2x.png"; sourceTree = "<group>"; };
 		8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppVersion.h"; sourceTree = "<group>"; };
 		8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppVersion.m"; sourceTree = "<group>"; };
 		8895FEE01A5B19F50076A3EC /* logo-automatedLogic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-automatedLogic.png"; path = "logos/logo-automatedLogic.png"; sourceTree = "<group>"; };
@@ -1276,7 +1297,6 @@
 				2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */,
 				20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */,
 				20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */,
-				20192C7D1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -1372,8 +1392,8 @@
 				20CEFE3419D1018700BEB200 /* PopoverViewController.h */,
 				20CEFE3519D1018700BEB200 /* PopoverViewController.m */,
 				20CEFE3619D1018700BEB200 /* PopoverViewController.xib */,
-				20192C921A488B8400969C85 /* CONTENT */,
 				82A66ADE19B793BD00C8E12A /* utilities */,
+				20192C921A488B8400969C85 /* CONTENT */,
 				82A66AE219B7942900C8E12A /* UI */,
 				888BB7871A5E129E00157977 /* ibt */,
 				888BB7B81A5E356600157977 /* sustainability */,
@@ -1462,6 +1482,12 @@
 		82A66AE319B7942900C8E12A /* grfx */ = {
 			isa = PBXGroup;
 			children = (
+				888BBA3A1A69331F00157977 /* help-close-bttn.png */,
+				888BBA3B1A69331F00157977 /* help-close-bttn@2x.png */,
+				888BBA341A69309600157977 /* help-text-bg.png */,
+				888BBA351A69309600157977 /* help-text-bg@2x.png */,
+				888BBA2B1A6892A500157977 /* PH2_ONITY_01_SMG_GENERAL.png */,
+				888BBA281A6890E600157977 /* PH2_CARRIER_A_00_ANIM_TRANS.png */,
 				8834E26D1A57221B00204D81 /* menu_advantec.png */,
 				8834E26E1A57221B00204D81 /* menu_sustainability.png */,
 				8834E26F1A57221B00204D81 /* menu_utc.png */,
@@ -1755,6 +1781,7 @@
 		888BB84E1A5EE7DD00157977 /* EDWARDS */ = {
 			isa = PBXGroup;
 			children = (
+				888BBA311A68E20100157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov */,
 				888BB8C31A5EE89200157977 /* PH2_EDWARDS_00_STILL_HS.png */,
 				888BB8C41A5EE89200157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.png */,
 				888BB8C51A5EE89200157977 /* PH2_EDWARDS_02_SMG_LS_CONTROL_PANEL.mov */,
@@ -1766,6 +1793,7 @@
 		888BB84F1A5EE7E300157977 /* INTERLOGIX */ = {
 			isa = PBXGroup;
 			children = (
+				888BBA2E1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov */,
 				888BB9EC1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png */,
 				888BB8D81A5EE89D00157977 /* PH2_INTERLOGIX_00_STILL_HS.png */,
 				888BB8D91A5EE89D00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.png */,
@@ -2018,6 +2046,7 @@
 				888BB9951A5F801A00157977 /* IBT-logo-otis@2x.png in Resources */,
 				20E546EB1A2DFEF40073B2CF /* icon marker left.png in Resources */,
 				888BB86C1A5EE86000157977 /* HOTSPOT_INSIDE_UI.png in Resources */,
+				888BBA2D1A6892A500157977 /* PH2_ONITY_01_SMG_GENERAL.png in Resources */,
 				20E546EC1A2DFEF40073B2CF /* bg_05@2x.jpg in Resources */,
 				20BF48DD1A3B501D009645DC /* logo_edwards.png in Resources */,
 				888BB9561A5F171000157977 /* arrow_white@2x.png in Resources */,
@@ -2046,6 +2075,7 @@
 				888BB8B61A5EE88500157977 /* PH2_CARRIER_B_01A_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				8895FF401A5B44B50076A3EC /* SustainViewController.xib in Resources */,
 				888BB7D91A5EE6D900157977 /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov in Resources */,
+				888BBA391A69309600157977 /* help-text-bg@2x.png in Resources */,
 				20E546F51A2DFEF40073B2CF /* grfx_cellBG@2x.jpg in Resources */,
 				888BB8661A5EE86000157977 /* HOTSPOT_BUTTON_.png in Resources */,
 				888BB98F1A5F801A00157977 /* IBT-logo-lenel.png in Resources */,
@@ -2062,7 +2092,9 @@
 				8834E27A1A57221B00204D81 /* menu_advantec@2x.png in Resources */,
 				20192C8F1A48729000969C85 /* icon marker center right@2x.png in Resources */,
 				888BBA101A67042B00157977 /* green-logo-kuwait@2x.png in Resources */,
+				888BBA3F1A69331F00157977 /* help-close-bttn@2x.png in Resources */,
 				888BB97D1A5F801A00157977 /* IBT-connection-line-single@2x.png in Resources */,
+				888BBA371A69309600157977 /* help-text-bg.png in Resources */,
 				20BF48D51A3B501D009645DC /* logo_automated.png in Resources */,
 				888BB8FF1A5EE8A900157977 /* PH2_KIDDE_04_ANIM_BADGER_FIRE_EXTING.mov in Resources */,
 				20E546F91A2DFEF40073B2CF /* panelTableViewCell.xib in Resources */,
@@ -2077,6 +2109,7 @@
 				888BB8CD1A5EE89200157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.png in Resources */,
 				20E546FD1A2DFEF40073B2CF /* title2@2x.png in Resources */,
 				20192C9C1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
+				888BBA301A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */,
 				20E546FE1A2DFEF40073B2CF /* titleTableViewCell.xib in Resources */,
 				888BB9541A5F171000157977 /* arrow_white.png in Resources */,
 				888BBA201A68540100157977 /* BG_H264_1440_6.mov in Resources */,
@@ -2090,7 +2123,6 @@
 				888BB9791A5F801A00157977 /* IBT-connection-line-double@2x.png in Resources */,
 				8895FF1B1A5B19F50076A3EC /* logo-lenel@2x.png in Resources */,
 				888BBA161A67042B00157977 /* green-logo-usa.png in Resources */,
-				20192C7F1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */,
 				888BB9971A5F801A00157977 /* IBT-Transp-logo-automatedLogic.png in Resources */,
 				888BB8381A5EE78F00157977 /* IBT_LENEL_01_LR_CONN_OTIS_CDMS.mov in Resources */,
 				888BBA061A67042B00157977 /* green-logo-france.png in Resources */,
@@ -2119,6 +2151,7 @@
 				888BBA0A1A67042B00157977 /* green-logo-india.png in Resources */,
 				888BB9AD1A5F801A00157977 /* IBT-Transp-logo-otis@2x.png in Resources */,
 				20BF48DF1A3B501D009645DC /* logo_edwards@2x.png in Resources */,
+				888BBA2A1A6890E600157977 /* PH2_CARRIER_A_00_ANIM_TRANS.png in Resources */,
 				888BB79F1A5E136C00157977 /* ibt_arrow_two@2x.png in Resources */,
 				888BB9A51A5F801A00157977 /* IBT-Transp-logo-interlogix@2x.png in Resources */,
 				888BB98B1A5F801A00157977 /* IBT-logo-interlogix.png in Resources */,
@@ -2147,6 +2180,7 @@
 				888BB9AB1A5F801A00157977 /* IBT-Transp-logo-otis.png in Resources */,
 				888BB9851A5F801A00157977 /* IBT-logo-carrier@2x.png in Resources */,
 				888BB7D71A5EE6D900157977 /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov in Resources */,
+				888BBA3D1A69331F00157977 /* help-close-bttn.png in Resources */,
 				20E5470F1A2DFEF40073B2CF /* grfx_tableBg.png in Resources */,
 				20E547101A2DFEF40073B2CF /* 03_HERO_BLDG_SECTION.png in Resources */,
 				20E547111A2DFEF40073B2CF /* 03_TRANS_ELEV.mov in Resources */,
@@ -2231,6 +2265,7 @@
 				20BF49151A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				888BB8BA1A5EE88500157977 /* PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				888BB7A91A5E136C00157977 /* ibt_edwards_connections.png in Resources */,
+				888BBA331A68E20100157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov in Resources */,
 				888BBA181A67042B00157977 /* green-logo-usa@2x.png in Resources */,
 				888BB9071A5EE8B800157977 /* PH2_LENEL_01_LR_ONGUARD_BLDG_ACC_CONT_SYS.mov in Resources */,
 				20E5472B1A2DFEF40073B2CF /* bg_04@2x.jpg in Resources */,
@@ -2335,6 +2370,7 @@
 				888BB8B71A5EE88500157977 /* PH2_CARRIER_B_01B_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				888BB9C41A5F994400157977 /* logo-utc@2x.png in Resources */,
 				888BB8D61A5EE89200157977 /* PH2_EDWARDS_03_SMS_SIGN_SERIES_DEVICES.mov in Resources */,
+				888BBA321A68E20100157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov in Resources */,
 				8834E2371A532D3F00204D81 /* grfx_ibt_arrow.jpg in Resources */,
 				209AEFAF19D48C650074A3EA /* close bttn@2x.png in Resources */,
 				888BB7A81A5E136C00157977 /* ibt_edwards_connections.png in Resources */,
@@ -2391,6 +2427,7 @@
 				8834E2261A531E8300204D81 /* grfx_ibt_rule.png in Resources */,
 				888BBA0D1A67042B00157977 /* green-logo-kuwait.png in Resources */,
 				888BB9961A5F801A00157977 /* IBT-Transp-logo-automatedLogic.png in Resources */,
+				888BBA2F1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */,
 				888BB9921A5F801A00157977 /* IBT-logo-otis.png in Resources */,
 				888BB9431A5EE8E200157977 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov in Resources */,
 				209AEFB519D4947B0074A3EA /* 03A Building Cut@2x.png in Resources */,
@@ -2415,6 +2452,7 @@
 				20BF48E61A3B501D009645DC /* logo_lenel@2x.png in Resources */,
 				888BB8051A5EE75700157977 /* IBT_AUTOLOG_01_LR_CONN_ED_INTERLOGIX_BASE.mov in Resources */,
 				888BB9841A5F801A00157977 /* IBT-logo-carrier@2x.png in Resources */,
+				888BBA2C1A6892A500157977 /* PH2_ONITY_01_SMG_GENERAL.png in Resources */,
 				888BB7CA1A5EE6D900157977 /* 01_HERO_CITY.png in Resources */,
 				888BB7A41A5E136C00157977 /* ibt_carrier_connections.png in Resources */,
 				888BB7D41A5EE6D900157977 /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov in Resources */,
@@ -2479,6 +2517,7 @@
 				888BB7A61A5E136C00157977 /* ibt_carrier_connections@2x.png in Resources */,
 				20A95A5F19CBC1AA00132F7E /* icon marker left@2x.png in Resources */,
 				888BB79A1A5E136C00157977 /* ibt_arrow_one@2x.png in Resources */,
+				888BBA291A6890E600157977 /* PH2_CARRIER_A_00_ANIM_TRANS.png in Resources */,
 				888BB9061A5EE8B800157977 /* PH2_LENEL_01_LR_ONGUARD_BLDG_ACC_CONT_SYS.mov in Resources */,
 				20A39EC319C33C9100C71430 /* grfx_helpBtn.png in Resources */,
 				8834E2471A56E32D00204D81 /* ibt_automatedlogic@2x.png in Resources */,
@@ -2496,6 +2535,7 @@
 				888BB8DD1A5EE89D00157977 /* PH2_INTERLOGIX_00_STILL_HS.png in Resources */,
 				888BB8651A5EE86000157977 /* HOTSPOT_BUTTON_.png in Resources */,
 				888BB7AC1A5E136C00157977 /* ibt_interlogix_connections.png in Resources */,
+				888BBA3E1A69331F00157977 /* help-close-bttn@2x.png in Resources */,
 				824F14E619CB4C9200628F01 /* grfx_tableBg@2x.png in Resources */,
 				20192C9B1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
 				20BF48F41A3B501D009645DC /* logo_otis.png in Resources */,
@@ -2539,6 +2579,7 @@
 				8895FEFC1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */,
 				888BB9ED1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png in Resources */,
 				20BF48D01A3B501D009645DC /* logo_advantec.png in Resources */,
+				888BBA361A69309600157977 /* help-text-bg.png in Resources */,
 				888BB8FA1A5EE8A900157977 /* PH2_KIDDE_03_SMG_WHDR_WET_CHEMICAL_SYS.mov in Resources */,
 				888BBA231A68540100157977 /* BG_H264_1440_12.mov in Resources */,
 				888BB8B31A5EE88500157977 /* PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.png in Resources */,
@@ -2571,6 +2612,7 @@
 				888BBA0B1A67042B00157977 /* green-logo-india@2x.png in Resources */,
 				888BB9CB1A5F9E8D00157977 /* advantec@2x.png in Resources */,
 				20192C8E1A48729000969C85 /* icon marker center right@2x.png in Resources */,
+				888BBA3C1A69331F00157977 /* help-close-bttn.png in Resources */,
 				824F14DD19CB360300628F01 /* grfx_cellBG.jpg in Resources */,
 				20A39EC419C33C9100C71430 /* grfx_helpBtn@2x.png in Resources */,
 				888BB98E1A5F801A00157977 /* IBT-logo-lenel.png in Resources */,
@@ -2596,7 +2638,6 @@
 				8834E2491A56E32D00204D81 /* ibt_carrier.png in Resources */,
 				888BB7CE1A5EE6D900157977 /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				20BF490C1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
-				20192C7E1A42242C00969C85 /* PH2_KIDDE_00_STILL_HS.png in Resources */,
 				888BBA1F1A68540100157977 /* BG_H264_1440_6.mov in Resources */,
 				888BB9FF1A67042B00157977 /* green-logo-argentina@2x.png in Resources */,
 				20BF48EA1A3B501D009645DC /* logo_marioff@2x.png in Resources */,
@@ -2609,6 +2650,7 @@
 				888BBA111A67042B00157977 /* green-logo-singapore.png in Resources */,
 				20BF48FC1A3B501D009645DC /* logo_taylor.png in Resources */,
 				20A39EB219C32F8800C71430 /* title5@2x.png in Resources */,
+				888BBA381A69309600157977 /* help-text-bg@2x.png in Resources */,
 				8834E2771A57221B00204D81 /* menu_utc.png in Resources */,
 				8895FF0C1A5B19F50076A3EC /* logo-Improve.png in Resources */,
 			);
@@ -2771,7 +2813,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 小赫 胡 (NSG3LV67E2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
@@ -2885,14 +2927,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Inc. (9734648496)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Inc. (9734648496)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = utc;
-				PROVISIONING_PROFILE = "5DA75D41-A3E9-4CA0-84FE-F76E92D6BFA0";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=*]" = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3017,7 +3059,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 小赫 胡 (NSG3LV67E2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";

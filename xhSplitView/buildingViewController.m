@@ -282,9 +282,9 @@ enum {
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Carrier"]) {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Carrier");
-    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"AutomatedLogic"]) {
+    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Automated Logic"]) {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:0] forKey:@"buttontag"];
-        if (kshowNSLogBOOL) NSLog(@"AutomatedLogic");
+        if (kshowNSLogBOOL) NSLog(@"Automated Logic");
     }
     
     // clear dict so ibt loads to the home creen
@@ -802,7 +802,7 @@ enum {
 		else {
 			if (kshowNSLogBOOL) NSLog(@"=======/n/n/nn/\n\n\n\n neoHotspotsView no need ==========");
 			//TODO: attach to data if some subhotspots load different content
-//			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.PNG"];
+//			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.png"];
 		}
 		
 		[self zoomTowardsPointFrom:tappedView];
@@ -995,7 +995,7 @@ enum {
     }
 	
 	_uiv_movieContainer = [[UIView alloc] initWithFrame:self.view.frame];
-	[_uiv_movieContainer setBackgroundColor:[UIColor redColor]];
+	[_uiv_movieContainer setBackgroundColor:[UIColor blackColor]];
 	
      
 	if (belowSubview != nil) {
@@ -1025,7 +1025,7 @@ enum {
 	
 		if (overlay) {
 			NSString *imageNameName = overlay;
-			UIImage *imagee = [UIImage flipImage:[UIImage imageNamed:imageNameName]];
+			UIImage *imagee = [UIImage imageNamed:imageNameName];
 			UIImageView *imgv = [[UIImageView alloc ] initWithImage:imagee];
 			imgv.frame = self.view.bounds;
 			[_uiv_movieContainer addSubview:imgv];
@@ -1167,6 +1167,8 @@ enum {
     if ([categoryType isEqualToString:@"filmWithCards"]) {
          if (kshowNSLogBOOL) NSLog(@"closeMovie filmWithCards");
         
+        [self initIBTButton];
+        
         [self updateStillFrameUnderFilm:@"03A Building Cut.png"];
         
         [topTitle removeFromSuperview];
@@ -1257,7 +1259,7 @@ enum {
 		[self removeMovieLayers];
 	}];
     
-    [self initIBTButton];
+   // [self initIBTButton];
 }
 
 -(void)resetSubHotspot

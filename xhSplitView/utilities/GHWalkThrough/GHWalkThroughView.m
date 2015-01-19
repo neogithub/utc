@@ -128,7 +128,7 @@
 }
 
 - (void)buildFooterView {
-    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 60, self.frame.size.width, 20)];
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 100, self.frame.size.width, 20)];
     
     //Set defersCurrentPageDisplay to YES to prevent page control jerking when switching pages with page control. This prevents page control from instant change of page indication.
     self.pageControl.defersCurrentPageDisplay = YES;
@@ -140,13 +140,16 @@
     
     self.skipButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    self.skipButton.frame = CGRectMake(self.frame.size.width - 110, self.pageControl.frame.origin.y - ((30 - self.pageControl.frame.size.height)/2), 80, 30);
+    self.skipButton.frame = CGRectMake(self.frame.size.width - 44, self.frame.size.height - 768, 44, 44);
     
     self.skipButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-    [self.skipButton setTitle:@"Finished" forState:UIControlStateNormal];
-    [self.skipButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //[self.skipButton setTitle:@"Finished" forState:UIControlStateNormal];
+    //[self.skipButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    [self.skipButton setBackgroundImage:[UIImage imageNamed:@"help-close-bttn.png"] forState:UIControlStateNormal];
+
     [self.skipButton addTarget:self action:@selector(skipIntroduction) forControlEvents:UIControlEventTouchUpInside];
-	self.skipButton.hidden = YES;
+	self.skipButton.hidden = NO;
     [self addSubview:self.skipButton];
     [self bringSubviewToFront:self.skipButton]; 
 }
@@ -228,9 +231,9 @@
     int page = floor((contentOffset - pageMetric / 2) / pageMetric) + 1;
     self.pageControl.currentPage = page;
 	
-	if (self.pageControl.currentPage == [self.dataSource numberOfPages]-1) {
+	//if (self.pageControl.currentPage == [self.dataSource numberOfPages]-1) {
 		self.skipButton.hidden = NO;
-	}
+	//}
 }
 
 - (void)crossDissolveForOffset:(float)offset {
