@@ -201,11 +201,44 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
+                                        <fragment content="United Technologies is the world's largest provider of building technologies">
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="17" name="Helvetica-Bold"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                <real key="NSStrokeWidth" value="0.0"/>
+                                            </attributes>
+                                        </fragment>
                                         <fragment>
-                                            <string key="content">Through innovation and integration, we bring together intelligent building technologies from across our industry-leading brands to improve building efficiency, operating cost and occupant experience. 
+                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">
+Through innovation and integration, we bring together intelligent building technologies from across our industry-leading brands to improve building efficiency, operating cost and occupant experience. 
 
-These technologies bring buildings to life, making them smarter, safer and more sustainable while improving productivity. By working together more intelligently, we’re building possible.
-
+These technologies bring buildings to life, making them smarter, safer and more sustainable while improving productivity. By working together more intelligently, we’re building possible.</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content" base64-UTF8="YES">
+Cgo
 </string>
                                             <attributes>
                                                 <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>

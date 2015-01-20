@@ -1173,7 +1173,7 @@ enum {
     if ([categoryType isEqualToString:@"filmWithCards"]) {
          if (kshowNSLogBOOL) NSLog(@"closeMovie filmWithCards");
         
-        //[self initIBTButton];
+        [self initIBTButton];
         
         [self updateStillFrameUnderFilm:@"03A Building Cut.png"];
         

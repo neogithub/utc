@@ -293,7 +293,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Sleep mode powers down lights and fans when idle</string>
 									<key>appearanceDelay</key>
-									<integer>3</integer>
+									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
@@ -333,7 +333,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Industry-changing, patented technology</string>
 									<key>appearanceDelay</key>
-									<integer>4</integer>
+									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
@@ -809,7 +809,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Greatly reduced number of moving parts</string>
 									<key>appearanceDelay</key>
-									<integer>3</integer>
+									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
@@ -954,7 +954,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Digital controls installed at factory</string>
 									<key>appearanceDelay</key>
-									<integer>3</integer>
+									<integer>1</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
@@ -1828,7 +1828,7 @@ Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ d
 									<key>copy</key>
 									<string>Automated Logic WebCTRL building automation system integrates with Edwards EST: 3 platform and security cameras to see where fire is located </string>
 									<key>appearanceDelay</key>
-									<integer>2</integer>
+									<integer>1</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1845,7 +1845,7 @@ Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ d
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Automated Logic  |  Edwards &amp; Interlogix</string>
+				<string>Automated Logic  |  Edwards</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -1853,14 +1853,13 @@ Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ d
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>IBT-connection-line-triple.png</string>
+			<string>IBT-connection-line-double.png</string>
 			<key>selectedlogo</key>
 			<string>IBT-Transp-logo-automatedLogic.png</string>
 			<key>connections</key>
 			<array>
 				<string>IBT-logo-carrier.png</string>
 				<string>IBT-logo-edwards.png</string>
-				<string>IBT-logo-interlogix.png</string>
 			</array>
 			<key>text</key>
 			<string>Automated Logic WebCTRL: building automation system integrates with Carrier systems to optimize chiller plant systems and save energy 
@@ -2552,7 +2551,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Edwards  |  Automated Logic &amp; Interlogix</string>
+				<string>Edwards  |  Automated Logic</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -2560,14 +2559,13 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 		<key>ibtpanel</key>
 		<dict>
 			<key>arrow</key>
-			<string>IBT-connection-line-triple.png</string>
+			<string>IBT-connection-line-double.png</string>
 			<key>selectedlogo</key>
 			<string>IBT-Transp-logo-edwards.png</string>
 			<key>connections</key>
 			<array>
 				<string>IBT-logo-lenel.png</string>
 				<string>IBT-logo-automatedLogic.png</string>
-				<string>IBT-logo-interlogix.png</string>
 			</array>
 			<key>text</key>
 			<string>Edwards EST: 3 platform integrates with Lenel OnGuard:  building access system to efficiently mass notify and evacuate a building

@@ -57,9 +57,9 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     gestureRecognizer.delegate = self;
     [self.view addGestureRecognizer:gestureRecognizer];
     
+
     _uiiv_BG.alpha = 0.0;
     
-    _uib_learn.hidden = YES;
     //[self blurbackground];
     
     [self performSelector:@selector(fadeUpBG) withObject:nil afterDelay:0.75];
@@ -97,6 +97,9 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     [_uibCollection enumerateObjectsUsingBlock:^(UILabel *obj, NSUInteger idx, BOOL *stop) {
         [self pulse:obj.layer];
     }];
+    
+    [self dimButtonAtIndex:0];
+
 }
 
 #pragma mark PulseAnim
@@ -151,7 +154,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 -(IBAction)loadText:(id)sender
 {
     NSLog(@"loadText");
-    _uitv_sustain.text = self.descStrings[[sender tag]];
+    _uitv_sustain.text = self.descStrings[[sender tag] - 1];
     
     NSAttributedString *t = [[NSAttributedString alloc] initWithString: _uitv_sustain.text ];
     NSAttributedString *g = [t addRegisteredTrademarkTo: _uitv_sustain.text withColor:[UIColor utcSmokeGray] fnt:[UIFont fontWithName:@"Helvetica" size:17]];
@@ -195,9 +198,8 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 1.0;
     }];
-    _uib_learn.hidden = YES;
     
-    [self dimButtonAtIndex:-1];
+    [self dimButtonAtIndex:0];
 
     _uiiv_arrow.alpha = 0.0;
     
@@ -207,7 +209,6 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
                             
                             _uiv_Text.frame = CGRectMake(185, 700, 620, 352);
                             _uitv_text.frame = CGRectMake(204, 20, 465, 400);
-
                             
                             // _uiv_logos.frame = CGRectMake(190, 280, 500, 248);
                            // _uiv_logos.frame = CGRectMake(185, 650, 500, 248);
@@ -220,9 +221,13 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     
+    [_uiivCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        obj.alpha = 0.0;
+    }];
+
     NSLog(@"loadIBTDetail");
     
-    NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
+    //NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
 
     UIButton *btn = (UIButton*)sender;
     
@@ -231,62 +236,59 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     
     _uil_header.text = btn.titleLabel.text;
     
-    [self loadText: sender];
-    
-    if ([sender tag] == 1) {
+    if ([sender tag] == 0) {
+        [self dimButtonAtIndex:0];
+        [self loadIBT:nil];
+    } else if ([sender tag] == 2) {
         [self performSelector:@selector(loadLogos) withObject:nil afterDelay:0.2];
         _uiv_greentechImages.hidden = YES;
-    } else if ([sender tag] == 2) {
+    } else if ([sender tag] == 3) {
         _uiv_greentechImages.hidden = NO;
     } else {
         _uiv_greentechImages.hidden = YES;
     }
     
-    [UIView animateWithDuration:0.33 delay:0
-         usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
-                        options:0 animations:^{
-                            
-                            _uiv_Text.frame = CGRectMake(185, 65, 620, 435);
-                            _uitv_text.frame = CGRectMake(204, -275, 465, 410);
-                            
-                           // _uiv_logos.frame = CGRectMake(185, 650, 500, 248);
-                            
-                            _uiv_logos.frame = CGRectMake(0, 247, 500, 248);
-                            
-                           // _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
-                           // _uiv_logoBns.frame = CGRectMake(0, -3, 620, 100);
-                            
-                            //if (_uiv_buttons.frame.origin.y == 35) {
-                           //     _uiv_buttons.frame = CGRectMake(_uiv_buttons.frame.origin.x, _uiv_buttons.frame.origin.y+15, _uiv_buttons.frame.size.width, _uiv_buttons.frame.size.height);
-                          //  }
-                            
-                            CGPoint originInWindowCoordinates = [_uiv_ibtData convertPoint:btn.bounds.origin fromView:btn];
-
-                            _uiiv_arrow.frame = CGRectMake(174 , originInWindowCoordinates.y+23, 11, 21);
-                            _uiiv_arrow.alpha = 1.0;
-
-                            
-                            
-                            
-                        } completion:nil];
-    
-    _uib_learn.hidden = NO;
-    
-    NSLog(@"tag %li", (long)[sender tag]);
-    
-  //  [self dimButtonAtIndex:(int)[sender tag]];
-    
-    [_uiivCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
-        obj.alpha = 0.0;
-    }];
-
+    if ([sender tag] != 0) {
+        
+        [self loadText: sender];
+        
+        [UIView animateWithDuration:0.33 delay:0
+             usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
+                            options:0 animations:^{
+                                
+                                _uiv_Text.frame = CGRectMake(185, 65, 620, 435);
+                                _uitv_text.frame = CGRectMake(204, -275, 465, 410);
+                                
+                                // _uiv_logos.frame = CGRectMake(185, 650, 500, 248);
+                                
+                                _uiv_logos.frame = CGRectMake(0, 247, 500, 248);
+                                
+                                // _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
+                                // _uiv_logoBns.frame = CGRectMake(0, -3, 620, 100);
+                                
+                                //if (_uiv_buttons.frame.origin.y == 35) {
+                                //     _uiv_buttons.frame = CGRectMake(_uiv_buttons.frame.origin.x, _uiv_buttons.frame.origin.y+15, _uiv_buttons.frame.size.width, _uiv_buttons.frame.size.height);
+                                //  }
+                                
+                                CGPoint originInWindowCoordinates = [_uiv_ibtData convertPoint:btn.bounds.origin fromView:btn];
+                                
+                                _uiiv_arrow.frame = CGRectMake(174 , originInWindowCoordinates.y+23, 11, 21);
+                                _uiiv_arrow.alpha = 1.0;
+                                
+                            } completion:nil];
+        
+        
+        NSLog(@"tag %li", (long)[sender tag]);
+        
+        //  [self dimButtonAtIndex:(int)[sender tag]];
+    }
 }
 
 
 -(IBAction)loadIBTAtDetail:(NSNumber*)i
 {
     NSLog(@"%@", i);
-    NSLog(@"loadIBTAtDetail");
+    //NSLog(@"loadIBTAtDetail");
     UIButton*btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.tag = [i integerValue];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.03 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -305,7 +307,6 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     
     NSLog(@"index %i",index);
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
-        NSLog(@"dimButtonAtIndex");
        // btn.alpha = 1.0;
         if (obj.tag == index) {
             NSLog(@"found!");
