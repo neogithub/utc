@@ -180,7 +180,9 @@ enum {
 #pragma mark - Company Logo Buttons
 -(void)initCompanyLogoBtns
 {
-	_uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self initIBTButton];
+    
+    _uib_CompanyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 	
 #ifdef NEODEMO
 	_uib_CompanyBtn.frame = CGRectMake(565.0, 245.0, 40, 40);
@@ -258,7 +260,7 @@ enum {
     [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo-utc.png"] forState:UIControlStateNormal];
     [_uib_ibtBtn setImage: [UIImage imageNamed:@"logo-utc.png"] forState:UIControlStateSelected];
     [_uib_ibtBtn addTarget: self action:@selector(loadIBT:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview: _uib_ibtBtn];
+    [_uis_zoomingImg.blurView addSubview: _uib_ibtBtn];
 }
 
 #pragma mark Open Modal
@@ -368,8 +370,7 @@ enum {
 #endif
 	
 	[self initCompanyLogoBtns];
-    [self initIBTButton];
-	
+    
 	[_uis_zoomingInfoImg removeFromSuperview];
 	
 	[self removeHotspots];
@@ -1167,7 +1168,7 @@ enum {
     if ([categoryType isEqualToString:@"filmWithCards"]) {
          if (kshowNSLogBOOL) NSLog(@"closeMovie filmWithCards");
         
-        [self initIBTButton];
+        //[self initIBTButton];
         
         [self updateStillFrameUnderFilm:@"03A Building Cut.png"];
         
@@ -1258,8 +1259,6 @@ enum {
 	} completion:^(BOOL completed) {
 		[self removeMovieLayers];
 	}];
-    
-   // [self initIBTButton];
 }
 
 -(void)resetSubHotspot

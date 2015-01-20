@@ -346,6 +346,10 @@
 		8834E27C1A57221B00204D81 /* menu_sustainability@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2711A57221B00204D81 /* menu_sustainability@2x.png */; };
 		8834E27D1A57221B00204D81 /* menu_utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2721A57221B00204D81 /* menu_utc@2x.png */; };
 		8834E27E1A57221B00204D81 /* menu_utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2721A57221B00204D81 /* menu_utc@2x.png */; };
+		8878D18F1A6D9267009BEE83 /* tmpImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8878D18E1A6D9267009BEE83 /* tmpImage.jpg */; };
+		8878D1901A6D9267009BEE83 /* tmpImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8878D18E1A6D9267009BEE83 /* tmpImage.jpg */; };
+		8878D1931A6DA0A6009BEE83 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */; };
+		8878D1941A6DA0A6009BEE83 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */; };
 		888BB7741A5DA25F00157977 /* overlay2.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7731A5DA25F00157977 /* overlay2.png */; };
 		888BB7751A5DA25F00157977 /* overlay2.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7731A5DA25F00157977 /* overlay2.png */; };
 		888BB7981A5E136C00157977 /* ibt_arrow_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7881A5E136C00157977 /* ibt_arrow_one.png */; };
@@ -939,6 +943,9 @@
 		8834E2701A57221B00204D81 /* menu_advantec@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_advantec@2x.png"; sourceTree = "<group>"; };
 		8834E2711A57221B00204D81 /* menu_sustainability@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_sustainability@2x.png"; sourceTree = "<group>"; };
 		8834E2721A57221B00204D81 /* menu_utc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_utc@2x.png"; sourceTree = "<group>"; };
+		8878D18E1A6D9267009BEE83 /* tmpImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tmpImage.jpg; path = UI/grfx/sustainability/tmpImage.jpg; sourceTree = "<group>"; };
+		8878D1911A6DA0A6009BEE83 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		888BB7731A5DA25F00157977 /* overlay2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay2.png; sourceTree = "<group>"; };
 		888BB7881A5E136C00157977 /* ibt_arrow_one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ibt_arrow_one.png; path = UI/grfx/ibt/ibt_arrow_one.png; sourceTree = "<group>"; };
 		888BB7891A5E136C00157977 /* ibt_arrow_one@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ibt_arrow_one@2x.png"; path = "UI/grfx/ibt/ibt_arrow_one@2x.png"; sourceTree = "<group>"; };
@@ -1435,6 +1442,8 @@
 		82A66ADE19B793BD00C8E12A /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8878D1911A6DA0A6009BEE83 /* UIView+Toast.h */,
+				8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */,
 				888BB9CD1A64332D00157977 /* drawPathShape */,
 				8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */,
 				8895FEDC1A5AF4D20076A3EC /* UIApplication+AppVersion.m */,
@@ -1652,6 +1661,7 @@
 		888BB7B81A5E356600157977 /* sustainability */ = {
 			isa = PBXGroup;
 			children = (
+				8878D18E1A6D9267009BEE83 /* tmpImage.jpg */,
 				888BBA191A671A1A00157977 /* sustainability-logos-bg.jpg */,
 				888BB9EF1A67042A00157977 /* green-logo-argentina.png */,
 				888BB9F01A67042A00157977 /* green-logo-argentina@2x.png */,
@@ -2229,6 +2239,7 @@
 				20E547201A2DFEF40073B2CF /* bg_03@2x.jpg in Resources */,
 				888BB8061A5EE75700157977 /* IBT_AUTOLOG_01_LR_CONN_ED_INTERLOGIX_BASE.mov in Resources */,
 				20E547211A2DFEF40073B2CF /* icon marker right@2x.png in Resources */,
+				8878D1901A6D9267009BEE83 /* tmpImage.jpg in Resources */,
 				20E547221A2DFEF40073B2CF /* bg_02@2x.jpg in Resources */,
 				888BB9911A5F801A00157977 /* IBT-logo-lenel@2x.png in Resources */,
 				888BB8921A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov in Resources */,
@@ -2527,6 +2538,7 @@
 				824F14E219CB390800628F01 /* grfx_cellArrow@2x.png in Resources */,
 				888BB79E1A5E136C00157977 /* ibt_arrow_two@2x.png in Resources */,
 				20A95A4F19CBB82800132F7E /* icon home@2x.png in Resources */,
+				8878D18F1A6D9267009BEE83 /* tmpImage.jpg in Resources */,
 				888BB8031A5EE75700157977 /* IBT_AUTOLOG_01_LR_CONN_CARRIER.mov in Resources */,
 				888BB88B1A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov in Resources */,
 				888BB99A1A5F801A00157977 /* IBT-Transp-logo-carrier.png in Resources */,
@@ -2681,6 +2693,7 @@
 				20BF48B71A3A0629009645DC /* PersistencyManager.m in Sources */,
 				20E546CF1A2DFEF40073B2CF /* Building.m in Sources */,
 				20E546D01A2DFEF40073B2CF /* panelTableViewCell.m in Sources */,
+				8878D1941A6DA0A6009BEE83 /* UIView+Toast.m in Sources */,
 				20E546D11A2DFEF40073B2CF /* GHWalkThroughView.m in Sources */,
 				20BA88BC1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */,
 				20BF491B1A3F23BE009645DC /* embTitle.m in Sources */,
@@ -2704,6 +2717,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8878D1931A6DA0A6009BEE83 /* UIView+Toast.m in Sources */,
 				20CEFE3719D1018700BEB200 /* PopoverViewController.m in Sources */,
 				824F14EF19CB59CA00628F01 /* titleTableViewCell.m in Sources */,
 				888BB9D81A64352E00157977 /* embBezierPathItem.m in Sources */,

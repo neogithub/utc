@@ -15,6 +15,7 @@
                 <outlet property="uitv_text" destination="SeY-UO-KQh" id="1rd-66-m1i"/>
                 <outlet property="uiv_Text" destination="HXa-Fe-L0o" id="pcz-xs-b9d"/>
                 <outlet property="uiv_buttons" destination="As2-ed-IIC" id="h8P-3Z-o8R"/>
+                <outlet property="uiv_greentechImages" destination="f7C-0p-Nqy" id="CLT-2a-LEc"/>
                 <outlet property="uiv_header" destination="fss-Or-oF8" id="KDA-53-AKw"/>
                 <outlet property="uiv_ibt" destination="tNa-Ue-215" id="eVK-0h-uo8"/>
                 <outlet property="uiv_ibtData" destination="8DR-O2-vF9" id="5u1-XE-0Vg"/>
@@ -208,8 +209,8 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                     <rect key="frame" x="0.0" y="0.0" width="498" height="530"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" id="iyn-Eh-cEp">
-                            <rect key="frame" x="-1" y="247" width="500" height="248"/>
+                        <view contentMode="scaleToFill" id="iyn-Eh-cEp" userLabel="View - logos">
+                            <rect key="frame" x="-1" y="272" width="500" height="248"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sustainability-logos-bg.jpg" id="QgH-mR-2b7">
@@ -243,6 +244,21 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green-logo-kuwait.png" id="ufK-Lf-N0e">
                                     <rect key="frame" x="320" y="122" width="141" height="109"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" id="f7C-0p-Nqy" userLabel="View - images">
+                            <rect key="frame" x="-1" y="247" width="500" height="248"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmpImage.jpg" id="fM7-yQ-KtL">
+                                    <rect key="frame" x="72" y="30" width="174" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmpImage.jpg" id="Hlz-Ab-9DM">
+                                    <rect key="frame" x="254" y="30" width="174" height="150"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
                             </subviews>
@@ -290,6 +306,7 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
         <image name="grfx_ibt_close.png" width="15" height="16"/>
         <image name="grfx_ibt_header.png" width="1" height="45"/>
         <image name="sustainability-logos-bg.jpg" width="500" height="248"/>
+        <image name="tmpImage.jpg" width="500" height="500"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

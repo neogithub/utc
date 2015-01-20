@@ -233,8 +233,13 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     
     [self loadText: sender];
     
-    if ([sender tag] == 2) {
+    if ([sender tag] == 1) {
         [self performSelector:@selector(loadLogos) withObject:nil afterDelay:0.2];
+        _uiv_greentechImages.hidden = YES;
+    } else if ([sender tag] == 2) {
+        _uiv_greentechImages.hidden = NO;
+    } else {
+        _uiv_greentechImages.hidden = YES;
     }
     
     [UIView animateWithDuration:0.33 delay:0
@@ -246,7 +251,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
                             
                            // _uiv_logos.frame = CGRectMake(185, 650, 500, 248);
                             
-                            _uiv_logos.frame = CGRectMake(0, 227, 500, 248);
+                            _uiv_logos.frame = CGRectMake(0, 247, 500, 248);
                             
                            // _uiv_detail.frame = CGRectMake(0, 140, 620, 410);
                            // _uiv_logoBns.frame = CGRectMake(0, -3, 620, 100);

@@ -14,6 +14,7 @@
 #import "buildingViewController.h"
 #import "embHotSpotViewController.h"
 #import "UIApplication+AppVersion.h"
+#import "UIView+Toast.h"
 
 @interface masterViewController () <IBTViewControllerDelegate>
 {
@@ -93,7 +94,8 @@ static CGFloat yHeight = 90;
     [self initAdvante3cButton];
     [self initHelpButton];
     [self initVersion];
-    
+    [self initLegal];
+
 	currentCompanyIndex = 0;
     selectedRow = -1;
     
@@ -114,6 +116,23 @@ static CGFloat yHeight = 90;
     [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
+-(void)initLegal
+{
+    UIButton *_uib_legalBtn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [_uib_legalBtn setTintColor:[UIColor whiteColor]];
+    _uib_legalBtn.frame = CGRectMake(120, 712, 30, 30);
+    [_uib_legalBtn addTarget: self action:@selector(loadLegal) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: _uib_legalBtn];
+}
+
+-(void)loadLegal
+{
+    [self.view makeToast:@"Agion® is a registered trademark of Sciessent LLC\n\nBACnet® is a registered trademark of American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE)\n\nLEED® is a registered trade mark of the U.S. Green Building Council."
+                duration:10.0
+                position:CSToastPositionBottom
+                   title:@"Legal Notices"];
+}
+
 -(void)initVersion
 {
     UILabel *uil_Ver = [[UILabel alloc] initWithFrame:CGRectMake(39.0, 740, 100, 20)];
@@ -131,7 +150,7 @@ static CGFloat yHeight = 90;
         [_uib_helpBtn removeFromSuperview];
     }
     _uib_helpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_helpBtn.frame = CGRectMake(48, 715, 85, 24);
+    _uib_helpBtn.frame = CGRectMake(28, 715, 85, 24);
     _uib_helpBtn.tag = 0;
     [_uib_helpBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
     [_uib_helpBtn setTitle:@"Help" forState:UIControlStateNormal];
