@@ -51,6 +51,7 @@ enum {
 	NSString		*topname;
     int             factWidth;
     NSInteger       selctedRow;
+    BOOL            hotspotHasLooped;
 }
 
 - (IBAction)showPopover:(UIButton *)sender;
@@ -1105,6 +1106,8 @@ enum {
 	// starts the player as well
 	if (kshowNSLogBOOL) NSLog(@"playerItemLoop beginSequence");
 	[self beginSequence];
+    
+    hotspotHasLooped = YES;
 }
 
 #pragma mark control(s) for movie
@@ -1160,6 +1163,8 @@ enum {
 
 -(void)closeMovie
 {
+    hotspotHasLooped = NO;
+    
     if (kshowNSLogBOOL) NSLog(@"closeMovie");
     CGAffineTransform t = _uib_backBtn.transform;
     
@@ -1665,12 +1670,14 @@ enum {
 	int y = movieLength;
 	if (kshowNSLogBOOL) NSLog(@"seconds %i",y);
 	
-	if (y == removeTextAfterThisManySeconds) {
-		[self removeCards];
-	}
+//	if (y == removeTextAfterThisManySeconds) {
+//		[self removeCards];
+//	}
 	
 	// check if the seconds match the reveal delay
-	[self indexOfCardToReveal:y];
+    if (    hotspotHasLooped != YES  ) {
+        [self indexOfCardToReveal:y];
+    }
 }
 
 
