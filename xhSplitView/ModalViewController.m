@@ -51,7 +51,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSAttributedString *t = [[NSAttributedString alloc] initWithString: @"AdvanTE3C® Solutions" ];
+    //NSAttributedString *t = [[NSAttributedString alloc] initWithString: @"AdvanTE3C® Solutions" ];
     //NSAttributedString *g = [t addRegisteredTrademarkTo: @"AdvanTE3C: Solutions" withColor:[UIColor whiteColor] fnt:[UIFont fontWithName:@"Helvetica" size:17]];
     
   //   _uil_headerText.attributedText = g;

@@ -28,7 +28,7 @@ enum {
     TitleLabelsOffscreen,
 };
 
-@interface embHotSpotViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, SustainViewControllerDelegate>
+@interface embHotSpotViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, SustainViewControllerDelegate, UIGestureRecognizerDelegate>
 {
     // fact cards
     CGFloat         removeTextAfterThisManySeconds;
@@ -733,8 +733,9 @@ enum {
     NSString *catType = [filmDict objectForKey:@"catType"];
 
 
-    NSDictionary *catDict = [_arr_subHotspots objectAtIndex:selctedRow];
-    NSString *categoryType = [catDict objectForKey:@"catType"];
+    //NSDictionary *catDict = [_arr_subHotspots objectAtIndex:selctedRow];
+    //NSString *categoryType = [catDict objectForKey:@"catType"];
+    
     if ([catType isEqualToString:@"filmWithCards"]) {
        // if (kshowNSLogBOOL)
         NSLog(@"closeMovie filmWithCards");

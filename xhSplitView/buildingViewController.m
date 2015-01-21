@@ -1223,6 +1223,8 @@ enum {
         
         [self updateStillFrameUnderFilm:@"03A Building Cut.png"];
         
+        [self rePopMenu];
+
         [topTitle removeFromSuperview];
         
         if (t.tx < 0) {
@@ -1317,10 +1319,6 @@ enum {
 -(void)resetSubHotspot
 {
 	if (kshowNSLogBOOL) NSLog(@"resetSubHotspot");
-    
-    if (!_avPlayer.rate == 0 && !_avPlayer.error) {
-        [self rePopMenu];
-    }
 	
 	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
 	[_uis_zoomingImg.scrollView setZoomScale:1.0];

@@ -76,7 +76,6 @@
 		20A95A5E19CBC1AA00132F7E /* icon marker left.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A5C19CBC1AA00132F7E /* icon marker left.png */; };
 		20A95A5F19CBC1AA00132F7E /* icon marker left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A5D19CBC1AA00132F7E /* icon marker left@2x.png */; };
 		20A95A7619CC313F00132F7E /* 01_HERO_CITY.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7419CC313F00132F7E /* 01_HERO_CITY.png */; };
-		20A95A7719CC313F00132F7E /* 02_HERO_BLDG.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7519CC313F00132F7E /* 02_HERO_BLDG.png */; };
 		20A95A7C19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */; };
 		20A95A7D19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */; };
 		20BA88BB1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */; };
@@ -141,18 +140,6 @@
 		20BF48FD1A3B501D009645DC /* logo_taylor.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF48CE1A3B501D009645DC /* logo_taylor.png */; };
 		20BF48FE1A3B501D009645DC /* logo_taylor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF48CF1A3B501D009645DC /* logo_taylor@2x.png */; };
 		20BF48FF1A3B501D009645DC /* logo_taylor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF48CF1A3B501D009645DC /* logo_taylor@2x.png */; };
-		20BF49061A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49001A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov */; };
-		20BF49071A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49001A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov */; };
-		20BF49081A3B84ED009645DC /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49011A3B84ED009645DC /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov */; };
-		20BF49091A3B84ED009645DC /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49011A3B84ED009645DC /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov */; };
-		20BF490A1A3B84ED009645DC /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49021A3B84ED009645DC /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov */; };
-		20BF490B1A3B84ED009645DC /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49021A3B84ED009645DC /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov */; };
-		20BF490C1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49031A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov */; };
-		20BF490D1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49031A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov */; };
-		20BF490E1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49041A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov */; };
-		20BF490F1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49041A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov */; };
-		20BF49101A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49051A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov */; };
-		20BF49111A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49051A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov */; };
 		20BF49141A3F1C82009645DC /* logo_interlogix.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49121A3F1C82009645DC /* logo_interlogix.png */; };
 		20BF49151A3F1C82009645DC /* logo_interlogix.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49121A3F1C82009645DC /* logo_interlogix.png */; };
 		20BF49161A3F1C82009645DC /* logo_interlogix@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BF49131A3F1C82009645DC /* logo_interlogix@2x.png */; };
@@ -838,12 +825,6 @@
 		20BF48CD1A3B501D009645DC /* logo_sustain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_sustain@2x.png"; sourceTree = "<group>"; };
 		20BF48CE1A3B501D009645DC /* logo_taylor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_taylor.png; sourceTree = "<group>"; };
 		20BF48CF1A3B501D009645DC /* logo_taylor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_taylor@2x.png"; sourceTree = "<group>"; };
-		20BF49001A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov; path = films/PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov; sourceTree = "<group>"; };
-		20BF49011A3B84ED009645DC /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov; path = films/PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov; sourceTree = "<group>"; };
-		20BF49021A3B84ED009645DC /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_03_ANIM_REGEN_DRIVE.mov; path = films/PH1_OTIS_03_ANIM_REGEN_DRIVE.mov; sourceTree = "<group>"; };
-		20BF49031A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_04_ANIM_ERT.mov; path = films/PH1_OTIS_04_ANIM_ERT.mov; sourceTree = "<group>"; };
-		20BF49041A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov; path = films/PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov; sourceTree = "<group>"; };
-		20BF49051A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov; path = films/PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov; sourceTree = "<group>"; };
 		20BF49121A3F1C82009645DC /* logo_interlogix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_interlogix.png; sourceTree = "<group>"; };
 		20BF49131A3F1C82009645DC /* logo_interlogix@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_interlogix@2x.png"; sourceTree = "<group>"; };
 		20BF49181A3F23BE009645DC /* embTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = embTitle.h; sourceTree = "<group>"; };
@@ -1288,12 +1269,6 @@
 				206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */,
 				206063DF19D521E50045163F /* 02_TRANS_BLDG_UNBUILD.mov */,
 				206063E519D5D9F50045163F /* 03_TRANS_ELEV.mov */,
-				20BF49001A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov */,
-				20BF49011A3B84ED009645DC /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov */,
-				20BF49021A3B84ED009645DC /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov */,
-				20BF49031A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov */,
-				20BF49041A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov */,
-				20BF49051A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov */,
 			);
 			name = films;
 			sourceTree = "<group>";
@@ -2038,7 +2013,6 @@
 				8834E2741A57221B00204D81 /* menu_advantec.png in Resources */,
 				8895FF111A5B19F50076A3EC /* logo-interlogix.png in Resources */,
 				888BB98D1A5F801A00157977 /* IBT-logo-interlogix@2x.png in Resources */,
-				20BF490F1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				888BB7A51A5E136C00157977 /* ibt_carrier_connections.png in Resources */,
 				8800E3181A6EFB30000E3D97 /* IBT-logo-utc@2x.png in Resources */,
 				20E546E51A2DFEF40073B2CF /* bg_06@2x.jpg in Resources */,
@@ -2056,7 +2030,6 @@
 				888BB79B1A5E136C00157977 /* ibt_arrow_one@2x.png in Resources */,
 				888BB9CA1A5F9E8D00157977 /* advantec.png in Resources */,
 				888BB8041A5EE75700157977 /* IBT_AUTOLOG_01_LR_CONN_CARRIER.mov in Resources */,
-				20BF49111A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
 				888BB7DD1A5EE6D900157977 /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				888BB9321A5EE8D800157977 /* PH2_OTIS_03_LR_NCE_LED_LIGHT_BALUST.mov in Resources */,
 				20192C911A48729000969C85 /* icon marker center@2x.png in Resources */,
@@ -2153,7 +2126,6 @@
 				20BF48EB1A3B501D009645DC /* logo_marioff@2x.png in Resources */,
 				8834E24E1A56E32D00204D81 /* ibt_edwards.png in Resources */,
 				888BB8DE1A5EE89D00157977 /* PH2_INTERLOGIX_00_STILL_HS.png in Resources */,
-				20BF49091A3B84ED009645DC /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov in Resources */,
 				888BB7AB1A5E136C00157977 /* ibt_edwards_connections@2x.png in Resources */,
 				8895FF051A5B19F50076A3EC /* logo-carrier.png in Resources */,
 				8895FF371A5B233F0076A3EC /* connection lines.png in Resources */,
@@ -2166,7 +2138,6 @@
 				20E547071A2DFEF40073B2CF /* bg_04.jpg in Resources */,
 				888BBA121A67042B00157977 /* green-logo-singapore.png in Resources */,
 				888BB8CF1A5EE89200157977 /* PH2_EDWARDS_02_SMG_LS_CONTROL_PANEL.mov in Resources */,
-				20BF490D1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
 				888BBA0A1A67042B00157977 /* green-logo-india.png in Resources */,
 				888BB9AD1A5F801A00157977 /* IBT-Transp-logo-otis@2x.png in Resources */,
 				20BF48DF1A3B501D009645DC /* logo_edwards@2x.png in Resources */,
@@ -2177,7 +2148,6 @@
 				8834E2501A56E32D00204D81 /* ibt_edwards@2x.png in Resources */,
 				888BB9871A5F801A00157977 /* IBT-logo-edwards.png in Resources */,
 				888BB7E61A5EE6E500157977 /* INT_00_ANIM_LOGO_TRANS_HERO_CITY.mov in Resources */,
-				20BF49071A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov in Resources */,
 				8834E2581A56E32D00204D81 /* ibt_lenel@2x.png in Resources */,
 				888BB97F1A5F801A00157977 /* IBT-logo-automatedLogic.png in Resources */,
 				20E547091A2DFEF40073B2CF /* InfoPlist.strings in Resources */,
@@ -2221,7 +2191,6 @@
 				888BB9A91A5F801A00157977 /* IBT-Transp-logo-lenel@2x.png in Resources */,
 				888BB7D11A5EE6D900157977 /* PH1_OTIS_00_ANIM_FLYIN_TRANS_UNBUILD_TO_ELEV_HOTSPOT.mov in Resources */,
 				888BB7B71A5E136C00157977 /* ibt_otis_connections@2x.png in Resources */,
-				20BF490B1A3B84ED009645DC /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov in Resources */,
 				8834E2231A531E8300204D81 /* grfx_ibt_close.png in Resources */,
 				20E547171A2DFEF40073B2CF /* 02_HERO_BLDG.png in Resources */,
 				8895FEFD1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */,
@@ -2437,7 +2406,6 @@
 				888BB8691A5EE86000157977 /* HOTSPOT_CALLOUT.png in Resources */,
 				20BA88C61A37941900705945 /* text_bg.png in Resources */,
 				888BB8371A5EE78F00157977 /* IBT_LENEL_01_LR_CONN_OTIS_CDMS.mov in Resources */,
-				20BF49061A3B84ED009645DC /* PH1_OTIS_01_ANIM_COATED_STEEL_BELTS.mov in Resources */,
 				20A39EB119C32F8800C71430 /* title4@2x.png in Resources */,
 				888BBA091A67042B00157977 /* green-logo-india.png in Resources */,
 				888BB92D1A5EE8D800157977 /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov in Resources */,
@@ -2464,11 +2432,9 @@
 				8834E26B1A57074200204D81 /* logo_sustainibt@2x.png in Resources */,
 				8895FF101A5B19F50076A3EC /* logo-interlogix.png in Resources */,
 				888BB8091A5EE77000157977 /* IBT_CARRIER_01_LR_CONN_AUTOLOG.mov in Resources */,
-				20BF49101A3B84ED009645DC /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
 				20BF48F61A3B501D009645DC /* logo_otis@2x.png in Resources */,
 				8895FF2A1A5B19F50076A3EC /* logo-otis@2x.png in Resources */,
 				888BB9481A5EE8ED00157977 /* PH2_UTC_SUSTAIN_01_SMG_GENERAL.png in Resources */,
-				20BF490A1A3B84ED009645DC /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov in Resources */,
 				824F14DA19CB359900628F01 /* panelTableViewCell.xib in Resources */,
 				888BB9881A5F801A00157977 /* IBT-logo-edwards@2x.png in Resources */,
 				20BF48E61A3B501D009645DC /* logo_lenel@2x.png in Resources */,
@@ -2545,7 +2511,6 @@
 				20A39EC319C33C9100C71430 /* grfx_helpBtn.png in Resources */,
 				8834E2471A56E32D00204D81 /* ibt_automatedlogic@2x.png in Resources */,
 				888BB7DA1A5EE6D900157977 /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
-				20A95A7719CC313F00132F7E /* 02_HERO_BLDG.png in Resources */,
 				20BF48D61A3B501D009645DC /* logo_automated@2x.png in Resources */,
 				824F14E219CB390800628F01 /* grfx_cellArrow@2x.png in Resources */,
 				888BB79E1A5E136C00157977 /* ibt_arrow_two@2x.png in Resources */,
@@ -2607,7 +2572,6 @@
 				888BB8FA1A5EE8A900157977 /* PH2_KIDDE_03_SMG_WHDR_WET_CHEMICAL_SYS.mov in Resources */,
 				888BBA231A68540100157977 /* BG_H264_1440_12.mov in Resources */,
 				888BB8B31A5EE88500157977 /* PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.png in Resources */,
-				20BF49081A3B84ED009645DC /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov in Resources */,
 				888BB7DE1A5EE6D900157977 /* PH1_OTIS_06_ANIM_REMOTE_DIAGNOSTICS.mov in Resources */,
 				20A39EBD19C3351C00C71430 /* bg_04@2x.jpg in Resources */,
 				888BB9941A5F801A00157977 /* IBT-logo-otis@2x.png in Resources */,
@@ -2661,13 +2625,11 @@
 				20A95A4E19CBB82800132F7E /* icon home.png in Resources */,
 				8834E2491A56E32D00204D81 /* ibt_carrier.png in Resources */,
 				888BB7CE1A5EE6D900157977 /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
-				20BF490C1A3B84ED009645DC /* PH1_OTIS_04_ANIM_ERT.mov in Resources */,
 				888BBA1F1A68540100157977 /* BG_H264_1440_6.mov in Resources */,
 				888BB9FF1A67042B00157977 /* green-logo-argentina@2x.png in Resources */,
 				20BF48EA1A3B501D009645DC /* logo_marioff@2x.png in Resources */,
 				888BB9861A5F801A00157977 /* IBT-logo-edwards.png in Resources */,
 				888BB8911A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov in Resources */,
-				20BF490E1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				8895FF121A5B19F50076A3EC /* logo-interlogix@2x.png in Resources */,
 				20BF48DC1A3B501D009645DC /* logo_edwards.png in Resources */,
 				888BBA261A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png in Resources */,

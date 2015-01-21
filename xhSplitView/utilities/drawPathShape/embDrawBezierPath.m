@@ -182,8 +182,8 @@
 }
 
 -(void)checkFinished {
-	NSLog(@"%i",pathCompleted);
-	NSLog(@"%i",arr_shapeLayers.count);
+	NSLog(@"%lu",(unsigned long)pathCompleted);
+	NSLog(@"%lu",(unsigned long)arr_shapeLayers.count);
 	
 	if (pathCompleted == arr_shapeLayers.count) {
 		[self didFinishAllAnimations];

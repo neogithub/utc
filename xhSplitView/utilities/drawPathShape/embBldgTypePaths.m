@@ -21,8 +21,8 @@
 											green:199.0f/255.0f
 											 blue:113.0f/255.0f
 											alpha:1.0];
-        UIColor *pathFill = [UIColor colorWithWhite:1.0
-                                              alpha:1.0];
+       // UIColor *pathFill = [UIColor colorWithWhite:1.0
+       //                                       alpha:1.0];
         
 		CGFloat pathWidth = 7.0;
 		CGFloat pathSpeed = 3.5;
