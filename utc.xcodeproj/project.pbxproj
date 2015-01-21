@@ -271,6 +271,14 @@
 		8800E3161A6EFB30000E3D97 /* IBT-logo-utc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3131A6EFB30000E3D97 /* IBT-logo-utc.png */; };
 		8800E3171A6EFB30000E3D97 /* IBT-logo-utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3141A6EFB30000E3D97 /* IBT-logo-utc@2x.png */; };
 		8800E3181A6EFB30000E3D97 /* IBT-logo-utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3141A6EFB30000E3D97 /* IBT-logo-utc@2x.png */; };
+		8800E31D1A702B4F000E3D97 /* img-monterrey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3191A702B4F000E3D97 /* img-monterrey.jpg */; };
+		8800E31E1A702B4F000E3D97 /* img-monterrey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3191A702B4F000E3D97 /* img-monterrey.jpg */; };
+		8800E31F1A702B4F000E3D97 /* img-monterrey@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31A1A702B4F000E3D97 /* img-monterrey@2x.jpg */; };
+		8800E3201A702B4F000E3D97 /* img-monterrey@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31A1A702B4F000E3D97 /* img-monterrey@2x.jpg */; };
+		8800E3211A702B4F000E3D97 /* img-teda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31B1A702B4F000E3D97 /* img-teda.jpg */; };
+		8800E3221A702B4F000E3D97 /* img-teda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31B1A702B4F000E3D97 /* img-teda.jpg */; };
+		8800E3231A702B4F000E3D97 /* img-teda@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31C1A702B4F000E3D97 /* img-teda@2x.jpg */; };
+		8800E3241A702B4F000E3D97 /* img-teda@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31C1A702B4F000E3D97 /* img-teda@2x.jpg */; };
 		8834E2011A4F0FCE00204D81 /* IBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */; };
 		8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2001A4F0FCE00204D81 /* IBTViewController.xib */; };
 		8834E21A1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */; };
@@ -892,6 +900,10 @@
 		82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ebZoomingScrollView.m; sourceTree = "<group>"; };
 		8800E3131A6EFB30000E3D97 /* IBT-logo-utc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IBT-logo-utc.png"; path = "UI/grfx/ibt/IBT-logo-utc.png"; sourceTree = "<group>"; };
 		8800E3141A6EFB30000E3D97 /* IBT-logo-utc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IBT-logo-utc@2x.png"; path = "UI/grfx/ibt/IBT-logo-utc@2x.png"; sourceTree = "<group>"; };
+		8800E3191A702B4F000E3D97 /* img-monterrey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "img-monterrey.jpg"; path = "UI/grfx/sustainability/img-monterrey.jpg"; sourceTree = "<group>"; };
+		8800E31A1A702B4F000E3D97 /* img-monterrey@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "img-monterrey@2x.jpg"; path = "UI/grfx/sustainability/img-monterrey@2x.jpg"; sourceTree = "<group>"; };
+		8800E31B1A702B4F000E3D97 /* img-teda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "img-teda.jpg"; path = "UI/grfx/sustainability/img-teda.jpg"; sourceTree = "<group>"; };
+		8800E31C1A702B4F000E3D97 /* img-teda@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "img-teda@2x.jpg"; path = "UI/grfx/sustainability/img-teda@2x.jpg"; sourceTree = "<group>"; };
 		8834E1FE1A4F0FCE00204D81 /* IBTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTViewController.h; sourceTree = "<group>"; };
 		8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTViewController.m; sourceTree = "<group>"; };
 		8834E2001A4F0FCE00204D81 /* IBTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBTViewController.xib; sourceTree = "<group>"; };
@@ -1644,6 +1656,10 @@
 		888BB7B81A5E356600157977 /* sustainability */ = {
 			isa = PBXGroup;
 			children = (
+				8800E3191A702B4F000E3D97 /* img-monterrey.jpg */,
+				8800E31A1A702B4F000E3D97 /* img-monterrey@2x.jpg */,
+				8800E31B1A702B4F000E3D97 /* img-teda.jpg */,
+				8800E31C1A702B4F000E3D97 /* img-teda@2x.jpg */,
 				8878D18E1A6D9267009BEE83 /* tmpImage.jpg */,
 				888BBA191A671A1A00157977 /* sustainability-logos-bg.jpg */,
 				888BB9EF1A67042A00157977 /* green-logo-argentina.png */,
@@ -2034,6 +2050,7 @@
 				888BB9321A5EE8D800157977 /* PH2_OTIS_03_LR_NCE_LED_LIGHT_BALUST.mov in Resources */,
 				20192C911A48729000969C85 /* icon marker center@2x.png in Resources */,
 				20E546EA1A2DFEF40073B2CF /* PopoverViewController.xib in Resources */,
+				8800E3221A702B4F000E3D97 /* img-teda.jpg in Resources */,
 				8834E27E1A57221B00204D81 /* menu_utc@2x.png in Resources */,
 				888BB9951A5F801A00157977 /* IBT-logo-otis@2x.png in Resources */,
 				20E546EB1A2DFEF40073B2CF /* icon marker left.png in Resources */,
@@ -2177,10 +2194,12 @@
 				888BB7751A5DA25F00157977 /* overlay2.png in Resources */,
 				888BB92E1A5EE8D800157977 /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov in Resources */,
 				20E547141A2DFEF40073B2CF /* icon marker left@2x.png in Resources */,
+				8800E3201A702B4F000E3D97 /* img-monterrey@2x.jpg in Resources */,
 				20BF48E31A3B501D009645DC /* logo_kidde@2x.png in Resources */,
 				888BBA0E1A67042B00157977 /* green-logo-kuwait.png in Resources */,
 				888BB97B1A5F801A00157977 /* IBT-connection-line-single.png in Resources */,
 				888BB8421A5EE79900157977 /* IBT_OTIS_01_LR_CDMS_CONN_INTERLOGIX.mov in Resources */,
+				8800E31E1A702B4F000E3D97 /* img-monterrey.jpg in Resources */,
 				888BB9501A5EE9EA00157977 /* ModalViewController.xib in Resources */,
 				8800E3161A6EFB30000E3D97 /* IBT-logo-utc.png in Resources */,
 				8834E2271A531E8300204D81 /* grfx_ibt_rule.png in Resources */,
@@ -2274,6 +2293,7 @@
 				888BB9591A5F186100157977 /* PH2_CARRIER_D_03_ANIM_AIRSTREAM_FAN_COILS_42CE.mov in Resources */,
 				20E5474A1A2E14240073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO.mov in Resources */,
 				20E5472D1A2DFEF40073B2CF /* Main.storyboard in Resources */,
+				8800E3241A702B4F000E3D97 /* img-teda@2x.jpg in Resources */,
 				20E5472E1A2DFEF40073B2CF /* 01_TRANS_CITY_TO_BLDG.mov in Resources */,
 				888BBA241A68540100157977 /* BG_H264_1440_12.mov in Resources */,
 				888BB9141A5EE8CE00157977 /* PH2_OTIS_00_STILL_CDMS_HS.png in Resources */,
@@ -2393,6 +2413,7 @@
 				888BB9A01A5F801A00157977 /* IBT-Transp-logo-edwards@2x.png in Resources */,
 				888BB94F1A5EE9EA00157977 /* ModalViewController.xib in Resources */,
 				888BB8701A5EE86A00157977 /* PH2_ADVANTE3C_01_SMG_GENERAL.png in Resources */,
+				8800E31D1A702B4F000E3D97 /* img-monterrey.jpg in Resources */,
 				888BB8431A5EE79900157977 /* IBT_OTIS_01_LR_CDMS_CONN_LENEL.mov in Resources */,
 				209AEFB419D4947B0074A3EA /* 03A Building Cut.png in Resources */,
 				20BF48E41A3B501D009645DC /* logo_lenel.png in Resources */,
@@ -2452,6 +2473,7 @@
 				888BB7A21A5E136C00157977 /* ibt_automated_connections@2x.png in Resources */,
 				8895FF281A5B19F50076A3EC /* logo-otis.png in Resources */,
 				209AEFA419D44D5D0074A3EA /* 02_TRANS_BLDG_UNBUILD.png in Resources */,
+				8800E3211A702B4F000E3D97 /* img-teda.jpg in Resources */,
 				888BB9981A5F801A00157977 /* IBT-Transp-logo-automatedLogic@2x.png in Resources */,
 				888BB7BD1A5E359800157977 /* arrow@2x.png in Resources */,
 				20A95A7619CC313F00132F7E /* 01_HERO_CITY.png in Resources */,
@@ -2462,6 +2484,7 @@
 				888BB86B1A5EE86000157977 /* HOTSPOT_INSIDE_UI.png in Resources */,
 				209AEFA919D481180074A3EA /* 00_LOGO_TRANS_HERO_CITY.png in Resources */,
 				888BBA071A67042B00157977 /* green-logo-france@2x.png in Resources */,
+				8800E3231A702B4F000E3D97 /* img-teda@2x.jpg in Resources */,
 				20BF48F01A3B501D009645DC /* logo_onity.png in Resources */,
 				20A95A5A19CBB89E00132F7E /* swipe-to-reveal@2x.png in Resources */,
 				82A66ADD19B792C700C8E12A /* xhSplitViewController.xib in Resources */,
@@ -2617,6 +2640,7 @@
 				8834E2671A57074200204D81 /* logo_advantecibt@2x.png in Resources */,
 				888BB9551A5F171000157977 /* arrow_white@2x.png in Resources */,
 				209AEFA719D47C410074A3EA /* 00_LOGO_TRANS_HERO_CITY.mov in Resources */,
+				8800E31F1A702B4F000E3D97 /* img-monterrey@2x.jpg in Resources */,
 				20BF48F21A3B501D009645DC /* logo_onity@2x.png in Resources */,
 				20BA88C81A37941900705945 /* card_mask.png in Resources */,
 				888BB7B01A5E136C00157977 /* ibt_lenel_connections.png in Resources */,
