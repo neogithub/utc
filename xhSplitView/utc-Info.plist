@@ -9,7 +9,11 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
+<<<<<<< Updated upstream
 	<string>com.neoscape.$(PRODUCT_NAME:rfc1034identifier)</string>
+=======
+	<string>com.neoenterprise.${PRODUCT_NAME:rfc1034identifier}</string>
+>>>>>>> Stashed changes
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
