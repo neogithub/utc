@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBTViewController">
             <connections>
-                <outlet property="uib_learn" destination="ZSv-hz-gsb" id="EMS-jO-qcA"/>
                 <outlet property="uib_learnBtm" destination="l0G-WW-SAq" id="OGR-p8-iy6"/>
                 <outlet property="uib_learnMid" destination="s1h-wg-vsG" id="r8j-xu-w2x"/>
                 <outlet property="uib_learnTop" destination="4nJ-rT-Oxp" id="5QJ-ac-cMU"/>
@@ -30,6 +29,7 @@
                 <outletCollection property="uibCollection" destination="xr0-6M-2wR" id="7Mu-ue-LcO"/>
                 <outletCollection property="uibCollection" destination="YsV-fN-wWF" id="et9-hj-NWk"/>
                 <outletCollection property="uibCollection" destination="4Ee-uU-FBH" id="iZE-cw-16b"/>
+                <outletCollection property="uibCollection" destination="jkO-gj-Eou" id="j2A-Sn-lZ0"/>
             </connections>
         </placeholder>
         <view contentMode="scaleToFill" id="ZvW-0W-FHs">
@@ -127,9 +127,9 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xt0-Q6-hwC">
-                                            <rect key="frame" x="17" y="41" width="89" height="56"/>
+                                            <rect key="frame" x="17" y="26" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="IBT-logo-automatedLogic.png">
+                                            <state key="normal" backgroundImage="IBT-logo-utc.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -137,9 +137,9 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K4S-AU-Pds">
-                                            <rect key="frame" x="17" y="115" width="89" height="56"/>
+                                            <rect key="frame" x="17" y="95" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="IBT-logo-carrier.png">
+                                            <state key="normal" backgroundImage="IBT-logo-automatedLogic.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -147,9 +147,9 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xr0-6M-2wR">
-                                            <rect key="frame" x="17" y="189" width="89" height="56"/>
+                                            <rect key="frame" x="17" y="164" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="IBT-logo-edwards.png">
+                                            <state key="normal" backgroundImage="IBT-logo-carrier.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -157,9 +157,9 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YsV-fN-wWF">
-                                            <rect key="frame" x="17" y="263" width="89" height="56"/>
+                                            <rect key="frame" x="17" y="233" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="IBT-logo-interlogix.png">
+                                            <state key="normal" backgroundImage="IBT-logo-edwards.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -167,19 +167,29 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Ee-uU-FBH">
-                                            <rect key="frame" x="17" y="337" width="89" height="56"/>
+                                            <rect key="frame" x="17" y="302" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="IBT-logo-lenel.png">
+                                            <state key="normal" backgroundImage="IBT-logo-interlogix.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
                                                 <action selector="loadIBTDetail:" destination="-1" eventType="touchUpInside" id="sla-2p-8kF"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QfJ-tv-1uK">
-                                            <rect key="frame" x="17" y="411" width="89" height="56"/>
+                                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jkO-gj-Eou">
+                                            <rect key="frame" x="18" y="440" width="89" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="IBT-logo-otis.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="loadIBTDetail:" destination="-1" eventType="touchUpInside" id="yJo-td-3zB"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QfJ-tv-1uK">
+                                            <rect key="frame" x="17" y="371" width="89" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="IBT-logo-lenel.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -197,14 +207,14 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="SeY-UO-KQh">
-                                    <rect key="frame" x="144" y="38" width="524" height="450"/>
+                                    <rect key="frame" x="144" y="24" width="524" height="450"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment content="United Technologies is the world's largest provider of building technologies">
                                             <attributes>
                                                 <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                <font key="NSFont" size="17" name="Helvetica-Bold"/>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
                                                 <real key="NSKern" value="0.0"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                     <tabStops/>
@@ -256,19 +266,6 @@ Cgo
                                     </attributedString>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZSv-hz-gsb">
-                                    <rect key="frame" x="373" y="502" width="295" height="28"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                    <state key="normal" title="Learn About Intelligent Building Technologies">
-                                        <color key="titleColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="loadIBT:" destination="-1" eventType="touchUpInside" id="daw-UV-lnP"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
@@ -323,6 +320,7 @@ Cgo
         <image name="IBT-logo-interlogix.png" width="89" height="56"/>
         <image name="IBT-logo-lenel.png" width="89" height="56"/>
         <image name="IBT-logo-otis.png" width="89" height="56"/>
+        <image name="IBT-logo-utc.png" width="89" height="56"/>
         <image name="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" width="1024" height="768"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>
         <image name="grfx_ibt_header.png" width="1" height="45"/>

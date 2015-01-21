@@ -63,49 +63,6 @@
     return 1;
 }
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//	NSString *myHeader = @"Fire Safety Products";
-//	return myHeader;
-//}
-
-//- (CGSize)tableView:(UITableView *)tableView sizeForHeaderLabelInSection:(NSInteger)section
-//{
-//	NSString *text = [self tableView:tableView titleForHeaderInSection:section];
-//	
-//	CGSize constraint = CGSizeMake(self.view.frame.size.width - 10 - 10, 60);
-//	return [text sizeWithFont:[UIFont fontWithName:@"Helvetica-Bold" size:12] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
-//}
-
-//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//	
-//	
-//	return [self tableView:tableView sizeForHeaderLabelInSection:section].height + 10 + 10;
-//	
-//	
-////	NSString *myHeader = @"Fire Safety Products";
-////	CGSize maxSize = CGSizeMake(tableView.frame.size.width, 999999.0);
-////	int height = 0;
-////	
-////	UIFont *f = [UIFont fontWithName:@"Helvetica-Bold" size:13];
-////
-////	
-////	NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-////										  f, NSFontAttributeName,
-////										  nil];
-////
-////	
-////	CGRect frame = [myHeader boundingRectWithSize:maxSize
-////										  options:NSStringDrawingUsesLineFragmentOrigin
-////									   attributes:attributesDictionary
-////										  context:nil];
-////	height = frame.size.height;
-////	
-////	
-////	return height+5;
-//}
-
 -(UIView *)headerView
 {
 	// Create label with section title
@@ -198,6 +155,20 @@
 		cell.textLabel.numberOfLines = 0;
 		[cell.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:12]];
     }
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"com.neoscape.SelectedRows"] != nil) {
+        
+        NSMutableArray *arr_selctdRows = [[NSUserDefaults standardUserDefaults] objectForKey:@"com.neoscape.SelectedRows"];
+        
+        for (int i = 0; i < arr_selctdRows.count; i++) {
+            NSInteger highScore = [arr_selctdRows[i] integerValue];
+            if (indexPath.row == highScore) {
+                cell.textLabel.textColor = [UIColor lightGrayColor];
+            }
+        }
+    }
+    
+    
 	
 	NSDictionary *catDict = [_selectedCo.cocategories objectAtIndex:[indexPath row]];
 	
@@ -211,6 +182,8 @@
 	
     // Configure the cell...
     cell.textLabel.text=text;
+    
+
     return cell;
 }
 

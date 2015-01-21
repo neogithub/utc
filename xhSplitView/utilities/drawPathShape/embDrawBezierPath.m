@@ -425,7 +425,7 @@
 -(void)mainMenuTappedWhitCanceled:(UIGestureRecognizer*)recognizer
 {
 	CGPoint touchPoint = [recognizer locationInView: self];
-	NSLog(@"tapped");
+	//NSLog(@"tapped");
 
 	
 	[polyPaths enumerateObjectsUsingBlock:^(UIBezierPath *obj, NSUInteger idx, BOOL *stop) {

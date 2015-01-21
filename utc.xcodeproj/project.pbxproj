@@ -280,6 +280,10 @@
 		82A66ADC19B792C700C8E12A /* xhSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66ADA19B792C700C8E12A /* xhSplitViewController.m */; };
 		82A66ADD19B792C700C8E12A /* xhSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */; };
 		82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */; };
+		8800E3151A6EFB30000E3D97 /* IBT-logo-utc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3131A6EFB30000E3D97 /* IBT-logo-utc.png */; };
+		8800E3161A6EFB30000E3D97 /* IBT-logo-utc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3131A6EFB30000E3D97 /* IBT-logo-utc.png */; };
+		8800E3171A6EFB30000E3D97 /* IBT-logo-utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3141A6EFB30000E3D97 /* IBT-logo-utc@2x.png */; };
+		8800E3181A6EFB30000E3D97 /* IBT-logo-utc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3141A6EFB30000E3D97 /* IBT-logo-utc@2x.png */; };
 		8834E2011A4F0FCE00204D81 /* IBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */; };
 		8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2001A4F0FCE00204D81 /* IBTViewController.xib */; };
 		8834E21A1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */; };
@@ -905,6 +909,8 @@
 		82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = xhSplitViewController.xib; sourceTree = "<group>"; };
 		82A66ADF19B793BD00C8E12A /* ebZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ebZoomingScrollView.h; sourceTree = "<group>"; };
 		82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ebZoomingScrollView.m; sourceTree = "<group>"; };
+		8800E3131A6EFB30000E3D97 /* IBT-logo-utc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IBT-logo-utc.png"; path = "UI/grfx/ibt/IBT-logo-utc.png"; sourceTree = "<group>"; };
+		8800E3141A6EFB30000E3D97 /* IBT-logo-utc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IBT-logo-utc@2x.png"; path = "UI/grfx/ibt/IBT-logo-utc@2x.png"; sourceTree = "<group>"; };
 		8834E1FE1A4F0FCE00204D81 /* IBTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTViewController.h; sourceTree = "<group>"; };
 		8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTViewController.m; sourceTree = "<group>"; };
 		8834E2001A4F0FCE00204D81 /* IBTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBTViewController.xib; sourceTree = "<group>"; };
@@ -1604,6 +1610,8 @@
 		888BB7871A5E129E00157977 /* ibt */ = {
 			isa = PBXGroup;
 			children = (
+				8800E3131A6EFB30000E3D97 /* IBT-logo-utc.png */,
+				8800E3141A6EFB30000E3D97 /* IBT-logo-utc@2x.png */,
 				888BB9E61A66B71900157977 /* ibt-learnMore.png */,
 				888BB9E71A66B71900157977 /* ibt-learnMore@2x.png */,
 				888BB95A1A5F801A00157977 /* IBT-connection-line-double.png */,
@@ -2032,6 +2040,7 @@
 				888BB98D1A5F801A00157977 /* IBT-logo-interlogix@2x.png in Resources */,
 				20BF490F1A3B84ED009645DC /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				888BB7A51A5E136C00157977 /* ibt_carrier_connections.png in Resources */,
+				8800E3181A6EFB30000E3D97 /* IBT-logo-utc@2x.png in Resources */,
 				20E546E51A2DFEF40073B2CF /* bg_06@2x.jpg in Resources */,
 				888BB8F11A5EE8A900157977 /* PH2_KIDDE_00_STILL_HS.png in Resources */,
 				20BF48D11A3B501D009645DC /* logo_advantec.png in Resources */,
@@ -2203,6 +2212,7 @@
 				888BB97B1A5F801A00157977 /* IBT-connection-line-single.png in Resources */,
 				888BB8421A5EE79900157977 /* IBT_OTIS_01_LR_CDMS_CONN_INTERLOGIX.mov in Resources */,
 				888BB9501A5EE9EA00157977 /* ModalViewController.xib in Resources */,
+				8800E3161A6EFB30000E3D97 /* IBT-logo-utc.png in Resources */,
 				8834E2271A531E8300204D81 /* grfx_ibt_rule.png in Resources */,
 				888BB8B21A5EE88500157977 /* PH2_CARRIER_A_00_ANIM_TRANS.mov in Resources */,
 				20E547151A2DFEF40073B2CF /* grfx_helpBtn.png in Resources */,
@@ -2444,6 +2454,7 @@
 				209AEFB519D4947B0074A3EA /* 03A Building Cut@2x.png in Resources */,
 				888BB8FE1A5EE8A900157977 /* PH2_KIDDE_04_ANIM_BADGER_FIRE_EXTING.mov in Resources */,
 				888BB7D81A5EE6D900157977 /* PH1_OTIS_03_ANIM_REGEN_DRIVE.mov in Resources */,
+				8800E3151A6EFB30000E3D97 /* IBT-logo-utc.png in Resources */,
 				824F14DE19CB360300628F01 /* grfx_cellBG@2x.jpg in Resources */,
 				20BF48FE1A3B501D009645DC /* logo_taylor@2x.png in Resources */,
 				888BB99E1A5F801A00157977 /* IBT-Transp-logo-edwards.png in Resources */,
@@ -2500,6 +2511,7 @@
 				82A66AA619B7926B00C8E12A /* InfoPlist.strings in Resources */,
 				8834E24F1A56E32D00204D81 /* ibt_edwards@2x.png in Resources */,
 				8895FF161A5B19F50076A3EC /* logo-kidde@2x.png in Resources */,
+				8800E3171A6EFB30000E3D97 /* IBT-logo-utc@2x.png in Resources */,
 				209AEFAE19D48C650074A3EA /* close bttn.png in Resources */,
 				8834E2531A56E32D00204D81 /* ibt_interlogix@2x.png in Resources */,
 				200B9D0E19D25E7B00C7E7AC /* menu header@2x.png in Resources */,
@@ -3043,7 +3055,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
+				PROVISIONING_PROFILE = "5DA75D41-A3E9-4CA0-84FE-F76E92D6BFA0";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -3080,7 +3092,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=*]" = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
+				"PROVISIONING_PROFILE[sdk=*]" = "5DA75D41-A3E9-4CA0-84FE-F76E92D6BFA0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

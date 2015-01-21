@@ -37,6 +37,9 @@ static NSString * const sampleDesc6 = @"Tap the logos or Learn More to play a fi
 static CGFloat menuButtonHeights = 51;
 
 @interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate, SustainViewControllerDelegate, ModalViewControllerDelegate>
+{
+    UIView *tappableUIVIEW;
+}
 
 @property (nonatomic, strong) GHWalkThroughView* ghView ;
 
@@ -413,7 +416,30 @@ enum MenuVisibilityType : NSUInteger {
     }];
     
     _uib_splitCtrl.selected = !_uib_splitCtrl.selected;
+    
+    [self addGestureToBigContainer];
 }
+
+#pragma mark Action of Side Panel's buttons
+- (void)addGestureToBigContainer
+{
+    tappableUIVIEW = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)];
+    [tappableUIVIEW setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.0]];\
+    [tappableUIVIEW setUserInteractionEnabled:NO];
+    [self.view addSubview:tappableUIVIEW];
+    
+    [UIView animateWithDuration:0.33 animations:^{
+        
+        [tappableUIVIEW setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.6]];
+        [tappableUIVIEW setUserInteractionEnabled:YES];
+        tappableUIVIEW.frame = CGRectMake(_masterView.view.frame.size.width, 0, 1024-_masterView.view.frame.size.width, 768);
+
+        UITapGestureRecognizer *tapOnBigContainer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeMaster)];
+        [tappableUIVIEW addGestureRecognizer: tapOnBigContainer];
+    
+    }];
+}
+
 
 -(void)closeMaster
 {
@@ -421,7 +447,15 @@ enum MenuVisibilityType : NSUInteger {
     [UIView animateWithDuration:0.33 animations:^{
         _uib_splitCtrl.transform = CGAffineTransformIdentity;
         _uib_splitCtrl.hidden = NO;
+        
+        [tappableUIVIEW setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.0]];
+        [tappableUIVIEW setUserInteractionEnabled:NO];
+        tappableUIVIEW.frame = CGRectMake(0, 0, 1024, 768);
+
+    } completion:^ (BOOL finished) {
+         [tappableUIVIEW removeFromSuperview];
     }];
+    
     NSLog(@"====unhideDetailChrome");
     [[NSNotificationCenter defaultCenter] postNotificationName:@"unhideDetailChrome" object:nil];
     [_detailView.view setUserInteractionEnabled:YES];
@@ -440,6 +474,8 @@ enum MenuVisibilityType : NSUInteger {
 	switch (pass) {
 		case 0:
 			
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"com.neoscape.SelectedRows"];
+
 			[self setInitialImage];
 			[_splitVC addDetailController:_detailView animated:NO];
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"loadBuilding" object:nil];

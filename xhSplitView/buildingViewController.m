@@ -34,7 +34,7 @@ enum {
 	TitleLabelsOffscreen,
 };
 
-@interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate, UIGestureRecognizerDelegate>
+@interface buildingViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, PopoverViewControllerDelegate,UIPopoverControllerDelegate, UIGestureRecognizerDelegate>
 {
 	// fact cards
     CGFloat removeTextAfterThisManySeconds;
@@ -52,6 +52,10 @@ enum {
     int             factWidth;
     NSInteger       selctedRow;
     BOOL            hotspotHasLooped;
+    UIButton        *uib_logoTapped;
+    
+    NSMutableArray	*arr_SelectedRows;
+
 }
 
 - (IBAction)showPopover:(UIButton *)sender;
@@ -99,7 +103,9 @@ enum {
 	_arr_hotspotsArray		= [[NSMutableArray alloc] init];
 	_arr_BreadCrumbOfImages = [[NSMutableArray alloc] init];
 	arr_CompanyLogos		= [[NSMutableArray alloc] init];
-	
+    
+    arr_SelectedRows        = [[NSMutableArray alloc] init];
+    
 	// load animation that leads to the hero
 	// building tapped from previous screen
 	[self loadMovieNamed:_transitionClipName isTapToPauseEnabled:NO belowSubview:nil withOverlay:nil];
@@ -119,6 +125,8 @@ enum {
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBackButton) name:@"hideDetailChrome" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unhideBackButton) name:@"unhideDetailChrome" object:nil];
     
+    // debug
+   // [[NSUserDefaults standardUserDefaults] setPersistentDomain:[NSDictionary dictionary] forName:[[NSBundle mainBundle] bundleIdentifier]];
 
 }
 
@@ -358,6 +366,7 @@ enum {
 		_uis_zoomingImg.alpha = 1.0;
 		[_uis_zoomingImg.scrollView setZoomScale:1.0];
 		[self removeMovieLayers];
+        
 	}
 // end warning
 	
@@ -372,12 +381,25 @@ enum {
 	
 	[self initCompanyLogoBtns];
     
+    [self rePopMenu];
+    
 	[_uis_zoomingInfoImg removeFromSuperview];
 	
 	[self removeHotspots];
 	[_arr_hotspotsArray removeAllObjects];
 		
 	[_uib_backBtn setTag:1];
+}
+
+-(void)rePopMenu
+{
+    if ([selectedCo.coname isEqualToString:@"Otis"]) {
+        [self showPopover:uib_logoTapped];
+    } else if ([selectedCo.coname isEqualToString:@"Carrier"]) {
+        [self showPopover:uib_logoTapped];
+    } else if ([selectedCo.coname isEqualToString:@"Automated Logic"]) {
+        [self showPopover:uib_logoTapped];
+    }
 }
 
 #pragma mark - menu button
@@ -597,6 +619,8 @@ enum {
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     NSLog(@"logoButtonAction: %@",selectedCo.coname);
     
+    uib_logoTapped = sender;
+    
     if ( [selectedCo.coname isEqualToString:@"Intelligent Building Technologies"] )
     {
         [self loadIBT:nil];
@@ -623,7 +647,7 @@ enum {
         
     } else {
         
-        [self showPopover:sender];
+        [self showPopover:uib_logoTapped];
         
     }
 }
@@ -641,10 +665,11 @@ enum {
 	NSDictionary *co = allCompanies[sender.tag];
 	selectedCoDict = [[LibraryAPI sharedInstance] getSelectedCompanyNamed:[co objectForKey:@"fileName"]] [0];
     
-    NSLog(@"%lu",[sender tag]);
+    //NSLog(@"%lu",[sender tag]);
     
 	PopoverViewController *PopoverView =[[PopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil];
 	self.popOver =[[UIPopoverController alloc] initWithContentViewController:PopoverView];
+    self.popOver.delegate = self;
 	PopoverView.delegate = self;
 	
     if (([sender tag] == 4) || ([sender tag] == 6)) {
@@ -661,6 +686,10 @@ enum {
 -(void)selectedRow:(NSInteger)row withText:(NSString*)text
 {
     selctedRow = row;
+    
+    
+    [arr_SelectedRows addObject:[NSNumber numberWithInteger:row]];
+    [[NSUserDefaults standardUserDefaults] setObject:arr_SelectedRows forKey:@"com.neoscape.SelectedRows"];
     
     if (kshowNSLogBOOL) NSLog(@"text %@",text);
     
@@ -740,6 +769,23 @@ enum {
 	}
 }
 
+/* Called on the delegate when the popover controller will dismiss the popover. Return NO to prevent the dismissal of the view.
+ */
+- (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController
+{
+    NSLog(@"shoulddismiss");
+    return YES;
+}
+
+/* Called on the delegate when the user has taken action to dismiss the popover. This is not called when -dismissPopoverAnimated: is called directly.
+ */
+
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    NSLog(@"diddismiss");
+    [arr_SelectedRows removeAllObjects];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"com.neoscape.SelectedRows"];
+}
 
 // load all the companies onto the view
 -(void)cleanupBeforeLoadingFlyin
@@ -1264,13 +1310,17 @@ enum {
 	} completion:^(BOOL completed) {
 		[self removeMovieLayers];
 	}];
+    
+
 }
 
 -(void)resetSubHotspot
 {
 	if (kshowNSLogBOOL) NSLog(@"resetSubHotspot");
-	
-	//[self removeMovieLayers];
+    
+    if (!_avPlayer.rate == 0 && !_avPlayer.error) {
+        [self rePopMenu];
+    }
 	
 	[_uis_zoomingImg bringSubviewToFront:_uis_zoomingInfoImg];
 	[_uis_zoomingImg.scrollView setZoomScale:1.0];

@@ -49,7 +49,6 @@
     _uil_UIcue.transform = CGAffineTransformMakeTranslation(100, 0);
     _uil_UIcue.alpha = 0.0;
 
-    _uib_learn.hidden = YES;
     //[self blurbackground];
     
     _uiiv_BG.alpha = 0.0;
@@ -93,6 +92,7 @@
     
     _uiiv_arrow.alpha = 0.0;
 
+    [self dimButtonAtIndex:0];
 }
 
 - (void)bouncyButtonTouchDown:(id)sender
@@ -151,7 +151,6 @@
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 1.0;
     }];
-    _uib_learn.hidden = YES;
     
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
             obj.alpha = 1.0;
@@ -218,35 +217,41 @@
     _uib_learnBtm.hidden = NO;
 
     switch (sendertag) {
+            
         case 0:
+            [self loadIBT:nil];
+            return;
+            break;
+            
+        case 1:
             _uib_learnTop.frame = CGRectMake(18, 82, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             _uib_learnBtm.frame = CGRectMake(18, 148, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             break;
             
-        case 1:
+        case 2:
             _uib_learnTop.frame = CGRectMake(18, 165, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             //_uib_learnBtm.frame = CGRectMake(18, 182, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             _uib_learnBtm.hidden = YES;
             break;
             
-        case 2:
+        case 3:
             _uib_learnTop.frame = CGRectMake(18, 82, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             _uib_learnBtm.frame = CGRectMake(18, 149, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             break;
             
-        case 3:
+        case 4:
             _uib_learnTop.frame = CGRectMake(18, 82, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             _uib_learnBtm.frame = CGRectMake(18, 169, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             break;
             
-        case 4:
+        case 5:
             _uib_learnTop.frame = CGRectMake(18, 84, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             _uib_learnBtm.frame = CGRectMake(18, 149, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
-            _uib_learnMid.frame = CGRectMake(18, 219, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
+            _uib_learnMid.frame = CGRectMake(18, 235, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             _uib_learnMid.hidden = NO;
             break;
             
-        case 5:
+        case 6:
             _uib_learnTop.frame = CGRectMake(18, 132, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             _uib_learnBtm.frame = CGRectMake(18, 200, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             break;
@@ -254,12 +259,11 @@
         default:
             break;
     }
+    
+    NSLog(@"SHOULD NOT PASS");
 
     [_uiv_ibt insertSubview:_uiv_detail belowSubview:_uiv_header];
     _uiv_detail.frame = CGRectMake(125, 410, 560, 575);
-    
-    [_uiv_ibt insertSubview:_uib_learn aboveSubview:_uiv_detail];
-    _uib_learn.frame = CGRectMake(373, 540, _uib_learn.frame.size.width, _uib_learn.frame.size.height);
 
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
@@ -278,15 +282,13 @@
                             
                         } completion:nil];
     
-    _uib_learn.hidden = NO;
-    
     NSLog(@"tag %li", (long)[sender tag]);
     
     [self dimButtonAtIndex:(int)[sender tag]];
     
     companies = @[@"Automated Logic",@"Carrier",@"Edwards",@"Interlogix",@"Lenel",@"Otis"];
     
-    [[LibraryAPI sharedInstance] getSelectedCompanyNamed:companies[(int)[sender tag]]];
+    [[LibraryAPI sharedInstance] getSelectedCompanyNamed:companies[(int)[sender tag] - 1 ]];
     
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     NSDictionary *catDict = selectedCo.coibtpanel;

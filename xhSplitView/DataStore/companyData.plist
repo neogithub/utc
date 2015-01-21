@@ -1301,25 +1301,25 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 									<key>copy</key>
 									<string>Third-party system integration and global scalability</string>
 									<key>appearanceDelay</key>
-									<integer>3</integer>
+									<integer>4</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Otis CompassPlus™ destination management system to optimize traffic flow and floor access</string>
 									<key>appearanceDelay</key>
-									<integer>4</integer>
+									<integer>7</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Edwards EST: 3 platform to efficiently mass-notify and evacuate a building</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>11</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators</string>
 									<key>appearanceDelay</key>
-									<integer>6</integer>
+									<integer>14</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1510,7 +1510,7 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 Lenel OnGuard building access system integrates with Edwards EST: 3 platform to efficiently mass-notify and evacuate a building
 
 
-Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators </string>
+Lenel OnGuard building access system integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators </string>
 		</dict>
 	</dict>
 	<dict>
