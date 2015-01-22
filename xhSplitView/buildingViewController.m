@@ -393,12 +393,14 @@ enum {
 
 -(void)rePopMenu
 {
-    if ([selectedCo.coname isEqualToString:@"Otis"]) {
-        [self showPopover:uib_logoTapped];
-    } else if ([selectedCo.coname isEqualToString:@"Carrier"]) {
-        [self showPopover:uib_logoTapped];
-    } else if ([selectedCo.coname isEqualToString:@"Automated Logic"]) {
-        [self showPopover:uib_logoTapped];
+    if (arr_SelectedRows.count != 0 ) {
+        if ([selectedCo.coname isEqualToString:@"Otis"]) {
+            [self showPopover:uib_logoTapped];
+        } else if ([selectedCo.coname isEqualToString:@"Carrier"]) {
+            [self showPopover:uib_logoTapped];
+        } else if ([selectedCo.coname isEqualToString:@"Automated Logic"]) {
+            [self showPopover:uib_logoTapped];
+        }
     }
 }
 
@@ -443,7 +445,7 @@ enum {
 	void (*func)(id, SEL) = (void *)imp;
 	func(self, mySelector);
 	
-	//NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
+	NSLog(@"_uib_back %li",(long)_uib_backBtn.tag);
 }
 
 #pragma mark handle backbutton being tapped as needed
@@ -1027,7 +1029,6 @@ enum {
 	if (tapToPauseEnabled == YES) {
 		if (kshowNSLogBOOL) NSLog(@"tapToPauseEnabled == YES");
 		_isPauseable = YES;
-		
 	}
 
 	
@@ -1286,6 +1287,8 @@ enum {
             NSLog(@"\n\nelse");
             NSLog(@"\n\n%@",topTitle.appendString);
             //_arr_subHotspots=nil;
+            
+            
             if (topTitle.appendString) {
                 [topTitle setHotSpotTitle:topTitle.appendString];
             }
@@ -1356,7 +1359,6 @@ enum {
         NSLog(@"NO subhotspots - SO DON'T PLAY FILM");
         [self createCardsInView:_uiv_movieContainer];
     }
-    
 }
 
 //----------------------------------------------------

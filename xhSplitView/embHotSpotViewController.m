@@ -45,7 +45,7 @@ enum {
     NSString		*topname;
     
     NSInteger       selctedRow;
-
+    BOOL            hotspotHasLooped;
 }
 
 @property (nonatomic) NSTimer *myTimer;
@@ -673,6 +673,9 @@ enum {
     // starts the player as well
     NSLog(@"playerItemLoop beginSequence");
     [self beginSequence];
+    
+    hotspotHasLooped = YES;
+
 }
 
 #pragma mark control(s) for movie
@@ -1273,12 +1276,14 @@ enum {
     int y = movieLength;
     NSLog(@"seconds %i",y);
     
-    if (y == removeTextAfterThisManySeconds) {
-        [self removeCards];
-    }
+//    if (y == removeTextAfterThisManySeconds) {
+//        [self removeCards];
+//    }
     
     // check if the seconds match the reveal delay
-    [self indexOfCardToReveal:y];
+    if (    hotspotHasLooped != YES  ) {
+        [self indexOfCardToReveal:y];
+    }
 }
 
 

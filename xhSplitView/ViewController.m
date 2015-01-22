@@ -22,7 +22,7 @@
 #import "ModalViewController.h"
 #import "UIColor+Extensions.h"
 
-static NSString * const sampleDesc1 = @"Tap the center Building to zoom closer. Use the MENU button in the corner to restart the app";
+static NSString * const sampleDesc1 = @"Tap the center Building to zoom closer. Use the MENU button in the corner to restart the app. Pinch and zoom works for every image (outside of the help area).";
 
 static NSString * const sampleDesc2 = @"Tap the glowing circle to reveal the building's interior and the Companies located within";
 
