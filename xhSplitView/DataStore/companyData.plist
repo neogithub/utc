@@ -45,7 +45,7 @@ Otis integrates with Lenel OnGuard: building access system and Interlogix TruVis
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>30,100</string>
+							<string>650,100</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -1366,9 +1366,9 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>300</string>
+							<string>360</string>
 							<key>factxy</key>
-							<string>30,100</string>
+							<string>650,100</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -2527,7 +2527,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>30,350</string>
+							<string>30,100</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
