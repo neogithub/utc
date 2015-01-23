@@ -689,9 +689,10 @@ enum {
 {
     selctedRow = row;
     
-    
-    [arr_SelectedRows addObject:[NSNumber numberWithInteger:row]];
-    [[NSUserDefaults standardUserDefaults] setObject:arr_SelectedRows forKey:@"com.neoscape.SelectedRows"];
+    if (text != nil) {
+        [arr_SelectedRows addObject:[NSNumber numberWithInteger:row]];
+        [[NSUserDefaults standardUserDefaults] setObject:arr_SelectedRows forKey:@"com.neoscape.SelectedRows"];
+    }
     
     if (kshowNSLogBOOL) NSLog(@"text %@",text);
     
@@ -1212,6 +1213,8 @@ enum {
 {
     hotspotHasLooped = NO;
     
+    [self clearHotpsotData];
+    
     if (kshowNSLogBOOL) NSLog(@"closeMovie");
     CGAffineTransform t = _uib_backBtn.transform;
     
@@ -1295,7 +1298,6 @@ enum {
             //		}
         }
         
-        [self clearHotpsotData];
     }
     
 #warning I think this solved the crashing bug. It resets the tappedview tag used for -(void)createCardsInView. Needs to be 0 to reset
@@ -1371,7 +1373,7 @@ enum {
 {
     if (kshowNSLogBOOL) NSLog(@"createCards");
     
-        uiv_HotspotInfoCardContainer = [[UIView alloc] initWithFrame:CGRectZero];
+    uiv_HotspotInfoCardContainer = [[UIView alloc] initWithFrame:CGRectZero];
 	uiv_HotspotInfoCardContainer.layer.backgroundColor = [UIColor clearColor].CGColor;
 	uiv_HotspotInfoCardContainer.clipsToBounds = YES;
 	
@@ -1389,10 +1391,9 @@ enum {
     
     totalDataArray = _arr_subHotspots;
 
-    
-	NSLog(@"/ntapedtag %li",(long)tappedView.tag);
+	//NSLog(@"/ntapedtag %li",(long)tappedView.tag);
    // NSLog(@"/ntotalDataArray %@",[totalDataArray description]);
-    NSLog(@"/selectedCo.cohotspots.count %li",selectedCo.cohotspots.count);
+   // NSLog(@"/selectedCo.cohotspots.count %li",selectedCo.cohotspots.count);
     
     NSDictionary *hotspotItem = totalDataArray [tappedView.tag];
 

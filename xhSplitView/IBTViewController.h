@@ -39,5 +39,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *uib_learnBtm;
 @property (weak, nonatomic) IBOutlet UIButton *uib_learnMid;
 @property (weak, nonatomic) IBOutlet UILabel *uil_UIcue;
+@property (weak, nonatomic) IBOutlet UIImageView *uiiv_pointer;
 
 @end

@@ -52,6 +52,8 @@
     //[self blurbackground];
     
     _uiiv_BG.alpha = 0.0;
+    
+    _uiiv_pointer.alpha = 0.0;
 
     [self performSelector:@selector(fadeUpBG) withObject:nil afterDelay:0.75];
     
@@ -146,17 +148,21 @@
     NSLog(@"loadIBT");
     NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
 
+    _uiiv_pointer.alpha = 0.0;
+    
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
 
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 1.0;
     }];
     
-    [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
-            obj.alpha = 1.0;
-            [obj.layer setBorderColor:[UIColor clearColor].CGColor];
-            [obj.layer setBorderWidth:0.0];
-    }];
+//    [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+//            obj.alpha = 1.0;
+//            [obj.layer setBorderColor:[UIColor clearColor].CGColor];
+//            [obj.layer setBorderWidth:0.0];
+//    }];
+    
+    [self dimButtonAtIndex:(int)[sender tag]];
 
     
     [UIView animateWithDuration:0.33 delay:0
@@ -176,6 +182,9 @@
    // [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(popLogos) object:nil];
    // [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(scaleConnectors) object:nil];
     
+    
+    UIButton *btn = (UIButton*)sender;
+
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
         
         BOOL runOnce;
@@ -279,6 +288,11 @@
                             /*if (_uiv_ibt.frame.size.height == 410) {
                                 _uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y-90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height+170);
                             }*/
+                            
+                            CGPoint originInWindowCoordinates = [_uiv_logoBns convertPoint:btn.bounds.origin fromView:btn];
+                            
+                            _uiiv_pointer.frame = CGRectMake(114 , originInWindowCoordinates.y+15, 11, 21);
+                            _uiiv_pointer.alpha = 1.0;
                             
                         } completion:nil];
     

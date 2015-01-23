@@ -10,9 +10,10 @@
                 <outlet property="uib_learnMid" destination="s1h-wg-vsG" id="r8j-xu-w2x"/>
                 <outlet property="uib_learnTop" destination="4nJ-rT-Oxp" id="5QJ-ac-cMU"/>
                 <outlet property="uiiv_BG" destination="l4a-9u-IEX" id="jiJ-rg-5gr"/>
-                <outlet property="uiiv_arrow" destination="lg7-qw-1ci" id="nWe-Tj-oMp"/>
+                <outlet property="uiiv_arrow" destination="lg7-qw-1ci" id="vhn-3Y-59A"/>
                 <outlet property="uiiv_header" destination="Zi0-a5-uBn" id="D7R-KW-9IZ"/>
                 <outlet property="uiiv_logo" destination="oed-2m-w1g" id="D4O-FT-s29"/>
+                <outlet property="uiiv_pointer" destination="UPV-ov-uGs" id="zuP-ky-z9l"/>
                 <outlet property="uil_UIcue" destination="AIr-xA-fod" id="fEk-Kh-xw3"/>
                 <outlet property="uitv_connectText" destination="ZW9-pw-XKg" id="imD-Wj-XqZ"/>
                 <outlet property="uitv_summaryText" destination="SeY-UO-KQh" id="Ia4-fK-zhB"/>
@@ -36,10 +37,6 @@
             <rect key="frame" x="0.0" y="-1" width="560" height="530"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-connection-line-double.png" id="lg7-qw-1ci">
-                    <rect key="frame" x="152" y="46" width="257" height="47"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-Transp-logo-otis.png" id="oed-2m-w1g">
                     <rect key="frame" x="244" y="19" width="72" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -101,6 +98,10 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                     <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IBT-connection-line-double.png" id="lg7-qw-1ci">
+                    <rect key="frame" x="152" y="45" width="257" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="941" y="321"/>
@@ -196,16 +197,13 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                                 <action selector="loadIBTDetail:" destination="-1" eventType="touchUpInside" id="XkX-3b-PCF"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_white.png" id="UPV-ov-uGs">
+                                            <rect key="frame" x="114" y="256" width="11" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a company" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgr-6B-R0x">
-                                    <rect key="frame" x="117" y="8" width="123" height="43"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="SeY-UO-KQh">
                                     <rect key="frame" x="144" y="24" width="524" height="450"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,6 +320,7 @@ Cgo
         <image name="IBT-logo-otis.png" width="89" height="56"/>
         <image name="IBT-logo-utc.png" width="89" height="56"/>
         <image name="PH2_UTC_SUSTAIN_01_SMG_GENERAL.png" width="1024" height="768"/>
+        <image name="arrow_white.png" width="11" height="21"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>
         <image name="grfx_ibt_header.png" width="1" height="45"/>
         <image name="ibt-learnMore.png" width="103" height="29"/>

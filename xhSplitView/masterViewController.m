@@ -127,7 +127,7 @@ static CGFloat yHeight = 90;
 
 -(void)loadLegal
 {
-    [self.view makeToast:@"Agion® is a registered trademark of Sciessent LLC\n\nBACnet® is a registered trademark of American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE)\n\nLEED® is a registered trade mark of the U.S. Green Building Council."
+    [self.view makeToast:@"Agion® is a registered trademark of Sciessent LLC.\n\nBACnet® is a registered trademark of American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE).\n\nLEED® is a registered trade mark of the U.S. Green Building Council."
                 duration:10.0
                 position:CSToastPositionBottom
                    title:@"Legal Notices"];

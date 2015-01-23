@@ -279,6 +279,8 @@
 		8800E3221A702B4F000E3D97 /* img-teda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31B1A702B4F000E3D97 /* img-teda.jpg */; };
 		8800E3231A702B4F000E3D97 /* img-teda@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31C1A702B4F000E3D97 /* img-teda@2x.jpg */; };
 		8800E3241A702B4F000E3D97 /* img-teda@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31C1A702B4F000E3D97 /* img-teda@2x.jpg */; };
+		8800E32C1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8800E32B1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov */; };
+		8800E32D1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8800E32B1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov */; };
 		8834E2011A4F0FCE00204D81 /* IBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */; };
 		8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2001A4F0FCE00204D81 /* IBTViewController.xib */; };
 		8834E21A1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */; };
@@ -904,6 +906,7 @@
 		8800E31A1A702B4F000E3D97 /* img-monterrey@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "img-monterrey@2x.jpg"; path = "UI/grfx/sustainability/img-monterrey@2x.jpg"; sourceTree = "<group>"; };
 		8800E31B1A702B4F000E3D97 /* img-teda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "img-teda.jpg"; path = "UI/grfx/sustainability/img-teda.jpg"; sourceTree = "<group>"; };
 		8800E31C1A702B4F000E3D97 /* img-teda@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "img-teda@2x.jpg"; path = "UI/grfx/sustainability/img-teda@2x.jpg"; sourceTree = "<group>"; };
+		8800E32B1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IBT_INTERLOGIX_01_LR_CONN_LENEL.mov; path = xhSplitView/CONTENT/D_INTELLIGENT_BUILDING/INTERLOGIX/IBT_INTERLOGIX_01_LR_CONN_LENEL.mov; sourceTree = SOURCE_ROOT; };
 		8834E1FE1A4F0FCE00204D81 /* IBTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTViewController.h; sourceTree = "<group>"; };
 		8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTViewController.m; sourceTree = "<group>"; };
 		8834E2001A4F0FCE00204D81 /* IBTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBTViewController.xib; sourceTree = "<group>"; };
@@ -1714,6 +1717,7 @@
 			isa = PBXGroup;
 			children = (
 				888BB81F1A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov */,
+				8800E32B1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov */,
 				888BB8201A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_OTIS_CDMS.mov */,
 			);
 			name = INTERLOGIX;
@@ -1981,7 +1985,7 @@
 						DevelopmentTeam = 97VHU5A6BJ;
 					};
 					82A66A9719B7926A00C8E12A = {
-						DevelopmentTeam = 97VHU5A6BJ;
+						DevelopmentTeam = 9734648496;
 					};
 				};
 			};
@@ -2049,6 +2053,7 @@
 				888BB7DD1A5EE6D900157977 /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
 				888BB9321A5EE8D800157977 /* PH2_OTIS_03_LR_NCE_LED_LIGHT_BALUST.mov in Resources */,
 				20192C911A48729000969C85 /* icon marker center@2x.png in Resources */,
+				8800E32D1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov in Resources */,
 				20E546EA1A2DFEF40073B2CF /* PopoverViewController.xib in Resources */,
 				8800E3221A702B4F000E3D97 /* img-teda.jpg in Resources */,
 				8834E27E1A57221B00204D81 /* menu_utc@2x.png in Resources */,
@@ -2527,6 +2532,7 @@
 				888BB7EB1A5EE6E500157977 /* INT_01A_STILL_TRANS_CITY_TO_BLDG.png in Resources */,
 				20192C8A1A48729000969C85 /* icon marker center.png in Resources */,
 				888BB7A61A5E136C00157977 /* ibt_carrier_connections@2x.png in Resources */,
+				8800E32C1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov in Resources */,
 				20A95A5F19CBC1AA00132F7E /* icon marker left@2x.png in Resources */,
 				888BB79A1A5E136C00157977 /* ibt_arrow_one@2x.png in Resources */,
 				888BBA291A6890E600157977 /* PH2_CARRIER_A_00_ANIM_TRANS.png in Resources */,
@@ -2825,9 +2831,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Inc. (9734648496)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
@@ -2991,8 +2994,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3010,7 +3013,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "ee8b7244-a01a-4131-a106-4f947bd4e1b2";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -3063,7 +3066,7 @@
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = utc;
-				PROVISIONING_PROFILE = "27682FC5-0FF3-4F01-9785-612973FD11E0";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3073,13 +3076,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Incorporated";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Incorporated";
-
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";

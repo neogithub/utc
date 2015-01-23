@@ -167,13 +167,13 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Identify issues before they become problems</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>9</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Technicians are dispatched automatically for urgent issues</string>
 									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>13</integer>
 								</dict>
 							</array>
 						</dict>
@@ -213,7 +213,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Advanced ReGen™ drive technology turns gravity into energy</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -253,13 +253,13 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Greatly reduced floor-to-floor travel times equals less wait time</string>
 									<key>appearanceDelay</key>
-									<integer>4</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Direct drive technology means fewer moving parts and less maintenance</string>
 									<key>appearanceDelay</key>
-									<integer>8</integer>
+									<integer>9</integer>
 								</dict>
 							</array>
 						</dict>
@@ -299,7 +299,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>LED lights save energy and last 10 times longer</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -339,19 +339,19 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Coated steel belts create a remarkably smooth ride</string>
 									<key>appearanceDelay</key>
-									<integer>6</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>New machine is 70% smaller than conventional geared machines</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Machine actually fits inside the hoistway, eliminating machine room</string>
 									<key>appearanceDelay</key>
-									<integer>17</integer>
+									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -391,13 +391,13 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>No need to plan extra room at top of hoistway</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Much easier access for diagnostics and repair</string>
 									<key>appearanceDelay</key>
-									<integer>7</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -446,13 +446,13 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Integrates with Lenel OnGuard: building access system to optimize traffic flow and floor access</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Lenel OnGuard building access system and Interlogix TruVision: security cameras to dispatch elevators based on crowd size</string>
 									<key>appearanceDelay</key>
-									<integer>11</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -498,7 +498,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>CompassPlus™  touch screens automatically go into sleep mode during low usage times</string>
 									<key>appearanceDelay</key>
-									<integer>7</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -549,13 +549,13 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Sleep mode slows escalator speed when there are no passengers</string>
 									<key>appearanceDelay</key>
-									<integer>6</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>ReGen: drive captures created energy, directing it back into building grid</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -595,13 +595,13 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Otis EMS Panorama: system constantly monitors, controls and gathers information, spotting potential issues</string>
 									<key>appearanceDelay</key>
-									<integer>6</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Sleep mode increases life of major mechanical components</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -717,19 +717,19 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>High-efficiency, chlorine-free solution</string>
 									<key>appearanceDelay</key>
-									<integer>6</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Automated Logic: plant system manager via WebCTRL: building automation system to optimize chiller plant systems and save energy</string>
 									<key>appearanceDelay</key>
-									<integer>9</integer>
+									<integer>7</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Automated Logic WebCTRL building automation system to assure comfortable temperature settings at time of occupancy based on building and weather conditions</string>
 									<key>appearanceDelay</key>
-									<integer>13</integer>
+									<integer>9</integer>
 								</dict>
 							</array>
 						</dict>
@@ -769,13 +769,13 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Wide operating envelope handles even the toughest load scenarios</string>
 									<key>appearanceDelay</key>
-									<integer>4</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Robust design provides reliable operation under wide range of conditions</string>
 									<key>appearanceDelay</key>
-									<integer>7</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -815,13 +815,13 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Hermetic motor operates in refrigerated, clean environment</string>
 									<key>appearanceDelay</key>
-									<integer>11</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Unique tri-rotor compressor design eliminates slide valve and reduces bearing loads, resulting in longer operation</string>
 									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -870,13 +870,13 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Features Agion: antimicrobial-coated steel for improved indoor air quality</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Facilitates easy cleaning due to wash-down construction</string>
 									<key>appearanceDelay</key>
-									<integer>9</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -918,7 +918,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Features removable access panels</string>
 									<key>appearanceDelay</key>
-									<integer>10</integer>
+									<integer>3</integer>
 								</dict>
 							</array>
 						</dict>
@@ -960,7 +960,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>i-Vu: Open Control System enables fully integrated native BACnet: building automation system </string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1174,7 +1174,7 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>340</string>
+							<string>350</string>
 							<key>factxy</key>
 							<string>30,130</string>
 							<key>factscopy</key>
@@ -1195,7 +1195,7 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 									<key>copy</key>
 									<string>Features easy-to-use touch-screen inputs</string>
 									<key>appearanceDelay</key>
-									<integer>6</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1301,25 +1301,25 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 									<key>copy</key>
 									<string>Third-party system integration and global scalability</string>
 									<key>appearanceDelay</key>
-									<integer>4</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Otis CompassPlus™ destination management system to optimize traffic flow and floor access</string>
 									<key>appearanceDelay</key>
-									<integer>7</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Edwards EST: 3 platform to efficiently mass-notify and evacuate a building</string>
 									<key>appearanceDelay</key>
-									<integer>11</integer>
+									<integer>7</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>9</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1554,19 +1554,19 @@ Lenel OnGuard building access system integrates with Interlogix TruVision: secur
 									<key>copy</key>
 									<string>Data gathering allows for custom service visits</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Identify issues before they become problems</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Technicians are dispatched automatically for urgent issues</string>
 									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1608,19 +1608,19 @@ Lenel OnGuard building access system integrates with Interlogix TruVision: secur
 									<key>copy</key>
 									<string>Data gathering allows for custom service visits</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Identify issues before they become problems</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Technicians are dispatched automatically for urgent issues</string>
 									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1717,13 +1717,13 @@ Lenel OnGuard building access system integrates with Interlogix TruVision: secur
 									<key>copy</key>
 									<string>Displays current energy and water usage, reductions in CO2 emissions, and outdoor air conditions</string>
 									<key>appearanceDelay</key>
-									<integer>8</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Provides building directions, room schedules, virtual tours, and amenities</string>
 									<key>appearanceDelay</key>
-									<integer>12</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1909,19 +1909,19 @@ Automated Logic WebCTRL building automation system integrates with Edwards EST: 
 									<key>copy</key>
 									<string>Data gathering allows for custom service visits</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Identify issues before they become problems</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Technicians are dispatched automatically for urgent issues</string>
 									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1963,19 +1963,19 @@ Automated Logic WebCTRL building automation system integrates with Edwards EST: 
 									<key>copy</key>
 									<string>Data gathering allows for custom service visits</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Identify issues before they become problems</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Technicians are dispatched automatically for urgent issues</string>
 									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2017,19 +2017,19 @@ Automated Logic WebCTRL building automation system integrates with Edwards EST: 
 									<key>copy</key>
 									<string>Data gathering allows for custom service visits</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Identify issues before they become problems</string>
 									<key>appearanceDelay</key>
-									<integer>14</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Technicians are dispatched automatically for urgent issues</string>
 									<key>appearanceDelay</key>
-									<integer>18</integer>
+									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2131,13 +2131,13 @@ Automated Logic WebCTRL building automation system integrates with Edwards EST: 
 									<key>copy</key>
 									<string>Integrates with Lenel OnGuard: building access system to protect people, property and assets</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Lenel OnGuard: building access system and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators </string>
 									<key>appearanceDelay</key>
-									<integer>8</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2180,7 +2180,7 @@ Automated Logic WebCTRL building automation system integrates with Edwards EST: 
 						<key>xy</key>
 						<string>680,274</string>
 						<key>fileName</key>
-						<string>IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov</string>
+						<string>IBT_INTERLOGIX_01_LR_CONN_LENEL.mov</string>
 						<key>removeafterseconds</key>
 						<integer>10</integer>
 						<key>width</key>
@@ -2325,19 +2325,19 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 									<key>copy</key>
 									<string>Provides valuable data and response options to building operators and first responders</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Lenel OnGuard: building access system to efficiently mass notify and evacuate a building</string>
 									<key>appearanceDelay</key>
-									<integer>9</integer>
+									<integer>5</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Automated Logic WebCTRL: building automation system and security cameras to detect and see where a fire is located</string>
 									<key>appearanceDelay</key>
-									<integer>13</integer>
+									<integer>7</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2377,13 +2377,13 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 									<key>copy</key>
 									<string>Communicates live or recorded messages for fire and mass notification events</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Can be remotely diagnosed prior to arriving on-site, better preparing service providers</string>
 									<key>appearanceDelay</key>
-									<integer>9</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2423,13 +2423,13 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 									<key>copy</key>
 									<string>Provides immediate notification of critical conditions and service diagnostics</string>
 									<key>appearanceDelay</key>
-									<integer>4</integer>
+									<integer>3</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Innovative design features and service tools provide life cycle cost savings</string>
 									<key>appearanceDelay</key>
-									<integer>6</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
@@ -2741,7 +2741,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL: building automati
 									<key>copy</key>
 									<string>Easy-to-service, corrosion-resistant metal for long life</string>
 									<key>appearanceDelay</key>
-									<integer>6</integer>
+									<integer>5</integer>
 								</dict>
 							</array>
 						</dict>
