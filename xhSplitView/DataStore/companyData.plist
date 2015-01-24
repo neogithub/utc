@@ -756,7 +756,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 							<key>factwidth</key>
 							<string>355</string>
 							<key>factxy</key>
-							<string>645,210</string>
+							<string>30,100</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -802,7 +802,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 							<key>factwidth</key>
 							<string>340</string>
 							<key>factxy</key>
-							<string>20,203</string>
+							<string>20,100</string>
 							<key>factscopy</key>
 							<array>
 								<dict>
@@ -2527,7 +2527,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 							<key>factwidth</key>
 							<string>360</string>
 							<key>factxy</key>
-							<string>30,100</string>
+							<string>30,350</string>
 							<key>factscopy</key>
 							<array>
 								<dict>

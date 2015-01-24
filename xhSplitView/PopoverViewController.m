@@ -156,6 +156,7 @@
 		[cell.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:12]];
     }
     
+    /*
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"com.neoscape.SelectedRows"] != nil) {
         
         NSMutableArray *arr_selctdRows = [[NSUserDefaults standardUserDefaults] objectForKey:@"com.neoscape.SelectedRows"];
@@ -167,7 +168,7 @@
             }
         }
     }
-    
+    */
     
 	
 	NSDictionary *catDict = [_selectedCo.cocategories objectAtIndex:[indexPath row]];

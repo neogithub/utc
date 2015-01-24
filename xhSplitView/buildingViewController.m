@@ -92,6 +92,12 @@ enum {
 
 @implementation buildingViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"com.neoscape.SelectedRows"];
+    NSLog(@"viewwillappear");
+}
+
 #pragma mark - viewDidLoad
 - (void)viewDidLoad
 {
@@ -127,7 +133,6 @@ enum {
     
     // debug
    // [[NSUserDefaults standardUserDefaults] setPersistentDomain:[NSDictionary dictionary] forName:[[NSBundle mainBundle] bundleIdentifier]];
-
 }
 
 #pragma mark - stills under movie
@@ -279,22 +284,22 @@ enum {
     NSDictionary *userInfo;
         
     if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Otis"]) {
-        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:5] forKey:@"buttontag"];
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:6] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Otis");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Lenel"]) {
-        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:4] forKey:@"buttontag"];
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:5] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Lenel");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Interlogix"]) {
-        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:3] forKey:@"buttontag"];
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:4] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Interlogix");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Edwards"]) {
-        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:2] forKey:@"buttontag"];
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:3] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Edwards");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Carrier"]) {
-        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:@"buttontag"];
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:2] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Carrier");
     } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Automated Logic"]) {
-        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:0] forKey:@"buttontag"];
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Automated Logic");
     }
     

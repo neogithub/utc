@@ -281,6 +281,14 @@
 		8800E3241A702B4F000E3D97 /* img-teda@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8800E31C1A702B4F000E3D97 /* img-teda@2x.jpg */; };
 		8800E32C1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8800E32B1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov */; };
 		8800E32D1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8800E32B1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov */; };
+		8800E3321A72D491000E3D97 /* green-technology-carrier-mexico.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E32E1A72D491000E3D97 /* green-technology-carrier-mexico.png */; };
+		8800E3331A72D491000E3D97 /* green-technology-carrier-mexico.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E32E1A72D491000E3D97 /* green-technology-carrier-mexico.png */; };
+		8800E3341A72D491000E3D97 /* green-technology-carrier-mexico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E32F1A72D491000E3D97 /* green-technology-carrier-mexico@2x.png */; };
+		8800E3351A72D491000E3D97 /* green-technology-carrier-mexico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E32F1A72D491000E3D97 /* green-technology-carrier-mexico@2x.png */; };
+		8800E3361A72D491000E3D97 /* green-technology-otis-TEDA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3301A72D491000E3D97 /* green-technology-otis-TEDA.png */; };
+		8800E3371A72D491000E3D97 /* green-technology-otis-TEDA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3301A72D491000E3D97 /* green-technology-otis-TEDA.png */; };
+		8800E3381A72D491000E3D97 /* green-technology-otis-TEDA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3311A72D491000E3D97 /* green-technology-otis-TEDA@2x.png */; };
+		8800E3391A72D491000E3D97 /* green-technology-otis-TEDA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3311A72D491000E3D97 /* green-technology-otis-TEDA@2x.png */; };
 		8834E2011A4F0FCE00204D81 /* IBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */; };
 		8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2001A4F0FCE00204D81 /* IBTViewController.xib */; };
 		8834E21A1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */; };
@@ -431,8 +439,6 @@
 		888BB8141A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB80D1A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.mov */; };
 		888BB8151A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_LENEL_ONGUARD.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB80E1A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_LENEL_ONGUARD.mov */; };
 		888BB8161A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_LENEL_ONGUARD.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB80E1A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_LENEL_ONGUARD.mov */; };
-		888BB8251A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB81F1A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov */; };
-		888BB8261A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB81F1A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov */; };
 		888BB8271A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_OTIS_CDMS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB8201A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_OTIS_CDMS.mov */; };
 		888BB8281A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_OTIS_CDMS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB8201A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_OTIS_CDMS.mov */; };
 		888BB8351A5EE78F00157977 /* IBT_LENEL_01_LR_CONN_EDWARDS_EST3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB8311A5EE78F00157977 /* IBT_LENEL_01_LR_CONN_EDWARDS_EST3.mov */; };
@@ -907,6 +913,10 @@
 		8800E31B1A702B4F000E3D97 /* img-teda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "img-teda.jpg"; path = "UI/grfx/sustainability/img-teda.jpg"; sourceTree = "<group>"; };
 		8800E31C1A702B4F000E3D97 /* img-teda@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "img-teda@2x.jpg"; path = "UI/grfx/sustainability/img-teda@2x.jpg"; sourceTree = "<group>"; };
 		8800E32B1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IBT_INTERLOGIX_01_LR_CONN_LENEL.mov; path = xhSplitView/CONTENT/D_INTELLIGENT_BUILDING/INTERLOGIX/IBT_INTERLOGIX_01_LR_CONN_LENEL.mov; sourceTree = SOURCE_ROOT; };
+		8800E32E1A72D491000E3D97 /* green-technology-carrier-mexico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-technology-carrier-mexico.png"; path = "UI/grfx/sustainability/green-technology-carrier-mexico.png"; sourceTree = "<group>"; };
+		8800E32F1A72D491000E3D97 /* green-technology-carrier-mexico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-technology-carrier-mexico@2x.png"; path = "UI/grfx/sustainability/green-technology-carrier-mexico@2x.png"; sourceTree = "<group>"; };
+		8800E3301A72D491000E3D97 /* green-technology-otis-TEDA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-technology-otis-TEDA.png"; path = "UI/grfx/sustainability/green-technology-otis-TEDA.png"; sourceTree = "<group>"; };
+		8800E3311A72D491000E3D97 /* green-technology-otis-TEDA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-technology-otis-TEDA@2x.png"; path = "UI/grfx/sustainability/green-technology-otis-TEDA@2x.png"; sourceTree = "<group>"; };
 		8834E1FE1A4F0FCE00204D81 /* IBTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTViewController.h; sourceTree = "<group>"; };
 		8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTViewController.m; sourceTree = "<group>"; };
 		8834E2001A4F0FCE00204D81 /* IBTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBTViewController.xib; sourceTree = "<group>"; };
@@ -988,7 +998,6 @@
 		888BB8071A5EE77000157977 /* IBT_CARRIER_01_LR_CONN_AUTOLOG.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IBT_CARRIER_01_LR_CONN_AUTOLOG.mov; path = xhSplitView/CONTENT/D_INTELLIGENT_BUILDING/CARRIER/IBT_CARRIER_01_LR_CONN_AUTOLOG.mov; sourceTree = SOURCE_ROOT; };
 		888BB80D1A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IBT_EDWARDS_01_LR_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.mov; path = xhSplitView/CONTENT/D_INTELLIGENT_BUILDING/EDWARDS/IBT_EDWARDS_01_LR_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.mov; sourceTree = SOURCE_ROOT; };
 		888BB80E1A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_LENEL_ONGUARD.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IBT_EDWARDS_01_LR_CONN_LENEL_ONGUARD.mov; path = xhSplitView/CONTENT/D_INTELLIGENT_BUILDING/EDWARDS/IBT_EDWARDS_01_LR_CONN_LENEL_ONGUARD.mov; sourceTree = SOURCE_ROOT; };
-		888BB81F1A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov; path = xhSplitView/CONTENT/D_INTELLIGENT_BUILDING/INTERLOGIX/IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov; sourceTree = SOURCE_ROOT; };
 		888BB8201A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_OTIS_CDMS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IBT_INTERLOGIX_01_LR_CONN_OTIS_CDMS.mov; path = xhSplitView/CONTENT/D_INTELLIGENT_BUILDING/INTERLOGIX/IBT_INTERLOGIX_01_LR_CONN_OTIS_CDMS.mov; sourceTree = SOURCE_ROOT; };
 		888BB8311A5EE78F00157977 /* IBT_LENEL_01_LR_CONN_EDWARDS_EST3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IBT_LENEL_01_LR_CONN_EDWARDS_EST3.mov; path = xhSplitView/CONTENT/D_INTELLIGENT_BUILDING/LENEL/IBT_LENEL_01_LR_CONN_EDWARDS_EST3.mov; sourceTree = SOURCE_ROOT; };
 		888BB8321A5EE78F00157977 /* IBT_LENEL_01_LR_CONN_OTIS_CDMS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IBT_LENEL_01_LR_CONN_OTIS_CDMS.mov; path = xhSplitView/CONTENT/D_INTELLIGENT_BUILDING/LENEL/IBT_LENEL_01_LR_CONN_OTIS_CDMS.mov; sourceTree = SOURCE_ROOT; };
@@ -1659,6 +1668,10 @@
 		888BB7B81A5E356600157977 /* sustainability */ = {
 			isa = PBXGroup;
 			children = (
+				8800E32E1A72D491000E3D97 /* green-technology-carrier-mexico.png */,
+				8800E32F1A72D491000E3D97 /* green-technology-carrier-mexico@2x.png */,
+				8800E3301A72D491000E3D97 /* green-technology-otis-TEDA.png */,
+				8800E3311A72D491000E3D97 /* green-technology-otis-TEDA@2x.png */,
 				8800E3191A702B4F000E3D97 /* img-monterrey.jpg */,
 				8800E31A1A702B4F000E3D97 /* img-monterrey@2x.jpg */,
 				8800E31B1A702B4F000E3D97 /* img-teda.jpg */,
@@ -1716,7 +1729,6 @@
 		888BB7F21A5EE73700157977 /* INTERLOGIX */ = {
 			isa = PBXGroup;
 			children = (
-				888BB81F1A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov */,
 				8800E32B1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov */,
 				888BB8201A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_OTIS_CDMS.mov */,
 			);
@@ -1985,7 +1997,7 @@
 						DevelopmentTeam = 97VHU5A6BJ;
 					};
 					82A66A9719B7926A00C8E12A = {
-						DevelopmentTeam = 9734648496;
+						DevelopmentTeam = 97VHU5A6BJ;
 					};
 				};
 			};
@@ -2015,6 +2027,7 @@
 			files = (
 				20BA88C51A37941900705945 /* text_bg@2x.png in Resources */,
 				888BB7AF1A5E136C00157977 /* ibt_interlogix_connections@2x.png in Resources */,
+				8800E3391A72D491000E3D97 /* green-technology-otis-TEDA@2x.png in Resources */,
 				8834E25C1A56E32D00204D81 /* ibt_otis@2x.png in Resources */,
 				888BB93E1A5EE8E200157977 /* PH2_TAYLOR_00_STILL_HS.png in Resources */,
 				888BB8BE1A5EE88500157977 /* PH2_CARRIER_C_02A_SMB_AERO_39M_AIR_HANDLERS.png in Resources */,
@@ -2074,6 +2087,7 @@
 				888BB8141A5EE77B00157977 /* IBT_EDWARDS_01_LR_CONN_AUTOLOG_WEBCTRL_INTERLOGIX.mov in Resources */,
 				888BB9441A5EE8E200157977 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov in Resources */,
 				20E547481A2E13B60073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO@2x.png in Resources */,
+				8800E3351A72D491000E3D97 /* green-technology-carrier-mexico@2x.png in Resources */,
 				888BB8711A5EE86A00157977 /* PH2_ADVANTE3C_01_SMG_GENERAL.png in Resources */,
 				888BB9891A5F801A00157977 /* IBT-logo-edwards@2x.png in Resources */,
 				888BB8B41A5EE88500157977 /* PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.png in Resources */,
@@ -2132,6 +2146,7 @@
 				20BF48D91A3B501D009645DC /* logo_carrier.png in Resources */,
 				20BF48D31A3B501D009645DC /* logo_advantec@2x.png in Resources */,
 				8834E2541A56E32D00204D81 /* ibt_interlogix@2x.png in Resources */,
+				8800E3331A72D491000E3D97 /* green-technology-carrier-mexico.png in Resources */,
 				888BB9831A5F801A00157977 /* IBT-logo-carrier.png in Resources */,
 				20E547011A2DFEF40073B2CF /* 00_LOGO_TRANS_HERO_CITY.png in Resources */,
 				888BB9791A5F801A00157977 /* IBT-connection-line-double@2x.png in Resources */,
@@ -2191,6 +2206,7 @@
 				888BB9AB1A5F801A00157977 /* IBT-Transp-logo-otis.png in Resources */,
 				888BB9851A5F801A00157977 /* IBT-logo-carrier@2x.png in Resources */,
 				888BB7D71A5EE6D900157977 /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov in Resources */,
+				8800E3371A72D491000E3D97 /* green-technology-otis-TEDA.png in Resources */,
 				888BBA3D1A69331F00157977 /* help-close-bttn.png in Resources */,
 				20E5470F1A2DFEF40073B2CF /* grfx_tableBg.png in Resources */,
 				20E547101A2DFEF40073B2CF /* 03_HERO_BLDG_SECTION.png in Resources */,
@@ -2336,7 +2352,6 @@
 				888BB9A31A5F801A00157977 /* IBT-Transp-logo-interlogix.png in Resources */,
 				20E547441A2E0E750073B2CF /* 03A Building Cut DEMO@2x.png in Resources */,
 				20E547341A2DFEF40073B2CF /* icon home.png in Resources */,
-				888BB8261A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov in Resources */,
 				20E547361A2DFEF40073B2CF /* title5@2x.png in Resources */,
 				888BB9811A5F801A00157977 /* IBT-logo-automatedLogic@2x.png in Resources */,
 				888BBA221A68540100157977 /* BG_H264_1440_10.mov in Resources */,
@@ -2403,6 +2418,7 @@
 				888BB8DF1A5EE89D00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.png in Resources */,
 				20CEFE3819D1018700BEB200 /* PopoverViewController.xib in Resources */,
 				20192C751A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG in Resources */,
+				8800E3341A72D491000E3D97 /* green-technology-carrier-mexico@2x.png in Resources */,
 				888BB8CC1A5EE89200157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.png in Resources */,
 				8834E2241A531E8300204D81 /* grfx_ibt_header.png in Resources */,
 				888BB9531A5F171000157977 /* arrow_white.png in Resources */,
@@ -2437,6 +2453,7 @@
 				888BB92D1A5EE8D800157977 /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov in Resources */,
 				888BB7741A5DA25F00157977 /* overlay2.png in Resources */,
 				888BB9B01A5F83BA00157977 /* IBT-connection-line-triple.png in Resources */,
+				8800E3381A72D491000E3D97 /* green-technology-otis-TEDA@2x.png in Resources */,
 				824F14E119CB390800628F01 /* grfx_cellArrow.png in Resources */,
 				888BB9E81A66B71900157977 /* ibt-learnMore.png in Resources */,
 				8834E2261A531E8300204D81 /* grfx_ibt_rule.png in Resources */,
@@ -2500,6 +2517,7 @@
 				888BB7981A5E136C00157977 /* ibt_arrow_one.png in Resources */,
 				888BB98C1A5F801A00157977 /* IBT-logo-interlogix@2x.png in Resources */,
 				888BB9291A5EE8D800157977 /* PH2_OTIS_01_LR_NCE_GREEN_ESC.mov in Resources */,
+				8800E3321A72D491000E3D97 /* green-technology-carrier-mexico.png in Resources */,
 				8895FEFE1A5B19F50076A3EC /* logo-automatedLogic@2x.png in Resources */,
 				888BB9A61A5F801A00157977 /* IBT-Transp-logo-lenel.png in Resources */,
 				82A66AA619B7926B00C8E12A /* InfoPlist.strings in Resources */,
@@ -2592,7 +2610,6 @@
 				20A39EA819C32F8800C71430 /* bg_03.jpg in Resources */,
 				20A39E8919C23D1F00C71430 /* companyData.plist in Resources */,
 				888BB98A1A5F801A00157977 /* IBT-logo-interlogix.png in Resources */,
-				888BB8251A5EE78500157977 /* IBT_INTERLOGIX_01_LR_CONN_AUTOLOG_WEBCTRL_EDWARDS.mov in Resources */,
 				209AEFA519D44D5D0074A3EA /* 03_TRANS_ELEV.png in Resources */,
 				8895FEFC1A5B19F50076A3EC /* logo-automatedLogic.png in Resources */,
 				888BB9ED1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png in Resources */,
@@ -2665,6 +2682,7 @@
 				888BBA261A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png in Resources */,
 				888BBA111A67042B00157977 /* green-logo-singapore.png in Resources */,
 				20BF48FC1A3B501D009645DC /* logo_taylor.png in Resources */,
+				8800E3361A72D491000E3D97 /* green-technology-otis-TEDA.png in Resources */,
 				20A39EB219C32F8800C71430 /* title5@2x.png in Resources */,
 				888BBA381A69309600157977 /* help-text-bg@2x.png in Resources */,
 				8834E2771A57221B00204D81 /* menu_utc.png in Resources */,

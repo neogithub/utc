@@ -209,7 +209,37 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
-                                        <fragment content="United Technologies is the world's largest provider of building technologies">
+                                        <fragment content="United Technologies">
+                                            <attributes>
+                                                <color key="NSColor" red="0.28627450980392155" green="0.29019607843137257" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                                <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                <real key="NSStrokeWidth" value="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">
+United Technologies is the world's largest provider of building technologies
+
+Intelligent Building Technologies</string>
                                             <attributes>
                                                 <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                                 <font key="NSFont" size="18" name="Helvetica-Bold"/>

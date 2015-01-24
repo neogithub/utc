@@ -245,7 +245,7 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                             <rect key="frame" x="-1" y="247" width="500" height="248"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-monterrey.jpg" id="fM7-yQ-KtL">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green-technology-carrier-mexico.png" id="fM7-yQ-KtL">
                                     <rect key="frame" x="47" y="16" width="196" height="145"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
@@ -270,7 +270,7 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-teda.jpg" id="Hlz-Ab-9DM">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green-technology-otis-TEDA.png" id="Hlz-Ab-9DM">
                                     <rect key="frame" x="259" y="16" width="195" height="145"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
@@ -339,10 +339,10 @@ Otis can utilize Interlogix security cameras for video crowd sensing in order to
         <image name="green-logo-kuwait.png" width="141" height="109"/>
         <image name="green-logo-singapore.png" width="81" height="109"/>
         <image name="green-logo-usa.png" width="130" height="112"/>
+        <image name="green-technology-carrier-mexico.png" width="200" height="150"/>
+        <image name="green-technology-otis-TEDA.png" width="200" height="150"/>
         <image name="grfx_ibt_close.png" width="15" height="16"/>
         <image name="grfx_ibt_header.png" width="1" height="45"/>
-        <image name="img-monterrey.jpg" width="336" height="250"/>
-        <image name="img-teda.jpg" width="336" height="250"/>
         <image name="sustainability-logos-bg.jpg" width="500" height="248"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
