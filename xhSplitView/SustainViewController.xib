@@ -11,7 +11,6 @@
                 <outlet property="uiiv_header" destination="Zi0-a5-uBn" id="D7R-KW-9IZ"/>
                 <outlet property="uil_header" destination="i5Y-je-AiI" id="dXc-Gs-Jeq"/>
                 <outlet property="uitv_sustain" destination="H34-8N-O6L" id="Fqz-Wa-MNX"/>
-                <outlet property="uitv_text" destination="SeY-UO-KQh" id="1rd-66-m1i"/>
                 <outlet property="uiv_Text" destination="HXa-Fe-L0o" id="pcz-xs-b9d"/>
                 <outlet property="uiv_buttons" destination="As2-ed-IIC" id="h8P-3Z-o8R"/>
                 <outlet property="uiv_greentechImages" destination="f7C-0p-Nqy" id="CLT-2a-LEc"/>
@@ -32,7 +31,6 @@
                 <outletCollection property="uiivCollection" destination="Sis-z2-046" id="pld-D4-1D1"/>
                 <outletCollection property="uiivCollection" destination="Cae-Vp-ZeD" id="eb3-8S-DsK"/>
                 <outletCollection property="uiivCollection" destination="ufK-Lf-N0e" id="IDs-UG-CLO"/>
-                <outletCollection property="uibCollection" destination="ecg-zh-xfX" id="ZDN-U2-ygC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -52,33 +50,6 @@
                             <rect key="frame" x="0.0" y="45" width="677" height="530"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="SeY-UO-KQh">
-                                    <rect key="frame" x="204" y="19" width="465" height="400"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">As a responsible corporate citizen, we are com​mitted to minimizing any adverse environmental impact of our products, our operations and our supply chain. We provide a safe work environme​nt and support lifelong learning for all employees. We support charitable and social causes in the communities where we do business. 
-
-Everywhere we do business, we apply the highest standards of corporate responsibility and measure success with the same set of ethical, environmental and safety metrics.​
-
-</string>
-                                            <attributes>
-                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="17" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Select a Topic to Learn More">
-                                            <attributes>
-                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="13" name="Helvetica-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
                                 <view contentMode="scaleToFill" id="igY-n1-wCT">
                                     <rect key="frame" x="0.0" y="0.0" width="185" height="530"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -87,21 +58,8 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                                             <rect key="frame" x="22" y="29" width="140" height="305"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ecg-zh-xfX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="58"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.3921568627" green="0.65490196079999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                                    <state key="normal" title="Sustainability Overview">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="loadIBTDetail:" destination="-1" eventType="touchUpInside" id="Kso-sp-pf0"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xt0-Q6-hwC">
-                                                    <rect key="frame" x="0.0" y="77" width="140" height="58"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xt0-Q6-hwC">
+                                                    <rect key="frame" x="0.0" y="-1" width="140" height="58"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.3921568627" green="0.65490196079999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -113,8 +71,8 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                                                         <action selector="loadIBTDetail:" destination="-1" eventType="touchUpInside" id="gt3-Gs-oJW"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K4S-AU-Pds">
-                                                    <rect key="frame" x="0.0" y="158" width="140" height="58"/>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K4S-AU-Pds">
+                                                    <rect key="frame" x="0.0" y="80" width="140" height="58"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.3921568627" green="0.65490196079999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -126,8 +84,8 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                                                         <action selector="loadIBTDetail:" destination="-1" eventType="touchUpInside" id="lMH-VF-UrZ"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xr0-6M-2wR">
-                                                    <rect key="frame" x="0.0" y="239" width="140" height="58"/>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xr0-6M-2wR">
+                                                    <rect key="frame" x="0.0" y="161" width="140" height="58"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.3921568627" green="0.65490196079999996" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -304,9 +262,8 @@ Everywhere we do business, we apply the highest standards of corporate responsib
                             <rect key="frame" x="10" y="25" width="480" height="400"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <string key="text">Otis Compass destination management system works with Lenel’s OnGuard system to provide secure elevator bank access—facilitating orderly traffic flow, identifying cardholders requesting elevators and automatically defininf the floor or floors accessible to each person.
-
-Otis can utilize Interlogix security cameras for video crowd sensing in order to dispatch elevators for a large group of people
+                            <string key="text" base64-UTF8="YES">
+Cg
 </string>
                             <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>

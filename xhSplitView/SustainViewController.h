@@ -27,7 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIView *uiv_ibtData;
 @property (weak, nonatomic) IBOutlet UIView *uiv_logoBns;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *uibCollection;
-@property (weak, nonatomic) IBOutlet UITextView *uitv_text;
 @property (weak, nonatomic) IBOutlet UIImageView *uiiv_data;
 @property (weak, nonatomic) IBOutlet UIView *uiv_buttons;
 @property (strong, nonatomic) IBOutlet UIView *uiv_Text;
