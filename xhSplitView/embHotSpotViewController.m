@@ -28,7 +28,7 @@ enum {
     TitleLabelsOffscreen,
 };
 
-@interface embHotSpotViewController () <ebZoomingScrollViewDelegate, neoHotspotsViewDelegate, SustainViewControllerDelegate, UIGestureRecognizerDelegate>
+@interface embHotSpotViewController () <ebZoomingScrollViewDelegate, neoHotspotViewDelegate, SustainViewControllerDelegate, UIGestureRecognizerDelegate>
 {
     // fact cards
     CGFloat         removeTextAfterThisManySeconds;
@@ -242,6 +242,20 @@ enum {
     NSArray *totalDataArray = selectedCo.cohotspots;
     //NSLog(@"%@",selectedCo.cohotspots);
     
+    for (int i = 0; i < [totalDataArray count]; i++)
+    {
+        NSDictionary *hotspot_raw = [[NSDictionary alloc] initWithDictionary:totalDataArray[i]];
+        neoHotspotsView *hotspot2 = [[neoHotspotsView alloc] initWithHotspotInfo:hotspot_raw];
+        hotspot2.labelAlignment = i;
+        hotspot2.tag = i;
+        hotspot2.delegate = self;
+        hotspot2.showArrow = YES;
+        [_arr_hotspotsArray addObject: hotspot2];
+        [_uis_zoomingImg.blurView addSubview: hotspot2];
+    }
+
+    
+    /*
     for (int i = 0; i < [totalDataArray count]; i++) {
         NSDictionary *hotspotItem = totalDataArray [i];
         
@@ -275,6 +289,7 @@ enum {
         _myHotspots.tagOfHs = i;
         [_uis_zoomingImg.blurView addSubview:_myHotspots];
     }
+     */
 }
 
 // load the hotpots of the company selected
@@ -289,6 +304,19 @@ enum {
     NSArray *totalDataArray = arrayOfSubHotspots;
     //NSLog(@"%@",selectedCo.cohotspots);
     
+    for (int i = 0; i < [totalDataArray count]; i++)
+    {
+        NSDictionary *hotspot_raw = [[NSDictionary alloc] initWithDictionary:totalDataArray[i]];
+        neoHotspotsView *hotspot2 = [[neoHotspotsView alloc] initWithHotspotInfo:hotspot_raw];
+        hotspot2.labelAlignment = i;
+        hotspot2.tag = i;
+        hotspot2.delegate = self;
+        hotspot2.showArrow = YES;
+        [_arr_hotspotsArray addObject: hotspot2];
+        [_uis_zoomingInfoImg.blurView addSubview: hotspot2];
+    }
+    
+    /*
     for (int i = 0; i < [totalDataArray count]; i++) {
         NSDictionary *hotspotItem = totalDataArray [i];
         
@@ -322,26 +350,28 @@ enum {
         _myHotspots.tagOfHs = i + 100;
         [_uis_zoomingInfoImg.blurView addSubview:_myHotspots];
     }
+     */
 }
 
 
 #pragma mark - HOTSPOTS
 #pragma mark hotspot tapped Delegate Method
 
--(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
+- (void)neoHotspotsView:(neoHotspotsView *)hotspot didSelectItemAtIndex:(NSInteger)index
+//-(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
     
-    NSLog(@"neoHotspotsView");
+    NSLog(@"\\n\n\n\n\n\n\n/n/n/n/n/n/n/ nneoHotspotsView");
     
     BOOL isSubHotspots;
     
     int formattedTag = 0;
     
-    if (i > 99) {
-        formattedTag = i - 100;
+    if (index > 99) {
+        formattedTag = index - 100;
         isSubHotspots = YES;
     } else {
-        formattedTag = i;
+        formattedTag = index;
         isSubHotspots = NO;
     }
     
@@ -350,7 +380,7 @@ enum {
     tappedView.alpha = 0.75;
     [tappedView setLabelAlpha:0.75];
     
-    if ([tappedView.str_typeOfHs isEqualToString:@"movie"]) {
+    if ([tappedView.contentType isEqualToString:@"movie"]) {
         
         _coDict = [_arr_subHotspots objectAtIndex:formattedTag];
         NSString *movieNamed =  [_coDict objectForKey:@"fileName"];
@@ -363,7 +393,7 @@ enum {
             imageNameName = [NSString stringWithFormat:@"overlay.png"];
         }
         
-        if (i > 99) {
+        if (index > 99) {
             [self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:topTitle withOverlay:imageNameName];
         } else {
             [self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg withOverlay:nil];
@@ -381,10 +411,10 @@ enum {
         
         if(isSubHotspots==YES)
         {
-            [topTitle appendHotSpotTitle:tappedView.str_labelText];
+            [topTitle appendHotSpotTitle:tappedView.captionText];
             
         } else {
-            [topTitle appendHotSpotTitle:tappedView.str_labelText];
+            [topTitle appendHotSpotTitle:tappedView.captionText];
             
             //[topTitle setHotSpotTitle:tappedView.str_labelText];
         }

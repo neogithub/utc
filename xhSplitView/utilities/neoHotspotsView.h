@@ -1,74 +1,57 @@
 //
-//  neoHotspotsView.h
+//  neoHotspotView.h
 //  neoHotspots
 //
-//  Created by Xiaohe Hu on 9/26/13.
-//  Copyright (c) 2013 Xiaohe Hu. All rights reserved.
+//  Created by Xiaohe Hu on 12/22/14.
+//  Copyright (c) 2014 Xiaohe Hu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <math.h>
 @class neoHotspotsView;
-
-@protocol neoHotspotsViewDelegate
+@protocol neoHotspotViewDelegate
 typedef enum {
-    CaptionAlignmentTop,
+    CaptionAlignmentBottom,     //0
     
-    CaptionAlignmentBottom,
+    CaptionAlignmentTop,        //1
     
-    CaptionAlignmentLeft,
+    CaptionAlignmentLeft,       //2
     
-    CaptionAlignmentRight,
+    CaptionAlignmentRight,      //3
     
-    CaptionAlignmentTopLeft,
+    CaptionAlignmentTopLeft,    //4
     
-    CaptionAlignmentTopRight,
+    CaptionAlignmentTopRight,   //5
     
-    CaptionAlignmentBottomLeft,
+    CaptionAlignmentBottomLeft, //6
     
-    CaptionAlignmentBottomRight
+    CaptionAlignmentBottomRight //7
     
 } HotspotCaptionAlignment;
-
 @optional
--(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i;
+- (void)neoHotspotsView:(neoHotspotsView *)hotspot didSelectItemAtIndex:(NSInteger)index;
 @end
-@interface neoHotspotsView : UIView <UIGestureRecognizerDelegate>
+
+@interface neoHotspotsView : UIView
 {
-    UIImageView     *uiiv_hsImgView;
-    UIImageView     *uiiv_arwImgView;
-    NSString        *hotspotBgName;
-    UIColor         *bgColor;
-    UILabel         *uil_caption;
-    NSString        *str_labelText;
-    NSString        *str_typeOfHs;
-    
-    int             tagOfHs;
-    
-    float           arwAngle;
-    float           timeRotate;
-    
-    BOOL            timeIsSet;
-    BOOL            withArw;
-	
+    float               x_Value;
+    float               y_Value;
+    CGSize              labelSize;
+    UIImageView         *uiiv_hotspotBG;
+    UIImageView         *uiiv_arrowImg;
+    UILabel             *uil_caption;
+    float               arrowAngle;
 }
-@property (nonatomic, assign) id                delegate;
 
-@property (nonatomic, strong) UIImageView       *uiiv_hsImgView;
-@property (nonatomic, strong) UIImageView       *uiiv_arwImgView;
-@property (nonatomic, strong) NSString          *hotspotBgName;
-@property (nonatomic, strong) UIColor           *bgColor;
-@property (nonatomic, strong) UILabel           *uil_caption;
-@property (nonatomic ,strong) NSString          *str_labelText;
-@property (nonatomic, strong) NSString          *str_typeOfHs;
-@property (nonatomic, strong) UIView			*uiv_container;
+@property (nonatomic, readwrite) BOOL                       showArrow;
+@property (nonatomic, strong) id                            delegate;
+@property (nonatomic, strong) NSDictionary                  *dict_rawData;
+@property (nonatomic, assign) HotspotCaptionAlignment       labelAlignment;
+@property (nonatomic, strong) NSString                      *contentType;
+@property (nonatomic, strong) NSString                      *contentFileName;
+@property (nonatomic ,strong) NSString                      *captionText;
 
-@property (nonatomic, readwrite) float          arwAngle;
-@property (nonatomic, readwrite) float          timeRotate;
-@property (nonatomic, readwrite) int            tagOfHs;
 
-@property (nonatomic, assign) HotspotCaptionAlignment labelAlignment;
-
-- (void)hotspotWithTagTapped:(UIGestureRecognizer*)recognizer;
+- (id)initWithHotspotInfo:(NSDictionary *)hotspotInfo;
 - (void)setLabelAlpha:(CGFloat)alpha;
+
 @end
