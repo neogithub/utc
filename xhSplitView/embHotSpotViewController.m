@@ -78,7 +78,8 @@ enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
+
     NSLog(@"hotspotbiewcontroller");
     // Do any additional setup after loading the view.
     
@@ -180,13 +181,9 @@ enum {
     _uis_zoomingImg.tag = 1100;
     [self.view addSubview:_uis_zoomingImg];
     
-    //if (_uiv_movieContainer) {
-    //    [self.view insertSubview: _uis_zoomingImg belowSubview:_uiv_movieContainer];
-    //} else {
-        [self.view addSubview: _uis_zoomingImg];
-    //}
     
-   // [self initSplitOpenBtn];
+    [self.view addSubview: _uis_zoomingImg];
+    
 }
 
 
@@ -452,46 +449,7 @@ enum {
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
-//    NSLog(@"zoomingScroll.tg = %li", (long)ebZoomingScrollView.tag);
-//    
-//    // standard interface view
-//    if (ebZoomingScrollView.tag == 1100) {
-//        [_uis_zoomingInfoImg bringSubviewToFront:_uis_zoomingImg];
-//        [_uis_zoomingImg.scrollView setZoomScale:1.0];
-//        
-//        // hotspot cleanup
-//        [topTitle removeHotspotTitle];
-//        [topTitle removeCompanyTitle];
-//        
-//        // clean up last tapped view
-//        // we don;t need it anymore
-//        tappedView=nil;
-//        
-//        [self unhideChrome];
-//        
-//        [UIView animateWithDuration:0.5 animations:^{
-//            _uis_zoomingImg.alpha = 1.0;
-//        } completion:^(BOOL completed) {
-//            [_uis_zoomingInfoImg removeFromSuperview];
-//            _uis_zoomingInfoImg = nil;
-//        }];
-//        
-//    } else {
-//        // subhotspot  view
-//        NSLog(@"subhotspot");
-//        [UIView animateWithDuration:0.5 animations:^{
-//            _uis_zoomingInfoImg.alpha = 0.0;
-//            _uis_zoomingImg.alpha = 1.0;
-//        } completion:^(BOOL completed) {
-//            [_uis_zoomingInfoImg removeFromSuperview];
-//            _uis_zoomingInfoImg = nil;
-//        }];
-//        [topTitle removeHotspotTitle];
-//        [topTitle removeCompanyTitle];
-//        [self unhideChrome];
-//    }
-    
-    NSLog(@"scrollViewDidRemove");
+    NSLog(@"eb scrollViewDidRemove");
 }
 
 #pragma mark - UTILITIES : General
@@ -642,6 +600,13 @@ enum {
     
 }
 
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+//    if ([touch.view isKindOfClass:[UIButton class]]){
+//        return NO;
+//    }
+//    return YES;
+//}
+
 -(void)addMovieGestures
 {
     UITapGestureRecognizer *tappedMovie = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedMovie:)];
@@ -751,7 +716,7 @@ enum {
             [self animateTitleAndHotspot:TitleLabelsOnscreen];
         }
         
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        //[[NSNotificationCenter defaultCenter] removeObserver:self];
         
         if (_myTimer) {
             [self.myTimer invalidate];
@@ -814,6 +779,9 @@ enum {
         
         [self clearHotpsotData];
     }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 /*
@@ -897,8 +865,6 @@ enum {
 
 -(void)removeMovieLayers
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
-
     [_avPlayerLayer removeFromSuperlayer];
     _avPlayerLayer = nil;
     [_uiv_movieContainer removeFromSuperview];

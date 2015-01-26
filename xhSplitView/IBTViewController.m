@@ -156,12 +156,6 @@
         obj.alpha = 1.0;
     }];
     
-//    [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
-//            obj.alpha = 1.0;
-//            [obj.layer setBorderColor:[UIColor clearColor].CGColor];
-//            [obj.layer setBorderWidth:0.0];
-//    }];
-    
     [self dimButtonAtIndex:(int)[sender tag]];
 
     
@@ -170,7 +164,6 @@
                         options:0 animations:^{
                             _uiv_detail.frame = CGRectMake(125, 575, 575, 575);
                             _uitv_summaryText.frame = CGRectMake(137, 30, 524, 575);
-                            //_uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y+90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height-170);
                             
                         } completion:nil];
 }
@@ -178,10 +171,6 @@
 
 -(IBAction)loadIBTDetail:(id)sender
 {
-   // [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(popMainLogo) object:nil];
-   // [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(popLogos) object:nil];
-   // [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(scaleConnectors) object:nil];
-    
     
     UIButton *btn = (UIButton*)sender;
 
@@ -214,12 +203,6 @@
             runOnce = true;
         }
     
-    NSLog(@"loadIBTDetail");
-    
-    NSLog(@"%@",NSStringFromCGRect(_uiv_ibt.frame));
-    
-    //UIButton *btn = (UIButton*)sender;
-    
     int sendertag = (int)[sender tag];
     
     _uib_learnMid.hidden = YES;
@@ -239,7 +222,6 @@
             
         case 2:
             _uib_learnTop.frame = CGRectMake(18, 165, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
-            //_uib_learnBtm.frame = CGRectMake(18, 182, _uib_learnTop.frame.size.width, _uib_learnTop.frame.size.height);
             _uib_learnBtm.hidden = YES;
             break;
             
@@ -277,17 +259,9 @@
     [UIView animateWithDuration:0.33 delay:0
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
-                          
-                            
-                            
+                
                             _uiv_detail.frame = CGRectMake(125, 50, 560, 575);
                             _uitv_summaryText.frame = CGRectMake(137, -575, 524, 575);
-                            
-                           // _uib_learn.frame = CGRectMake(_uib_learn.frame.origin.x, 0, _uib_learn.frame.size.width, _uib_learn.frame.size.height);
-                            
-                            /*if (_uiv_ibt.frame.size.height == 410) {
-                                _uiv_ibt.frame = CGRectMake(_uiv_ibt.frame.origin.x, _uiv_ibt.frame.origin.y-90, _uiv_ibt.frame.size.width, _uiv_ibt.frame.size.height+170);
-                            }*/
                             
                             CGPoint originInWindowCoordinates = [_uiv_logoBns convertPoint:btn.bounds.origin fromView:btn];
                             
@@ -314,8 +288,6 @@
 
     _uiiv_logo.image = [UIImage imageNamed:catDict[@"selectedlogo"]];
     _uiiv_arrow.image = [UIImage imageNamed:catDict[@"arrow"]];
-
-    //_uitv_connectText.text = catDict[@"text"];
 
     NSAttributedString *t = [[NSAttributedString alloc] initWithString:catDict[@"text"]];
     NSAttributedString *g = [t addRegisteredTrademarkTo:catDict[@"text"] withColor:[UIColor utcSmokeGray] fnt:[UIFont fontWithName:@"Helvetica" size:14]];
@@ -379,24 +351,10 @@
     [ibtCompanies enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 0.0;
     }];
-   // _uiiv_logo.alpha = 0.0;
     
-    [self performSelector:@selector(popMainLogo) withObject:nil afterDelay:0.33];
-
     [self performSelector:@selector(scaleConnectors) withObject:nil afterDelay:0.66];
     
     [self performSelector:@selector(popLogos) withObject:nil afterDelay:1.00];
-}
-
--(void)popMainLogo
-{
-    [UIView animateWithDuration:0.33 delay:0
-         usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
-                        options:0 animations:^{
-                            
-                            //_uiiv_logo.alpha = 1.0;
-
-                        } completion:nil];
 }
 
 -(void)popLogos
@@ -443,10 +401,6 @@
             NSLog(@"found!");
             [obj.layer setBorderColor:[UIColor utcBlueAlight].CGColor];
             [obj.layer setBorderWidth:5.0];
-            
-            //Assigning YES to the stop variable is the equivalent of calling "break" during fast enumeration
-            //obj.alpha = 0.13;
-            //*stop = YES;
             return ;
         } else {
             obj.alpha = 1.0;

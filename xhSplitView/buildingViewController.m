@@ -1124,6 +1124,7 @@ enum {
 	
 	UITapGestureRecognizer *doubleTapMovie = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeMovie)];
 	doubleTapMovie.numberOfTapsRequired = 2;
+    doubleTapMovie.cancelsTouchesInView = NO;
 	[self.view addGestureRecognizer:doubleTapMovie];
 
 }
