@@ -1658,18 +1658,46 @@ Lenel OnGuard building access system integrates with Interlogix TruVision: secur
 		<array>
 			<dict>
 				<key>catType</key>
-				<string>filmWithCards</string>
+				<string>stillWithMenu</string>
 				<key>subhotspots</key>
 				<array>
 					<dict>
 						<key>xy</key>
 						<string>20,75</string>
 						<key>fileName</key>
-						<string>PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov</string>
+						<string>PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov</string>
 						<key>removeafterseconds</key>
-						<integer>44</integer>
+						<integer>13</integer>
 						<key>width</key>
 						<string>360</string>
+						<key>facts</key>
+						<dict>
+							<key>factwidth</key>
+							<string>300</string>
+							<key>factxy</key>
+							<string>30,130</string>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Offers powerful control features and supports major communications protocols</string>
+									<key>appearanceDelay</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Features intuitive user interface, which is consistent from building to building</string>
+									<key>appearanceDelay</key>
+									<integer>3</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Responds to and monitors Carrier HVAC, Otis elevators and escalators and Edwards fire and life safety systems</string>
+									<key>appearanceDelay</key>
+									<integer>5</integer>
+								</dict>
+							</array>
+						</dict>
 						<key>alignment</key>
 						<integer>3</integer>
 						<key>type</key>
@@ -1679,11 +1707,143 @@ Lenel OnGuard building access system integrates with Interlogix TruVision: secur
 						<key>caption</key>
 						<string>Web-Based System</string>
 					</dict>
+					<dict>
+						<key>xy</key>
+						<string>20,125</string>
+						<key>fileName</key>
+						<string>PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov</string>
+						<key>removeafterseconds</key>
+						<integer>12</integer>
+						<key>width</key>
+						<string>360</string>
+						<key>facts</key>
+						<dict>
+							<key>factwidth</key>
+							<string>360</string>
+							<key>factxy</key>
+							<string>30,130</string>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Calculates optimum set point values based on actual operating requirements</string>
+									<key>appearanceDelay</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Assures comfortable settings at time of occupancy based on building conditions, weather and system capacity</string>
+									<key>appearanceDelay</key>
+									<integer>3</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>​Reduces short-term energy use</string>
+									<key>appearanceDelay</key>
+									<integer>5</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Integrates with Carrier to optimize chiller plant system efficiency</string>
+									<key>appearanceDelay</key>
+									<integer>7</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Integrates with Edwards EST: 3 platform and security cameras to see where fire is located</string>
+									<key>appearanceDelay</key>
+									<integer>9</integer>
+								</dict>
+							</array>
+						</dict>
+						<key>alignment</key>
+						<integer>3</integer>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker center.png</string>
+						<key>caption</key>
+						<string>Saves Energy &amp; Expense</string>
+					</dict>
+					<dict>
+						<key>xy</key>
+						<string>20,175</string>
+						<key>fileName</key>
+						<string>PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov</string>
+						<key>removeafterseconds</key>
+						<integer>10</integer>
+						<key>width</key>
+						<string>360</string>
+						<key>facts</key>
+						<dict>
+							<key>factwidth</key>
+							<string>360</string>
+							<key>factxy</key>
+							<string>30,130</string>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Calculates energy efficiency, consumption and occupant comfort; reports trends as easily understandable percentages</string>
+									<key>appearanceDelay</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>copy</key>
+									<string>Dynamically displays calculations per area, tenant and building</string>
+									<key>appearanceDelay</key>
+									<integer>3</integer>
+								</dict>
+							</array>
+						</dict>
+						<key>alignment</key>
+						<integer>3</integer>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker center.png</string>
+						<key>caption</key>
+						<string>Environmental Index</string>
+					</dict>
+					<dict>
+						<key>xy</key>
+						<string>20,225</string>
+						<key>fileName</key>
+						<string>PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov</string>
+						<key>removeafterseconds</key>
+						<integer>10</integer>
+						<key>width</key>
+						<string>360</string>
+						<key>facts</key>
+						<dict>
+							<key>factwidth</key>
+							<string>360</string>
+							<key>factxy</key>
+							<string>30,130</string>
+							<key>factscopy</key>
+							<array>
+								<dict>
+									<key>copy</key>
+									<string>Shows exact hour and minute in which problem occurred for more accurate diagnosis</string>
+									<key>appearanceDelay</key>
+									<integer>1</integer>
+								</dict>
+							</array>
+						</dict>
+						<key>alignment</key>
+						<integer>3</integer>
+						<key>type</key>
+						<string>movie</string>
+						<key>background</key>
+						<string>icon marker center.png</string>
+						<key>caption</key>
+						<string>Time-Lapse Graphics</string>
+					</dict>
 				</array>
 				<key>catName</key>
 				<string>WebCTRL: Web-Based Building Automation System</string>
 				<key>subBG</key>
-				<string>PH2_AUTOLOG_00_STILL_WEB_BASE_HS.png</string>
+				<string>PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png</string>
 			</dict>
 			<dict>
 				<key>catType</key>
@@ -2123,7 +2283,7 @@ Automated Logic WebCTRL building automation system integrates with Edwards EST: 
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Delivers exceptional image quality and capture critical details</string>
+									<string>Delivers exceptional image quality and captures critical details</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>

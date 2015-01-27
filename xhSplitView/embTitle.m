@@ -110,15 +110,27 @@ enum {
 
 -(void)appendHotSpotTitle:(NSString *)string
 {
-	if (kshowNSLogBOOL) NSLog(@"appendHotSpotTitle");
+    NSLog(@"%@",string);
+    
+    if (kshowNSLogBOOL) NSLog(@"appendHotSpotTitle");
 	_appendString = _uil_HotspotTitle.text;
 	NSString *aappendString = [NSString stringWithFormat:@"   |   %@", string];
 	
 	NSString *newString = [_appendString stringByAppendingString:aappendString];
+    
+    UIFont *font;
+    
+#warning superhack
+    if ([_uil_HotspotTitle.text isEqualToString:@"WebCTRL® Web-Based Building Automation System"]) {
+        font = [UIFont fontWithName:@"Helvetica" size:15];
+    } else {
+        font = [UIFont fontWithName:@"Helvetica" size:17];
+    }
 	
-	UIFont *font = [UIFont fontWithName:@"Helvetica" size:17];
+	// UIFont *font = [UIFont fontWithName:@"Helvetica" size:16];
+    
 	CGFloat str_width = [self getWidthFromStringLength:newString andFont:font];
-	static CGFloat labelPad = 20;
+	static CGFloat labelPad = 30;
 	hotspotLabelWidth = str_width + (labelPad);
 	
 	_uil_HotspotTitle.frame = CGRectMake(companyLabelWidth, 0, hotspotLabelWidth+companyLabelWidth, backButtonActualHeight);

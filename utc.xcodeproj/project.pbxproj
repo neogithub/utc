@@ -13,8 +13,6 @@
 		20192C761A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */; };
 		20192C781A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */; };
 		20192C791A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */; };
-		20192C841A445CAF00969C85 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C831A445CAF00969C85 /* overlay.png */; };
-		20192C851A445CAF00969C85 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C831A445CAF00969C85 /* overlay.png */; };
 		20192C8A1A48729000969C85 /* icon marker center.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C861A48729000969C85 /* icon marker center.png */; };
 		20192C8B1A48729000969C85 /* icon marker center.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C861A48729000969C85 /* icon marker center.png */; };
 		20192C8C1A48729000969C85 /* icon marker center right.png in Resources */ = {isa = PBXBuildFile; fileRef = 20192C871A48729000969C85 /* icon marker center right.png */; };
@@ -77,7 +75,6 @@
 		20A95A5F19CBC1AA00132F7E /* icon marker left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A5D19CBC1AA00132F7E /* icon marker left@2x.png */; };
 		20A95A7619CC313F00132F7E /* 01_HERO_CITY.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7419CC313F00132F7E /* 01_HERO_CITY.png */; };
 		20A95A7C19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */; };
-		20A95A7D19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */; };
 		20BA88BB1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */; };
 		20BA88BC1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */; };
 		20BA88BF1A378EEF00705945 /* embUiViewCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BE1A378EEF00705945 /* embUiViewCard.m */; };
@@ -231,7 +228,6 @@
 		20E5472C1A2DFEF40073B2CF /* 01_TRANS_CITY_TO_BLDG.png in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFA019D44D5D0074A3EA /* 01_TRANS_CITY_TO_BLDG.png */; };
 		20E5472D1A2DFEF40073B2CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82A66AAD19B7926B00C8E12A /* Main.storyboard */; };
 		20E5472E1A2DFEF40073B2CF /* 01_TRANS_CITY_TO_BLDG.mov in Resources */ = {isa = PBXBuildFile; fileRef = 206063DB19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov */; };
-		20E5472F1A2DFEF40073B2CF /* 04_HOTSPOT_CROSS_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */; };
 		20E547301A2DFEF40073B2CF /* grfx_cellBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 824F14DB19CB360300628F01 /* grfx_cellBG.jpg */; };
 		20E547311A2DFEF40073B2CF /* grfx_helpBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A39EC219C33C9100C71430 /* grfx_helpBtn@2x.png */; };
 		20E547321A2DFEF40073B2CF /* 00_LOGO_TRANS_HERO_CITY.mov in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFA619D47C410074A3EA /* 00_LOGO_TRANS_HERO_CITY.mov */; };
@@ -359,8 +355,17 @@
 		8878D1901A6D9267009BEE83 /* tmpImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8878D18E1A6D9267009BEE83 /* tmpImage.jpg */; };
 		8878D1931A6DA0A6009BEE83 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */; };
 		8878D1941A6DA0A6009BEE83 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */; };
-		888BB7741A5DA25F00157977 /* overlay2.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7731A5DA25F00157977 /* overlay2.png */; };
-		888BB7751A5DA25F00157977 /* overlay2.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7731A5DA25F00157977 /* overlay2.png */; };
+		888551261A767BE00009AA0D /* IBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */; };
+		8885512C1A77CF570009AA0D /* PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png in Resources */ = {isa = PBXBuildFile; fileRef = 888551271A77CF570009AA0D /* PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png */; };
+		8885512D1A77CF570009AA0D /* PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png in Resources */ = {isa = PBXBuildFile; fileRef = 888551271A77CF570009AA0D /* PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png */; };
+		8885512E1A77CF570009AA0D /* PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888551281A77CF570009AA0D /* PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov */; };
+		8885512F1A77CF570009AA0D /* PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888551281A77CF570009AA0D /* PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov */; };
+		888551301A77CF570009AA0D /* PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888551291A77CF570009AA0D /* PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov */; };
+		888551311A77CF570009AA0D /* PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888551291A77CF570009AA0D /* PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov */; };
+		888551321A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8885512A1A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov */; };
+		888551331A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8885512A1A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov */; };
+		888551341A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8885512B1A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov */; };
+		888551351A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8885512B1A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov */; };
 		888BB7981A5E136C00157977 /* ibt_arrow_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7881A5E136C00157977 /* ibt_arrow_one.png */; };
 		888BB7991A5E136C00157977 /* ibt_arrow_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7881A5E136C00157977 /* ibt_arrow_one.png */; };
 		888BB79A1A5E136C00157977 /* ibt_arrow_one@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7891A5E136C00157977 /* ibt_arrow_one@2x.png */; };
@@ -463,8 +468,6 @@
 		888BB86E1A5EE86000157977 /* HOTSPOT_PAGE_UI.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB8621A5EE86000157977 /* HOTSPOT_PAGE_UI.png */; };
 		888BB8701A5EE86A00157977 /* PH2_ADVANTE3C_01_SMG_GENERAL.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB86F1A5EE86A00157977 /* PH2_ADVANTE3C_01_SMG_GENERAL.png */; };
 		888BB8711A5EE86A00157977 /* PH2_ADVANTE3C_01_SMG_GENERAL.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB86F1A5EE86A00157977 /* PH2_ADVANTE3C_01_SMG_GENERAL.png */; };
-		888BB88B1A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB8791A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov */; };
-		888BB88C1A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB8791A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov */; };
 		888BB8911A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB87C1A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov */; };
 		888BB8921A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB87C1A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov */; };
 		888BB8B11A5EE88500157977 /* PH2_CARRIER_A_00_ANIM_TRANS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB89A1A5EE88500157977 /* PH2_CARRIER_A_00_ANIM_TRANS.mov */; };
@@ -746,7 +749,6 @@
 		200B9D0C19D25E7B00C7E7AC /* menu header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu header@2x.png"; sourceTree = "<group>"; };
 		20192C741A41D59B00969C85 /* PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG; path = images/PH2_CARRIER_01_ANIM_AQUAEDGE_23XRV_HS_00.PNG; sourceTree = "<group>"; };
 		20192C771A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; path = images/PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG; sourceTree = "<group>"; };
-		20192C831A445CAF00969C85 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
 		20192C861A48729000969C85 /* icon marker center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center.png"; sourceTree = "<group>"; };
 		20192C871A48729000969C85 /* icon marker center right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center right.png"; sourceTree = "<group>"; };
 		20192C881A48729000969C85 /* icon marker center right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon marker center right@2x.png"; sourceTree = "<group>"; };
@@ -805,7 +807,6 @@
 		20A95A7419CC313F00132F7E /* 01_HERO_CITY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 01_HERO_CITY.png; path = images/01_HERO_CITY.png; sourceTree = "<group>"; };
 		20A95A7519CC313F00132F7E /* 02_HERO_BLDG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 02_HERO_BLDG.png; path = images/02_HERO_BLDG.png; sourceTree = "<group>"; };
 		20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 03_HERO_BLDG_SECTION.png; path = images/03_HERO_BLDG_SECTION.png; sourceTree = "<group>"; };
-		20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 04_HOTSPOT_CROSS_SECTION.png; path = images/04_HOTSPOT_CROSS_SECTION.png; sourceTree = "<group>"; };
 		20BA88B91A378EDB00705945 /* NSTimer+CVPausable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+CVPausable.h"; sourceTree = "<group>"; };
 		20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+CVPausable.m"; sourceTree = "<group>"; };
 		20BA88BD1A378EEE00705945 /* embUiViewCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = embUiViewCard.h; sourceTree = "<group>"; };
@@ -958,7 +959,11 @@
 		8878D18E1A6D9267009BEE83 /* tmpImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tmpImage.jpg; path = UI/grfx/sustainability/tmpImage.jpg; sourceTree = "<group>"; };
 		8878D1911A6DA0A6009BEE83 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
-		888BB7731A5DA25F00157977 /* overlay2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay2.png; sourceTree = "<group>"; };
+		888551271A77CF570009AA0D /* PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png; path = xhSplitView/CONTENT/C_PHASE_02/AUTOMATED_LOGIC/PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png; sourceTree = SOURCE_ROOT; };
+		888551281A77CF570009AA0D /* PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov; path = xhSplitView/CONTENT/C_PHASE_02/AUTOMATED_LOGIC/PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov; sourceTree = SOURCE_ROOT; };
+		888551291A77CF570009AA0D /* PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov; path = xhSplitView/CONTENT/C_PHASE_02/AUTOMATED_LOGIC/PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov; sourceTree = SOURCE_ROOT; };
+		8885512A1A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov; path = xhSplitView/CONTENT/C_PHASE_02/AUTOMATED_LOGIC/PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov; sourceTree = SOURCE_ROOT; };
+		8885512B1A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov; path = xhSplitView/CONTENT/C_PHASE_02/AUTOMATED_LOGIC/PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov; sourceTree = SOURCE_ROOT; };
 		888BB7881A5E136C00157977 /* ibt_arrow_one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ibt_arrow_one.png; path = UI/grfx/ibt/ibt_arrow_one.png; sourceTree = "<group>"; };
 		888BB7891A5E136C00157977 /* ibt_arrow_one@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ibt_arrow_one@2x.png"; path = "UI/grfx/ibt/ibt_arrow_one@2x.png"; sourceTree = "<group>"; };
 		888BB78A1A5E136C00157977 /* ibt_arrow_two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ibt_arrow_two.png; path = UI/grfx/ibt/ibt_arrow_two.png; sourceTree = "<group>"; };
@@ -1010,7 +1015,6 @@
 		888BB8611A5EE86000157977 /* HOTSPOT_INSIDE_UI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HOTSPOT_INSIDE_UI.png; path = xhSplitView/CONTENT/C_PHASE_02/_INTERFACE/HOTSPOT_INSIDE_UI.png; sourceTree = SOURCE_ROOT; };
 		888BB8621A5EE86000157977 /* HOTSPOT_PAGE_UI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HOTSPOT_PAGE_UI.png; path = xhSplitView/CONTENT/C_PHASE_02/_INTERFACE/HOTSPOT_PAGE_UI.png; sourceTree = SOURCE_ROOT; };
 		888BB86F1A5EE86A00157977 /* PH2_ADVANTE3C_01_SMG_GENERAL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_ADVANTE3C_01_SMG_GENERAL.png; path = xhSplitView/CONTENT/C_PHASE_02/ADVANTE3C/PH2_ADVANTE3C_01_SMG_GENERAL.png; sourceTree = SOURCE_ROOT; };
-		888BB8791A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov; path = xhSplitView/CONTENT/C_PHASE_02/AUTOMATED_LOGIC/PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov; sourceTree = SOURCE_ROOT; };
 		888BB87C1A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov; path = xhSplitView/CONTENT/C_PHASE_02/AUTOMATED_LOGIC/PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov; sourceTree = SOURCE_ROOT; };
 		888BB89A1A5EE88500157977 /* PH2_CARRIER_A_00_ANIM_TRANS.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = PH2_CARRIER_A_00_ANIM_TRANS.mov; path = xhSplitView/CONTENT/C_PHASE_02/CARRIER/PH2_CARRIER_A_00_ANIM_TRANS.mov; sourceTree = SOURCE_ROOT; };
 		888BB89B1A5EE88500157977 /* PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.png; path = xhSplitView/CONTENT/C_PHASE_02/CARRIER/PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.png; sourceTree = SOURCE_ROOT; };
@@ -1301,9 +1305,6 @@
 			isa = PBXGroup;
 			children = (
 				20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */,
-				20192C831A445CAF00969C85 /* overlay.png */,
-				888BB7731A5DA25F00157977 /* overlay2.png */,
-				20A95A7B19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png */,
 				20A95A7419CC313F00132F7E /* 01_HERO_CITY.png */,
 				20A95A7519CC313F00132F7E /* 02_HERO_BLDG.png */,
 				2050EAB41A3F4C3D00E03E25 /* PH2_KIDDE_01_SMG_FM200.PNG */,
@@ -1780,7 +1781,11 @@
 		888BB84C1A5EE7CA00157977 /* AUTOMATED_LOGIC */ = {
 			isa = PBXGroup;
 			children = (
-				888BB8791A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov */,
+				888551271A77CF570009AA0D /* PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png */,
+				888551281A77CF570009AA0D /* PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov */,
+				888551291A77CF570009AA0D /* PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov */,
+				8885512A1A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov */,
+				8885512B1A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov */,
 				888BB87C1A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov */,
 			);
 			name = AUTOMATED_LOGIC;
@@ -1997,7 +2002,7 @@
 						DevelopmentTeam = 97VHU5A6BJ;
 					};
 					82A66A9719B7926A00C8E12A = {
-						DevelopmentTeam = 97VHU5A6BJ;
+						DevelopmentTeam = 9734648496;
 					};
 				};
 			};
@@ -2064,6 +2069,7 @@
 				888BB9CA1A5F9E8D00157977 /* advantec.png in Resources */,
 				888BB8041A5EE75700157977 /* IBT_AUTOLOG_01_LR_CONN_CARRIER.mov in Resources */,
 				888BB7DD1A5EE6D900157977 /* PH1_OTIS_05_ANIM_GLIDE_DOOR_OPERATORS.mov in Resources */,
+				8885512D1A77CF570009AA0D /* PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png in Resources */,
 				888BB9321A5EE8D800157977 /* PH2_OTIS_03_LR_NCE_LED_LIGHT_BALUST.mov in Resources */,
 				20192C911A48729000969C85 /* icon marker center@2x.png in Resources */,
 				8800E32D1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov in Resources */,
@@ -2172,7 +2178,9 @@
 				20E547061A2DFEF40073B2CF /* bg_02.jpg in Resources */,
 				888BB9931A5F801A00157977 /* IBT-logo-otis.png in Resources */,
 				8895FF251A5B19F50076A3EC /* logo-onity.png in Resources */,
+				888551331A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov in Resources */,
 				20E547071A2DFEF40073B2CF /* bg_04.jpg in Resources */,
+				888551311A77CF570009AA0D /* PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov in Resources */,
 				888BBA121A67042B00157977 /* green-logo-singapore.png in Resources */,
 				888BB8CF1A5EE89200157977 /* PH2_EDWARDS_02_SMG_LS_CONTROL_PANEL.mov in Resources */,
 				888BBA0A1A67042B00157977 /* green-logo-india.png in Resources */,
@@ -2194,6 +2202,7 @@
 				8895FF171A5B19F50076A3EC /* logo-kidde@2x.png in Resources */,
 				20192C8D1A48729000969C85 /* icon marker center right.png in Resources */,
 				20E5470B1A2DFEF40073B2CF /* close bttn.png in Resources */,
+				8885512F1A77CF570009AA0D /* PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov in Resources */,
 				888BB99D1A5F801A00157977 /* IBT-Transp-logo-carrier@2x.png in Resources */,
 				888BB9EB1A66B71900157977 /* ibt-learnMore@2x.png in Resources */,
 				20192C791A42217F00969C85 /* PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.PNG in Resources */,
@@ -2212,7 +2221,6 @@
 				20E547101A2DFEF40073B2CF /* 03_HERO_BLDG_SECTION.png in Resources */,
 				20E547111A2DFEF40073B2CF /* 03_TRANS_ELEV.mov in Resources */,
 				20BF48E51A3B501D009645DC /* logo_lenel.png in Resources */,
-				888BB7751A5DA25F00157977 /* overlay2.png in Resources */,
 				888BB92E1A5EE8D800157977 /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov in Resources */,
 				20E547141A2DFEF40073B2CF /* icon marker left@2x.png in Resources */,
 				8800E3201A702B4F000E3D97 /* img-monterrey@2x.jpg in Resources */,
@@ -2270,7 +2278,6 @@
 				8895FF2B1A5B19F50076A3EC /* logo-otis@2x.png in Resources */,
 				20BF48DB1A3B501D009645DC /* logo_carrier@2x.png in Resources */,
 				888BB7B31A5E136C00157977 /* ibt_lenel_connections@2x.png in Resources */,
-				20192C851A445CAF00969C85 /* overlay.png in Resources */,
 				20E547271A2DFEF40073B2CF /* bg_01@2x.jpg in Resources */,
 				888BB8441A5EE79900157977 /* IBT_OTIS_01_LR_CDMS_CONN_LENEL.mov in Resources */,
 				20BF48E11A3B501D009645DC /* logo_kidde.png in Resources */,
@@ -2294,13 +2301,13 @@
 				20E5472A1A2DFEF40073B2CF /* 03_TRANS_ELEV.png in Resources */,
 				20BF49151A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				888BB8BA1A5EE88500157977 /* PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov in Resources */,
+				888551351A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov in Resources */,
 				888BB7A91A5E136C00157977 /* ibt_edwards_connections.png in Resources */,
 				888BBA331A68E20100157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov in Resources */,
 				888BBA181A67042B00157977 /* green-logo-usa@2x.png in Resources */,
 				888BB9071A5EE8B800157977 /* PH2_LENEL_01_LR_ONGUARD_BLDG_ACC_CONT_SYS.mov in Resources */,
 				20E5472B1A2DFEF40073B2CF /* bg_04@2x.jpg in Resources */,
 				8834E22D1A531E8300204D81 /* grfx_ibt_rule@2x.png in Resources */,
-				888BB88C1A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov in Resources */,
 				20E5472C1A2DFEF40073B2CF /* 01_TRANS_CITY_TO_BLDG.png in Resources */,
 				888BB8FB1A5EE8A900157977 /* PH2_KIDDE_03_SMG_WHDR_WET_CHEMICAL_SYS.mov in Resources */,
 				888BB8C21A5EE88500157977 /* PH2_CARRIER_C_02C_SMB_AERO_39M_AIR_HANDLERS.png in Resources */,
@@ -2332,7 +2339,6 @@
 				8834E2661A57074200204D81 /* logo_advantecibt.png in Resources */,
 				888BB9FE1A67042B00157977 /* green-logo-argentina.png in Resources */,
 				888BB7D31A5EE6D900157977 /* PH1_OTIS_00A_STILL_ELEV_HOTSPOT.png in Resources */,
-				20E5472F1A2DFEF40073B2CF /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				888BBA141A67042B00157977 /* green-logo-singapore@2x.png in Resources */,
 				20E547301A2DFEF40073B2CF /* grfx_cellBG.jpg in Resources */,
 				20BF48EF1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
@@ -2425,6 +2431,7 @@
 				20A95A5E19CBC1AA00132F7E /* icon marker left.png in Resources */,
 				888BB8C11A5EE88500157977 /* PH2_CARRIER_C_02C_SMB_AERO_39M_AIR_HANDLERS.png in Resources */,
 				8834E27D1A57221B00204D81 /* menu_utc@2x.png in Resources */,
+				888551341A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov in Resources */,
 				888BB7AE1A5E136C00157977 /* ibt_interlogix_connections@2x.png in Resources */,
 				888BBA171A67042B00157977 /* green-logo-usa@2x.png in Resources */,
 				20A39EBC19C3351C00C71430 /* bg_05@2x.jpg in Resources */,
@@ -2451,11 +2458,11 @@
 				20A39EB119C32F8800C71430 /* title4@2x.png in Resources */,
 				888BBA091A67042B00157977 /* green-logo-india.png in Resources */,
 				888BB92D1A5EE8D800157977 /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov in Resources */,
-				888BB7741A5DA25F00157977 /* overlay2.png in Resources */,
 				888BB9B01A5F83BA00157977 /* IBT-connection-line-triple.png in Resources */,
 				8800E3381A72D491000E3D97 /* green-technology-otis-TEDA@2x.png in Resources */,
 				824F14E119CB390800628F01 /* grfx_cellArrow.png in Resources */,
 				888BB9E81A66B71900157977 /* ibt-learnMore.png in Resources */,
+				8885512C1A77CF570009AA0D /* PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png in Resources */,
 				8834E2261A531E8300204D81 /* grfx_ibt_rule.png in Resources */,
 				888BBA0D1A67042B00157977 /* green-logo-kuwait.png in Resources */,
 				888BB9961A5F801A00157977 /* IBT-Transp-logo-automatedLogic.png in Resources */,
@@ -2522,6 +2529,7 @@
 				888BB9A61A5F801A00157977 /* IBT-Transp-logo-lenel.png in Resources */,
 				82A66AA619B7926B00C8E12A /* InfoPlist.strings in Resources */,
 				8834E24F1A56E32D00204D81 /* ibt_edwards@2x.png in Resources */,
+				888551321A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov in Resources */,
 				8895FF161A5B19F50076A3EC /* logo-kidde@2x.png in Resources */,
 				8800E3171A6EFB30000E3D97 /* IBT-logo-utc@2x.png in Resources */,
 				209AEFAE19D48C650074A3EA /* close bttn.png in Resources */,
@@ -2543,6 +2551,7 @@
 				206063E619D5D9F50045163F /* 03_TRANS_ELEV.mov in Resources */,
 				8895FF061A5B19F50076A3EC /* logo-carrier@2x.png in Resources */,
 				888BB7E51A5EE6E500157977 /* INT_00_ANIM_LOGO_TRANS_HERO_CITY.mov in Resources */,
+				8885512E1A77CF570009AA0D /* PH2_AUTOLOG_A_01_LR_WEB_BASE_SYS.mov in Resources */,
 				888BB97C1A5F801A00157977 /* IBT-connection-line-single@2x.png in Resources */,
 				8895FF2E1A5B19F50076A3EC /* logo-taylor@2x.png in Resources */,
 				888BB9AC1A5F801A00157977 /* IBT-Transp-logo-otis@2x.png in Resources */,
@@ -2564,7 +2573,6 @@
 				20A95A4F19CBB82800132F7E /* icon home@2x.png in Resources */,
 				8878D18F1A6D9267009BEE83 /* tmpImage.jpg in Resources */,
 				888BB8031A5EE75700157977 /* IBT_AUTOLOG_01_LR_CONN_CARRIER.mov in Resources */,
-				888BB88B1A5EE87600157977 /* PH2_AUTOLOG_A_00_ANIM_WEBCTRL.mov in Resources */,
 				888BB99A1A5F801A00157977 /* IBT-Transp-logo-carrier.png in Resources */,
 				20BF48DE1A3B501D009645DC /* logo_edwards@2x.png in Resources */,
 				888BB99C1A5F801A00157977 /* IBT-Transp-logo-carrier@2x.png in Resources */,
@@ -2629,6 +2637,7 @@
 				888BBA0F1A67042B00157977 /* green-logo-kuwait@2x.png in Resources */,
 				82A66AAF19B7926B00C8E12A /* Main.storyboard in Resources */,
 				888BB7D01A5EE6D900157977 /* PH1_OTIS_00_ANIM_FLYIN_TRANS_UNBUILD_TO_ELEV_HOTSPOT.mov in Resources */,
+				888551301A77CF570009AA0D /* PH2_AUTOLOG_A_02_LR_SAVES_ENERGY_AND_EXPENSE.mov in Resources */,
 				888BB93D1A5EE8E200157977 /* PH2_TAYLOR_00_STILL_HS.png in Resources */,
 				888BB8BF1A5EE88500157977 /* PH2_CARRIER_C_02B_SMB_AERO_39M_AIR_HANDLERS.png in Resources */,
 				8895FF0A1A5B19F50076A3EC /* logo-edwards@2x.png in Resources */,
@@ -2636,9 +2645,7 @@
 				206063DC19D512450045163F /* 01_TRANS_CITY_TO_BLDG.mov in Resources */,
 				888BB9A41A5F801A00157977 /* IBT-Transp-logo-interlogix@2x.png in Resources */,
 				888BB8CE1A5EE89200157977 /* PH2_EDWARDS_02_SMG_LS_CONTROL_PANEL.mov in Resources */,
-				20A95A7D19CC68D000132F7E /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
 				888BB9B21A5F83BA00157977 /* IBT-connection-line-triple@2x.png in Resources */,
-				20192C841A445CAF00969C85 /* overlay.png in Resources */,
 				20BF48D81A3B501D009645DC /* logo_carrier.png in Resources */,
 				888BB9311A5EE8D800157977 /* PH2_OTIS_03_LR_NCE_LED_LIGHT_BALUST.mov in Resources */,
 				8834E2451A56E32D00204D81 /* ibt_automatedlogic.png in Resources */,
@@ -2697,6 +2704,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888551261A767BE00009AA0D /* IBTViewController.m in Sources */,
 				8895FF3E1A5B44B50076A3EC /* SustainViewController.m in Sources */,
 				20E546C61A2DFEF40073B2CF /* PopoverViewController.m in Sources */,
 				20E546C71A2DFEF40073B2CF /* titleTableViewCell.m in Sources */,
