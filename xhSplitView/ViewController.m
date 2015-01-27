@@ -335,6 +335,7 @@ enum MenuVisibilityType : NSUInteger {
     NSLog(@"initIBT function");
     
     IBTViewController* vc = [IBTViewController new];
+    vc.view.frame = CGRectMake(0, 0, 1024, 768);
     
     if ([[notification userInfo] valueForKey:@"buttontag"] == nil) {
         [vc loadIBT:nil];

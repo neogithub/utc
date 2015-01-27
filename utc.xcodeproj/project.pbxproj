@@ -366,6 +366,7 @@
 		888551331A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8885512A1A77CF570009AA0D /* PH2_AUTOLOG_A_03_LR_ENVIRONMENTAL_INDEX.mov */; };
 		888551341A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8885512B1A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov */; };
 		888551351A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8885512B1A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov */; };
+		888551361A77E8F10009AA0D /* IBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2001A4F0FCE00204D81 /* IBTViewController.xib */; };
 		888BB7981A5E136C00157977 /* ibt_arrow_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7881A5E136C00157977 /* ibt_arrow_one.png */; };
 		888BB7991A5E136C00157977 /* ibt_arrow_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7881A5E136C00157977 /* ibt_arrow_one.png */; };
 		888BB79A1A5E136C00157977 /* ibt_arrow_one@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB7891A5E136C00157977 /* ibt_arrow_one@2x.png */; };
@@ -2298,6 +2299,7 @@
 				888BB8B81A5EE88500157977 /* PH2_CARRIER_B_01B_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				20E547291A2DFEF40073B2CF /* companyData.plist in Resources */,
 				888BB7A11A5E136C00157977 /* ibt_automated_connections.png in Resources */,
+				888551361A77E8F10009AA0D /* IBTViewController.xib in Resources */,
 				20E5472A1A2DFEF40073B2CF /* 03_TRANS_ELEV.png in Resources */,
 				20BF49151A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				888BB8BA1A5EE88500157977 /* PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov in Resources */,

@@ -371,6 +371,18 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     return 0.25;
 }
 
+- (BOOL)hasiOS8ScreenCoordinateBehaviour {
+    if ( [[[UIDevice currentDevice] systemVersion] floatValue] < 8.0 ) return NO;
+    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    if ( UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) &&
+        screenSize.width < screenSize.height ) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIViewController* vc1 = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController* vc2 = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
@@ -391,17 +403,37 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
         NSInteger option;
         option = UIViewAnimationCurveEaseInOut;
         
-        self.view.center = CGPointMake(self.view.center.x, 768);
-        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-        
+        if ([self hasiOS8ScreenCoordinateBehaviour] == YES) {
+            
+            self.view.center = CGPointMake(self.view.center.x, 768);
+            
+        } else {
+            
+            self.view.center = CGPointMake(768, 512);
+        }
+
         v2.alpha = 0;
         v1.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
         
         [UIView animateWithDuration:duration delay:0 usingSpringWithDamping:damping initialSpringVelocity:velocity options:option animations:^{
             v2.alpha = 1;
             v1.alpha = 0.8;
-            self.view.center = CGPointMake(self.view.center.x, 384);
+
+            CGFloat floatX = -1;
+            CGFloat floatY = -1;
             
+            if ([self hasiOS8ScreenCoordinateBehaviour] == YES) {
+                
+                self.view.center = CGPointMake(self.view.center.x, 384);
+                
+            } else {
+                
+                floatX = 384;
+                floatY = 512;
+                self.view.center = CGPointMake(floatX, floatY);
+                
+            }
+
         }completion:^(BOOL finished) {
             
             [transitionContext completeTransition:YES];
@@ -410,7 +442,14 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
         
     } else { // dismissing
         [UIView animateWithDuration:0.25 animations:^{
-            //self.view.center = CGPointMake(512, -500);
+            if ([self hasiOS8ScreenCoordinateBehaviour] == YES) {
+                
+                self.view.center = CGPointMake(self.view.center.x, 768);
+                
+            } else {
+                
+                self.view.center = CGPointMake(768, 512);
+            }
             v1.alpha = 0;
             v2.alpha=1.0;
         } completion:^(BOOL finished) {

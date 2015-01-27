@@ -9,8 +9,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="raa-6L-okC"/>
+                        <viewControllerLayoutGuide type="bottom" id="XTW-LD-63V"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -29,8 +29,8 @@
             <objects>
                 <viewController restorationIdentifier="embHotSpotViewController" storyboardIdentifier="embHotSpotViewController" id="Zk3-fg-VWs" customClass="embHotSpotViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Qfg-k3-phW"/>
-                        <viewControllerLayoutGuide type="bottom" id="ew0-p4-ay7"/>
+                        <viewControllerLayoutGuide type="top" id="4pC-jf-pcB"/>
+                        <viewControllerLayoutGuide type="bottom" id="RuA-yL-fYO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="39N-Jv-S38">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
