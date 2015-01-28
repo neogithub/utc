@@ -26,13 +26,13 @@ static NSString * const sampleDesc1 = @"Tap the center Building to zoom closer. 
 
 static NSString * const sampleDesc2 = @"Tap the glowing circle to reveal the building's interior and the Companies located within";
 
-static NSString * const sampleDesc3 = @"Tap a Company to explore the products. Some companies allow you to jump directly to their Intelligent Building Technology section. Tap United Technologie to explore the entire Intelligent Building Technology section";
+static NSString * const sampleDesc3 = @"Tap a Company to explore the products. Some companies allow you to jump directly to their Intelligent Building Technology section. Tap United Technologies to explore the entire Intelligent Building Technology section";
 
 static NSString * const sampleDesc4 = @"Tap the orange circle in each hotspot to explore. Use the Back button at the top left to go back a level.";
 
 static NSString * const sampleDesc5 = @"Tap the screen to pause a Hot Spot film, tap again to resume. Tap the X in the corner to close.";
 
-static NSString * const sampleDesc6 = @"Tap the logos or Learn More to play a film";
+static NSString * const sampleDesc6 = @"Tap the product logos or Learn More to play a film";
 
 static CGFloat menuButtonHeights = 51;
 
@@ -290,7 +290,6 @@ enum MenuVisibilityType : NSUInteger {
 - (void) configurePage:(GHWalkThroughPageCell *)cell atIndex:(NSInteger)index
 {
     cell.title = [NSString stringWithFormat:@"Page %d of %ld", index+1,(unsigned long)self.descStrings.count];
-	// cell.titleImage = [UIImage imageNamed:[NSString stringWithFormat:@"title%ld", index+1]];
     cell.desc = [self.descStrings objectAtIndex:index];
 }
 

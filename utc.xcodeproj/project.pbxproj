@@ -2002,7 +2002,7 @@
 						DevelopmentTeam = 97VHU5A6BJ;
 					};
 					82A66A9719B7926A00C8E12A = {
-						DevelopmentTeam = 9734648496;
+						DevelopmentTeam = 97VHU5A6BJ;
 					};
 				};
 			};
