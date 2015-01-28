@@ -289,14 +289,14 @@ enum MenuVisibilityType : NSUInteger {
 
 - (void) configurePage:(GHWalkThroughPageCell *)cell atIndex:(NSInteger)index
 {
-    cell.title = [NSString stringWithFormat:@"Page %ld of %ld", index+1,self.descStrings.count];
+    cell.title = [NSString stringWithFormat:@"Page %d of %ld", index+1,(unsigned long)self.descStrings.count];
 	// cell.titleImage = [UIImage imageNamed:[NSString stringWithFormat:@"title%ld", index+1]];
     cell.desc = [self.descStrings objectAtIndex:index];
 }
 
 - (UIImage*) bgImageforPage:(NSInteger)index
 {
-    NSString* imageName =[NSString stringWithFormat:@"bg_0%ld.jpg", index+1];
+    NSString* imageName =[NSString stringWithFormat:@"bg_0%d.jpg", index+1];
     UIImage* image = [UIImage imageNamed:imageName];
     return image;
 }

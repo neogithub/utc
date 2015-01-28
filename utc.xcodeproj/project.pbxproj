@@ -73,7 +73,6 @@
 		20A95A5B19CBB89E00132F7E /* swipe-to-reveal.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A5919CBB89E00132F7E /* swipe-to-reveal.png */; };
 		20A95A5E19CBC1AA00132F7E /* icon marker left.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A5C19CBC1AA00132F7E /* icon marker left.png */; };
 		20A95A5F19CBC1AA00132F7E /* icon marker left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A5D19CBC1AA00132F7E /* icon marker left@2x.png */; };
-		20A95A7619CC313F00132F7E /* 01_HERO_CITY.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7419CC313F00132F7E /* 01_HERO_CITY.png */; };
 		20A95A7C19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A95A7A19CC68D000132F7E /* 03_HERO_BLDG_SECTION.png */; };
 		20BA88BB1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */; };
 		20BA88BC1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA88BA1A378EDB00705945 /* NSTimer+CVPausable.m */; };
@@ -2507,7 +2506,6 @@
 				8800E3211A702B4F000E3D97 /* img-teda.jpg in Resources */,
 				888BB9981A5F801A00157977 /* IBT-Transp-logo-automatedLogic@2x.png in Resources */,
 				888BB7BD1A5E359800157977 /* arrow@2x.png in Resources */,
-				20A95A7619CC313F00132F7E /* 01_HERO_CITY.png in Resources */,
 				20A39EAF19C32F8800C71430 /* title2@2x.png in Resources */,
 				824F14F019CB59CA00628F01 /* titleTableViewCell.xib in Resources */,
 				8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */,
