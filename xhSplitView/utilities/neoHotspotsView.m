@@ -9,7 +9,7 @@
 #import "neoHotspotsView.h"
 
 static NSString *kFontName = @"Helvetica-Bold";
-static float    kFontSize = 17.0;
+static float    kFontSize = 14.0;
 static float    kGap = 10.0;
 
 @implementation neoHotspotsView
@@ -154,8 +154,9 @@ static float    kGap = 10.0;
     uil_caption.text = [dict_rawData objectForKey:@"caption"];
     uil_caption.font = [UIFont fontWithName:kFontName size:kFontSize];
     [uil_caption setTextAlignment:NSTextAlignmentCenter];
-    uil_caption.backgroundColor = [UIColor whiteColor];
-    [self addSubview: uiiv_hotspotBG];
+    [uil_caption setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.8]];
+    [uil_caption.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [uil_caption.layer setBorderWidth:1.0];    [self addSubview: uiiv_hotspotBG];
     [self insertSubview: uil_caption belowSubview: uiiv_hotspotBG];
 }
 

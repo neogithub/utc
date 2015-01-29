@@ -611,48 +611,12 @@ enum {
         _myHotspots.labelAlignment = num_Alignment;
 
         //hotspot2.labelAlignment = i;
-        _myHotspots.tag = i;
+        _myHotspots.tag = i + 100;
         _myHotspots.delegate = self;
         _myHotspots.showArrow = YES;
         [_arr_hotspotsArray addObject: _myHotspots];
         [_uis_zoomingInfoImg.blurView addSubview: _myHotspots];
     }
-	
-    /*
-	for (int i = 0; i < [totalDataArray count]; i++) {
-		NSDictionary *hotspotItem = totalDataArray [i];
-		
-		//Get the position of Hs
-		NSString *str_position = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"xy"]];
-		NSRange range = [str_position rangeOfString:@","];
-		NSString *str_x = [str_position substringWithRange:NSMakeRange(0, range.location)];
-		NSString *str_y = [str_position substringFromIndex:(range.location + 1)];
-		float hs_x = [str_x floatValue];
-		float hs_y = [str_y floatValue];
-		_myHotspots = [[neoHotspotsView alloc] initWithFrame:CGRectMake(hs_x, hs_y, 49, 42)];
-		_myHotspots.delegate=self;
-		[_arr_hotspotsArray addObject:_myHotspots];
-		
-		//Get the name of BG img name
-		NSString *str_bgName = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"background"]];
-		_myHotspots.hotspotBgName = str_bgName;
-		
-		//Get the caption of hotspot
-		NSString *str_caption = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"caption"]];
-		_myHotspots.str_labelText = str_caption;
-		
-		// get the alignment
-		int num_Alignment = [[hotspotItem objectForKey:@"alignment"] intValue];
-		_myHotspots.labelAlignment = num_Alignment;
-		
-		//Get the type of hotspot
-		NSString *str_type = [[NSString alloc] initWithString:[hotspotItem objectForKey:@"type"]];
-		_myHotspots.str_typeOfHs = str_type;
-		
-		_myHotspots.tagOfHs = i + 100;
-		[_uis_zoomingInfoImg.blurView addSubview:_myHotspots];
-	}
-     */
 }
 
 -(void)logoButtonAction:(id)sender
@@ -763,7 +727,7 @@ enum {
 		NSString *subBG = [catDict objectForKey:@"subBG"];
 		_arr_subHotspots = [catDict objectForKey:@"subhotspots"];
 		
-		NSLog(@"selectedRow subhotspots %@",_arr_subHotspots);
+		// NSLog(@"selectedRow subhotspots %@",_arr_subHotspots);
 		
 		if ([categoryType isEqualToString:@"film"]) {
 			// get which company from data model
@@ -788,12 +752,13 @@ enum {
             [self loadMovieNamed:mov isTapToPauseEnabled:YES belowSubview:_uib_backBtn withOverlay:nil];
             
         } else if ([categoryType isEqualToString:@"stillWithMenu"]) {
-			
+           
+            NSLog(@"stillWithMenu");
+
 			[self initTitleBox];
 			[topTitle setHotSpotTitle:categoryName];
 			
 			[self popUpImage:subBG withCloseButton:NO];
-			
 			
 			[self loadCompanySubHotspots:_arr_subHotspots];
 			
@@ -853,7 +818,6 @@ enum {
 
 - (void)neoHotspotsView:(neoHotspotsView *)hotspot didSelectItemAtIndex:(NSInteger)index
 
-//-(void)neoHotspotsView:(neoHotspotsView *)hotspot withTag:(int)i
 {
 	
 	if (kshowNSLogBOOL) NSLog(@"neoHotspotsView");
@@ -1074,7 +1038,7 @@ enum {
                                                     ofType:extension];
     
 	if (tapToPauseEnabled == YES) {
-		if (kshowNSLogBOOL) NSLog(@"tapToPauseEnabled == YES");
+		if (kshowNSLogBOOL) NSLog(@"tapToPauseEnabled = YES");
 		_isPauseable = YES;
 	}
 
@@ -1299,7 +1263,7 @@ enum {
         
     } else {
         
-        if (kshowNSLogBOOL)  NSLog(@"xscale %f",t.tx);
+        //if (kshowNSLogBOOL)  NSLog(@"xscale %f",t.tx);
         
         if (t.tx < 0) {
             [self animateTitleAndHotspot:TitleLabelsOnscreen];
@@ -1446,13 +1410,13 @@ enum {
     
 	//Get the exact second to remove the text boxes
 	removeTextAfterThisManySeconds = [[hotspotItem objectForKey:@"removeafterseconds"] intValue];
-    NSLog(@"building : createCardsInView : removeTextAfterThisManySeconds %f", removeTextAfterThisManySeconds);
+   // NSLog(@"building : createCardsInView : removeTextAfterThisManySeconds %f", removeTextAfterThisManySeconds);
 
 	// grab facts dict
 	NSDictionary *facts = [hotspotItem objectForKey:@"facts"];
 	NSArray *hotspotText = [facts objectForKey:@"factscopy"];
 	
-	if (kshowNSLogBOOL) NSLog(@"%@",[hotspotText description]);
+	// if (kshowNSLogBOOL) NSLog(@"%@",[hotspotText description]);
 
 	//Get the position of Hs
 	NSString *str_position = [[NSString alloc] initWithString:[facts objectForKey:@"factxy"]];
@@ -1472,7 +1436,7 @@ enum {
 		[card setBackgroundColor:[[UIColor clearColor] colorWithAlphaComponent:0.5]];
 		card.delay = (int)[[box objectForKey:@"appearanceDelay"] integerValue];
 		card.text = [box objectForKey:@"copy"];
-		NSLog(@"%@",card.text);
+		// if (kshowNSLogBOOL) NSLog(@"%@",card.text);
 		
 		[card setFrame:CGRectMake(0, textViewHeight, factsCopy, [self measureHeightOfUITextView:card.textView])];
 		card.alpha = 0;
