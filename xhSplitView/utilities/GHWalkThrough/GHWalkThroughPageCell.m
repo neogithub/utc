@@ -64,7 +64,7 @@
     
     [self layoutTitleLabel];
     
-    CGRect descLabelFrame = CGRectMake(120, self.frame.size.height - self.descPositionY, self.contentView.frame.size.width - 240, 80);
+    CGRect descLabelFrame = CGRectMake(120, self.frame.size.height - self.descPositionY, self.contentView.frame.size.width - 240, 120);
     self.descLabel.frame = descLabelFrame;
     
     UIImageView *textBG = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"help-text-bg.png"]];

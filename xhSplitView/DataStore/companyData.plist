@@ -1777,7 +1777,7 @@ Lenel OnGuard building access system integrates with Interlogix TruVision: secur
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>360</string>
+							<string>330</string>
 							<key>factxy</key>
 							<string>30,130</string>
 							<key>factscopy</key>

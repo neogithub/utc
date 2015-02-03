@@ -22,28 +22,36 @@
 #import "ModalViewController.h"
 #import "UIColor+Extensions.h"
 
-static NSString * const sampleDesc1 = @"Tap the center Building to zoom closer. Use the MENU button in the corner to restart the app. Pinch and zoom works for every image (outside of the help area).";
+static NSString * const sampleTitle1 = @"How to use UTC  Building Possible";
+static NSString * const sampleDesc1 = @"Tap the center Commercial Building to zoom closer.\nUse the Refresh button in the MENU (top left corner) to restart the app.\nPinch and zoom functionality applies to every image (outside of the help area).";
 
-static NSString * const sampleDesc2 = @"Tap the glowing circle to reveal the building's interior and the Companies located within";
+static NSString * const sampleTitle2 = @"UTC Companies";
+static NSString * const sampleDesc2 = @"Tap the glowing circle (bottom center) to reveal the building's interior and the Companies located within.\nDouble tap to skip the transformation animation.";
 
-static NSString * const sampleDesc3 = @"Tap a Company to explore the products. Some companies allow you to jump directly to their Intelligent Building Technology section. Tap United Technologies to explore the entire Intelligent Building Technology section";
+static NSString * const sampleTitle3 = @"Company Products";
+static NSString * const sampleDesc3 = @"Tap a Company to explore its products.\nSome Companies present a menu of product options; those with only one available product move directly to a product information screen.";
 
-static NSString * const sampleDesc4 = @"Tap the orange circle in each hotspot to explore. Use the Back button at the top left to go back a level.";
+static NSString * const sampleTitle4 = @"Hotspots";
+static NSString * const sampleDesc4 = @"Tap the orange circle in each hotspot to explore and view a product film.\nOr use the Back button (top left) to go back a level and return to the main Company screen.";
 
-static NSString * const sampleDesc5 = @"Tap the screen to pause a Hot Spot film, tap again to resume. Tap the X in the corner to close.";
+static NSString * const sampleTitle5 = @"Hotspot Films";
+static NSString * const sampleDesc5 = @"Tap the screen to pause a hotspot film; tap again to resume.\nTap the X in the corner to close.";
 
-static NSString * const sampleDesc6 = @"Tap the product logos or Learn More to play a film";
+static NSString * const sampleTitle6 = @"Intelligent Building Technology";
+static NSString * const sampleDesc6 = @"Where applicable, you many jump directly to a Company’s Intelligent Building Technology section (listed in blue) from its menu.\nOr, tap United Technologies (top right corner of Home screen) to explore the entire Intelligent Building Technology section.\nTap the product logos or Learn More to play a film.";
 
 static CGFloat menuButtonHeights = 51;
 
 @interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate, SustainViewControllerDelegate, ModalViewControllerDelegate>
 {
     UIView *tappableUIVIEW;
+    UILabel* welcomeLabel;
 }
 
 @property (nonatomic, strong) GHWalkThroughView* ghView ;
 
 @property (nonatomic, strong) NSArray* descStrings;
+@property (nonatomic, strong) NSArray* titleStrings;
 
 @property (nonatomic, strong) UILabel* welcomeLabel;
 
@@ -261,7 +269,7 @@ enum MenuVisibilityType : NSUInteger {
 	[_ghView setDataSource:self];
 	_ghView.delegate = self;
 	[_ghView setWalkThroughDirection:GHWalkThroughViewDirectionHorizontal];
-	UILabel* welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 400, 40)];
+	welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 400, 40)];
 	welcomeLabel.text = @"How to use UTC  Building Possible";
 	welcomeLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:20];
 	welcomeLabel.textColor = [UIColor whiteColor];
@@ -270,7 +278,9 @@ enum MenuVisibilityType : NSUInteger {
 	self.welcomeLabel = welcomeLabel;
 	
 	self.descStrings = [NSArray arrayWithObjects:sampleDesc1,sampleDesc2, sampleDesc3, sampleDesc4, sampleDesc5, sampleDesc6, nil];
-	self.ghView.bgImage = [UIImage imageNamed:@"bg_01.jpg"];
+    self.titleStrings = [NSArray arrayWithObjects:sampleTitle1,sampleTitle2, sampleTitle3, sampleTitle4, sampleTitle5, sampleTitle6, nil];
+
+    self.ghView.bgImage = [UIImage imageNamed:@"bg_01.jpg"];
 	
 	self.ghView.isfixedBackground = NO;
 	self.ghView.floatingHeaderView = nil;
@@ -291,6 +301,8 @@ enum MenuVisibilityType : NSUInteger {
 {
     cell.title = [NSString stringWithFormat:@"Page %d of %ld", index+1,(unsigned long)self.descStrings.count];
     cell.desc = [self.descStrings objectAtIndex:index];
+    welcomeLabel.text = self.titleStrings [index];
+
 }
 
 - (UIImage*) bgImageforPage:(NSInteger)index
