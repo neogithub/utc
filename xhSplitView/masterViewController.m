@@ -15,6 +15,7 @@
 #import "embHotSpotViewController.h"
 #import "UIApplication+AppVersion.h"
 #import "UIView+Toast.h"
+#import "AgreementViewController.h"
 
 @interface masterViewController () <IBTViewControllerDelegate>
 {
@@ -95,6 +96,7 @@ static CGFloat yHeight = 90;
     [self initHelpButton];
     [self initVersion];
     [self initLegal];
+    [self initAgreement];
 
 	currentCompanyIndex = 0;
     selectedRow = -1;
@@ -116,11 +118,21 @@ static CGFloat yHeight = 90;
     [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
+-(void)initAgreement
+{
+    UIButton *_uib_AgreementBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_AgreementBtn.frame = CGRectMake(20, 712, 140, 30);
+    [_uib_AgreementBtn setTitle:@"View Agreement" forState:UIControlStateNormal];
+    [_uib_AgreementBtn.titleLabel setFont:[UIFont systemFontOfSize:12.0]];
+    [_uib_AgreementBtn addTarget: self action:@selector(notifyAgreement) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: _uib_AgreementBtn];
+}
+
 -(void)initLegal
 {
     UIButton *_uib_legalBtn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     [_uib_legalBtn setTintColor:[UIColor whiteColor]];
-    _uib_legalBtn.frame = CGRectMake(120, 712, 30, 30);
+    _uib_legalBtn.frame = CGRectMake(120, 680, 30, 30);
     [_uib_legalBtn addTarget: self action:@selector(loadLegal) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_legalBtn];
 }
@@ -150,7 +162,7 @@ static CGFloat yHeight = 90;
         [_uib_helpBtn removeFromSuperview];
     }
     _uib_helpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_helpBtn.frame = CGRectMake(28, 715, 85, 24);
+    _uib_helpBtn.frame = CGRectMake(28, 683, 85, 24);
     _uib_helpBtn.tag = 0;
     [_uib_helpBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
     [_uib_helpBtn setTitle:@"Help" forState:UIControlStateNormal];
@@ -244,6 +256,12 @@ static CGFloat yHeight = 90;
 }
 
 #pragma mark Open Modal
+-(void)notifyAgreement
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showAgreement" object:nil];
+    NSLog(@"loadIBT");
+}
+
 -(void)notifyIBT
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showIBT" object:nil];

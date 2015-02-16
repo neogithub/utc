@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AgreementViewController.h"
 
 @implementation AppDelegate
 
@@ -45,6 +46,23 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    // Check the value of the Agreement Identifier in NSUserDefaults
+    // and call the RLAgreementViewController if the user hasn't accepted the terms.
+    BOOL validAgreement = [[NSUserDefaults standardUserDefaults] boolForKey:kRLAgreementIdentifier];
+    
+    if (!validAgreement) {
+        
+        AgreementViewController* vc = [AgreementViewController new];
+        //vc.delegate = self;
+        
+        UIViewController *activeController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        if ([activeController isKindOfClass:[UINavigationController class]]) {
+            activeController = [(UINavigationController*) activeController visibleViewController];
+        }
+        
+        [activeController presentViewController:vc animated:YES completion:nil];
+    }
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

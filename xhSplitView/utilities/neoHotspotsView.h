@@ -40,6 +40,7 @@ typedef enum {
     UIImageView         *uiiv_arrowImg;
     UILabel             *uil_caption;
     float               arrowAngle;
+    int                 tagOfHs;
 }
 
 @property (nonatomic, readwrite) BOOL                       showArrow;
@@ -48,7 +49,8 @@ typedef enum {
 @property (nonatomic, assign) HotspotCaptionAlignment       labelAlignment;
 @property (nonatomic, strong) NSString                      *contentType;
 @property (nonatomic, strong) NSString                      *contentFileName;
-@property (nonatomic ,strong) NSString                      *captionText;
+@property (nonatomic ,strong)       NSString                *captionText;
+@property (nonatomic, readwrite)    int                     tagOfHs;
 
 
 - (id)initWithHotspotInfo:(NSDictionary *)hotspotInfo;

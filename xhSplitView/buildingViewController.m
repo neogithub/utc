@@ -861,6 +861,8 @@ enum {
 	BOOL isSubHotspots;
 	
 	int formattedTag = 0;
+    
+    NSLog(@"%li",(long)index);
 	
 	if (index > 99) {
 		formattedTag = index - 100;
@@ -869,54 +871,50 @@ enum {
 		formattedTag = index;
 		isSubHotspots = NO;
 	}
+    
+    NSLog(@"%li",(long)formattedTag);
+
 	
 	tappedView = _arr_hotspotsArray[formattedTag];
 	tappedView.tag = formattedTag;
 	tappedView.alpha = 0.75;
 	[tappedView setLabelAlpha:0.75];
     
-	
-		if ([tappedView.contentType isEqualToString:@"movie"]) {
-			
-			_coDict = [_arr_subHotspots objectAtIndex:formattedTag];
-			NSString *movieNamed =  [_coDict objectForKey:@"fileName"];
-			
-           // NSLog(@"movie %@",movieNamed);
+    if ([tappedView.contentType isEqualToString:@"movie"]) {
+        
+        _coDict = [_arr_subHotspots objectAtIndex:formattedTag];
+        NSString *movieNamed =  [_coDict objectForKey:@"fileName"];
+        
+        NSLog(@"movie %@",movieNamed);
 
-			NSDictionary *cod = _arr_subHotspots[formattedTag];
-			NSString *imageNameName;
-			
-			if ([cod objectForKey:@"overlay"]) {
-				imageNameName = [cod objectForKey:@"overlay"];
-			}
+        NSDictionary *cod = _arr_subHotspots[formattedTag];
+        NSString *imageNameName;
+        
+        if ([cod objectForKey:@"overlay"]) {
+            imageNameName = [cod objectForKey:@"overlay"];
+        }
 
-			if (index > 99) {
-				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uib_backBtn withOverlay:imageNameName];
-			} else {
-				[self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg withOverlay:nil];
-			}
-		}
-		else {
-			if (kshowNSLogBOOL) NSLog(@"=======/n/n/nn/\n\n\n\n neoHotspotsView no need ==========");
-			//TODO: attach to data if some subhotspots load different content
-//			[self popUpImage:@"PH2_KIDDE_01_SMG_FM200.png"];
-		}
+        if (index > 99) {
+            [self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uib_backBtn withOverlay:imageNameName];
+        } else {
+            [self loadMovieNamed:movieNamed isTapToPauseEnabled:YES belowSubview:_uis_zoomingImg withOverlay:nil];
+        }
+    }
 		
-		[self zoomTowardsPointFrom:tappedView];
-		
-		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-			
-			if(isSubHotspots==YES)
-			{
-				[topTitle appendHotSpotTitle:tappedView.captionText];
+    [self zoomTowardsPointFrom:tappedView];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        if(isSubHotspots==YES)
+        {
+            [topTitle appendHotSpotTitle:tappedView.captionText];
 
-			} else {
-				[topTitle appendHotSpotTitle:tappedView.captionText];
+        } else {
+            [topTitle appendHotSpotTitle:tappedView.captionText];
 
-				//[topTitle setHotSpotTitle:tappedView.str_labelText];
-			}
-			
-		});
+        }
+        
+    });
 }
 
 #pragma mark transition methods
@@ -1119,13 +1117,13 @@ enum {
 	
 	//NSDictionary *cod = _arr_subHotspots[tag]
 	
-		if (overlay) {
-			NSString *imageNameName = overlay;
-			UIImage *imagee = [UIImage imageNamed:imageNameName];
-			UIImageView *imgv = [[UIImageView alloc ] initWithImage:imagee];
-			imgv.frame = self.view.bounds;
-			[_uiv_movieContainer addSubview:imgv];
-		}
+    if (overlay) {
+        NSString *imageNameName = overlay;
+        UIImage *imagee = [UIImage imageNamed:imageNameName];
+        UIImageView *imgv = [[UIImageView alloc ] initWithImage:imagee];
+        imgv.frame = self.view.bounds;
+        [_uiv_movieContainer addSubview:imgv];
+    }
 	
 	if (tapToPauseEnabled) {
 		if (kshowNSLogBOOL) NSLog(@"loadMovieNamed beginSequence");

@@ -56,6 +56,8 @@ static float    kGap = 10.0;
     self.frame = CGRectMake(x_Value, y_Value, uiiv_hotspotBG.frame.size.width, uiiv_hotspotBG.frame.size.height);
     uiiv_hotspotBG.frame = self.bounds;
     
+    tagOfHs = self.tag;
+    
     // Get catpion string and create the label
     if ([dict_rawData objectForKey:@"caption"]) {
         labelSize = [[dict_rawData objectForKey:@"caption"] sizeWithAttributes:
@@ -74,6 +76,13 @@ static float    kGap = 10.0;
     // Add tap gesture to hotspot
     [self addGestureToView];
 }
+
+//-(void)setTagOfHs:(int)tagOfHotspot
+//{
+//    tagOfHs = tagOfHotspot;
+//    uiiv_hsImgView.tag = tagOfHotspot;
+//}
+
 
 //----------------------------------------------------
 #pragma mark - Create caption label
@@ -217,7 +226,9 @@ static float    kGap = 10.0;
 
 - (void)tapHotspot:(UIGestureRecognizer *)gesture
 {
-    [self.delegate neoHotspotsView:self didSelectItemAtIndex:self.tag];
+    [self.delegate neoHotspotsView:self didSelectItemAtIndex:tagOfHs];
+    NSLog(@"tapHotspot %li",self.tag);
+
 }
 
 //----------------------------------------------------

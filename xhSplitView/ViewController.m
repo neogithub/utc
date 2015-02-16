@@ -21,6 +21,7 @@
 #import "SustainViewController.h"
 #import "ModalViewController.h"
 #import "UIColor+Extensions.h"
+#import "AgreementViewController.h"
 
 static NSString * const sampleTitle1 = @"How to use UTC  Building Possible";
 static NSString * const sampleDesc1 = @"Tap the center Commercial Building to zoom closer.\nUse the Refresh button in the MENU (top left corner) to restart the app.\nPinch and zoom functionality applies to every image (outside of the help area).";
@@ -42,7 +43,7 @@ static NSString * const sampleDesc6 = @"Where applicable, you many jump directly
 
 static CGFloat menuButtonHeights = 51;
 
-@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate, SustainViewControllerDelegate, ModalViewControllerDelegate>
+@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate, SustainViewControllerDelegate, ModalViewControllerDelegate, AgreementViewControllerDelegate>
 {
     UIView *tappableUIVIEW;
     UILabel* welcomeLabel;
@@ -79,6 +80,15 @@ enum MenuVisibilityType : NSUInteger {
     return YES;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    if (((AppDelegate*)[UIApplication sharedApplication].delegate).firstRun)
+    {
+        // [self showHelp];
+        [self validateAgreement];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -99,6 +109,7 @@ enum MenuVisibilityType : NSUInteger {
     [self initSplitCtrl];
     
 	[self setInitialImage];
+    
 	
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDetailView:) name:@"masterEvent" object:nil];
 	
@@ -114,11 +125,10 @@ enum MenuVisibilityType : NSUInteger {
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHelp) name:@"showHelp" object:nil];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openAgreement) name:@"showAgreement" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(makeTapCircle) name:@"agreementDone" object:nil];
 
-	if (((AppDelegate*)[UIApplication sharedApplication].delegate).firstRun)
-    {
-        [self showHelp];
-	}
 }
 
 -(void)setInitialImage
@@ -140,18 +150,27 @@ enum MenuVisibilityType : NSUInteger {
 	[_uiv_tapSquare setBackgroundColor:[UIColor clearColor]];
 	[_uiv_tapSquare setUserInteractionEnabled:YES];
 	
-	UIView *uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
-	uiv_tapCircle.frame = CGRectMake(20, 20, 40, 40);
-	uiv_tapCircle.layer.cornerRadius = uiv_tapCircle.frame.size.width/2;
-	[uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
-	[_uiv_tapSquare addSubview:uiv_tapCircle];
-	
-	[_uiiv_initImage addSubview:_uiv_tapSquare];
-	
-	UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadLogoToCityTransition:)];
+    BOOL validAgreement = [[NSUserDefaults standardUserDefaults] boolForKey:kRLAgreementIdentifier];
+
+    if (validAgreement) {
+        [self makeTapCircle];
+    }
+}
+
+-(void)makeTapCircle
+{
+    UIView *uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
+    uiv_tapCircle.frame = CGRectMake(20, 20, 40, 40);
+    uiv_tapCircle.layer.cornerRadius = uiv_tapCircle.frame.size.width/2;
+    [uiv_tapCircle setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
+    [_uiv_tapSquare addSubview:uiv_tapCircle];
+    
+    [_uiiv_initImage addSubview:_uiv_tapSquare];
+    
+    UITapGestureRecognizer *tapOnImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadLogoToCityTransition:)];
     [_uiv_tapSquare addGestureRecognizer: tapOnImg];
-	
-	[self pulse:_uiv_tapSquare.layer];
+    
+    [self pulse:_uiv_tapSquare.layer];
 }
 
 #pragma mark PulseAnim
@@ -336,6 +355,27 @@ enum MenuVisibilityType : NSUInteger {
 -(void)initBuildingVC
 {
     _buildingView = [[buildingViewController alloc] initWithNibName:nil bundle:nil];
+}
+
+#pragma mark Open Agreement
+
+-(void)validateAgreement {
+    // Check the value of the Agreement Identifier in NSUserDefaults
+    // and call the RLAgreementViewController if the user hasn't accepted the terms.
+    BOOL validAgreement = [[NSUserDefaults standardUserDefaults] boolForKey:kRLAgreementIdentifier];
+    
+    //if (!validAgreement) {
+        [self openAgreement];
+    //}
+}
+
+-(void)openAgreement
+{
+    AgreementViewController* vc = [[AgreementViewController alloc] init];
+    vc.delegate = self;
+    
+    
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark Open Modal
