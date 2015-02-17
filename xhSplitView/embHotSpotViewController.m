@@ -200,7 +200,7 @@ enum {
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     //topname = selectedCo.coname;
 
-    topname = @"Intelligent Building Technology";
+    topname = @"Intelligent Building Technologies";
     
     if (topTitle)
     {

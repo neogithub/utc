@@ -38,7 +38,7 @@ static NSString * const sampleDesc4 = @"Tap the orange circle in each hotspot to
 static NSString * const sampleTitle5 = @"Hotspot Films";
 static NSString * const sampleDesc5 = @"Tap the screen to pause a hotspot film; tap again to resume.\nTap the X in the corner to close.";
 
-static NSString * const sampleTitle6 = @"Intelligent Building Technology";
+static NSString * const sampleTitle6 = @"Intelligent Building Technologies";
 static NSString * const sampleDesc6 = @"Where applicable, you many jump directly to a Company’s Intelligent Building Technology section (listed in blue) from its menu.\nOr, tap United Technologies (top right corner of Home screen) to explore the entire Intelligent Building Technology section.\nTap the product logos or Learn More to play a film.";
 
 static CGFloat menuButtonHeights = 51;
