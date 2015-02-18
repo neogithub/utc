@@ -1680,7 +1680,7 @@ Lenel OnGuard building access system integrates with Interlogix TruVision: secur
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Offers powerful control features and supports major communications protocols</string>
+									<string>Offers powerful control features and supports open communications protocols</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
