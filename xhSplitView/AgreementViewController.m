@@ -95,7 +95,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     self.descStrings = [NSArray arrayWithObjects:sustainDesc1,sustainDesc2, sustainDesc3 , nil];
     self.descImgStrings = [NSArray arrayWithObjects:sustainImg1,sustainImg2, sustainImg3 , nil];
 
-    [_uitv_text setFont:[UIFont fontWithName:@"Arial" size:17]];
+    [_uitv_text setFont:[UIFont fontWithName:@"Arial" size:14]];
     
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 1.0;
