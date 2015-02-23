@@ -72,12 +72,6 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 
     }
     
-    // If the user has a valid agreement show a "Done" button in the left button inside the Navigation Bar
-    // This is used if you wan't to show the agreement later on within the app after the user has agreed to your terms.
-//    if (self.isAgreementValid) {
-//    }
-
-    
     //NSAttributedString *t = [[NSAttributedString alloc] initWithString: @"AdvanTE3C® Solutions" ];
     //NSAttributedString *g = [t addRegisteredTrademarkTo: @"AdvanTE3C: Solutions" withColor:[UIColor whiteColor] fnt:[UIFont fontWithName:@"Helvetica" size:17]];
     
@@ -113,6 +107,15 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     [self doDismiss:nil];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"agreementDone" object:self];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSDate date] forKey:@"firstRun"];
+    
+    if ([defaults objectForKey:@"firstRun"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"showHelp" object:self];
+    }
+    
+    NSLog(@"firstRun %@",[defaults objectForKey:@"firstRun"]);
 
 }
 

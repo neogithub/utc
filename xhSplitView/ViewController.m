@@ -84,7 +84,8 @@ enum MenuVisibilityType : NSUInteger {
 {
     if (((AppDelegate*)[UIApplication sharedApplication].delegate).firstRun)
     {
-        // [self showHelp];
+        [self showHelp];
+    } else {
         [self validateAgreement];
     }
 }
@@ -149,9 +150,13 @@ enum MenuVisibilityType : NSUInteger {
 	//_uiv_tapSquare.layer.cornerRadius = _uiv_tapSquare.frame.size.width/2;
 	[_uiv_tapSquare setBackgroundColor:[UIColor clearColor]];
 	[_uiv_tapSquare setUserInteractionEnabled:YES];
-	
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"firstRun"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"showHelp" object:self];
+    }
     BOOL validAgreement = [[NSUserDefaults standardUserDefaults] boolForKey:kRLAgreementIdentifier];
-
+    
     if (validAgreement) {
         [self makeTapCircle];
     }
@@ -364,9 +369,9 @@ enum MenuVisibilityType : NSUInteger {
     // and call the RLAgreementViewController if the user hasn't accepted the terms.
     BOOL validAgreement = [[NSUserDefaults standardUserDefaults] boolForKey:kRLAgreementIdentifier];
     
-    //if (!validAgreement) {
+    if (!validAgreement) {
         [self openAgreement];
-    //}
+    }
 }
 
 -(void)openAgreement
