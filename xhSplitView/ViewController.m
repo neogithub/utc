@@ -84,6 +84,7 @@ enum MenuVisibilityType : NSUInteger {
 {
     if (((AppDelegate*)[UIApplication sharedApplication].delegate).firstRun)
     {
+        NSLog(@"show Help : viewWillAppear");
         [self showHelp];
     } else {
         [self validateAgreement];
@@ -151,10 +152,10 @@ enum MenuVisibilityType : NSUInteger {
 	[_uiv_tapSquare setBackgroundColor:[UIColor clearColor]];
 	[_uiv_tapSquare setUserInteractionEnabled:YES];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"firstRun"]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"showHelp" object:self];
-    }
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    if ([defaults objectForKey:@"firstRun"]) {
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"showHelp" object:self];
+//    }
     BOOL validAgreement = [[NSUserDefaults standardUserDefaults] boolForKey:kRLAgreementIdentifier];
     
     if (validAgreement) {
@@ -289,6 +290,8 @@ enum MenuVisibilityType : NSUInteger {
 #pragma mark - Help
 -(void)showHelp
 {
+    NSLog(@"show Help");
+
 	_ghView = [[GHWalkThroughView alloc] initWithFrame:self.view.bounds];
 	[_ghView setDataSource:self];
 	_ghView.delegate = self;
