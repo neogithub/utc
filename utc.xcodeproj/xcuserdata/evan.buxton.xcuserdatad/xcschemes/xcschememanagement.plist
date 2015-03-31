@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>utcbuildingpossible.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -28,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>82A66AB819B7926B00C8E12A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88005E5F1ACACE06005738EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-               BuildableName = "utc.app"
-               BlueprintName = "utc"
-               ReferencedContainer = "container:utc.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82A66AB819B7926B00C8E12A"
-               BuildableName = "utcTests.xctest"
-               BlueprintName = "utcTests"
+               BlueprintIdentifier = "88005E5F1ACACE06005738EA"
+               BuildableName = "utc copy.app"
+               BlueprintName = "utc_enterprise"
                ReferencedContainer = "container:utc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,23 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82A66AB819B7926B00C8E12A"
-               BuildableName = "utcTests.xctest"
-               BlueprintName = "utcTests"
-               ReferencedContainer = "container:utc.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "utc.app"
-            BlueprintName = "utc"
+            BlueprintIdentifier = "88005E5F1ACACE06005738EA"
+            BuildableName = "utc copy.app"
+            BlueprintName = "utc_enterprise"
             ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,9 +52,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "utc.app"
-            BlueprintName = "utc"
+            BlueprintIdentifier = "88005E5F1ACACE06005738EA"
+            BuildableName = "utc copy.app"
+            BlueprintName = "utc_enterprise"
             ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,9 +71,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82A66A9719B7926A00C8E12A"
-            BuildableName = "utc.app"
-            BlueprintName = "utc"
+            BlueprintIdentifier = "88005E5F1ACACE06005738EA"
+            BuildableName = "utc copy.app"
+            BlueprintName = "utc_enterprise"
             ReferencedContainer = "container:utc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -106,7 +82,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Store"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
