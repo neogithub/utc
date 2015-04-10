@@ -14,6 +14,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+#ifdef UTC_USE_FETCH
+    NSLog(@"fetch");
+
+#endif
+    NSLog(@"normal app del");
+
     return YES;
 }
 							

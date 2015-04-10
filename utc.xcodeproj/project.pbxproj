@@ -2409,6 +2409,13 @@
 					82A66A9719B7926A00C8E12A = {
 						DevelopmentTeam = 97VHU5A6BJ;
 					};
+					88005E5F1ACACE06005738EA = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = 82A66A9319B7926A00C8E12A /* Build configuration list for PBXProject "utc" */;
@@ -3944,6 +3951,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Distribution: Carrier Corporation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = UTC_USE_FETCH;
 				INFOPLIST_FILE = "utc copy2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "utc copy";
