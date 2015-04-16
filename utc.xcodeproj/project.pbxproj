@@ -1110,6 +1110,12 @@
 		8895FF3E1A5B44B50076A3EC /* SustainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895FF3B1A5B44B50076A3EC /* SustainViewController.m */; };
 		8895FF3F1A5B44B50076A3EC /* SustainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895FF3C1A5B44B50076A3EC /* SustainViewController.xib */; };
 		8895FF401A5B44B50076A3EC /* SustainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895FF3C1A5B44B50076A3EC /* SustainViewController.xib */; };
+		88D2609E1AD83FE80038F498 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D2609D1AD83FE80038F498 /* DownloadOperation.m */; };
+		88D2609F1AD83FE80038F498 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D2609D1AD83FE80038F498 /* DownloadOperation.m */; };
+		88D260A01AD83FE80038F498 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D2609D1AD83FE80038F498 /* DownloadOperation.m */; };
+		88D260A41AD840A60038F498 /* UAObfuscatedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D260A31AD840A60038F498 /* UAObfuscatedString.m */; };
+		88D260A51AD840A60038F498 /* UAObfuscatedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D260A31AD840A60038F498 /* UAObfuscatedString.m */; };
+		88D260A61AD840A60038F498 /* UAObfuscatedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D260A31AD840A60038F498 /* UAObfuscatedString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1533,6 +1539,10 @@
 		8895FF3A1A5B44B50076A3EC /* SustainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SustainViewController.h; sourceTree = "<group>"; };
 		8895FF3B1A5B44B50076A3EC /* SustainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SustainViewController.m; sourceTree = "<group>"; };
 		8895FF3C1A5B44B50076A3EC /* SustainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SustainViewController.xib; sourceTree = "<group>"; };
+		88D2609C1AD83FE80038F498 /* DownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadOperation.h; path = "Download Operation/DownloadOperation.h"; sourceTree = "<group>"; };
+		88D2609D1AD83FE80038F498 /* DownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadOperation.m; path = "Download Operation/DownloadOperation.m"; sourceTree = "<group>"; };
+		88D260A21AD840A60038F498 /* UAObfuscatedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UAObfuscatedString.h; path = UAObfuscatedString/UAObfuscatedString.h; sourceTree = "<group>"; };
+		88D260A31AD840A60038F498 /* UAObfuscatedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UAObfuscatedString.m; path = UAObfuscatedString/UAObfuscatedString.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1836,7 +1846,9 @@
 		82A66ADE19B793BD00C8E12A /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				88D260A11AD840960038F498 /* UAObfuscatedString */,
 				8878D1911A6DA0A6009BEE83 /* UIView+Toast.h */,
+				88D2609B1AD83FD30038F498 /* DownloadOperation */,
 				8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */,
 				888BB9CD1A64332D00157977 /* drawPathShape */,
 				8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */,
@@ -2340,6 +2352,24 @@
 			name = logos;
 			sourceTree = "<group>";
 		};
+		88D2609B1AD83FD30038F498 /* DownloadOperation */ = {
+			isa = PBXGroup;
+			children = (
+				88D2609C1AD83FE80038F498 /* DownloadOperation.h */,
+				88D2609D1AD83FE80038F498 /* DownloadOperation.m */,
+			);
+			name = DownloadOperation;
+			sourceTree = "<group>";
+		};
+		88D260A11AD840960038F498 /* UAObfuscatedString */ = {
+			isa = PBXGroup;
+			children = (
+				88D260A21AD840A60038F498 /* UAObfuscatedString.h */,
+				88D260A31AD840A60038F498 /* UAObfuscatedString.m */,
+			);
+			name = UAObfuscatedString;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2405,9 +2435,19 @@
 				TargetAttributes = {
 					20E546C41A2DFEF40073B2CF = {
 						DevelopmentTeam = 97VHU5A6BJ;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					82A66A9719B7926A00C8E12A = {
-						DevelopmentTeam = 97VHU5A6BJ;
+						DevelopmentTeam = 9734648496;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					88005E5F1ACACE06005738EA = {
 						SystemCapabilities = {
@@ -3457,6 +3497,7 @@
 				20E546C71A2DFEF40073B2CF /* titleTableViewCell.m in Sources */,
 				8834E2351A5327C200204D81 /* UIImage+UIImage_GaussianBlur.m in Sources */,
 				20E546C81A2DFEF40073B2CF /* Company.m in Sources */,
+				88D260A51AD840A60038F498 /* UAObfuscatedString.m in Sources */,
 				20BF48B31A3A05F1009645DC /* LibraryAPI.m in Sources */,
 				20E546C91A2DFEF40073B2CF /* ViewController.m in Sources */,
 				20E546CA1A2DFEF40073B2CF /* buildingViewController.m in Sources */,
@@ -3483,6 +3524,7 @@
 				20E546D61A2DFEF40073B2CF /* xhSplitViewController.m in Sources */,
 				8895FEDE1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */,
 				888BB94E1A5EE9EA00157977 /* ModalViewController.m in Sources */,
+				88D2609F1AD83FE80038F498 /* DownloadOperation.m in Sources */,
 				20E546D71A2DFEF40073B2CF /* neoHotspotsView.m in Sources */,
 				888BB9DD1A6436F900157977 /* embDrawBezierPath.m in Sources */,
 				888BB9D91A64352E00157977 /* embBezierPathItem.m in Sources */,
@@ -3499,6 +3541,7 @@
 				824F14EF19CB59CA00628F01 /* titleTableViewCell.m in Sources */,
 				888BB9D81A64352E00157977 /* embBezierPathItem.m in Sources */,
 				888BB94D1A5EE9EA00157977 /* ModalViewController.m in Sources */,
+				88D260A41AD840A60038F498 /* UAObfuscatedString.m in Sources */,
 				20D0B01019BF53C30096021D /* Company.m in Sources */,
 				20BF48B21A3A05F1009645DC /* LibraryAPI.m in Sources */,
 				82A66AB219B7926B00C8E12A /* ViewController.m in Sources */,
@@ -3529,6 +3572,7 @@
 				888BB9D41A64336200157977 /* embBldgTypePaths.m in Sources */,
 				888BB9DC1A6436F900157977 /* embDrawBezierPath.m in Sources */,
 				82A66ADC19B792C700C8E12A /* xhSplitViewController.m in Sources */,
+				88D2609E1AD83FE80038F498 /* DownloadOperation.m in Sources */,
 				20D0B06719C0D7440096021D /* neoHotspotsView.m in Sources */,
 				8834E2341A5327C200204D81 /* UIImage+UIImage_GaussianBlur.m in Sources */,
 			);
@@ -3543,6 +3587,7 @@
 				88005E631ACACE06005738EA /* titleTableViewCell.m in Sources */,
 				88005E641ACACE06005738EA /* embBezierPathItem.m in Sources */,
 				88005E651ACACE06005738EA /* ModalViewController.m in Sources */,
+				88D260A61AD840A60038F498 /* UAObfuscatedString.m in Sources */,
 				88005E661ACACE06005738EA /* Company.m in Sources */,
 				88005E671ACACE06005738EA /* LibraryAPI.m in Sources */,
 				88005E681ACACE06005738EA /* ViewController.m in Sources */,
@@ -3553,6 +3598,7 @@
 				88005E6D1ACACE06005738EA /* UIImage+FlipImage.m in Sources */,
 				88005E6E1ACACE06005738EA /* City.m in Sources */,
 				88005E6F1ACACE06005738EA /* masterViewController.m in Sources */,
+				88D260A01AD83FE80038F498 /* DownloadOperation.m in Sources */,
 				88005E701ACACE06005738EA /* SustainViewController.m in Sources */,
 				88005E711ACACE06005738EA /* AppDelegate.m in Sources */,
 				88005E721ACACE06005738EA /* PersistencyManager.m in Sources */,
@@ -3951,7 +3997,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Distribution: Carrier Corporation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = UTC_USE_FETCH;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "utc copy2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "utc copy";

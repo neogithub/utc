@@ -22,6 +22,15 @@
 #import "ModalViewController.h"
 #import "UIColor+Extensions.h"
 #import "AgreementViewController.h"
+#import "DownloadOperation.h"
+#import "UAObfuscatedString.h"
+
+#define BUNDLE_VERSION_EQUAL_TO(v)                  ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v  options:NSNumericSearch] == NSOrderedSame)
+#define BUNDLE_VERSION_GREATER_THAN(v)              ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define BUNDLE_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define BUNDLE_VERSION_LESS_THAN(v)                 ([[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"]  compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define BUNDLE_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
 
 static NSString * const sampleTitle1 = @"How to use UTC  Building Possible";
 static NSString * const sampleDesc1 = @"Tap the center Commercial Building to zoom closer.\nUse the Refresh button in the MENU (top left corner) to restart the app.\nPinch and zoom functionality applies to every image (outside of the help area).";
@@ -43,11 +52,14 @@ static NSString * const sampleDesc6 = @"Where applicable, you many jump directly
 
 static CGFloat menuButtonHeights = 51;
 
-@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate, SustainViewControllerDelegate, ModalViewControllerDelegate, AgreementViewControllerDelegate>
+@interface ViewController () <GHWalkThroughViewDataSource, GHWalkThroughViewDelegate, IBTViewControllerDelegate, SustainViewControllerDelegate, ModalViewControllerDelegate, AgreementViewControllerDelegate, UIAlertViewDelegate>
 {
     UIView *tappableUIVIEW;
     UILabel* welcomeLabel;
+    NSString *appPlistName;
 }
+@property (nonatomic, strong) NSMutableArray *downloads;
+@property (nonatomic, strong) NSOperationQueue *downloadQueue;
 
 @property (nonatomic, strong) GHWalkThroughView* ghView ;
 
@@ -80,6 +92,154 @@ enum MenuVisibilityType : NSUInteger {
     return YES;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self checkForUpdate:nil];
+}
+
+-(IBAction)check:(id)sender
+{
+    [self checkForUpdate:sender];
+}
+
+-(void)checkForUpdate:(id)sender
+{
+    self.downloadQueue = [[NSOperationQueue alloc] init];
+    self.downloadQueue.maxConcurrentOperationCount = 4;
+    
+    self.downloads = [NSMutableArray array];
+    
+    NSString *wString;
+    BOOL staging = NO;
+    
+    if (staging) {
+        wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
+        //wString = Obfuscate.h.t.t.p.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
+        appPlistName = @"utc.plist";
+    } else {
+        wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.w.w.w.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
+        appPlistName = @"utcbuildingpossible.plist";
+    }
+
+    
+    NSArray *filenames = @[appPlistName];
+    
+    
+    // NEO //
+    // staging link   https://apps.neoscape.com/_uploads/files/utc.plist
+    // obfuscate      h.t.t.p.s.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s
+    
+    // UTC //
+    // production link https://www.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
+    // production obfu h.t.t.p.s.colon.forward_slash.forward_slash.w.w.w.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
+    //
+    // staging link    https://staging.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
+    // staging obfu    h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
+
+
+    NSLog(@"%@",wString);
+    
+    for (NSString *filename in filenames)
+    {
+        NSString *urlString = [wString stringByAppendingPathComponent:filename];
+        NSURL *url = [NSURL URLWithString:urlString];
+        
+        DownloadOperation *downloadOperation = [[DownloadOperation alloc] initWithURL:url];
+        
+        downloadOperation.downloadCompletionBlock = ^(DownloadOperation *operation, BOOL success, NSError *error) {
+            if (error) {
+                NSLog(@"%s: downloadCompletionBlock error: %@", __FUNCTION__, error);
+            }
+            
+            NSInteger row = [self.downloads indexOfObject:operation];
+            if (row == NSNotFound) return;
+            [self.downloads removeObjectAtIndex:row];
+            
+            NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+            
+            NSString* foofile = [documentsPath stringByAppendingPathComponent:appPlistName];
+            BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:foofile];
+            
+            if (fileExists == NO) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                message:@"Manifest plist missing or has wrong name"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+                [alert show];
+                [self.downloadQueue cancelAllOperations];
+                [self.downloads removeAllObjects];
+                
+            } else {
+                NSDictionary *tempDict = [[NSDictionary alloc] initWithContentsOfFile:foofile];
+                
+                NSArray *arrayOfDictionaries = [tempDict objectForKey:@"items"];
+                
+                NSString *versionString = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+                NSLog(@"versionString = %@", versionString);
+                
+                for (NSDictionary *arr in arrayOfDictionaries) {
+                    NSString *webBundleVersion = [[arr valueForKey:@"metadata"] valueForKey:@"bundle-version"];
+                    NSLog(@"Number = %@", [webBundleVersion description]);
+                    
+                    if (BUNDLE_VERSION_EQUAL_TO(webBundleVersion)) {
+                        NSLog(@"SAME");
+                        
+                        
+                        //if ([sender isKindOfClass:[UIButton class]]) {
+                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Checking for Update"
+                                                                            message:@"You are up to date"
+                                                                           delegate:self
+                                                                  cancelButtonTitle:@"OK"
+                                                                  otherButtonTitles:nil];
+                            alert.delegate = self;
+                            [alert show];
+                            
+                        //}
+                        
+                        [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
+                        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+                        
+                    } else if (BUNDLE_VERSION_LESS_THAN(webBundleVersion)) {
+                        NSLog(@"UPDATE");
+                        
+                        //if ([[[UIApplication sharedApplication] scheduledLocalNotifications] count] == 0) {
+                        
+                        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+                        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+                        NSDate *now = [NSDate date];
+                        localNotification.fireDate = now;
+                        localNotification.applicationIconBadgeNumber = 1;
+                        localNotification.alertBody = @"Update Available";
+                        localNotification.soundName = UILocalNotificationDefaultSoundName;
+                        [localNotification setRepeatInterval: NSCalendarUnitDay];
+                        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+                        
+                        NSString *updateString = [NSString stringWithFormat:@"%@ Update Available",webBundleVersion];
+                        
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:updateString
+                                                                        message:@"Tap OK to open Safari"
+                                                                       delegate:self
+                                                              cancelButtonTitle:@"Cancel"
+                                                              otherButtonTitles:@"OK",nil];
+                        alert.delegate = self;
+                        alert.tag = 1;
+                        [alert show];
+                        
+                        // }
+                        
+                    }
+                }
+            }
+        };
+        
+        [self.downloads addObject:downloadOperation];
+        [self.downloadQueue addOperation:downloadOperation];
+    }
+}
+
+
 -(void)viewWillAppear:(BOOL)animated
 {
     if (((AppDelegate*)[UIApplication sharedApplication].delegate).firstRun)
@@ -93,6 +253,11 @@ enum MenuVisibilityType : NSUInteger {
 
 - (void)viewDidLoad
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(checkForUpdate:)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+    
     [super viewDidLoad];
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
 	// Do any additional setup after loading the view, typically from a nib.
@@ -128,10 +293,42 @@ enum MenuVisibilityType : NSUInteger {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHelp) name:@"showHelp" object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openAgreement) name:@"showAgreement" object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkForUpdate:) name:@"checkForUpdate" object:nil];
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(makeTapCircle) name:@"agreementDone" object:nil];
 
 }
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    // the user clicked OK
+    if (alertView.tag !=0 ) {
+        if (buttonIndex == 0) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Installing later"
+                                                            message:@"Open the menu to install at a later time"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            
+        } else if (buttonIndex == 1) {
+            
+            [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
+            [[UIApplication sharedApplication] cancelAllLocalNotifications];
+            
+            NSString *urlString = [NSString stringWithFormat:@"itms-services:///?action=download-manifest&url=https://www.tools.carrier.com/BuildingPossible/%@",appPlistName];
+            
+            // staging
+            // @"itms-services://?action=download-manifest&url=https://apps.neoscape.com/_uploads/files/%@",appPlistName]
+            
+            // production
+            // @"itms-services:///?action=download-manifest&url=https://www.tools.carrier.com/BuildingPossible/%@",appPlistName]
+            
+            //NSString *urlString = @"http://apps.neoscape.com/DownloadOperation";
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString: urlString]];
+        }
+    }
+}
+
 
 -(void)setInitialImage
 {

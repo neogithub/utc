@@ -33,6 +33,7 @@
 @property (nonatomic, strong) UIButton						*uib_sustainBtn;
 @property (nonatomic, strong) UIButton						*uib_advante3cBtn;
 @property (nonatomic, strong) UIButton						*uib_helpBtn;
+@property (nonatomic, strong) UIButton						*uib_updateBtn;
 
 @end
 
@@ -97,6 +98,7 @@ static CGFloat yHeight = 90;
     [self initVersion];
     [self initLegal];
     [self initAgreement];
+    [self initUpdateBtn];
 
 	currentCompanyIndex = 0;
     selectedRow = -1;
@@ -121,7 +123,7 @@ static CGFloat yHeight = 90;
 -(void)initAgreement
 {
     UIButton *_uib_AgreementBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_AgreementBtn.frame = CGRectMake(20, 712, 140, 30);
+    _uib_AgreementBtn.frame = CGRectMake(18, 675, 140, 30); //712
     [_uib_AgreementBtn setTitle:@"View Agreement" forState:UIControlStateNormal];
     [_uib_AgreementBtn.titleLabel setFont:[UIFont systemFontOfSize:12.0]];
     [_uib_AgreementBtn addTarget: self action:@selector(notifyAgreement) forControlEvents:UIControlEventTouchUpInside];
@@ -132,7 +134,7 @@ static CGFloat yHeight = 90;
 {
     UIButton *_uib_legalBtn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     [_uib_legalBtn setTintColor:[UIColor whiteColor]];
-    _uib_legalBtn.frame = CGRectMake(120, 680, 30, 30);
+    _uib_legalBtn.frame = CGRectMake(120, 640, 30, 30); //680
     [_uib_legalBtn addTarget: self action:@selector(loadLegal) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_legalBtn];
 }
@@ -162,7 +164,7 @@ static CGFloat yHeight = 90;
         [_uib_helpBtn removeFromSuperview];
     }
     _uib_helpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_helpBtn.frame = CGRectMake(28, 683, 85, 24);
+    _uib_helpBtn.frame = CGRectMake(28, 643, 85, 24); //683
     _uib_helpBtn.tag = 0;
     [_uib_helpBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
     [_uib_helpBtn setTitle:@"Help" forState:UIControlStateNormal];
@@ -206,6 +208,25 @@ static CGFloat yHeight = 90;
     [_uib_sustainBtn setImage: [UIImage imageNamed:@"menu_sustainability.png"] forState:UIControlStateSelected];
     [_uib_sustainBtn addTarget: self action:@selector(loadSustainability) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_sustainBtn];
+}
+
+-(void)initUpdateBtn
+{
+    if (_uib_updateBtn) {
+        [_uib_updateBtn removeFromSuperview];
+    }
+    _uib_updateBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_updateBtn.frame = CGRectMake(29, 712, 118, 24);
+    _uib_updateBtn.tag = 0;
+    [_uib_updateBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
+    [_uib_updateBtn setTitleColor:[UIColor colorWithWhite:1.0 alpha:0.5] forState:UIControlStateNormal];
+    [_uib_updateBtn setTitle:@"Check for Update" forState:UIControlStateNormal];
+    [_uib_updateBtn addTarget: self action:@selector(loadUpdate) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: _uib_updateBtn];
+    
+    //[_uib_updateBtn.layer setBorderColor:[UIColor colorWithWhite:1.0 alpha:0.5].CGColor];
+    //[_uib_updateBtn.layer setBorderWidth:1.0];
+
 }
 
 -(void)loadModalVC
@@ -274,7 +295,12 @@ static CGFloat yHeight = 90;
     NSLog(@"loadSustainability");
 }
 
-
+#pragma mark Check For Update
+-(void)loadUpdate
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"checkForUpdate" object:self userInfo:nil];
+    
+}
 
 #pragma mark - Init Navigation
 -(void)initNavi

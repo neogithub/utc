@@ -8,21 +8,192 @@
 
 #import "AppDelegate.h"
 #import "AgreementViewController.h"
+#import "DownloadOperation.h"
+#import "UAObfuscatedString.h"
+
+#define BUNDLE_VERSION_EQUAL_TO(v)                  ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v  options:NSNumericSearch] == NSOrderedSame)
+#define BUNDLE_VERSION_GREATER_THAN(v)              ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define BUNDLE_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define BUNDLE_VERSION_LESS_THAN(v)                 ([[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"]  compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define BUNDLE_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+@interface AppDelegate () {
+    NSString *appPlistName;
+}
+@property (nonatomic, strong) NSMutableArray *downloads;
+@property (nonatomic, strong) NSOperationQueue *downloadQueue;
+@end
 
 @implementation AppDelegate
+
+-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    NSLog(@"Background fetch started...");
+    
+    self.downloadQueue = [[NSOperationQueue alloc] init];
+    self.downloadQueue.maxConcurrentOperationCount = 4;
+    
+    self.downloads = [NSMutableArray array];
+    
+    NSString *wString;
+    BOOL staging = NO;
+    
+    if (staging) {
+        wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
+        appPlistName = @"utc.plist";
+    } else {
+        wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.w.w.w.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
+        appPlistName = @"utcbuildingpossible.plist";
+    }
+    
+    
+    NSArray *filenames = @[appPlistName];
+    //itms-services:///?action=download-manifest&url=https://www.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
+    
+    // NEO //
+    // staging link   https://apps.neoscape.com/_uploads/files/utc.plist
+    // obfuscate      h.t.t.p.s.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s
+    
+    // UTC //
+    // production link https://www.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
+    // production obfu h.t.t.p.s.colon.forward_slash.forward_slash.w.w.w.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
+    //
+    // staging link    https://staging.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
+    // staging obfu    h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
+
+    
+//    NSArray *filenames = @[@"DownloadOperation.plist"];
+//    
+//    NSString *wString = Obfuscate.h.t.t.p.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
+    
+    for (NSString *filename in filenames)
+    {
+        // create url from plist and web location
+        NSString *urlString = [wString stringByAppendingPathComponent:filename];
+        NSURL *url = [NSURL URLWithString:urlString];
+        
+        // pass the url to download manager
+        DownloadOperation *downloadOperation = [[DownloadOperation alloc] initWithURL:url];
+        
+        // get completion when download finished
+        downloadOperation.downloadCompletionBlock = ^(DownloadOperation *operation, BOOL success, NSError *error) {
+            if (error) {
+                NSLog(@"%s: downloadCompletionBlock error: %@", __FUNCTION__, error);
+                completionHandler(UIBackgroundFetchResultFailed);
+            } else {
+                // get path to document downloaded
+                NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+                NSString* foofile = [documentsPath stringByAppendingPathComponent:appPlistName];
+                // check if it exists
+                BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:foofile];
+                
+                // if it is missing
+                if (fileExists == NO) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                    message:@"Manifest plist missing or has wrong name"
+                                                                   delegate:self
+                                                          cancelButtonTitle:@"OK"
+                                                          otherButtonTitles:nil];
+                    [alert show];
+                    
+                    // cancel all downloads
+                    [self.downloadQueue cancelAllOperations];
+                    [self.downloads removeAllObjects];
+                    
+                } else if (fileExists == YES) {
+                    
+                    NSDictionary *tempDict = [[NSDictionary alloc] initWithContentsOfFile:foofile];
+                    NSArray *arrayOfDictionaries = [tempDict objectForKey:@"items"];
+                    
+                    for (NSDictionary *arr in arrayOfDictionaries) {
+                        NSString *webBundleVersion = [[arr valueForKey:@"metadata"] valueForKey:@"bundle-version"];
+                        NSLog(@"New Version: = %@", [webBundleVersion description]);
+                        
+                        if (BUNDLE_VERSION_EQUAL_TO(webBundleVersion)) {
+                            NSLog(@"SAME delegate");
+                            completionHandler(UIBackgroundFetchResultNoData);
+                            
+                            [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
+                            [[UIApplication sharedApplication] cancelAllLocalNotifications];
+                            
+                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Updated"
+                                                                            message:@"You are up to date"
+                                                                           delegate:self
+                                                                  cancelButtonTitle:@"OK"
+                                                                  otherButtonTitles:nil];
+                            [alert show];
+                            
+                        } else if (BUNDLE_VERSION_LESS_THAN(webBundleVersion)) {
+                            
+                            NSLog(@"UPDATE delegate ");
+                            completionHandler(UIBackgroundFetchResultNewData);
+                            
+                            //if ([[[UIApplication sharedApplication] scheduledLocalNotifications] count] == 0) {
+                            // Set up Local Notifications
+                            [[UIApplication sharedApplication] cancelAllLocalNotifications];
+                            UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+                            NSDate *now = [NSDate date];
+                            localNotification.fireDate = now;
+                            localNotification.applicationIconBadgeNumber = 1;
+                            localNotification.alertBody = @"Update is Available";
+                            localNotification.soundName = UILocalNotificationDefaultSoundName;
+                            [localNotification setRepeatInterval: NSCalendarUnitDay];
+                            [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+                            //}
+                            
+                        }
+                        
+                    }
+                }
+                
+            }
+            
+        };
+        
+        [self.downloads addObject:downloadOperation];
+        [self.downloadQueue addOperation:downloadOperation];
+    }
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    // Play a sound and show an alert only if the application is active, to avoid doubly notifiying the user.
+    
+    //[[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    //    if ([application applicationState] == UIApplicationStateActive) {
+    //        // Initialize the alert view.
+    //    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     
-#ifdef UTC_USE_FETCH
-    NSLog(@"fetch");
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval: UIApplicationBackgroundFetchIntervalMinimum];
+    
+    [self registerForRemoteNotification];
 
-#endif
-    NSLog(@"normal app del");
 
     return YES;
 }
+
+-(void)registerForRemoteNotification
+{
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
+    {
+        // iOS 8 Notifications
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    }
+    else
+    {
+        // iOS < 8 Notifications
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
+    }
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
