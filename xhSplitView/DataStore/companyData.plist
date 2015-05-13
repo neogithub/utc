@@ -686,7 +686,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 				<array>
 					<dict>
 						<key>xy</key>
-						<string>20,75</string>
+						<string>472,375</string>
 						<key>fileName</key>
 						<string>PH2_CARRIER_B_01A_ANIM_AQUAEDGE_23XRV.mov</string>
 						<key>removeafterseconds</key>
@@ -711,30 +711,30 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 									<key>copy</key>
 									<string>Tri-rotor design shortens rotor length and increases compression efficiency</string>
 									<key>appearanceDelay</key>
-									<integer>3</integer>
+									<integer>4</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>High-efficiency, chlorine-free solution</string>
 									<key>appearanceDelay</key>
-									<integer>5</integer>
+									<integer>6</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Automated Logic: plant system manager via WebCTRL: building automation system to optimize chiller plant systems and save energy</string>
 									<key>appearanceDelay</key>
-									<integer>7</integer>
+									<integer>8</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Automated Logic WebCTRL building automation system to assure comfortable temperature settings at time of occupancy based on building and weather conditions</string>
 									<key>appearanceDelay</key>
-									<integer>9</integer>
+									<integer>10</integer>
 								</dict>
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
@@ -744,7 +744,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>20,125</string>
+						<string>595,450</string>
 						<key>fileName</key>
 						<string>PH2_CARRIER_B_01B_ANIM_AQUAEDGE_23XRV.mov</string>
 						<key>removeafterseconds</key>
@@ -780,7 +780,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 							</array>
 						</dict>
 						<key>alignment</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>type</key>
 						<string>movie</string>
 						<key>background</key>
@@ -790,7 +790,7 @@ Building tenants use ID badges for secure access and elevator car assignment to 
 					</dict>
 					<dict>
 						<key>xy</key>
-						<string>20,175</string>
+						<string>530,290</string>
 						<key>fileName</key>
 						<string>PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov</string>
 						<key>removeafterseconds</key>

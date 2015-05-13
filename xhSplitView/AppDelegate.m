@@ -39,8 +39,8 @@
     BOOL staging = NO;
     
     if (staging) {
-        wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
-        appPlistName = @"utc.plist";
+        wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
+        appPlistName = @"utcbuildingpossible.plist";
     } else {
         wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.w.w.w.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
         appPlistName = @"utcbuildingpossible.plist";
@@ -115,13 +115,13 @@
                             
                             [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
                             [[UIApplication sharedApplication] cancelAllLocalNotifications];
-                            
-                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Updated"
-                                                                            message:@"You are up to date"
-                                                                           delegate:self
-                                                                  cancelButtonTitle:@"OK"
-                                                                  otherButtonTitles:nil];
-                            [alert show];
+//                            
+//                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Updated"
+//                                                                            message:@"You are up to date"
+//                                                                           delegate:self
+//                                                                  cancelButtonTitle:@"OK"
+//                                                                  otherButtonTitles:nil];
+//                            [alert show];
                             
                         } else if (BUNDLE_VERSION_LESS_THAN(webBundleVersion)) {
                             
@@ -173,8 +173,19 @@
     
     [self registerForRemoteNotification];
 
+//    if (launchOptions[UIApplicationLaunchOptionsLocalNotificationKey]) {
+//        UILocalNotification *notification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
+//    } else if ([UIApplication sharedApplication].applicationIconBadgeNumber > 0) {
+//        // Assume that user launched the app from the icon with a notification present.
+//        [self launchUpdate];
+//    }
 
     return YES;
+}
+
+-(void)launchUpdate
+{
+    
 }
 
 -(void)registerForRemoteNotification

@@ -80,6 +80,9 @@ static CGFloat menuButtonHeights = 51;
 @property (nonatomic, strong) AVPlayer*							avPlayer;
 @property (nonatomic, strong) AVPlayerLayer*					avPlayerLayer;
 @property (nonatomic, strong) UIView*							uiv_movieContainer;
+
+@property (nonatomic, strong) NSString  *appURL;
+
 @end
 
 enum MenuVisibilityType : NSUInteger {
@@ -110,21 +113,24 @@ enum MenuVisibilityType : NSUInteger {
     
     self.downloads = [NSMutableArray array];
     
-    NSString *wString;
+    //NSString *wString;
     BOOL staging = NO;
     
     if (staging) {
-        wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
-        //wString = Obfuscate.h.t.t.p.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
-        appPlistName = @"utc.plist";
+        _appURL = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
+        appPlistName = @"utcbuildingpossible.plist";
     } else {
-        wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.w.w.w.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
+        _appURL = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.w.w.w.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
         appPlistName = @"utcbuildingpossible.plist";
     }
-
+    
+    // Neoscape
+//    _appURL =  @"https://apps.neoscape.com/_uploads/files";
+//    appPlistName = @"utc.plist";
+    
     
     NSArray *filenames = @[appPlistName];
-    
+    //itms-services:///?action=download-manifest&url=https://www.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
     
     // NEO //
     // staging link   https://apps.neoscape.com/_uploads/files/utc.plist
@@ -138,11 +144,11 @@ enum MenuVisibilityType : NSUInteger {
     // staging obfu    h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
 
 
-    NSLog(@"%@",wString);
+    NSLog(@"%@",_appURL);
     
     for (NSString *filename in filenames)
     {
-        NSString *urlString = [wString stringByAppendingPathComponent:filename];
+        NSString *urlString = [_appURL stringByAppendingPathComponent:filename];
         NSURL *url = [NSURL URLWithString:urlString];
         
         DownloadOperation *downloadOperation = [[DownloadOperation alloc] initWithURL:url];
@@ -315,7 +321,9 @@ enum MenuVisibilityType : NSUInteger {
             [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
             [[UIApplication sharedApplication] cancelAllLocalNotifications];
             
-            NSString *urlString = [NSString stringWithFormat:@"itms-services:///?action=download-manifest&url=https://www.tools.carrier.com/BuildingPossible/%@",appPlistName];
+            NSString *urlString = [NSString stringWithFormat:@"itms-services:///?action=download-manifest&url=%@/%@",_appURL, appPlistName];
+            
+            NSLog(@"download string %@",urlString);
             
             // staging
             // @"itms-services://?action=download-manifest&url=https://apps.neoscape.com/_uploads/files/%@",appPlistName]
@@ -325,6 +333,8 @@ enum MenuVisibilityType : NSUInteger {
             
             //NSString *urlString = @"http://apps.neoscape.com/DownloadOperation";
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString: urlString]];
+            
+            [[UIApplication sharedApplication] performSelector:@selector(suspend)];
         }
     }
 }
