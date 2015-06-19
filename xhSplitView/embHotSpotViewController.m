@@ -76,8 +76,16 @@ enum {
 
 @implementation embHotSpotViewController
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    [self prefersStatusBarHidden];
+
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
 
     NSLog(@"hotspotbiewcontroller");
