@@ -98,7 +98,14 @@ static CGFloat yHeight = 90;
     [self initVersion];
     [self initLegal];
     [self initAgreement];
+    
+#ifdef IS_US
+
+#else
+    
     [self initUpdateBtn];
+
+#endif
 
 	currentCompanyIndex = 0;
     selectedRow = -1;
@@ -221,6 +228,7 @@ static CGFloat yHeight = 90;
     [_uib_updateBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
     [_uib_updateBtn setTitleColor:[UIColor colorWithWhite:1.0 alpha:0.5] forState:UIControlStateNormal];
     [_uib_updateBtn setTitle:@"Check for Update" forState:UIControlStateNormal];
+    _uib_updateBtn.showsTouchWhenHighlighted = YES;
     [_uib_updateBtn addTarget: self action:@selector(loadUpdate) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_updateBtn];
     

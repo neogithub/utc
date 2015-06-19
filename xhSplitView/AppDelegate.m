@@ -26,8 +26,13 @@
 
 @implementation AppDelegate
 
+#ifdef IS_US
+
+#else
+
 -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
+
     NSLog(@"Background fetch started...");
     
     self.downloadQueue = [[NSOperationQueue alloc] init];
@@ -60,11 +65,11 @@
     //
     // staging link    https://staging.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
     // staging obfu    h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
-
     
-//    NSArray *filenames = @[@"DownloadOperation.plist"];
-//    
-//    NSString *wString = Obfuscate.h.t.t.p.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
+    
+    //    NSArray *filenames = @[@"DownloadOperation.plist"];
+    //
+    //    NSString *wString = Obfuscate.h.t.t.p.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
     
     for (NSString *filename in filenames)
     {
@@ -109,19 +114,19 @@
                         NSString *webBundleVersion = [[arr valueForKey:@"metadata"] valueForKey:@"bundle-version"];
                         NSLog(@"New Version: = %@", [webBundleVersion description]);
                         
-                        if (BUNDLE_VERSION_EQUAL_TO(webBundleVersion)) {
+                        if (BUNDLE_VERSION_GREATER_THAN_OR_EQUAL_TO(webBundleVersion)) {
                             NSLog(@"SAME delegate");
                             completionHandler(UIBackgroundFetchResultNoData);
                             
                             [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
                             [[UIApplication sharedApplication] cancelAllLocalNotifications];
-//                            
-//                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Updated"
-//                                                                            message:@"You are up to date"
-//                                                                           delegate:self
-//                                                                  cancelButtonTitle:@"OK"
-//                                                                  otherButtonTitles:nil];
-//                            [alert show];
+                            //
+                            //                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Updated"
+                            //                                                                            message:@"You are up to date"
+                            //                                                                           delegate:self
+                            //                                                                  cancelButtonTitle:@"OK"
+                            //                                                                  otherButtonTitles:nil];
+                            //                            [alert show];
                             
                         } else if (BUNDLE_VERSION_LESS_THAN(webBundleVersion)) {
                             
@@ -155,6 +160,9 @@
     }
 }
 
+#endif
+
+
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     // Play a sound and show an alert only if the application is active, to avoid doubly notifiying the user.
     
@@ -169,10 +177,17 @@
 {
     // Override point for customization after application launch.
     
-    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval: UIApplicationBackgroundFetchIntervalMinimum];
     
+#ifdef IS_US
+    
+    NSLog(@"NO FETCH...");
+    
+#else
+    
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval: UIApplicationBackgroundFetchIntervalMinimum];
     [self registerForRemoteNotification];
 
+#endif
 //    if (launchOptions[UIApplicationLaunchOptionsLocalNotificationKey]) {
 //        UILocalNotification *notification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
 //    } else if ([UIApplication sharedApplication].applicationIconBadgeNumber > 0) {
@@ -241,7 +256,6 @@
         if ([activeController isKindOfClass:[UINavigationController class]]) {
             activeController = [(UINavigationController*) activeController visibleViewController];
         }
-        
         [activeController presentViewController:vc animated:YES completion:nil];
     }
 }

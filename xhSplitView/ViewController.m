@@ -98,12 +98,22 @@ enum MenuVisibilityType : NSUInteger {
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+#ifdef IS_US
+    
+#else
     [self checkForUpdate:nil];
+#endif
+    
 }
 
 -(IBAction)check:(id)sender
 {
-    [self checkForUpdate:sender];
+#ifdef IS_US
+    
+#else
+    [self checkForUpdate:nil];
+#endif
 }
 
 -(void)checkForUpdate:(id)sender
@@ -189,7 +199,7 @@ enum MenuVisibilityType : NSUInteger {
                     NSString *webBundleVersion = [[arr valueForKey:@"metadata"] valueForKey:@"bundle-version"];
                     NSLog(@"Number = %@", [webBundleVersion description]);
                     
-                    if (BUNDLE_VERSION_EQUAL_TO(webBundleVersion)) {
+                    if (BUNDLE_VERSION_GREATER_THAN_OR_EQUAL_TO(webBundleVersion)) {
                         NSLog(@"SAME");
                         
                         
@@ -202,7 +212,7 @@ enum MenuVisibilityType : NSUInteger {
                             alert.delegate = self;
                             [alert show];
                             
-                        //}
+                       // }
                         
                         [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
                         [[UIApplication sharedApplication] cancelAllLocalNotifications];
@@ -259,10 +269,16 @@ enum MenuVisibilityType : NSUInteger {
 
 - (void)viewDidLoad
 {
+    
+#ifdef IS_US
+    
+#else
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(checkForUpdate:)
                                                  name:UIApplicationWillEnterForegroundNotification
                                                object:nil];
+#endif
+
     
     [super viewDidLoad];
     self.view.frame = CGRectMake(0.0, 0.0, 1024, 768);
@@ -299,7 +315,13 @@ enum MenuVisibilityType : NSUInteger {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHelp) name:@"showHelp" object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openAgreement) name:@"showAgreement" object:nil];
+    
+#ifdef IS_US
+    
+#else
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkForUpdate:) name:@"checkForUpdate" object:nil];
+#endif
+
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(makeTapCircle) name:@"agreementDone" object:nil];
 

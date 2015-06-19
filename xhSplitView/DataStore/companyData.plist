@@ -1311,15 +1311,15 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Edwards EST: 3 platform to efficiently mass-notify and evacuate a building</string>
+									<string>Integrates with Edwards EST: 3 platform to notify building managers of fire events and help them make informed decisions</string>
 									<key>appearanceDelay</key>
-									<integer>7</integer>
+									<integer>6</integer>
 								</dict>
 								<dict>
 									<key>copy</key>
 									<string>Integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators</string>
 									<key>appearanceDelay</key>
-									<integer>9</integer>
+									<integer>8</integer>
 								</dict>
 							</array>
 						</dict>
@@ -1420,7 +1420,7 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Lenel OnGuard building access system integrates with Edwards EST: 3 platform to efficiently mass-notify and evacuate a building</string>
+									<string>Lenel OnGuard building access system integrates with Edwards EST: 3 platform to notify building managers of fire events and help them make informed decisions</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -1507,7 +1507,7 @@ Carrier systems integrate with Automated Logic WebCTRL building automation syste
 			<string>Lenel OnGuard: building access system integrates with Otis CompassPlus™ destination management system to optimize traffic flow and floor access
 
 
-Lenel OnGuard building access system integrates with Edwards EST: 3 platform to efficiently mass-notify and evacuate a building
+Lenel OnGuard building access system integrates with Edwards EST: 3 platform to notify building managers of fire events and help them make informed decisions
 
 
 Lenel OnGuard building access system integrates with Interlogix TruVision: security cameras and Otis CompassPlus™ destination management system to detect crowd size and dispatch elevators </string>
@@ -2489,7 +2489,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>Integrates with Lenel OnGuard: building access system to efficiently mass notify and evacuate a building</string>
+									<string>Integrates with Lenel OnGuard: building access system to notify building managers of fire events and help them make informed decisions</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
@@ -2645,7 +2645,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Edwards EST: 3 platform integrates with Lenel OnGuard:  building access system to efficiently mass notify and evacuate a building</string>
+									<string>Edwards EST: 3 platform integrates with Lenel OnGuard: system to notify building managers of fire events and help them make informed decisions</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -2728,7 +2728,7 @@ Interlogix TruVision cameras integrate with Lenel OnGuard: building access syste
 				<string>IBT-logo-automatedLogic.png</string>
 			</array>
 			<key>text</key>
-			<string>Edwards EST: 3 platform integrates with Lenel OnGuard:  building access system to efficiently mass notify and evacuate a building
+			<string>Edwards EST: 3 platform integrates with Lenel OnGuard: system to notify building managers of fire events and help them make informed decisions
 
 
 Edwards EST3 platform integrates with Automated Logic WebCTRL: building automation system and security cameras to detect and see where a fire is located</string>
@@ -2767,7 +2767,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL: building automati
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Protects data, telecommunications and other critical environments</string>
+									<string>Protects system hardware, telecommunications and other critical environments</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -2887,7 +2887,7 @@ Edwards EST3 platform integrates with Automated Logic WebCTRL: building automati
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Ergonomic aluminum handles with wide pull pin for ease of use</string>
+									<string>Ergonomic aluminum handles with wide pull pin for ease of removal</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
