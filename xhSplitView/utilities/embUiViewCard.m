@@ -90,7 +90,7 @@
 		_textView.contentSize = self.frame.size;
 		_textView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 		_textView.textContainerInset = [self.class textInsets];
-		
+        _textView.editable=NO;
         [self addSubview:_textView];
     }
     return _textView;

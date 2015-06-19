@@ -4452,8 +4452,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iOS Distribution: Carrier Corporation";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Distribution: Carrier Corporation";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Inc. (9734648496)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Inc. (9734648496)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -4464,7 +4464,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
+				PROVISIONING_PROFILE = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -4476,7 +4476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Inc. (9734648496)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Inc. (9734648496)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
@@ -4512,7 +4512,7 @@
 			};
 			name = Debug;
 		};
-		20E547391A2DFEF40073B2CF /* Release */ = {
+		20E547391A2DFEF40073B2CF /* neoenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APP_BUNDLE_ID = com.neoenterprise.utcdemo;
@@ -4529,7 +4529,7 @@
 				"PROVISIONING_PROFILE[sdk=*]" = "5DA75D41-A3E9-4CA0-84FE-F76E92D6BFA0";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Release;
+			name = neoenterprise;
 		};
 		20E5473A1A2DFEF40073B2CF /* Store */ = {
 			isa = XCBuildConfiguration;
@@ -4551,7 +4551,7 @@
 			};
 			name = Store;
 		};
-		20E5473D1A2E03970073B2CF /* ReleaseLite */ = {
+		20E5473D1A2E03970073B2CF /* utcenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -4567,8 +4567,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Incorporated";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Incorporated";
+				CODE_SIGN_IDENTITY = "iOS Distribution: Carrier Corporation";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Distribution: Carrier Corporation";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -4579,32 +4579,32 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
+				PROVISIONING_PROFILE = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = ReleaseLite;
+			name = utcenterprise;
 		};
-		20E5473E1A2E03970073B2CF /* ReleaseLite */ = {
+		20E5473E1A2E03970073B2CF /* utcenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iOS Distribution: Carrier Corporation";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Distribution: Carrier Corporation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
-				"PROVISIONING_PROFILE[sdk=*]" = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
+				"PROVISIONING_PROFILE[sdk=*]" = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
 				WRAPPER_EXTENSION = app;
 			};
-			name = ReleaseLite;
+			name = utcenterprise;
 		};
-		20E547401A2E03970073B2CF /* ReleaseLite */ = {
+		20E547401A2E03970073B2CF /* utcenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APP_BUNDLE_ID = com.neoenterprise.utcdemo;
@@ -4622,7 +4622,7 @@
 				"PROVISIONING_PROFILE[sdk=*]" = "5DA75D41-A3E9-4CA0-84FE-F76E92D6BFA0";
 				WRAPPER_EXTENSION = app;
 			};
-			name = ReleaseLite;
+			name = utcenterprise;
 		};
 		82A66AC819B7926B00C8E12A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4665,7 +4665,7 @@
 			};
 			name = Debug;
 		};
-		82A66AC919B7926B00C8E12A /* Release */ = {
+		82A66AC919B7926B00C8E12A /* neoenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -4698,7 +4698,7 @@
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = neoenterprise;
 		};
 		82A66ACB19B7926B00C8E12A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4717,7 +4717,7 @@
 			};
 			name = Debug;
 		};
-		82A66ACC19B7926B00C8E12A /* Release */ = {
+		82A66ACC19B7926B00C8E12A /* neoenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -4733,7 +4733,7 @@
 				"PROVISIONING_PROFILE[sdk=*]" = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Release;
+			name = neoenterprise;
 		};
 		88005FD21ACACE06005738EA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4741,7 +4741,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Evan Buxton (5TJ6RXCUHG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "utc_enterprise-Info.plist";
@@ -4752,13 +4752,13 @@
 			};
 			name = Debug;
 		};
-		88005FD31ACACE06005738EA /* Release */ = {
+		88005FD31ACACE06005738EA /* neoenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Incorporated";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "utc_enterprise-Info.plist";
@@ -4768,9 +4768,28 @@
 				"PROVISIONING_PROFILE[sdk=*]" = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Release;
+			name = neoenterprise;
 		};
 		88005FD41ACACE06005738EA /* Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "utc_enterprise-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "utc enterprise";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Store;
+		};
+		88005FD51ACACE06005738EA /* utcenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -4779,33 +4798,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Distribution: Carrier Corporation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "";
-				INFOPLIST_FILE = "utc_enterprise-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "utc enterprise";
-				PROVISIONING_PROFILE = "279c6cce-cea8-4c21-a773-3f26b0e8c2d3";
-				"PROVISIONING_PROFILE[sdk=*]" = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Store;
-		};
-		88005FD51ACACE06005738EA /* ReleaseLite */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "utc_enterprise-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "utc enterprise";
-				PROVISIONING_PROFILE = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
-				"PROVISIONING_PROFILE[sdk=*]" = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
+				PROVISIONING_PROFILE = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
+				"PROVISIONING_PROFILE[sdk=*]" = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
 				WRAPPER_EXTENSION = app;
 			};
-			name = ReleaseLite;
+			name = utcenterprise;
 		};
 		884240CD1B34531400E41820 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4813,7 +4813,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Evan Buxton (5TJ6RXCUHG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4828,13 +4828,13 @@
 			};
 			name = Debug;
 		};
-		884240CE1B34531400E41820 /* Release */ = {
+		884240CE1B34531400E41820 /* neoenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Incorporated";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
@@ -4844,9 +4844,28 @@
 				"PROVISIONING_PROFILE[sdk=*]" = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Release;
+			name = neoenterprise;
 		};
 		884240CF1B34531400E41820 /* Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "IS_US=1";
+				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = utc_enterprise_us;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Store;
+		};
+		884240D01B34531400E41820 /* utcenterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -4855,33 +4874,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Distribution: Carrier Corporation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "IS_US=1";
-				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = utc_enterprise_us;
-				PROVISIONING_PROFILE = "279c6cce-cea8-4c21-a773-3f26b0e8c2d3";
-				"PROVISIONING_PROFILE[sdk=*]" = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Store;
-		};
-		884240D01B34531400E41820 /* ReleaseLite */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = utc_enterprise_us;
-				PROVISIONING_PROFILE = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
-				"PROVISIONING_PROFILE[sdk=*]" = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
+				PROVISIONING_PROFILE = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
+				"PROVISIONING_PROFILE[sdk=*]" = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
 				WRAPPER_EXTENSION = app;
 			};
-			name = ReleaseLite;
+			name = utcenterprise;
 		};
 /* End XCBuildConfiguration section */
 
@@ -4890,56 +4890,56 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20E547381A2DFEF40073B2CF /* Debug */,
-				20E547391A2DFEF40073B2CF /* Release */,
+				20E547391A2DFEF40073B2CF /* neoenterprise */,
 				20E5473A1A2DFEF40073B2CF /* Store */,
-				20E547401A2E03970073B2CF /* ReleaseLite */,
+				20E547401A2E03970073B2CF /* utcenterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = neoenterprise;
 		};
 		82A66A9319B7926A00C8E12A /* Build configuration list for PBXProject "utc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82A66AC819B7926B00C8E12A /* Debug */,
-				82A66AC919B7926B00C8E12A /* Release */,
+				82A66AC919B7926B00C8E12A /* neoenterprise */,
 				20CEFE3119D0F53300BEB200 /* Store */,
-				20E5473D1A2E03970073B2CF /* ReleaseLite */,
+				20E5473D1A2E03970073B2CF /* utcenterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = neoenterprise;
 		};
 		82A66ACA19B7926B00C8E12A /* Build configuration list for PBXNativeTarget "utc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82A66ACB19B7926B00C8E12A /* Debug */,
-				82A66ACC19B7926B00C8E12A /* Release */,
+				82A66ACC19B7926B00C8E12A /* neoenterprise */,
 				20CEFE3219D0F53300BEB200 /* Store */,
-				20E5473E1A2E03970073B2CF /* ReleaseLite */,
+				20E5473E1A2E03970073B2CF /* utcenterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = neoenterprise;
 		};
 		88005FD11ACACE06005738EA /* Build configuration list for PBXNativeTarget "utc_enterprise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88005FD21ACACE06005738EA /* Debug */,
-				88005FD31ACACE06005738EA /* Release */,
+				88005FD31ACACE06005738EA /* neoenterprise */,
 				88005FD41ACACE06005738EA /* Store */,
-				88005FD51ACACE06005738EA /* ReleaseLite */,
+				88005FD51ACACE06005738EA /* utcenterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = neoenterprise;
 		};
 		884240CC1B34531400E41820 /* Build configuration list for PBXNativeTarget "utc_enterprise us" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				884240CD1B34531400E41820 /* Debug */,
-				884240CE1B34531400E41820 /* Release */,
+				884240CE1B34531400E41820 /* neoenterprise */,
 				884240CF1B34531400E41820 /* Store */,
-				884240D01B34531400E41820 /* ReleaseLite */,
+				884240D01B34531400E41820 /* utcenterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = neoenterprise;
 		};
 /* End XCConfigurationList section */
 	};
