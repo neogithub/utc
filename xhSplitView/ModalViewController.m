@@ -48,6 +48,10 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
