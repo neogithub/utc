@@ -21,7 +21,7 @@
 					 companies = [[NSMutableArray alloc] init];
 					 
 					 NSString *path = [[NSBundle mainBundle] pathForResource:
-									   @"companyData" ofType:@"plist"];
+									   @"companyData_zh" ofType:@"plist"];
 					 NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
 		
 		companies = totalDataArray;

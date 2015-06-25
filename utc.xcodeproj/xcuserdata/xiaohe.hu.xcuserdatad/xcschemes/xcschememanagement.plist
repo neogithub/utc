@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>utc_enterprise us.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>utc_enterprise.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>xhSplitView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +38,16 @@
 			<true/>
 		</dict>
 		<key>82A66AB819B7926B00C8E12A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88005E5F1ACACE06005738EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88423F581B34531400E41820</key>
 		<dict>
 			<key>primary</key>
 			<true/>
