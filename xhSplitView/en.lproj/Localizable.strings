@@ -8,3 +8,22 @@
 "Picker Title"      = "Select a Language/选择一种语言";
 "EN Button"         = "English";
 "ZH Button"         = "中文";
+"PlistName"         = "companyData";
+
+"helpTitle1"        = "How to use UTC  Building Possible";
+"helpDesc1"         = "Tap the center Commercial Building to zoom closer.\nUse the Refresh button in the MENU (top left corner) to restart the app.\nPinch and zoom functionality applies to every image (outside of the help area).";
+
+"helpTitle2"        = "UTC Companies";
+"helpDesc2"         = "Tap the glowing circle (bottom center) to reveal the building's interior and the Companies located within.\nDouble tap to skip the transformation animation.";
+
+"helpTitle3"        = "Company Products";
+"helpDesc3"         = "Tap a Company to explore its products.\nSome Companies present a menu of product options; those with only one available product move directly to a product information screen.";
+
+"helpTitle4"        = "Hotspots";
+"helpDesc4"         = "Tap the orange circle in each hotspot to explore and view a product film.\nOr use the Back button (top left) to go back a level and return to the main Company screen.";
+
+"helpTitle5"        = "Hotspot Films";
+"helpDesc5"         = "Tap the screen to pause a hotspot film; tap again to resume.\nTap the X in the corner to close.";
+
+"helpTitle6"        = "Intelligent Building Technologies";
+"helpDesc6"         = "Where applicable, you many jump directly to a Company’s Intelligent Building Technology section (listed in blue) from its menu.\nOr, tap United Technologies (top right corner of Home screen) to explore the entire Intelligent Building Technology section.\nTap the product logos or Learn More to play a film.";

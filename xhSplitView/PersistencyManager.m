@@ -7,7 +7,7 @@
 //
 
 #import "PersistencyManager.h"
-
+#import "TSLanguageManager.h"
 @implementation PersistencyManager
 {
 	// an array of all albums
@@ -19,14 +19,29 @@
 	self = [super init];
 	if (self) {
 					 companies = [[NSMutableArray alloc] init];
-					 
+        
+                     NSString *plistName = [TSLanguageManager localizedString:@"PlistName"];
 					 NSString *path = [[NSBundle mainBundle] pathForResource:
-									   @"companyData_zh" ofType:@"plist"];
+									   plistName ofType:@"plist"];
 					 NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
 		
 		companies = totalDataArray;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeLanguage:) name:@"finishedLang" object:nil];
 	}
 	return self;
+}
+
+- (void)changeLanguage:(NSNotification *)notification
+{
+    companies = [[NSMutableArray alloc] init];
+    
+    NSString *plistName = [TSLanguageManager localizedString:@"PlistName"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:
+                      plistName ofType:@"plist"];
+    NSMutableArray *totalDataArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
+    
+    companies = totalDataArray;
 }
 
 - (NSArray*)getCompanies

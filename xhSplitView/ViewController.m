@@ -24,6 +24,7 @@
 #import "AgreementViewController.h"
 #import "DownloadOperation.h"
 #import "UAObfuscatedString.h"
+#import "TSLanguageManager.h"
 
 #define BUNDLE_VERSION_EQUAL_TO(v)                  ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v  options:NSNumericSearch] == NSOrderedSame)
 #define BUNDLE_VERSION_GREATER_THAN(v)              ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] == NSOrderedDescending)
@@ -32,23 +33,23 @@
 #define BUNDLE_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
 
-static NSString * const sampleTitle1 = @"How to use UTC  Building Possible";
-static NSString * const sampleDesc1 = @"Tap the center Commercial Building to zoom closer.\nUse the Refresh button in the MENU (top left corner) to restart the app.\nPinch and zoom functionality applies to every image (outside of the help area).";
-
-static NSString * const sampleTitle2 = @"UTC Companies";
-static NSString * const sampleDesc2 = @"Tap the glowing circle (bottom center) to reveal the building's interior and the Companies located within.\nDouble tap to skip the transformation animation.";
-
-static NSString * const sampleTitle3 = @"Company Products";
-static NSString * const sampleDesc3 = @"Tap a Company to explore its products.\nSome Companies present a menu of product options; those with only one available product move directly to a product information screen.";
-
-static NSString * const sampleTitle4 = @"Hotspots";
-static NSString * const sampleDesc4 = @"Tap the orange circle in each hotspot to explore and view a product film.\nOr use the Back button (top left) to go back a level and return to the main Company screen.";
-
-static NSString * const sampleTitle5 = @"Hotspot Films";
-static NSString * const sampleDesc5 = @"Tap the screen to pause a hotspot film; tap again to resume.\nTap the X in the corner to close.";
-
-static NSString * const sampleTitle6 = @"Intelligent Building Technologies";
-static NSString * const sampleDesc6 = @"Where applicable, you many jump directly to a Company’s Intelligent Building Technology section (listed in blue) from its menu.\nOr, tap United Technologies (top right corner of Home screen) to explore the entire Intelligent Building Technology section.\nTap the product logos or Learn More to play a film.";
+//static NSString * const sampleTitle1 = @"How to use UTC  Building Possible";
+//static NSString * const sampleDesc1 = @"Tap the center Commercial Building to zoom closer.\nUse the Refresh button in the MENU (top left corner) to restart the app.\nPinch and zoom functionality applies to every image (outside of the help area).";
+//
+//static NSString * const sampleTitle2 = @"UTC Companies";
+//static NSString * const sampleDesc2 = @"Tap the glowing circle (bottom center) to reveal the building's interior and the Companies located within.\nDouble tap to skip the transformation animation.";
+//
+//static NSString * const sampleTitle3 = @"Company Products";
+//static NSString * const sampleDesc3 = @"Tap a Company to explore its products.\nSome Companies present a menu of product options; those with only one available product move directly to a product information screen.";
+//
+//static NSString * const sampleTitle4 = @"Hotspots";
+//static NSString * const sampleDesc4 = @"Tap the orange circle in each hotspot to explore and view a product film.\nOr use the Back button (top left) to go back a level and return to the main Company screen.";
+//
+//static NSString * const sampleTitle5 = @"Hotspot Films";
+//static NSString * const sampleDesc5 = @"Tap the screen to pause a hotspot film; tap again to resume.\nTap the X in the corner to close.";
+//
+//static NSString * const sampleTitle6 = @"Intelligent Building Technologies";
+//static NSString * const sampleDesc6 = @"Where applicable, you many jump directly to a Company’s Intelligent Building Technology section (listed in blue) from its menu.\nOr, tap United Technologies (top right corner of Home screen) to explore the entire Intelligent Building Technology section.\nTap the product logos or Learn More to play a film.";
 
 static CGFloat menuButtonHeights = 51;
 
@@ -521,6 +522,21 @@ enum MenuVisibilityType : NSUInteger {
 {
     NSLog(@"show Help");
 
+    NSString *sampleDesc1 = [TSLanguageManager localizedString:@"helpDesc1"];
+    NSString *sampleDesc2 = [TSLanguageManager localizedString:@"helpDesc2"];
+    NSString *sampleDesc3 = [TSLanguageManager localizedString:@"helpDesc3"];
+    NSString *sampleDesc4 = [TSLanguageManager localizedString:@"helpDesc4"];
+    NSString *sampleDesc5 = [TSLanguageManager localizedString:@"helpDesc5"];
+    NSString *sampleDesc6 = [TSLanguageManager localizedString:@"helpDesc6"];
+    
+    NSString *sampleTitle1 = [TSLanguageManager localizedString:@"helpTitle1"];
+    NSString *sampleTitle2 = [TSLanguageManager localizedString:@"helpTitle1"];
+    NSString *sampleTitle3 = [TSLanguageManager localizedString:@"helpTitle1"];
+    NSString *sampleTitle4 = [TSLanguageManager localizedString:@"helpTitle1"];
+    NSString *sampleTitle5 = [TSLanguageManager localizedString:@"helpTitle1"];
+    NSString *sampleTitle6 = [TSLanguageManager localizedString:@"helpTitle1"];
+    
+    
 	_ghView = [[GHWalkThroughView alloc] initWithFrame:self.view.bounds];
 	[_ghView setDataSource:self];
 	_ghView.delegate = self;
