@@ -22,7 +22,7 @@
 人们可使用门禁卡安全进入大厦和电梯，到达有权限进出的楼层
 
 
-奥的斯结合Lenel OnGuard® 门禁系统，以及 Interlogix TruVision®监控系统，可以根据人群的拥挤程度合理派梯</string>
+奥的斯结合Lenel OnGuard® 门禁系统，以及 智能科技 TruVision®监控系统，可以根据人群的拥挤程度合理派梯</string>
 		</dict>
 		<key>ibt</key>
 		<array>
@@ -99,7 +99,7 @@
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>奥的斯结合Lenel OnGuard® 门禁系统，以及 Interlogix TruVision®监控系统，可以根据人群的拥挤程度合理派梯</string>
+									<string>奥的斯结合Lenel OnGuard® 门禁系统，以及 智能科技TruVision®监控系统，可以根据人群的拥挤程度合理派梯</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -116,7 +116,7 @@
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>奥的斯  |  Interlogix</string>
+				<string>奥的斯  |  智能科技</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -450,7 +450,7 @@
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>整合Lenel OnGuard® 门禁系统，以及 Interlogix TruVision®监控系统，根据人群的密度合理派梯</string>
+									<string>整合Lenel OnGuard® 门禁系统，以及 智能科技TruVision®监控系统，根据人群的密度合理派梯</string>
 									<key>appearanceDelay</key>
 									<integer>5</integer>
 								</dict>
@@ -658,7 +658,7 @@
 				<key>catType</key>
 				<string>IBT</string>
 				<key>catName</key>
-				<string>智能建筑技术</string>
+				<string>智能建筑解决方案</string>
 			</dict>
 		</array>
 		<key>transitionFilm</key>
@@ -1026,7 +1026,7 @@
 				<key>catType</key>
 				<string>IBT</string>
 				<key>catName</key>
-				<string>智能建筑技术</string>
+				<string>智能建筑解决方案</string>
 			</dict>
 		</array>
 		<key>transitionFilm</key>
@@ -1317,7 +1317,7 @@
 								</dict>
 								<dict>
 									<key>copy</key>
-									<string>与 Interlogix TruVision®监控摄像机以及奥的斯的CompassPlus™目的楼层管理系统相结合，通过监测人群密度派梯</string>
+									<string>与 智能科技TruVision®监控摄像机以及奥的斯的CompassPlus™目的楼层管理系统相结合，通过监测人群密度派梯</string>
 									<key>appearanceDelay</key>
 									<integer>8</integer>
 								</dict>
@@ -1340,7 +1340,7 @@
 				<key>catType</key>
 				<string>IBT</string>
 				<key>catName</key>
-				<string>智能建筑技术</string>
+				<string>智能建筑解决方案</string>
 			</dict>
 		</array>
 		<key>background</key>
@@ -1467,7 +1467,7 @@
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>与Interlogix TruVision®监控摄像机以及奥的斯的CompassPlus™目的楼层管理系统相结合，可根据人群密度派梯</string>
+									<string>与智能科技TruVision®监控摄像机以及奥的斯的CompassPlus™目的楼层管理系统相结合，可根据人群密度派梯</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -1486,7 +1486,7 @@
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Lenel  |  Interlogix</string>
+				<string>Lenel  |  智能科技</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -1510,7 +1510,7 @@
 与爱德华EST® 3平台相结合，通知大楼管理员火灾事故，并帮助他们做出合理决策
 
 
-与Interlogix TruVision®监控摄像机以及奥的斯的CompassPlus™目的楼层管理系统相结合，可根据人群密度派梯 </string>
+与智能科技TruVision®监控摄像机以及奥的斯的CompassPlus™目的楼层管理系统相结合，可根据人群密度派梯 </string>
 		</dict>
 	</dict>
 	<dict>
@@ -1906,7 +1906,7 @@
 				<key>catType</key>
 				<string>IBT</string>
 				<key>catName</key>
-				<string>智能建筑技术</string>
+				<string>智能建筑解决方案</string>
 			</dict>
 		</array>
 		<key>background</key>
@@ -2222,7 +2222,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 		<key>infoName</key>
 		<string>Commercial Security Systems</string>
 		<key>fileName</key>
-		<string>Interlogix</string>
+		<string>智能科技</string>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -2314,7 +2314,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>安防系统</string>
+				<string>安全系统</string>
 				<key>subBG</key>
 				<string>PH2_INTERLOGIX_00_STILL_HS.png</string>
 			</dict>
@@ -2322,7 +2322,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 				<key>catType</key>
 				<string>IBT</string>
 				<key>catName</key>
-				<string>智能建筑技术</string>
+				<string>智能建筑解决方案</string>
 			</dict>
 		</array>
 		<key>background</key>
@@ -2355,7 +2355,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Interlogix TruVision®摄像机和Lenel OnGuard®系统相结合，可保护人员和财产的安全 </string>
+									<string>智能科技 TruVision®摄像机和Lenel OnGuard®系统相结合，可保护人员和财产的安全 </string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -2374,7 +2374,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Interlogix  |  Lenel</string>
+				<string>智能科技  |  Lenel</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -2402,7 +2402,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 							<array>
 								<dict>
 									<key>copy</key>
-									<string>Interlogix TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus™目的楼层管理系统相结合，通过检测人群密度派梯</string>
+									<string>智能科技 TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus™目的楼层管理系统相结合，通过检测人群密度派梯</string>
 									<key>appearanceDelay</key>
 									<integer>1</integer>
 								</dict>
@@ -2421,7 +2421,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Interlogix  |  Lenel &amp; 奥的斯</string>
+				<string>智能科技  |  Lenel &amp; 奥的斯</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -2438,10 +2438,10 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 				<string>IBT-logo-otis.png</string>
 			</array>
 			<key>text</key>
-			<string>Interlogix TruVision®摄像机和Lenel OnGuard®系统相结合，可保护人员和财产的安全
+			<string>智能科技 TruVision®摄像机和Lenel OnGuard®系统相结合，可保护人员和财产的安全
 
 
-Interlogix TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus™目的楼层管理系统相结合，通过检测人群密度派梯</string>
+智能科技 TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus™目的楼层管理系统相结合，通过检测人群密度派梯</string>
 		</dict>
 	</dict>
 	<dict>
@@ -2604,7 +2604,7 @@ Interlogix TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus�
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Fire Safety</string>
+				<string>消防安全</string>
 				<key>subBG</key>
 				<string>PH2_EDWARDS_00_STILL_HS.png</string>
 			</dict>
@@ -2612,7 +2612,7 @@ Interlogix TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus�
 				<key>catType</key>
 				<string>IBT</string>
 				<key>catName</key>
-				<string>智能建筑技术</string>
+				<string>智能建筑解决方案</string>
 			</dict>
 		</array>
 		<key>background</key>
@@ -2740,7 +2740,7 @@ Interlogix TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus�
 		<key>infoName</key>
 		<string>Fire Safety Products</string>
 		<key>fileName</key>
-		<string>Kidde</string>
+		<string>凯得</string>
 		<key>categories</key>
 		<array>
 			<dict>

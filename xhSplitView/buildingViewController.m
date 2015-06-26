@@ -293,7 +293,7 @@ enum {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:5] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Lenel");
     }
-    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Interlogix"])
+    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Interlogix"] || [[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"智能科技"])
     {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:4] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Interlogix");
@@ -687,7 +687,7 @@ enum {
         
         [self loadModalVC];
    
-    } else if ( [selectedCo.coname isEqualToString:@"Kidde"] ) {
+    } else if ( [selectedCo.coname isEqualToString:@"Kidde"] || [selectedCo.coname isEqualToString:@"凯得"] ) {
         
         [self selectedRow:0 withText:nil];
         

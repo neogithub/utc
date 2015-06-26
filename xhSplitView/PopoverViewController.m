@@ -175,7 +175,7 @@
 	
 	NSString *newString = [catDict objectForKey:@"catName"];
 	
-	if ([newString isEqualToString:@"Intelligent Building Technologies"] || [newString isEqualToString:@"智能建筑技术"]) {
+	if ([newString isEqualToString:@"Intelligent Building Technologies"] || [newString isEqualToString:@"智能建筑解决方案"]) {
 		cell.textLabel.textColor = [UIColor colorWithRed:0.0000 green:0.4667 blue:0.7686 alpha:0.8];
 	}
 	
