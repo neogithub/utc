@@ -9,6 +9,13 @@
 "EN Button"         = "English";
 "ZH Button"         = "中文";
 "PlistName"         = "companyData_zh";
+"Check_update"      = "检测更新";
+"Up_to_date"        = "您的数据已是最新";
+"OK"                = "确认";
+"Help_page"         = "第%d／%ld页";
+"Commercial"        = "商业";
+"Legal_titie"       = "法律声明                       X";
+"Legal_content"     = "Agion®是Sciessent LLC 的一个注册商标。\n\nBACnet® 是美国采暖、制冷与空调工程师学会（ASHRAE）的注册商标。\n\nLEED® 是美国绿色建筑委员会的注册商标。";
 
 "helpTitle1"        = "使用指南";
 "helpDesc1"         = "点击“商业建筑”的中心放大阅读。利用菜单中的“更新”按钮（左上角）可重启APP, 每个图像都可以使用放大缩小。";

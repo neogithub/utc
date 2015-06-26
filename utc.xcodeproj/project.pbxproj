@@ -265,6 +265,9 @@
 		82C133F21B3DAA8A00845DDC /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */; };
 		82C133F51B3DC33300845DDC /* LangPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F41B3DC33300845DDC /* LangPickerViewController.m */; };
 		82C133F81B3DC87400845DDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82C133FA1B3DC87400845DDC /* Localizable.strings */; };
+		82C133FF1B3DE2ED00845DDC /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C134031B3DE2ED00845DDC /* AgreementViewController.xib */; };
+		82C134001B3DE2ED00845DDC /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C134031B3DE2ED00845DDC /* AgreementViewController.xib */; };
+		82C134011B3DE2ED00845DDC /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C134031B3DE2ED00845DDC /* AgreementViewController.xib */; };
 		82CB3E671B3C77180023F8D4 /* companyData_zh.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CB3E661B3C77180023F8D4 /* companyData_zh.plist */; };
 		88005E611ACACE06005738EA /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */; };
 		88005E621ACACE06005738EA /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CEFE3519D1018700BEB200 /* PopoverViewController.m */; };
@@ -405,7 +408,6 @@
 		88005EEB1ACACE06005738EA /* green-logo-kuwait.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F71A67042A00157977 /* green-logo-kuwait.png */; };
 		88005EEC1ACACE06005738EA /* IBT-Transp-logo-automatedLogic.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB96A1A5F801A00157977 /* IBT-Transp-logo-automatedLogic.png */; };
 		88005EED1ACACE06005738EA /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA2E1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov */; };
-		88005EEE1ACACE06005738EA /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886938331A8FDE1400B02CD4 /* AgreementViewController.xib */; };
 		88005EEF1ACACE06005738EA /* IBT-logo-otis.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9681A5F801A00157977 /* IBT-logo-otis.png */; };
 		88005EF01ACACE06005738EA /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9391A5EE8E200157977 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov */; };
 		88005EF11ACACE06005738EA /* 03A Building Cut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFB319D4947B0074A3EA /* 03A Building Cut@2x.png */; };
@@ -861,7 +863,6 @@
 		88423FE61B34531400E41820 /* green-logo-kuwait.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9F71A67042A00157977 /* green-logo-kuwait.png */; };
 		88423FE71B34531400E41820 /* IBT-Transp-logo-automatedLogic.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB96A1A5F801A00157977 /* IBT-Transp-logo-automatedLogic.png */; };
 		88423FE81B34531400E41820 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BBA2E1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov */; };
-		88423FE91B34531400E41820 /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886938331A8FDE1400B02CD4 /* AgreementViewController.xib */; };
 		88423FEA1B34531400E41820 /* IBT-logo-otis.png in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9681A5F801A00157977 /* IBT-logo-otis.png */; };
 		88423FEB1B34531400E41820 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov in Resources */ = {isa = PBXBuildFile; fileRef = 888BB9391A5EE8E200157977 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov */; };
 		88423FEC1B34531400E41820 /* 03A Building Cut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 209AEFB319D4947B0074A3EA /* 03A Building Cut@2x.png */; };
@@ -1089,7 +1090,6 @@
 		884240CA1B34531400E41820 /* menu_utc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8834E26F1A57221B00204D81 /* menu_utc.png */; };
 		884240CB1B34531400E41820 /* logo-Improve.png in Resources */ = {isa = PBXBuildFile; fileRef = 8895FEE81A5B19F50076A3EC /* logo-Improve.png */; };
 		886938341A8FDE1400B02CD4 /* AgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886938321A8FDE1400B02CD4 /* AgreementViewController.m */; };
-		886938351A8FDE1400B02CD4 /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886938331A8FDE1400B02CD4 /* AgreementViewController.xib */; };
 		8878D18F1A6D9267009BEE83 /* tmpImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8878D18E1A6D9267009BEE83 /* tmpImage.jpg */; };
 		8878D1901A6D9267009BEE83 /* tmpImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8878D18E1A6D9267009BEE83 /* tmpImage.jpg */; };
 		8878D1931A6DA0A6009BEE83 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */; };
@@ -1662,6 +1662,8 @@
 		82C133FC1B3DC88700845DDC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		82C133FD1B3DC88700845DDC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		82C133FE1B3DC88700845DDC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		82C134021B3DE2ED00845DDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AgreementViewController.xib; sourceTree = "<group>"; };
+		82C134061B3DE35000845DDC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AgreementViewController.strings"; sourceTree = "<group>"; };
 		82CB3E661B3C77180023F8D4 /* companyData_zh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = companyData_zh.plist; path = DataStore/companyData_zh.plist; sourceTree = "<group>"; };
 		88005FD61ACACE06005738EA /* utc enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "utc enterprise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88005FD71ACACE06005738EA /* utc copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "utc copy2-Info.plist"; path = "/Users/evan.buxton/Documents/_NEOSCAPE_PROJECTS/utc/utc copy2-Info.plist"; sourceTree = "<absolute>"; };
@@ -1719,7 +1721,6 @@
 		88454BC71B344E690055745B /* utc_enterprise-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "utc_enterprise-Info.plist"; path = "/Users/evan.buxton/Documents/_NEOSCAPE_PROJECTS/utc/utc_enterprise-Info.plist"; sourceTree = "<absolute>"; };
 		886938311A8FDE1400B02CD4 /* AgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementViewController.h; sourceTree = "<group>"; };
 		886938321A8FDE1400B02CD4 /* AgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementViewController.m; sourceTree = "<group>"; };
-		886938331A8FDE1400B02CD4 /* AgreementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreementViewController.xib; sourceTree = "<group>"; };
 		8878D18E1A6D9267009BEE83 /* tmpImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tmpImage.jpg; path = UI/grfx/sustainability/tmpImage.jpg; sourceTree = "<group>"; };
 		8878D1911A6DA0A6009BEE83 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
@@ -2192,7 +2193,7 @@
 				888BB94C1A5EE9EA00157977 /* ModalViewController.xib */,
 				886938311A8FDE1400B02CD4 /* AgreementViewController.h */,
 				886938321A8FDE1400B02CD4 /* AgreementViewController.m */,
-				886938331A8FDE1400B02CD4 /* AgreementViewController.xib */,
+				82C134031B3DE2ED00845DDC /* AgreementViewController.xib */,
 				20BF49181A3F23BE009645DC /* embTitle.h */,
 				20BF49191A3F23BE009645DC /* embTitle.m */,
 				82A66AD919B792C700C8E12A /* xhSplitViewController.h */,
@@ -3345,7 +3346,7 @@
 				888BBA0D1A67042B00157977 /* green-logo-kuwait.png in Resources */,
 				888BB9961A5F801A00157977 /* IBT-Transp-logo-automatedLogic.png in Resources */,
 				888BBA2F1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */,
-				886938351A8FDE1400B02CD4 /* AgreementViewController.xib in Resources */,
+				82C133FF1B3DE2ED00845DDC /* AgreementViewController.xib in Resources */,
 				888BB9921A5F801A00157977 /* IBT-logo-otis.png in Resources */,
 				888BB9431A5EE8E200157977 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov in Resources */,
 				209AEFB519D4947B0074A3EA /* 03A Building Cut@2x.png in Resources */,
@@ -3680,7 +3681,7 @@
 				88005EEB1ACACE06005738EA /* green-logo-kuwait.png in Resources */,
 				88005EEC1ACACE06005738EA /* IBT-Transp-logo-automatedLogic.png in Resources */,
 				88005EED1ACACE06005738EA /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */,
-				88005EEE1ACACE06005738EA /* AgreementViewController.xib in Resources */,
+				82C134001B3DE2ED00845DDC /* AgreementViewController.xib in Resources */,
 				88005EEF1ACACE06005738EA /* IBT-logo-otis.png in Resources */,
 				88005EF01ACACE06005738EA /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov in Resources */,
 				88005EF11ACACE06005738EA /* 03A Building Cut@2x.png in Resources */,
@@ -4013,7 +4014,7 @@
 				88423FE61B34531400E41820 /* green-logo-kuwait.png in Resources */,
 				88423FE71B34531400E41820 /* IBT-Transp-logo-automatedLogic.png in Resources */,
 				88423FE81B34531400E41820 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */,
-				88423FE91B34531400E41820 /* AgreementViewController.xib in Resources */,
+				82C134011B3DE2ED00845DDC /* AgreementViewController.xib in Resources */,
 				88423FEA1B34531400E41820 /* IBT-logo-otis.png in Resources */,
 				88423FEB1B34531400E41820 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov in Resources */,
 				88423FEC1B34531400E41820 /* 03A Building Cut@2x.png in Resources */,
@@ -4468,6 +4469,15 @@
 				82C133FB1B3DC88700845DDC /* zh-Hans */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		82C134031B3DE2ED00845DDC /* AgreementViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82C134021B3DE2ED00845DDC /* en */,
+				82C134061B3DE35000845DDC /* zh-Hans */,
+			);
+			name = AgreementViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

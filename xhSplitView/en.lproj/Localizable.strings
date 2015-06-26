@@ -9,6 +9,13 @@
 "EN Button"         = "English";
 "ZH Button"         = "中文";
 "PlistName"         = "companyData";
+"Check_update"      = "Checking for Update";
+"Up_to_date"        = "You are up to date";
+"OK"                = "OK";
+"Help_page"         = "Page %d of %ld";
+"Commercial"        = "Commerical";
+"Legal_titie"       = "Legal Notices                       X";
+"Legal_content"     = "Agion® is a registered trademark of Sciessent LLC.\n\nBACnet® is a registered trademark of American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE).\n\nLEED® is a registered trade mark of the U.S. Green Building Council.";
 
 "helpTitle1"        = "How to use UTC  Building Possible";
 "helpDesc1"         = "Tap the center Commercial Building to zoom closer.\nUse the Refresh button in the MENU (top left corner) to restart the app.\nPinch and zoom functionality applies to every image (outside of the help area).";

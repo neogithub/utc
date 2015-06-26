@@ -205,14 +205,23 @@ enum MenuVisibilityType : NSUInteger {
                         
                         
                         //if ([sender isKindOfClass:[UIButton class]]) {
-                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Checking for Update"
-                                                                            message:@"You are up to date"
-                                                                           delegate:self
-                                                                  cancelButtonTitle:@"OK"
-                                                                  otherButtonTitles:nil];
-                            alert.delegate = self;
-                            [alert show];
-                            
+//                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Checking for Update"
+//                                                                            message:@"You are up to date"
+//                                                                           delegate:self
+//                                                                  cancelButtonTitle:@"OK"
+//                                                                  otherButtonTitles:nil];
+//                            alert.delegate = self;
+//                            [alert show];
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[TSLanguageManager localizedString:@"Check_update"]
+                                                                        message:[TSLanguageManager localizedString:@"Up_to_date"]
+                                                                       delegate:self
+                                                              cancelButtonTitle:[TSLanguageManager localizedString:@"OK"]
+                                                              otherButtonTitles:nil];
+                        alert.delegate = self;
+                        [alert show];
+                        
+
+                        
                        // }
                         
                         [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
@@ -571,7 +580,7 @@ enum MenuVisibilityType : NSUInteger {
 
 - (void) configurePage:(GHWalkThroughPageCell *)cell atIndex:(NSInteger)index
 {
-    cell.title = [NSString stringWithFormat:@"Page %d of %ld", index+1,(unsigned long)self.descStrings.count];
+    cell.title = [NSString stringWithFormat:[TSLanguageManager localizedString:@"Help_page"], index+1,(unsigned long)self.descStrings.count];
     cell.desc = [self.descStrings objectAtIndex:index];
     welcomeLabel.text = self.titleStrings [index];
 

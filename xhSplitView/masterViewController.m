@@ -16,7 +16,7 @@
 #import "UIApplication+AppVersion.h"
 #import "UIView+Toast.h"
 #import "AgreementViewController.h"
-
+#import "TSLanguageManager.h"
 @interface masterViewController () <IBTViewControllerDelegate>
 {
 	int selectedRow;
@@ -148,10 +148,10 @@ static CGFloat yHeight = 90;
 
 -(void)loadLegal
 {
-    [self.view makeToast:@"Agion® is a registered trademark of Sciessent LLC.\n\nBACnet® is a registered trademark of American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE).\n\nLEED® is a registered trade mark of the U.S. Green Building Council."
+    [self.view makeToast:[TSLanguageManager localizedString:@"Legal_content"]
                 duration:10.0
                 position:CSToastPositionBottom
-                   title:@"Legal Notices                       X"];
+                   title:[TSLanguageManager localizedString:@"Legal_title"]];
 }
 
 -(void)initVersion
