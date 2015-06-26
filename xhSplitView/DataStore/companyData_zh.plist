@@ -71,7 +71,7 @@
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Otis  |  Lenel</string>
+				<string>奥的斯  |  Lenel</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -116,7 +116,7 @@
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Otis  |  Interlogix</string>
+				<string>奥的斯  |  Interlogix</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -126,7 +126,7 @@
 		<key>infoName</key>
 		<string>Elevators &amp; Escalators</string>
 		<key>fileName</key>
-		<string>Otis</string>
+		<string>奥的斯</string>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -463,7 +463,7 @@
 						<key>background</key>
 						<string>icon marker center.png</string>
 						<key>caption</key>
-						<string>Up to 50% Faster</string>
+						<string>提高建筑的电梯运行效率达50%</string>
 					</dict>
 					<dict>
 						<key>xy</key>
@@ -676,7 +676,7 @@
 		<key>infoName</key>
 		<string>Heating, Air-conditioning and Refrigeration </string>
 		<key>fileName</key>
-		<string>Carrier</string>
+		<string>开利</string>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -1095,7 +1095,7 @@
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Carrier  |  Automated Logic</string>
+				<string>开利  |  Automated Logic</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -1142,7 +1142,7 @@
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Carrier  |  Automated Logic WebCTRL</string>
+				<string>开利  |  Automated Logic WebCTRL</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -1392,7 +1392,7 @@
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Lenel  |  Otis</string>
+				<string>Lenel  |  奥的斯</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -1439,7 +1439,7 @@
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Lenel  |  Edwards</string>
+				<string>Lenel  |  爱德华</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -1952,13 +1952,13 @@
 						<key>background</key>
 						<string>icon marker right.png</string>
 						<key>caption</key>
-						<string>Carrier</string>
+						<string>开利</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Automated Logic  |  Carrier</string>
+				<string>Automated Logic  |  开利</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -2314,7 +2314,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Security Systems</string>
+				<string>安防系统</string>
 				<key>subBG</key>
 				<string>PH2_INTERLOGIX_00_STILL_HS.png</string>
 			</dict>
@@ -2322,7 +2322,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 				<key>catType</key>
 				<string>IBT</string>
 				<key>catName</key>
-				<string>Intelligent Building Technologies</string>
+				<string>智能建筑技术</string>
 			</dict>
 		</array>
 		<key>background</key>
@@ -2421,7 +2421,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Interlogix  |  Lenel &amp; Otis</string>
+				<string>Interlogix  |  Lenel &amp; 奥的斯</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -2450,7 +2450,7 @@ Interlogix TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus�
 		<key>infoName</key>
 		<string>保安系统和事故管理系统</string>
 		<key>fileName</key>
-		<string>Edwards</string>
+		<string>爱德华</string>
 		<key>categories</key>
 		<array>
 			<dict>
@@ -2664,7 +2664,7 @@ Interlogix TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus�
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Edwards  |  Lenel</string>
+				<string>爱德华  |  Lenel</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>
@@ -2711,7 +2711,7 @@ Interlogix TruVision摄像机、Lenel OnGuard®系统以及奥的斯CompassPlus�
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Edwards  |  Automated Logic</string>
+				<string>爱德华  |  Automated Logic</string>
 				<key>subBG</key>
 				<string>PH2_CARRIER_02_SMG_AERO_39M_AIR_HANDLERS.png</string>
 			</dict>

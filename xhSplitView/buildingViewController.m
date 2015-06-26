@@ -283,22 +283,33 @@ enum {
     if (kshowNSLogBOOL) NSLog(@"loadIBT function");
     NSDictionary *userInfo;
         
-    if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Otis"]) {
+    if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Otis"] || [[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"奥的斯"])
+    {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:6] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Otis");
-    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Lenel"]) {
+    }
+    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Lenel"])
+    {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:5] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Lenel");
-    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Interlogix"]) {
+    }
+    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Interlogix"])
+    {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:4] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Interlogix");
-    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Edwards"]) {
+    }
+    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Edwards"] || [[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"爱德华"])
+    {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:3] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Edwards");
-    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Carrier"]) {
+    }
+    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Carrier"] || [[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"开利"])
+    {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:2] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Carrier");
-    } else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Automated Logic"]) {
+    }
+    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Automated Logic"])
+    {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Automated Logic");
     }
@@ -742,7 +753,7 @@ enum {
 
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     
-	if ( [text isEqualToString:@"Intelligent Building Technologies"] )
+	if ( [text isEqualToString:@"Intelligent Building Technologies"] || [text isEqualToString:@"智能建筑技术"])
 	{
         
         [self loadIBT:nil];
