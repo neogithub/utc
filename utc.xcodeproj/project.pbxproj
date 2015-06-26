@@ -262,6 +262,7 @@
 		82A66ADC19B792C700C8E12A /* xhSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66ADA19B792C700C8E12A /* xhSplitViewController.m */; };
 		82A66ADD19B792C700C8E12A /* xhSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */; };
 		82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */; };
+		82C133F21B3DAA8A00845DDC /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */; };
 		82CB3E671B3C77180023F8D4 /* companyData_zh.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CB3E661B3C77180023F8D4 /* companyData_zh.plist */; };
 		88005E611ACACE06005738EA /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */; };
 		88005E621ACACE06005738EA /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CEFE3519D1018700BEB200 /* PopoverViewController.m */; };
@@ -1650,6 +1651,8 @@
 		82A66ADB19B792C700C8E12A /* xhSplitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = xhSplitViewController.xib; sourceTree = "<group>"; };
 		82A66ADF19B793BD00C8E12A /* ebZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ebZoomingScrollView.h; sourceTree = "<group>"; };
 		82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ebZoomingScrollView.m; sourceTree = "<group>"; };
+		82C133F01B3DAA8A00845DDC /* TSLanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLanguageManager.h; sourceTree = "<group>"; };
+		82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLanguageManager.m; sourceTree = "<group>"; };
 		82CB3E661B3C77180023F8D4 /* companyData_zh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = companyData_zh.plist; path = DataStore/companyData_zh.plist; sourceTree = "<group>"; };
 		88005FD61ACACE06005738EA /* utc enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "utc enterprise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88005FD71ACACE06005738EA /* utc copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "utc copy2-Info.plist"; path = "/Users/evan.buxton/Documents/_NEOSCAPE_PROJECTS/utc/utc copy2-Info.plist"; sourceTree = "<absolute>"; };
@@ -2233,6 +2236,8 @@
 		82A66ADE19B793BD00C8E12A /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				82C133F01B3DAA8A00845DDC /* TSLanguageManager.h */,
+				82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */,
 				88D260A11AD840960038F498 /* UAObfuscatedString */,
 				8878D1911A6DA0A6009BEE83 /* UIView+Toast.h */,
 				88D2609B1AD83FD30038F498 /* DownloadOperation */,
@@ -4296,6 +4301,7 @@
 				82A66AAC19B7926B00C8E12A /* AppDelegate.m in Sources */,
 				20BF48B61A3A0629009645DC /* PersistencyManager.m in Sources */,
 				8895FEDD1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */,
+				82C133F21B3DAA8A00845DDC /* TSLanguageManager.m in Sources */,
 				8834E2011A4F0FCE00204D81 /* IBTViewController.m in Sources */,
 				20D0B00819BF4EAD0096021D /* Building.m in Sources */,
 				824F14D919CB359900628F01 /* panelTableViewCell.m in Sources */,
