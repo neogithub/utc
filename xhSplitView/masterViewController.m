@@ -121,10 +121,20 @@ static CGFloat yHeight = 90;
 //	// sort them alphabetically
 //	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
-    _arr_companies = [[NSMutableArray alloc] initWithObjects:@"Commercial", nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    NSLog(@"The currently language is %@", [TSLanguageManager localizedString:@"Commercial"]);
+    
+    _arr_companies = nil;
+    
+    _arr_companies = [[NSMutableArray alloc] initWithObjects:[TSLanguageManager localizedString:@"Commercial"], nil];
     
     // sort them alphabetically
     [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    [self.tableView reloadData];
 }
 
 -(void)initAgreement

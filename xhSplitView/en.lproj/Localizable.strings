@@ -14,7 +14,14 @@
 "OK"                = "OK";
 "Help_page"         = "Page %d of %ld";
 "Commercial"        = "Commerical";
-"Legal_titie"       = "Legal Notices                       X";
+"Automated Logic"   = "Automated Logic";
+"Carrier"           = "Carrier";
+"Edwards"           = "Edwards";
+"Interlogix"        = "Interlogix";
+"Lenel"             = "Lenel";
+"Otis"              = "Otis";
+
+"Legal_title"       = "Legal Notices                       X";
 "Legal_content"     = "Agion® is a registered trademark of Sciessent LLC.\n\nBACnet® is a registered trademark of American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE).\n\nLEED® is a registered trade mark of the U.S. Green Building Council.";
 
 "helpTitle1"        = "How to use UTC  Building Possible";

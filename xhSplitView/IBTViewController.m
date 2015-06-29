@@ -12,6 +12,7 @@
 #import "LibraryAPI.h"
 #import "NSAttributedString+RegisteredTrademark.h"
 #import "UIColor+Extensions.h"
+#import "TSLanguageManager.h"
 
 @interface IBTViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
@@ -278,7 +279,12 @@
     
     [self dimButtonAtIndex:(int)[sender tag]];
     
-    companies = @[@"Automated Logic",@"Carrier",@"Edwards",@"Interlogix",@"Lenel",@"Otis"];
+    companies = @[[TSLanguageManager localizedString:@"Automated Logic"],
+                  [TSLanguageManager localizedString:@"Carrier"],
+                  [TSLanguageManager localizedString:@"Edwards"],
+                  [TSLanguageManager localizedString:@"Interlogix"],
+                  [TSLanguageManager localizedString:@"Lenel"],
+                  [TSLanguageManager localizedString:@"Otis"]];
     
     [[LibraryAPI sharedInstance] getSelectedCompanyNamed:companies[(int)[sender tag] - 1 ]];
     

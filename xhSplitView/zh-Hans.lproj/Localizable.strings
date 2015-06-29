@@ -14,7 +14,15 @@
 "OK"                = "确认";
 "Help_page"         = "第%d／%ld页";
 "Commercial"        = "商业";
-"Legal_titie"       = "法律声明                       X";
+
+"Automated Logic"   = "Automated Logic";
+"Carrier"           = "开利";
+"Edwards"           = "爱德华";
+"Interlogix"        = "智能科技";
+"Lenel"             = "Lenel";
+"Otis"              = "奥的斯";
+
+"Legal_title"       = "法律声明                       X";
 "Legal_content"     = "Agion®是Sciessent LLC 的一个注册商标。\n\nBACnet® 是美国采暖、制冷与空调工程师学会（ASHRAE）的注册商标。\n\nLEED® 是美国绿色建筑委员会的注册商标。";
 
 "helpTitle1"        = "使用指南";
