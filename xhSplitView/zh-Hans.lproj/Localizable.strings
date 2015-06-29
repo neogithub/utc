@@ -58,6 +58,10 @@
 "Legal_content"     = "Agion®是Sciessent LLC 的一个注册商标。\n\nBACnet® 是美国采暖、制冷与空调工程师学会（ASHRAE）的注册商标。\n\nLEED® 是美国绿色建筑委员会的注册商标。";
 //--------
 
+// Intelligent Building Technologies
+"About"             = "关于";
+//--------
+
 //  Help Pages
 "Help_page"         = "第%d／%ld页";
 "helpTitle1"        = "使用指南";

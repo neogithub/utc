@@ -15,6 +15,8 @@
                 <outlet property="uiiv_logo" destination="oed-2m-w1g" id="D4O-FT-s29"/>
                 <outlet property="uiiv_pointer" destination="UPV-ov-uGs" id="zuP-ky-z9l"/>
                 <outlet property="uil_UIcue" destination="AIr-xA-fod" id="fEk-Kh-xw3"/>
+                <outlet property="uil_about" destination="7gA-Vd-H2Y" id="8Hb-h2-hwd"/>
+                <outlet property="uil_title" destination="oZl-qR-1xP" id="9Xo-ZR-6dR"/>
                 <outlet property="uitv_connectText" destination="ZW9-pw-XKg" id="imD-Wj-XqZ"/>
                 <outlet property="uitv_summaryText" destination="SeY-UO-KQh" id="Ia4-fK-zhB"/>
                 <outlet property="uiv_detail" destination="ZvW-0W-FHs" id="YmM-DI-j31"/>

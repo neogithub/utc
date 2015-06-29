@@ -22,6 +22,7 @@
 人们可使用门禁卡安全进入大厦和电梯，到达有权限进出的楼层
 
 
+
 奥的斯结合Lenel OnGuard® 门禁系统，以及 智能科技 TruVision®监控系统，可以根据人群的拥挤程度合理派梯</string>
 		</dict>
 		<key>ibt</key>
@@ -1507,7 +1508,9 @@
 			<string>Lenel OnGuard® 和奥的斯的CompassPlus™目的楼层管理系统相结合，以优化人流和楼层进出管理
 
 
+
 与爱德华EST® 3平台相结合，通知大楼管理员火灾事故，并帮助他们做出合理决策
+
 
 
 与智能科技TruVision®监控摄像机以及奥的斯的CompassPlus™目的楼层管理系统相结合，可根据人群密度派梯 </string>
@@ -2729,6 +2732,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 			</array>
 			<key>text</key>
 			<string>与爱德华EST® 3平台相结合，可以进行火灾通报，并帮助管理员做出合理决策
+
 
 
 爱德华 EST® 3平台和ALC WebCTRL® 及监控系統結合，可探测和确定火灾发生地点</string>

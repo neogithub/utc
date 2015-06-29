@@ -59,6 +59,10 @@
 "Legal_content"     = "Agion® is a registered trademark of Sciessent LLC.\n\nBACnet® is a registered trademark of American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE).\n\nLEED® is a registered trade mark of the U.S. Green Building Council.";
 //--------
 
+// Intelligent Building Technologies
+"About"             = "About";
+//--------
+
 //  Help Pages
 "Help_page"         = "Page %d of %ld";
 "helpTitle1"        = "How to use UTC  Building Possible";

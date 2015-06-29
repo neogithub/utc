@@ -100,6 +100,9 @@
     _uiiv_arrow.alpha = 0.0;
 
     [self dimButtonAtIndex:0];
+    
+    _uil_title.text = [TSLanguageManager localizedString:@"helpTitle6"];
+    _uil_about.text = [TSLanguageManager localizedString:@"About"];
 }
 
 - (void)bouncyButtonTouchDown:(id)sender
