@@ -25,6 +25,7 @@
 #import "DownloadOperation.h"
 #import "UAObfuscatedString.h"
 #import "TSLanguageManager.h"
+#import "SettingViewController.h"
 
 #define BUNDLE_VERSION_EQUAL_TO(v)                  ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v  options:NSNumericSearch] == NSOrderedSame)
 #define BUNDLE_VERSION_GREATER_THAN(v)              ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] == NSOrderedDescending)
@@ -326,6 +327,8 @@ enum MenuVisibilityType : NSUInteger {
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openAgreement) name:@"showAgreement" object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadSettingView) name:@"loadSettingView" object:nil];
+    
 #ifdef IS_US
     
 #else
@@ -451,6 +454,14 @@ enum MenuVisibilityType : NSUInteger {
 		[image removeFromSuperview];
     }];
 }
+
+#pragma mark - Load Setting view
+- (void)loadSettingView{
+    SettingViewController *settingVC = [[SettingViewController alloc] init];
+    settingVC.view.frame = self.view.bounds;
+    [self presentViewController:settingVC animated:YES completion:^(void){  }];
+}
+
 
 #pragma mark - play movie
 -(void)loadMovieNamed:(NSString*)moviename isTapToPauseEnabled:(BOOL)tapToPauseEnabled

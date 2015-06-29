@@ -22,7 +22,12 @@
 "OK"                = "OK";
 //--------
 
+//  Side Menu
 "Commercial"        = "Commerical";
+"Check_for_update"  = "CHECK FOR UPDATE";
+"Help"              = "Help";
+"Setting"           = "Setting";
+//--------
 
 //  Sustainability Title and text
 "Sustainability"    = "Sustainability";

@@ -21,7 +21,12 @@
 "OK"                = "确认";
 //--------
 
+//  Side Menu
 "Commercial"        = "商业";
+"Check_for_update"  = "查看更新";
+"Help"              = "帮助";
+"Setting"           = "设置";
+//--------
 
 //  Sustainability Title and text
 "Sustainability"    = "可持续发展";

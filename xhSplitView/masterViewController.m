@@ -98,6 +98,7 @@ static CGFloat yHeight = 90;
     [self initVersion];
     [self initLegal];
     [self initAgreement];
+    [self initSetting];
     
 #ifdef IS_US
 
@@ -144,7 +145,7 @@ static CGFloat yHeight = 90;
     [_uib_AgreementBtn setTitle:@"View Agreement" forState:UIControlStateNormal];
     [_uib_AgreementBtn.titleLabel setFont:[UIFont systemFontOfSize:12.0]];
     [_uib_AgreementBtn addTarget: self action:@selector(notifyAgreement) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview: _uib_AgreementBtn];
+//    [self.view addSubview: _uib_AgreementBtn];
 }
 
 -(void)initLegal
@@ -153,7 +154,7 @@ static CGFloat yHeight = 90;
     [_uib_legalBtn setTintColor:[UIColor whiteColor]];
     _uib_legalBtn.frame = CGRectMake(120, 640, 30, 30); //680
     [_uib_legalBtn addTarget: self action:@selector(loadLegal) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview: _uib_legalBtn];
+//    [self.view addSubview: _uib_legalBtn];
 }
 
 -(void)loadLegal
@@ -164,6 +165,37 @@ static CGFloat yHeight = 90;
                    title:[TSLanguageManager localizedString:@"Legal_title"]];
 }
 
+- (void)initSetting
+{
+    UIButton *uib_setting = [UIButton buttonWithType:UIButtonTypeCustom];
+    uib_setting.frame = CGRectMake(47, 706, 85, 24); //683
+    uib_setting.tag = 0;
+    [uib_setting.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
+    [uib_setting setTitle:[TSLanguageManager localizedString:@"Setting"] forState:UIControlStateNormal];
+    [uib_setting addTarget:self action:@selector(tapOnSetting:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: uib_setting];
+}
+
+-(void)initUpdateBtn
+{
+    if (_uib_updateBtn) {
+        [_uib_updateBtn removeFromSuperview];
+    }
+    _uib_updateBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _uib_updateBtn.frame = CGRectMake(30, 675, 130, 24);
+    _uib_updateBtn.tag = 0;
+    [_uib_updateBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
+    [_uib_updateBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_uib_updateBtn setTitle:[TSLanguageManager localizedString:@"Check_for_update"] forState:UIControlStateNormal];
+    _uib_updateBtn.showsTouchWhenHighlighted = YES;
+    [_uib_updateBtn addTarget: self action:@selector(loadUpdate) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: _uib_updateBtn];
+    
+    //[_uib_updateBtn.layer setBorderColor:[UIColor colorWithWhite:1.0 alpha:0.5].CGColor];
+    //[_uib_updateBtn.layer setBorderWidth:1.0];
+    
+}
+
 -(void)initVersion
 {
     UILabel *uil_Ver = [[UILabel alloc] initWithFrame:CGRectMake(39.0, 740, 100, 20)];
@@ -171,7 +203,7 @@ static CGFloat yHeight = 90;
     [uil_Ver setFont:[UIFont systemFontOfSize:8]];
     [uil_Ver setTextColor:[UIColor whiteColor]];
     [uil_Ver setTextAlignment:NSTextAlignmentCenter];
-    [self.view addSubview: uil_Ver];
+//    [self.view addSubview: uil_Ver];
 }
 
 #pragma mark - Sustain Button
@@ -181,15 +213,15 @@ static CGFloat yHeight = 90;
         [_uib_helpBtn removeFromSuperview];
     }
     _uib_helpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_helpBtn.frame = CGRectMake(28, 643, 85, 24); //683
+    _uib_helpBtn.frame = CGRectMake(47, 736, 85, 24); //683
     _uib_helpBtn.tag = 0;
-    [_uib_helpBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
-    [_uib_helpBtn setTitle:@"Help" forState:UIControlStateNormal];
+    [_uib_helpBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
+    [_uib_helpBtn setTitle:[TSLanguageManager localizedString:@"Help"] forState:UIControlStateNormal];
     [_uib_helpBtn addTarget: self action:@selector(loadHelpView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_helpBtn];
     
-    [_uib_helpBtn.layer setBorderColor:[UIColor whiteColor].CGColor];
-    [_uib_helpBtn.layer setBorderWidth:1.0];
+//    [_uib_helpBtn.layer setBorderColor:[UIColor whiteColor].CGColor];
+//    [_uib_helpBtn.layer setBorderWidth:1.0];
 }
 
 -(void)loadHelpView
@@ -225,26 +257,6 @@ static CGFloat yHeight = 90;
     [_uib_sustainBtn setImage: [UIImage imageNamed:@"menu_sustainability.png"] forState:UIControlStateSelected];
     [_uib_sustainBtn addTarget: self action:@selector(loadSustainability) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: _uib_sustainBtn];
-}
-
--(void)initUpdateBtn
-{
-    if (_uib_updateBtn) {
-        [_uib_updateBtn removeFromSuperview];
-    }
-    _uib_updateBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_updateBtn.frame = CGRectMake(29, 712, 118, 24);
-    _uib_updateBtn.tag = 0;
-    [_uib_updateBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
-    [_uib_updateBtn setTitleColor:[UIColor colorWithWhite:1.0 alpha:0.5] forState:UIControlStateNormal];
-    [_uib_updateBtn setTitle:@"Check for Update" forState:UIControlStateNormal];
-    _uib_updateBtn.showsTouchWhenHighlighted = YES;
-    [_uib_updateBtn addTarget: self action:@selector(loadUpdate) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview: _uib_updateBtn];
-    
-    //[_uib_updateBtn.layer setBorderColor:[UIColor colorWithWhite:1.0 alpha:0.5].CGColor];
-    //[_uib_updateBtn.layer setBorderWidth:1.0];
-
 }
 
 -(void)loadModalVC
@@ -318,6 +330,11 @@ static CGFloat yHeight = 90;
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"checkForUpdate" object:self userInfo:nil];
     
+}
+
+#pragma mark Open Setting
+- (void)tapOnSetting:(id)sender{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"loadSettingView" object:self userInfo:nil];
 }
 
 #pragma mark - Init Navigation
