@@ -14,6 +14,23 @@
 "OK"                = "OK";
 "Help_page"         = "Page %d of %ld";
 "Commercial"        = "Commerical";
+
+"Sustainability"    = "Sustainability";
+"Sustain_button1"   = "This Green Building";
+"Sustain_content1"  = "Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED:) v4 rating system.\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic: intelligent controls optimize building performance";
+"Sustain_image1"     = "Screenshot 2015-01-06 14.48.22.png";
+
+"Sustain_button2"   = "Green Building Leadership";
+"Sustain_content2"  = "Only company in the world to be a founding member of Green Building Councils on four continents\n\nCarrier was instrumental in launching the U.S. Green Building Council in 1993 and was the first company in the world to join the organization\n\nEngaged more than 60,000 building professionals around the world since 2010 in green building training and education\n\nFounding sponsor of the Center for Green Schools";
+"Sustain_image2"     = "Screenshot 2015-01-06 14.53.23.png";
+
+"Sustain_button3"   = "Green Technology Leadership";
+"Sustain_content3"  = "Advanced research and technology development on energy efficiency, water reduction, ozone protection, natural refrigerants and material selection\n\nRigorous, formal review during product development process to minimize environmental footprint of products while maximizing environmental technologies\n\nFirst elevator manufacturer to certify its LEED: Gold factory, and first HVAC manufacturer to certify its LEED: Gold factory";
+"Sustain_image3"     = "Screenshot 2015-01-06 14.53.17.png";
+
+"AdvanTEC_title"    = "AdvanTE3C® Solutions";
+"AdvanTEC_containt" = "Global team of Experts in Efficiency and Environment focused on creating strategic and sustainable building solutions\n\nHigh-performing, intelligent building solutions that reduce life cycle operating costs, deliver an improved user experience, and protect people and property\n\nntelligent building capabilities include: \n    • design and certification\n    • audit and diagnostics\n    • energy analysis and tools\n    • innovative products for green buildings";
+
 "Automated Logic"   = "Automated Logic";
 "Carrier"           = "Carrier";
 "Edwards"           = "Edwards";

@@ -12,6 +12,7 @@
 #import "LibraryAPI.h"
 #import "NSAttributedString+RegisteredTrademark.h"
 #import "UIColor+Extensions.h"
+#import "TSLanguageManager.h"
 
 @interface SustainViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
@@ -24,17 +25,17 @@
 
 @end
 
-static NSString * const sustainDesc3 = @"Advanced research and technology development on energy efficiency, water reduction, ozone protection, natural refrigerants and material selection\n\nRigorous, formal review during product development process to minimize environmental footprint of products while maximizing environmental technologies\n\nFirst elevator manufacturer to certify its LEED: Gold factory, and first HVAC manufacturer to certify its LEED: Gold factory";
-
-static NSString * const sustainImg1 = @"Screenshot 2015-01-06 14.53.17.png";
-
-static NSString * const sustainDesc2 = @"Only company in the world to be a founding member of Green Building Councils on four continents\n\nCarrier was instrumental in launching the U.S. Green Building Council in 1993 and was the first company in the world to join the organization\n\nEngaged more than 60,000 building professionals around the world since 2010 in green building training and education\n\nFounding sponsor of the Center for Green Schools";
-
-static NSString * const sustainImg2 = @"Screenshot 2015-01-06 14.53.23.png";
-
-static NSString * const sustainDesc1 = @"Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED:) v4 rating system.\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic: intelligent controls optimize building performance";
-
-static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
+//static NSString * const sustainDesc3 = @"Advanced research and technology development on energy efficiency, water reduction, ozone protection, natural refrigerants and material selection\n\nRigorous, formal review during product development process to minimize environmental footprint of products while maximizing environmental technologies\n\nFirst elevator manufacturer to certify its LEED: Gold factory, and first HVAC manufacturer to certify its LEED: Gold factory";
+//
+//static NSString * const sustainImg1 = @"Screenshot 2015-01-06 14.53.17.png";
+//
+//static NSString * const sustainDesc2 = @"Only company in the world to be a founding member of Green Building Councils on four continents\n\nCarrier was instrumental in launching the U.S. Green Building Council in 1993 and was the first company in the world to join the organization\n\nEngaged more than 60,000 building professionals around the world since 2010 in green building training and education\n\nFounding sponsor of the Center for Green Schools";
+//
+//static NSString * const sustainImg2 = @"Screenshot 2015-01-06 14.53.23.png";
+//
+//static NSString * const sustainDesc1 = @"Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED:) v4 rating system.\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic: intelligent controls optimize building performance";
+//
+//static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 
 @implementation SustainViewController
 
@@ -64,6 +65,13 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     _uiiv_BG.alpha = 0.0;
     
     [self performSelector:@selector(fadeUpBG) withObject:nil afterDelay:0.75];
+    
+    NSString *sustainDesc1 = [TSLanguageManager localizedString:@"Sustain_content1"];
+    NSString *sustainDesc2 = [TSLanguageManager localizedString:@"Sustain_content2"];
+    NSString *sustainDesc3 = [TSLanguageManager localizedString:@"Sustain_content3"];
+    NSString *sustainImg1 = [TSLanguageManager localizedString:@"Sustain_image1"];
+    NSString *sustainImg2 = [TSLanguageManager localizedString:@"Sustain_image2"];
+    NSString *sustainImg3 = [TSLanguageManager localizedString:@"Sustain_image3"];
     
     self.descStrings = [NSArray arrayWithObjects:sustainDesc1,sustainDesc2, sustainDesc3 , nil];
     self.descImgStrings = [NSArray arrayWithObjects:sustainImg1,sustainImg2, sustainImg3 , nil];
@@ -99,6 +107,8 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     btn.tag = 0;
     [btn setTitle:@"This Green Building" forState:UIControlStateNormal];
     [self loadIBTDetail:btn];
+    
+    _uil_title.text = [TSLanguageManager localizedString:@"Sustainability"];
 }
 
 #pragma mark PulseAnim
@@ -244,10 +254,16 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
 
 -(void)dimButtonAtIndex:(int)index
 {
+    NSArray *arr_buttonTitle = @[
+                                 [TSLanguageManager localizedString:@"Sustain_button1"],
+                                 [TSLanguageManager localizedString:@"Sustain_button2"],
+                                 [TSLanguageManager localizedString:@"Sustain_button3"],
+                                 ];
     for (UIButton *btn in _uibCollection) {
         btn.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.5].CGColor;
         btn.layer.borderWidth = 1.0;
         [btn setBackgroundColor:[UIColor utcBlueAlight]];
+        [btn setTitle:arr_buttonTitle[btn.tag] forState:UIControlStateNormal];
         [btn.titleLabel setTextColor:[UIColor whiteColor]];
     }
     
@@ -261,7 +277,6 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
                 obj.layer.borderWidth = 5.0;
             [obj setBackgroundColor:[UIColor whiteColor]];
             [obj setTitleColor:[UIColor utcBlueDarkA] forState:UIControlStateNormal];
-
             //Assigning YES to the stop variable is the equivalent of calling "break" during fast enumeration
             //obj.alpha = 0.35;
             //*stop = YES;

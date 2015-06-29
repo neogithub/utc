@@ -1174,7 +1174,7 @@
 						<key>facts</key>
 						<dict>
 							<key>factwidth</key>
-							<string>360</string>
+							<string>240</string>
 							<key>factxy</key>
 							<string>30,130</string>
 							<key>factscopy</key>

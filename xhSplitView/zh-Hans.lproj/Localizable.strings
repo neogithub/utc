@@ -15,6 +15,22 @@
 "Help_page"         = "第%d／%ld页";
 "Commercial"        = "商业";
 
+"Sustainability"    = "可持续发展";
+"Sustain_button1"   = "绿色建筑";
+"Sustain_content1"  = "大多数产品满足LEED®v4评级系统所需条件\n\n奥的斯高效的再生能源变频技术可以回收通过电梯和自动扶梯运行所产生的能源\n\n开利先进、节能的暖通空调技术\n\nAutomated Logic®智能控制可以提高建筑运行效率";
+"Sustain_image1"     = "Screenshot 2015-01-06 14.53.17.png";
+
+"Sustain_button2"   = "绿色建筑先锋";
+"Sustain_content2"  = "是全球唯一在四大洲的绿色建筑委员会的创始成员\n\n开利在1993年成立美国绿色建筑委员会时发挥了至关重要的作用，并成为全球第一个加入该组织的公司\n\n自2010年以来，全球超过6万名建筑业专业人士参与了绿色建筑委员会的培训及教育活动\n\n绿色学校的创始赞助商";
+"Sustain_image2"     = "Screenshot 2015-01-06 14.53.23.png";
+
+"Sustain_button3"   = "绿色技术领导者";
+"Sustain_content3"  = "在提高能效、节约用水、臭氧层保护、使用天然制冷剂和材料选择方面拥有先进的研发技术\n\n通过在产品研发过程中严谨、正式的检查，最大限度降低对环境的影响，同时充分利用环境技术\n\n第一家获得LEED®金牌工厂认证的电梯制造商;第一家获得LEED®金牌工厂认证的暖通空调制造商";
+"Sustain_image3"     = "Screenshot 2015-01-06 14.48.22.png";
+
+"AdvanTEC_title"    = "AdvanTE3C® 解决方案";
+"AdvanTEC_containt" = "来自全球的节能及环保专家团队，致力于打造全球战略和可持续建筑解决方案\n\n高效的智能建筑解决方案，减少建筑生命周期运行成本，提供更好的用户体验，保护住户和财产\n\n智能建筑的主要功能包括：\n    •设计和认证\n    •审计和判断\n    •能量分析和工具\n    •用于绿色建筑的创新产品";
+
 "Automated Logic"   = "Automated Logic";
 "Carrier"           = "开利";
 "Edwards"           = "爱德华";

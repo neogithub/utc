@@ -12,6 +12,7 @@
 #import "LibraryAPI.h"
 #import "NSAttributedString+RegisteredTrademark.h"
 #import "UIColor+Extensions.h"
+#import "TSLanguageManager.h"
 
 @interface ModalViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
@@ -61,7 +62,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
   //   _uil_headerText.attributedText = g;
     
    UIFont *boldFont = [UIFont boldSystemFontOfSize:17];
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:_uil_headerText.text
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[TSLanguageManager localizedString:@"AdvanTEC_title"]
                                                                                          attributes:@{NSFontAttributeName:boldFont}];
     
     [attributedString setAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:10],
@@ -92,8 +93,10 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     self.descStrings = [NSArray arrayWithObjects:sustainDesc1,sustainDesc2, sustainDesc3 , nil];
     self.descImgStrings = [NSArray arrayWithObjects:sustainImg1,sustainImg2, sustainImg3 , nil];
 
-    [_uitv_text setFont:[UIFont fontWithName:@"Arial" size:17]];
     
+    [_uitv_text setText:[TSLanguageManager localizedString:@"AdvanTEC_containt"]];
+    [_uitv_text setFont:[UIFont fontWithName:@"Arial" size:17]];
+    [_uitv_text setTextColor:[UIColor darkGrayColor]];
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 1.0;
     }];
