@@ -9,6 +9,10 @@
                 <outlet property="uiiv_BG" destination="arp-W9-2t0" id="y6g-15-Xlx"/>
                 <outlet property="uiiv_arrow" destination="vuP-oi-x1m" id="wEI-4S-w6r"/>
                 <outlet property="uiiv_header" destination="Zi0-a5-uBn" id="D7R-KW-9IZ"/>
+                <outlet property="uil_Carrier" destination="FFg-Rg-D0z" id="jDL-LT-TrH"/>
+                <outlet property="uil_Mexico" destination="ScP-gq-tbz" id="Cbu-Cw-7fu"/>
+                <outlet property="uil_Otis" destination="FV5-bj-ol8" id="W49-hr-xyz"/>
+                <outlet property="uil_Tianjin" destination="E4d-4z-y5b" id="dHb-yq-JKC"/>
                 <outlet property="uil_header" destination="i5Y-je-AiI" id="dXc-Gs-Jeq"/>
                 <outlet property="uil_title" destination="oZl-qR-1xP" id="k1z-4H-rKu"/>
                 <outlet property="uitv_sustain" destination="H34-8N-O6L" id="Fqz-Wa-MNX"/>
@@ -209,19 +213,26 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FFg-Rg-D0z">
-                                    <rect key="frame" x="48" y="166" width="195" height="31"/>
+                                    <rect key="frame" x="48" y="156" width="195" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <attributedString key="attributedText">
-                                        <fragment content="Carrier Mexico SA de CV Facility ">
+                                        <fragment content="Carrier Mexico SA de CV Facility">
                                             <attributes>
                                                 <color key="NSColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ScP-gq-tbz">
+                                    <rect key="frame" x="48" y="176" width="195" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <attributedString key="attributedText">
                                         <fragment content="Monterrey, Mexico">
                                             <attributes>
-                                                <color key="NSColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="9" name="HelveticaNeue"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
@@ -234,21 +245,26 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FV5-bj-ol8">
-                                    <rect key="frame" x="259" y="166" width="195" height="31"/>
+                                    <rect key="frame" x="259" y="156" width="195" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">Otis TEDA Elevator Center
-</string>
+                                        <fragment content="Otis TEDA Elevator Center">
                                             <attributes>
                                                 <color key="NSColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E4d-4z-y5b">
+                                    <rect key="frame" x="259" y="176" width="195" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <attributedString key="attributedText">
                                         <fragment content="Tianjin, China">
                                             <attributes>
-                                                <color key="NSColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="9" name="HelveticaNeue"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>

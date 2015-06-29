@@ -5,42 +5,62 @@
   Created by Xiaohe Hu on 6/26/15.
   Copyright (c) 2015 Neoscape. All rights reserved.
 */
+
+//  Language Picker
 "Picker Title"      = "Select a Language/选择一种语言";
 "EN Button"         = "English";
 "ZH Button"         = "中文";
+//--------
+
+//  Plist Name
 "PlistName"         = "companyData";
+//--------
+
+//  Update Alert
 "Check_update"      = "Checking for Update";
 "Up_to_date"        = "You are up to date";
 "OK"                = "OK";
-"Help_page"         = "Page %d of %ld";
+//--------
+
 "Commercial"        = "Commerical";
 
+//  Sustainability Title and text
 "Sustainability"    = "Sustainability";
 "Sustain_button1"   = "This Green Building";
 "Sustain_content1"  = "Many of our products contribute toward satisfying prerequisites and credits under the Leadership in Energy and Environmental Design (LEED:) v4 rating system.\n\nOtis high-efficiency regenerative drives can create energy through elevator and escalator movement\n\nCarrier advanced energy efficient HVAC technology\n\nAutomated Logic: intelligent controls optimize building performance";
-"Sustain_image1"     = "Screenshot 2015-01-06 14.48.22.png";
 
 "Sustain_button2"   = "Green Building Leadership";
 "Sustain_content2"  = "Only company in the world to be a founding member of Green Building Councils on four continents\n\nCarrier was instrumental in launching the U.S. Green Building Council in 1993 and was the first company in the world to join the organization\n\nEngaged more than 60,000 building professionals around the world since 2010 in green building training and education\n\nFounding sponsor of the Center for Green Schools";
-"Sustain_image2"     = "Screenshot 2015-01-06 14.53.23.png";
 
 "Sustain_button3"   = "Green Technology Leadership";
 "Sustain_content3"  = "Advanced research and technology development on energy efficiency, water reduction, ozone protection, natural refrigerants and material selection\n\nRigorous, formal review during product development process to minimize environmental footprint of products while maximizing environmental technologies\n\nFirst elevator manufacturer to certify its LEED: Gold factory, and first HVAC manufacturer to certify its LEED: Gold factory";
-"Sustain_image3"     = "Screenshot 2015-01-06 14.53.17.png";
+"Sustain_Carrier"   = "Carrier Mexico SA de CV Facility";
+"Sustain_Mexico"    = "Monterrey, Mexico";
+"Sustain_Otis"      = "Otis TEDA Elevator Center";
+"Sustain_Tianjin"   = "Tianjin, China";
+//--------
 
+// AdvanTEC title and text
 "AdvanTEC_title"    = "AdvanTE3C® Solutions";
 "AdvanTEC_containt" = "Global team of Experts in Efficiency and Environment focused on creating strategic and sustainable building solutions\n\nHigh-performing, intelligent building solutions that reduce life cycle operating costs, deliver an improved user experience, and protect people and property\n\nntelligent building capabilities include: \n    • design and certification\n    • audit and diagnostics\n    • energy analysis and tools\n    • innovative products for green buildings";
+//--------
 
+//  Companies names in United Technologies
 "Automated Logic"   = "Automated Logic";
 "Carrier"           = "Carrier";
 "Edwards"           = "Edwards";
 "Interlogix"        = "Interlogix";
 "Lenel"             = "Lenel";
 "Otis"              = "Otis";
+//--------
 
+//  Legal Notices
 "Legal_title"       = "Legal Notices                       X";
 "Legal_content"     = "Agion® is a registered trademark of Sciessent LLC.\n\nBACnet® is a registered trademark of American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE).\n\nLEED® is a registered trade mark of the U.S. Green Building Council.";
+//--------
 
+//  Help Pages
+"Help_page"         = "Page %d of %ld";
 "helpTitle1"        = "How to use UTC  Building Possible";
 "helpDesc1"         = "Tap the center Commercial Building to zoom closer.\nUse the Refresh button in the MENU (top left corner) to restart the app.\nPinch and zoom functionality applies to every image (outside of the help area).";
 
@@ -58,3 +78,4 @@
 
 "helpTitle6"        = "Intelligent Building Technologies";
 "helpDesc6"         = "Where applicable, you many jump directly to a Company’s Intelligent Building Technology section (listed in blue) from its menu.\nOr, tap United Technologies (top right corner of Home screen) to explore the entire Intelligent Building Technology section.\nTap the product logos or Learn More to play a film.";
+//--------

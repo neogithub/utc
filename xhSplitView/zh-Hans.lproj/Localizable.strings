@@ -5,42 +5,61 @@
   Created by Xiaohe Hu on 6/26/15.
   Copyright (c) 2015 Neoscape. All rights reserved.
 */
+//  Language Picker
 "Picker Title"      = "Select a Language/选择一种语言";
 "EN Button"         = "English";
 "ZH Button"         = "中文";
+//---------
+
+//  Plist Name
 "PlistName"         = "companyData_zh";
+//--------
+
+//  Update Alert
 "Check_update"      = "检测更新";
 "Up_to_date"        = "您的数据已是最新";
 "OK"                = "确认";
-"Help_page"         = "第%d／%ld页";
+//--------
+
 "Commercial"        = "商业";
 
+//  Sustainability Title and text
 "Sustainability"    = "可持续发展";
 "Sustain_button1"   = "绿色建筑";
 "Sustain_content1"  = "大多数产品满足LEED®v4评级系统所需条件\n\n奥的斯高效的再生能源变频技术可以回收通过电梯和自动扶梯运行所产生的能源\n\n开利先进、节能的暖通空调技术\n\nAutomated Logic®智能控制可以提高建筑运行效率";
-"Sustain_image1"     = "Screenshot 2015-01-06 14.53.17.png";
 
 "Sustain_button2"   = "绿色建筑先锋";
 "Sustain_content2"  = "是全球唯一在四大洲的绿色建筑委员会的创始成员\n\n开利在1993年成立美国绿色建筑委员会时发挥了至关重要的作用，并成为全球第一个加入该组织的公司\n\n自2010年以来，全球超过6万名建筑业专业人士参与了绿色建筑委员会的培训及教育活动\n\n绿色学校的创始赞助商";
-"Sustain_image2"     = "Screenshot 2015-01-06 14.53.23.png";
 
 "Sustain_button3"   = "绿色技术领导者";
 "Sustain_content3"  = "在提高能效、节约用水、臭氧层保护、使用天然制冷剂和材料选择方面拥有先进的研发技术\n\n通过在产品研发过程中严谨、正式的检查，最大限度降低对环境的影响，同时充分利用环境技术\n\n第一家获得LEED®金牌工厂认证的电梯制造商;第一家获得LEED®金牌工厂认证的暖通空调制造商";
-"Sustain_image3"     = "Screenshot 2015-01-06 14.48.22.png";
+"Sustain_Carrier"   = "开利墨西哥SA de CV工厂";
+"Sustain_Mexico"    = "墨西哥，蒙特雷";
+"Sustain_Otis"      = "奥的斯电梯泰达基地";
+"Sustain_Tianjin"   = "中国，天津";
+//-----------
 
+// AdvanTEC title and text
 "AdvanTEC_title"    = "AdvanTE3C® 解决方案";
 "AdvanTEC_containt" = "来自全球的节能及环保专家团队，致力于打造全球战略和可持续建筑解决方案\n\n高效的智能建筑解决方案，减少建筑生命周期运行成本，提供更好的用户体验，保护住户和财产\n\n智能建筑的主要功能包括：\n    •设计和认证\n    •审计和判断\n    •能量分析和工具\n    •用于绿色建筑的创新产品";
+//--------
 
+//  Companies names in United Technologies
 "Automated Logic"   = "Automated Logic";
 "Carrier"           = "开利";
 "Edwards"           = "爱德华";
 "Interlogix"        = "智能科技";
 "Lenel"             = "Lenel";
 "Otis"              = "奥的斯";
+//--------
 
+//  Legal Notices
 "Legal_title"       = "法律声明                       X";
 "Legal_content"     = "Agion®是Sciessent LLC 的一个注册商标。\n\nBACnet® 是美国采暖、制冷与空调工程师学会（ASHRAE）的注册商标。\n\nLEED® 是美国绿色建筑委员会的注册商标。";
+//--------
 
+//  Help Pages
+"Help_page"         = "第%d／%ld页";
 "helpTitle1"        = "使用指南";
 "helpDesc1"         = "点击“商业建筑”的中心放大阅读。利用菜单中的“更新”按钮（左上角）可重启APP, 每个图像都可以使用放大缩小。";
 
@@ -58,3 +77,4 @@
 
 "helpTitle6"        = "智能建筑解决方案";
 "helpDesc6"         = "在适用情况下，从公司菜单可直接转换到该公司的智能建筑解决方案部分（蓝色菜单）。或者，点击“联合技术”（主页的右上角），搜索完整的智能建筑解决方案内容。点击产品标识或者“欲知更多信息”，可播放视频。";
+//--------

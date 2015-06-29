@@ -74,7 +74,7 @@
     NSString *sustainImg3 = [TSLanguageManager localizedString:@"Sustain_image3"];
     
     self.descStrings = [NSArray arrayWithObjects:sustainDesc1,sustainDesc2, sustainDesc3 , nil];
-    self.descImgStrings = [NSArray arrayWithObjects:sustainImg1,sustainImg2, sustainImg3 , nil];
+//    self.descImgStrings = [NSArray arrayWithObjects:sustainImg1,sustainImg2, sustainImg3 , nil];
     
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 1.0;
@@ -109,6 +109,11 @@
     [self loadIBTDetail:btn];
     
     _uil_title.text = [TSLanguageManager localizedString:@"Sustainability"];
+    
+    _uil_Carrier.text = [TSLanguageManager localizedString:@"Sustain_Carrier"];
+    _uil_Mexico.text = [TSLanguageManager localizedString:@"Sustain_Mexico"];
+    _uil_Otis.text = [TSLanguageManager localizedString:@"Sustain_Otis"];
+    _uil_Tianjin.text = [TSLanguageManager localizedString:@"Sustain_Tianjin"];
 }
 
 #pragma mark PulseAnim

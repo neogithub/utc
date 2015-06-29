@@ -38,4 +38,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *uil_headerText;
 @property (weak, nonatomic) IBOutlet UIView *uiv_greentechImages;
 @property (weak, nonatomic) IBOutlet UILabel *uil_title;
+@property (weak, nonatomic) IBOutlet UILabel *uil_Carrier;
+@property (weak, nonatomic) IBOutlet UILabel *uil_Mexico;
+@property (weak, nonatomic) IBOutlet UILabel *uil_Otis;
+@property (weak, nonatomic) IBOutlet UILabel *uil_Tianjin;
 @end
