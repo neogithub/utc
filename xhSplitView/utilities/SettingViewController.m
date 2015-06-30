@@ -80,22 +80,27 @@
     navVC.navigationBar.barTintColor =  [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"setting_title.png"]];
     navVC.navigationBar.topItem.title = [TSLanguageManager localizedString:@"Setting"];
     [navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    UIView *uiv_clear = [[UIView alloc] initWithFrame:self.view.bounds];
+    uiv_clear.backgroundColor = [UIColor clearColor];
+    [self.view insertSubview:uiv_clear belowSubview:uiv_settingContainer];
+    UITapGestureRecognizer *tapClearArea = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeSetting:)];
+    uiv_clear.userInteractionEnabled = YES;
+    [uiv_clear addGestureRecognizer: tapClearArea];
 }
 
 - (void)createCloseBtn
 {
     UIButton *uib_close = [UIButton buttonWithType:UIButtonTypeCustom];
-    uib_close.frame = CGRectMake(20.0, 20.0, 50.0, 50.0);
-    [uib_close setTitle:@"X" forState:UIControlStateNormal];
+    uib_close.frame = CGRectMake(626, 252, 50.0, 50.0);
+    [uib_close setImage:[UIImage imageNamed:@"grfx_ibt_close.png"] forState:UIControlStateNormal];
     [uib_close addTarget:self action:@selector(closeSetting:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: uib_close];
 }
 
 - (void)closeSetting:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:^(void){
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"showAgreement" object:nil];
-    }];
+    [self dismissViewControllerAnimated:YES completion:^(void){    }];
     
 }
 
@@ -110,7 +115,7 @@
         [TSLanguageManager setSelectedLanguage:kLMChinese];
     }
     
-    [self dismissViewControllerAnimated:YES completion:^(void){
+    [self dismissViewControllerAnimated:NO completion:^(void){
         NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:0] forKey:@"buttontag"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil userInfo:userInfo];
     }];

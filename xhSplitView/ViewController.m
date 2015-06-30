@@ -342,12 +342,21 @@ enum MenuVisibilityType : NSUInteger {
 }
 
 - (void)updateLanguage:(NSNotification *)notification {
+    for (__strong UIView *tmp in [self.view subviews]) {
+        [tmp removeFromSuperview];
+        tmp = nil;
+    }
+    [_masterView removeFromParentViewController];
+    [_buildingView removeFromParentViewController];
+    [_detailView removeFromParentViewController];
+    [_splitVC removeFromParentViewController];
+    
     [self initMasterVC];
     [self initDetailVC];
     [self initSplitVC];
     [self initBuildingVC];
     [self initSplitCtrl];
-
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
 }
 
