@@ -103,6 +103,12 @@
     
     _uil_title.text = [TSLanguageManager localizedString:@"helpTitle6"];
     _uil_about.text = [TSLanguageManager localizedString:@"About"];
+    _uil_UTtitle.text = [TSLanguageManager localizedString:@"United_tech"];
+    _uil_UTSubTitle.text = [TSLanguageManager localizedString:@"United_tech_sub"];
+    _uil_IBTTitle.text = [TSLanguageManager localizedString:@"IBT"];
+    _uil_IBTContent1.text = [TSLanguageManager localizedString:@"IBT_content1"];
+    _uil_IBTContent2.text = [TSLanguageManager localizedString:@"IBT_content2"];
+    _uil_selectLogo.text = [TSLanguageManager localizedString:@"IBT_select"];
 }
 
 - (void)bouncyButtonTouchDown:(id)sender
@@ -171,7 +177,7 @@
          usingSpringWithDamping:0.8 initialSpringVelocity:0.0f
                         options:0 animations:^{
                             _uiv_detail.frame = CGRectMake(125, 575, 575, 575);
-                            _uitv_summaryText.frame = CGRectMake(137, 30, 524, 575);
+                            _uiv_summaryText.frame = CGRectMake(137, 30, 524, 575);
                             
                         } completion:nil];
 }
@@ -269,7 +275,7 @@
                         options:0 animations:^{
                 
                             _uiv_detail.frame = CGRectMake(125, 50, 560, 575);
-                            _uitv_summaryText.frame = CGRectMake(137, -575, 524, 575);
+                            _uiv_summaryText.frame = CGRectMake(137, -575, 524, 575);
                             
                             CGPoint originInWindowCoordinates = [_uiv_logoBns convertPoint:btn.bounds.origin fromView:btn];
                             

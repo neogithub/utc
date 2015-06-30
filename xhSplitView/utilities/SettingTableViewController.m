@@ -22,12 +22,27 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    self.view.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.view.frame = self.view.superview.bounds;
+//    self.tableView.scrollEnabled = NO;
+//    self.tableView.clipsToBounds = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    CGFloat tableBorderLeft = 10;
+    CGFloat tableBorderRight = 10;
+    
+    CGRect tableRect = self.view.frame;
+    tableRect.origin.x += tableBorderLeft; // make the table begin a few pixels right from its origin
+    tableRect.size.width -= tableBorderLeft+tableBorderRight; // reduce the width of the table
+    self.view.frame = tableRect;
+    NSLog(@"\n\n%@\n\n", NSStringFromCGRect(self.view.frame));
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,23 +54,53 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return arr_settingItems.count;
+    if (section == 0) {
+        return 2;
+    } else {
+        return 1;
+    }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 10.0f;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tableCell"];
+        if (indexPath.section == 0) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            UIImageView *uiiv_accessroy = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_accessory.png"]];
+            cell.accessoryView = uiiv_accessroy;
+        }
+    }
+    // Remove seperator inset
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
     }
     
-    cell.textLabel.text = arr_settingItems[indexPath.row];
+    // Prevent the cell from inheriting the Table View's margin settings
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        [cell setPreservesSuperviewLayoutMargins:NO];
+    }
     
+    // Explictly set your cell's layout margins
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    
+    if (indexPath.section == 0) {
+        cell.textLabel.text = arr_settingItems[indexPath.row];
+    } else {
+        cell.textLabel.text = arr_settingItems[2];
+    }
     return cell;
 }
 
@@ -67,6 +112,7 @@
         langPicker.view.frame = self.view.bounds;
         [self.navigationController pushViewController:langPicker animated:YES];
     }
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
 
 

@@ -270,6 +270,10 @@
 		82C133FF1B3DE2ED00845DDC /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C134031B3DE2ED00845DDC /* AgreementViewController.xib */; };
 		82C134001B3DE2ED00845DDC /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C134031B3DE2ED00845DDC /* AgreementViewController.xib */; };
 		82C134011B3DE2ED00845DDC /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C134031B3DE2ED00845DDC /* AgreementViewController.xib */; };
+		82C205E01B42D75600041F6B /* setting_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C205DE1B42D75600041F6B /* setting_title.png */; };
+		82C205E11B42D75600041F6B /* setting_title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C205DF1B42D75600041F6B /* setting_title@2x.png */; };
+		82C205E41B42E7B500041F6B /* cell_accessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C205E21B42E7B500041F6B /* cell_accessory.png */; };
+		82C205E51B42E7B500041F6B /* cell_accessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C205E31B42E7B500041F6B /* cell_accessory@2x.png */; };
 		82CB3E671B3C77180023F8D4 /* companyData_zh.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CB3E661B3C77180023F8D4 /* companyData_zh.plist */; };
 		88005E611ACACE06005738EA /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */; };
 		88005E621ACACE06005738EA /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CEFE3519D1018700BEB200 /* PopoverViewController.m */; };
@@ -1670,6 +1674,10 @@
 		82C133FE1B3DC88700845DDC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		82C134021B3DE2ED00845DDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AgreementViewController.xib; sourceTree = "<group>"; };
 		82C134061B3DE35000845DDC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AgreementViewController.strings"; sourceTree = "<group>"; };
+		82C205DE1B42D75600041F6B /* setting_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_title.png; sourceTree = "<group>"; };
+		82C205DF1B42D75600041F6B /* setting_title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_title@2x.png"; sourceTree = "<group>"; };
+		82C205E21B42E7B500041F6B /* cell_accessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_accessory.png; sourceTree = "<group>"; };
+		82C205E31B42E7B500041F6B /* cell_accessory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_accessory@2x.png"; sourceTree = "<group>"; };
 		82CB3E661B3C77180023F8D4 /* companyData_zh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = companyData_zh.plist; path = DataStore/companyData_zh.plist; sourceTree = "<group>"; };
 		88005FD61ACACE06005738EA /* utc enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "utc enterprise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88005FD71ACACE06005738EA /* utc copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "utc copy2-Info.plist"; path = "/Users/evan.buxton/Documents/_NEOSCAPE_PROJECTS/utc/utc copy2-Info.plist"; sourceTree = "<absolute>"; };
@@ -2312,6 +2320,10 @@
 		82A66AE319B7942900C8E12A /* grfx */ = {
 			isa = PBXGroup;
 			children = (
+				82C205E21B42E7B500041F6B /* cell_accessory.png */,
+				82C205E31B42E7B500041F6B /* cell_accessory@2x.png */,
+				82C205DE1B42D75600041F6B /* setting_title.png */,
+				82C205DF1B42D75600041F6B /* setting_title@2x.png */,
 				888BBA3A1A69331F00157977 /* help-close-bttn.png */,
 				888BBA3B1A69331F00157977 /* help-close-bttn@2x.png */,
 				888BBA341A69309600157977 /* help-text-bg.png */,
@@ -3270,6 +3282,7 @@
 				20BF49141A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				20A95A5619CBB82800132F7E /* icon main menu.png in Resources */,
 				8834E2651A57074200204D81 /* logo_advantecibt.png in Resources */,
+				82C205E51B42E7B500041F6B /* cell_accessory@2x.png in Resources */,
 				888BB9801A5F801A00157977 /* IBT-logo-automatedLogic@2x.png in Resources */,
 				20A39EAA19C32F8800C71430 /* bg_05.jpg in Resources */,
 				8895FF041A5B19F50076A3EC /* logo-carrier.png in Resources */,
@@ -3357,6 +3370,8 @@
 				888BB9961A5F801A00157977 /* IBT-Transp-logo-automatedLogic.png in Resources */,
 				888BBA2F1A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */,
 				82C133FF1B3DE2ED00845DDC /* AgreementViewController.xib in Resources */,
+				82C205E11B42D75600041F6B /* setting_title@2x.png in Resources */,
+				82C205E41B42E7B500041F6B /* cell_accessory.png in Resources */,
 				888BB9921A5F801A00157977 /* IBT-logo-otis.png in Resources */,
 				888BB9431A5EE8E200157977 /* PH2_TAYLOR_02_ANIM_L812_GRILL.mov in Resources */,
 				209AEFB519D4947B0074A3EA /* 03A Building Cut@2x.png in Resources */,
@@ -3481,6 +3496,7 @@
 				8834E2551A56E32D00204D81 /* ibt_lenel.png in Resources */,
 				20A39EBA19C3351C00C71430 /* bg_06.jpg in Resources */,
 				20A39EBE19C3351C00C71430 /* bg_03@2x.jpg in Resources */,
+				82C205E01B42D75600041F6B /* setting_title.png in Resources */,
 				8834E22C1A531E8300204D81 /* grfx_ibt_rule@2x.png in Resources */,
 				888BB9C91A5F9E8D00157977 /* advantec.png in Resources */,
 				8834E24B1A56E32D00204D81 /* ibt_carrier@2x.png in Resources */,

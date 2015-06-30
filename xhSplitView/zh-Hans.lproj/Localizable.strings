@@ -16,7 +16,7 @@
 //--------
 
 //  Update Alert
-"Check_update"      = "检测更新";
+"Check_update"      = "查看更新";
 "Up_to_date"        = "您的数据已是最新";
 "OK"                = "确认";
 //--------
@@ -26,6 +26,21 @@
 "Check_for_update"  = "查看更新";
 "Help"              = "帮助";
 "Setting"           = "设置";
+//--------
+
+// Setting Mneu
+"Language"          = "语言";
+"Info"              = "Info";
+"License_agreement" = "许可协议";
+//--------
+
+// Intelligent Building Technologies
+"United_tech"       = "联合技术公司";
+"United_tech_sub"   = "联合技术公司是全球最大的建筑解决方案供应商";
+"IBT"               = "智能建筑解决方案";
+"IBT_content1"      = "公司不断通过创新和整合，集合了智能建筑不同领域的领先品牌，提高建筑使用效率，节约运营成本，并不断积累用户体验。";
+"IBT_content2"      = "智能技术不仅给建筑带来活力，提高效率，还可以使建筑变得更加智能、安全，也更具有可持续性。智能科技，使建筑构筑无限可能！";
+"IBT_select"        = "选择标志，了解更多信息";
 //--------
 
 //  Sustainability Title and text

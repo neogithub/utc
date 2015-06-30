@@ -14,16 +14,22 @@
                 <outlet property="uiiv_header" destination="Zi0-a5-uBn" id="D7R-KW-9IZ"/>
                 <outlet property="uiiv_logo" destination="oed-2m-w1g" id="D4O-FT-s29"/>
                 <outlet property="uiiv_pointer" destination="UPV-ov-uGs" id="zuP-ky-z9l"/>
+                <outlet property="uil_IBTContent1" destination="Cly-1S-1sB" id="0eo-td-299"/>
+                <outlet property="uil_IBTContent2" destination="XbI-Zc-l3X" id="8oN-qG-4hP"/>
+                <outlet property="uil_IBTTitle" destination="Yic-K6-0ZN" id="yLr-dF-5jF"/>
                 <outlet property="uil_UIcue" destination="AIr-xA-fod" id="fEk-Kh-xw3"/>
+                <outlet property="uil_UTSubTitle" destination="bui-eh-ehs" id="cUL-5Y-Psu"/>
+                <outlet property="uil_UTtitle" destination="5Lj-Mp-yaJ" id="Xjr-sE-nlq"/>
                 <outlet property="uil_about" destination="7gA-Vd-H2Y" id="8Hb-h2-hwd"/>
+                <outlet property="uil_selectLogo" destination="cWn-Ng-xaa" id="REv-Ch-Iy0"/>
                 <outlet property="uil_title" destination="oZl-qR-1xP" id="9Xo-ZR-6dR"/>
                 <outlet property="uitv_connectText" destination="ZW9-pw-XKg" id="imD-Wj-XqZ"/>
-                <outlet property="uitv_summaryText" destination="SeY-UO-KQh" id="Ia4-fK-zhB"/>
                 <outlet property="uiv_detail" destination="ZvW-0W-FHs" id="YmM-DI-j31"/>
                 <outlet property="uiv_header" destination="fss-Or-oF8" id="KDA-53-AKw"/>
                 <outlet property="uiv_ibt" destination="tNa-Ue-215" id="eVK-0h-uo8"/>
                 <outlet property="uiv_ibtData" destination="8DR-O2-vF9" id="5u1-XE-0Vg"/>
                 <outlet property="uiv_logoBns" destination="igY-n1-wCT" id="ChW-U4-bxM"/>
+                <outlet property="uiv_summaryText" destination="XrS-7v-vOb" id="pJb-Za-5JC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="uibCollection" destination="QfJ-tv-1uK" id="wX5-P7-Zrg"/>
                 <outletCollection property="uibCollection" destination="xt0-Q6-hwC" id="78F-6F-cle"/>
@@ -131,7 +137,7 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.20000000000000001" green="0.49019607840000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="SeY-UO-KQh">
+                                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="SeY-UO-KQh">
                                     <rect key="frame" x="144" y="24" width="524" height="450"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -247,6 +253,106 @@ Cgo
                                     </attributedString>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
+                                <view contentMode="scaleToFill" id="XrS-7v-vOb">
+                                    <rect key="frame" x="144" y="24" width="524" height="450"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Lj-Mp-yaJ">
+                                            <rect key="frame" x="0.0" y="10" width="231" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="United Technologies">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.28627450980392155" green="0.29019607843137257" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                        <real key="NSKern" value="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bui-eh-ehs">
+                                            <rect key="frame" x="0.0" y="41" width="497" height="72"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="United Technologies is the world's largest provider of building technologies">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.28627450980392155" green="0.29019607843137257" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="18" name="Helvetica"/>
+                                                        <real key="NSKern" value="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                            <tabStops/>
+                                                        </paragraphStyle>
+                                                        <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yic-K6-0ZN">
+                                            <rect key="frame" x="0.0" y="108" width="298" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Intelligent Building Technologies">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.28627450980392155" green="0.29019607843137257" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                        <real key="NSKern" value="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cly-1S-1sB">
+                                            <rect key="frame" x="0.0" y="151" width="519" height="84"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment>
+                                                    <string key="content">Through innovation and integration, we bring together intelligent building technologies from across our industry-leading brands to improve building efficiency, operating cost and occupant experience. </string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="17" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XbI-Zc-l3X">
+                                            <rect key="frame" x="0.0" y="243" width="511" height="77"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment>
+                                                    <string key="content">These technologies bring buildings to life, making them smarter, safer and more sustainable while improving productivity. By working together more intelligently, we’re building possible.</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="17" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cWn-Ng-xaa">
+                                            <rect key="frame" x="0.0" y="328" width="193" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Select a Logo to Learn More">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="13" name="HelveticaNeue-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>

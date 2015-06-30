@@ -9,7 +9,7 @@
 #import "SettingViewController.h"
 #import "SettingTableViewController.h"
 #import "TSLanguageManager.h"
-@interface SettingViewController ()
+@interface SettingViewController () <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
     UINavigationController      *navVC;
     UIView                      *uiv_settingContainer;
@@ -19,11 +19,22 @@
 
 @implementation SettingViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.modalPresentationStyle = UIModalPresentationCustom;
+        self.transitioningDelegate = self;
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.7];
     [self loadSettingView];
     [self createCloseBtn];
 }
@@ -46,15 +57,16 @@
 
 - (void)loadSettingView
 {
-    uiv_settingContainer = [[UIView alloc] initWithFrame:CGRectMake(262, 184, 500, 400)];
-    uiv_settingContainer.backgroundColor = [UIColor whiteColor];
+    uiv_settingContainer = [[UIView alloc] initWithFrame:CGRectMake(348, 252, 328, 264)];
+    uiv_settingContainer.backgroundColor = [UIColor colorWithRed:231.0/255.0 green:230.0/255.0 blue:227.0/255.0 alpha:1.0];
     [self.view addSubview: uiv_settingContainer];
     
     
     // Setting table's data (items)
     arr_seetingItem = [[NSMutableArray alloc]initWithObjects:
-                       [TSLanguageManager localizedString:@"Version"],
                        [TSLanguageManager localizedString:@"Language"],
+                       [TSLanguageManager localizedString:@"Info"],
+                       [TSLanguageManager localizedString:@"License_agreement"],
                        nil];
     
     
@@ -63,8 +75,9 @@
     navVC = [[UINavigationController alloc] initWithRootViewController: settingTable];
     navVC.view.frame = uiv_settingContainer.bounds;
     [uiv_settingContainer addSubview: navVC.view];
-    
+    navVC.navigationBar.barTintColor =  [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"setting_title.png"]];
     navVC.navigationBar.topItem.title = [TSLanguageManager localizedString:@"Setting"];
+    [navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
 - (void)createCloseBtn
@@ -80,6 +93,108 @@
 {
     [self dismissViewControllerAnimated:YES completion:^(void){ }];
 }
+
+#pragma mark - custom modal presentation methods
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    return self;
+}
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    return self;
+}
+
+-(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+    return 0.25;
+}
+
+- (BOOL)hasiOS8ScreenCoordinateBehaviour {
+    if ( [[[UIDevice currentDevice] systemVersion] floatValue] < 8.0 ) return NO;
+    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    if ( UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) &&
+        screenSize.width < screenSize.height ) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+-(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+    UIViewController* vc1 = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController* vc2 = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIView* con = [transitionContext containerView];
+    UIView* v1 = vc1.view;
+    UIView* v2 = vc2.view;
+    
+    if (vc2 == self) { // presenting
+        [con addSubview:v2];
+        v2.frame = v1.frame;
+        
+        // Set the parameters to be passed into the animation
+        CGFloat duration = 0.8f;
+        CGFloat damping = 0.75;
+        CGFloat velocity = 0.5;
+        
+        // int to hold UIViewAnimationOption
+        NSInteger option;
+        option = UIViewAnimationCurveEaseInOut;
+        
+        if ([self hasiOS8ScreenCoordinateBehaviour] == YES) {
+            
+            self.view.center = CGPointMake(self.view.center.x, 768);
+            
+        } else {
+            
+            self.view.center = CGPointMake(768, 512);
+        }
+        
+        v2.alpha = 0;
+        v1.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
+        
+        [UIView animateWithDuration:duration delay:0 usingSpringWithDamping:damping initialSpringVelocity:velocity options:option animations:^{
+            v2.alpha = 1;
+            v1.alpha = 0.8;
+            
+            CGFloat floatX = -1;
+            CGFloat floatY = -1;
+            
+            if ([self hasiOS8ScreenCoordinateBehaviour] == YES) {
+                
+                self.view.center = CGPointMake(self.view.center.x, 384);
+                
+            } else {
+                
+                floatX = 384;
+                floatY = 512;
+                self.view.center = CGPointMake(floatX, floatY);
+                
+            }
+            
+        }completion:^(BOOL finished) {
+            
+            [transitionContext completeTransition:YES];
+            
+        }];
+        
+    } else { // dismissing
+        [UIView animateWithDuration:0.25 animations:^{
+            if ([self hasiOS8ScreenCoordinateBehaviour] == YES) {
+                
+                self.view.center = CGPointMake(self.view.center.x, 768);
+                
+            } else {
+                
+                self.view.center = CGPointMake(768, 512);
+            }            v1.alpha = 0;
+            v2.alpha=1.0;
+        } completion:^(BOOL finished) {
+            v2.tintAdjustmentMode = UIViewTintAdjustmentModeAutomatic;
+            [transitionContext completeTransition:YES];
+        }];
+    }
+}
+
 
 /*
 #pragma mark - Navigation
