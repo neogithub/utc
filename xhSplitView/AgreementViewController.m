@@ -12,6 +12,7 @@
 #import "LibraryAPI.h"
 #import "NSAttributedString+RegisteredTrademark.h"
 #import "UIColor+Extensions.h"
+#import "TSLanguageManager.h"
 
 @interface AgreementViewController () <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
@@ -94,7 +95,8 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
         obj.alpha = 1.0;
     }];
-
+    
+    [_uitv_text setText:[TSLanguageManager localizedString:@"Agreement"]];
 }
 
 - (IBAction)agreementDone

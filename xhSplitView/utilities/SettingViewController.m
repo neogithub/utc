@@ -91,7 +91,10 @@
 
 - (void)closeSetting:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:^(void){ }];
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"showAgreement" object:nil];
+    }];
+    
 }
 
 #pragma mark - custom modal presentation methods

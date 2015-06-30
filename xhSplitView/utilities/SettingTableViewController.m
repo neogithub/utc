@@ -112,6 +112,7 @@
         langPicker.view.frame = self.view.bounds;
         [self.navigationController pushViewController:langPicker animated:YES];
     }
+        
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
 
