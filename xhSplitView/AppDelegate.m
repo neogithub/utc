@@ -11,6 +11,7 @@
 #import "DownloadOperation.h"
 #import "UAObfuscatedString.h"
 #import "LangPickerViewController.h"
+#import "ViewController.h"
 #define BUNDLE_VERSION_EQUAL_TO(v)                  ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v  options:NSNumericSearch] == NSOrderedSame)
 #define BUNDLE_VERSION_GREATER_THAN(v)              ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] == NSOrderedDescending)
 #define BUNDLE_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"] compare:v options:NSNumericSearch] != NSOrderedAscending)
@@ -161,7 +162,6 @@
 }
 
 #endif
-
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     // Play a sound and show an alert only if the application is active, to avoid doubly notifiying the user.

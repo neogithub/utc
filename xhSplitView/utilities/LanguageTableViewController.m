@@ -1,21 +1,19 @@
 //
-//  SettingTableViewController.m
-//  LangPicker
+//  LanguageTableViewController.m
+//  utc
 //
-//  Created by Xiaohe Hu on 6/24/15.
-//  Copyright (c) 2015 Xiaohe Hu. All rights reserved.
+//  Created by Xiaohe Hu on 6/30/15.
+//  Copyright (c) 2015 Neoscape. All rights reserved.
 //
 
-#import "SettingTableViewController.h"
-#import "LangPickerViewController.h"
 #import "LanguageTableViewController.h"
 #import "TSLanguageManager.h"
-@interface SettingTableViewController ()
+@interface LanguageTableViewController ()
 
 @end
 
-@implementation SettingTableViewController
-@synthesize arr_settingItems;
+@implementation LanguageTableViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -24,27 +22,14 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     self.view.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBar.topItem.title = [TSLanguageManager localizedString:@"Setting"];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-//    CGFloat tableBorderLeft = 10;
-//    CGFloat tableBorderRight = 10;
-//    
-//    CGRect tableRect = self.view.frame;
-//    tableRect.origin.x += tableBorderLeft; // make the table begin a few pixels right from its origin
-//    tableRect.size.width -= tableBorderLeft+tableBorderRight; // reduce the width of the table
-//    self.view.frame = tableRect;
-    NSLog(@"\n\n%@\n\n", NSStringFromCGRect(self.view.frame));
+    [self setTitle:[TSLanguageManager localizedString:@"Language"]];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,16 +41,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    if (section == 0) {
-        return 2;
-    } else {
-        return 1;
-    }
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -76,13 +57,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tableCell"];
-        if (indexPath.section == 0) {
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            UIImageView *uiiv_accessroy = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_accessory.png"]];
-            cell.accessoryView = uiiv_accessroy;
-        }
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"tableCell"];
     }
+    
     // Remove seperator inset
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsZero];
@@ -98,26 +75,31 @@
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
     
-    if (indexPath.section == 0) {
-        cell.textLabel.text = arr_settingItems[indexPath.row];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = [TSLanguageManager localizedString:@"EN Button"];
+        cell.detailTextLabel.text = [TSLanguageManager localizedString:@"EN_subtitle"];
     } else {
-        cell.textLabel.text = arr_settingItems[2];
+        cell.textLabel.text = [TSLanguageManager localizedString:@"ZH Button"];
+        cell.detailTextLabel.text = [TSLanguageManager localizedString:@"ZH_subtitle"];
     }
+    
+    
     return cell;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0 && indexPath.section == 0) {
-        LanguageTableViewController *langTable = [[LanguageTableViewController alloc] init];
-        langTable.view.frame = self.view.bounds;
-        [self.navigationController pushViewController:langTable animated:YES];
+    if (indexPath.row == 0) {
+        NSDictionary *user_info = @{@"language":@"en"};
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+    } else {
+        NSDictionary *user_info = @{@"language":@"zh"};
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
     }
-        
+    
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
-
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

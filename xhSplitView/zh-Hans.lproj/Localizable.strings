@@ -8,7 +8,9 @@
 //  Language Picker
 "Picker Title"      = "Select a Language/选择一种语言";
 "EN Button"         = "English";
+"EN_subtitle"       = "英文";
 "ZH Button"         = "中文";
+"ZH_subtitle"       = "中文";
 //---------
 
 //  Plist Name

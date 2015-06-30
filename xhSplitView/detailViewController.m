@@ -47,7 +47,6 @@
     
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(restartView) name:@"loadBuilding" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(animateTransition) name:@"animateTransition" object:nil];
-
 }
 
 -(void)hideBackBtn

@@ -34,6 +34,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectedLanguage:) name:@"selectedLanguage" object:nil];
+    
     self.view.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.7];
     [self loadSettingView];
     [self createCloseBtn];
@@ -95,6 +97,25 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:@"showAgreement" object:nil];
     }];
     
+}
+
+- (void)selectedLanguage:(NSNotification *)notification {
+    NSString *language = [notification.userInfo objectForKey:@"language"];
+    [[NSUserDefaults standardUserDefaults] setValue:language forKey:@"language"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if ([language isEqualToString:@"en"]) {
+        [TSLanguageManager setSelectedLanguage:kLMEnglish];
+    }else {
+        [TSLanguageManager setSelectedLanguage:kLMChinese];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:0] forKey:@"buttontag"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil userInfo:userInfo];
+    }];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"updateLanguage" object:nil userInfo:notification.userInfo];
 }
 
 #pragma mark - custom modal presentation methods

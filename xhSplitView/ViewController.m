@@ -337,7 +337,18 @@ enum MenuVisibilityType : NSUInteger {
 
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(makeTapCircle) name:@"agreementDone" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLanguage:) name:@"updateLanguage" object:nil];
+}
 
+- (void)updateLanguage:(NSNotification *)notification {
+    [self initMasterVC];
+    [self initDetailVC];
+    [self initSplitVC];
+    [self initBuildingVC];
+    [self initSplitCtrl];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
@@ -373,7 +384,6 @@ enum MenuVisibilityType : NSUInteger {
         }
     }
 }
-
 
 -(void)setInitialImage
 {
