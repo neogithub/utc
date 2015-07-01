@@ -168,9 +168,10 @@ static CGFloat yHeight = 90;
 - (void)initSetting
 {
     UIButton *uib_setting = [UIButton buttonWithType:UIButtonTypeCustom];
-    uib_setting.frame = CGRectMake(47, 706, 85, 24); //683
+    uib_setting.frame = CGRectMake(48, 701, 85, 24); //683
     uib_setting.tag = 0;
     [uib_setting.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
+    uib_setting.backgroundColor = [UIColor clearColor];
     [uib_setting setTitle:[TSLanguageManager localizedString:@"Setting"] forState:UIControlStateNormal];
     [uib_setting addTarget:self action:@selector(tapOnSetting:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: uib_setting];
@@ -182,7 +183,8 @@ static CGFloat yHeight = 90;
         [_uib_updateBtn removeFromSuperview];
     }
     _uib_updateBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_updateBtn.frame = CGRectMake(30, 675, 130, 24);
+    _uib_updateBtn.backgroundColor = [UIColor clearColor];
+    _uib_updateBtn.frame = CGRectMake(26, 670, 130, 24);
     _uib_updateBtn.tag = 0;
     [_uib_updateBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
     [_uib_updateBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -213,8 +215,9 @@ static CGFloat yHeight = 90;
         [_uib_helpBtn removeFromSuperview];
     }
     _uib_helpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _uib_helpBtn.frame = CGRectMake(47, 736, 85, 24); //683
+    _uib_helpBtn.frame = CGRectMake(47, 731, 85, 24); //683
     _uib_helpBtn.tag = 0;
+    _uib_helpBtn.backgroundColor = [UIColor clearColor];
     [_uib_helpBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
     [_uib_helpBtn setTitle:[TSLanguageManager localizedString:@"Help"] forState:UIControlStateNormal];
     [_uib_helpBtn addTarget: self action:@selector(loadHelpView) forControlEvents:UIControlEventTouchUpInside];

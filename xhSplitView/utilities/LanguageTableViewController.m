@@ -30,11 +30,27 @@
 {
     [self setTitle:[TSLanguageManager localizedString:@"Language"]];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self checkCurrentLanguage];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)checkCurrentLanguage {
+    int index = 0;
+    NSString *language = [[NSUserDefaults standardUserDefaults] valueForKey:@"language"];
+    if ([language isEqualToString:@"en"]) {
+        index = 0;
+    } else if ([language isEqualToString:@"zh"]) {
+        index = 1;
+    }
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+    [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+    [self.tableView cellForRowAtIndexPath:indexPath].textLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
+    [self.tableView cellForRowAtIndexPath:indexPath].detailTextLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
 }
 
 #pragma mark - Table view data source
@@ -81,22 +97,10 @@
     if (indexPath.row == 0) {
         cell.textLabel.text = [TSLanguageManager localizedString:@"EN Button"];
         cell.detailTextLabel.text = [TSLanguageManager localizedString:@"EN_subtitle"];
-        if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"language"] isEqualToString:@"en"]) {
-            cell.textLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
-            cell.detailTextLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-            [tableView selectRowAtIndexPath:indexPath animated:TRUE scrollPosition:UITableViewScrollPositionNone];
-        }
-        
+       
     } else {
         cell.textLabel.text = [TSLanguageManager localizedString:@"ZH Button"];
         cell.detailTextLabel.text = [TSLanguageManager localizedString:@"ZH_subtitle"];
-        if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"language"] isEqualToString:@"zh"]) {
-            cell.textLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
-            cell.detailTextLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-            [tableView selectRowAtIndexPath:indexPath animated:TRUE scrollPosition:UITableViewScrollPositionNone];
-        }
     }
     
     return cell;

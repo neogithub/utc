@@ -64,7 +64,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     
     if (validAgreement) {
         self.isAgreementValid = YES;
-        
+        _uib_agreement.hidden = YES;
         // gesture which dismisses if bg touched
         UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissView:)];
         gestureRecognizer.cancelsTouchesInView = NO;
