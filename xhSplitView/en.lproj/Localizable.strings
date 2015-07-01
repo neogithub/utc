@@ -22,6 +22,11 @@
 "PlistName"         = "companyData";
 //--------
 
+// Help image name
+"Help_image_1"      = "bg_01.jpg";
+"Help_image"        = "bg_0%d.jpg";
+//--------
+
 //  Update Alert
 "Check_update"      = "Checking for Update";
 "Up_to_date"        = "You are up to date";

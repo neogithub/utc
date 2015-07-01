@@ -602,7 +602,7 @@ enum MenuVisibilityType : NSUInteger {
 	self.descStrings = [NSArray arrayWithObjects:sampleDesc1,sampleDesc2, sampleDesc3, sampleDesc4, sampleDesc5, sampleDesc6, nil];
     self.titleStrings = [NSArray arrayWithObjects:sampleTitle1,sampleTitle2, sampleTitle3, sampleTitle4, sampleTitle5, sampleTitle6, nil];
 
-    self.ghView.bgImage = [UIImage imageNamed:@"bg_01.jpg"];
+    self.ghView.bgImage = [UIImage imageNamed:[TSLanguageManager localizedString:@"Help_image"]];
 	
 	self.ghView.isfixedBackground = NO;
 	self.ghView.floatingHeaderView = nil;
@@ -621,7 +621,7 @@ enum MenuVisibilityType : NSUInteger {
 
 - (void) configurePage:(GHWalkThroughPageCell *)cell atIndex:(NSInteger)index
 {
-    cell.title = [NSString stringWithFormat:[TSLanguageManager localizedString:@"Help_page"], index+1,(unsigned long)self.descStrings.count];
+    cell.title = [NSString stringWithFormat:[TSLanguageManager localizedString:@"Help_image_1"], index+1,(unsigned long)self.descStrings.count];
     cell.desc = [self.descStrings objectAtIndex:index];
     welcomeLabel.text = self.titleStrings [index];
 
@@ -629,7 +629,7 @@ enum MenuVisibilityType : NSUInteger {
 
 - (UIImage*) bgImageforPage:(NSInteger)index
 {
-    NSString* imageName =[NSString stringWithFormat:@"bg_0%d.jpg", index+1];
+    NSString* imageName =[NSString stringWithFormat:[TSLanguageManager localizedString:@"Help_image"], index+1];
     UIImage* image = [UIImage imageNamed:imageName];
     return image;
 }
