@@ -26,6 +26,7 @@
 	NSDictionary *currentCompanyData;
 	int currentCompanyIndex;
     Company *selectedCo;
+    UIButton *uib_setting;
 }
 
 @property (nonatomic, strong) NSMutableArray                *arr_companies;
@@ -122,6 +123,8 @@ static CGFloat yHeight = 90;
 //	// sort them alphabetically
 //	[_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData) name:@"finishedLang" object:nil];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -136,6 +139,22 @@ static CGFloat yHeight = 90;
     [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
     [self.tableView reloadData];
+}
+
+- (void)updateData
+{
+    _arr_companies = nil;
+    
+    _arr_companies = [[NSMutableArray alloc] initWithObjects:[TSLanguageManager localizedString:@"Commercial"], nil];
+    
+    // sort them alphabetically
+    [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    [self.tableView reloadData];
+
+    [self initHelpButton];
+    [self initSetting];
+    [self initUpdateBtn];
 }
 
 -(void)initAgreement
@@ -167,7 +186,10 @@ static CGFloat yHeight = 90;
 
 - (void)initSetting
 {
-    UIButton *uib_setting = [UIButton buttonWithType:UIButtonTypeCustom];
+    if (uib_setting) {
+        [uib_setting removeFromSuperview];
+    }
+    uib_setting = [UIButton buttonWithType:UIButtonTypeCustom];
     uib_setting.frame = CGRectMake(48, 701, 85, 24); //683
     uib_setting.tag = 0;
     [uib_setting.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
