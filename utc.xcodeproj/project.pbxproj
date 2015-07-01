@@ -264,6 +264,7 @@
 		82A66AE119B793BD00C8E12A /* ebZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */; };
 		82A9C0C51B41EB9800FAC8CE /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A9C0C21B41EB9800FAC8CE /* SettingTableViewController.m */; };
 		82A9C0C61B41EB9800FAC8CE /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A9C0C41B41EB9800FAC8CE /* SettingViewController.m */; };
+		82AE4B0E1B441FFA004A334F /* LegalNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AE4B0D1B441FFA004A334F /* LegalNoticeViewController.m */; };
 		82C133F21B3DAA8A00845DDC /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */; };
 		82C133F51B3DC33300845DDC /* LangPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F41B3DC33300845DDC /* LangPickerViewController.m */; };
 		82C133F81B3DC87400845DDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82C133FA1B3DC87400845DDC /* Localizable.strings */; };
@@ -1664,6 +1665,8 @@
 		82A9C0C21B41EB9800FAC8CE /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		82A9C0C31B41EB9800FAC8CE /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		82A9C0C41B41EB9800FAC8CE /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		82AE4B0C1B441FFA004A334F /* LegalNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegalNoticeViewController.h; sourceTree = "<group>"; };
+		82AE4B0D1B441FFA004A334F /* LegalNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegalNoticeViewController.m; sourceTree = "<group>"; };
 		82C133F01B3DAA8A00845DDC /* TSLanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLanguageManager.h; sourceTree = "<group>"; };
 		82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLanguageManager.m; sourceTree = "<group>"; };
 		82C133F31B3DC33300845DDC /* LangPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LangPickerViewController.h; sourceTree = "<group>"; };
@@ -2270,6 +2273,8 @@
 				82A9C0C21B41EB9800FAC8CE /* SettingTableViewController.m */,
 				82C205E61B43215200041F6B /* LanguageTableViewController.h */,
 				82C205E71B43215200041F6B /* LanguageTableViewController.m */,
+				82AE4B0C1B441FFA004A334F /* LegalNoticeViewController.h */,
+				82AE4B0D1B441FFA004A334F /* LegalNoticeViewController.m */,
 				82C133F31B3DC33300845DDC /* LangPickerViewController.h */,
 				82C133F41B3DC33300845DDC /* LangPickerViewController.m */,
 				82C133F01B3DAA8A00845DDC /* TSLanguageManager.h */,
@@ -4347,6 +4352,7 @@
 				82A9C0C61B41EB9800FAC8CE /* SettingViewController.m in Sources */,
 				8895FF3D1A5B44B50076A3EC /* SustainViewController.m in Sources */,
 				82A66AAC19B7926B00C8E12A /* AppDelegate.m in Sources */,
+				82AE4B0E1B441FFA004A334F /* LegalNoticeViewController.m in Sources */,
 				20BF48B61A3A0629009645DC /* PersistencyManager.m in Sources */,
 				8895FEDD1A5AF4D20076A3EC /* UIApplication+AppVersion.m in Sources */,
 				82C133F21B3DAA8A00845DDC /* TSLanguageManager.m in Sources */,

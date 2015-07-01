@@ -22,7 +22,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor colorWithRed:231.0/255.0 green:230.0/255.0 blue:227.0/255.0 alpha:1.0];
     self.tableView.tableFooterView = [UIView new];
 }
 
@@ -75,30 +75,56 @@
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
     
+    cell.textLabel.textColor = [UIColor blackColor];
+    cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.row == 0) {
         cell.textLabel.text = [TSLanguageManager localizedString:@"EN Button"];
         cell.detailTextLabel.text = [TSLanguageManager localizedString:@"EN_subtitle"];
+        if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"language"] isEqualToString:@"en"]) {
+            cell.textLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
+            cell.detailTextLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            [tableView selectRowAtIndexPath:indexPath animated:TRUE scrollPosition:UITableViewScrollPositionNone];
+        }
+        
     } else {
         cell.textLabel.text = [TSLanguageManager localizedString:@"ZH Button"];
         cell.detailTextLabel.text = [TSLanguageManager localizedString:@"ZH_subtitle"];
+        if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"language"] isEqualToString:@"zh"]) {
+            cell.textLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
+            cell.detailTextLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            [tableView selectRowAtIndexPath:indexPath animated:TRUE scrollPosition:UITableViewScrollPositionNone];
+        }
     }
     
-    
     return cell;
+}
+
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSIndexPath *oldIndex = [self.tableView indexPathForSelectedRow];
+    [self.tableView cellForRowAtIndexPath:oldIndex].accessoryType = UITableViewCellAccessoryNone;
+    [self.tableView cellForRowAtIndexPath:oldIndex].textLabel.textColor = [UIColor blackColor];
+    [self.tableView cellForRowAtIndexPath:oldIndex].detailTextLabel.textColor = [UIColor lightGrayColor];
+    [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+    [self.tableView cellForRowAtIndexPath:indexPath].textLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
+    [self.tableView cellForRowAtIndexPath:indexPath].detailTextLabel.textColor = [UIColor colorWithRed:45.0/255.0 green:122.0/255.0 blue:174.0/255.0 alpha:1.0];
+    return indexPath;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        NSDictionary *user_info = @{@"language":@"en"};
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
-    } else {
-        NSDictionary *user_info = @{@"language":@"zh"};
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
-    }
-    
-    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+//    if (indexPath.row == 0) {
+//        NSDictionary *user_info = @{@"language":@"en"};
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+//    } else {
+//        NSDictionary *user_info = @{@"language":@"zh"};
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+//    }
+//    
+//    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
 /*
 // Override to support conditional editing of the table view.

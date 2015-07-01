@@ -113,6 +113,10 @@
         langTable.view.frame = self.view.bounds;
         [self.navigationController pushViewController:langTable animated:YES];
     }
+    
+    if (indexPath.row == 0 && indexPath.section == 1) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedAgreement" object:nil];
+    }
         
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }

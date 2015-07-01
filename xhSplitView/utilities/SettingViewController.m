@@ -35,6 +35,7 @@
     // Do any additional setup after loading the view.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectedLanguage:) name:@"selectedLanguage" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAgreement:) name:@"selectedAgreement" object:nil];
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.7];
     [self loadSettingView];
@@ -81,12 +82,12 @@
     navVC.navigationBar.topItem.title = [TSLanguageManager localizedString:@"Setting"];
     [navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     
-    UIView *uiv_clear = [[UIView alloc] initWithFrame:self.view.bounds];
-    uiv_clear.backgroundColor = [UIColor clearColor];
-    [self.view insertSubview:uiv_clear belowSubview:uiv_settingContainer];
-    UITapGestureRecognizer *tapClearArea = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeSetting:)];
-    uiv_clear.userInteractionEnabled = YES;
-    [uiv_clear addGestureRecognizer: tapClearArea];
+//    UIView *uiv_clear = [[UIView alloc] initWithFrame:self.view.bounds];
+//    uiv_clear.backgroundColor = [UIColor clearColor];
+//    [self.view insertSubview:uiv_clear belowSubview:uiv_settingContainer];
+//    UITapGestureRecognizer *tapClearArea = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeSetting:)];
+//    uiv_clear.userInteractionEnabled = YES;
+//    [uiv_clear addGestureRecognizer: tapClearArea];
 }
 
 - (void)createCloseBtn
@@ -121,6 +122,12 @@
     }];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"updateLanguage" object:nil userInfo:notification.userInfo];
+}
+
+- (void)showAgreement:(NSNotification *)notification {
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"showAgreement" object:nil];
+    }];
 }
 
 #pragma mark - custom modal presentation methods
