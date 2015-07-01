@@ -22,12 +22,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    [self setTitle:@"Legal Info"];
+    [self setTitle:[TSLanguageManager localizedString:@"Info"]];
     
     self.view.backgroundColor = [UIColor colorWithRed:231.0/255.0 green:230.0/255.0 blue:227.0/255.0 alpha:1.0];
     _uitv_notices = [[UITextView alloc] initWithFrame:CGRectMake(10.0, 55.0, self.view.frame.size.width-20, self.view.frame.size.height-65)];
     _uitv_notices.backgroundColor = [UIColor whiteColor];
-    _uitv_notices.contentInset = UIEdgeInsetsMake(-40, 0, 0, 0);
+//    _uitv_notices.contentInset = UIEdgeInsetsMake(-40, 0, 0, 0);
+//    _uitv_notices.scrollIndicatorInsets = UIEdgeInsetsMake(-40, 0, 0, 0);
     _uitv_notices.editable = NO;
     _uitv_notices.selectable = NO;
     _uitv_notices.text = [TSLanguageManager localizedString:@"Legal_content"];

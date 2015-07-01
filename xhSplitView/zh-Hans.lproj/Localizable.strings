@@ -13,6 +13,10 @@
 "ZH_subtitle"       = "中文";
 //---------
 
+// Init text
+"Init_text"         = "全球最大的建筑解决方案供应商";
+//--------
+
 //  Plist Name
 "PlistName"         = "companyData_zh";
 //--------
@@ -32,7 +36,7 @@
 
 // Setting Mneu
 "Language"          = "语言";
-"Info"              = "Legal Info";
+"Info"              = "法律声明";
 "License_agreement" = "许可协议";
 //--------
 

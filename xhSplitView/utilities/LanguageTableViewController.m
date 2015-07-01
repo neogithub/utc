@@ -14,6 +14,8 @@
 
 @implementation LanguageTableViewController
 
+@synthesize initial;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -120,15 +122,31 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        NSDictionary *user_info = @{@"language":@"en"};
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+    if (initial) {
+        if (indexPath.row == 0) {
+            NSLog(@"Should be english");
+            [[NSUserDefaults standardUserDefaults] setValue:@"en" forKey:@"language"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [TSLanguageManager setSelectedLanguage:kLMEnglish];
+        } else {
+            [[NSUserDefaults standardUserDefaults] setValue:@"zh" forKey:@"language"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [TSLanguageManager setSelectedLanguage:kLMChinese];
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"initLanguage" object:nil];
+        return;
     } else {
-        NSDictionary *user_info = @{@"language":@"zh"};
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+        
+        if (indexPath.row == 0) {
+            NSDictionary *user_info = @{@"language":@"en"};
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+        } else {
+            NSDictionary *user_info = @{@"language":@"zh"};
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+        }
+        
+        [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
     }
-    
-    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
 /*
 // Override to support conditional editing of the table view.

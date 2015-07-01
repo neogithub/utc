@@ -11,7 +11,11 @@
 "EN Button"         = "English";
 "EN_subtitle"       = "English";
 "ZH Button"         = "中文";
-"ZH_subtitle"       =  "Chinese";
+"ZH_subtitle"       = "Chinese";
+//--------
+
+// Init text
+"Init_text"         = "The World's Largest Provider of Building Technologies";
 //--------
 
 //  Plist Name
@@ -32,8 +36,8 @@
 //--------
 
 // Setting Mneu
-"Language"          = "Language";
-"Info"              = "Legal Info";
+"Language"          = "Language/语言";
+"Info"              = "Legal Notices";
 "License_agreement" = "License Agreement";
 //--------
 

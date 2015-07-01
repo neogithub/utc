@@ -9,6 +9,8 @@
 #import "SettingViewController.h"
 #import "SettingTableViewController.h"
 #import "TSLanguageManager.h"
+#import "LanguageTableViewController.h"
+#import "UIApplication+AppVersion.h"
 @interface SettingViewController () <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 {
     UINavigationController      *navVC;
@@ -18,6 +20,10 @@
 @end
 
 @implementation SettingViewController
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 - (instancetype)init
 {
@@ -36,10 +42,17 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectedLanguage:) name:@"selectedLanguage" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAgreement:) name:@"selectedAgreement" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initLanguage) name:@"initLanguage" object:nil];
     
     self.view.backgroundColor = [UIColor clearColor];
-    [self loadSettingView];
-    [self createCloseBtn];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"RLAgreementIdentifier"]) {
+        [self loadLanguagePicker];
+    } else {
+        [self loadSettingView];
+        [self createCloseBtn];
+    }
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -56,6 +69,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadLanguagePicker {
+    uiv_settingContainer = [[UIView alloc] initWithFrame:CGRectMake(348, 252, 328, 264)];
+    uiv_settingContainer.backgroundColor = [UIColor colorWithRed:231.0/255.0 green:230.0/255.0 blue:227.0/255.0 alpha:1.0];
+    [self.view addSubview: uiv_settingContainer];
+    
+    LanguageTableViewController *langTable = [[LanguageTableViewController alloc] init];
+    langTable.initial = YES;
+    navVC = [[UINavigationController alloc] initWithRootViewController: langTable];
+    navVC.view.frame = uiv_settingContainer.bounds;
+    [uiv_settingContainer addSubview: navVC.view];
+    navVC.navigationBar.barTintColor =  [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"setting_title.png"]];
+    navVC.navigationBar.topItem.title = [TSLanguageManager localizedString:@"Language"];
+    [navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+}
+
+- (void)initLanguage {
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"showAgreement" object:nil];
+    }];
 }
 
 - (void)loadSettingView
@@ -88,6 +123,13 @@
     UITapGestureRecognizer *tapClearArea = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeSetting:)];
     uiv_clear.userInteractionEnabled = YES;
     [uiv_clear addGestureRecognizer: tapClearArea];
+    
+    UILabel *uil_Ver = [[UILabel alloc] initWithFrame:CGRectMake(114.0, 240, 100, 20)];
+    uil_Ver.text = [NSString stringWithFormat:@"v%@",[UIApplication appVersion]];
+    [uil_Ver setFont:[UIFont systemFontOfSize:12]];
+    [uil_Ver setTextColor:[UIColor grayColor]];
+    [uil_Ver setTextAlignment:NSTextAlignmentCenter];
+    [uiv_settingContainer addSubview: uil_Ver];
 }
 
 - (void)createCloseBtn

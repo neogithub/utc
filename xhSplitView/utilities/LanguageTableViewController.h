@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LanguageTableViewController : UITableViewController
-
+@property (readwrite, nonatomic)    BOOL    initial;
 @end

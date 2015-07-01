@@ -59,6 +59,7 @@ static CGFloat menuButtonHeights = 51;
     UIView *tappableUIVIEW;
     UILabel* welcomeLabel;
     NSString *appPlistName;
+    UILabel *uil_initText;
 }
 @property (nonatomic, strong) NSMutableArray *downloads;
 @property (nonatomic, strong) NSOperationQueue *downloadQueue;
@@ -403,6 +404,14 @@ enum MenuVisibilityType : NSUInteger {
 #endif
 	
     _uiiv_initImage.frame = CGRectMake(0.0, 0.0, 1024.0, 768.0);
+    
+    uil_initText = [[UILabel alloc] initWithFrame:CGRectMake(262, 500, 500, 50)];
+    uil_initText.text = [TSLanguageManager localizedString:@"Init_text"];
+    uil_initText.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
+    uil_initText.textAlignment = NSTextAlignmentCenter;
+    uil_initText.textColor = [UIColor whiteColor];
+    [_uiiv_initImage addSubview: uil_initText];
+    
     [self.view addSubview: _uiiv_initImage];
     
     _uiiv_initImage.userInteractionEnabled = YES;
@@ -426,6 +435,8 @@ enum MenuVisibilityType : NSUInteger {
 
 -(void)makeTapCircle
 {
+    uil_initText.text = [TSLanguageManager localizedString:@"Init_text"];
+    
     UIView *uiv_tapCircle = [[UIView alloc] initWithFrame:CGRectZero];
     uiv_tapCircle.frame = CGRectMake(20, 20, 40, 40);
     uiv_tapCircle.layer.cornerRadius = uiv_tapCircle.frame.size.width/2;
