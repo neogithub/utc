@@ -10,6 +10,7 @@
 #import "LangPickerViewController.h"
 #import "LanguageTableViewController.h"
 #import "TSLanguageManager.h"
+#import "LegalNoticeViewController.h"
 @interface SettingTableViewController ()
 
 @end
@@ -44,7 +45,7 @@
 //    tableRect.origin.x += tableBorderLeft; // make the table begin a few pixels right from its origin
 //    tableRect.size.width -= tableBorderLeft+tableBorderRight; // reduce the width of the table
 //    self.view.frame = tableRect;
-    NSLog(@"\n\n%@\n\n", NSStringFromCGRect(self.view.frame));
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -108,15 +109,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Load Language picker talbe
     if (indexPath.row == 0 && indexPath.section == 0) {
         LanguageTableViewController *langTable = [[LanguageTableViewController alloc] init];
         langTable.view.frame = self.view.bounds;
         [self.navigationController pushViewController:langTable animated:YES];
     }
     
+    // Load Legal Notices
+    if (indexPath.row == 1 && indexPath.section == 0) {
+        LegalNoticeViewController *legal = [[LegalNoticeViewController alloc] init];
+        legal.view.frame = self.view.bounds;
+        [self.navigationController pushViewController:legal animated:YES];
+    }
+    
+    // Load Agreement
     if (indexPath.row == 0 && indexPath.section == 1) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedAgreement" object:nil];
     }
+    
+    
         
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }

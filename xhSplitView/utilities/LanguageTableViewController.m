@@ -120,15 +120,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.row == 0) {
-//        NSDictionary *user_info = @{@"language":@"en"};
-//        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
-//    } else {
-//        NSDictionary *user_info = @{@"language":@"zh"};
-//        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
-//    }
-//    
-//    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    if (indexPath.row == 0) {
+        NSDictionary *user_info = @{@"language":@"en"};
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+    } else {
+        NSDictionary *user_info = @{@"language":@"zh"};
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+    }
+    
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
 /*
 // Override to support conditional editing of the table view.
