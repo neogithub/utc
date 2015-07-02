@@ -112,6 +112,7 @@
     settingTable.arr_settingItems = [[NSArray alloc] initWithArray:arr_seetingItem];
     navVC = [[UINavigationController alloc] initWithRootViewController: settingTable];
     navVC.view.frame = uiv_settingContainer.bounds;
+//    settingTable.tableView.frame = CGRectMake(10.0, 10.0, uiv_settingContainer.frame.size.width-20, uiv_settingContainer.frame.size.height);
     [uiv_settingContainer addSubview: navVC.view];
     navVC.navigationBar.barTintColor =  [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"setting_title.png"]];
     navVC.navigationBar.topItem.title = [TSLanguageManager localizedString:@"Setting"];

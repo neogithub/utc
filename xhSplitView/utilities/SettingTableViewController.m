@@ -32,6 +32,7 @@
     uil_Ver.text = [NSString stringWithFormat:@"v%@",[UIApplication appVersion]];
     [uil_Ver setFont:[UIFont systemFontOfSize:12]];
     [uil_Ver setTextColor:[UIColor grayColor]];
+    uil_Ver.backgroundColor = [UIColor clearColor];
     [uil_Ver setTextAlignment:NSTextAlignmentCenter];
     [self.tableView addSubview: uil_Ver];
 }
@@ -51,6 +52,10 @@
 //    tableRect.origin.x += tableBorderLeft; // make the table begin a few pixels right from its origin
 //    tableRect.size.width -= tableBorderLeft+tableBorderRight; // reduce the width of the table
 //    self.view.frame = tableRect;
+    
+//    CGRect frame = self.tableView.frame;
+//    frame = CGRectMake(frame.origin.x + 10, frame.origin.y, frame.size.width - 20, frame.size.height);
+//    self.tableView.frame = frame;
 }
 
 - (void)didReceiveMemoryWarning {

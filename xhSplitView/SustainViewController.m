@@ -69,9 +69,6 @@
     NSString *sustainDesc1 = [TSLanguageManager localizedString:@"Sustain_content1"];
     NSString *sustainDesc2 = [TSLanguageManager localizedString:@"Sustain_content2"];
     NSString *sustainDesc3 = [TSLanguageManager localizedString:@"Sustain_content3"];
-    NSString *sustainImg1 = [TSLanguageManager localizedString:@"Sustain_image1"];
-    NSString *sustainImg2 = [TSLanguageManager localizedString:@"Sustain_image2"];
-    NSString *sustainImg3 = [TSLanguageManager localizedString:@"Sustain_image3"];
     
     self.descStrings = [NSArray arrayWithObjects:sustainDesc1,sustainDesc2, sustainDesc3 , nil];
 //    self.descImgStrings = [NSArray arrayWithObjects:sustainImg1,sustainImg2, sustainImg3 , nil];
