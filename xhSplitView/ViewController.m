@@ -623,7 +623,7 @@ enum MenuVisibilityType : NSUInteger {
 
 - (void) configurePage:(GHWalkThroughPageCell *)cell atIndex:(NSInteger)index
 {
-    cell.title = [NSString stringWithFormat:[TSLanguageManager localizedString:@"Help_image_1"], index+1,(unsigned long)self.descStrings.count];
+    cell.title = [NSString stringWithFormat:[TSLanguageManager localizedString:@"Help_page"], index+1,(unsigned long)self.descStrings.count];
     cell.desc = [self.descStrings objectAtIndex:index];
     welcomeLabel.text = self.titleStrings [index];
 
