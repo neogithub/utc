@@ -478,9 +478,11 @@ enum MenuVisibilityType : NSUInteger {
 	
 	[UIView animateWithDuration:0.33 animations:^{
         _uiiv_initImage.alpha = 0.0;
+        uil_initText.alpha = 0.0;
 		image.alpha = 0.0;
     } completion:^(BOOL finished){
         [_uiiv_initImage removeFromSuperview];
+        [uil_initText removeFromSuperview];
 		[image removeFromSuperview];
     }];
 }

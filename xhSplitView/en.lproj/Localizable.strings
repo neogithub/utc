@@ -49,7 +49,7 @@
 //--------
 
 // Setting Mneu
-"Language"          = "Language/语言";
+"Language"          = "Language";
 "Info"              = "Legal Notices";
 "License_agreement" = "License Agreement";
 //--------
