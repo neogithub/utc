@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>670882FB-E514-4F2D-A962-28AC89B222C4</string>
 	<key>IDESourceControlProjectName</key>
-	<string>utc</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7DC45B89A685A6BA3454828A5328A17806318DF8</key>
 		<string>https://github.com/neogithub/utc.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>utc.xcodeproj</string>
+	<string>utc.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7DC45B89A685A6BA3454828A5328A17806318DF8</key>

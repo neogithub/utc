@@ -181,10 +181,10 @@ enum MenuVisibilityType : NSUInteger {
             BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:foofile];
             
             if (fileExists == NO) {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                message:@"Manifest plist missing or has wrong name"
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[TSLanguageManager localizedString:@"Error"]
+                                                                message:[TSLanguageManager localizedString:@"Error_reason"]
                                                                delegate:self
-                                                      cancelButtonTitle:@"OK"
+                                                      cancelButtonTitle:[TSLanguageManager localizedString:@"OK"]
                                                       otherButtonTitles:nil];
                 [alert show];
                 [self.downloadQueue cancelAllOperations];
@@ -244,13 +244,13 @@ enum MenuVisibilityType : NSUInteger {
                         [localNotification setRepeatInterval: NSCalendarUnitDay];
                         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
                         
-                        NSString *updateString = [NSString stringWithFormat:@"%@ Update Available",webBundleVersion];
+                        NSString *updateString = [NSString stringWithFormat:[TSLanguageManager localizedString:@"Update_available"],webBundleVersion];
                         
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:updateString
-                                                                        message:@"Tap OK to open Safari"
+                                                                        message:[TSLanguageManager localizedString:@"Open_safari"]
                                                                        delegate:self
-                                                              cancelButtonTitle:@"Cancel"
-                                                              otherButtonTitles:@"OK",nil];
+                                                              cancelButtonTitle:[TSLanguageManager localizedString:@"Cancel"]
+                                                              otherButtonTitles:[TSLanguageManager localizedString:@"OK"],nil];
                         alert.delegate = self;
                         alert.tag = 1;
                         [alert show];
@@ -405,7 +405,7 @@ enum MenuVisibilityType : NSUInteger {
 	
     _uiiv_initImage.frame = CGRectMake(0.0, 0.0, 1024.0, 768.0);
     
-    uil_initText = [[UILabel alloc] initWithFrame:CGRectMake(262, 500, 500, 50)];
+    uil_initText = [[UILabel alloc] initWithFrame:CGRectMake(262, 495, 500, 50)];
     uil_initText.text = [TSLanguageManager localizedString:@"Init_text"];
     uil_initText.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
     uil_initText.textAlignment = NSTextAlignmentCenter;

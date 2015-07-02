@@ -11,6 +11,7 @@
 #import "LanguageTableViewController.h"
 #import "TSLanguageManager.h"
 #import "LegalNoticeViewController.h"
+#import "UIApplication+AppVersion.h"
 @interface SettingTableViewController ()
 
 @end
@@ -28,6 +29,12 @@
     
     self.view.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
+    UILabel *uil_Ver = [[UILabel alloc] initWithFrame:CGRectMake(114.0, 190, 100, 20)];
+    uil_Ver.text = [NSString stringWithFormat:@"v%@",[UIApplication appVersion]];
+    [uil_Ver setFont:[UIFont systemFontOfSize:12]];
+    [uil_Ver setTextColor:[UIColor grayColor]];
+    [uil_Ver setTextAlignment:NSTextAlignmentCenter];
+    [self.tableView addSubview: uil_Ver];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -45,7 +52,6 @@
 //    tableRect.origin.x += tableBorderLeft; // make the table begin a few pixels right from its origin
 //    tableRect.size.width -= tableBorderLeft+tableBorderRight; // reduce the width of the table
 //    self.view.frame = tableRect;
-
 }
 
 - (void)didReceiveMemoryWarning {

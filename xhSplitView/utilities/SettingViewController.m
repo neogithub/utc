@@ -124,12 +124,12 @@
     uiv_clear.userInteractionEnabled = YES;
     [uiv_clear addGestureRecognizer: tapClearArea];
     
-    UILabel *uil_Ver = [[UILabel alloc] initWithFrame:CGRectMake(114.0, 240, 100, 20)];
-    uil_Ver.text = [NSString stringWithFormat:@"v%@",[UIApplication appVersion]];
-    [uil_Ver setFont:[UIFont systemFontOfSize:12]];
-    [uil_Ver setTextColor:[UIColor grayColor]];
-    [uil_Ver setTextAlignment:NSTextAlignmentCenter];
-    [uiv_settingContainer addSubview: uil_Ver];
+//    UILabel *uil_Ver = [[UILabel alloc] initWithFrame:CGRectMake(114.0, 240, 100, 20)];
+//    uil_Ver.text = [NSString stringWithFormat:@"v%@",[UIApplication appVersion]];
+//    [uil_Ver setFont:[UIFont systemFontOfSize:12]];
+//    [uil_Ver setTextColor:[UIColor grayColor]];
+//    [uil_Ver setTextAlignment:NSTextAlignmentCenter];
+//    [uiv_settingContainer addSubview: uil_Ver];
 }
 
 - (void)createCloseBtn
