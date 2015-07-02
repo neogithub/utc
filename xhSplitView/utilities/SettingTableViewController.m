@@ -7,7 +7,6 @@
 //
 
 #import "SettingTableViewController.h"
-#import "LangPickerViewController.h"
 #import "LanguageTableViewController.h"
 #import "TSLanguageManager.h"
 #import "LegalNoticeViewController.h"

@@ -12,7 +12,6 @@
 #import "UAObfuscatedString.h"
 #import "SettingViewController.h"
 #import "ViewController.h"
-#import "LangPickerViewController.h"
 #define BUNDLE_VERSION_EQUAL_TO(v)                  ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v  options:NSNumericSearch] == NSOrderedSame)
 #define BUNDLE_VERSION_GREATER_THAN(v)              ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] == NSOrderedDescending)
 #define BUNDLE_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"] compare:v options:NSNumericSearch] != NSOrderedAscending)
@@ -252,7 +251,6 @@
         
 //        AgreementViewController* vc = [AgreementViewController new];
         SettingViewController *vc = [SettingViewController new];
-//        LangPickerViewController *vc = [LangPickerViewController new];
         //vc.delegate = self;
         
         UIViewController *activeController = [UIApplication sharedApplication].keyWindow.rootViewController;

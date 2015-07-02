@@ -278,7 +278,6 @@
 		82AE4B261B448C4E004A334F /* zh_bg_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B1A1B448C4E004A334F /* zh_bg_06.jpg */; };
 		82AE4B271B448C4E004A334F /* zh_bg_06@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B1B1B448C4E004A334F /* zh_bg_06@2x.jpg */; };
 		82C133F21B3DAA8A00845DDC /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */; };
-		82C133F51B3DC33300845DDC /* LangPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F41B3DC33300845DDC /* LangPickerViewController.m */; };
 		82C133F81B3DC87400845DDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82C133FA1B3DC87400845DDC /* Localizable.strings */; };
 		82C133FF1B3DE2ED00845DDC /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C134031B3DE2ED00845DDC /* AgreementViewController.xib */; };
 		82C134001B3DE2ED00845DDC /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C134031B3DE2ED00845DDC /* AgreementViewController.xib */; };
@@ -1693,8 +1692,6 @@
 		82AE4B1B1B448C4E004A334F /* zh_bg_06@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "zh_bg_06@2x.jpg"; path = "GHWalkThrough/zh_bg_06@2x.jpg"; sourceTree = "<group>"; };
 		82C133F01B3DAA8A00845DDC /* TSLanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLanguageManager.h; sourceTree = "<group>"; };
 		82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLanguageManager.m; sourceTree = "<group>"; };
-		82C133F31B3DC33300845DDC /* LangPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LangPickerViewController.h; sourceTree = "<group>"; };
-		82C133F41B3DC33300845DDC /* LangPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LangPickerViewController.m; sourceTree = "<group>"; };
 		82C133F91B3DC87400845DDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		82C133FB1B3DC88700845DDC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		82C133FC1B3DC88700845DDC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -2164,6 +2161,33 @@
 			name = Datastore;
 			sourceTree = "<group>";
 		};
+		82590F711B459DBC00667458 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				82A9C0C31B41EB9800FAC8CE /* SettingViewController.h */,
+				82A9C0C41B41EB9800FAC8CE /* SettingViewController.m */,
+				82A9C0C11B41EB9800FAC8CE /* SettingTableViewController.h */,
+				82A9C0C21B41EB9800FAC8CE /* SettingTableViewController.m */,
+				82C205E61B43215200041F6B /* LanguageTableViewController.h */,
+				82C205E71B43215200041F6B /* LanguageTableViewController.m */,
+				82AE4B0C1B441FFA004A334F /* LegalNoticeViewController.h */,
+				82AE4B0D1B441FFA004A334F /* LegalNoticeViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		82590F721B459DF200667458 /* third_party */ = {
+			isa = PBXGroup;
+			children = (
+				82C133F01B3DAA8A00845DDC /* TSLanguageManager.h */,
+				82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */,
+				88D260A11AD840960038F498 /* UAObfuscatedString */,
+				88D2609B1AD83FD30038F498 /* DownloadOperation */,
+				20A39E9619C32F7000C71430 /* GHWalkThrough */,
+			);
+			name = third_party;
+			sourceTree = "<group>";
+		};
 		82A66A8F19B7926A00C8E12A = {
 			isa = PBXGroup;
 			children = (
@@ -2281,21 +2305,9 @@
 		82A66ADE19B793BD00C8E12A /* utilities */ = {
 			isa = PBXGroup;
 			children = (
-				82A9C0C31B41EB9800FAC8CE /* SettingViewController.h */,
-				82A9C0C41B41EB9800FAC8CE /* SettingViewController.m */,
-				82A9C0C11B41EB9800FAC8CE /* SettingTableViewController.h */,
-				82A9C0C21B41EB9800FAC8CE /* SettingTableViewController.m */,
-				82C205E61B43215200041F6B /* LanguageTableViewController.h */,
-				82C205E71B43215200041F6B /* LanguageTableViewController.m */,
-				82AE4B0C1B441FFA004A334F /* LegalNoticeViewController.h */,
-				82AE4B0D1B441FFA004A334F /* LegalNoticeViewController.m */,
-				82C133F31B3DC33300845DDC /* LangPickerViewController.h */,
-				82C133F41B3DC33300845DDC /* LangPickerViewController.m */,
-				82C133F01B3DAA8A00845DDC /* TSLanguageManager.h */,
-				82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */,
-				88D260A11AD840960038F498 /* UAObfuscatedString */,
+				82590F711B459DBC00667458 /* Settings */,
+				82590F721B459DF200667458 /* third_party */,
 				8878D1911A6DA0A6009BEE83 /* UIView+Toast.h */,
-				88D2609B1AD83FD30038F498 /* DownloadOperation */,
 				8878D1921A6DA0A6009BEE83 /* UIView+Toast.m */,
 				888BB9CD1A64332D00157977 /* drawPathShape */,
 				8895FEDB1A5AF4D20076A3EC /* UIApplication+AppVersion.h */,
@@ -2306,7 +2318,6 @@
 				82A66AE019B793BD00C8E12A /* ebZoomingScrollView.m */,
 				20BA88BD1A378EEE00705945 /* embUiViewCard.h */,
 				20BA88BE1A378EEF00705945 /* embUiViewCard.m */,
-				20A39E9619C32F7000C71430 /* GHWalkThrough */,
 				20D0B06519C0D7440096021D /* neoHotspotsView.h */,
 				20D0B06619C0D7440096021D /* neoHotspotsView.m */,
 				20BA88B91A378EDB00705945 /* NSTimer+CVPausable.h */,
@@ -4440,7 +4451,6 @@
 				88D2609E1AD83FE80038F498 /* DownloadOperation.m in Sources */,
 				20D0B06719C0D7440096021D /* neoHotspotsView.m in Sources */,
 				8834E2341A5327C200204D81 /* UIImage+UIImage_GaussianBlur.m in Sources */,
-				82C133F51B3DC33300845DDC /* LangPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

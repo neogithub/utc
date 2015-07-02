@@ -102,7 +102,6 @@
 //--------
 
 //  Help Pages
-//"Help_image_1"      = "bg_01.jpg";
 "Help_image"        = "bg_0%d.jpg";
 
 "Help_page"         = "Page %d of %ld";
