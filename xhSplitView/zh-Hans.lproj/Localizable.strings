@@ -24,7 +24,15 @@
 //  Update Alert
 "Check_update"      = "查看更新";
 "Up_to_date"        = "您的数据已是最新";
+
+"Update_available"  = "可更新至%@";
+"Open_safari"       = "点击确认打开Safari";
+
+"Error"             = "错误";
+"Error_reason"      = "数据文件缺失";
+
 "OK"                = "确认";
+"Cancel"            = "取消";
 //--------
 
 // Help image name
