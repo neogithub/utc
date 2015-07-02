@@ -1153,7 +1153,7 @@
 		<key>xy</key>
 		<string>236, 377.5</string>
 		<key>infoName</key>
-		<string>Foodservice Equipment</string>
+		<string>餐饮设备</string>
 		<key>fileName</key>
 		<string>Taylor</string>
 		<key>categories</key>
@@ -1253,7 +1253,7 @@
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Foodservice Equipment</string>
+				<string>餐饮设备</string>
 				<key>subBG</key>
 				<string>PH2_TAYLOR_00_STILL_HS.png</string>
 			</dict>
@@ -2920,7 +2920,7 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Fire Safety Systems</string>
+				<string>消防安全系统</string>
 				<key>subBG</key>
 				<string>PH2_KIDDE_00_STILL_HS.png</string>
 			</dict>
@@ -2982,13 +2982,13 @@ Automated Logic的WebCTRL®大楼控制集成系统和爱德华EST® 3平台以�
 						<key>background</key>
 						<string>icon marker right.png</string>
 						<key>caption</key>
-						<string>Commercial Lock</string>
+						<string>商用锁</string>
 						<key>overlay</key>
 						<string>overlay.png</string>
 					</dict>
 				</array>
 				<key>catName</key>
-				<string>Commercial Lock</string>
+				<string>商用锁</string>
 				<key>subBG</key>
 				<string>PH2_KIDDE_00_STILL_HS.png</string>
 			</dict>
