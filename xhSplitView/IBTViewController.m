@@ -90,8 +90,11 @@
     }];
     
     [_uib_learnTop addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [self styleLearnButtons:_uib_learnTop];
     [_uib_learnMid addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [self styleLearnButtons:_uib_learnMid];
     [_uib_learnBtm addTarget:self action:@selector(loadHotSpotView:) forControlEvents:UIControlEventTouchUpInside];
+    [self styleLearnButtons:_uib_learnBtm];
 
     ibtCompanies = [[NSMutableArray alloc] initWithObjects:topBtn,midBtn,btmBtn, nil];
     [ibtCompanies enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
@@ -110,6 +113,19 @@
     _uil_IBTContent1.text = [TSLanguageManager localizedString:@"IBT_content1"];
     _uil_IBTContent2.text = [TSLanguageManager localizedString:@"IBT_content2"];
     _uil_selectLogo.text = [TSLanguageManager localizedString:@"IBT_select"];
+}
+
+- (void)styleLearnButtons:(UIButton *)uib_learn {
+    [uib_learn setTitle:[TSLanguageManager localizedString:@"Learn_more"] forState:UIControlStateNormal];
+    [uib_learn setTitleColor:[UIColor colorWithRed:255.0/255.0 green:127.0/255.0 blue:0.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+    
+    NSString *language = [[NSUserDefaults standardUserDefaults] valueForKey:@"language"];
+    if ([language isEqualToString:@"en"]) {
+        uib_learn.titleLabel.font = [UIFont systemFontOfSize:13.0];
+    } else {
+        uib_learn.titleLabel.font = [UIFont systemFontOfSize:12.0];
+    }
+    [uib_learn setContentEdgeInsets:UIEdgeInsetsMake(0, 28, 2, 0)];
 }
 
 - (void)bouncyButtonTouchDown:(id)sender
