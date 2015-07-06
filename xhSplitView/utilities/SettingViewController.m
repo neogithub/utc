@@ -45,6 +45,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initLanguage) name:@"initLanguage" object:nil];
     
     self.view.backgroundColor = [UIColor clearColor];
+    
+    /*
+     * Check if it's the first time to load the app
+     * If so, make the seting table only load language picker
+     * otherwise load normal data
+     */
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"RLAgreementIdentifier"]) {
         [self loadLanguagePicker];
     } else {
@@ -76,6 +82,9 @@
     uiv_settingContainer.backgroundColor = [UIColor colorWithRed:231.0/255.0 green:230.0/255.0 blue:227.0/255.0 alpha:1.0];
     [self.view addSubview: uiv_settingContainer];
     
+    /*
+     * Only contains language picker
+     */
     LanguageTableViewController *langTable = [[LanguageTableViewController alloc] init];
     langTable.initial = YES;
     navVC = [[UINavigationController alloc] initWithRootViewController: langTable];

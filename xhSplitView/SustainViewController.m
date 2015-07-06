@@ -212,8 +212,6 @@
     [_uiv_ibt insertSubview:_uiv_Text belowSubview:_uiv_header];
     _uiv_Text.frame = CGRectMake(185, 415, 620, 400);
     
-    _uil_header.text = btn.titleLabel.text;
-    
     if ([sender tag] == 1) {
         [self performSelector:@selector(loadLogos) withObject:nil afterDelay:0.2];
         _uiv_greentechImages.hidden = YES;
@@ -237,7 +235,7 @@
                             _uiiv_arrow.frame = CGRectMake(174 , originInWindowCoordinates.y+23, 11, 21);
                             _uiiv_arrow.alpha = 1.0;
                             
-                        } completion:nil];
+                        } completion:^(BOOL finished){ }];
 
     NSLog(@"tag %li", (long)[sender tag]);
 }
@@ -268,6 +266,8 @@
         [btn setTitle:arr_buttonTitle[btn.tag] forState:UIControlStateNormal];
         [btn.titleLabel setTextColor:[UIColor whiteColor]];
     }
+    
+    _uil_header.text = arr_buttonTitle[index];
     
     NSLog(@"index %i",index);
     [_uibCollection enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {

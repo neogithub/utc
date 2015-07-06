@@ -53,6 +53,7 @@
     
     _uil_UIcue.transform = CGAffineTransformMakeTranslation(100, 0);
     _uil_UIcue.alpha = 0.0;
+    _uil_UIcue.text = [TSLanguageManager localizedString:@"IBT_select"];
 
     //[self blurbackground];
     

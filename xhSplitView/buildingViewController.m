@@ -753,7 +753,7 @@ enum {
 
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     
-	if ( [text isEqualToString:@"Intelligent Building Technologies"] || [text isEqualToString:@"智能建筑技术"])
+	if ( [text isEqualToString:@"Intelligent Building Technologies"] || [text isEqualToString:@"智能建筑解决方案"])
 	{
         
         [self loadIBT:nil];

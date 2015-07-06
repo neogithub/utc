@@ -343,6 +343,9 @@ enum MenuVisibilityType : NSUInteger {
 }
 
 - (void)updateLanguage:(NSNotification *)notification {
+    /*
+     * Remove all views and view controllers from root view
+     */
     for (__strong UIView *tmp in [self.view subviews]) {
         [tmp removeFromSuperview];
         tmp = nil;
@@ -358,6 +361,9 @@ enum MenuVisibilityType : NSUInteger {
     [self initBuildingVC];
     [self initSplitCtrl];
     
+    /*
+     *  Send notificaiton to reload all text data
+     */
     [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
 }
 
