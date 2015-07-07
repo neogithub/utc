@@ -97,6 +97,8 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     }];
     
     [_uitv_text setText:[TSLanguageManager localizedString:@"Agreement"]];
+    
+    _uil_headerText.text = [TSLanguageManager localizedString:[TSLanguageManager localizedString:@"Agreement_title"]];
 }
 
 - (IBAction)agreementDone

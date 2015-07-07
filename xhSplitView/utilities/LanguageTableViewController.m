@@ -137,12 +137,22 @@
         return;
     } else {
         
+        NSString *curr_language = [[NSUserDefaults standardUserDefaults] valueForKey:@"language"];
+        
         if (indexPath.row == 0) {
-            NSDictionary *user_info = @{@"language":@"en"};
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+            if ([curr_language isEqualToString:@"en"]) {
+                [[self navigationController] popToRootViewControllerAnimated:YES];
+            } else {
+                NSDictionary *user_info = @{@"language":@"en"};
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+            }
         } else {
-            NSDictionary *user_info = @{@"language":@"zh"};
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+            if ([curr_language isEqualToString:@"zh"]) {
+                [[self navigationController] popToRootViewControllerAnimated:YES];
+            } else {
+                NSDictionary *user_info = @{@"language":@"zh"};
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedLanguage" object:nil userInfo:user_info];
+            }
         }
         
         [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
