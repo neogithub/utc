@@ -116,9 +116,8 @@
 }
 
 - (void)styleLearnButtons:(UIButton *)uib_learn {
-    [uib_learn setTitle:[TSLanguageManager localizedString:@"Learn_more"] forState:UIControlStateNormal];
     [uib_learn setTitleColor:[UIColor colorWithRed:255.0/255.0 green:127.0/255.0 blue:0.0/255.0 alpha:1.0] forState:UIControlStateNormal];
-    
+    [uib_learn setTitle:[TSLanguageManager localizedString:@"Learn_more"] forState:UIControlStateNormal];
     NSString *language = [[NSUserDefaults standardUserDefaults] valueForKey:@"language"];
     if ([language isEqualToString:@"en"]) {
         uib_learn.titleLabel.font = [UIFont systemFontOfSize:13.0];

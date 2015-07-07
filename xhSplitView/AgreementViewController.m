@@ -59,6 +59,7 @@ static NSString * const sustainImg3 = @"Screenshot 2015-01-06 14.48.22.png";
     _uib_close.hidden = !validAgreement;
 
     _uib_agreement.enabled = !validAgreement;
+    [_uib_agreement setTitle:[TSLanguageManager localizedString:@"Agreement_button"] forState:UIControlStateNormal];
     
     self.isAgreementValid = NO;
     
