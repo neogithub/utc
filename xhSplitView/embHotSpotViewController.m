@@ -22,6 +22,7 @@
 #import "Company.h"
 #import "embTitle.h"
 #import "UIImage+FlipImage.h"
+#import "TSLanguageManager.h"
 
 enum {
     TitleLabelsOnscreen,
@@ -208,7 +209,7 @@ enum {
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     //topname = selectedCo.coname;
 
-    topname = @"Intelligent Building Technologies";
+    topname = [TSLanguageManager localizedString:@"IBT"];
     
     if (topTitle)
     {

@@ -316,6 +316,7 @@ enum {
         if (kshowNSLogBOOL) NSLog(@"Automated Logic");
     }
     
+    
     // clear dict so ibt loads to the home creen
     if (sender == _uib_ibtBtn) {
         userInfo = nil;
@@ -677,7 +678,7 @@ enum {
     
     uib_logoTapped = sender;
     
-    if ( [selectedCo.coname isEqualToString:@"Intelligent Building Technologies"] )
+    if ( [selectedCo.coname isEqualToString:[TSLanguageManager localizedString:@"IBT"]] )
     {
         [self loadIBT:nil];
         

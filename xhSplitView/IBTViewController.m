@@ -51,8 +51,8 @@
     gestureRecognizer.delegate = self;
     [self.view addGestureRecognizer:gestureRecognizer];
     
-    _uil_UIcue.transform = CGAffineTransformMakeTranslation(100, 0);
-    _uil_UIcue.alpha = 0.0;
+//    _uil_UIcue.transform = CGAffineTransformMakeTranslation(100, 0);
+    _uil_UIcue.alpha = 0.5;
     _uil_UIcue.text = [TSLanguageManager localizedString:@"IBT_select"];
 
     //[self blurbackground];
@@ -206,32 +206,32 @@
 
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
         
-        BOOL runOnce;
-        
-        if(runOnce == NO)
-        {
-            [UIView animateWithDuration:0.33 delay:1.33 options:0
-                             animations:^{
-                                 
-                                 _uil_UIcue.transform = CGAffineTransformMakeTranslation(0, 0);
-                                 _uil_UIcue.alpha = 1.0;
-                                 
-                             } completion:^(BOOL finished){
-                                 
-                                 [UIView animateWithDuration:0.33 delay:1.33 options:0
-                                                  animations:^{
-                                                      
-                                                      _uil_UIcue.alpha = 0.5;
-                                                      
-                                                      
-                                                  } completion:^(BOOL finished){
-                                                      
-                                                  }];
-                                 
-                                 
-                             }];
-            runOnce = true;
-        }
+//        BOOL runOnce;
+//        
+//        if(runOnce == NO)
+//        {
+//            [UIView animateWithDuration:0.33 delay:1.33 options:0
+//                             animations:^{
+//                                 
+//                                 _uil_UIcue.transform = CGAffineTransformMakeTranslation(0, 0);
+//                                 _uil_UIcue.alpha = 1.0;
+//                                 
+//                             } completion:^(BOOL finished){
+//                                 
+//                                 [UIView animateWithDuration:0.33 delay:1.33 options:0
+//                                                  animations:^{
+//                                                      
+//                                                      _uil_UIcue.alpha = 0.5;
+//                                                      
+//                                                      
+//                                                  } completion:^(BOOL finished){
+//                                                      
+//                                                  }];
+//                                 
+//                                 
+//                             }];
+//            runOnce = true;
+//        }
     
     int sendertag = (int)[sender tag];
     
