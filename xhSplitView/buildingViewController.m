@@ -23,6 +23,8 @@
 #import "embTitle.h"
 #import "UIImage+FlipImage.h"
 
+#import "TSLanguageManager.h"
+
 #define kshowNSLogBOOL YES
 
 static CGFloat backButtonHeight = 51;
@@ -283,7 +285,7 @@ enum {
     if (kshowNSLogBOOL) NSLog(@"loadIBT function");
     NSDictionary *userInfo;
         
-    if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Otis"] || [[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"奥的斯"])
+    if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:[TSLanguageManager localizedString:@"Otis"]])
     {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:6] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Otis");
@@ -293,17 +295,17 @@ enum {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:5] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Lenel");
     }
-    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Interlogix"] || [[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"智能科技"])
+    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:[TSLanguageManager localizedString:@"Interlogix"]])
     {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:4] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Interlogix");
     }
-    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Edwards"] || [[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"爱德华"])
+    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:[TSLanguageManager localizedString:@"Edwards"]])
     {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:3] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Edwards");
     }
-    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"Carrier"] || [[selectedCoDict valueForKey:@"fileName"] isEqualToString:@"开利"])
+    else if ([[selectedCoDict valueForKey:@"fileName"] isEqualToString:[TSLanguageManager localizedString:@"Carrier"]])
     {
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:2] forKey:@"buttontag"];
         if (kshowNSLogBOOL) NSLog(@"Carrier");
@@ -687,7 +689,7 @@ enum {
         
         [self loadModalVC];
    
-    } else if ( [selectedCo.coname isEqualToString:@"Kidde"] || [selectedCo.coname isEqualToString:@"凯得"] ) {
+    } else if ( [selectedCo.coname isEqualToString:[TSLanguageManager localizedString:@"Kidde"]] ) {
         
         [self selectedRow:0 withText:nil];
         
@@ -753,7 +755,7 @@ enum {
 
     selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     
-	if ( [text isEqualToString:@"Intelligent Building Technologies"] || [text isEqualToString:@"智能建筑解决方案"])
+	if ( [text isEqualToString:[TSLanguageManager localizedString:@"IBT"]])
 	{
         
         [self loadIBT:nil];
