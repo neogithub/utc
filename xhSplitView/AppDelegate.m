@@ -12,6 +12,8 @@
 #import "UAObfuscatedString.h"
 #import "SettingViewController.h"
 #import "ViewController.h"
+#import "DeploymentType.h"
+
 #define BUNDLE_VERSION_EQUAL_TO(v)                  ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v  options:NSNumericSearch] == NSOrderedSame)
 #define BUNDLE_VERSION_GREATER_THAN(v)              ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] == NSOrderedDescending)
 #define BUNDLE_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"] compare:v options:NSNumericSearch] != NSOrderedAscending)
@@ -29,7 +31,12 @@
 
 #ifdef IS_US
 
+// this version is for US Store which gets normal notification of new versions
+
 #else
+
+// this version is for enterprise which gets special notification of new versions
+
 
 -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
@@ -42,9 +49,8 @@
     self.downloads = [NSMutableArray array];
     
     NSString *wString;
-    BOOL staging = NO;
     
-    if (staging) {
+    if (kUseStagingURL) {
         wString = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
         appPlistName = @"utcbuildingpossible.plist";
     } else {
@@ -52,25 +58,7 @@
         appPlistName = @"utcbuildingpossible.plist";
     }
     
-    
     NSArray *filenames = @[appPlistName];
-    //itms-services:///?action=download-manifest&url=https://www.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
-    
-    // NEO //
-    // staging link   https://apps.neoscape.com/_uploads/files/utc.plist
-    // obfuscate      h.t.t.p.s.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s
-    
-    // UTC //
-    // production link https://www.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
-    // production obfu h.t.t.p.s.colon.forward_slash.forward_slash.w.w.w.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
-    //
-    // staging link    https://staging.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
-    // staging obfu    h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
-    
-    
-    //    NSArray *filenames = @[@"DownloadOperation.plist"];
-    //
-    //    NSString *wString = Obfuscate.h.t.t.p.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s;
     
     for (NSString *filename in filenames)
     {

@@ -26,6 +26,7 @@
 #import "UAObfuscatedString.h"
 #import "TSLanguageManager.h"
 #import "SettingViewController.h"
+#import "DeploymentType.h"
 
 #define BUNDLE_VERSION_EQUAL_TO(v)                  ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v  options:NSNumericSearch] == NSOrderedSame)
 #define BUNDLE_VERSION_GREATER_THAN(v)              ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:v options:NSNumericSearch] == NSOrderedDescending)
@@ -127,9 +128,9 @@ enum MenuVisibilityType : NSUInteger {
     self.downloads = [NSMutableArray array];
     
     //NSString *wString;
-    BOOL staging = NO;
+    //BOOL staging = YES;
     
-    if (staging) {
+    if (kUseStagingURL) {
         _appURL = Obfuscate.h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
         appPlistName = @"utcbuildingpossible.plist";
     } else {
@@ -137,27 +138,7 @@ enum MenuVisibilityType : NSUInteger {
         appPlistName = @"utcbuildingpossible.plist";
     }
     
-    // Neoscape
-//    _appURL =  @"https://apps.neoscape.com/_uploads/files";
-//    appPlistName = @"utc.plist";
-    
-    
     NSArray *filenames = @[appPlistName];
-    //itms-services:///?action=download-manifest&url=https://www.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
-    
-    // NEO //
-    // staging link   https://apps.neoscape.com/_uploads/files/utc.plist
-    // obfuscate      h.t.t.p.s.colon.forward_slash.forward_slash.a.p.p.s.dot.n.e.o.s.c.a.p.e.dot.c.o.m.forward_slash.underscore.u.p.l.o.a.d.s.forward_slash.f.i.l.e.s
-    
-    // UTC //
-    // production link https://www.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
-    // production obfu h.t.t.p.s.colon.forward_slash.forward_slash.w.w.w.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
-    //
-    // staging link    https://staging.tools.carrier.com/BuildingPossible/utcbuildingpossible.plist
-    // staging obfu    h.t.t.p.s.colon.forward_slash.forward_slash.s.t.a.g.i.n.g.dot.t.o.o.l.s.dot.c.a.r.r.i.e.r.dot.c.o.m.forward_slash.B.u.i.l.d.i.n.g.P.o.s.s.i.b.l.e;
-
-
-    NSLog(@"%@",_appURL);
     
     for (NSString *filename in filenames)
     {

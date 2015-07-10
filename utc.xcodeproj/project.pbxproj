@@ -678,6 +678,27 @@
 		8800E3371A72D491000E3D97 /* green-technology-otis-TEDA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3301A72D491000E3D97 /* green-technology-otis-TEDA.png */; };
 		8800E3381A72D491000E3D97 /* green-technology-otis-TEDA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3311A72D491000E3D97 /* green-technology-otis-TEDA@2x.png */; };
 		8800E3391A72D491000E3D97 /* green-technology-otis-TEDA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8800E3311A72D491000E3D97 /* green-technology-otis-TEDA@2x.png */; };
+		881E98DE1B501D8C00C7950B /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */; };
+		881E98DF1B501D8C00C7950B /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */; };
+		881E98E01B501D8D00C7950B /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C133F11B3DAA8A00845DDC /* TSLanguageManager.m */; };
+		881E98E11B501D9500C7950B /* companyData_zh.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CB3E661B3C77180023F8D4 /* companyData_zh.plist */; };
+		881E98E21B501D9500C7950B /* companyData_zh.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CB3E661B3C77180023F8D4 /* companyData_zh.plist */; };
+		881E98E31B501D9600C7950B /* companyData_zh.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CB3E661B3C77180023F8D4 /* companyData_zh.plist */; };
+		881E98E41B501D9A00C7950B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82C133FA1B3DC87400845DDC /* Localizable.strings */; };
+		881E98E51B501D9B00C7950B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82C133FA1B3DC87400845DDC /* Localizable.strings */; };
+		881E98E61B501D9B00C7950B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82C133FA1B3DC87400845DDC /* Localizable.strings */; };
+		881E98E71B501DB400C7950B /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A9C0C41B41EB9800FAC8CE /* SettingViewController.m */; };
+		881E98E81B501DB400C7950B /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A9C0C41B41EB9800FAC8CE /* SettingViewController.m */; };
+		881E98E91B501DB400C7950B /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A9C0C41B41EB9800FAC8CE /* SettingViewController.m */; };
+		881E98EA1B501DB800C7950B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A9C0C21B41EB9800FAC8CE /* SettingTableViewController.m */; };
+		881E98EB1B501DB800C7950B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A9C0C21B41EB9800FAC8CE /* SettingTableViewController.m */; };
+		881E98EC1B501DB800C7950B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A9C0C21B41EB9800FAC8CE /* SettingTableViewController.m */; };
+		881E98ED1B501DBB00C7950B /* LanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C205E71B43215200041F6B /* LanguageTableViewController.m */; };
+		881E98EE1B501DBB00C7950B /* LanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C205E71B43215200041F6B /* LanguageTableViewController.m */; };
+		881E98EF1B501DBC00C7950B /* LanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C205E71B43215200041F6B /* LanguageTableViewController.m */; };
+		881E98F01B501DBF00C7950B /* LegalNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AE4B0D1B441FFA004A334F /* LegalNoticeViewController.m */; };
+		881E98F11B501DBF00C7950B /* LegalNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AE4B0D1B441FFA004A334F /* LegalNoticeViewController.m */; };
+		881E98F21B501DC000C7950B /* LegalNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AE4B0D1B441FFA004A334F /* LegalNoticeViewController.m */; };
 		8834E2011A4F0FCE00204D81 /* IBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */; };
 		8834E2021A4F0FCE00204D81 /* IBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8834E2001A4F0FCE00204D81 /* IBTViewController.xib */; };
 		8834E21A1A52E20E00204D81 /* UIImage+FlipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8834E2191A52E20E00204D81 /* UIImage+FlipImage.m */; };
@@ -1725,6 +1746,7 @@
 		8800E32F1A72D491000E3D97 /* green-technology-carrier-mexico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-technology-carrier-mexico@2x.png"; path = "UI/grfx/sustainability/green-technology-carrier-mexico@2x.png"; sourceTree = "<group>"; };
 		8800E3301A72D491000E3D97 /* green-technology-otis-TEDA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-technology-otis-TEDA.png"; path = "UI/grfx/sustainability/green-technology-otis-TEDA.png"; sourceTree = "<group>"; };
 		8800E3311A72D491000E3D97 /* green-technology-otis-TEDA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-technology-otis-TEDA@2x.png"; path = "UI/grfx/sustainability/green-technology-otis-TEDA@2x.png"; sourceTree = "<group>"; };
+		881E98F41B5025D900C7950B /* DeploymentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeploymentType.h; path = DataStore/DeploymentType.h; sourceTree = "<group>"; };
 		8834E1FE1A4F0FCE00204D81 /* IBTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTViewController.h; sourceTree = "<group>"; };
 		8834E1FF1A4F0FCE00204D81 /* IBTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTViewController.m; sourceTree = "<group>"; };
 		8834E2001A4F0FCE00204D81 /* IBTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBTViewController.xib; sourceTree = "<group>"; };
@@ -2164,6 +2186,7 @@
 				20A39E8819C23D1F00C71430 /* companyData.plist */,
 				82CB3E661B3C77180023F8D4 /* companyData_zh.plist */,
 				82C133FA1B3DC87400845DDC /* Localizable.strings */,
+				881E98F41B5025D900C7950B /* DeploymentType.h */,
 			);
 			name = Datastore;
 			sourceTree = "<group>";
@@ -3255,6 +3278,7 @@
 				888BB7B11A5E136C00157977 /* ibt_lenel_connections.png in Resources */,
 				888BB9991A5F801A00157977 /* IBT-Transp-logo-automatedLogic@2x.png in Resources */,
 				8834E27C1A57221B00204D81 /* menu_sustainability@2x.png in Resources */,
+				881E98E41B501D9A00C7950B /* Localizable.strings in Resources */,
 				20E547231A2DFEF40073B2CF /* swipe-to-reveal.png in Resources */,
 				20E547241A2DFEF40073B2CF /* icon back@2x.png in Resources */,
 				8895FF2B1A5B19F50076A3EC /* logo-otis@2x.png in Resources */,
@@ -3264,6 +3288,7 @@
 				888BB8441A5EE79900157977 /* IBT_OTIS_01_LR_CDMS_CONN_LENEL.mov in Resources */,
 				20BF48E11A3B501D009645DC /* logo_kidde.png in Resources */,
 				888BBA021A67042B00157977 /* green-logo-china.png in Resources */,
+				881E98E11B501D9500C7950B /* companyData_zh.plist in Resources */,
 				8895FF071A5B19F50076A3EC /* logo-carrier@2x.png in Resources */,
 				20BF48FB1A3B501D009645DC /* logo_sustain@2x.png in Resources */,
 				888BB8F71A5EE8A900157977 /* PH2_KIDDE_02_SMG_ADS_ADV_DELI_SYS.mov in Resources */,
@@ -3921,6 +3946,7 @@
 				88005F601ACACE06005738EA /* logo_utcibt@2x.png in Resources */,
 				88005F611ACACE06005738EA /* logo_otis.png in Resources */,
 				88005F621ACACE06005738EA /* SustainViewController.xib in Resources */,
+				881E98E21B501D9500C7950B /* companyData_zh.plist in Resources */,
 				88005F631ACACE06005738EA /* logo-utc.png in Resources */,
 				88005F641ACACE06005738EA /* icon main menu@2x.png in Resources */,
 				88005F651ACACE06005738EA /* grfx_ibt_header@2x.png in Resources */,
@@ -3941,6 +3967,7 @@
 				88005F741ACACE06005738EA /* IBT-Transp-logo-interlogix.png in Resources */,
 				88005F751ACACE06005738EA /* PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				88005F761ACACE06005738EA /* PH2_OTIS_01_LR_CDMS_FASTER_MOVEMENT.mov in Resources */,
+				881E98E51B501D9B00C7950B /* Localizable.strings in Resources */,
 				88005F771ACACE06005738EA /* PH1_OTIS_00A_STILL_ELEV_HOTSPOT.png in Resources */,
 				88005F781ACACE06005738EA /* icon marker center@2x.png in Resources */,
 				88005F791ACACE06005738EA /* swipe-to-reveal.png in Resources */,
@@ -4254,6 +4281,7 @@
 				8842405B1B34531400E41820 /* logo_utcibt@2x.png in Resources */,
 				8842405C1B34531400E41820 /* logo_otis.png in Resources */,
 				8842405D1B34531400E41820 /* SustainViewController.xib in Resources */,
+				881E98E31B501D9600C7950B /* companyData_zh.plist in Resources */,
 				8842405E1B34531400E41820 /* logo-utc.png in Resources */,
 				8842405F1B34531400E41820 /* icon main menu@2x.png in Resources */,
 				884240601B34531400E41820 /* grfx_ibt_header@2x.png in Resources */,
@@ -4274,6 +4302,7 @@
 				8842406F1B34531400E41820 /* IBT-Transp-logo-interlogix.png in Resources */,
 				884240701B34531400E41820 /* PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				884240711B34531400E41820 /* PH2_OTIS_01_LR_CDMS_FASTER_MOVEMENT.mov in Resources */,
+				881E98E61B501D9B00C7950B /* Localizable.strings in Resources */,
 				884240721B34531400E41820 /* PH1_OTIS_00A_STILL_ELEV_HOTSPOT.png in Resources */,
 				884240731B34531400E41820 /* icon marker center@2x.png in Resources */,
 				884240741B34531400E41820 /* swipe-to-reveal.png in Resources */,
@@ -4382,8 +4411,10 @@
 				20E546C81A2DFEF40073B2CF /* Company.m in Sources */,
 				88D260A51AD840A60038F498 /* UAObfuscatedString.m in Sources */,
 				20BF48B31A3A05F1009645DC /* LibraryAPI.m in Sources */,
+				881E98DE1B501D8C00C7950B /* TSLanguageManager.m in Sources */,
 				20E546C91A2DFEF40073B2CF /* ViewController.m in Sources */,
 				20E546CA1A2DFEF40073B2CF /* buildingViewController.m in Sources */,
+				881E98EF1B501DBC00C7950B /* LanguageTableViewController.m in Sources */,
 				20BA88C01A378EEF00705945 /* embUiViewCard.m in Sources */,
 				20E546CB1A2DFEF40073B2CF /* GHWalkThroughPageCell.m in Sources */,
 				20E546CC1A2DFEF40073B2CF /* City.m in Sources */,
@@ -4392,8 +4423,10 @@
 				888BB9E51A65A0E800157977 /* UIColor+Extensions.m in Sources */,
 				20E546CE1A2DFEF40073B2CF /* AppDelegate.m in Sources */,
 				20BF48B71A3A0629009645DC /* PersistencyManager.m in Sources */,
+				881E98EC1B501DB800C7950B /* SettingTableViewController.m in Sources */,
 				20E546CF1A2DFEF40073B2CF /* Building.m in Sources */,
 				20E546D01A2DFEF40073B2CF /* panelTableViewCell.m in Sources */,
+				881E98F21B501DC000C7950B /* LegalNoticeViewController.m in Sources */,
 				8878D1941A6DA0A6009BEE83 /* UIView+Toast.m in Sources */,
 				20E546D11A2DFEF40073B2CF /* GHWalkThroughView.m in Sources */,
 				20BA88BC1A378EDB00705945 /* NSTimer+CVPausable.m in Sources */,
@@ -4412,6 +4445,7 @@
 				888BB9DD1A6436F900157977 /* embDrawBezierPath.m in Sources */,
 				888BB9D91A64352E00157977 /* embBezierPathItem.m in Sources */,
 				888BB9E11A64583700157977 /* NSAttributedString+RegisteredTrademark.m in Sources */,
+				881E98E71B501DB400C7950B /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4478,6 +4512,7 @@
 				88D260A61AD840A60038F498 /* UAObfuscatedString.m in Sources */,
 				88005E661ACACE06005738EA /* Company.m in Sources */,
 				88005E671ACACE06005738EA /* LibraryAPI.m in Sources */,
+				881E98F11B501DBF00C7950B /* LegalNoticeViewController.m in Sources */,
 				88005E681ACACE06005738EA /* ViewController.m in Sources */,
 				88005E691ACACE06005738EA /* buildingViewController.m in Sources */,
 				88005E6A1ACACE06005738EA /* embUiViewCard.m in Sources */,
@@ -4486,15 +4521,19 @@
 				88005E6D1ACACE06005738EA /* UIImage+FlipImage.m in Sources */,
 				88005E6E1ACACE06005738EA /* City.m in Sources */,
 				88005E6F1ACACE06005738EA /* masterViewController.m in Sources */,
+				881E98EE1B501DBB00C7950B /* LanguageTableViewController.m in Sources */,
+				881E98EB1B501DB800C7950B /* SettingTableViewController.m in Sources */,
 				88D260A01AD83FE80038F498 /* DownloadOperation.m in Sources */,
 				88005E701ACACE06005738EA /* SustainViewController.m in Sources */,
 				88005E711ACACE06005738EA /* AppDelegate.m in Sources */,
 				88005E721ACACE06005738EA /* PersistencyManager.m in Sources */,
+				881E98DF1B501D8C00C7950B /* TSLanguageManager.m in Sources */,
 				88005E731ACACE06005738EA /* UIApplication+AppVersion.m in Sources */,
 				88005E741ACACE06005738EA /* IBTViewController.m in Sources */,
 				88005E751ACACE06005738EA /* Building.m in Sources */,
 				88005E761ACACE06005738EA /* panelTableViewCell.m in Sources */,
 				88005E771ACACE06005738EA /* GHWalkThroughView.m in Sources */,
+				881E98E81B501DB400C7950B /* SettingViewController.m in Sources */,
 				88005E781ACACE06005738EA /* AgreementViewController.m in Sources */,
 				88005E791ACACE06005738EA /* NSTimer+CVPausable.m in Sources */,
 				88005E7A1ACACE06005738EA /* embTitle.m in Sources */,
@@ -4524,6 +4563,7 @@
 				88423F5F1B34531400E41820 /* UAObfuscatedString.m in Sources */,
 				88423F601B34531400E41820 /* Company.m in Sources */,
 				88423F611B34531400E41820 /* LibraryAPI.m in Sources */,
+				881E98F01B501DBF00C7950B /* LegalNoticeViewController.m in Sources */,
 				88423F621B34531400E41820 /* ViewController.m in Sources */,
 				88423F631B34531400E41820 /* buildingViewController.m in Sources */,
 				88423F641B34531400E41820 /* embUiViewCard.m in Sources */,
@@ -4532,15 +4572,19 @@
 				88423F671B34531400E41820 /* UIImage+FlipImage.m in Sources */,
 				88423F681B34531400E41820 /* City.m in Sources */,
 				88423F691B34531400E41820 /* masterViewController.m in Sources */,
+				881E98ED1B501DBB00C7950B /* LanguageTableViewController.m in Sources */,
+				881E98EA1B501DB800C7950B /* SettingTableViewController.m in Sources */,
 				88423F6A1B34531400E41820 /* DownloadOperation.m in Sources */,
 				88423F6B1B34531400E41820 /* SustainViewController.m in Sources */,
 				88423F6C1B34531400E41820 /* AppDelegate.m in Sources */,
 				88423F6D1B34531400E41820 /* PersistencyManager.m in Sources */,
+				881E98E01B501D8D00C7950B /* TSLanguageManager.m in Sources */,
 				88423F6E1B34531400E41820 /* UIApplication+AppVersion.m in Sources */,
 				88423F6F1B34531400E41820 /* IBTViewController.m in Sources */,
 				88423F701B34531400E41820 /* Building.m in Sources */,
 				88423F711B34531400E41820 /* panelTableViewCell.m in Sources */,
 				88423F721B34531400E41820 /* GHWalkThroughView.m in Sources */,
+				881E98E91B501DB400C7950B /* SettingViewController.m in Sources */,
 				88423F731B34531400E41820 /* AgreementViewController.m in Sources */,
 				88423F741B34531400E41820 /* NSTimer+CVPausable.m in Sources */,
 				88423F751B34531400E41820 /* embTitle.m in Sources */,
@@ -4740,8 +4784,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Incorporated";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Incorporated";
+				CODE_SIGN_IDENTITY = "iOS Distribution: Carrier Corporation";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Distribution: Carrier Corporation";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -4752,7 +4796,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
+				PROVISIONING_PROFILE = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -4990,8 +5034,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"IS_US=1",
+					"DEBUG=1",
 				);
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -5010,6 +5054,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = utc_enterprise_us;
@@ -5028,7 +5073,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "IS_US=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = utc_enterprise_us;
@@ -5047,6 +5092,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Distribution: Carrier Corporation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "IS_US=1";
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = utc_enterprise_us;
