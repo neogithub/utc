@@ -1,3 +1,3 @@
 
-#define kUseStagingURL YES
+#define kUseStagingURL NO
 
