@@ -1537,6 +1537,48 @@
 		88C498BB1B593B3A0083256B /* setting_title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C205DF1B42D75600041F6B /* setting_title@2x.png */; };
 		88C498BC1B593B3A0083256B /* setting_title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C205DF1B42D75600041F6B /* setting_title@2x.png */; };
 		88C498BD1B593B3A0083256B /* setting_title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C205DF1B42D75600041F6B /* setting_title@2x.png */; };
+		88CF6CD51B726F6C00F88E0D /* zh_bg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B101B448C4E004A334F /* zh_bg_01.jpg */; };
+		88CF6CD61B726F6C00F88E0D /* zh_bg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B101B448C4E004A334F /* zh_bg_01.jpg */; };
+		88CF6CD71B726F6F00F88E0D /* zh_bg_01@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B111B448C4E004A334F /* zh_bg_01@2x.jpg */; };
+		88CF6CD81B726F6F00F88E0D /* zh_bg_01@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B111B448C4E004A334F /* zh_bg_01@2x.jpg */; };
+		88CF6CD91B726F7200F88E0D /* zh_bg_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B121B448C4E004A334F /* zh_bg_02.jpg */; };
+		88CF6CDA1B726F7200F88E0D /* zh_bg_02@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B131B448C4E004A334F /* zh_bg_02@2x.jpg */; };
+		88CF6CDB1B726F7200F88E0D /* zh_bg_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B141B448C4E004A334F /* zh_bg_03.jpg */; };
+		88CF6CDC1B726F7200F88E0D /* zh_bg_03@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B151B448C4E004A334F /* zh_bg_03@2x.jpg */; };
+		88CF6CDD1B726F7200F88E0D /* zh_bg_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B161B448C4E004A334F /* zh_bg_04.jpg */; };
+		88CF6CDE1B726F7200F88E0D /* zh_bg_04@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B171B448C4E004A334F /* zh_bg_04@2x.jpg */; };
+		88CF6CDF1B726F7200F88E0D /* zh_bg_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B181B448C4E004A334F /* zh_bg_05.jpg */; };
+		88CF6CE01B726F7200F88E0D /* zh_bg_05@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B191B448C4E004A334F /* zh_bg_05@2x.jpg */; };
+		88CF6CE11B726F7200F88E0D /* zh_bg_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B1A1B448C4E004A334F /* zh_bg_06.jpg */; };
+		88CF6CE21B726F7200F88E0D /* zh_bg_06@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B1B1B448C4E004A334F /* zh_bg_06@2x.jpg */; };
+		88CF6CE31B726F7300F88E0D /* zh_bg_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B121B448C4E004A334F /* zh_bg_02.jpg */; };
+		88CF6CE41B726F7300F88E0D /* zh_bg_02@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B131B448C4E004A334F /* zh_bg_02@2x.jpg */; };
+		88CF6CE51B726F7300F88E0D /* zh_bg_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B141B448C4E004A334F /* zh_bg_03.jpg */; };
+		88CF6CE61B726F7300F88E0D /* zh_bg_03@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B151B448C4E004A334F /* zh_bg_03@2x.jpg */; };
+		88CF6CE71B726F7300F88E0D /* zh_bg_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B161B448C4E004A334F /* zh_bg_04.jpg */; };
+		88CF6CE81B726F7300F88E0D /* zh_bg_04@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B171B448C4E004A334F /* zh_bg_04@2x.jpg */; };
+		88CF6CE91B726F7300F88E0D /* zh_bg_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B181B448C4E004A334F /* zh_bg_05.jpg */; };
+		88CF6CEA1B726F7300F88E0D /* zh_bg_05@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B191B448C4E004A334F /* zh_bg_05@2x.jpg */; };
+		88CF6CEB1B726F7300F88E0D /* zh_bg_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B1A1B448C4E004A334F /* zh_bg_06.jpg */; };
+		88CF6CEC1B726F7300F88E0D /* zh_bg_06@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B1B1B448C4E004A334F /* zh_bg_06@2x.jpg */; };
+		88CF6CED1B726F7800F88E0D /* zh_bg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B101B448C4E004A334F /* zh_bg_01.jpg */; };
+		88CF6CEE1B726F7800F88E0D /* zh_bg_01@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B111B448C4E004A334F /* zh_bg_01@2x.jpg */; };
+		88CF6CEF1B726F7800F88E0D /* zh_bg_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B121B448C4E004A334F /* zh_bg_02.jpg */; };
+		88CF6CF01B726F7800F88E0D /* zh_bg_02@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B131B448C4E004A334F /* zh_bg_02@2x.jpg */; };
+		88CF6CF11B726F7800F88E0D /* zh_bg_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B141B448C4E004A334F /* zh_bg_03.jpg */; };
+		88CF6CF21B726F7800F88E0D /* zh_bg_03@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B151B448C4E004A334F /* zh_bg_03@2x.jpg */; };
+		88CF6CF31B726F7800F88E0D /* zh_bg_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B161B448C4E004A334F /* zh_bg_04.jpg */; };
+		88CF6CF41B726F7800F88E0D /* zh_bg_04@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B171B448C4E004A334F /* zh_bg_04@2x.jpg */; };
+		88CF6CF51B726F7800F88E0D /* zh_bg_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B181B448C4E004A334F /* zh_bg_05.jpg */; };
+		88CF6CF61B726F7800F88E0D /* zh_bg_05@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B191B448C4E004A334F /* zh_bg_05@2x.jpg */; };
+		88CF6CF71B726F7800F88E0D /* zh_bg_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B1A1B448C4E004A334F /* zh_bg_06.jpg */; };
+		88CF6CF81B726F7800F88E0D /* zh_bg_06@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82AE4B1B1B448C4E004A334F /* zh_bg_06@2x.jpg */; };
+		88CF6CF91B726FE500F88E0D /* ibt-learnMore_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 821DE9A91B4AEDF3001348E5 /* ibt-learnMore_icon.png */; };
+		88CF6CFA1B726FE500F88E0D /* ibt-learnMore_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 821DE9A91B4AEDF3001348E5 /* ibt-learnMore_icon.png */; };
+		88CF6CFB1B726FE600F88E0D /* ibt-learnMore_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 821DE9A91B4AEDF3001348E5 /* ibt-learnMore_icon.png */; };
+		88CF6CFC1B726FE800F88E0D /* ibt-learnMore_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 821DE9AA1B4AEDF3001348E5 /* ibt-learnMore_icon@2x.png */; };
+		88CF6CFD1B726FE900F88E0D /* ibt-learnMore_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 821DE9AA1B4AEDF3001348E5 /* ibt-learnMore_icon@2x.png */; };
+		88CF6CFE1B726FE900F88E0D /* ibt-learnMore_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 821DE9AA1B4AEDF3001348E5 /* ibt-learnMore_icon@2x.png */; };
 		88D2609E1AD83FE80038F498 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D2609D1AD83FE80038F498 /* DownloadOperation.m */; };
 		88D2609F1AD83FE80038F498 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D2609D1AD83FE80038F498 /* DownloadOperation.m */; };
 		88D260A01AD83FE80038F498 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D2609D1AD83FE80038F498 /* DownloadOperation.m */; };
@@ -3065,6 +3107,7 @@
 				20E546E01A2DFEF40073B2CF /* bg_05.jpg in Resources */,
 				20E546E11A2DFEF40073B2CF /* icon marker right.png in Resources */,
 				20BF49171A3F1C82009645DC /* logo_interlogix@2x.png in Resources */,
+				88CF6CFC1B726FE800F88E0D /* ibt-learnMore_icon@2x.png in Resources */,
 				20E546E21A2DFEF40073B2CF /* menu header.png in Resources */,
 				888BB9CC1A5F9E8D00157977 /* advantec@2x.png in Resources */,
 				20E546E31A2DFEF40073B2CF /* icon back.png in Resources */,
@@ -3092,6 +3135,7 @@
 				8885512D1A77CF570009AA0D /* PH2_AUTOLOG_A_00_STILL_WEBCTRL_HS.png in Resources */,
 				888BB9321A5EE8D800157977 /* PH2_OTIS_03_LR_NCE_LED_LIGHT_BALUST.mov in Resources */,
 				20192C911A48729000969C85 /* icon marker center@2x.png in Resources */,
+				88CF6CEE1B726F7800F88E0D /* zh_bg_01@2x.jpg in Resources */,
 				8800E32D1A72AB61000E3D97 /* IBT_INTERLOGIX_01_LR_CONN_LENEL.mov in Resources */,
 				20E546EA1A2DFEF40073B2CF /* PopoverViewController.xib in Resources */,
 				8800E3221A702B4F000E3D97 /* img-teda.jpg in Resources */,
@@ -3117,6 +3161,7 @@
 				888BB8711A5EE86A00157977 /* PH2_ADVANTE3C_01_SMG_GENERAL.png in Resources */,
 				888BB9891A5F801A00157977 /* IBT-logo-edwards@2x.png in Resources */,
 				888BB8B41A5EE88500157977 /* PH2_CARRIER_B_01_STILL_AQUAEDGE_23XRV_HS.png in Resources */,
+				88CF6CF11B726F7800F88E0D /* zh_bg_03.jpg in Resources */,
 				20E546F11A2DFEF40073B2CF /* title4@2x.png in Resources */,
 				888BB99F1A5F801A00157977 /* IBT-Transp-logo-edwards.png in Resources */,
 				888BBA1B1A671A1A00157977 /* sustainability-logos-bg.jpg in Resources */,
@@ -3133,6 +3178,7 @@
 				20E546F51A2DFEF40073B2CF /* grfx_cellBG@2x.jpg in Resources */,
 				888BB8661A5EE86000157977 /* HOTSPOT_BUTTON_.png in Resources */,
 				888BB98F1A5F801A00157977 /* IBT-logo-lenel.png in Resources */,
+				88CF6CED1B726F7800F88E0D /* zh_bg_01.jpg in Resources */,
 				20E547461A2E13830073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO.png in Resources */,
 				888BBA271A68546100157977 /* PH2_TAYLOR_02_SMB_L812_GRILL.png in Resources */,
 				20BF48F11A3B501D009645DC /* logo_onity.png in Resources */,
@@ -3161,9 +3207,12 @@
 				8895FEFF1A5B19F50076A3EC /* logo-automatedLogic@2x.png in Resources */,
 				20E546FB1A2DFEF40073B2CF /* 01_HERO_CITY.png in Resources */,
 				888BB8CD1A5EE89200157977 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.png in Resources */,
+				88CF6CF61B726F7800F88E0D /* zh_bg_05@2x.jpg in Resources */,
 				20E546FD1A2DFEF40073B2CF /* title2@2x.png in Resources */,
 				20192C9C1A49C97C00969C85 /* logo_utcibt@2x.png in Resources */,
+				88CF6CF21B726F7800F88E0D /* zh_bg_03@2x.jpg in Resources */,
 				888BBA301A68D8CA00157977 /* PH2_INTERLOGIX_01_LR_SECURITY_MANAGEMENT.mov in Resources */,
+				88CF6CEF1B726F7800F88E0D /* zh_bg_02.jpg in Resources */,
 				20E546FE1A2DFEF40073B2CF /* titleTableViewCell.xib in Resources */,
 				888BB9541A5F171000157977 /* arrow_white.png in Resources */,
 				888BBA201A68540100157977 /* BG_H264_1440_6.mov in Resources */,
@@ -3221,6 +3270,7 @@
 				20E547091A2DFEF40073B2CF /* InfoPlist.strings in Resources */,
 				8895FF091A5B19F50076A3EC /* logo-edwards.png in Resources */,
 				20BF48E71A3B501D009645DC /* logo_lenel@2x.png in Resources */,
+				88CF6CF81B726F7800F88E0D /* zh_bg_06@2x.jpg in Resources */,
 				888BB7BC1A5E359800157977 /* arrow.png in Resources */,
 				8895FF171A5B19F50076A3EC /* logo-kidde@2x.png in Resources */,
 				20192C8D1A48729000969C85 /* icon marker center right.png in Resources */,
@@ -3256,6 +3306,7 @@
 				8800E3161A6EFB30000E3D97 /* IBT-logo-utc.png in Resources */,
 				8834E2271A531E8300204D81 /* grfx_ibt_rule.png in Resources */,
 				888BB8B21A5EE88500157977 /* PH2_CARRIER_A_00_ANIM_TRANS.mov in Resources */,
+				88CF6CF41B726F7800F88E0D /* zh_bg_04@2x.jpg in Resources */,
 				20E547151A2DFEF40073B2CF /* grfx_helpBtn.png in Resources */,
 				888BB9B71A5F8FA500157977 /* IBT-connection-line-interlogix.png in Resources */,
 				888BB9EE1A66D2E400157977 /* PH2_INTERLOGIX_02_ANIM_TRUVISION_CAMS.png in Resources */,
@@ -3290,6 +3341,7 @@
 				888BB8061A5EE75700157977 /* IBT_AUTOLOG_01_LR_CONN_ED_INTERLOGIX_BASE.mov in Resources */,
 				20E547211A2DFEF40073B2CF /* icon marker right@2x.png in Resources */,
 				8878D1901A6D9267009BEE83 /* tmpImage.jpg in Resources */,
+				88CF6CF01B726F7800F88E0D /* zh_bg_02@2x.jpg in Resources */,
 				20E547221A2DFEF40073B2CF /* bg_02@2x.jpg in Resources */,
 				888BB9911A5F801A00157977 /* IBT-logo-lenel@2x.png in Resources */,
 				888BB8921A5EE87600157977 /* PH2_AUTOLOG_B_01_LR_ECOSCREEN_SUSTAIN_KIOSK.mov in Resources */,
@@ -3298,6 +3350,7 @@
 				8834E27C1A57221B00204D81 /* menu_sustainability@2x.png in Resources */,
 				881E98E41B501D9A00C7950B /* Localizable.strings in Resources */,
 				20E547231A2DFEF40073B2CF /* swipe-to-reveal.png in Resources */,
+				88CF6CF71B726F7800F88E0D /* zh_bg_06.jpg in Resources */,
 				20E547241A2DFEF40073B2CF /* icon back@2x.png in Resources */,
 				8895FF2B1A5B19F50076A3EC /* logo-otis@2x.png in Resources */,
 				20BF48DB1A3B501D009645DC /* logo_carrier@2x.png in Resources */,
@@ -3325,6 +3378,7 @@
 				888BB7A11A5E136C00157977 /* ibt_automated_connections.png in Resources */,
 				888551361A77E8F10009AA0D /* IBTViewController.xib in Resources */,
 				20E5472A1A2DFEF40073B2CF /* 03_TRANS_ELEV.png in Resources */,
+				88CF6CF31B726F7800F88E0D /* zh_bg_04.jpg in Resources */,
 				20BF49151A3F1C82009645DC /* logo_interlogix.png in Resources */,
 				888BB8BA1A5EE88500157977 /* PH2_CARRIER_B_01C_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				888551351A77CF570009AA0D /* PH2_AUTOLOG_A_04_LR_TIMELAPSE_GRAPHICS.mov in Resources */,
@@ -3356,6 +3410,7 @@
 				8895FF2F1A5B19F50076A3EC /* logo-taylor@2x.png in Resources */,
 				8834E22B1A531E8300204D81 /* grfx_ibt_header@2x.png in Resources */,
 				888BB9C51A5F994400157977 /* logo-utc@2x.png in Resources */,
+				88CF6CFB1B726FE600F88E0D /* ibt-learnMore_icon.png in Resources */,
 				20BF48F51A3B501D009645DC /* logo_otis.png in Resources */,
 				888BB9A71A5F801A00157977 /* IBT-Transp-logo-lenel.png in Resources */,
 				888BB7BE1A5E359800157977 /* arrow@2x.png in Resources */,
@@ -3366,6 +3421,7 @@
 				8834E2661A57074200204D81 /* logo_advantecibt.png in Resources */,
 				888BB9FE1A67042B00157977 /* green-logo-argentina.png in Resources */,
 				888BB7D31A5EE6D900157977 /* PH1_OTIS_00A_STILL_ELEV_HOTSPOT.png in Resources */,
+				88CF6CF51B726F7800F88E0D /* zh_bg_05.jpg in Resources */,
 				888BBA141A67042B00157977 /* green-logo-singapore@2x.png in Resources */,
 				20E547301A2DFEF40073B2CF /* grfx_cellBG.jpg in Resources */,
 				20BF48EF1A3B501D009645DC /* logo_noresco@2x.png in Resources */,
@@ -3763,6 +3819,8 @@
 				88005E961ACACE06005738EA /* icon main menu.png in Resources */,
 				88005E971ACACE06005738EA /* logo_advantecibt.png in Resources */,
 				88005E981ACACE06005738EA /* IBT-logo-automatedLogic@2x.png in Resources */,
+				88CF6CEB1B726F7300F88E0D /* zh_bg_06.jpg in Resources */,
+				88CF6CD51B726F6C00F88E0D /* zh_bg_01.jpg in Resources */,
 				88005E991ACACE06005738EA /* bg_05.jpg in Resources */,
 				88005E9A1ACACE06005738EA /* logo-carrier.png in Resources */,
 				88005E9B1ACACE06005738EA /* logo_sustainibt.png in Resources */,
@@ -3787,18 +3845,22 @@
 				88005EAE1ACACE06005738EA /* PH2_CARRIER_B_01B_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				88005EAF1ACACE06005738EA /* logo-utc@2x.png in Resources */,
 				88005EB01ACACE06005738EA /* PH2_EDWARDS_03_SMS_SIGN_SERIES_DEVICES.mov in Resources */,
+				88CF6CE51B726F7300F88E0D /* zh_bg_03.jpg in Resources */,
 				88005EB11ACACE06005738EA /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov in Resources */,
 				88005EB21ACACE06005738EA /* grfx_ibt_arrow.jpg in Resources */,
 				88005EB31ACACE06005738EA /* close bttn@2x.png in Resources */,
 				88005EB41ACACE06005738EA /* ibt_edwards_connections.png in Resources */,
 				88005EB51ACACE06005738EA /* green-logo-singapore@2x.png in Resources */,
 				88005EB61ACACE06005738EA /* ibt_otis@2x.png in Resources */,
+				88CF6CE91B726F7300F88E0D /* zh_bg_05.jpg in Resources */,
 				88005EB71ACACE06005738EA /* connection lines@2x.png in Resources */,
 				88005EB81ACACE06005738EA /* INT_01_ANIM_TRANS_CITY_TO_BLDG.mov in Resources */,
+				88CF6CF91B726FE500F88E0D /* ibt-learnMore_icon.png in Resources */,
 				88005EB91ACACE06005738EA /* logo_kidde.png in Resources */,
 				88005EBA1ACACE06005738EA /* title1@2x.png in Resources */,
 				88005EBB1ACACE06005738EA /* logo-taylor.png in Resources */,
 				88005EBC1ACACE06005738EA /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov in Resources */,
+				88CF6CE41B726F7300F88E0D /* zh_bg_02@2x.jpg in Resources */,
 				88005EBD1ACACE06005738EA /* PH2_OTIS_02_LR_CDMS_ENERGY_EFFICIENTCY.mov in Resources */,
 				88005EBE1ACACE06005738EA /* Images.xcassets in Resources */,
 				88005EBF1ACACE06005738EA /* IBT-connection-line-double.png in Resources */,
@@ -3818,6 +3880,7 @@
 				88005ECD1ACACE06005738EA /* bg_05@2x.jpg in Resources */,
 				88005ECE1ACACE06005738EA /* logo-advante3c@2x.png in Resources */,
 				88005ECF1ACACE06005738EA /* logo-Improve@2x.png in Resources */,
+				88CF6CD81B726F6F00F88E0D /* zh_bg_01@2x.jpg in Resources */,
 				88005ED01ACACE06005738EA /* logo_noresco.png in Resources */,
 				88005ED11ACACE06005738EA /* IBT-Transp-logo-edwards@2x.png in Resources */,
 				88005ED21ACACE06005738EA /* ModalViewController.xib in Resources */,
@@ -3828,6 +3891,7 @@
 				88005ED71ACACE06005738EA /* logo_lenel.png in Resources */,
 				88005ED81ACACE06005738EA /* IBT_OTIS_01_LR_CDMS_CONN_INTERLOGIX.mov in Resources */,
 				88005ED91ACACE06005738EA /* PH2_TAYLOR_01_ANIM_C723_SOFT_SRV_MACH.mov in Resources */,
+				88CF6CEA1B726F7300F88E0D /* zh_bg_05@2x.jpg in Resources */,
 				88C498B61B593B340083256B /* cell_accessory@2x.png in Resources */,
 				88005EDA1ACACE06005738EA /* bg_01.jpg in Resources */,
 				88005EDB1ACACE06005738EA /* menu_advantec.png in Resources */,
@@ -3837,6 +3901,7 @@
 				88005EDF1ACACE06005738EA /* HOTSPOT_CALLOUT.png in Resources */,
 				88005EE01ACACE06005738EA /* text_bg.png in Resources */,
 				88005EE11ACACE06005738EA /* IBT_LENEL_01_LR_CONN_OTIS_CDMS.mov in Resources */,
+				88CF6CE61B726F7300F88E0D /* zh_bg_03@2x.jpg in Resources */,
 				88005EE21ACACE06005738EA /* title4@2x.png in Resources */,
 				88005EE31ACACE06005738EA /* green-logo-india.png in Resources */,
 				88005EE41ACACE06005738EA /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov in Resources */,
@@ -3968,6 +4033,7 @@
 				88005F611ACACE06005738EA /* logo_otis.png in Resources */,
 				88005F621ACACE06005738EA /* SustainViewController.xib in Resources */,
 				881E98E21B501D9500C7950B /* companyData_zh.plist in Resources */,
+				88CF6CE31B726F7300F88E0D /* zh_bg_02.jpg in Resources */,
 				88005F631ACACE06005738EA /* logo-utc.png in Resources */,
 				88005F641ACACE06005738EA /* icon main menu@2x.png in Resources */,
 				88005F651ACACE06005738EA /* grfx_ibt_header@2x.png in Resources */,
@@ -4003,6 +4069,7 @@
 				88005F801ACACE06005738EA /* text_bg@2x.png in Resources */,
 				88005F811ACACE06005738EA /* bg_01@2x.jpg in Resources */,
 				88005F821ACACE06005738EA /* bg_03.jpg in Resources */,
+				88CF6CEC1B726F7300F88E0D /* zh_bg_06@2x.jpg in Resources */,
 				88005F831ACACE06005738EA /* companyData.plist in Resources */,
 				88005F841ACACE06005738EA /* IBT-logo-interlogix.png in Resources */,
 				88005F851ACACE06005738EA /* 03_TRANS_ELEV.png in Resources */,
@@ -4064,8 +4131,10 @@
 				88005FBD1ACACE06005738EA /* IBT-connection-line-single.png in Resources */,
 				88005FBE1ACACE06005738EA /* PH2_KIDDE_01_SMG_FM200.mov in Resources */,
 				88005FBF1ACACE06005738EA /* icon home.png in Resources */,
+				88CF6CE81B726F7300F88E0D /* zh_bg_04@2x.jpg in Resources */,
 				88005FC01ACACE06005738EA /* ibt_carrier.png in Resources */,
 				88005FC11ACACE06005738EA /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
+				88CF6CE71B726F7300F88E0D /* zh_bg_04.jpg in Resources */,
 				88005FC21ACACE06005738EA /* BG_H264_1440_6.mov in Resources */,
 				88005FC31ACACE06005738EA /* green-logo-argentina@2x.png in Resources */,
 				88005FC41ACACE06005738EA /* logo_marioff@2x.png in Resources */,
@@ -4081,6 +4150,7 @@
 				88005FCE1ACACE06005738EA /* help-text-bg@2x.png in Resources */,
 				88005FCF1ACACE06005738EA /* menu_utc.png in Resources */,
 				88005FD01ACACE06005738EA /* logo-Improve.png in Resources */,
+				88CF6CFD1B726FE900F88E0D /* ibt-learnMore_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4102,6 +4172,8 @@
 				88423F911B34531400E41820 /* icon main menu.png in Resources */,
 				88423F921B34531400E41820 /* logo_advantecibt.png in Resources */,
 				88423F931B34531400E41820 /* IBT-logo-automatedLogic@2x.png in Resources */,
+				88CF6CE11B726F7200F88E0D /* zh_bg_06.jpg in Resources */,
+				88CF6CD61B726F6C00F88E0D /* zh_bg_01.jpg in Resources */,
 				88423F941B34531400E41820 /* bg_05.jpg in Resources */,
 				88423F951B34531400E41820 /* logo-carrier.png in Resources */,
 				88423F961B34531400E41820 /* logo_sustainibt.png in Resources */,
@@ -4126,18 +4198,22 @@
 				88423FA91B34531400E41820 /* PH2_CARRIER_B_01B_ANIM_AQUAEDGE_23XRV.mov in Resources */,
 				88423FAA1B34531400E41820 /* logo-utc@2x.png in Resources */,
 				88423FAB1B34531400E41820 /* PH2_EDWARDS_03_SMS_SIGN_SERIES_DEVICES.mov in Resources */,
+				88CF6CDB1B726F7200F88E0D /* zh_bg_03.jpg in Resources */,
 				88423FAC1B34531400E41820 /* PH2_EDWARDS_01_SMG_LS_AND_INCID_MNGMT_SYS.mov in Resources */,
 				88423FAD1B34531400E41820 /* grfx_ibt_arrow.jpg in Resources */,
 				88423FAE1B34531400E41820 /* close bttn@2x.png in Resources */,
 				88423FAF1B34531400E41820 /* ibt_edwards_connections.png in Resources */,
 				88423FB01B34531400E41820 /* green-logo-singapore@2x.png in Resources */,
 				88423FB11B34531400E41820 /* ibt_otis@2x.png in Resources */,
+				88CF6CDF1B726F7200F88E0D /* zh_bg_05.jpg in Resources */,
 				88423FB21B34531400E41820 /* connection lines@2x.png in Resources */,
 				88423FB31B34531400E41820 /* INT_01_ANIM_TRANS_CITY_TO_BLDG.mov in Resources */,
+				88CF6CFA1B726FE500F88E0D /* ibt-learnMore_icon.png in Resources */,
 				88423FB41B34531400E41820 /* logo_kidde.png in Resources */,
 				88423FB51B34531400E41820 /* title1@2x.png in Resources */,
 				88423FB61B34531400E41820 /* logo-taylor.png in Resources */,
 				88423FB71B34531400E41820 /* PH1_OTIS_02_ANIM_COMPACT_CONTROLLER.mov in Resources */,
+				88CF6CDA1B726F7200F88E0D /* zh_bg_02@2x.jpg in Resources */,
 				88423FB81B34531400E41820 /* PH2_OTIS_02_LR_CDMS_ENERGY_EFFICIENTCY.mov in Resources */,
 				88423FB91B34531400E41820 /* Images.xcassets in Resources */,
 				88423FBA1B34531400E41820 /* IBT-connection-line-double.png in Resources */,
@@ -4157,6 +4233,7 @@
 				88423FC81B34531400E41820 /* bg_05@2x.jpg in Resources */,
 				88423FC91B34531400E41820 /* logo-advante3c@2x.png in Resources */,
 				88423FCA1B34531400E41820 /* logo-Improve@2x.png in Resources */,
+				88CF6CD71B726F6F00F88E0D /* zh_bg_01@2x.jpg in Resources */,
 				88423FCB1B34531400E41820 /* logo_noresco.png in Resources */,
 				88423FCC1B34531400E41820 /* IBT-Transp-logo-edwards@2x.png in Resources */,
 				88423FCD1B34531400E41820 /* ModalViewController.xib in Resources */,
@@ -4167,6 +4244,7 @@
 				88423FD21B34531400E41820 /* logo_lenel.png in Resources */,
 				88423FD31B34531400E41820 /* IBT_OTIS_01_LR_CDMS_CONN_INTERLOGIX.mov in Resources */,
 				88423FD41B34531400E41820 /* PH2_TAYLOR_01_ANIM_C723_SOFT_SRV_MACH.mov in Resources */,
+				88CF6CE01B726F7200F88E0D /* zh_bg_05@2x.jpg in Resources */,
 				88C498B71B593B340083256B /* cell_accessory@2x.png in Resources */,
 				88423FD51B34531400E41820 /* bg_01.jpg in Resources */,
 				88423FD61B34531400E41820 /* menu_advantec.png in Resources */,
@@ -4176,6 +4254,7 @@
 				88423FDA1B34531400E41820 /* HOTSPOT_CALLOUT.png in Resources */,
 				88423FDB1B34531400E41820 /* text_bg.png in Resources */,
 				88423FDC1B34531400E41820 /* IBT_LENEL_01_LR_CONN_OTIS_CDMS.mov in Resources */,
+				88CF6CDC1B726F7200F88E0D /* zh_bg_03@2x.jpg in Resources */,
 				88423FDD1B34531400E41820 /* title4@2x.png in Resources */,
 				88423FDE1B34531400E41820 /* green-logo-india.png in Resources */,
 				88423FDF1B34531400E41820 /* PH2_OTIS_02_LR_NCE_EASE_OF_MONITOR_MAINT.mov in Resources */,
@@ -4307,6 +4386,7 @@
 				8842405C1B34531400E41820 /* logo_otis.png in Resources */,
 				8842405D1B34531400E41820 /* SustainViewController.xib in Resources */,
 				881E98E31B501D9600C7950B /* companyData_zh.plist in Resources */,
+				88CF6CD91B726F7200F88E0D /* zh_bg_02.jpg in Resources */,
 				8842405E1B34531400E41820 /* logo-utc.png in Resources */,
 				8842405F1B34531400E41820 /* icon main menu@2x.png in Resources */,
 				884240601B34531400E41820 /* grfx_ibt_header@2x.png in Resources */,
@@ -4342,6 +4422,7 @@
 				8842407B1B34531400E41820 /* text_bg@2x.png in Resources */,
 				8842407C1B34531400E41820 /* bg_01@2x.jpg in Resources */,
 				8842407D1B34531400E41820 /* bg_03.jpg in Resources */,
+				88CF6CE21B726F7200F88E0D /* zh_bg_06@2x.jpg in Resources */,
 				8842407E1B34531400E41820 /* companyData.plist in Resources */,
 				8842407F1B34531400E41820 /* IBT-logo-interlogix.png in Resources */,
 				884240801B34531400E41820 /* 03_TRANS_ELEV.png in Resources */,
@@ -4403,8 +4484,10 @@
 				884240B81B34531400E41820 /* IBT-connection-line-single.png in Resources */,
 				884240B91B34531400E41820 /* PH2_KIDDE_01_SMG_FM200.mov in Resources */,
 				884240BA1B34531400E41820 /* icon home.png in Resources */,
+				88CF6CDE1B726F7200F88E0D /* zh_bg_04@2x.jpg in Resources */,
 				884240BB1B34531400E41820 /* ibt_carrier.png in Resources */,
 				884240BC1B34531400E41820 /* 04_HOTSPOT_CROSS_SECTION.png in Resources */,
+				88CF6CDD1B726F7200F88E0D /* zh_bg_04.jpg in Resources */,
 				884240BD1B34531400E41820 /* BG_H264_1440_6.mov in Resources */,
 				884240BE1B34531400E41820 /* green-logo-argentina@2x.png in Resources */,
 				884240BF1B34531400E41820 /* logo_marioff@2x.png in Resources */,
@@ -4420,6 +4503,7 @@
 				884240C91B34531400E41820 /* help-text-bg@2x.png in Resources */,
 				884240CA1B34531400E41820 /* menu_utc.png in Resources */,
 				884240CB1B34531400E41820 /* logo-Improve.png in Resources */,
+				88CF6CFE1B726FE900F88E0D /* ibt-learnMore_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
