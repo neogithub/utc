@@ -1703,7 +1703,6 @@
 		20D0B06519C0D7440096021D /* neoHotspotsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neoHotspotsView.h; sourceTree = "<group>"; };
 		20D0B06619C0D7440096021D /* neoHotspotsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = neoHotspotsView.m; sourceTree = "<group>"; };
 		20E5473B1A2DFEF40073B2CF /* utc copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "utc copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		20E5473C1A2DFEF40073B2CF /* utc copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "utc copy-Info.plist"; path = "/Users/evan/Documents/_NEOSCAPE_PROJECTS/utc/utc copy-Info.plist"; sourceTree = "<absolute>"; };
 		20E547411A2E0E750073B2CF /* 03A Building Cut DEMO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03A Building Cut DEMO.png"; sourceTree = "<group>"; };
 		20E547421A2E0E750073B2CF /* 03A Building Cut DEMO@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03A Building Cut DEMO@2x.png"; sourceTree = "<group>"; };
 		20E547451A2E13830073B2CF /* 00_LOGO_TRANS_HERO_CITY DEMO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "00_LOGO_TRANS_HERO_CITY DEMO.png"; sourceTree = "<group>"; };
@@ -2279,7 +2278,6 @@
 				82A66AC019B7926B00C8E12A /* xhSplitViewTests */,
 				82A66A9A19B7926A00C8E12A /* Frameworks */,
 				82A66A9919B7926A00C8E12A /* Products */,
-				20E5473C1A2DFEF40073B2CF /* utc copy-Info.plist */,
 				88005FD71ACACE06005738EA /* utc copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
@@ -4804,12 +4802,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Inc. (9734648496)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Inc. (9734648496)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neoscape.utc-ios9";
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "b8243d91-1268-4cbd-a0fe-e0f9d11a0c78";
 				"PROVISIONING_PROFILE[sdk=*]" = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
@@ -4925,6 +4924,7 @@
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neoscape.utc-ios9";
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
 				"PROVISIONING_PROFILE[sdk=*]" = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
@@ -5039,6 +5039,7 @@
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neoscape.utc-ios9";
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -5056,6 +5057,7 @@
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neoscape.utc-ios9";
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
 				"PROVISIONING_PROFILE[sdk=*]" = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
@@ -5180,7 +5182,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Inc. (9734648496)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Inc. (9734648496)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";

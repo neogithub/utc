@@ -4,7 +4,7 @@
 //
 //  Created by Xiaohe Hu on 9/3/14.
 //  Copyright (c) 2014 Neoscape. All rights reserved.
-//
+// USE TOPTITLE=NIL
 
 #import "buildingViewController.h"
 #import "ebZoomingScrollView.h"
@@ -389,8 +389,9 @@ enum {
 	}
 // end warning
 	
-	[topTitle removeHotspotTitle];
-	[topTitle removeCompanyTitle];
+	//[topTitle removeHotspotTitle];
+	//[topTitle removeCompanyTitle];
+    [self removeTitleBar];
 	
 #ifdef NEODEMO
 	[self updateStillFrameUnderFilm:@"03A Building Cut DEMO.png"];
@@ -996,8 +997,9 @@ enum {
 		[_uis_zoomingImg.scrollView setZoomScale:1.0];
 		
 		// hotspot cleanup
-		[topTitle removeHotspotTitle];
-		[topTitle removeCompanyTitle];
+        //[topTitle removeHotspotTitle];
+        //[topTitle removeCompanyTitle];
+        [self removeTitleBar];
 		
 		//TODO : Confirm if this fixes my bug
         // clean up last tapped view
@@ -1023,8 +1025,9 @@ enum {
 			[_uis_zoomingInfoImg removeFromSuperview];
 			_uis_zoomingInfoImg = nil;
 		}];
-		[topTitle removeHotspotTitle];
-		[topTitle removeCompanyTitle];
+        //[topTitle removeHotspotTitle];
+        //[topTitle removeCompanyTitle];
+        [self removeTitleBar];
 		[self unhideChrome];
 	}
 	
@@ -1073,6 +1076,21 @@ enum {
 	theAnimation.fromValue=[NSNumber numberWithFloat:0.70];
 	theAnimation.toValue=[NSNumber numberWithFloat:0.5];
 	[pplayer addAnimation:theAnimation forKey:@"animateOpacity"];
+}
+
+#pragma mark Destroy Title after hiding
+// fix for double-tapping explode movie after
+// using back button from hotspot screen caused
+// hotspot title to reappear on exploded logos screen
+-(void)removeTitleBar
+{
+    [topTitle removeHotspotTitle];
+    [topTitle removeCompanyTitle];
+    
+    // Delay 2 seconds
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        topTitle=nil;
+    });
 }
 
 #pragma mark - MOVIE
