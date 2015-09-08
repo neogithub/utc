@@ -403,7 +403,7 @@ enum MenuVisibilityType : NSUInteger {
     
     _uiiv_initImage.userInteractionEnabled = YES;
 	
-	_uiv_tapSquare = [[UIView alloc] initWithFrame:CGRectZero];
+    _uiv_tapSquare = [[UIView alloc] initWithFrame:CGRectZero];
 	_uiv_tapSquare.frame = CGRectMake(473, 670, 80, 80);
 	//_uiv_tapSquare.layer.cornerRadius = _uiv_tapSquare.frame.size.width/2;
 	[_uiv_tapSquare setBackgroundColor:[UIColor clearColor]];
@@ -455,6 +455,7 @@ enum MenuVisibilityType : NSUInteger {
 
 -(void)loadLogoToCityTransition:(UIGestureRecognizer *)gesture
 {
+//TODO: Load different movie / image based on selection
 #ifdef NEODEMO
 	[self loadMovieNamed:@"00_LOGO_TRANS_HERO_CITY DEMO.mov" isTapToPauseEnabled:NO];
 #else

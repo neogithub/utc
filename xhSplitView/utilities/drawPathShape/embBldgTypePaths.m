@@ -48,7 +48,20 @@
         [commercialPath addLineToPoint: CGPointMake(502.5, 245.5)];
         [commercialPath closePath];
 	
-		
+        UIBezierPath* hotelPath = UIBezierPath.bezierPath;
+        [hotelPath moveToPoint: CGPointMake(761.6, 166.4)];
+        [hotelPath addLineToPoint: CGPointMake(744.92, 239.13)];
+        [hotelPath addLineToPoint: CGPointMake(734.94, 235.42)];
+        [hotelPath addLineToPoint: CGPointMake(713.85, 250.41)];
+        [hotelPath addLineToPoint: CGPointMake(714.02, 261.6)];
+        [hotelPath addLineToPoint: CGPointMake(723.03, 272.66)];
+        [hotelPath addLineToPoint: CGPointMake(777.18, 293.7)];
+        [hotelPath addLineToPoint: CGPointMake(806.5, 265.5)];
+        [hotelPath addLineToPoint: CGPointMake(833.5, 171.5)];
+        [hotelPath addLineToPoint: CGPointMake(776.95, 154.17)];
+        [hotelPath addLineToPoint: CGPointMake(761.6, 166.4)];
+        [hotelPath closePath];
+
 		// END COPY FROM PAINT CODE
 
 		
@@ -60,6 +73,14 @@
 		pathItem.pathWidth = pathWidth;
 		pathItem.embPath = commercialPath;
 		[_bezierPaths addObject:pathItem];
+        
+        pathItem = [[embBezierPathItem alloc] init];
+        pathItem.pathDelay = 1.0;
+        pathItem.pathColor = pathBlue;
+        pathItem.pathSpeed = pathSpeed;
+        pathItem.pathWidth = pathWidth;
+        pathItem.embPath = hotelPath;
+        [_bezierPaths addObject:pathItem];
 	}
 	
 	return self;
