@@ -108,12 +108,12 @@
 
 -(void)embDrawBezierPath:(embDrawBezierPath *)path indexOfTapped:(int)i
 {
-    NSLog(@"tapped building");
+    NSLog(@"tapped building %i",i);
     
     //NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObject:[NSNumber numberWithInt:i] forKey:@"buttontag"];
     // [[NSNotificationCenter defaultCenter] postNotificationName:@"updateDetailView" object:self userInfo:dictionary];
     
-    [self loadBuildingVC:0];
+    [self loadBuildingVC:i];
     
     //[_blockPath clearAllHilightedPart];
 }

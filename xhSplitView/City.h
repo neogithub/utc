@@ -1,5 +1,5 @@
 //
-//  Building.h
+//  City.h
 //  utc
 //
 //  Created by Evan Buxton on 9/9/14.

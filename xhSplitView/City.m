@@ -1,5 +1,5 @@
 //
-//  Building.m
+//  City.m
 //  utc
 //
 //  Created by Evan Buxton on 9/9/14.
