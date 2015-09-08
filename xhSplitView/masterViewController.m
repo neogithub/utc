@@ -30,6 +30,7 @@
 }
 
 @property (nonatomic, strong) NSMutableArray                *arr_companies;
+@property (nonatomic, strong) NSMutableArray                *arr_buildings;
 @property (nonatomic, strong) UIButton						*uib_ibtBtn;
 @property (nonatomic, strong) UIButton						*uib_sustainBtn;
 @property (nonatomic, strong) UIButton						*uib_advante3cBtn;
@@ -38,7 +39,7 @@
 
 @end
 
-static CGFloat yHeight = 90;
+static CGFloat yHeight = 135;
 
 @implementation masterViewController
 @synthesize tableView;
@@ -131,24 +132,24 @@ static CGFloat yHeight = 90;
     
     NSLog(@"The currently language is %@", [TSLanguageManager localizedString:@"Commercial"]);
     
-    _arr_companies = nil;
+    _arr_buildings = nil;
     
-    _arr_companies = [[NSMutableArray alloc] initWithObjects:[TSLanguageManager localizedString:@"Commercial"], nil];
+    _arr_buildings = [[NSMutableArray alloc] initWithObjects:[TSLanguageManager localizedString:@"Commercial"],[TSLanguageManager localizedString:@"Hotel"], nil];
     
     // sort them alphabetically
-    [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    [_arr_buildings sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
     [self.tableView reloadData];
 }
 
 - (void)updateData
 {
-    _arr_companies = nil;
+    _arr_buildings = nil;
     
-    _arr_companies = [[NSMutableArray alloc] initWithObjects:[TSLanguageManager localizedString:@"Commercial"], nil];
+    _arr_buildings = [[NSMutableArray alloc] initWithObjects:[TSLanguageManager localizedString:@"Commercial"], [TSLanguageManager localizedString:@"Hotel"], nil];
     
     // sort them alphabetically
-    [_arr_companies sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    [_arr_buildings sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
     [self.tableView reloadData];
 
@@ -380,10 +381,10 @@ static CGFloat yHeight = 90;
 	return YES;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    return 0;
+//}
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -414,8 +415,6 @@ static CGFloat yHeight = 90;
 {
 	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:(int)[sender tag]] forKey:@"buttontag"];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"masterEvent" object:nil userInfo:userInfo];
-    
-    
 }
 
 
@@ -426,7 +425,7 @@ static CGFloat yHeight = 90;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [_arr_companies count];
+	return [_arr_buildings count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)ttableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -445,7 +444,7 @@ static CGFloat yHeight = 90;
             }
 			
 #ifdef NEODEMO
-			[cell.uil_title setText:_arr_companies[indexPath.row]];
+			[cell.uil_title setText:_arr_buildings[indexPath.row]];
 #else
 			//advante3c gets a superscript 3
 //			if (indexPath.row == 0)
@@ -458,7 +457,7 @@ static CGFloat yHeight = 90;
 //				
 //				cell.uil_title.attributedText = attributedString;
 //			} else {
-				[cell.uil_title setText:_arr_companies[indexPath.row]];
+				[cell.uil_title setText:_arr_buildings[indexPath.row]];
 //			}
 #endif
             
@@ -469,20 +468,20 @@ static CGFloat yHeight = 90;
     return nil;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if([indexPath row] != 0) //<-----ignores touches on first cell in the UITableView
-    {                        //simply change this around to suit your needs
-        cell.userInteractionEnabled = NO;
-        cell.textLabel.enabled = NO;
-        cell.detailTextLabel.enabled = NO;
-    }
-}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if([indexPath row] != 0)
+//    {
+//        cell.userInteractionEnabled = NO;
+//        cell.textLabel.enabled = NO;
+//        cell.detailTextLabel.enabled = NO;
+//    }
+//}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	//if ((indexPath.row != selectedRow) && (indexPath.row == 0)) { // commercial
-    if (indexPath.row == 0) { // commercial
+    //if (indexPath.row == 0) { // commercial
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"closeMaster" object:nil];
         
@@ -493,7 +492,7 @@ static CGFloat yHeight = 90;
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"animateTransition"
 															object:self
 														  userInfo:dict];
-	}
+	//}
     selectedRow = (int)indexPath.row;
 	
 	//2 get company selected
