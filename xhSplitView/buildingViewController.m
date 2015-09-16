@@ -1460,6 +1460,8 @@ enum {
 	
 	selectedCo = [[LibraryAPI sharedInstance] getSelectedCompanyData];
     
+    NSLog(@"selectedCo %@", selectedCo);
+    
   //TODO: check for key on hotspots
     NSArray *totalDataArray;
 

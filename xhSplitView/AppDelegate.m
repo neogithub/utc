@@ -36,6 +36,7 @@
 #else
 
 // this version is for enterprise which gets special notification of new versions
+// make sure to check #define kUseStagingURL in deploymenttype.h
 
 
 -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {

@@ -3043,7 +3043,7 @@
 						};
 					};
 					82A66A9719B7926A00C8E12A = {
-						DevelopmentTeam = 9734648496;
+						DevelopmentTeam = 97VHU5A6BJ;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -4808,7 +4808,7 @@
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.neoscape.utc-ios9";
+				PRODUCT_BUNDLE_IDENTIFIER = com.neoenterprise.utc;
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "b8243d91-1268-4cbd-a0fe-e0f9d11a0c78";
 				"PROVISIONING_PROFILE[sdk=*]" = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
@@ -4924,7 +4924,7 @@
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.neoscape.utc-ios9";
+				PRODUCT_BUNDLE_IDENTIFIER = com.neoenterprise.utc;
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
 				"PROVISIONING_PROFILE[sdk=*]" = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
@@ -5039,7 +5039,7 @@
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.neoscape.utc-ios9";
+				PRODUCT_BUNDLE_IDENTIFIER = com.neoenterprise.utc;
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -5051,13 +5051,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Neoscape, Incorporated";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neoscape, Incorporated";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xhSplitView/utc-Prefix.pch";
 				INFOPLIST_FILE = "xhSplitView/utc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.neoscape.utc-ios9";
+				PRODUCT_BUNDLE_IDENTIFIER = com.neoenterprise.utc;
 				PRODUCT_NAME = utc;
 				PROVISIONING_PROFILE = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
 				"PROVISIONING_PROFILE[sdk=*]" = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
@@ -5152,6 +5152,7 @@
 				);
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neoscape.utc;
 				PRODUCT_NAME = utc_enterprise_us;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -5170,6 +5171,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neoscape.utc;
 				PRODUCT_NAME = utc_enterprise_us;
 				PROVISIONING_PROFILE = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
 				"PROVISIONING_PROFILE[sdk=*]" = "ac7e9baa-2c52-4e22-9cf0-21224a54a4e7";
@@ -5189,6 +5191,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neoscape.utc;
 				PRODUCT_NAME = utc_enterprise_us;
 				PROVISIONING_PROFILE = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
 				"PROVISIONING_PROFILE[sdk=*]" = "51ba36a3-b3bb-4414-8766-c110c3f2780d";
@@ -5208,6 +5211,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "IS_US=1";
 				INFOPLIST_FILE = "utc_enterprise_us-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neoscape.utc;
 				PRODUCT_NAME = utc_enterprise_us;
 				PROVISIONING_PROFILE = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";
 				"PROVISIONING_PROFILE[sdk=*]" = "0ec67bc7-f611-4f3d-bdd7-ce2d755ae3c5";

@@ -117,6 +117,7 @@ enum MenuVisibilityType : NSUInteger {
     
 #else
     [self checkForUpdate:nil];
+    // make sure to check #define kUseStagingURL in deploymenttype.h
 #endif
 }
 
